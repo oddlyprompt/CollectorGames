@@ -1,0 +1,2 @@
+const PACK={ id:'sports', title:'Sports Card Collector', tagline:'Rip packs, dig bins, grade, flip. A whole fictional baseball hobby.', accent:'#c0392b', about:'Every team, player, brand and grading company is fictional, and the league plays itself.',
+  worlds:{sports:true, comics:false, tcg:false}, tabs:[['home','Home'],['shop','Cards'],['hunt','Hunt'],['market','Market'],['coll','Collection']], homeTab:'home', scenarios:['classic','pocket','storage','fan','windfall'], bootMsg:'Founding a league', slotName:'My collection', three:'vendor/three.min.js', sub:{coll:'cards'} };

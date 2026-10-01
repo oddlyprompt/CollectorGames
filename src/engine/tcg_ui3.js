@@ -1,0 +1,38 @@
+// ===================== TCG: THE MARKETPLACE, HOME AND CALENDAR =====================
+const _lsText3=lsText; lsText=function(l){ if (l.it!=='t') return _lsText3(l); let s=LSCACHE.get(l.id); if (s) return s; const cp=G.tc[l.ref], d=tcD(cp.k);
+  s=(d.title+' '+d.def.name+' '+d.def.code+' wildkin tcg '+(d.sealed?'sealed booster '+(d.v==='P'?'pack':'box'):(d.card.el||'')+' '+d.card.kind+' '+TC_RARN[d.card.rar]+' '+TC_VARN[d.v]+' '+d.card.stage)+(cp.g>0?' gcs '+cp.g+' graded slab':' raw '+(d.sealed?'':TC_LABN[tcLabel(cp.c)]))).toLowerCase(); LSCACHE.set(l.id,s); return s; };
+const _listingRow3=listingRow; listingRow=function(l){ if (l.it!=='t') return _listingRow3(l); const cp=G.tc[l.ref], d=tcD(cp.k);
+  const b=[d.sealed?'Sealed':TC_VARN[d.v], d.def.code+(d.no?' '+String(d.no).padStart(3,'0'):''), cp.g>0?'GCS '+cp.g: d.sealed?'': tcLabel(cp.c)].filter(Boolean).join(', '); const mine=l.sel===0, lead=l.lead===0&&l.bids.length;
+  const right= l.ty==='auc'? `<b>${money(l.cur,true)}</b><span>${l.bids.length} bid${l.bids.length===1?'':'s'}, ${daysLeft(l).replace('Ends ','').replace(' left','')}</span>` : `<b>${money(l.pr,true)}</b><span>${mine?(l.offers.length?l.offers.length+' offer'+(l.offers.length>1?'s':''):'Your listing'):'Buy now'+(l.off?' or offer':'')}</span>`;
+  return `<button class="row" data-act="listing" data-a="${l.id}">${miniT(cp)}<div class="rt"><b>${esc(d.title)}</b><span>${esc(b)}</span>${lead?'<span class="up">You\'re the high bidder</span>':(l.ty==='auc'&&l.bids.some(x=>x[0]===0)?'<span class="down">Outbid</span>':'')}</div><div class="rv">${right}</div></button>`; };
+function tcTypeOk(l, ty){ if (l.it!=='t') return false; if (ty==='tc') return true; const cp=G.tc[l.ref], d=tcD(cp.k);
+  switch(ty){ case 'tcs': return !d.sealed; case 'tcsl': return d.sealed; case 'tcgr': return cp.g>0; case 'tcraw': return cp.g===0&&!d.sealed; case 'tchol': return !d.sealed&&['H','U','S'].includes(d.v); case 'tcult': return !d.sealed&&(d.card.rar==='ultra'||d.card.rar==='secret'); case 'tcstd': return !d.sealed&&tcLegalState(d.cid)==='std'&&(G.tcg.usage[d.cid]||0)>1.2; case 'tccheap': return (l.ty==='auc'?l.cur:l.pr)<=1; } return true; }
+const _mf3=marketFiltered; marketFiltered=function(){ const f=UI.mf; if (!String(f.type).startsWith('tc')) return _mf3(); const save=f.type; f.type='all'; let a=_mf3(); f.type=save; return a.filter(l=>tcTypeOk(l,save)); };
+const _mv3=VIEWS.market; VIEWS.market=()=>{ let h=_mv3(); if (UI.sub.market!=='browse') return h; const f=UI.mf; const chip=(k,n)=>`<button class="chip ${f.type===k?'on':''}" data-act="mft" data-a="${k}">${n}</button>`;
+  if (String(f.type).startsWith('tc')){ const a=h.indexOf('<div class="chips"'); const b=h.indexOf('</div>',a)+6; if (a<0) return h;
+    const row=`<div class="chips" style="margin-bottom:10px">${chip('all','← All listings')}${chip('tc','All Wildkin')}${chip('tcs','Singles')}${chip('tcsl','Sealed')}${chip('tcstd','Played now')}${chip('tchol','Holo and up')}${chip('tcult','Ultra and secret')}${chip('tcgr','Graded')}${chip('tcraw','Raw')}${chip('tccheap','Under $1')}</div>`;
+    h=h.slice(0,a)+row+h.slice(b); return h.replace('placeholder="Player, team, product, parallel..."','placeholder="Card, set, energy type, rarity..."'); }
+  return h.replace(/(<button class="chip [^"]*" data-act="mft" data-a="cm">Comics<\/button>)/, '$1'+chip('tc','Wildkin TCG')); };
+const _ls4=listingSheet; listingSheet=function(lid){ const l=L(lid); if (!l||l.it!=='t') return _ls4(lid); const r=_ls4(lid); const cp=G.tc[l.ref], d=tcD(cp.k), mine=l.sel===0;
+  const face=d.sealed? tcPackSVG(d.set,d.v) : cp.g>0? tcSlab(cp) : tcFace(cp);
+  const cond=`<div class="title-block"><div class="yr">${esc(d.def.name)}${d.sealed?'':' · '+TC_VARN[d.v]}</div><h1>${esc(d.title)}</h1><div class="sub">${d.sealed?'Sealed':TC_RARN[d.card.rar]}</div></div><dl class="kv"><dt>Seller</dt><dd>${esc(ownerName(l.sel))}</dd><dt>Card</dt><dd><button class="linkbtn" data-act="tdesign" data-a="${esc(cp.k)}">Play, prices and prints</button></dd><dt>Estimated market</dt><dd class="est">${fmtRange(tcEst(cp.k,cp.g>0?cp.g:0,cp))}</dd>${cp.g>0?`<dt>Grade</dt><dd>GCS ${cp.g} ${GRADE_NAMES[cp.g]}</dd>`:d.sealed?'':`<dt>Condition</dt><dd>${TC_LABN[tcLabel(cp.c)]}</dd>`}</dl>${cp.g>0?`<div style="margin-top:8px"><b class="small">Population</b>${tcPopHTML(cp.k)}</div>`: d.sealed?'':`<div style="margin-top:8px"><b class="small">From the listing photos</b>${tcCondLines(cp).map(x=>`<p class="small" style="margin:2px 0">${x[0]}: ${esc(x[1])}</p>`).join('')}</div>`}`;
+  return { t:d.title, h:`<div class="stack"><div class="detail"><div class="bigcard"><div class="face ${cp.g>0?'slab':''}">${face}</div></div><div class="stack">${cond}${extractAct(r.h)}</div></div>${tcSalesPanel(cp.k,cp.g>0?cp.g:0)}</div>` }; };
+const _ds3=designSheet; designSheet=function(key){ return key[0]==='T'? tcDesignSheet(key) : _ds3(key); };
+const _fl3=feedLabel; feedLabel=function(key){ if (key[0]!=='T') return _fl3(key); const d=tcD(key); return [d.title, d.def.code+' '+(d.sealed?TC_VARN[d.v]:TC_VARN[d.v])]; };
+const _mk3=miniKey; miniKey=function(k){ return k[0]==='T'? miniTKey(k) : _mk3(k); };
+const _ct3=collectionTotals; collectionTotals=function(){ const t=_ct3(); if (!G.tcg) return t; for (const c of myTc()){ const r=tcEst(c.k,c.g>0?c.g:0,c); t.total[0]+=r.lo; t.total[1]+=r.hi; if (c.l){ t.listed[0]+=r.lo; t.listed[1]+=r.hi; } } return t; };
+// home: one panel that points at the card game
+const _hv3=VIEWS.home; VIEWS.home=()=>{ const h=_hv3(); if (!G.tcg||!G.tcg.arch.length) return h; const T=G.tcg, nx=tcNextSet(G.day), top=T.arch[0], ev=T.ev.find(e=>e.k!=='local')||T.ev[0], sm=myTcSummary();
+  const nm=id=>{ const a=T.arch.find(x=>x.id===id); return a?a.name:id; };
+  const p=`<div class="panel"><div class="phead"><h3>Wildkin TCG</h3><button class="linkbtn" data-act="goto" data-a="shop:tcg">Open</button></div><dl class="kv"><dt>Top deck</dt><dd>${esc(top.name)}, ${(top.sh*100).toFixed(0)}% of decks</dd>${ev?`<dt>Last big win</dt><dd>${esc(nm(ev.win))}, ${fmtDate(ev.d)}</dd>`:''}${nx?`<dt>Next set</dt><dd>${esc(tcSetDef(nx).name)} in ${tcSetDef(nx).rel-G.day} days</dd>`:''}<dt>Your cards</dt><dd>${sm.n+sm.g} cards, ${sm.s} sealed, about ${money(sm.val,true)}</dd></dl></div>`;
+  const i=h.indexOf('<div class="panel">'); return i<0? h+p : h.slice(0,i)+p+h.slice(i); };
+// the calendar
+const _un3=upNext; upNext=function(){ const out=_un3(); if (!G.tcg) return out; const T=G.tcg; const add=(d,txt,a)=>{ if (d>=G.day) out.push({d,txt,act:'goto',a,kind:'tcg'}); };
+  for (const s of (G.player.tsubs||[])){ const cp=TC(s.cid); if (cp) out.push({d:s.t1, txt:'GCS: '+tcD(cp.k).title+' comes back', act:'goto', a:'coll:grading', kind:'grade'}); }
+  const nx=tcNextSet(G.day); if (nx){ const def=tcSetDef(nx); add(def.rel,'Wildkin: '+def.name+' releases','shop:tcg'); const q=T.pre.filter(p=>p.set===nx).reduce((s,p)=>s+p.q,0); if (q) add(def.rel,'Your '+def.name+' preorder arrives','shop:tcg'); }
+  for (const cid in T.ban){ if (T.ban[cid].d>G.day){ const c=tcCardByCid(+cid); if (c) add(T.ban[cid].d, c.name+' is banned from Standard','shop:tcg'); } }
+  let t=G.day; for (let i=0;i<14;i++){ t=G.day+i; if (dowOf(t)===6){ const [m,d]=mdOf(t); const k=(m===6||m===12)&&d>=8&&d<=14? 'Wildkin Championship' : d<=7? 'Wildkin Regional' : null; if (k) add(t,k,'shop:tcg'); break; } }
+  out.sort((a,b)=>a.d-b.d); return out; };
+UK.tcg=['Wildkin','#8e44ad'];
+// news shown with the right row, and kept out of the baseball news
+(function(){ const nr=newsRow; newsRow=function(n){ return nr(n); }; })();
