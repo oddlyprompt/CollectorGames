@@ -24,7 +24,7 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 - `src/engine/*.js` is the whole simulation and UI. `src/packs/*.js` defines each game (`PACK`). `src/shell/` is the launcher, save slots and per-game screens.
 - **Everything is one global script.** `tools/build.py` concatenates files in a fixed order (see `ENGINE`, `TCG` lists), so load order matters. Later files often *wrap* earlier functions (`const _x=fn; fn=function(){...}`). A function name defined twice silently overwrites the first. Before adding a global, grep for the name. (A real clash happened with `evRow`.)
 - `PACK` is defined first. `packHas('sports'|'comics'|'tcg'|'hunt')` decides which worlds get generated. `src/shell/pack_apply.js` sets the tabs, market and news filters, and the Wildkin home, shop and collection screens.
-- **The baseball league always runs**, even in the comics and Wildkin builds. It is hidden but still generated (about 10 seconds at start, some save size). Removing it from those builds is a planned task.
+- **The baseball league only runs in the Sports build.** In comics and Wildkin, `newGame` calls `initNoLeague()` (empty players, products and standings) and the league, retail and release ticks do nothing (`packHas('sports')` gates in `market.js`, `world.js`). Old comics and Wildkin saves made before this still carry their frozen league data and load fine. Code shared with Sports (hunt, scenarios, market) must not assume baseball cards or products exist; gate with `HCARD()` or `packHas('sports')`.
 - **Saves:** `src/shell/saves.js` stores named slots in IndexedDB, gzip-compressed JSON. Backups are `.ccsave` files (magic `CCS1`, a JSON header, then the payload). Keys starting with `_` are never saved. What gets saved is controlled by `saveReplacer` (market.js, cm_save.js, tcg_boot.js).
 - **Determinism:** worlds come from `G.seed` through `mkRng(hsh(...))`. Wildkin sets and cards are regenerated from the seed, not stored.
 - **Adding a new kind of collectible to the shared market** follows the pattern at the bottom of `tcg_value.js`: wrap `interest`, `itemOf`, `createListing`, `removeListing`, `transfer`, `recordSale`, `playerList`, `npcPool`, `itemLabel`, then add UI wrappers (see `tcg_ui3.js`: `listingRow`, `lsText`, `marketFiltered`, `listingSheet`, `designSheet`). Old code often assumes every item is a baseball card, so grep for `D(key)` and loops over `G.sales` when something crashes.
@@ -50,7 +50,7 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
    - Hunt, follows and chases for cards.
    - A set-variation system that composes card art from species cutouts, poses and scenes (`tools/ingest.py` makes the cutouts).
    - Enough content for six or seven years of sets.
-2. Strip the baseball league out of the comics and Wildkin builds.
+2. ~~Strip the baseball league out of the comics and Wildkin builds.~~ Done.
 3. Comics milestone: real cover art sheets replace the vector covers.
 4. Sports milestone: player art sheets and stadiums.
 5. Two more card games: a Magic-style spell game and an anime character game, as options inside the Wildkin game.

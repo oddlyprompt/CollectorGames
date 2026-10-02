@@ -386,7 +386,7 @@ function makePrivate(fromDealer){
   else if (type==='indie'){ const runs=G.cm.ser.filter(x=>tierOf(x)>=2 && x.n>=4 && yearOf(x.st)>=2005).sort(()=>R()-0.5).slice(0,ri(4,9)); for (const x of runs) for (let n=1;n<=Math.min(x.n,30);n++) if (R()<0.7){ const cp=cmMakeCopy(mk(x.id,n,1,R()<0.08&&x.v[n]?x.v[n].split(',')[0]:''),own,null,'npc'); if (n===1 && R()<0.15) cp.sg={c:x.w, s:'u', real:R()<0.8?1:0}; add('m',cp); } }
   else if (type==='oldread'){ for (let i=0;i<ri(80,300);i++){ const cp=cmMakeCopy(randComicKey({old:1}),own,null,'lot'); cp.c=cp.c.map(v=>Math.max(5,v-ri(0,12))); add('m',cp); } }
   else if (type==='dealer'){ for (let i=0;i<ri(40,120);i++){ const cat=pick(['mod','slab','key','comic','pros','ocomic']); const e=acquireFor(s,cat); if (e) s.inv.push({t:e.t,id:e.id,d:G.day}); } }
-  else { for (let i=0;i<ri(40,160);i++){ if (HCOMIC() && (!HCARD() || R()<0.5)){ const cp=cmMakeCopy(randComicKey({old:R()<0.6}),own,null,'lot'); add('m',cp); } else add('c', makeCard(randCardKey({old:1}),own,null)); } if (R()<0.3){ const prod=pick(releasedProducts()); add('s', makeSealed(prod.id,fmtOf(prod,'hobby'),own,null)); } }
+  else { for (let i=0;i<ri(40,160);i++){ if (HCOMIC() && (!HCARD() || R()<0.5)){ const cp=cmMakeCopy(randComicKey({old:R()<0.6}),own,null,'lot'); add('m',cp); } else add('c', makeCard(randCardKey({old:1}),own,null)); } if (HCARD() && R()<0.3){ const prod=pick(releasedProducts()); add('s', makeSealed(prod.id,fmtOf(prod,'hobby'),own,null)); } }
   // what the seller believes it's worth: the highlights they know about, plus a bulk rate
   const ests=s.inv.map(e=>[e, sellerEst(s,e)]).sort((a,b)=>b[1]-a[1]);
   let perceived = 0; ests.forEach(([e,v],i)=>{ perceived += i<15 ? v*0.85 : Math.min(v,8)*0.55; });
