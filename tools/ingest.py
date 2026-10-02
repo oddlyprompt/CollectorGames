@@ -54,6 +54,13 @@ def key(p, screen, lo=None, hi=None):
     if screen!='green':                                                             # magenta bleeds into hairs and spines; take the colour of the nearest solid pixels instead
         w=(alpha>0.999).astype(np.float32); num=np.stack([np.asarray(Image.fromarray((F[...,i]*w*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(3)),np.float32) for i in range(3)],-1); den=np.asarray(Image.fromarray((w*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(3)),np.float32)[...,None]
         C=num/np.maximum(den,1); edge=(alpha<0.999)[...,None]&(den>2); F=np.where(edge,0.85*C+0.15*F,F)
+        e2=(alpha<0.999)                                                            # thin yellow spines carry a salmon cast all the way across (they are 1-3 px wide): pull pink pixels near the outline to spine yellow, using the colour of the solid interior to tell spines from pink flowers
+        deep=(np.asarray(Image.fromarray(((alpha>0.999)*255).astype(np.uint8)).filter(ImageFilter.MinFilter(7)))>0).astype(np.float32)
+        nd=np.stack([np.asarray(Image.fromarray((F[...,i]*deep*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(5)),np.float32) for i in range(3)],-1); dd=np.asarray(Image.fromarray((deep*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(5)),np.float32)[...,None]
+        Cd=nd/np.maximum(dd,1); fat=np.asarray(Image.fromarray((deep*255).astype(np.uint8)).filter(ImageFilter.MaxFilter(9)))>0; near=(~fat)&(alpha>0.01)&(dd[...,0]>3)   # thin = outside every solid part, grown back out
+        pink=near&(F[...,0]-F[...,1]>0.17)&(F[...,2]>F[...,1]*0.45)&((Cd[...,0]-Cd[...,1])<0.2)
+        yel=np.array([0.93,0.82,0.5],np.float32); F=np.where(pink[...,None],0.5*Cd+0.5*yel,F)
+        F[...,2]=np.where(e2,np.minimum(F[...,2],F[...,1]),F[...,2])
     F=bleed(F,alpha)                                                               # colour under the transparent pixels, so lossy WebP does not smear black or screen colour into the edge
     o=Image.fromarray((np.clip(F,0,1)*255).astype(np.uint8)); o.putalpha(Image.fromarray((alpha*255).astype(np.uint8))); return o
 def bleed(F, alpha, radii=(3,8,20)):

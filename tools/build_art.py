@@ -65,14 +65,16 @@ SCENES={
   ('cloud terrace with moon-and-star pillars and a floating castle','ground','day',['floating','clouds','castle','rainbow','terrace']),
   ('soap-bubble pool with star bubbles','water','day',['bubbles','iridescent','clouds']),
   ('lantern tree hollow at sunset with a petal rug','ground','dusk',['lanterns','tree','sunset','cosy'])]}
-SCREEN_COLOURS={'green','magenta'}
+# How each creature gets about, and its size next to the others (1.0 = tallest standing pose fills 46% of a scene). Used by lab/ to pick scenes and scale.
+# walker -> ground scenes; swimmer and floater -> water scenes (and air scenes, if a sheet ever has one). Koi is both a walker and a swimmer.
+CREATURES={'cactuft':(['walker'],1.0),'frondolin':(['walker'],0.86),'bashlet':(['walker'],0.74),'rolyte':(['walker'],0.66),'koi':(['walker','swimmer'],0.88),'flapod':(['floater'],0.7)}
 def main():
     manifest={'about':'Pieces cut from art-source/ by tools/build_art.py. Do not edit by hand; edit the tags in tools/build_art.py and rebuild.','creatures':[],'scenes':[]}
     for f in sorted(glob.glob(os.path.join(SRC,'creatures','*-poses-*.png'))):
         m=re.match(r'(.+)-poses-(green|magenta)\.png',os.path.basename(f)); name,screen=m.group(1),m.group(2)
         rep=ingest.cut_sheet(f,'cutout',screen,os.path.join(OUT,'creatures',name),POSES,drop_effects=True)
         for pose,r in zip(POSES,rep):
-            manifest['creatures'].append({'id':f'{name}-{pose}','name':name,'pose':pose,'screen':screen,'file':os.path.relpath(r['file'],ROOT),'size':list(r['size']),'stray_pieces_dropped':r['stray_pieces_dropped']})
+            manifest['creatures'].append({'id':f'{name}-{pose}','name':name,'pose':pose,'screen':screen,'file':os.path.relpath(r['file'],ROOT),'size':list(r['size']),'margins_LTRB':list(r['margins_LTRB']),'touches_edge':bool(r['touches_edge']),'stray_pieces_dropped':r['stray_pieces_dropped']})
         print(name,screen,'stray pieces dropped:',sum(r['stray_pieces_dropped'] for r in rep),'edge-touching cells:',[r['cell'] for r in rep if r['touches_edge']])
     for f in sorted(glob.glob(os.path.join(SRC,'scenes','scenes-*.png'))):
         biome=re.match(r'scenes-(.+)\.png',os.path.basename(f)).group(1); tags=SCENES[biome]; names=[f'{biome}-{i+1:02d}' for i in range(9)]
@@ -80,6 +82,7 @@ def main():
         for nm,r,(desc,floor,tod,extra) in zip(names,rep,tags):
             manifest['scenes'].append({'id':nm,'biome':biome,'floor':floor,'time':tod,'description':desc,'tags':extra,'file':os.path.relpath(r['file'],ROOT),'size':list(r['size'])})
         print(biome,'9 scenes')
+    manifest['creature_info']={n:{'move':m,'size':z} for n,(m,z) in CREATURES.items()}
     manifest['creatures'].sort(key=lambda x:(x['name'],POSES.index(x['pose'])))
     json.dump(manifest,open(os.path.join(OUT,'manifest.json'),'w'),indent=1); print('wrote assets/manifest.json:',len(manifest['creatures']),'creature pieces,',len(manifest['scenes']),'scenes')
 if __name__=='__main__': main()

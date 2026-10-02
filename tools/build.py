@@ -40,6 +40,11 @@ def publish():
     d=os.path.join(ROOT,'docs'); shutil.rmtree(d,ignore_errors=True); os.makedirs(d)
     for g in GAMES: shutil.copytree(os.path.join(DIST,g),os.path.join(d,g))
     open(os.path.join(d,'.nojekyll'),'w').write('')
+    lab=os.path.join(ROOT,'lab')                                                  # the art review page: lab/ plus the cut art it reads (not the raw sheets)
+    if os.path.isdir(lab):
+        shutil.copytree(lab,os.path.join(d,'lab'))
+        for sub in ('creatures','scenes'): shutil.copytree(os.path.join(ROOT,'assets',sub),os.path.join(d,'lab','assets',sub))
+        shutil.copy(os.path.join(ROOT,'assets','manifest.json'),os.path.join(d,'lab','assets','manifest.json'))
     cards=''.join(f'<a href="{g}/"><b>{GAMES[g]["name"]}</b></a>' for g in GAMES)
     open(os.path.join(d,'index.html'),'w').write('<!DOCTYPE html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Collector games</title><style>body{font-family:system-ui;background:#0c0e12;color:#e9ecef;max-width:420px;margin:12vh auto;padding:0 20px}a{display:block;background:#1c2129;border:1px solid #333;border-radius:12px;padding:18px;margin:12px 0;color:#fff;text-decoration:none;font-size:20px}h1{font-size:28px}</style><h1>Collector games</h1>'+cards)
     print('published to docs/')
