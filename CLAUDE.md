@@ -1,5 +1,8 @@
 # Collector games: guide for Claude Code
 
+## IMPORTANT: the current Wildkin content is placeholder
+The owner is writing a new Wildkin concept (`design/wildkin-universe.md` and whatever follows). **That document is the source of truth.** Everything about Wildkin that is in the code today is a throwaway prototype: the 81 + 9 creature names, the nine energy types (Flame, Tide, Grove, Radiant, Void, Frost, Storm, Stone, Lunar), the four sets (Hearthwild, Skyreach, Duskmere, Anthology), the generated art, the stats and attack text. Do not extend it, do not treat it as canon, and do not try to keep it compatible with the new concept. What *is* reusable is the machinery: the market, collectors, grading, save slots, the 3D viewer, the tournament and metagame simulation, rotation and bans, the card frame renderers, and `tools/ingest.py`.
+
 ## What this is
 Three browser games from one engine. All content is fictional.
 - **Sports Card Collector** (`sports`): a simulated baseball league, card products, packs, grading, shows, breaks.
@@ -27,7 +30,7 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 - **Adding a new kind of collectible to the shared market** follows the pattern at the bottom of `tcg_value.js`: wrap `interest`, `itemOf`, `createListing`, `removeListing`, `transfer`, `recordSale`, `playerList`, `npcPool`, `itemLabel`, then add UI wrappers (see `tcg_ui3.js`: `listingRow`, `lsText`, `marketFiltered`, `listingSheet`, `designSheet`). Old code often assumes every item is a baseball card, so grep for `D(key)` and loops over `G.sales` when something crashes.
 - The 3D inspector is `viewer3d.js` (three.js from `vendor/`). Print effects for close-ups are in `polish.js`. The grading reveal and crack-and-resubmit are in `drama.js`.
 
-## The Wildkin economy (balanced with headless simulations; re-measure after any change)
+## The prototype Wildkin economy (useful as a calibration reference only; re-measure for the new concept)
 - Pack worth about $3.50 to $5.50 against a $4.50 retail price. Box worth about $120 to $190 against $150.
 - Commons about 5 cents, uncommons about 40 cents, holo rares about $2.50, ultras $10 to $15, secrets $13 to $22.
 - Metagame: about 15 archetypes, top deck usually 15 to 25 percent, bans rare (about one or two a year), Standard is the newest three sets.
@@ -41,7 +44,7 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 - Never tested on a real phone or on itch.io. The 3D viewer was only tested with a software renderer.
 
 ## Roadmap, in order
-1. **Wildkin milestone.**
+1. **Wildkin milestone, rebuilt from the new concept.** First turn the owner's concept into data (affinities, families, roster, card types, set structure, rarity ladder, pull rates, calendar), then replace the prototype content. Then:
    - Art as image files, loaded on demand.
    - Chase tier and hype sets (see economy above).
    - Hunt, follows and chases for cards.
@@ -54,6 +57,12 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 
 ## Art
 Sheets are generated elsewhere as 3x3 grids with thin dark gutters and no text. `tools/ingest.py` cuts them. Cutout sheets use a flat green screen (magenta for green creatures), about 10 percent margin, no floor shadow needed. The cutout method was tested and works (see README).
+
+## Design documents
+- `design/wildkin-universe.md`: the owner's locked plan for the Wildkin creature roster (150 roots, 245 forms, evolution families, affinities, art sheet plan) and the decisions still open. Read it before touching Wildkin species, cards or art.
+
+## Source art
+`art-source/` holds the owner's generated sheets, untouched (see `art-source/README.md`). They are the real art direction for the rebuilt Wildkin: creatures are soft, toy-like 3D renders on a flat screen; scenes are matching 3D miniature-diorama backgrounds with an open floor in the lower third. Cut them with `tools/ingest.py` into `assets/`. `START_HERE.md` has the first tasks.
 
 ## Working with the owner
 The owner works mostly from a phone and is not a professional developer. Explain changes in plain language, keep commits small, ask at most one question at a time, and batch feedback. Always report what was tested and what was not, and never claim something works unless a test ran.

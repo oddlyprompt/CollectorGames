@@ -14,7 +14,7 @@ Each game saves to named slots in the browser, so you can run several games at o
 Open the game's folder and open `index.html`. It runs straight from the folder. For a normal web address, use one of the options below.
 
 ## Put a game online
-**GitHub Pages (free, no extra account).** In the repository: Settings, Pages, "Deploy from a branch", branch `main`, folder `/docs`, Save. After a minute you get an address like `yourname.github.io/yourrepo/`, with a page that links to all three games.
+**GitHub Pages (free, no extra account).** First run `python3 tools/build.py --publish` (Claude Code can do this for you) so the `docs/` folder exists. Then, in the repository: Settings, Pages, "Deploy from a branch", branch `main`, folder `/docs`, Save. After a minute you get an address like `yourname.github.io/yourrepo/`, with a page that links to all three games.
 
 **itch.io.** Make a new project, set "Kind of project" to HTML, and upload a zip of one game's folder (`index.html` must be at the top of the zip). Tick "This file will be played in the browser". Set visibility to Draft or Restricted while you test, so only you can see it. itch.io asks you to disclose AI-generated art in the project settings.
 
