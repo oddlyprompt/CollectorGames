@@ -53,7 +53,7 @@ def detect_screen(p):
     d={k:float(np.abs(m-np.array(v)).sum()) for k,v in SCREEN.items()}; k=min(d,key=d.get); return k, d[k], m.tolist()
 def check_file(path, task):
     """Returns (report, pieces): report is JSON-safe, pieces maps cell number to a PIL image for the cells that have an asset."""
-    rep={'task':task['task_id'],'file':os.path.relpath(path,ROOT),'sha256':sha(path),'checked':now(),'errors':[],'warnings':[],'cells':[]}; pieces={}
+    rep={'task':task['task_id'],'file':os.path.relpath(path,ROOT),'sha256':sha(path),'checked':now(),'errors':[],'warnings':[],'notes':[],'cells':[]}; pieces={}
     try: im=Image.open(path); im.load(); im=im.convert('RGB')
     except Exception as e: rep['errors'].append('cannot read image: %s'%e); return rep,pieces
     W,H=im.size; rep['size']=[W,H]; mw,mh=task['min_px']
@@ -81,7 +81,7 @@ def check_file(path, task):
             if cov>0.85: cr['errors'].append('no transparent background after keying (wrong screen colour?)')
             ys,xs=np.where(al>40); h,w=al.shape; m=(int(xs.min()),int(ys.min()),int(w-1-xs.max()),int(h-1-ys.max())); cr['margins_LTRB']=list(m)
             if min(m)<3: cr['errors'].append('subject touches the cell edge (clipped): '+'+'.join(s for s,v in zip(['left','top','right','bottom'],m) if v<3))
-            elif min(m)<int(0.04*min(w,h)): cr['warnings'].append('margin is tight (%d px); ask for about 10%%'%min(m))
+            elif min(m)<int(0.04*min(w,h)): cr.setdefault('notes',[]).append('margin is tight (%d px); the spec asks for about 10%%'%min(m))
             rgb=np.asarray(k)[...,:3].astype(int); op=al>200; sc=np.array(SCREEN[got])
             left=float(((np.abs(rgb-sc).sum(axis=2)<70)&op).sum()/max(1,op.sum())); cr['screen_left']=round(left,4)
             if left>0.004: cr['warnings'].append('screen colour left on the subject (%.1f%% of it)'%(left*100))
@@ -106,7 +106,7 @@ def check_file(path, task):
                 q=p.copy(); q.thumbnail((900,900),Image.LANCZOS); pieces[c['cell']]=('jpg',q)
         rep['cells'].append(cr)
     for cr in rep['cells']:
-        rep['errors']+=['cell %d: %s'%(cr['cell'],e) for e in cr['errors']]; rep['warnings']+=['cell %d: %s'%(cr['cell'],w) for w in cr['warnings']]
+        rep['errors']+=['cell %d: %s'%(cr['cell'],e) for e in cr['errors']]; rep['warnings']+=['cell %d: %s'%(cr['cell'],w) for w in cr['warnings']]; rep['notes']+=['cell %d: %s'%(cr['cell'],n) for n in cr.get('notes',[])]
     rep['result']='fail' if rep['errors'] else 'warn' if rep['warnings'] else 'pass'
     return rep,pieces
 
@@ -129,6 +129,7 @@ def write_report_md(task, rep, path):
     L=['# %s: %s'%(task['task_id'],task['title']),'','- File: `%s`'%rep['file'],'- sha256: `%s`'%rep['sha256'],'- Checked: %s'%rep['checked'],'- Result: **%s**'%rep['result'],'','![contact sheet](contact.png)','']
     if rep['errors']: L+=['## Errors (block approval)','']+['- '+e for e in rep['errors']]+['']
     if rep['warnings']: L+=['## Warnings (need a human look)','']+['- '+w for w in rep['warnings']]+['']
+    if rep.get('notes'): L+=['## Notes (do not block)','']+['- '+n for n in rep['notes']]+['']
     L+=['| Cell | Asset | Result |','|---|---|---|']+['| %d | %s | %s |'%(c['cell'],c.get('asset_id') or '(empty)','; '.join(c['errors']+c['warnings']) or ('empty as asked' if c.get('empty') else 'ok')) for c in rep['cells']]
     open(path,'w').write('\n'.join(L)+'\n')
 
@@ -138,7 +139,7 @@ def cmd_check(args, auto=False):
         m=FNAME.match(f); path=os.path.join(INC,f)
         if not m or m.group(1) not in Q:
             print('  ?  %s: not a known task file name (expected SHEET-NN.png or SIR-NNN.png, optional --vN)'%f); bad+=1; continue
-        task=Q[m.group(1)]; h=sha(path)
+        task=Q[m.group(1)]; h=task['task_id']+':'+sha(path)
         if h in I['deliveries'] and not args.force:
             r=I['deliveries'][h]; print('  =  %s: already checked (%s)'%(f,r['result'])); done.append(h); continue
         rep,pieces=check_file(path,task); meta=jload(os.path.join(INC,f.rsplit('.',1)[0]+'.json'),None)
@@ -146,11 +147,11 @@ def cmd_check(args, auto=False):
             rep['metadata']=meta
             if meta.get('task_id') not in (None,task['task_id']): rep['errors'].append('metadata task_id %s does not match the file name'%meta.get('task_id')); rep['result']='fail'
             if meta.get('manifest_version') and meta['manifest_version']!=manifest().get('manifest_version'): rep['warnings'].append('made against manifest %s, current is %s'%(meta['manifest_version'],manifest().get('manifest_version')))
-        rd=os.path.join(REP,task['task_id'],h[:12]); os.makedirs(os.path.join(rd,'cells'),exist_ok=True)
+        rd=os.path.join(REP,task['task_id'],rep['sha256'][:12]); os.makedirs(os.path.join(rd,'cells'),exist_ok=True)
         for cell,(ext,img) in pieces.items():
             img.save(os.path.join(rd,'cells','%d.%s'%(cell,ext)), 'WEBP' if ext=='webp' else 'JPEG', **({'quality':90,'alpha_quality':100,'method':6} if ext=='webp' else {'quality':86,'optimize':True}))
         contact_sheet(task,rep,pieces,os.path.join(rd,'contact.png')); jsave(os.path.join(rd,'report.json'),rep); write_report_md(task,rep,os.path.join(rd,'report.md'))
-        I['deliveries'][h]={'task':task['task_id'],'file':f,'result':rep['result'],'checked':rep['checked'],'report':os.path.relpath(rd,WP),'errors':len(rep['errors']),'warnings':len(rep['warnings']),'state':'checked'}
+        I['deliveries'][h]={'task':task['task_id'],'sha256':rep['sha256'],'file':f,'result':rep['result'],'checked':rep['checked'],'report':os.path.relpath(rd,WP),'errors':len(rep['errors']),'warnings':len(rep['warnings']),'state':'checked'}
         print('  %s  %s: %s, %d errors, %d warnings -> %s'%({'pass':'ok','warn':'!','fail':'X'}[rep['result']],f,rep['result'],len(rep['errors']),len(rep['warnings']),os.path.relpath(rd,ROOT)))
         if rep['result']=='fail': bad+=1
         done.append(h)
@@ -161,15 +162,15 @@ def cmd_check(args, auto=False):
 
 # ---------------------------------------------------------------- promotion
 def latest_for(task_id):
-    I=intake(); c=[(h,r) for h,r in I['deliveries'].items() if r['task']==task_id and r['state']=='checked' and os.path.exists(os.path.join(INC,r['file']))]
+    I=intake(); c=[(h,r) for h,r in I['deliveries'].items() if r['task']==task_id and r['state'] in ('checked','partly-approved') and os.path.exists(os.path.join(INC,r['file']))]
     return sorted(c,key=lambda x:x[1]['checked'])[-1] if c else (None,None)
 def approve(task_id, cells=None, replace=False, allow_warnings=False, by='owner'):
     Q=queue(); task=Q.get(task_id)
     if not task: sys.exit('unknown task '+task_id)
     h,rec=latest_for(task_id)
     if not h: sys.exit('no checked delivery for %s in incoming/ (run check first)'%task_id)
-    rd=os.path.join(WP,rec['report']); rep=json.load(open(os.path.join(rd,'report.json'))); R=registry(); I=intake(); src=os.path.join(INC,rec['file'])
-    keep=os.path.join(APP,'sources',task_id,'%s.png'%h[:12]); os.makedirs(os.path.dirname(keep),exist_ok=True)
+    rd=os.path.join(WP,rec['report']); rep=json.load(open(os.path.join(rd,'report.json'))); R=registry(); I=intake(); src=os.path.join(INC,rec['file']); hs=rec['sha256']
+    keep=os.path.join(APP,'sources',task_id,'%s.png'%hs[:12]); os.makedirs(os.path.dirname(keep),exist_ok=True)
     if not os.path.exists(keep): shutil.copy2(src,keep)
     meta=rep.get('metadata') or {}; took=[]; skipped=[]
     for cr in rep['cells']:
@@ -186,9 +187,9 @@ def approve(task_id, cells=None, replace=False, allow_warnings=False, by='owner'
             old=os.path.join(ROOT,R['assets'][aid]['file']); sup=os.path.join(APP,'superseded',aid,os.path.basename(old)+'.'+R['assets'][aid].get('sha256','')[:8])
             os.makedirs(os.path.dirname(sup),exist_ok=True)
             if os.path.exists(old): shutil.move(old,sup)
-            prev=R['assets'][aid]; prev['superseded_by']=h[:12]; R.setdefault('history',[]).append(dict(asset_id=aid,**prev))
+            prev=R['assets'][aid]; prev['superseded_by']=hs[:12]; R.setdefault('history',[]).append(dict(asset_id=aid,**prev))
         os.makedirs(os.path.dirname(dst),exist_ok=True); shutil.copy2(os.path.join(rd,'cells',piece[0]),dst)
-        R['assets'][aid]={'file':os.path.relpath(dst,ROOT),'sha256':sha(dst),'task':task_id,'cell':cr['cell'],'source':os.path.relpath(keep,ROOT),'source_sha256':h,
+        R['assets'][aid]={'file':os.path.relpath(dst,ROOT),'sha256':sha(dst),'task':task_id,'cell':cr['cell'],'source':os.path.relpath(keep,ROOT),'source_sha256':hs,
                           'approved':now(),'approved_by':by,'provenance':{'delivered_as':rec['file'],'metadata':meta},'checks':{k:cr[k] for k in ('margins_LTRB','coverage','screen','screen_left','stray_pieces_dropped','cell_px') if k in cr},'warnings_accepted':cr['warnings']}
         took.append(aid)
     jsave(os.path.join(APP,'registry.json'),R)
@@ -203,7 +204,7 @@ def cmd_reject(args):
     h,rec=latest_for(args.task)
     if not h: sys.exit('nothing to reject for '+args.task)
     I=intake(); d=os.path.join(REJ,args.task); os.makedirs(d,exist_ok=True); src=os.path.join(INC,rec['file'])
-    os.replace(src,os.path.join(d,h[:12]+'-'+rec['file'])); open(os.path.join(d,h[:12]+'-reason.txt'),'w').write(args.reason+'\n')
+    os.replace(src,os.path.join(d,rec['sha256'][:12]+'-'+rec['file'])); open(os.path.join(d,rec['sha256'][:12]+'-reason.txt'),'w').write(args.reason+'\n')
     I['deliveries'][h]['state']='rejected'; I['deliveries'][h]['reason']=args.reason; jsave(os.path.join(REP,'intake.json'),I); print('rejected',rec['file'])
 
 def regenerate(build=False):
@@ -214,7 +215,7 @@ def cmd_ingest(args):
     if args.auto_approve:
         for h in hs:
             r=I['deliveries'].get(h)
-            if r and r['state']=='checked' and r['result']=='pass': took+=approve(r['task'],by='auto (merged to main)')
+            if r and r['state']=='checked' and r['result'] in ('pass','warn'): took+=approve(r['task'],allow_warnings=True,by='auto: pull request merged to main (report reviewed there)')
     if took or args.build: regenerate(args.build)
 
 # ---------------------------------------------------------------- the owner's earlier sheets

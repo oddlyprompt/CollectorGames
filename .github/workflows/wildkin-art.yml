@@ -1,0 +1,43 @@
+# Wildkin art intake (see wildkin-production/SOL_HANDOFF.md)
+# Pull request touching incoming/: validate every delivery, attach the review reports, fail on hard errors.
+# Merge to main: the merge is the human approval. Approve every error-free cell (never overwriting approved art),
+# update the queue, rebuild the games into docs/ and commit the result.
+name: wildkin-art
+on:
+  pull_request:
+    paths: ['wildkin-production/incoming/**']
+  push:
+    branches: [main]
+    paths: ['wildkin-production/incoming/**']
+permissions:
+  contents: write
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install pillow numpy
+      - run: python3 tools/wildkin_manifest.py --check
+      - run: python3 tools/wildkin_art.py check --ci
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with: { name: wildkin-art-reports, path: wildkin-production/reports/ }
+  ingest:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - run: pip install pillow numpy
+      - run: python3 tools/wildkin_art.py ingest --auto-approve
+      - run: python3 tools/build.py --publish
+      - run: |
+          git config user.name "wildkin-art-bot"
+          git config user.email "wildkin-art-bot@users.noreply.github.com"
+          git add wildkin-production docs
+          git diff --cached --quiet || git commit -m "Wildkin art: approve merged deliveries, rebuild"
+          git push

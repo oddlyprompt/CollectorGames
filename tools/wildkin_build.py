@@ -6,7 +6,7 @@ WK_ART, so the card renderer draws its labelled placeholder."""
 import os, json, shutil
 from PIL import Image
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-WP=os.path.join(ROOT,'wildkin-production')
+WP=os.environ.get('WILDKIN_PRODUCTION') or os.path.join(ROOT,'wildkin-production')
 RAR={'common':'common','uncommon':'unc','rare':'rare','essence':'ess','ir':'ir','fa':'fa','sir':'sir','csr':'csr'}
 CAT={'creature':'creature','ally':'ally','gear':'gear','biome':'biome','tactic':'tactic','essence':'essence'}
 
