@@ -33,7 +33,6 @@ Next to each image, a small JSON file with the same name (recommended):
   "made_by": "SOL",
   "created": "2026-10-14",
   "prompt": "the exact prompt you used",
-  "concept_approved": "where the owner approved the design, if this subject needed a concept",
   "notes": "anything the reviewer should know"
 }
 ```
@@ -60,16 +59,16 @@ PNG only. No JPEG (it smears the screen colour), no transparency in the delivere
 
 **Special Illustration Rares** (`SIR-173` to `SIR-176`): one painting each, 5:7 portrait, at least 1500 x 2100 px. These are the showpieces of the set.
 
-## 4. Designs that do not exist yet
+## 4. Art direction is yours
 
-Only five creatures have an approved look (Cactuft, Bashlet, Rolyte, Frondolin, Flapod). No human character has one in this repository. Every subject marked "not established" in `ART_QUEUE.md` needs a concept first:
+You decide how every subject looks, building on the Wildkin art you have generated before. Only five creatures are drawn in this repository (Cactuft, Bashlet, Rolyte, Frondolin, Flapod); for everything else, design it yourself in the same style, using your earlier creature and character work as the reference. There is no separate concept step: make the production sheet directly.
 
-1. Deliver a single concept image named `CONCEPT-SP-002.png` (species ID) or `CONCEPT-CH-076.png` (character ID) to `incoming/`. These are reviewed by the owner and never put on cards.
-2. Only after the owner approves the concept, make the production sheet, and say where it was approved in the JSON (`concept_approved`).
+Two rules keep the set consistent:
 
-For June Kestrel, Sel Veyra and the other characters, the owner has reference images from earlier planning. Ask for them in `QUESTIONS.md` rather than redesigning anyone.
+1. **The first approved sheet of a subject becomes its reference.** Every later picture of it (other poses, Illustration Rares, Full Arts, SIRs, the Clasped versions) must match that design: same proportions, colours and markings.
+2. **Stay inside the manifest.** Names, numbers, families, stages and affinities come from `manifest.json`. A design may hint at a creature's affinity, but must not change who it is or which family it belongs to.
 
-Families 027 to 056 were confirmed by the owner on 2026-10-13 (see `reports/reconciliation.md`), so sheets 12 to 29 can be made once each subject has an approved concept.
+All families are confirmed (027 to 056 were confirmed by the owner on 2026-10-13), so every sheet in the queue can be made now. A good order: the canon mascot families (sheets 02-09, 11), then 12-29, then allies, gear, biomes, tactics, then premium art once the base designs exist.
 
 ## 5. What happens after you push
 

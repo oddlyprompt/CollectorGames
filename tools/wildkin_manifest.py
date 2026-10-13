@@ -167,7 +167,7 @@ def build(registry):
             'stage_label':'Basic' if s==1 else 'Stage %d'%(s-1),'evolves_from':('SP-%03d'%(n-1)) if s>1 else None,'evolves_to':('SP-%03d'%(n+1)) if s<ns else None,
             'affinity':aff,'mascot':mascot,'movement':{'value':move,'status':'canon' if n in MOVE_KNOWN else 'provisional'},
             'fandom':{'value':FANDOM.get(n,0.3 if not mascot else 0.5),'status':'provisional'},
-            'visual_identity':{'status':'established' if n in DESIGN_KNOWN else 'needs_concept','text':DESIGN_KNOWN.get(n,'Not established. Propose a concept for owner approval before the production sheet.')},
+            'visual_identity':{'status':'established' if n in DESIGN_KNOWN else 'sol_designs','text':DESIGN_KNOWN.get(n,'Not drawn yet. SOL designs it from the art already generated for Wildkin, in the established style. Its first approved sheet then becomes the reference every later picture must match.')},
             'poses':poses}
         species.append(sp)
         bg=background(n,aff['primary'],move)
@@ -182,7 +182,7 @@ def build(registry):
         if cat=='ally':
             rar='rare' if n in ally_rare else 'uncommon'; aid='cut.%s.portrait'%sl
             add_asset(aid,kind='cutout',subject=nm,pose='portrait',character='CH-%03d'%n,format='webp',aspect='free (cut from sheet)')
-            c['character']={'id':'CH-%03d'%n,'identity':{'status':'established' if n in CHARACTER_CANON else 'needs_concept','text':CHARACTER_CANON.get(n,'Named in Appendix A. Affiliation and appearance not recovered; use the owner\'s reference images if they exist, otherwise propose a concept for approval.')}}
+            c['character']={'id':'CH-%03d'%n,'identity':{'status':'established' if n in CHARACTER_CANON else 'sol_designs','text':CHARACTER_CANON.get(n,'Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.')}}
             c['art']={'layout':'cutout-on-panel','subject':aid,'background':None}
         elif cat=='gear':
             rar='uncommon' if n in gear_unc else 'common'; aid='obj.%s'%sl; add_asset(aid,kind='object',subject=nm,format='webp',aspect='free (cut from sheet)')
@@ -265,11 +265,11 @@ def sheets(species, cards, assets):
     for i,tid in enumerate(['SHEET-30','SHEET-31']):
         grp=allies[i*9:i*9+9]
         task(tid,'Allies sheet %s: %s'%('AB'[i],', '.join(c['name'] for c in grp)),'cutout-sheet',[{'cell':k+1,'asset_id':c['art']['subject'],'subject':c['name'],'pose':'portrait (full body, three-quarter view, standing)'} for k,c in enumerate(grp)],
-             chroma='green (magenta if the character wears mostly green)',identity=[{'card':c['id'],'name':c['name'],'identity':c['character']['identity']} for c in grp],identity_status='names canon; appearances need the owner\'s reference images or an approved concept',**dict(CUT,style='Same dimensional 3D render as the creatures, human characters with youthful stylised proportions, soft studio light'))
+             chroma='green (magenta if the character wears mostly green)',identity=[{'card':c['id'],'name':c['name'],'identity':c['character']['identity']} for c in grp],identity_status='names canon; SOL designs the looks from its earlier character art',**dict(CUT,style='Same dimensional 3D render as the creatures, human characters with youthful stylised proportions, soft studio light'))
     gear=[c for c in cards if c['category']=='gear']
     for i,tid in enumerate(['SHEET-32','SHEET-33']):
         grp=gear[i*9:i*9+9]
-        task(tid,'Gear sheet %s: %s'%('AB'[i],', '.join(c['name'] for c in grp)),'cutout-sheet',[{'cell':k+1,'asset_id':c['art']['subject'],'subject':c['name'],'pose':'object, three-quarter view'} for k,c in enumerate(grp)],chroma='green (magenta for green objects)',identity_status='names canon; designs need concept',**dict(CUT,style='Same dimensional 3D render, a single object per cell, soft studio light'))
+        task(tid,'Gear sheet %s: %s'%('AB'[i],', '.join(c['name'] for c in grp)),'cutout-sheet',[{'cell':k+1,'asset_id':c['art']['subject'],'subject':c['name'],'pose':'object, three-quarter view'} for k,c in enumerate(grp)],chroma='green (magenta for green objects)',identity_status='names canon; SOL designs the objects',**dict(CUT,style='Same dimensional 3D render, a single object per cell, soft studio light'))
     bio=[c for c in cards if c['category']=='biome']
     task('SHEET-34','Biomes A: one illustration per biome card','illustration-sheet',[{'cell':k+1,'asset_id':c['art']['illustration'],'subject':c['name']} for k,c in enumerate(bio)],
          layout='3x3 grid, thin dark gutters, full-bleed environment per cell, no text',style='3D miniature-diorama environments matching art-source/scenes/, soft even light',min_px=[1254,1254],aspect='1:1',identity_status='names canon')
@@ -289,7 +289,7 @@ def sheets(species, cards, assets):
     task('SHEET-40','Illustration Rares B',"premium-sheet",pcells([150]+list(range(161,169))),identity_status='canon subjects',**PREM)
     task('SHEET-41','Full Arts A',"premium-sheet",pcells(range(151,160)),identity_status='canon subjects',**PREM)
     task('SHEET-42','Full Arts B',"premium-sheet",pcells([160]+list(range(169,173)),4),identity_status='canon subjects; 4 cells empty',**PREM)
-    task('SHEET-43','Clasp Program: Clasped Secret Rares',"premium-sheet",pcells(range(177,181),5),identity_status='canon subjects; 5 cells empty. The look of a Clasp (Veyra Industries device) is not defined: propose it for approval first',**PREM)
+    task('SHEET-43','Clasp Program: Clasped Secret Rares',"premium-sheet",pcells(range(177,181),5),identity_status='canon subjects; 5 cells empty. SOL designs the look of a Clasp (a Veyra Industries device)',**PREM)
     for n in range(173,177):
         c=prem[n]; task('SIR-%03d'%n,'Special Illustration Rare: '+c['roster_name'],'single-illustration',[{'cell':1,'asset_id':c['art']['illustration'],'subject':c['roster_name'],'card':c['id']}],
                         layout='one painting, portrait 5:7, subject clear of the top and bottom quarters, no text, no frame',style='Showpiece painting, the highest-effort art in the set; creature/character must match the approved design',min_px=[1500,2100],aspect='5:7',identity_status='canon subject')
@@ -341,7 +341,7 @@ def reconcile(species, cards, assets, S, registry):
     add('- **Cactuft chase examples** (`art-source/chase-examples/cactuft-fullart-examples.png`, three paintings) are examples, not assigned to 141, 151 or 173. They can be submitted through `incoming/` if the owner wants them used.')
     add('- **Design explorations** (dolphin-cloud, pastel axolotl, fluffy llama) are not assigned to any card (bible section 3).')
     add('- **No 3-stage family sheet for the Mistip line is delivered**; Nimbusail needs it before its IR (161) and SIR (174).')
-    add('- **Visual designs are established for 5 creatures only** (Cactuft, Bashlet, Rolyte, Frondolin, Flapod) and for no human character. Every other subject is marked `needs_concept`: SOL proposes a concept, the owner approves it, then the production sheet is made.')
+    add('- **Art direction belongs to SOL.** Only 5 creatures (Cactuft, Bashlet, Rolyte, Frondolin, Flapod) are drawn in this repository. SOL designs every other creature, character, object and the Clasp from its earlier Wildkin art. No concept approval step: the first approved sheet of a subject becomes its reference, and later pictures (other poses, premium art) must match it.')
     add('- **Premium resolution.** A 1254 px 3x3 sheet gives 418 px cells, too small for full-art cards. Premium sheets must be at least 2100 x 2940 px (700 x 980 per cell).')
     add('\n## Counts\n')
     from collections import Counter
@@ -422,7 +422,7 @@ def render_queue_md(S, assets):
         if t.get('identity'):
             L.append('- Subjects:')
             for i in t['identity']:
-                if 'species' in i: L.append('  - %s **%s** (%s%s), affinity %s. %s Look: %s'%(i['species'],i['name'],i['stage'],', evolves from '+i['evolves_from'] if i['evolves_from'] else '',i['affinity'],('Role: '+i['role']+'.') if i.get('role') else '',i['visual_identity']['text'] if i['visual_identity']['status']=='established' else '_not established: propose a concept for owner approval first_'))
+                if 'species' in i: L.append('  - %s **%s** (%s%s), affinity %s. %s Look: %s'%(i['species'],i['name'],i['stage'],', evolves from '+i['evolves_from'] if i['evolves_from'] else '',i['affinity'],('Role: '+i['role']+'.') if i.get('role') else '',i['visual_identity']['text'] if i['visual_identity']['status']=='established' else '_SOL designs it (first approved sheet becomes the reference)_'))
                 else: L.append('  - %s **%s**: %s'%(i['card'],i['name'],i['identity']['text']))
         L.append(''); L.append('| Cell | Asset ID | Subject | Pose | Status |'); L.append('|---|---|---|---|---|')
         for c in t['cells']:
@@ -449,8 +449,6 @@ def outstanding(m, S):
         miss=[str(c['cell']) for c in t['cells'] if c.get('asset_id') and A[c['asset_id']]['status']!='approved']
         blk=[]
         if 'inferred' in str(t.get('identity_status','')): blk.append('owner must confirm the inferred family links')
-        if any((i.get('visual_identity',{}).get('status')=='needs_concept') or (i.get('identity',{}).get('status')=='needs_concept') for i in t.get('identity',[])): blk.append('concept approval for some subjects')
-        if 'Clasp' in t['title']: blk.append('the look of a Clasp is not defined')
         L.append('| %s | %s | %s | %s |'%(t['task_id'],t['production']['status'],', '.join(miss) or '-','; '.join(blk) or '-'))
     L+=['','## Pieces approved but not used by any card','','Extra poses from the owner\'s earlier sheets are kept in `approved/` for later variants (for example a second pose for a premium print or a pose library).','']
     return '\n'.join(L)+'\n'

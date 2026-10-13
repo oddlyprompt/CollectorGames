@@ -90,9 +90,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-002 **Prismotl** (Basic), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _not established: propose a concept for owner approval first_
-  - SP-003 **Opalotl** (Stage 1, evolves from SP-002), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _not established: propose a concept for owner approval first_
-  - SP-004 **Aurorotl** (Stage 2, evolves from SP-003), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _not established: propose a concept for owner approval first_
+  - SP-002 **Prismotl** (Basic), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-003 **Opalotl** (Stage 1, evolves from SP-002), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-004 **Aurorotl** (Stage 2, evolves from SP-003), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -117,8 +117,8 @@ Overall: 27 of 358 required cells approved.
 - Production: partial (3/9 cells approved)
 - Subjects:
   - SP-005 **Bashlet** (Basic), affinity Stone (canon). Role: Classic starter-style hero; toughness and progression. Look: Small blue ankylosaur: blue armoured back with cream spikes, cream belly and face, spiked tail club, big brown eyes. Green screen.
-  - SP-006 **Maceback** (Stage 1, evolves from SP-005), affinity Stone (canon). Role: Classic starter-style hero; toughness and progression. Look: _not established: propose a concept for owner approval first_
-  - SP-007 **Fortisaur** (Stage 2, evolves from SP-006), affinity Stone (canon). Role: Classic starter-style hero; toughness and progression. Look: _not established: propose a concept for owner approval first_
+  - SP-006 **Maceback** (Stage 1, evolves from SP-005), affinity Stone (canon). Role: Classic starter-style hero; toughness and progression. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-007 **Fortisaur** (Stage 2, evolves from SP-006), affinity Stone (canon). Role: Classic starter-style hero; toughness and progression. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -142,9 +142,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-008 **Koilet** (Basic), affinity Tide / Astral (canon). Role: Prestige icon; ancient, elegant, high-end chase-card creature. Look: _not established: propose a concept for owner approval first_
-  - SP-009 **Runakoi** (Stage 1, evolves from SP-008), affinity Tide / Astral (canon). Role: Prestige icon; ancient, elegant, high-end chase-card creature. Look: _not established: propose a concept for owner approval first_
-  - SP-010 **Koirune** (Stage 2, evolves from SP-009), affinity Tide / Astral (canon). Role: Prestige icon; ancient, elegant, high-end chase-card creature. Look: _not established: propose a concept for owner approval first_
+  - SP-008 **Koilet** (Basic), affinity Tide / Astral (canon). Role: Prestige icon; ancient, elegant, high-end chase-card creature. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-009 **Runakoi** (Stage 1, evolves from SP-008), affinity Tide / Astral (canon). Role: Prestige icon; ancient, elegant, high-end chase-card creature. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-010 **Koirune** (Stage 2, evolves from SP-009), affinity Tide / Astral (canon). Role: Prestige icon; ancient, elegant, high-end chase-card creature. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -169,8 +169,8 @@ Overall: 27 of 358 required cells approved.
 - Production: partial (3/9 cells approved)
 - Subjects:
   - SP-011 **Rolyte** (Basic), affinity Stone / Iron (canon). Role: Defender mascot; noble but slightly ridiculous. Look: Armoured roly-poly (pill bug): navy and steel segmented shell, silver knight-helmet visor with slits, pale face, rosy cheeks, two antennae, six dark legs. Green screen.
-  - SP-012 **Shelladin** (Stage 1, evolves from SP-011), affinity Stone / Iron (canon). Role: Defender mascot; noble but slightly ridiculous. Look: _not established: propose a concept for owner approval first_
-  - SP-013 **Aegisopod** (Stage 2, evolves from SP-012), affinity Stone / Iron (canon). Role: Defender mascot; noble but slightly ridiculous. Look: _not established: propose a concept for owner approval first_
+  - SP-012 **Shelladin** (Stage 1, evolves from SP-011), affinity Stone / Iron (canon). Role: Defender mascot; noble but slightly ridiculous. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-013 **Aegisopod** (Stage 2, evolves from SP-012), affinity Stone / Iron (canon). Role: Defender mascot; noble but slightly ridiculous. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -195,8 +195,8 @@ Overall: 27 of 358 required cells approved.
 - Production: partial (3/9 cells approved)
 - Subjects:
   - SP-014 **Frondolin** (Basic), affinity Verdant (canon). Role: Forest guardian; calm, sturdy, ancient. Look: Leaf pangolin: overlapping green leaf scales over a tan furry body, cream belly, curled leafy tail, green eyes. Magenta screen.
-  - SP-015 **Pangrove** (Stage 1, evolves from SP-014), affinity Verdant (canon). Role: Forest guardian; calm, sturdy, ancient. Look: _not established: propose a concept for owner approval first_
-  - SP-016 **Canopang** (Stage 2, evolves from SP-015), affinity Verdant (canon). Role: Forest guardian; calm, sturdy, ancient. Look: _not established: propose a concept for owner approval first_
+  - SP-015 **Pangrove** (Stage 1, evolves from SP-014), affinity Verdant (canon). Role: Forest guardian; calm, sturdy, ancient. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-016 **Canopang** (Stage 2, evolves from SP-015), affinity Verdant (canon). Role: Forest guardian; calm, sturdy, ancient. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -220,8 +220,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-017 **Candicoil** (Basic), affinity Wonder (canon). Role: Oddball fan favourite; playful and visually strange. Look: _not established: propose a concept for owner approval first_
-  - SP-018 **Spiramel** (Stage 1, evolves from SP-017), affinity Wonder (canon). Role: Oddball fan favourite; playful and visually strange. Look: _not established: propose a concept for owner approval first_
+  - SP-017 **Candicoil** (Basic), affinity Wonder (canon). Role: Oddball fan favourite; playful and visually strange. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-018 **Spiramel** (Stage 1, evolves from SP-017), affinity Wonder (canon). Role: Oddball fan favourite; playful and visually strange. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -245,8 +245,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-019 **Creskit** (Basic), affinity Astral (canon). Role: Cool mascot; mysterious night creature. Look: _not established: propose a concept for owner approval first_
-  - SP-020 **Astrynx** (Stage 1, evolves from SP-019), affinity Astral (canon). Role: Cool mascot; mysterious night creature. Look: _not established: propose a concept for owner approval first_
+  - SP-019 **Creskit** (Basic), affinity Astral (canon). Role: Cool mascot; mysterious night creature. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-020 **Astrynx** (Stage 1, evolves from SP-019), affinity Astral (canon). Role: Cool mascot; mysterious night creature. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -270,8 +270,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-021 **Berribat** (Basic), affinity Dusk / Verdant (canon). Role: Mischief mascot; spooky-cute, seasonal potential. Look: _not established: propose a concept for owner approval first_
-  - SP-022 **Pompyre** (Stage 1, evolves from SP-021), affinity Dusk / Verdant (canon). Role: Mischief mascot; spooky-cute, seasonal potential. Look: _not established: propose a concept for owner approval first_
+  - SP-021 **Berribat** (Basic), affinity Dusk / Verdant (canon). Role: Mischief mascot; spooky-cute, seasonal potential. Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-022 **Pompyre** (Stage 1, evolves from SP-021), affinity Dusk / Verdant (canon). Role: Mischief mascot; spooky-cute, seasonal potential. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -319,9 +319,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-024 **Mistip** (Basic), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-025 **Cumulfin** (Stage 1, evolves from SP-024), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-026 **Nimbusail** (Stage 2, evolves from SP-025), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-024 **Mistip** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-025 **Cumulfin** (Stage 1, evolves from SP-024), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-026 **Nimbusail** (Stage 2, evolves from SP-025), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -345,9 +345,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-027 **Cindikit** (Basic), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-028 **Emberuff** (Stage 1, evolves from SP-027), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-029 **Pyrenox** (Stage 2, evolves from SP-028), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-027 **Cindikit** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-028 **Emberuff** (Stage 1, evolves from SP-027), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-029 **Pyrenox** (Stage 2, evolves from SP-028), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -371,9 +371,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-030 **Breezit** (Basic), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-031 **Gustrel** (Stage 1, evolves from SP-030), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-032 **Tempestral** (Stage 2, evolves from SP-031), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-030 **Breezit** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-031 **Gustrel** (Stage 1, evolves from SP-030), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-032 **Tempestral** (Stage 2, evolves from SP-031), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -397,9 +397,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-033 **Glimlet** (Basic), affinity Dusk (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-034 **Hushwing** (Stage 1, evolves from SP-033), affinity Dusk (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-035 **Veilmora** (Stage 2, evolves from SP-034), affinity Dusk (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-033 **Glimlet** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-034 **Hushwing** (Stage 1, evolves from SP-033), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-035 **Veilmora** (Stage 2, evolves from SP-034), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -423,9 +423,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-036 **Rivbit** (Basic), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-037 **Boltusk** (Stage 1, evolves from SP-036), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-038 **Ferradon** (Stage 2, evolves from SP-037), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-036 **Rivbit** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-037 **Boltusk** (Stage 1, evolves from SP-036), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-038 **Ferradon** (Stage 2, evolves from SP-037), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -449,9 +449,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-039 **Pebblamb** (Basic), affinity Stone (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-040 **Cairnram** (Stage 1, evolves from SP-039), affinity Stone (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-041 **Monolox** (Stage 2, evolves from SP-040), affinity Stone (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-039 **Pebblamb** (Basic), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-040 **Cairnram** (Stage 1, evolves from SP-039), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-041 **Monolox** (Stage 2, evolves from SP-040), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -475,9 +475,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-042 **Quibbit** (Basic), affinity Wonder (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-043 **Whimhare** (Stage 1, evolves from SP-042), affinity Wonder (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-044 **Fablehorn** (Stage 2, evolves from SP-043), affinity Wonder (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-042 **Quibbit** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-043 **Whimhare** (Stage 1, evolves from SP-042), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-044 **Fablehorn** (Stage 2, evolves from SP-043), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -501,8 +501,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
-  - SP-045 **Mossnip** (Basic), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-046 **Bramblebuck** (Stage 1, evolves from SP-045), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-045 **Mossnip** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-046 **Bramblebuck** (Stage 1, evolves from SP-045), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -526,8 +526,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
-  - SP-047 **Reefkin** (Basic), affinity Tide (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-048 **Corallume** (Stage 1, evolves from SP-047), affinity Tide (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-047 **Reefkin** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-048 **Corallume** (Stage 1, evolves from SP-047), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -551,8 +551,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
-  - SP-049 **Sootkit** (Basic), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-050 **Smolderlynx** (Stage 1, evolves from SP-049), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-049 **Sootkit** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-050 **Smolderlynx** (Stage 1, evolves from SP-049), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -576,8 +576,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
-  - SP-051 **Zephroo** (Basic), affinity Astral (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-052 **Cometrail** (Stage 1, evolves from SP-051), affinity Astral (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-051 **Zephroo** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-052 **Cometrail** (Stage 1, evolves from SP-051), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -601,8 +601,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
-  - SP-053 **Nibrock** (Basic), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-054 **Drillbadger** (Stage 1, evolves from SP-053), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-053 **Nibrock** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-054 **Drillbadger** (Stage 1, evolves from SP-053), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -626,8 +626,8 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
-  - SP-055 **Dewink** (Basic), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-056 **Bloomble** (Stage 1, evolves from SP-055), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-055 **Dewink** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-056 **Bloomble** (Stage 1, evolves from SP-055), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -651,9 +651,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-057 **Fernibble** (Basic), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-058 **Acornox** (Basic), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-059 **Shelloop** (Basic), affinity Tide (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-057 **Fernibble** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-058 **Acornox** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-059 **Shelloop** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -677,9 +677,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-060 **Driftail** (Basic), affinity Tide (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-061 **Craggle** (Basic), affinity Stone (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-062 **Tumbear** (Basic), affinity Stone (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-060 **Driftail** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-061 **Craggle** (Basic), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-062 **Tumbear** (Basic), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -703,9 +703,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-063 **Nutbolt** (Basic), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-064 **Clampup** (Basic), affinity Tide (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-065 **Ashhopper** (Basic), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-063 **Nutbolt** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-064 **Clampup** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-065 **Ashhopper** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -729,9 +729,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-066 **Coaloo** (Basic), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-067 **Kitecoon** (Basic), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-068 **Thundrop** (Basic), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-066 **Coaloo** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-067 **Kitecoon** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-068 **Thundrop** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -755,9 +755,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-069 **Orbitot** (Basic), affinity Astral (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-070 **Lunapip** (Basic), affinity Astral (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-071 **Mothmur** (Basic), affinity Dusk (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-069 **Orbitot** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-070 **Lunapip** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-071 **Mothmur** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -781,9 +781,9 @@ Overall: 27 of 358 required cells approved.
 - Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - SP-072 **Winkrow** (Basic), affinity Dusk (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-073 **Puffluff** (Basic), affinity Wonder (provisional).  Look: _not established: propose a concept for owner approval first_
-  - SP-074 **Oddoodle** (Basic), affinity Wonder (provisional).  Look: _not established: propose a concept for owner approval first_
+  - SP-072 **Winkrow** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-073 **Puffluff** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-074 **Oddoodle** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -804,18 +804,18 @@ Overall: 27 of 358 required cells approved.
 - Style: Same dimensional 3D render as the creatures, human characters with youthful stylised proportions, soft studio light
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green (magenta if the character wears mostly green)
-- Identity status: names canon; appearances need the owner's reference images or an approved concept
+- Identity status: names canon; SOL designs the looks from its earlier character art
 - Production: todo (0/9 cells approved)
 - Subjects:
   - WK-S001-075 **Professor Maren Vale**: Professor Maren Vale. Important character (bible).
   - WK-S001-076 **June Kestrel**: June Kestrel: a young entry-point Keeper (bible). Preserve the established youthful silhouette and reference images.
-  - WK-S001-077 **Warden Sorrel Pike**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-078 **Toma Reed**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-079 **Lita Moss**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-080 **Nessa Flint**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-081 **Elder Oren**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-082 **Pip Rowan**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-083 **Archivist Sera Wynn**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
+  - WK-S001-077 **Warden Sorrel Pike**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-078 **Toma Reed**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-079 **Lita Moss**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-080 **Nessa Flint**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-081 **Elder Oren**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-082 **Pip Rowan**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-083 **Archivist Sera Wynn**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -836,18 +836,18 @@ Overall: 27 of 358 required cells approved.
 - Style: Same dimensional 3D render as the creatures, human characters with youthful stylised proportions, soft studio light
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green (magenta if the character wears mostly green)
-- Identity status: names canon; appearances need the owner's reference images or an approved concept
+- Identity status: names canon; SOL designs the looks from its earlier character art
 - Production: todo (0/9 cells approved)
 - Subjects:
-  - WK-S001-084 **Renn Calder**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-085 **Mira Quill**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
+  - WK-S001-084 **Renn Calder**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-085 **Mira Quill**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
   - WK-S001-086 **Sel Veyra**: Sel Veyra: CEO of Veyra Industries, the antagonistic organisation (bible).
-  - WK-S001-087 **Cass Rell**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-088 **Dr. Cyl Vane**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-089 **Marshal Rook**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-090 **Iris Shade**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-091 **Dex Harrow**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
-  - WK-S001-092 **Brin Hollow**: Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval.
+  - WK-S001-087 **Cass Rell**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-088 **Dr. Cyl Vane**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-089 **Marshal Rook**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-090 **Iris Shade**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-091 **Dex Harrow**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
+  - WK-S001-092 **Brin Hollow**: Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -868,7 +868,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Same dimensional 3D render, a single object per cell, soft studio light
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green (magenta for green objects)
-- Identity status: names canon; designs need concept
+- Identity status: names canon; SOL designs the objects
 - Production: todo (0/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
@@ -890,7 +890,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Same dimensional 3D render, a single object per cell, soft studio light
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green (magenta for green objects)
-- Identity status: names canon; designs need concept
+- Identity status: names canon; SOL designs the objects
 - Production: todo (0/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
@@ -1100,7 +1100,7 @@ Overall: 27 of 358 required cells approved.
 - Layout: 3x3 grid of portrait 5:7 cells, thin dark gutters, each cell a complete painting with the subject clear of the top and bottom quarters (card text sits there), no text, no frames
 - Style: Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly
 - Minimum size: 2100 x 2940 px, aspect 5:7
-- Identity status: canon subjects; 5 cells empty. The look of a Clasp (Veyra Industries device) is not defined: propose it for approval first
+- Identity status: canon subjects; 5 cells empty. SOL designs the look of a Clasp (a Veyra Industries device)
 - Production: todo (0/4 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |

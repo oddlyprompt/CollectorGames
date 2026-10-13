@@ -33,8 +33,8 @@ The game machinery for Version 1 is done and tested. First Bond (Set 001, 180 ca
 ## Blockers for shipping Version 1
 
 1. **Art.** 161 cards wait for art. Every premium card (40), every ally, gear, tactic and biome illustration, and 69 creatures. Start with sheets 02-09 and 11 (canon mascot families). See `ART_QUEUE.md`.
-2. **Designs.** Only five creatures and no human character have an approved look in this repository. SOL needs concepts approved first (process in `SOL_HANDOFF.md`, section 4). The owner has character reference images from earlier planning; they need to come into the repository.
-3. **Owner confirmations** (`reconciliation.md`): the provisional affinities of 51 creatures, the order of 173-176, 177-180 and 075-092, mascot fandom ranking, the look of a Clasp, which stage the existing koi sheet is.
+2. **Designs.** SOL decides the art direction from its earlier Wildkin work; no owner concept approval is needed. The first approved sheet of each subject becomes its reference.
+3. **Owner confirmations** (`reconciliation.md`): the provisional affinities of 51 creatures, the order of 173-176, 177-180 and 075-092, mascot fandom ranking, which stage the existing koi sheet is.
 4. **Card rules.** Every attack, HP value, weakness and effect is a generic placeholder so the simulation runs, and cards say "Provisional rules". Real rules need a design pass. When they exist, they go into `manifest.json` and nothing else changes.
 5. **Essence art.** No sheet in the plan. Essence cards are drawn as vector designs, which is acceptable for launch but should be decided.
 
