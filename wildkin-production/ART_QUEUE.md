@@ -342,7 +342,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-027 **Cindikit** (Basic), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -368,7 +368,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-030 **Breezit** (Basic), affinity Storm (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -394,7 +394,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-033 **Glimlet** (Basic), affinity Dusk (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -420,7 +420,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-036 **Rivbit** (Basic), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -446,7 +446,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-039 **Pebblamb** (Basic), affinity Stone (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -472,7 +472,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-042 **Quibbit** (Basic), affinity Wonder (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -498,7 +498,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: magenta
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
   - SP-045 **Mossnip** (Basic), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -523,7 +523,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
   - SP-047 **Reefkin** (Basic), affinity Tide (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -548,7 +548,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
   - SP-049 **Sootkit** (Basic), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -573,7 +573,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
   - SP-051 **Zephroo** (Basic), affinity Astral (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -598,7 +598,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
   - SP-053 **Nibrock** (Basic), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -623,7 +623,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: magenta
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/6 cells approved)
 - Subjects:
   - SP-055 **Dewink** (Basic), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -648,7 +648,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: per subject: green, magenta
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-057 **Fernibble** (Basic), affinity Verdant (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -674,7 +674,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-060 **Driftail** (Basic), affinity Tide (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -700,7 +700,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-063 **Nutbolt** (Basic), affinity Iron (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -726,7 +726,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-066 **Coaloo** (Basic), affinity Ember (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -752,7 +752,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-069 **Orbitot** (Basic), affinity Astral (provisional).  Look: _not established: propose a concept for owner approval first_
@@ -778,7 +778,7 @@ Overall: 27 of 358 required cells approved.
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
-- Identity status: inferred: family links follow Appendix A numbering; confirm with the owner before generating
+- Identity status: canon
 - Production: todo (0/9 cells approved)
 - Subjects:
   - SP-072 **Winkrow** (Basic), affinity Dusk (provisional).  Look: _not established: propose a concept for owner approval first_

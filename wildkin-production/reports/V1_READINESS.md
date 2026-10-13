@@ -10,7 +10,7 @@ The game machinery for Version 1 is done and tested. First Bond (Set 001, 180 ca
 
 | Milestone | State | Evidence |
 |---|---|---|
-| A. Audit, canonical manifest, art queue, SOL handoff | **Done** | `manifest.json` (180 cards, 74 species, 33 families, 403 art assets), `art_queue.json` / `ART_QUEUE.md` (43 sheets + 4 SIR singles), `SOL_HANDOFF.md`, `reports/reconciliation.md`. `python3 tools/wildkin_manifest.py --check` validates counts, number ranges, canon evolution lines, premium-art uniqueness and art IDs |
+| A. Audit, canonical manifest, art queue, SOL handoff | **Done** | `manifest.json` (180 cards, 74 species, 33 families (all now confirmed), 403 art assets), `art_queue.json` / `ART_QUEUE.md` (43 sheets + 4 SIR singles), `SOL_HANDOFF.md`, `reports/reconciliation.md`. `python3 tools/wildkin_manifest.py --check` validates counts, number ranges, canon evolution lines, premium-art uniqueness and art IDs |
 | B. Set 001 data system and stable IDs | **Done** | Cards come only from the manifest. Card identity = `WK-S001-NNN`, engine id = 1000 + number, the same in every world. Premium prints share their base card's identity |
 | C. Renderer, packs and gameplay on the new set | **Done** | Frames for creatures, allies, gear, biomes, tactics, Essence, IR, FA, SIR, Clasped. 6/2/1/1 packs with manifest odds. Market, grading, metagame, bans, saves all run on First Bond |
 | D. Automated art intake | **Done** | `tools/wildkin_art.py` (check, approve, reject, ingest, legacy) and `.github/workflows/wildkin-art.yml`. `tools/test_art_pipeline.py` proves it on synthetic deliveries |
@@ -34,7 +34,7 @@ The game machinery for Version 1 is done and tested. First Bond (Set 001, 180 ca
 
 1. **Art.** 161 cards wait for art. Every premium card (40), every ally, gear, tactic and biome illustration, and 69 creatures. Start with sheets 02-09 and 11 (canon mascot families). See `ART_QUEUE.md`.
 2. **Designs.** Only five creatures and no human character have an approved look in this repository. SOL needs concepts approved first (process in `SOL_HANDOFF.md`, section 4). The owner has character reference images from earlier planning; they need to come into the repository.
-3. **Owner confirmations** (`reconciliation.md`): the inferred families 027-056, the provisional affinities of 51 creatures, the order of 173-176, 177-180 and 075-092, mascot fandom ranking, the look of a Clasp, which stage the existing koi sheet is.
+3. **Owner confirmations** (`reconciliation.md`): the provisional affinities of 51 creatures, the order of 173-176, 177-180 and 075-092, mascot fandom ranking, the look of a Clasp, which stage the existing koi sheet is.
 4. **Card rules.** Every attack, HP value, weakness and effect is a generic placeholder so the simulation runs, and cards say "Provisional rules". Real rules need a design pass. When they exist, they go into `manifest.json` and nothing else changes.
 5. **Essence art.** No sheet in the plan. Essence cards are drawn as vector designs, which is acceptable for launch but should be decided.
 

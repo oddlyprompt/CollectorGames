@@ -69,7 +69,7 @@ Only five creatures have an approved look (Cactuft, Bashlet, Rolyte, Frondolin, 
 
 For June Kestrel, Sel Veyra and the other characters, the owner has reference images from earlier planning. Ask for them in `QUESTIONS.md` rather than redesigning anyone.
 
-Families 027 to 056 are **inferred** from the card numbering (see `reports/reconciliation.md`). Do not draw them until the owner confirms the family links.
+Families 027 to 056 were confirmed by the owner on 2026-10-13 (see `reports/reconciliation.md`), so sheets 12 to 29 can be made once each subject has an approved concept.
 
 ## 5. What happens after you push
 

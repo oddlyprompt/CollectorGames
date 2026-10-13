@@ -2,7 +2,7 @@
 
 ## Wildkin Version 1: First Bond comes from the manifest
 `design/wildkin-v1-production-bible.md` (the owner's production bible) is the source of truth. The prototype creatures, sets and art are gone from the game. The Wildkin build reads **only** `wildkin-production/manifest.json` (the 180 First Bond cards) and `wildkin-production/approved/registry.json` (approved art):
-- `tools/wildkin_manifest.py` builds the manifest, art queue and reports from `wildkin-production/source/appendix_a_roster.tsv` (extracted from the bible) and the tables in the script. Every fact has a status: **canon**, **inferred** (families 027-056, needs owner confirmation) or **provisional** (stats, rules text, non-creature rarities, most affinities, prices). Never present provisional or inferred as canon, and never invent cards, names or numbers. `--check` fails if the files are stale or invalid.
+- `tools/wildkin_manifest.py` builds the manifest, art queue and reports from `wildkin-production/source/appendix_a_roster.tsv` (extracted from the bible) and the tables in the script. Every fact has a status: **canon**, **inferred** (needs owner confirmation; the families 027-056 were confirmed on 2026-10-13) or **provisional** (stats, rules text, non-creature rarities, most affinities, prices). Never present provisional or inferred as canon, and never invent cards, names or numbers. `--check` fails if the files are stale or invalid.
 - `tools/wildkin_art.py` is the only way art gets into the game (check, approve, reject, ingest, legacy). Approved art is never overwritten without `--replace`. SOL (the art model) follows `wildkin-production/SOL_HANDOFF.md`.
 - `tools/wildkin_build.py` (called by `build.py` for tcg) writes `WK_CANON` and `WK_ART` into game.js and copies only approved images to `dist/tcg/art/`. Missing art draws a labelled "ART PENDING" placeholder, never another card's picture.
 - Saves carry `G.tcg.cv=2`. Prototype saves (no `cv`) are labelled in the launcher, never loaded, never modified (`pack_apply.js`).
@@ -51,7 +51,7 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 - Never tested on a real phone or on itch.io. The 3D viewer was only tested with a software renderer.
 
 ## Roadmap, in order
-1. **Wildkin milestone.** Done: First Bond as data (manifest), engine on the new set, art as image files loaded on demand, chase tier, art intake. Next: SOL art deliveries, owner confirmations, real card rules. Then:
+1. **Wildkin milestone.** Done: First Bond as data (manifest), engine on the new set, art as image files loaded on demand, chase tier, art intake. Next: SOL art deliveries, the remaining owner confirmations (affinities, ordering, Clasp look, koi stage), real card rules. Then:
    - Hype sets (more sets are needed first).
    - Hunt, follows and chases for cards.
    - A set-variation system that composes card art from species cutouts, poses and scenes (`tools/ingest.py` makes the cutouts).
