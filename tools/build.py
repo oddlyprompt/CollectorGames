@@ -2,10 +2,11 @@
 """Builds the three games into dist/<game>/ as plain static sites.
    python3 tools/build.py            (all games)     python3 tools/build.py tcg   (one game)"""
 import os, sys, shutil, hashlib, json
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image, ImageDraw
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); SRC=os.path.join(ROOT,'src'); DIST=os.path.join(ROOT,'dist')
 ENGINE='core world cards market render cm_data cm_world cm_value cm_render cm_save hunt visual visual2 cover2 ui1 ui2 ui3 cm_ui hunt_ui flow visual_ui attach attach_ui drama breaks scenario journal polish viewer3d'.split()
-TCG='tcg_art tcg_frames tcg_data tcg_world tcg_value tcg_boot tcg_render tcg_ui1 tcg_ui2 tcg_ui3'.split()
+TCG='tcg_frames tcg_data tcg_world tcg_value tcg_boot tcg_render tcg_ui1 tcg_ui2 tcg_ui3'.split()
 GAMES={'sports':{'name':'Sports Card Collector','theme':'#c0392b','tcg':False},'comics':{'name':'Comics Collector','theme':'#d4a017','tcg':False},'tcg':{'name':'Wildkin Collector','theme':'#8e44ad','tcg':True}}
 def rd(p): return open(p,encoding='utf-8').read()
 def icon(size, color, path):
@@ -17,7 +18,10 @@ def build(g):
     files=[os.path.join(SRC,'packs',g+'.js')]+[os.path.join(SRC,'engine',f+'.js') for f in ENGINE]
     if cfg['tcg']: files+=[os.path.join(SRC,'engine',f+'.js') for f in TCG]
     files+=[os.path.join(SRC,'engine','ui4.js'),os.path.join(SRC,'shell','saves.js'),os.path.join(SRC,'shell','launcher.js'),os.path.join(SRC,'shell','pack_apply.js')]
-    js='\n'.join(rd(f) for f in files)+'\nshellBoot();\n'; open(out+'/game.js','w',encoding='utf-8').write(js)
+    pre=''
+    if cfg['tcg']:                                                                 # Wildkin cards and art come from wildkin-production/ (see tools/wildkin_build.py)
+        import wildkin_build; pre,na,nc=wildkin_build.canon_js(out); print(f'        Wildkin: {nc} cards from the manifest, {na} approved art files copied to {g}/art/')
+    js=pre+'\n'.join(rd(f) for f in files)+'\nshellBoot();\n'; open(out+'/game.js','w',encoding='utf-8').write(js)
     css=rd(os.path.join(SRC,'engine','style.css'))+'\n'+rd(os.path.join(SRC,'shell','shell.css')); open(out+'/style.css','w',encoding='utf-8').write(css)
     shutil.copy(os.path.join(ROOT,'vendor','three.min.js'),out+'/vendor/three.min.js')
     for s in (192,512): icon(s,cfg['theme'],f'{out}/icons/icon-{s}.png')

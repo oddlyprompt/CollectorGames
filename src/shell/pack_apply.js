@@ -14,6 +14,16 @@ if (PACK.id==='comics'){ UI.sub.comics='home'; }
 // ---- the Wildkin game: its own home, shop and collection ----
 if (PACK.id==='tcg'){
   UI.tcs='shop';
+  // Prototype saves (made before the Version 1 cards) are kept exactly as they are and are never loaded into the Version 1 world:
+  // their cards were prototype creatures that no longer exist. The launcher labels them and offers a backup or a new game.
+  const _smn=slotMetaNow; slotMetaNow=function(){ const m=_smn(); if (G&&G.tcg) m.cv=G.tcg.cv||0; return m; };
+  const tcLegacyMeta=m=>m&&m.day!=null&&!(m.cv>=TC_CV);
+  const _scd=slotCard; slotCard=function(r){ const h=_scd(r); return tcLegacyMeta(r.meta)? h.replace('<span class="dim">','<span class="lleg">Prototype save, from before the First Bond cards. Kept as it is.</span><span class="dim">') : h; };
+  const _sop=shellOpen; shellOpen=async function(id){ try { const x=await slotRead(id); const g=await unpackBytes(x.bytes,x.enc); if (tcIsLegacy(g)) return tcShowLegacy(x.rec); } catch(e){ console.warn(e); } return _sop(id); };
+  window.tcShowLegacy=function(rec){ const el=launchEl(); el.innerHTML=`<div class="lwrap"><div class="lhead small"><h1>A prototype save</h1><p>${esc(rec.name)}</p></div>
+    <div class="lmsg">This game was saved with the prototype Wildkin cards, before the Version 1 set (First Bond). Those prototype creatures were replaced, so this save cannot be played in this version. Nothing in it has been changed or deleted.</div>
+    <p class="lnote">Download a backup to keep it. You can start a new First Bond game alongside it.</p>
+    <div class="lrow"><button class="lbtn big" data-lact="export" data-id="${rec.id}">Download a backup</button></div><div class="lrow"><button class="lbtn" data-lact="new">Start a new game</button><button class="lbtn" data-lact="back">Back</button></div></div>`; };
   const _tcsP=ACT.tcs; ACT.tcs=a=>{ if (a==='coll'){ UI.tab='coll'; UI.sub.coll='cards'; render(true); return; } if (a==='home'){ UI.tab='home'; render(true); return; } if (UI.tab!=='shop') UI.tab='shop'; _tcsP(a); };
   VIEWS.shop=()=>`<div class="pagetitle"><h1>Wildkin</h1><span class="muted small">The card game</span></div>${tcView()}`;
   VIEWS.home=()=>{ const t=collectionTotals(); const n=rvQueue().length;
