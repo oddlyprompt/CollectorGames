@@ -1,0 +1,2036 @@
+{
+ "schema": "wildkin-approved/1",
+ "assets": {
+  "cut.005-bashlet.standing": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.standing.webp",
+   "sha256": "b991d17f5c37fc93678d33ef26bfed68d2b0e043585468dd64be8c83a236124e",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     57,
+     25,
+     28,
+     38
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.jumping": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.jumping.webp",
+   "sha256": "d6a37661572a5dc504a89183a55c0d6fc5d0b04dbc03674f9941cb4d00669e07",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     18,
+     22,
+     10,
+     55
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.running": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.running.webp",
+   "sha256": "d43371d7525867c53ecf108248d020f9b821ad41738442c7d207ca5f6cd1a960",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     3,
+     40,
+     7,
+     27
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.waving": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.waving.webp",
+   "sha256": "d24352ee54ad809c2d5dff946edbc5060a60490bc8647dae835620a843e70730",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     36,
+     19,
+     6,
+     39
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.sitting": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.sitting.webp",
+   "sha256": "a35810f89837438267c6cfe94900379545180b75d4dafdd7d5e65b59324e8d63",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     29,
+     50,
+     9,
+     51
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.sleeping": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.sleeping.webp",
+   "sha256": "eec79e02cde6b895e3e79bb539a298bb15d3b691ddb9850bf12339c36f9c944e",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     6,
+     90,
+     10,
+     30
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.surprised": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.surprised.webp",
+   "sha256": "9173a37b7dd7e2dd552e8ed056b2ab9f1a4564c8273ed30b6e57f27421c8439e",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     34,
+     14,
+     17,
+     56
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 1
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.looking-up": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.looking-up.webp",
+   "sha256": "b4f34259f2afcfac32eb6ef2d99339e705cbee36ee8228b7c5a65f123c36941d",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     5,
+     18,
+     19,
+     58
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.005-bashlet.back-view": {
+   "file": "wildkin-production/approved/assets/cut.005-bashlet.back-view.webp",
+   "sha256": "6b89c724e608386e8a2de00be330801ca0b6825806ee281a3c6d287abc6c69a5",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/creatures/bashlet-poses-green.png",
+   "source_sha256": "4817a1398055428c65f4e5f2259d5c143f37861d167ee901bf671eec2a4759b7",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/bashlet-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     12,
+     12,
+     35,
+     62
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.001-cactuft.standing": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.standing.webp",
+   "sha256": "9cc1feda143ae9b92ec3da3c20fc08d98e3acd40a0972a50887a2c0e3811526b",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     97,
+     3,
+     89,
+     13
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.001-cactuft.jumping": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.jumping.webp",
+   "sha256": "53cc19f1f0789ec69260e5fb5415d8dfeb079bc32158ef985606068445aaf846",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     83,
+     5,
+     82,
+     44
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.001-cactuft.running": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.running.webp",
+   "sha256": "630fce07ccfb4bcbf8bc103cdf2eeea5edd24d544b4bc04c8d0991ef5289e8da",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     62,
+     8,
+     33,
+     16
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.001-cactuft.waving": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.waving.webp",
+   "sha256": "eecd07ca538cb187a7aa1a2e0a4fcb70103fe0296f48302399671bf151b33ef6",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     78,
+     4,
+     83,
+     19
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.001-cactuft.sitting": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.sitting.webp",
+   "sha256": "ad52ad196cfcb7072f9dff13814c4b23bf2256787a85a6a14492a2064c8eba87",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     86,
+     2,
+     71,
+     26
+    ],
+    "touches_edge": true,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": [
+    "subject touches the cell edge on the source sheet"
+   ]
+  },
+  "cut.001-cactuft.sleeping": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.sleeping.webp",
+   "sha256": "0d25a076dcf764c06848f1e20f2968a72bf93a92601b5038b929f8c0ba830d06",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     15,
+     84,
+     16,
+     80
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.001-cactuft.surprised": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.surprised.webp",
+   "sha256": "b3b7b3ec601b3067d38f30693700a655afd90a628028136681570e68592368e2",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     68,
+     0,
+     86,
+     30
+    ],
+    "touches_edge": true,
+    "stray_pieces_dropped": 3
+   },
+   "warnings_accepted": [
+    "subject touches the cell edge on the source sheet"
+   ]
+  },
+  "cut.001-cactuft.looking-up": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.looking-up.webp",
+   "sha256": "cb6ad5d0296f64c775bea49ee5d9e8f3f09ef113a5b4e8df15daa28ede9abb4c",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     64,
+     4,
+     54,
+     32
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.001-cactuft.back-view": {
+   "file": "wildkin-production/approved/assets/cut.001-cactuft.back-view.webp",
+   "sha256": "ef61041c753cecd096ca523af36adaa18b16fb5cabab064fe299a8124055b48d",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/creatures/cactuft-poses-magenta.png",
+   "source_sha256": "96c3f67597118155d9e8285e676ea162937c4348e5843ba44f32a0ac403689e5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/cactuft-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     86,
+     4,
+     89,
+     29
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.standing": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.standing.webp",
+   "sha256": "df72f7fe5cdf1d8d56dca479d953a69fc69056f94c2cb4e9a95ab15cd682c32c",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     15,
+     67,
+     5,
+     55
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.jumping": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.jumping.webp",
+   "sha256": "746dc39f7c4ee08f7edfff299945349ff365c5c50bc982a4c9438624ab3c25ae",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     37,
+     22,
+     11,
+     56
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.running": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.running.webp",
+   "sha256": "b092775cd10efd0f7d5bd477864d5848101baccc1a97e9cb720915b2b09c34f4",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     20,
+     61,
+     30,
+     56
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.waving": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.waving.webp",
+   "sha256": "f1639894025d20bd86e80e7848f662bb69c60d70cb48a0cf017c07b6a6f0ed24",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     43,
+     12,
+     10,
+     37
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.sitting": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.sitting.webp",
+   "sha256": "562dd72ca6c37b9b7ac68794f575858a5fba6534cb7cd668be98ff0b77716d10",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     4,
+     57,
+     5,
+     43
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.sleeping": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.sleeping.webp",
+   "sha256": "8273e3c222c0053babf7e1afce30284726a2d4efc18be337015c5b70aa3db359",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     21,
+     57,
+     26,
+     63
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.surprised": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.surprised.webp",
+   "sha256": "5fecde1c77fa6e17ccd91111bb6221b75742cad8875a8cc389dc24a9eb79aafc",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     38,
+     16,
+     23,
+     74
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.looking-up": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.looking-up.webp",
+   "sha256": "a48535ebdd93a327bfd3793778dc599ece943ccb41a23524561d2aecafdf8885",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     15,
+     26,
+     36,
+     68
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.023-flapod.back-view": {
+   "file": "wildkin-production/approved/assets/cut.023-flapod.back-view.webp",
+   "sha256": "c83365dbcfeac7b3ff410e1fa25de9d90513bdf52a8e179b22246f148b5f158e",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/creatures/flapod-poses-green.png",
+   "source_sha256": "5ca293df4a49d7fbc37ac1ec8dec21b634aa34289ab917695c75a0d4b0b502f5",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/flapod-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     55,
+     25,
+     22,
+     65
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.standing": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.standing.webp",
+   "sha256": "b6bbf9b5d8d1c6efe443de763259e6781c555d0ef208a1f05f95d68b524397b7",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     31,
+     5,
+     82,
+     15
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.jumping": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.jumping.webp",
+   "sha256": "e0ba1b501776f7eff9b810e6c9c0bc150f9f56f1b9c87796f182fc140dfb5c28",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     6,
+     13,
+     24,
+     38
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.running": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.running.webp",
+   "sha256": "fa1d1bd05fea00f03b1f410284a59654d9e28bed30e0bbbb5bd510d6bb8a0f97",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     24,
+     26,
+     21,
+     27
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.waving": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.waving.webp",
+   "sha256": "b36f8d7d0dc3ef09d8142f8607e152bf388fd06ea0ac7804699a572974dc1b5e",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     46,
+     2,
+     26,
+     21
+    ],
+    "touches_edge": true,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": [
+    "subject touches the cell edge on the source sheet"
+   ]
+  },
+  "cut.014-frondolin.sitting": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.sitting.webp",
+   "sha256": "53d39c6391bb4d6260b2ffb2c9f8f8138cfcc53478a71ae1354fe913351523ac",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     76,
+     21,
+     28,
+     35
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.sleeping": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.sleeping.webp",
+   "sha256": "98cb1a66905c2f9c916c3baa53b98d34b543e437fee3c612975245a905f3f2be",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     35,
+     64,
+     31,
+     38
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.surprised": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.surprised.webp",
+   "sha256": "8a6db30484e3494c4a4bbbef86e7bd1a6f84691b7ce7b01a097b0c38e08234b9",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     25,
+     10,
+     83,
+     23
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 2
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.looking-up": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.looking-up.webp",
+   "sha256": "2a41fdc7f77ceb1536208c17f91ee1ead49467253aadfe9195f50af6af7ef829",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     12,
+     12,
+     32,
+     23
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.014-frondolin.back-view": {
+   "file": "wildkin-production/approved/assets/cut.014-frondolin.back-view.webp",
+   "sha256": "b22201c51de65c3b781aba106ac7c10e3f1266fbf393fc31934a006d4c0e3414",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/creatures/frondolin-poses-magenta.png",
+   "source_sha256": "8c892c1c51f27e3487b7549f3f18d1ac02ee1100a332e0de3deb4698023bf7df",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/frondolin-poses-magenta.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     79,
+     7,
+     20,
+     22
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.standing": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.standing.webp",
+   "sha256": "1b89f04eac57b14aa57272031b477d00eca3b2de090e26bfe0a59bbc49416a0f",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     57,
+     22,
+     53,
+     29
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.jumping": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.jumping.webp",
+   "sha256": "4d98b969b6a35ca6e986428ce1adfe7e8bfd9f38d65d1facb84737b9c2d3b932",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     42,
+     16,
+     13,
+     54
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.running": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.running.webp",
+   "sha256": "4b19343e853df88f61d45ca6bbf728140ad26adf0319a82b881438c025fb06be",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     15,
+     76,
+     14,
+     46
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 2
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.waving": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.waving.webp",
+   "sha256": "08aa5e413518b3339713e1a33b9ca673aeca758f8466b2803d245229f518fb52",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     47,
+     20,
+     28,
+     30
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.sitting": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.sitting.webp",
+   "sha256": "46e0f99b77b85bc1eff5173b3ef2b30aa61d643dd79f969155d91f4687073ddc",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     47,
+     18,
+     49,
+     28
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.sleeping": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.sleeping.webp",
+   "sha256": "6927aec052aa278d57c6457a0510de773a86a65f0a9ccd133453d37821dd3e42",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     44,
+     43,
+     36,
+     38
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.surprised": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.surprised.webp",
+   "sha256": "174e15e1710ace4ad47acf8605e71e939353333425e90060914a0839d80576b0",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     46,
+     11,
+     34,
+     46
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 2
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.looking-up": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.looking-up.webp",
+   "sha256": "858e69b73a804acceb90e7219db5e4397035d90cf1bf921359b10880a8265ae8",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     41,
+     13,
+     43,
+     28
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 2
+   },
+   "warnings_accepted": []
+  },
+  "cut.011-rolyte.back-view": {
+   "file": "wildkin-production/approved/assets/cut.011-rolyte.back-view.webp",
+   "sha256": "2b76a60d9cf20ce6c6a5195666db4a582098e16109a9c78f6425aea3debc0be4",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/creatures/rolyte-poses-green.png",
+   "source_sha256": "c26c17bdc1fe42deea18f95bf826c250121660c331a49c992253a88140c0ed5c",
+   "approved": "2026-10-13T04:43:15Z",
+   "approved_by": "owner (sheet supplied and reviewed before the V1 manifest; cut with tools/build_art.py)",
+   "provenance": {
+    "delivered_as": "art-source/creatures/rolyte-poses-green.png",
+    "cut_with": "tools/ingest.py via tools/build_art.py"
+   },
+   "checks": {
+    "margins_LTRB": [
+     51,
+     24,
+     34,
+     38
+    ],
+    "touches_edge": false,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.01": {
+   "file": "wildkin-production/approved/assets/scene.astral.01.jpg",
+   "sha256": "f831df9f6c61bd8849067a22cb9efd6ad9823c80e23200e24f414834c856b0af",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "moonlit forest clearing with glowing stars"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.02": {
+   "file": "wildkin-production/approved/assets/scene.astral.02.jpg",
+   "sha256": "ed6593f6e5103d87371230b6639487e451268623e6ddab1b47838cc13da19287",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "ruined stone arch over a moon-circle floor"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.03": {
+   "file": "wildkin-production/approved/assets/scene.astral.03.jpg",
+   "sha256": "ec12a61f2845d737fab8bfaab8330dde80f4e2411527d989fbd883be0e53a82f",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "dusk",
+    "description": "lantern plaza above a fairy-tale village"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.04": {
+   "file": "wildkin-production/approved/assets/scene.astral.04.jpg",
+   "sha256": "263d29e2c845cd6f628430ee09fa34522c0e3992ce78dc324f1f88c087756812",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "night glade with waterfall and glowing flowers"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.05": {
+   "file": "wildkin-production/approved/assets/scene.astral.05.jpg",
+   "sha256": "41e657c8cf7b6180e40ea14dd42e1d4e9690afbe18339cfa3c861ad49f03ab06",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "floating islands and a moon statue on a star-circle floor"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.06": {
+   "file": "wildkin-production/approved/assets/scene.astral.06.jpg",
+   "sha256": "c239723f13af7d9339ce5a1bf1ca03d8e6a0ced475f21ac86a8eba43eb7611a8",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "aurora over a lake, crystal meadow"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.07": {
+   "file": "wildkin-production/approved/assets/scene.astral.07.jpg",
+   "sha256": "6077a0ff505e12f621addcd8f5748b6c6a3fcd0bfb4f9909ecc46cfe4e662e58",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "purple crystal cave with a glowing stone floor"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.08": {
+   "file": "wildkin-production/approved/assets/scene.astral.08.jpg",
+   "sha256": "1c5804810eb2c9305fd522000c2e34e43169a6f7ec0ffd3cb8ebae08fb398661",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "meadow with floating waterfall islands and a galaxy"
+   },
+   "warnings_accepted": []
+  },
+  "scene.astral.09": {
+   "file": "wildkin-production/approved/assets/scene.astral.09.jpg",
+   "sha256": "99357989ac8f6a7dc66e849dcb89b70b5b469d32043e5c2666e8c63658d2f1dd",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/scenes/scenes-astral.png",
+   "source_sha256": "95700f75991e08ef54edfbe4769f60ae196cfc96927b65cc77b330216737eb5e",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-astral.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "golden observatory plaza with an armillary sphere"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.01": {
+   "file": "wildkin-production/approved/assets/scene.stone.01.jpg",
+   "sha256": "407a699d546a7f05ce610ad16f17ebabef10d2bab326a7320c9e080dacad31f0",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "red canyon with a flat rock shelf"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.02": {
+   "file": "wildkin-production/approved/assets/scene.stone.02.jpg",
+   "sha256": "bf74bd1c964151ca308e4d1df5110d5a3e7f61c87eeddf73f4472a49ad5eff40",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "purple crystal cave mouth"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.03": {
+   "file": "wildkin-production/approved/assets/scene.stone.03.jpg",
+   "sha256": "5298f696965c26a4b4013ae7ee33efb7dfbdb09173118b134ffb3e0c921f2ad4",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "mossy rock shelf above misty rock towers"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.04": {
+   "file": "wildkin-production/approved/assets/scene.stone.04.jpg",
+   "sha256": "fe00e039746acc5802084fd180d1dbdb4fb27f53f568af397e5c86dfa2796985",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "overgrown stone gateway with carved symbols"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.05": {
+   "file": "wildkin-production/approved/assets/scene.stone.05.jpg",
+   "sha256": "f42f4bad4e239b9f93d727fdcbac529b0bc97492a7eba4a977bcaea7972b866f",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "desert with giant ribcage bones"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.06": {
+   "file": "wildkin-production/approved/assets/scene.stone.06.jpg",
+   "sha256": "aedce07b5d458dfc44f96cec38aec876da19f3b58993be1463ca80df8e7e8233",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "mossy boulders and a balanced rock"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.07": {
+   "file": "wildkin-production/approved/assets/scene.stone.07.jpg",
+   "sha256": "f22032412286e71f0c2b1025f15f975cd3a92c1f6cbb1a07ae8e9d03b532a0dd",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "crystal pool with stepping-stone slabs and a small waterfall"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.08": {
+   "file": "wildkin-production/approved/assets/scene.stone.08.jpg",
+   "sha256": "5d566d4d51707b84020edea870fb33194025bda5912982950333eba7e6a24ded",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "sunlit canyon spires over a sandstone ledge"
+   },
+   "warnings_accepted": []
+  },
+  "scene.stone.09": {
+   "file": "wildkin-production/approved/assets/scene.stone.09.jpg",
+   "sha256": "08049c2e1538e7f6e5914bec09a8f7c76dc51d3453c5087f5be3a794c8daffaa",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/scenes/scenes-stone.png",
+   "source_sha256": "5b39c46ba7e16ea62b1eae276a0acd56c0681bdccddf5a59e7e6983ae1a109af",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-stone.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "ancient carved ruins on mossy steps"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.01": {
+   "file": "wildkin-production/approved/assets/scene.tide.01.jpg",
+   "sha256": "f9552f06a035f6688eceef55a06eb9c7c9459a93b53befa5dd2c90ea78685b02",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "clear shallow lagoon with a rock arch"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.02": {
+   "file": "wildkin-production/approved/assets/scene.tide.02.jpg",
+   "sha256": "2746dedb4effa3f4e66544e6691de56f30b7142e139162bf91b2bb2c15af4647",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "dusk",
+    "description": "sunset tide pool with coral and starfish"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.03": {
+   "file": "wildkin-production/approved/assets/scene.tide.03.jpg",
+   "sha256": "69eb233e78486a8a6f34cc25a0bf5fb3c5f9c3cb2cfca2ad0412eb907bcbe8b4",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "night",
+    "description": "moonlit beach with glowing blue shoreline"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.04": {
+   "file": "wildkin-production/approved/assets/scene.tide.04.jpg",
+   "sha256": "0dc083b490aaf59e336fc81afa409bf4c7bca60122125e77640d3a9f9e2a7827",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "lily pond with cattails and waterfalls"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.05": {
+   "file": "wildkin-production/approved/assets/scene.tide.05.jpg",
+   "sha256": "fcdb99bb1156126b9be955bc63826049935835c67e5c3d1672a9986f64640ac9",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "coral shallows with sun rays"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.06": {
+   "file": "wildkin-production/approved/assets/scene.tide.06.jpg",
+   "sha256": "1aeaf76c8a3431254002d1d751bcdb33a43290ac03dc5790afcb8ecd7d8584d0",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "sea cave shore opening to a sunny bay"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.07": {
+   "file": "wildkin-production/approved/assets/scene.tide.07.jpg",
+   "sha256": "2cbcb0031e4bd17efe7e3245065a48daaa2562f8303fd5acba94b137e47050d4",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "crystal waterfall pool"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.08": {
+   "file": "wildkin-production/approved/assets/scene.tide.08.jpg",
+   "sha256": "04d9ed15d7ee0c15c9d3f8e43b151a2b2e4cb17b6684ced1e0a222ee2c4c4360",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "pearly shell beach"
+   },
+   "warnings_accepted": []
+  },
+  "scene.tide.09": {
+   "file": "wildkin-production/approved/assets/scene.tide.09.jpg",
+   "sha256": "6a8861cd2324784793469ffe5422cbacdbb0e9899ce5ea5680603e5c7cbbfa4d",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/scenes/scenes-tide.png",
+   "source_sha256": "d295c925633a8b720fc4311f4ef75c891b0e6049dfe8a815da5371ce068212fe",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-tide.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "big waterfall lagoon"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.01": {
+   "file": "wildkin-production/approved/assets/scene.verdant.01.jpg",
+   "sha256": "9f562aaddc6a70fc5cad99fc396922e4b9a77d7e67c851c9471ff043f14ac522",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "flower meadow under a big tree with a wooden fence"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.02": {
+   "file": "wildkin-production/approved/assets/scene.verdant.02.jpg",
+   "sha256": "7cbfad1c849b128b081e22dd9b00202415bc402c141292f6a0ca8abf70ff1c21",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "desert flower garden with giant flowering cacti"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.03": {
+   "file": "wildkin-production/approved/assets/scene.verdant.03.jpg",
+   "sha256": "df583df97eeddc3862db222b5b1793c02697e9b9ef3939a42f8bb4b6f4248aee",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "mossy stone arch in a clover meadow"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.04": {
+   "file": "wildkin-production/approved/assets/scene.verdant.04.jpg",
+   "sha256": "bb1c38c717723e30e2c43fa76e600b2902dc137e94a1422d0b14322bb1234615",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "wildflower hillside above a distant lake"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.05": {
+   "file": "wildkin-production/approved/assets/scene.verdant.05.jpg",
+   "sha256": "e0e947b56692ee5b38f0231c460995a69a8daaeb677d57f7a90f832a1e54acb1",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "sun-ray forest glade with mossy roots"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.06": {
+   "file": "wildkin-production/approved/assets/scene.verdant.06.jpg",
+   "sha256": "9b73728b87957c40ffa40355df13c74629b4f7014ac5d8da2f73b17545d050d4",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "apple orchard glade"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.07": {
+   "file": "wildkin-production/approved/assets/scene.verdant.07.jpg",
+   "sha256": "2db94267a9641e7936837c18507fe0cc4022e4a93de833b5abdf5f01aab0a80f",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "clover meadow with a small waterfall pond behind"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.08": {
+   "file": "wildkin-production/approved/assets/scene.verdant.08.jpg",
+   "sha256": "23ef9a9080aad6eb48b98ba89281a647d4de0e41dab3f5e68bf46074ea377835",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "blossom pillars and a petal-strewn lawn"
+   },
+   "warnings_accepted": []
+  },
+  "scene.verdant.09": {
+   "file": "wildkin-production/approved/assets/scene.verdant.09.jpg",
+   "sha256": "959a309476ae3349ecf1940a6327c3d12101e31c2d4b1d317634771a5b14e2b5",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/scenes/scenes-verdant.png",
+   "source_sha256": "10a442cf01f00f2bffaf5743192c156195bca373e183d21d1cabebc3b2503b10",
+   "approved": "2026-10-13T04:43:16Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-verdant.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "meadow under a branch with a lake and rock island"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.01": {
+   "file": "wildkin-production/approved/assets/scene.wonder.01.jpg",
+   "sha256": "2bf609dfdaf0a12cdf540ece356bdf932a7d040d990629ea7c36d866872fd787",
+   "task": "legacy",
+   "cell": 1,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "candy meadow with lollipops and a pink castle"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.02": {
+   "file": "wildkin-production/approved/assets/scene.wonder.02.jpg",
+   "sha256": "e64d71a72ef6631e93fba86446a8564ce867566ebe30bfb68400602bce3c603d",
+   "task": "legacy",
+   "cell": 2,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "indoor",
+    "description": "cosy star-and-moon nursery with a fluffy rug"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.03": {
+   "file": "wildkin-production/approved/assets/scene.wonder.03.jpg",
+   "sha256": "74569dc5fe83a162e721a03b9ae7a05d77aaefde031c88187fce3b138bccac77",
+   "task": "legacy",
+   "cell": 3,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "fairy cottage garden with a rainbow"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.04": {
+   "file": "wildkin-production/approved/assets/scene.wonder.04.jpg",
+   "sha256": "a6a378d43332eecc17bd4bbffcaf16aa5bf016b6fec39a6d86fad94be7d0cccb",
+   "task": "legacy",
+   "cell": 4,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "carousel and funfair on a glossy floor"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.05": {
+   "file": "wildkin-production/approved/assets/scene.wonder.05.jpg",
+   "sha256": "0113766c590bb1cccf4bb1889c9e21d5b0b5deec8b8ce685493a676f4beae7cc",
+   "task": "legacy",
+   "cell": 5,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "rainbow crystal waterfall pool with a stone pedestal"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.06": {
+   "file": "wildkin-production/approved/assets/scene.wonder.06.jpg",
+   "sha256": "612af081a0261cfc48c9b853280a54465bc2640805156aa56f6f0ce906790abe",
+   "task": "legacy",
+   "cell": 6,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "mushroom and cotton-tree meadow"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.07": {
+   "file": "wildkin-production/approved/assets/scene.wonder.07.jpg",
+   "sha256": "0ab6387afea8ea40ec05395fe3aa51d5e5fa2d062b557f6730ab7e0f64d547c8",
+   "task": "legacy",
+   "cell": 7,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "day",
+    "description": "cloud terrace with moon-and-star pillars and a floating castle"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.08": {
+   "file": "wildkin-production/approved/assets/scene.wonder.08.jpg",
+   "sha256": "6711489d6e64b332619c02ec40272b8028a4d0cded49c90c2f92478bc695bacc",
+   "task": "legacy",
+   "cell": 8,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "water",
+    "time": "day",
+    "description": "soap-bubble pool with star bubbles"
+   },
+   "warnings_accepted": []
+  },
+  "scene.wonder.09": {
+   "file": "wildkin-production/approved/assets/scene.wonder.09.jpg",
+   "sha256": "478141b72bffb8a4f8a7ec36859958c429b9546315c9ac177c7d11741b1fcdc5",
+   "task": "legacy",
+   "cell": 9,
+   "source": "art-source/scenes/scenes-wonder.png",
+   "source_sha256": "c13e5dc6cfd71a99d8199c3de581c91be92c85f088fef62d21c75eeda3e2871d",
+   "approved": "2026-10-13T04:43:17Z",
+   "approved_by": "owner (sheet supplied before the V1 manifest)",
+   "provenance": {
+    "delivered_as": "art-source/scenes/scenes-wonder.png",
+    "cut_with": "tools/build_art.py"
+   },
+   "tags": {
+    "floor": "ground",
+    "time": "dusk",
+    "description": "lantern tree hollow at sunset with a petal rug"
+   },
+   "warnings_accepted": []
+  }
+ }
+}

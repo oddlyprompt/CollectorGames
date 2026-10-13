@@ -1,0 +1,4726 @@
+{
+ "schema": "wildkin-art-queue/1",
+ "manifest_version": "1.0.0",
+ "generated_by": "tools/wildkin_manifest.py",
+ "handoff": "wildkin-production/SOL_HANDOFF.md",
+ "tasks": [
+  {
+   "task_id": "SHEET-01",
+   "title": "Mascot pose sheet: Cactuft",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-01.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.001-cactuft.standing",
+     "subject": "Cactuft",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.001-cactuft.jumping",
+     "subject": "Cactuft",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.001-cactuft.running",
+     "subject": "Cactuft",
+     "pose": "running"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.001-cactuft.waving",
+     "subject": "Cactuft",
+     "pose": "waving"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.001-cactuft.sitting",
+     "subject": "Cactuft",
+     "pose": "sitting"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.001-cactuft.sleeping",
+     "subject": "Cactuft",
+     "pose": "sleeping"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.001-cactuft.surprised",
+     "subject": "Cactuft",
+     "pose": "surprised"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.001-cactuft.looking-up",
+     "subject": "Cactuft",
+     "pose": "looking-up"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.001-cactuft.back-view",
+     "subject": "Cactuft",
+     "pose": "back-view"
+    }
+   ],
+   "chroma": "magenta",
+   "identity": [
+    {
+     "species": "SP-001",
+     "name": "Cactuft",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Verdant (canon)",
+     "role": "Primary lovable mascot; weird, cheerful, instantly recognisable",
+     "visual_identity": {
+      "status": "established",
+      "text": "Green cactus-alpaca: fluffy rounded cactus-pad body with short yellow spines, cream face and ears, pink-coral flower on the head, dark hooves. Magenta screen."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "complete",
+    "approved_cells": 9,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "approved"
+   }
+  },
+  {
+   "task_id": "SHEET-02",
+   "title": "Mascot family (3 stages x 3 poses): Prismotl, Opalotl, Aurorotl",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-02.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.002-prismotl.standing",
+     "subject": "Prismotl",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.002-prismotl.jumping",
+     "subject": "Prismotl",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.002-prismotl.sitting",
+     "subject": "Prismotl",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.003-opalotl.standing",
+     "subject": "Opalotl",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.003-opalotl.jumping",
+     "subject": "Opalotl",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.003-opalotl.sitting",
+     "subject": "Opalotl",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.004-aurorotl.standing",
+     "subject": "Aurorotl",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.004-aurorotl.jumping",
+     "subject": "Aurorotl",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.004-aurorotl.sitting",
+     "subject": "Aurorotl",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-002",
+     "name": "Prismotl",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Tide / Astral (canon)",
+     "role": "Wonder mascot; beautiful, magical, collector-friendly",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-003",
+     "name": "Opalotl",
+     "stage": "Stage 1",
+     "evolves_from": "SP-002",
+     "affinity": "Tide / Astral (canon)",
+     "role": "Wonder mascot; beautiful, magical, collector-friendly",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-004",
+     "name": "Aurorotl",
+     "stage": "Stage 2",
+     "evolves_from": "SP-003",
+     "affinity": "Tide / Astral (canon)",
+     "role": "Wonder mascot; beautiful, magical, collector-friendly",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-03",
+   "title": "Mascot family (3 stages x 3 poses): Bashlet, Maceback, Fortisaur",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-03.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.005-bashlet.standing",
+     "subject": "Bashlet",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.005-bashlet.jumping",
+     "subject": "Bashlet",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.005-bashlet.sitting",
+     "subject": "Bashlet",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.006-maceback.standing",
+     "subject": "Maceback",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.006-maceback.jumping",
+     "subject": "Maceback",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.006-maceback.sitting",
+     "subject": "Maceback",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.007-fortisaur.standing",
+     "subject": "Fortisaur",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.007-fortisaur.jumping",
+     "subject": "Fortisaur",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.007-fortisaur.sitting",
+     "subject": "Fortisaur",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-005",
+     "name": "Bashlet",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Stone (canon)",
+     "role": "Classic starter-style hero; toughness and progression",
+     "visual_identity": {
+      "status": "established",
+      "text": "Small blue ankylosaur: blue armoured back with cream spikes, cream belly and face, spiked tail club, big brown eyes. Green screen."
+     }
+    },
+    {
+     "species": "SP-006",
+     "name": "Maceback",
+     "stage": "Stage 1",
+     "evolves_from": "SP-005",
+     "affinity": "Stone (canon)",
+     "role": "Classic starter-style hero; toughness and progression",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-007",
+     "name": "Fortisaur",
+     "stage": "Stage 2",
+     "evolves_from": "SP-006",
+     "affinity": "Stone (canon)",
+     "role": "Classic starter-style hero; toughness and progression",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "partial",
+    "approved_cells": 3,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-04",
+   "title": "Mascot family (3 stages x 3 poses): Koilet, Runakoi, Koirune",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-04.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.008-koilet.standing",
+     "subject": "Koilet",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.008-koilet.jumping",
+     "subject": "Koilet",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.008-koilet.sitting",
+     "subject": "Koilet",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.009-runakoi.standing",
+     "subject": "Runakoi",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.009-runakoi.jumping",
+     "subject": "Runakoi",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.009-runakoi.sitting",
+     "subject": "Runakoi",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.010-koirune.standing",
+     "subject": "Koirune",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.010-koirune.jumping",
+     "subject": "Koirune",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.010-koirune.sitting",
+     "subject": "Koirune",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-008",
+     "name": "Koilet",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Tide / Astral (canon)",
+     "role": "Prestige icon; ancient, elegant, high-end chase-card creature",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-009",
+     "name": "Runakoi",
+     "stage": "Stage 1",
+     "evolves_from": "SP-008",
+     "affinity": "Tide / Astral (canon)",
+     "role": "Prestige icon; ancient, elegant, high-end chase-card creature",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-010",
+     "name": "Koirune",
+     "stage": "Stage 2",
+     "evolves_from": "SP-009",
+     "affinity": "Tide / Astral (canon)",
+     "role": "Prestige icon; ancient, elegant, high-end chase-card creature",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-05",
+   "title": "Mascot family (3 stages x 3 poses): Rolyte, Shelladin, Aegisopod",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-05.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.011-rolyte.standing",
+     "subject": "Rolyte",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.011-rolyte.jumping",
+     "subject": "Rolyte",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.011-rolyte.sitting",
+     "subject": "Rolyte",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.012-shelladin.standing",
+     "subject": "Shelladin",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.012-shelladin.jumping",
+     "subject": "Shelladin",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.012-shelladin.sitting",
+     "subject": "Shelladin",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.013-aegisopod.standing",
+     "subject": "Aegisopod",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.013-aegisopod.jumping",
+     "subject": "Aegisopod",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.013-aegisopod.sitting",
+     "subject": "Aegisopod",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-011",
+     "name": "Rolyte",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Stone / Iron (canon)",
+     "role": "Defender mascot; noble but slightly ridiculous",
+     "visual_identity": {
+      "status": "established",
+      "text": "Armoured roly-poly (pill bug): navy and steel segmented shell, silver knight-helmet visor with slits, pale face, rosy cheeks, two antennae, six dark legs. Green screen."
+     }
+    },
+    {
+     "species": "SP-012",
+     "name": "Shelladin",
+     "stage": "Stage 1",
+     "evolves_from": "SP-011",
+     "affinity": "Stone / Iron (canon)",
+     "role": "Defender mascot; noble but slightly ridiculous",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-013",
+     "name": "Aegisopod",
+     "stage": "Stage 2",
+     "evolves_from": "SP-012",
+     "affinity": "Stone / Iron (canon)",
+     "role": "Defender mascot; noble but slightly ridiculous",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "partial",
+    "approved_cells": 3,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-06",
+   "title": "Mascot family (3 stages x 3 poses): Frondolin, Pangrove, Canopang",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-06.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.014-frondolin.standing",
+     "subject": "Frondolin",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.014-frondolin.jumping",
+     "subject": "Frondolin",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.014-frondolin.sitting",
+     "subject": "Frondolin",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.015-pangrove.standing",
+     "subject": "Pangrove",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.015-pangrove.jumping",
+     "subject": "Pangrove",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.015-pangrove.sitting",
+     "subject": "Pangrove",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.016-canopang.standing",
+     "subject": "Canopang",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.016-canopang.jumping",
+     "subject": "Canopang",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.016-canopang.sitting",
+     "subject": "Canopang",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "magenta",
+   "identity": [
+    {
+     "species": "SP-014",
+     "name": "Frondolin",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Verdant (canon)",
+     "role": "Forest guardian; calm, sturdy, ancient",
+     "visual_identity": {
+      "status": "established",
+      "text": "Leaf pangolin: overlapping green leaf scales over a tan furry body, cream belly, curled leafy tail, green eyes. Magenta screen."
+     }
+    },
+    {
+     "species": "SP-015",
+     "name": "Pangrove",
+     "stage": "Stage 1",
+     "evolves_from": "SP-014",
+     "affinity": "Verdant (canon)",
+     "role": "Forest guardian; calm, sturdy, ancient",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-016",
+     "name": "Canopang",
+     "stage": "Stage 2",
+     "evolves_from": "SP-015",
+     "affinity": "Verdant (canon)",
+     "role": "Forest guardian; calm, sturdy, ancient",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "partial",
+    "approved_cells": 3,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-07",
+   "title": "Mascot family (2 stages, 9 cells): Candicoil, Spiramel",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-07.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.017-candicoil.standing",
+     "subject": "Candicoil",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.017-candicoil.jumping",
+     "subject": "Candicoil",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.017-candicoil.sitting",
+     "subject": "Candicoil",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.018-spiramel.standing",
+     "subject": "Spiramel",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.018-spiramel.jumping",
+     "subject": "Spiramel",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.018-spiramel.sitting",
+     "subject": "Spiramel",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.018-spiramel.waving",
+     "subject": "Spiramel",
+     "pose": "waving",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.018-spiramel.running",
+     "subject": "Spiramel",
+     "pose": "running",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.018-spiramel.looking-up",
+     "subject": "Spiramel",
+     "pose": "looking-up",
+     "stage": "Stage 1"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-017",
+     "name": "Candicoil",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Wonder (canon)",
+     "role": "Oddball fan favourite; playful and visually strange",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-018",
+     "name": "Spiramel",
+     "stage": "Stage 1",
+     "evolves_from": "SP-017",
+     "affinity": "Wonder (canon)",
+     "role": "Oddball fan favourite; playful and visually strange",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-08",
+   "title": "Mascot family (2 stages, 9 cells): Creskit, Astrynx",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-08.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.019-creskit.standing",
+     "subject": "Creskit",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.019-creskit.jumping",
+     "subject": "Creskit",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.019-creskit.sitting",
+     "subject": "Creskit",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.020-astrynx.standing",
+     "subject": "Astrynx",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.020-astrynx.jumping",
+     "subject": "Astrynx",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.020-astrynx.sitting",
+     "subject": "Astrynx",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.020-astrynx.waving",
+     "subject": "Astrynx",
+     "pose": "waving",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.020-astrynx.running",
+     "subject": "Astrynx",
+     "pose": "running",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.020-astrynx.looking-up",
+     "subject": "Astrynx",
+     "pose": "looking-up",
+     "stage": "Stage 1"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-019",
+     "name": "Creskit",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Astral (canon)",
+     "role": "Cool mascot; mysterious night creature",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-020",
+     "name": "Astrynx",
+     "stage": "Stage 1",
+     "evolves_from": "SP-019",
+     "affinity": "Astral (canon)",
+     "role": "Cool mascot; mysterious night creature",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-09",
+   "title": "Mascot family (2 stages, 9 cells): Berribat, Pompyre",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-09.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.021-berribat.standing",
+     "subject": "Berribat",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.021-berribat.jumping",
+     "subject": "Berribat",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.021-berribat.sitting",
+     "subject": "Berribat",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.022-pompyre.standing",
+     "subject": "Pompyre",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.022-pompyre.jumping",
+     "subject": "Pompyre",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.022-pompyre.sitting",
+     "subject": "Pompyre",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.022-pompyre.waving",
+     "subject": "Pompyre",
+     "pose": "waving",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.022-pompyre.running",
+     "subject": "Pompyre",
+     "pose": "running",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.022-pompyre.looking-up",
+     "subject": "Pompyre",
+     "pose": "looking-up",
+     "stage": "Stage 1"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-021",
+     "name": "Berribat",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Dusk / Verdant (canon)",
+     "role": "Mischief mascot; spooky-cute, seasonal potential",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-022",
+     "name": "Pompyre",
+     "stage": "Stage 1",
+     "evolves_from": "SP-021",
+     "affinity": "Dusk / Verdant (canon)",
+     "role": "Mischief mascot; spooky-cute, seasonal potential",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-10",
+   "title": "Mascot pose sheet: Flapod",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-10.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.023-flapod.standing",
+     "subject": "Flapod",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.023-flapod.jumping",
+     "subject": "Flapod",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.023-flapod.running",
+     "subject": "Flapod",
+     "pose": "running"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.023-flapod.waving",
+     "subject": "Flapod",
+     "pose": "waving"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.023-flapod.sitting",
+     "subject": "Flapod",
+     "pose": "sitting"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.023-flapod.sleeping",
+     "subject": "Flapod",
+     "pose": "sleeping"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.023-flapod.surprised",
+     "subject": "Flapod",
+     "pose": "surprised"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.023-flapod.looking-up",
+     "subject": "Flapod",
+     "pose": "looking-up"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.023-flapod.back-view",
+     "subject": "Flapod",
+     "pose": "back-view"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-023",
+     "name": "Flapod",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Tide (canon)",
+     "role": "Weird beloved standalone; comic personality",
+     "visual_identity": {
+      "status": "established",
+      "text": "Dumbo octopus: peach-coral round body, two large ear fins, curled tentacles with pale suckers, freckles, brown eyes. Green screen."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "complete",
+    "approved_cells": 9,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "approved"
+   }
+  },
+  {
+   "task_id": "SHEET-11",
+   "title": "Evolution family (3 stages x 3 poses): Mistip, Cumulfin, Nimbusail",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-11.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.024-mistip.standing",
+     "subject": "Mistip",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.024-mistip.jumping",
+     "subject": "Mistip",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.024-mistip.sitting",
+     "subject": "Mistip",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.025-cumulfin.standing",
+     "subject": "Cumulfin",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.025-cumulfin.jumping",
+     "subject": "Cumulfin",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.025-cumulfin.sitting",
+     "subject": "Cumulfin",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.026-nimbusail.standing",
+     "subject": "Nimbusail",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.026-nimbusail.jumping",
+     "subject": "Nimbusail",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.026-nimbusail.sitting",
+     "subject": "Nimbusail",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-024",
+     "name": "Mistip",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-025",
+     "name": "Cumulfin",
+     "stage": "Stage 1",
+     "evolves_from": "SP-024",
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-026",
+     "name": "Nimbusail",
+     "stage": "Stage 2",
+     "evolves_from": "SP-025",
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "canon",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-12",
+   "title": "Evolution family (3 stages x 3 poses): Cindikit, Emberuff, Pyrenox",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-12.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.027-cindikit.standing",
+     "subject": "Cindikit",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.027-cindikit.jumping",
+     "subject": "Cindikit",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.027-cindikit.sitting",
+     "subject": "Cindikit",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.028-emberuff.standing",
+     "subject": "Emberuff",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.028-emberuff.jumping",
+     "subject": "Emberuff",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.028-emberuff.sitting",
+     "subject": "Emberuff",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.029-pyrenox.standing",
+     "subject": "Pyrenox",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.029-pyrenox.jumping",
+     "subject": "Pyrenox",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.029-pyrenox.sitting",
+     "subject": "Pyrenox",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-027",
+     "name": "Cindikit",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Ember (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-028",
+     "name": "Emberuff",
+     "stage": "Stage 1",
+     "evolves_from": "SP-027",
+     "affinity": "Ember (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-029",
+     "name": "Pyrenox",
+     "stage": "Stage 2",
+     "evolves_from": "SP-028",
+     "affinity": "Ember (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-13",
+   "title": "Evolution family (3 stages x 3 poses): Breezit, Gustrel, Tempestral",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-13.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.030-breezit.standing",
+     "subject": "Breezit",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.030-breezit.jumping",
+     "subject": "Breezit",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.030-breezit.sitting",
+     "subject": "Breezit",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.031-gustrel.standing",
+     "subject": "Gustrel",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.031-gustrel.jumping",
+     "subject": "Gustrel",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.031-gustrel.sitting",
+     "subject": "Gustrel",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.032-tempestral.standing",
+     "subject": "Tempestral",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.032-tempestral.jumping",
+     "subject": "Tempestral",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.032-tempestral.sitting",
+     "subject": "Tempestral",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-030",
+     "name": "Breezit",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-031",
+     "name": "Gustrel",
+     "stage": "Stage 1",
+     "evolves_from": "SP-030",
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-032",
+     "name": "Tempestral",
+     "stage": "Stage 2",
+     "evolves_from": "SP-031",
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-14",
+   "title": "Evolution family (3 stages x 3 poses): Glimlet, Hushwing, Veilmora",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-14.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.033-glimlet.standing",
+     "subject": "Glimlet",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.033-glimlet.jumping",
+     "subject": "Glimlet",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.033-glimlet.sitting",
+     "subject": "Glimlet",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.034-hushwing.standing",
+     "subject": "Hushwing",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.034-hushwing.jumping",
+     "subject": "Hushwing",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.034-hushwing.sitting",
+     "subject": "Hushwing",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.035-veilmora.standing",
+     "subject": "Veilmora",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.035-veilmora.jumping",
+     "subject": "Veilmora",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.035-veilmora.sitting",
+     "subject": "Veilmora",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-033",
+     "name": "Glimlet",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Dusk (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-034",
+     "name": "Hushwing",
+     "stage": "Stage 1",
+     "evolves_from": "SP-033",
+     "affinity": "Dusk (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-035",
+     "name": "Veilmora",
+     "stage": "Stage 2",
+     "evolves_from": "SP-034",
+     "affinity": "Dusk (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-15",
+   "title": "Evolution family (3 stages x 3 poses): Rivbit, Boltusk, Ferradon",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-15.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.036-rivbit.standing",
+     "subject": "Rivbit",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.036-rivbit.jumping",
+     "subject": "Rivbit",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.036-rivbit.sitting",
+     "subject": "Rivbit",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.037-boltusk.standing",
+     "subject": "Boltusk",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.037-boltusk.jumping",
+     "subject": "Boltusk",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.037-boltusk.sitting",
+     "subject": "Boltusk",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.038-ferradon.standing",
+     "subject": "Ferradon",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.038-ferradon.jumping",
+     "subject": "Ferradon",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.038-ferradon.sitting",
+     "subject": "Ferradon",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-036",
+     "name": "Rivbit",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Iron (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-037",
+     "name": "Boltusk",
+     "stage": "Stage 1",
+     "evolves_from": "SP-036",
+     "affinity": "Iron (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-038",
+     "name": "Ferradon",
+     "stage": "Stage 2",
+     "evolves_from": "SP-037",
+     "affinity": "Iron (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-16",
+   "title": "Evolution family (3 stages x 3 poses): Pebblamb, Cairnram, Monolox",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-16.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.039-pebblamb.standing",
+     "subject": "Pebblamb",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.039-pebblamb.jumping",
+     "subject": "Pebblamb",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.039-pebblamb.sitting",
+     "subject": "Pebblamb",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.040-cairnram.standing",
+     "subject": "Cairnram",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.040-cairnram.jumping",
+     "subject": "Cairnram",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.040-cairnram.sitting",
+     "subject": "Cairnram",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.041-monolox.standing",
+     "subject": "Monolox",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.041-monolox.jumping",
+     "subject": "Monolox",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.041-monolox.sitting",
+     "subject": "Monolox",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-039",
+     "name": "Pebblamb",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Stone (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-040",
+     "name": "Cairnram",
+     "stage": "Stage 1",
+     "evolves_from": "SP-039",
+     "affinity": "Stone (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-041",
+     "name": "Monolox",
+     "stage": "Stage 2",
+     "evolves_from": "SP-040",
+     "affinity": "Stone (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-17",
+   "title": "Evolution family (3 stages x 3 poses): Quibbit, Whimhare, Fablehorn",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-17.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.042-quibbit.standing",
+     "subject": "Quibbit",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.042-quibbit.jumping",
+     "subject": "Quibbit",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.042-quibbit.sitting",
+     "subject": "Quibbit",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.043-whimhare.standing",
+     "subject": "Whimhare",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.043-whimhare.jumping",
+     "subject": "Whimhare",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.043-whimhare.sitting",
+     "subject": "Whimhare",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.044-fablehorn.standing",
+     "subject": "Fablehorn",
+     "pose": "standing",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.044-fablehorn.jumping",
+     "subject": "Fablehorn",
+     "pose": "jumping",
+     "stage": "Stage 2"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.044-fablehorn.sitting",
+     "subject": "Fablehorn",
+     "pose": "sitting",
+     "stage": "Stage 2"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-042",
+     "name": "Quibbit",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Wonder (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-043",
+     "name": "Whimhare",
+     "stage": "Stage 1",
+     "evolves_from": "SP-042",
+     "affinity": "Wonder (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-044",
+     "name": "Fablehorn",
+     "stage": "Stage 2",
+     "evolves_from": "SP-043",
+     "affinity": "Wonder (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-18",
+   "title": "Evolution family (2 stages x 3 poses, 3 cells empty): Mossnip, Bramblebuck",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-18.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.045-mossnip.standing",
+     "subject": "Mossnip",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.045-mossnip.jumping",
+     "subject": "Mossnip",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.045-mossnip.sitting",
+     "subject": "Mossnip",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.046-bramblebuck.standing",
+     "subject": "Bramblebuck",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.046-bramblebuck.jumping",
+     "subject": "Bramblebuck",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.046-bramblebuck.sitting",
+     "subject": "Bramblebuck",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    }
+   ],
+   "chroma": "magenta",
+   "identity": [
+    {
+     "species": "SP-045",
+     "name": "Mossnip",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Verdant (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-046",
+     "name": "Bramblebuck",
+     "stage": "Stage 1",
+     "evolves_from": "SP-045",
+     "affinity": "Verdant (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 6
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-19",
+   "title": "Evolution family (2 stages x 3 poses, 3 cells empty): Reefkin, Corallume",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-19.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.047-reefkin.standing",
+     "subject": "Reefkin",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.047-reefkin.jumping",
+     "subject": "Reefkin",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.047-reefkin.sitting",
+     "subject": "Reefkin",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.048-corallume.standing",
+     "subject": "Corallume",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.048-corallume.jumping",
+     "subject": "Corallume",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.048-corallume.sitting",
+     "subject": "Corallume",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-047",
+     "name": "Reefkin",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Tide (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-048",
+     "name": "Corallume",
+     "stage": "Stage 1",
+     "evolves_from": "SP-047",
+     "affinity": "Tide (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 6
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-20",
+   "title": "Evolution family (2 stages x 3 poses, 3 cells empty): Sootkit, Smolderlynx",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-20.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.049-sootkit.standing",
+     "subject": "Sootkit",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.049-sootkit.jumping",
+     "subject": "Sootkit",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.049-sootkit.sitting",
+     "subject": "Sootkit",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.050-smolderlynx.standing",
+     "subject": "Smolderlynx",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.050-smolderlynx.jumping",
+     "subject": "Smolderlynx",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.050-smolderlynx.sitting",
+     "subject": "Smolderlynx",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-049",
+     "name": "Sootkit",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Ember (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-050",
+     "name": "Smolderlynx",
+     "stage": "Stage 1",
+     "evolves_from": "SP-049",
+     "affinity": "Ember (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 6
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-21",
+   "title": "Evolution family (2 stages x 3 poses, 3 cells empty): Zephroo, Cometrail",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-21.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.051-zephroo.standing",
+     "subject": "Zephroo",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.051-zephroo.jumping",
+     "subject": "Zephroo",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.051-zephroo.sitting",
+     "subject": "Zephroo",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.052-cometrail.standing",
+     "subject": "Cometrail",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.052-cometrail.jumping",
+     "subject": "Cometrail",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.052-cometrail.sitting",
+     "subject": "Cometrail",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-051",
+     "name": "Zephroo",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Astral (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-052",
+     "name": "Cometrail",
+     "stage": "Stage 1",
+     "evolves_from": "SP-051",
+     "affinity": "Astral (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 6
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-22",
+   "title": "Evolution family (2 stages x 3 poses, 3 cells empty): Nibrock, Drillbadger",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-22.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.053-nibrock.standing",
+     "subject": "Nibrock",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.053-nibrock.jumping",
+     "subject": "Nibrock",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.053-nibrock.sitting",
+     "subject": "Nibrock",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.054-drillbadger.standing",
+     "subject": "Drillbadger",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.054-drillbadger.jumping",
+     "subject": "Drillbadger",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.054-drillbadger.sitting",
+     "subject": "Drillbadger",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-053",
+     "name": "Nibrock",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Iron (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-054",
+     "name": "Drillbadger",
+     "stage": "Stage 1",
+     "evolves_from": "SP-053",
+     "affinity": "Iron (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 6
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-23",
+   "title": "Evolution family (2 stages x 3 poses, 3 cells empty): Dewink, Bloomble",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-23.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.055-dewink.standing",
+     "subject": "Dewink",
+     "pose": "standing",
+     "stage": "Basic"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.055-dewink.jumping",
+     "subject": "Dewink",
+     "pose": "jumping",
+     "stage": "Basic"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.055-dewink.sitting",
+     "subject": "Dewink",
+     "pose": "sitting",
+     "stage": "Basic"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.056-bloomble.standing",
+     "subject": "Bloomble",
+     "pose": "standing",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.056-bloomble.jumping",
+     "subject": "Bloomble",
+     "pose": "jumping",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.056-bloomble.sitting",
+     "subject": "Bloomble",
+     "pose": "sitting",
+     "stage": "Stage 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat screen colour)",
+     "pose": null
+    }
+   ],
+   "chroma": "magenta",
+   "identity": [
+    {
+     "species": "SP-055",
+     "name": "Dewink",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Verdant (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-056",
+     "name": "Bloomble",
+     "stage": "Stage 1",
+     "evolves_from": "SP-055",
+     "affinity": "Verdant (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 6
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-24",
+   "title": "Standalone creatures (3 creatures x 3 poses): Fernibble, Acornox, Shelloop",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-24.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.057-fernibble.standing",
+     "subject": "Fernibble",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.057-fernibble.jumping",
+     "subject": "Fernibble",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.057-fernibble.sitting",
+     "subject": "Fernibble",
+     "pose": "sitting"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.058-acornox.standing",
+     "subject": "Acornox",
+     "pose": "standing"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.058-acornox.jumping",
+     "subject": "Acornox",
+     "pose": "jumping"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.058-acornox.sitting",
+     "subject": "Acornox",
+     "pose": "sitting"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.059-shelloop.standing",
+     "subject": "Shelloop",
+     "pose": "standing"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.059-shelloop.jumping",
+     "subject": "Shelloop",
+     "pose": "jumping"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.059-shelloop.sitting",
+     "subject": "Shelloop",
+     "pose": "sitting"
+    }
+   ],
+   "chroma": "per subject: green, magenta",
+   "identity": [
+    {
+     "species": "SP-057",
+     "name": "Fernibble",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Verdant (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-058",
+     "name": "Acornox",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Verdant (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-059",
+     "name": "Shelloop",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Tide (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-25",
+   "title": "Standalone creatures (3 creatures x 3 poses): Driftail, Craggle, Tumbear",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-25.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.060-driftail.standing",
+     "subject": "Driftail",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.060-driftail.jumping",
+     "subject": "Driftail",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.060-driftail.sitting",
+     "subject": "Driftail",
+     "pose": "sitting"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.061-craggle.standing",
+     "subject": "Craggle",
+     "pose": "standing"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.061-craggle.jumping",
+     "subject": "Craggle",
+     "pose": "jumping"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.061-craggle.sitting",
+     "subject": "Craggle",
+     "pose": "sitting"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.062-tumbear.standing",
+     "subject": "Tumbear",
+     "pose": "standing"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.062-tumbear.jumping",
+     "subject": "Tumbear",
+     "pose": "jumping"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.062-tumbear.sitting",
+     "subject": "Tumbear",
+     "pose": "sitting"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-060",
+     "name": "Driftail",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Tide (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-061",
+     "name": "Craggle",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Stone (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-062",
+     "name": "Tumbear",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Stone (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-26",
+   "title": "Standalone creatures (3 creatures x 3 poses): Nutbolt, Clampup, Ashhopper",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-26.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.063-nutbolt.standing",
+     "subject": "Nutbolt",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.063-nutbolt.jumping",
+     "subject": "Nutbolt",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.063-nutbolt.sitting",
+     "subject": "Nutbolt",
+     "pose": "sitting"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.064-clampup.standing",
+     "subject": "Clampup",
+     "pose": "standing"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.064-clampup.jumping",
+     "subject": "Clampup",
+     "pose": "jumping"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.064-clampup.sitting",
+     "subject": "Clampup",
+     "pose": "sitting"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.065-ashhopper.standing",
+     "subject": "Ashhopper",
+     "pose": "standing"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.065-ashhopper.jumping",
+     "subject": "Ashhopper",
+     "pose": "jumping"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.065-ashhopper.sitting",
+     "subject": "Ashhopper",
+     "pose": "sitting"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-063",
+     "name": "Nutbolt",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Iron (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-064",
+     "name": "Clampup",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Tide (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-065",
+     "name": "Ashhopper",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Ember (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-27",
+   "title": "Standalone creatures (3 creatures x 3 poses): Coaloo, Kitecoon, Thundrop",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-27.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.066-coaloo.standing",
+     "subject": "Coaloo",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.066-coaloo.jumping",
+     "subject": "Coaloo",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.066-coaloo.sitting",
+     "subject": "Coaloo",
+     "pose": "sitting"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.067-kitecoon.standing",
+     "subject": "Kitecoon",
+     "pose": "standing"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.067-kitecoon.jumping",
+     "subject": "Kitecoon",
+     "pose": "jumping"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.067-kitecoon.sitting",
+     "subject": "Kitecoon",
+     "pose": "sitting"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.068-thundrop.standing",
+     "subject": "Thundrop",
+     "pose": "standing"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.068-thundrop.jumping",
+     "subject": "Thundrop",
+     "pose": "jumping"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.068-thundrop.sitting",
+     "subject": "Thundrop",
+     "pose": "sitting"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-066",
+     "name": "Coaloo",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Ember (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-067",
+     "name": "Kitecoon",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-068",
+     "name": "Thundrop",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Storm (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-28",
+   "title": "Standalone creatures (3 creatures x 3 poses): Orbitot, Lunapip, Mothmur",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-28.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.069-orbitot.standing",
+     "subject": "Orbitot",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.069-orbitot.jumping",
+     "subject": "Orbitot",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.069-orbitot.sitting",
+     "subject": "Orbitot",
+     "pose": "sitting"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.070-lunapip.standing",
+     "subject": "Lunapip",
+     "pose": "standing"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.070-lunapip.jumping",
+     "subject": "Lunapip",
+     "pose": "jumping"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.070-lunapip.sitting",
+     "subject": "Lunapip",
+     "pose": "sitting"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.071-mothmur.standing",
+     "subject": "Mothmur",
+     "pose": "standing"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.071-mothmur.jumping",
+     "subject": "Mothmur",
+     "pose": "jumping"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.071-mothmur.sitting",
+     "subject": "Mothmur",
+     "pose": "sitting"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-069",
+     "name": "Orbitot",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Astral (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-070",
+     "name": "Lunapip",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Astral (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-071",
+     "name": "Mothmur",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Dusk (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-29",
+   "title": "Standalone creatures (3 creatures x 3 poses): Winkrow, Puffluff, Oddoodle",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-29.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.072-winkrow.standing",
+     "subject": "Winkrow",
+     "pose": "standing"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.072-winkrow.jumping",
+     "subject": "Winkrow",
+     "pose": "jumping"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.072-winkrow.sitting",
+     "subject": "Winkrow",
+     "pose": "sitting"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.073-puffluff.standing",
+     "subject": "Puffluff",
+     "pose": "standing"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.073-puffluff.jumping",
+     "subject": "Puffluff",
+     "pose": "jumping"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.073-puffluff.sitting",
+     "subject": "Puffluff",
+     "pose": "sitting"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.074-oddoodle.standing",
+     "subject": "Oddoodle",
+     "pose": "standing"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.074-oddoodle.jumping",
+     "subject": "Oddoodle",
+     "pose": "jumping"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.074-oddoodle.sitting",
+     "subject": "Oddoodle",
+     "pose": "sitting"
+    }
+   ],
+   "chroma": "green",
+   "identity": [
+    {
+     "species": "SP-072",
+     "name": "Winkrow",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Dusk (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-073",
+     "name": "Puffluff",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Wonder (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    },
+    {
+     "species": "SP-074",
+     "name": "Oddoodle",
+     "stage": "Basic",
+     "evolves_from": null,
+     "affinity": "Wonder (provisional)",
+     "role": "",
+     "visual_identity": {
+      "status": "needs_concept",
+      "text": "Not established. Propose a concept for owner approval before the production sheet."
+     }
+    }
+   ],
+   "identity_status": "inferred: family links follow Appendix A numbering; confirm with the owner before generating",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-30",
+   "title": "Allies sheet A: Professor Maren Vale, June Kestrel, Warden Sorrel Pike, Toma Reed, Lita Moss, Nessa Flint, Elder Oren, Pip Rowan, Archivist Sera Wynn",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-30.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.075-professor-maren-vale.portrait",
+     "subject": "Professor Maren Vale",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.076-june-kestrel.portrait",
+     "subject": "June Kestrel",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.077-warden-sorrel-pike.portrait",
+     "subject": "Warden Sorrel Pike",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.078-toma-reed.portrait",
+     "subject": "Toma Reed",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.079-lita-moss.portrait",
+     "subject": "Lita Moss",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.080-nessa-flint.portrait",
+     "subject": "Nessa Flint",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.081-elder-oren.portrait",
+     "subject": "Elder Oren",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.082-pip-rowan.portrait",
+     "subject": "Pip Rowan",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.083-archivist-sera-wynn.portrait",
+     "subject": "Archivist Sera Wynn",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    }
+   ],
+   "chroma": "green (magenta if the character wears mostly green)",
+   "identity": [
+    {
+     "card": "WK-S001-075",
+     "name": "Professor Maren Vale",
+     "identity": {
+      "status": "established",
+      "text": "Professor Maren Vale. Important character (bible)."
+     }
+    },
+    {
+     "card": "WK-S001-076",
+     "name": "June Kestrel",
+     "identity": {
+      "status": "established",
+      "text": "June Kestrel: a young entry-point Keeper (bible). Preserve the established youthful silhouette and reference images."
+     }
+    },
+    {
+     "card": "WK-S001-077",
+     "name": "Warden Sorrel Pike",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-078",
+     "name": "Toma Reed",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-079",
+     "name": "Lita Moss",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-080",
+     "name": "Nessa Flint",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-081",
+     "name": "Elder Oren",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-082",
+     "name": "Pip Rowan",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-083",
+     "name": "Archivist Sera Wynn",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    }
+   ],
+   "identity_status": "names canon; appearances need the owner's reference images or an approved concept",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Same dimensional 3D render as the creatures, human characters with youthful stylised proportions, soft studio light",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-31",
+   "title": "Allies sheet B: Renn Calder, Mira Quill, Sel Veyra, Cass Rell, Dr. Cyl Vane, Marshal Rook, Iris Shade, Dex Harrow, Brin Hollow",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-31.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "cut.084-renn-calder.portrait",
+     "subject": "Renn Calder",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 2,
+     "asset_id": "cut.085-mira-quill.portrait",
+     "subject": "Mira Quill",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 3,
+     "asset_id": "cut.086-sel-veyra.portrait",
+     "subject": "Sel Veyra",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 4,
+     "asset_id": "cut.087-cass-rell.portrait",
+     "subject": "Cass Rell",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 5,
+     "asset_id": "cut.088-dr-cyl-vane.portrait",
+     "subject": "Dr. Cyl Vane",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 6,
+     "asset_id": "cut.089-marshal-rook.portrait",
+     "subject": "Marshal Rook",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 7,
+     "asset_id": "cut.090-iris-shade.portrait",
+     "subject": "Iris Shade",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 8,
+     "asset_id": "cut.091-dex-harrow.portrait",
+     "subject": "Dex Harrow",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    },
+    {
+     "cell": 9,
+     "asset_id": "cut.092-brin-hollow.portrait",
+     "subject": "Brin Hollow",
+     "pose": "portrait (full body, three-quarter view, standing)"
+    }
+   ],
+   "chroma": "green (magenta if the character wears mostly green)",
+   "identity": [
+    {
+     "card": "WK-S001-084",
+     "name": "Renn Calder",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-085",
+     "name": "Mira Quill",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-086",
+     "name": "Sel Veyra",
+     "identity": {
+      "status": "established",
+      "text": "Sel Veyra: CEO of Veyra Industries, the antagonistic organisation (bible)."
+     }
+    },
+    {
+     "card": "WK-S001-087",
+     "name": "Cass Rell",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-088",
+     "name": "Dr. Cyl Vane",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-089",
+     "name": "Marshal Rook",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-090",
+     "name": "Iris Shade",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-091",
+     "name": "Dex Harrow",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    },
+    {
+     "card": "WK-S001-092",
+     "name": "Brin Hollow",
+     "identity": {
+      "status": "needs_concept",
+      "text": "Named in Appendix A. Affiliation and appearance not recovered; use the owner's reference images if they exist, otherwise propose a concept for approval."
+     }
+    }
+   ],
+   "identity_status": "names canon; appearances need the owner's reference images or an approved concept",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Same dimensional 3D render as the creatures, human characters with youthful stylised proportions, soft studio light",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-32",
+   "title": "Gear sheet A: Bond Charm, Keeper Satchel, Rescue Whistle, Biome Compass, Glow Lantern, Trail Rations, Medic Salve, Echo Flute, Tide Lure",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-32.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "obj.093-bond-charm",
+     "subject": "Bond Charm",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 2,
+     "asset_id": "obj.094-keeper-satchel",
+     "subject": "Keeper Satchel",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 3,
+     "asset_id": "obj.095-rescue-whistle",
+     "subject": "Rescue Whistle",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 4,
+     "asset_id": "obj.096-biome-compass",
+     "subject": "Biome Compass",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 5,
+     "asset_id": "obj.097-glow-lantern",
+     "subject": "Glow Lantern",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 6,
+     "asset_id": "obj.098-trail-rations",
+     "subject": "Trail Rations",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 7,
+     "asset_id": "obj.099-medic-salve",
+     "subject": "Medic Salve",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 8,
+     "asset_id": "obj.100-echo-flute",
+     "subject": "Echo Flute",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 9,
+     "asset_id": "obj.101-tide-lure",
+     "subject": "Tide Lure",
+     "pose": "object, three-quarter view"
+    }
+   ],
+   "chroma": "green (magenta for green objects)",
+   "identity_status": "names canon; designs need concept",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Same dimensional 3D render, a single object per cell, soft studio light",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-33",
+   "title": "Gear sheet B: Thermal Cloak, Climbing Line, Field Scope, Wildseed Treat, Sanctuary Bell, Veyra Snare, Clasp Rig, Null Collar, Purity Sigil",
+   "kind": "cutout-sheet",
+   "expected_file": "SHEET-33.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "obj.102-thermal-cloak",
+     "subject": "Thermal Cloak",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 2,
+     "asset_id": "obj.103-climbing-line",
+     "subject": "Climbing Line",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 3,
+     "asset_id": "obj.104-field-scope",
+     "subject": "Field Scope",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 4,
+     "asset_id": "obj.105-wildseed-treat",
+     "subject": "Wildseed Treat",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 5,
+     "asset_id": "obj.106-sanctuary-bell",
+     "subject": "Sanctuary Bell",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 6,
+     "asset_id": "obj.107-veyra-snare",
+     "subject": "Veyra Snare",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 7,
+     "asset_id": "obj.108-clasp-rig",
+     "subject": "Clasp Rig",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 8,
+     "asset_id": "obj.109-null-collar",
+     "subject": "Null Collar",
+     "pose": "object, three-quarter view"
+    },
+    {
+     "cell": 9,
+     "asset_id": "obj.110-purity-sigil",
+     "subject": "Purity Sigil",
+     "pose": "object, three-quarter view"
+    }
+   ],
+   "chroma": "green (magenta for green objects)",
+   "identity_status": "names canon; designs need concept",
+   "layout": "3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks (\"!\" bursts, sparkles, speed lines)",
+   "style": "Same dimensional 3D render, a single object per cell, soft studio light",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-34",
+   "title": "Biomes A: one illustration per biome card",
+   "kind": "illustration-sheet",
+   "expected_file": "SHEET-34.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.111-verdant-canopy",
+     "subject": "Verdant Canopy"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.112-tideglass-bay",
+     "subject": "Tideglass Bay"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.113-stoneback-range",
+     "subject": "Stoneback Range"
+    },
+    {
+     "cell": 4,
+     "asset_id": "ill.114-ironroot-basin",
+     "subject": "Ironroot Basin"
+    },
+    {
+     "cell": 5,
+     "asset_id": "ill.115-ember-crags",
+     "subject": "Ember Crags"
+    },
+    {
+     "cell": 6,
+     "asset_id": "ill.116-stormreach-heights",
+     "subject": "Stormreach Heights"
+    },
+    {
+     "cell": 7,
+     "asset_id": "ill.117-astral-steppe",
+     "subject": "Astral Steppe"
+    },
+    {
+     "cell": 8,
+     "asset_id": "ill.118-duskmire",
+     "subject": "Duskmire"
+    },
+    {
+     "cell": 9,
+     "asset_id": "ill.119-wondergrove",
+     "subject": "Wondergrove"
+    }
+   ],
+   "layout": "3x3 grid, thin dark gutters, full-bleed environment per cell, no text",
+   "style": "3D miniature-diorama environments matching art-source/scenes/, soft even light",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "identity_status": "names canon",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-35",
+   "title": "Biomes B: Ember and Iron backgrounds for creature cards",
+   "kind": "scene-sheet",
+   "expected_file": "SHEET-35.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "scene.ember.01",
+     "subject": "Ember biome background 1"
+    },
+    {
+     "cell": 2,
+     "asset_id": "scene.ember.02",
+     "subject": "Ember biome background 2"
+    },
+    {
+     "cell": 3,
+     "asset_id": "scene.ember.03",
+     "subject": "Ember biome background 3"
+    },
+    {
+     "cell": 4,
+     "asset_id": "scene.ember.04",
+     "subject": "Ember biome background 4"
+    },
+    {
+     "cell": 5,
+     "asset_id": "scene.ember.05",
+     "subject": "Ember biome background 5"
+    },
+    {
+     "cell": 6,
+     "asset_id": "scene.iron.01",
+     "subject": "Iron biome background 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "scene.iron.02",
+     "subject": "Iron biome background 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "scene.iron.03",
+     "subject": "Iron biome background 3"
+    },
+    {
+     "cell": 9,
+     "asset_id": "scene.iron.04",
+     "subject": "Iron biome background 4"
+    }
+   ],
+   "layout": "3x3 grid, thin dark gutters, open floor in the lower third for a creature to stand on, no creatures, no text",
+   "style": "3D miniature-diorama backgrounds matching art-source/scenes/, soft even lighting (no dramatic coloured light)",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "identity_status": "planned library (see reconciliation)",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-36",
+   "title": "Biomes C: Storm and Dusk backgrounds for creature cards",
+   "kind": "scene-sheet",
+   "expected_file": "SHEET-36.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "scene.storm.01",
+     "subject": "Storm biome background 1"
+    },
+    {
+     "cell": 2,
+     "asset_id": "scene.storm.02",
+     "subject": "Storm biome background 2"
+    },
+    {
+     "cell": 3,
+     "asset_id": "scene.storm.03",
+     "subject": "Storm biome background 3"
+    },
+    {
+     "cell": 4,
+     "asset_id": "scene.storm.04",
+     "subject": "Storm biome background 4"
+    },
+    {
+     "cell": 5,
+     "asset_id": "scene.storm.05",
+     "subject": "Storm biome background 5"
+    },
+    {
+     "cell": 6,
+     "asset_id": "scene.dusk.01",
+     "subject": "Dusk biome background 1"
+    },
+    {
+     "cell": 7,
+     "asset_id": "scene.dusk.02",
+     "subject": "Dusk biome background 2"
+    },
+    {
+     "cell": 8,
+     "asset_id": "scene.dusk.03",
+     "subject": "Dusk biome background 3"
+    },
+    {
+     "cell": 9,
+     "asset_id": "scene.dusk.04",
+     "subject": "Dusk biome background 4"
+    }
+   ],
+   "layout": "3x3 grid, thin dark gutters, open floor in the lower third for a creature to stand on, no creatures, no text",
+   "style": "3D miniature-diorama backgrounds matching art-source/scenes/, soft even lighting (no dramatic coloured light)",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "identity_status": "planned library (see reconciliation)",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-37",
+   "title": "Tactics A",
+   "kind": "illustration-sheet",
+   "expected_file": "SHEET-37.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.120-first-bond",
+     "subject": "First Bond"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.121-call-of-the-wild",
+     "subject": "Call of the Wild"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.122-sanctuary-rescue",
+     "subject": "Sanctuary Rescue"
+    },
+    {
+     "cell": 4,
+     "asset_id": "ill.123-keepers-lesson",
+     "subject": "Keeper's Lesson"
+    },
+    {
+     "cell": 5,
+     "asset_id": "ill.124-pack-rally",
+     "subject": "Pack Rally"
+    },
+    {
+     "cell": 6,
+     "asset_id": "ill.125-quick-retreat",
+     "subject": "Quick Retreat"
+    },
+    {
+     "cell": 7,
+     "asset_id": "ill.126-shared-instinct",
+     "subject": "Shared Instinct"
+    },
+    {
+     "cell": 8,
+     "asset_id": "ill.127-veyra-directive",
+     "subject": "Veyra Directive"
+    },
+    {
+     "cell": 9,
+     "asset_id": "ill.128-forced-capture",
+     "subject": "Forced Capture"
+    }
+   ],
+   "layout": "3x3 grid, thin dark gutters, one action/effect illustration per cell, no text",
+   "style": "Dimensional 3D render consistent with the creatures",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1 sheet; the card crops each cell to about 4:3",
+   "identity_status": "names canon; scenes need design",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-38",
+   "title": "Tactics B",
+   "kind": "illustration-sheet",
+   "expected_file": "SHEET-38.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.129-override-signal",
+     "subject": "Override Signal"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.130-break-the-clasp",
+     "subject": "Break the Clasp"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.131-stand-together",
+     "subject": "Stand Together"
+    },
+    {
+     "cell": 4,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 5,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 6,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    }
+   ],
+   "layout": "3x3 grid; cells 4-9 left empty",
+   "style": "Dimensional 3D render consistent with the creatures",
+   "min_px": [
+    1254,
+    1254
+   ],
+   "aspect": "1:1",
+   "identity_status": "names canon; scenes need design",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 3
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-39",
+   "title": "Illustration Rares A",
+   "kind": "premium-sheet",
+   "expected_file": "SHEET-39.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.141-cactuft-ir",
+     "subject": "Cactuft IR",
+     "card": "WK-S001-141"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.142-prismotl-ir",
+     "subject": "Prismotl IR",
+     "card": "WK-S001-142"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.143-bashlet-ir",
+     "subject": "Bashlet IR",
+     "card": "WK-S001-143"
+    },
+    {
+     "cell": 4,
+     "asset_id": "ill.144-koirune-ir",
+     "subject": "Koirune IR",
+     "card": "WK-S001-144"
+    },
+    {
+     "cell": 5,
+     "asset_id": "ill.145-shelladin-ir",
+     "subject": "Shelladin IR",
+     "card": "WK-S001-145"
+    },
+    {
+     "cell": 6,
+     "asset_id": "ill.146-frondolin-ir",
+     "subject": "Frondolin IR",
+     "card": "WK-S001-146"
+    },
+    {
+     "cell": 7,
+     "asset_id": "ill.147-candicoil-ir",
+     "subject": "Candicoil IR",
+     "card": "WK-S001-147"
+    },
+    {
+     "cell": 8,
+     "asset_id": "ill.148-astrynx-ir",
+     "subject": "Astrynx IR",
+     "card": "WK-S001-148"
+    },
+    {
+     "cell": 9,
+     "asset_id": "ill.149-berribat-ir",
+     "subject": "Berribat IR",
+     "card": "WK-S001-149"
+    }
+   ],
+   "identity_status": "canon subjects",
+   "layout": "3x3 grid of portrait 5:7 cells, thin dark gutters, each cell a complete painting with the subject clear of the top and bottom quarters (card text sits there), no text, no frames",
+   "style": "Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly",
+   "min_px": [
+    2100,
+    2940
+   ],
+   "aspect": "5:7",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-40",
+   "title": "Illustration Rares B",
+   "kind": "premium-sheet",
+   "expected_file": "SHEET-40.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.150-flapod-ir",
+     "subject": "Flapod IR",
+     "card": "WK-S001-150"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.161-nimbusail-ir",
+     "subject": "Nimbusail IR",
+     "card": "WK-S001-161"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.162-veilmora-ir",
+     "subject": "Veilmora IR",
+     "card": "WK-S001-162"
+    },
+    {
+     "cell": 4,
+     "asset_id": "ill.163-ferradon-ir",
+     "subject": "Ferradon IR",
+     "card": "WK-S001-163"
+    },
+    {
+     "cell": 5,
+     "asset_id": "ill.164-fablehorn-ir",
+     "subject": "Fablehorn IR",
+     "card": "WK-S001-164"
+    },
+    {
+     "cell": 6,
+     "asset_id": "ill.165-bramblebuck-ir",
+     "subject": "Bramblebuck IR",
+     "card": "WK-S001-165"
+    },
+    {
+     "cell": 7,
+     "asset_id": "ill.166-corallume-ir",
+     "subject": "Corallume IR",
+     "card": "WK-S001-166"
+    },
+    {
+     "cell": 8,
+     "asset_id": "ill.167-cometrail-ir",
+     "subject": "Cometrail IR",
+     "card": "WK-S001-167"
+    },
+    {
+     "cell": 9,
+     "asset_id": "ill.168-puffluff-ir",
+     "subject": "Puffluff IR",
+     "card": "WK-S001-168"
+    }
+   ],
+   "identity_status": "canon subjects",
+   "layout": "3x3 grid of portrait 5:7 cells, thin dark gutters, each cell a complete painting with the subject clear of the top and bottom quarters (card text sits there), no text, no frames",
+   "style": "Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly",
+   "min_px": [
+    2100,
+    2940
+   ],
+   "aspect": "5:7",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-41",
+   "title": "Full Arts A",
+   "kind": "premium-sheet",
+   "expected_file": "SHEET-41.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.151-cactuft-fa",
+     "subject": "Cactuft FA",
+     "card": "WK-S001-151"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.152-aurorotl-fa",
+     "subject": "Aurorotl FA",
+     "card": "WK-S001-152"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.153-fortisaur-fa",
+     "subject": "Fortisaur FA",
+     "card": "WK-S001-153"
+    },
+    {
+     "cell": 4,
+     "asset_id": "ill.154-koirune-fa",
+     "subject": "Koirune FA",
+     "card": "WK-S001-154"
+    },
+    {
+     "cell": 5,
+     "asset_id": "ill.155-aegisopod-fa",
+     "subject": "Aegisopod FA",
+     "card": "WK-S001-155"
+    },
+    {
+     "cell": 6,
+     "asset_id": "ill.156-canopang-fa",
+     "subject": "Canopang FA",
+     "card": "WK-S001-156"
+    },
+    {
+     "cell": 7,
+     "asset_id": "ill.157-spiramel-fa",
+     "subject": "Spiramel FA",
+     "card": "WK-S001-157"
+    },
+    {
+     "cell": 8,
+     "asset_id": "ill.158-astrynx-fa",
+     "subject": "Astrynx FA",
+     "card": "WK-S001-158"
+    },
+    {
+     "cell": 9,
+     "asset_id": "ill.159-pompyre-fa",
+     "subject": "Pompyre FA",
+     "card": "WK-S001-159"
+    }
+   ],
+   "identity_status": "canon subjects",
+   "layout": "3x3 grid of portrait 5:7 cells, thin dark gutters, each cell a complete painting with the subject clear of the top and bottom quarters (card text sits there), no text, no frames",
+   "style": "Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly",
+   "min_px": [
+    2100,
+    2940
+   ],
+   "aspect": "5:7",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 9
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-42",
+   "title": "Full Arts B",
+   "kind": "premium-sheet",
+   "expected_file": "SHEET-42.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.160-flapod-fa",
+     "subject": "Flapod FA",
+     "card": "WK-S001-160"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.169-professor-maren-vale-fa",
+     "subject": "Professor Maren Vale FA",
+     "card": "WK-S001-169"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.170-june-kestrel-fa",
+     "subject": "June Kestrel FA",
+     "card": "WK-S001-170"
+    },
+    {
+     "cell": 4,
+     "asset_id": "ill.171-sel-veyra-fa",
+     "subject": "Sel Veyra FA",
+     "card": "WK-S001-171"
+    },
+    {
+     "cell": 5,
+     "asset_id": "ill.172-iris-shade-fa",
+     "subject": "Iris Shade FA",
+     "card": "WK-S001-172"
+    },
+    {
+     "cell": 6,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    }
+   ],
+   "identity_status": "canon subjects; 4 cells empty",
+   "layout": "3x3 grid of portrait 5:7 cells, thin dark gutters, each cell a complete painting with the subject clear of the top and bottom quarters (card text sits there), no text, no frames",
+   "style": "Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly",
+   "min_px": [
+    2100,
+    2940
+   ],
+   "aspect": "5:7",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 5
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SHEET-43",
+   "title": "Clasp Program: Clasped Secret Rares",
+   "kind": "premium-sheet",
+   "expected_file": "SHEET-43.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.177-clasped-aegisopod",
+     "subject": "Clasped Aegisopod",
+     "card": "WK-S001-177"
+    },
+    {
+     "cell": 2,
+     "asset_id": "ill.178-clasped-pompyre",
+     "subject": "Clasped Pompyre",
+     "card": "WK-S001-178"
+    },
+    {
+     "cell": 3,
+     "asset_id": "ill.179-clasped-ferradon",
+     "subject": "Clasped Ferradon",
+     "card": "WK-S001-179"
+    },
+    {
+     "cell": 4,
+     "asset_id": "ill.180-clasped-veilmora",
+     "subject": "Clasped Veilmora",
+     "card": "WK-S001-180"
+    },
+    {
+     "cell": 5,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 6,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 7,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 8,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    },
+    {
+     "cell": 9,
+     "asset_id": null,
+     "subject": "(leave empty: flat dark)"
+    }
+   ],
+   "identity_status": "canon subjects; 5 cells empty. The look of a Clasp (Veyra Industries device) is not defined: propose it for approval first",
+   "layout": "3x3 grid of portrait 5:7 cells, thin dark gutters, each cell a complete painting with the subject clear of the top and bottom quarters (card text sits there), no text, no frames",
+   "style": "Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly",
+   "min_px": [
+    2100,
+    2940
+   ],
+   "aspect": "5:7",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 4
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SIR-173",
+   "title": "Special Illustration Rare: Cactuft SIR",
+   "kind": "single-illustration",
+   "expected_file": "SIR-173.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.173-cactuft-sir",
+     "subject": "Cactuft SIR",
+     "card": "WK-S001-173"
+    }
+   ],
+   "layout": "one painting, portrait 5:7, subject clear of the top and bottom quarters, no text, no frame",
+   "style": "Showpiece painting, the highest-effort art in the set; creature/character must match the approved design",
+   "min_px": [
+    1500,
+    2100
+   ],
+   "aspect": "5:7",
+   "identity_status": "canon subject",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 1
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SIR-174",
+   "title": "Special Illustration Rare: Nimbusail SIR",
+   "kind": "single-illustration",
+   "expected_file": "SIR-174.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.174-nimbusail-sir",
+     "subject": "Nimbusail SIR",
+     "card": "WK-S001-174"
+    }
+   ],
+   "layout": "one painting, portrait 5:7, subject clear of the top and bottom quarters, no text, no frame",
+   "style": "Showpiece painting, the highest-effort art in the set; creature/character must match the approved design",
+   "min_px": [
+    1500,
+    2100
+   ],
+   "aspect": "5:7",
+   "identity_status": "canon subject",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 1
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SIR-175",
+   "title": "Special Illustration Rare: June Kestrel SIR",
+   "kind": "single-illustration",
+   "expected_file": "SIR-175.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.175-june-kestrel-sir",
+     "subject": "June Kestrel SIR",
+     "card": "WK-S001-175"
+    }
+   ],
+   "layout": "one painting, portrait 5:7, subject clear of the top and bottom quarters, no text, no frame",
+   "style": "Showpiece painting, the highest-effort art in the set; creature/character must match the approved design",
+   "min_px": [
+    1500,
+    2100
+   ],
+   "aspect": "5:7",
+   "identity_status": "canon subject",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 1
+   },
+   "qa": {
+    "status": "pending"
+   }
+  },
+  {
+   "task_id": "SIR-176",
+   "title": "Special Illustration Rare: Sel Veyra SIR",
+   "kind": "single-illustration",
+   "expected_file": "SIR-176.png",
+   "cells": [
+    {
+     "cell": 1,
+     "asset_id": "ill.176-sel-veyra-sir",
+     "subject": "Sel Veyra SIR",
+     "card": "WK-S001-176"
+    }
+   ],
+   "layout": "one painting, portrait 5:7, subject clear of the top and bottom quarters, no text, no frame",
+   "style": "Showpiece painting, the highest-effort art in the set; creature/character must match the approved design",
+   "min_px": [
+    1500,
+    2100
+   ],
+   "aspect": "5:7",
+   "identity_status": "canon subject",
+   "production": {
+    "status": "todo",
+    "approved_cells": 0,
+    "required_cells": 1
+   },
+   "qa": {
+    "status": "pending"
+   }
+  }
+ ]
+}
