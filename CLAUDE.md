@@ -45,7 +45,7 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 - Metagame: about 15 archetypes, top deck about 20%. With one set there is no rotation and bans are rare.
 
 ## Known issues
-- Wildkin: 161 of 180 cards wait for art; card rules are provisional placeholders; only one set exists (see `wildkin-production/reports/V1_READINESS.md`).
+- Wildkin: 84 of 180 cards wait for art (allies, tactics, premium and a few creatures); card rules are provisional placeholders; only one set exists (see `wildkin-production/reports/V1_READINESS.md`).
 - Wildkin has no Hunt, no follows or chases for cards, and no breaks or repacks.
 - A few Hunt shop descriptions in the comics build still mention cards.
 - Never tested on a real phone or on itch.io. The 3D viewer was only tested with a software renderer.
