@@ -1,0 +1,211 @@
+{
+ "task": "SHEET-02",
+ "file": "wildkin-production/incoming/SHEET-02.png",
+ "sha256": "068f31b69f05669ee320069ea6f8325cce149c49dc01d44fdbfd260914ade110",
+ "checked": "2026-10-13T11:23:34Z",
+ "errors": [
+  "cell 5: subject touches the cell edge (clipped): top",
+  "cell 7: subject touches the cell edge (clipped): top",
+  "cell 8: subject touches the cell edge (clipped): top+right"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 1: margin is tight (9 px); the spec asks for about 10%",
+  "cell 2: margin is tight (7 px); the spec asks for about 10%",
+  "cell 4: margin is tight (11 px); the spec asks for about 10%",
+  "cell 6: margin is tight (8 px); the spec asks for about 10%",
+  "cell 9: margin is tight (5 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.002-prismotl.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4742,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    30,
+    9,
+    9,
+    25
+   ],
+   "notes": [
+    "margin is tight (9 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.032
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.002-prismotl.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4558,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    27,
+    7,
+    14,
+    53
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.035
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.002-prismotl.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4074,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    20,
+    92,
+    19,
+    30
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.003-opalotl.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4708,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    21,
+    11,
+    57,
+    15
+   ],
+   "notes": [
+    "margin is tight (11 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.003-opalotl.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4685,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    36,
+    0,
+    8,
+    36
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.033
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.003-opalotl.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4806,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    32,
+    38,
+    43,
+    8
+   ],
+   "notes": [
+    "margin is tight (8 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.029
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.004-aurorotl.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5436,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    7,
+    0,
+    32,
+    22
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.027
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.004-aurorotl.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4696,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    11,
+    0,
+    2,
+    54
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.032
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.004-aurorotl.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5701,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    18,
+    5,
+    20,
+    11
+   ],
+   "notes": [
+    "margin is tight (5 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-02",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin production SHEET-02. Create square PNG native at least 1254x1254. EXACT equal 3x3 grid, thin straight near-black gutters, each subject fully inside its own cell with generous 12 percent margin INCLUDING all fronds and tail. One creature per cell, nine total. Every background pixel uniform chroma green RGB(40,160,60), no gradient, lighting only on creatures, NO FLOOR SHADOWS. Match attached ORIGINAL PRISMOTL reference exactly for the base form: round creamy white four-legged axolotl creature, short rounded toes with blush pink pads, enormous blue-purple eyes, tiny smiling mouth, huge graceful PASTEL RAINBOW FEATHER-LIKE external gills/fronds sweeping upward beside head, layered pastel rainbow fronds along back and curling tail. Soft matte dimensional animated-feature 3D rendering, soft frontal studio light. Do NOT make a conventional pink salamander. ROW 1 cells 1-3 Prismotl in standing front-three-quarter, joyful airborne jump, seated resting poses. ROW 2 cells 4-6 Opalotl, SAME lineage but a little more developed: slightly longer white body and tail, fuller overlapping iridescent pastel fronds, same eyes and gentle face, standing, jumping, sitting. ROW 3 cells 7-9 Aurorotl, elegant mature final form: longer graceful white quadrupedal silhouette, more flowing opalescent pastel feather-like gill fans and long layered rainbow tail, same facial anatomy and palette, standing, leaping, sitting. These are progressive stages, each row's three poses has IDENTICAL stage anatomy/proportions/markings. Keep all at comparable readable cell scale, final form distinct by silhouette rather than just size. NO props, glow, glitter, floating particles, letters, text, symbols, speed lines, ground, environmental imagery or card frames. Reference is identity and renderer; remove its background shadows and use requested exact flat chroma.",
+  "references": [
+   "reference/recovered/image-gen-10(3).png"
+  ],
+  "continuity": "Prismotl matched to inspected original; Opalotl and Aurorotl newly inferred evolution treatments; pending visual review."
+ }
+}

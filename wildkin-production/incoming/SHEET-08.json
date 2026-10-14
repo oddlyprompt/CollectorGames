@@ -1,0 +1,8 @@
+{
+  "task_id": "SHEET-08",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin production SHEET-08. Exactly 3x3 square PNG sheet, at least 1254x1254, thin straight near-black gutters at thirds. Reference is canonical moon-cat identity Astrynx. Create dimensional soft 3D toy creature rendering preserving reference colors and markings. Background in EACH cell completely flat green RGB(40,160,60), no gradients, floor shadows, sparkles outside body or symbols. Every full creature at most 65% of cell width and height, all ears and tail inside with 15% clear margin. Row1 Creskit pre-evolution baby moon kitten: navy-violet fur, cream face/chest, big BLUE eyes, cream crescent forehead, shorter rounded star-speckled tail and shorter big ears. Cells 1 standing, 2 jumping, 3 sitting. Rows2/3 Astrynx matches reference: navy violet feline, cream cheek/chest/inner ear tufts, huge blue eyes, pale crescent on forehead, large curved fluffy navy tail with golden star MARKINGS printed within fur, big pointed ears. Cells4 standing, 5 jumping, 6 sitting, 7 waving paw, 8 running, 9 looking up. Stages clearly distinct and each stage consistent across poses. No text, frames, extra creatures or floor shadows. More realistic dimensional fur than flat illustration while preserving all identity details.",
+  "notes": "Astrynx identity from recovered approved moon-cat reference; Creskit inferred juvenile."
+}

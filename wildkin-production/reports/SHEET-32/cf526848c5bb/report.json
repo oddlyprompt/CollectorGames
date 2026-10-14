@@ -1,0 +1,187 @@
+{
+ "task": "SHEET-32",
+ "file": "wildkin-production/incoming/SHEET-32.png",
+ "sha256": "cf526848c5bb4f32ee28b6d0fc2c722277ebd2f3d31e8aed712615e11fc8fcc9",
+ "checked": "2026-10-13T15:55:10Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [
+  "cell 4: margin is tight (11 px); the spec asks for about 10%",
+  "cell 5: margin is tight (9 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "obj.093-bond-charm",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.236,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    85,
+    42,
+    62,
+    43
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 2,
+   "asset_id": "obj.094-keeper-satchel",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.534,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    16,
+    41,
+    27,
+    34
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.012
+  },
+  {
+   "cell": 3,
+   "asset_id": "obj.095-rescue-whistle",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1686,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    73,
+    35,
+    72,
+    28
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.051
+  },
+  {
+   "cell": 4,
+   "asset_id": "obj.096-biome-compass",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3645,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    40,
+    11,
+    33,
+    45
+   ],
+   "notes": [
+    "margin is tight (11 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 5,
+   "asset_id": "obj.097-glow-lantern",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2991,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    94,
+    9,
+    105,
+    24
+   ],
+   "notes": [
+    "margin is tight (9 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.068
+  },
+  {
+   "cell": 6,
+   "asset_id": "obj.098-trail-rations",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4046,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    23,
+    70,
+    32,
+    62
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.014
+  },
+  {
+   "cell": 7,
+   "asset_id": "obj.099-medic-salve",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3306,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    79,
+    55,
+    80,
+    77
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.01
+  },
+  {
+   "cell": 8,
+   "asset_id": "obj.100-echo-flute",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1859,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    21,
+    21,
+    45,
+    49
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.051
+  },
+  {
+   "cell": 9,
+   "asset_id": "obj.101-tide-lure",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1685,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    55,
+    16,
+    63,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.084
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-32",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-32 3x3 production PNG at least 1254x1254, equal square cells, thin dark gutters. Dimensional stylized 3D renders consistent with toy-like creatures. Single object three-quarter product view in each cell. Cell1 Bond Charm: round brass pendant with cream/pale blue stone and brown cord. 2 Keeper Satchel tan canvas leather bag. 3 Rescue Whistle small silver whistle on ochre cord. 4 Biome Compass brass folding compass with nine colored inlays, NO lettering. 5 Glow Lantern brass lantern with warm cream crystal, glow contained within glass. 6 Trail Rations cloth wrapped bread, nuts and dried berries in a single bundle. 7 Medic Salve brown pot with cream lid and sage leaf embossed motif. 8 Echo Flute carved pale wooden flute. 9 Tide Lure iridescent blue shell lure with copper hook.. Each whole subject maximum 55% cell height and width with 22% blank margin around all hats, boots, staff, straps. FLAT RGB(40,160,60) GREEN screen, except mostly green outfits or green objects use FLAT RGB(235,18,128) magenta in that cell. No gradients, floor shadows, text, frames or external glow. Reference is identity and clothing source only; translate rendering to dimensional 3D. No creature companions in cells.",
+  "notes": "Gear design inferred within canonical card names. Clasp design shared with premium program.",
+  "identity_status": "reference-derived and/or inferred; not owner-approved"
+ }
+}

@@ -1,0 +1,213 @@
+{
+ "task": "SHEET-16",
+ "file": "wildkin-production/incoming/SHEET-16--v2.png",
+ "sha256": "6663cd3f213ce9560a6884f34984c9a27532ab7f9bd412566eedfacc8159982e",
+ "checked": "2026-10-13T16:54:35Z",
+ "errors": [
+  "cell 1: subject touches the cell edge (clipped): left",
+  "cell 4: subject touches the cell edge (clipped): left+right",
+  "cell 5: subject touches the cell edge (clipped): left+right",
+  "cell 6: subject touches the cell edge (clipped): left+right",
+  "cell 8: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [
+  "cell 1: 2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 2: 5 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 3: 2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+ ],
+ "notes": [
+  "cell 3: margin is tight (7 px); the spec asks for about 10%",
+  "cell 7: margin is tight (15 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.039-pebblamb.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): left"
+   ],
+   "warnings": [
+    "2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.0977,
+   "stray_pieces_dropped": 2,
+   "margins_LTRB": [
+    0,
+    137,
+    80,
+    33
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.039-pebblamb.jumping",
+   "errors": [],
+   "warnings": [
+    "5 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.1012,
+   "stray_pieces_dropped": 5,
+   "margins_LTRB": [
+    114,
+    111,
+    126,
+    120
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.039-pebblamb.sitting",
+   "errors": [],
+   "warnings": [
+    "2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.0925,
+   "stray_pieces_dropped": 2,
+   "margins_LTRB": [
+    143,
+    138,
+    7,
+    33
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.048
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.040-cairnram.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): left+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1909,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    55,
+    0,
+    70
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.04
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.040-cairnram.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): left+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1673,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    36,
+    0,
+    70
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.040-cairnram.sitting",
+   "errors": [
+    "subject touches the cell edge (clipped): left+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1823,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    65,
+    0,
+    70
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.041-monolox.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2435,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    103,
+    15,
+    76,
+    129
+   ],
+   "notes": [
+    "margin is tight (15 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.041-monolox.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2077,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    89,
+    0,
+    99,
+    155
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.041-monolox.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2196,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    91,
+    50,
+    102,
+    131
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.031
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-16",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style.  Exact cells 1:Pebblamb standing;2:Pebblamb jumping;3:Pebblamb sitting;4:Cairnram standing;5:Cairnram jumping;6:Cairnram sitting;7:Monolox standing;8:Monolox jumping;9:Monolox sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+  "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+  "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16.png"
+ }
+}

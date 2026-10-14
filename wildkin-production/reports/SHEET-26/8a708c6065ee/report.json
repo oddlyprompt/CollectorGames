@@ -1,0 +1,177 @@
+{
+ "task": "SHEET-26",
+ "file": "wildkin-production/incoming/SHEET-26.png",
+ "sha256": "8a708c6065ee696b1fd953c0f20cf9771a941c20b3c57fe57f285b765f2466b7",
+ "checked": "2026-10-13T15:47:38Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.063-nutbolt.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2111,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    62,
+    76,
+    50,
+    46
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.071
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.063-nutbolt.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1992,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    82,
+    28,
+    76,
+    59
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.061
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.063-nutbolt.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2009,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    96,
+    88,
+    79,
+    35
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.042
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.064-clampup.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3057,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    69,
+    62,
+    47,
+    53
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.035
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.064-clampup.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2809,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    66,
+    35,
+    63,
+    90
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.064-clampup.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.257,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    92,
+    83,
+    65,
+    47
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.065-ashhopper.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2188,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    40,
+    43,
+    32,
+    46
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.076
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.065-ashhopper.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.201,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    38,
+    16,
+    51,
+    60
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.076
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.065-ashhopper.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2059,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    53,
+    79,
+    50,
+    43
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.069
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-26",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-26 production PNG sheet, exactly 3x3 equal square cells, thin near-black gutters at thirds, at least 1254x1254. Dimensional 3D toy rendering, even front lighting. ALL backgrounds perfectly FLAT RGB(40,160,60) green, no shading of screen, no shadows, no floor plane. IMPORTANT: miniatures remain SMALL, centered, maximum 55% cell width and height, 22% blank margin on every side. Do not make bottom row larger. Nutbolt: toy-like silver insect with copper bolt head, cream expressive face, six dark legs. Clampup: small navy puppy with silver rounded clamp-shaped ears, cream muzzle and copper paws. Ashhopper: charcoal grasshopper with orange segmented back, large warm eyes and cream belly. Three species one row each.. Exact cell order left-right top-bottom: 1: Nutbolt standing; 2: Nutbolt jumping; 3: Nutbolt sitting; 4: Clampup standing; 5: Clampup jumping; 6: Clampup sitting; 7: Ashhopper standing; 8: Ashhopper jumping; 9: Ashhopper sitting. All stages visually distinct. All poses of each species have identical colors, proportions and markings. No external glows, text, sparkle, symbols, frames. Full subjects including tails and wings.",
+  "notes": "Inferred production design within confirmed manifest. Not established canon until approval."
+ }
+}

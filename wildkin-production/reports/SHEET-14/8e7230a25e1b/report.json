@@ -1,0 +1,178 @@
+{
+ "task": "SHEET-14",
+ "file": "wildkin-production/incoming/SHEET-14--v2.png",
+ "sha256": "8e7230a25e1b93f193760f23fde20d348a59031fa6e9774b59db9a6b43502337",
+ "checked": "2026-10-13T16:54:27Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.033-glimlet.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0828,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    121,
+    140,
+    125,
+    100
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.074
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.033-glimlet.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0976,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    110,
+    117,
+    116,
+    120
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.063
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.033-glimlet.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0727,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    137,
+    154,
+    126,
+    101
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.067
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.034-hushwing.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1417,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    89,
+    82,
+    101,
+    93
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.058
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.034-hushwing.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1674,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    68,
+    65,
+    69,
+    107
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.034-hushwing.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1252,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    90,
+    103,
+    104,
+    99
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.042
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.035-veilmora.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1805,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    72,
+    63,
+    103,
+    97
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.053
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.035-veilmora.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1903,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    75,
+    62,
+    59,
+    107
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.047
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.035-veilmora.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1628,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    76,
+    89,
+    74,
+    102
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-14",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style.  Exact cells 1:Glimlet standing;2:Glimlet jumping;3:Glimlet sitting;4:Hushwing standing;5:Hushwing jumping;6:Hushwing sitting;7:Veilmora standing;8:Veilmora jumping;9:Veilmora sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+  "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+  "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-14.png"
+ }
+}

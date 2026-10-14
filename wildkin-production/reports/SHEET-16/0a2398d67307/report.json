@@ -1,0 +1,221 @@
+{
+ "task": "SHEET-16",
+ "file": "wildkin-production/incoming/SHEET-16.png",
+ "sha256": "0a2398d67307a58c9c576b21e2b7eec08ac1580694a91bb265889933726470bf",
+ "checked": "2026-10-13T15:46:04Z",
+ "errors": [
+  "cell 2: subject touches the cell edge (clipped): bottom",
+  "cell 4: subject touches the cell edge (clipped): top+bottom",
+  "cell 5: subject touches the cell edge (clipped): top+bottom",
+  "cell 7: subject touches the cell edge (clipped): top",
+  "cell 8: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [
+  "cell 1: 10 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 2: 3 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 3: 2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 4: 13 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 5: 12 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 6: 13 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+ ],
+ "notes": [
+  "cell 6: margin is tight (14 px); the spec asks for about 10%",
+  "cell 9: margin is tight (8 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.039-pebblamb.standing",
+   "errors": [],
+   "warnings": [
+    "10 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.1839,
+   "stray_pieces_dropped": 10,
+   "margins_LTRB": [
+    100,
+    86,
+    104,
+    82
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.044
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.039-pebblamb.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): bottom"
+   ],
+   "warnings": [
+    "3 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.2117,
+   "stray_pieces_dropped": 3,
+   "margins_LTRB": [
+    87,
+    49,
+    91,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.042
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.039-pebblamb.sitting",
+   "errors": [],
+   "warnings": [
+    "2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.1804,
+   "stray_pieces_dropped": 2,
+   "margins_LTRB": [
+    112,
+    87,
+    98,
+    79
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.037
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.040-cairnram.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top+bottom"
+   ],
+   "warnings": [
+    "13 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.4417,
+   "stray_pieces_dropped": 13,
+   "margins_LTRB": [
+    40,
+    0,
+    60,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.027
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.040-cairnram.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top+bottom"
+   ],
+   "warnings": [
+    "12 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.3865,
+   "stray_pieces_dropped": 12,
+   "margins_LTRB": [
+    58,
+    0,
+    45,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.029
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.040-cairnram.sitting",
+   "errors": [],
+   "warnings": [
+    "13 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.4149,
+   "stray_pieces_dropped": 13,
+   "margins_LTRB": [
+    61,
+    14,
+    34,
+    92
+   ],
+   "notes": [
+    "margin is tight (14 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.019
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.041-monolox.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5631,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    37,
+    0,
+    14,
+    39
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.041-monolox.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4201,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    34,
+    0,
+    35,
+    78
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.041-monolox.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5577,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    16,
+    8,
+    34,
+    49
+   ],
+   "notes": [
+    "margin is tight (8 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.02
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-16",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-16 production PNG. Exactly 3x3 equal square cells, thin dark gutters, at least 1254x1254. Soft dimensional 3D toy rendering, even front light, solid green RGB(40,160,60) throughout, no shadows, text, effects or gradients. Every creature at most 60% cell width/height with generous empty margins. Pebblamb fluffy cream lamb with taupe pebble plates and tiny rounded stone horns; Cairnram woolly stout ram with layered slate armor and curly sandstone horns; Monolox majestic stone ram with dark slate shoulder plates, broad curved horns and cream wool. Distinct family stages, gentle eyes.. Exact row-major poses 1:Pebblamb standing;2:Pebblamb jumping;3:Pebblamb sitting;4:Cairnram standing;5:Cairnram jumping;6:Cairnram sitting;7:Monolox standing;8:Monolox jumping;9:Monolox sitting. Distinct stages, consistent anatomy and markings.",
+  "notes": "Inferred design within confirmed canon; approval pending."
+ }
+}

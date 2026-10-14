@@ -1,0 +1,9 @@
+{
+  "task_id": "SHEET-06",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-06 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma MAGENTA RGB(235,18,128). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Frondolin matches leaf pangolin reference: tan furry upright pangolin, overlapping green leaf scales, cream belly, curled long leafy tail, green eyes. Pangrove is larger, heavier overlapping oak-like scales, stronger tan limbs, longer layered tail. Canopang is mature guardian, broader deep emerald leaf armor, woody brown limbs, large layered canopy collar, same green eyes and cream belly. Keep species visibly distinct.. Exact row-major cell mapping: 1: Frondolin standing; 2: Frondolin jumping; 3: Frondolin sitting; 4: Pangrove standing; 5: Pangrove jumping; 6: Pangrove sitting; 7: Canopang standing; 8: Canopang jumping; 9: Canopang sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Base identity recovered from earlier approved artwork; undescribed evolution inferred.",
+  "reference": "/workspace/scratch/b718be279b35/wildkin-art/reference/frondolin-identity.png"
+}

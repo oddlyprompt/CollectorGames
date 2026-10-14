@@ -1,0 +1,200 @@
+{
+ "task": "SHEET-08",
+ "file": "wildkin-production/incoming/SHEET-08.png",
+ "sha256": "d778b779143a36ce27f1b95922e2eff04a1bf814a0b0a94c56f588cf74e63a82",
+ "checked": "2026-10-13T15:21:48Z",
+ "errors": [
+  "cell 4: subject touches the cell edge (clipped): top",
+  "cell 5: subject touches the cell edge (clipped): top",
+  "cell 7: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 6: margin is tight (10 px); the spec asks for about 10%",
+  "cell 8: margin is tight (7 px); the spec asks for about 10%",
+  "cell 9: margin is tight (7 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.019-creskit.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4271,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    41,
+    63,
+    22,
+    20
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.038
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.019-creskit.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4435,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    18,
+    22,
+    23,
+    57
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.031
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.019-creskit.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4047,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    82,
+    41,
+    42,
+    22
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.032
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.020-astrynx.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.553,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    26,
+    0,
+    13,
+    10
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.033
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.020-astrynx.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4872,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    19,
+    0,
+    12,
+    68
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.032
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.020-astrynx.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.516,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    20,
+    10,
+    62,
+    11
+   ],
+   "notes": [
+    "margin is tight (10 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.029
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.020-astrynx.waving",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5826,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    22,
+    0,
+    7,
+    21
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.020-astrynx.running",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5148,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    10,
+    7,
+    8,
+    32
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.032
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.020-astrynx.looking-up",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.509,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    52,
+    7,
+    25,
+    22
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-08",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin production SHEET-08. Exactly 3x3 square PNG sheet, at least 1254x1254, thin straight near-black gutters at thirds. Reference is canonical moon-cat identity Astrynx. Create dimensional soft 3D toy creature rendering preserving reference colors and markings. Background in EACH cell completely flat green RGB(40,160,60), no gradients, floor shadows, sparkles outside body or symbols. Every full creature at most 65% of cell width and height, all ears and tail inside with 15% clear margin. Row1 Creskit pre-evolution baby moon kitten: navy-violet fur, cream face/chest, big BLUE eyes, cream crescent forehead, shorter rounded star-speckled tail and shorter big ears. Cells 1 standing, 2 jumping, 3 sitting. Rows2/3 Astrynx matches reference: navy violet feline, cream cheek/chest/inner ear tufts, huge blue eyes, pale crescent on forehead, large curved fluffy navy tail with golden star MARKINGS printed within fur, big pointed ears. Cells4 standing, 5 jumping, 6 sitting, 7 waving paw, 8 running, 9 looking up. Stages clearly distinct and each stage consistent across poses. No text, frames, extra creatures or floor shadows. More realistic dimensional fur than flat illustration while preserving all identity details.",
+  "notes": "Astrynx identity from recovered approved moon-cat reference; Creskit inferred juvenile."
+ }
+}

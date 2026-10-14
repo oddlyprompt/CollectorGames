@@ -1,0 +1,9 @@
+{
+  "task_id": "SHEET-11",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-11 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma GREEN RGB(40,160,60). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Mistip is a tiny pastel blue dolphin with white cotton cloud tufts, cream belly, big dark-blue eyes and small fins. Cumulfin larger cloud dolphin, more puffed cloud shoulder/body tufts and broader blue fins. Nimbusail majestic final cloud dolphin with long graceful blue body, white cloud mane and flowing wide sail-like cloud dorsal fin. Matches recovered cloud dolphin reference, friendly without changing into a whale.. Exact row-major cell mapping: 1: Mistip standing; 2: Mistip jumping; 3: Mistip sitting; 4: Cumulfin standing; 5: Cumulfin jumping; 6: Cumulfin sitting; 7: Nimbusail standing; 8: Nimbusail jumping; 9: Nimbusail sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Base identity recovered from earlier approved artwork; undescribed evolution inferred.",
+  "reference": "/workspace/scratch/b718be279b35/wildkin-art/reference/recovered/Cloud Dolphin Character Pose Grid.png"
+}

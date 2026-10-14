@@ -1,0 +1,9 @@
+{
+  "task_id": "SHEET-14",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-14 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma GREEN RGB(40,160,60). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Glimlet tiny lavender-gray moth with cream face, dark purple eyes, rounded wings and two feathery antennae. Hushwing larger velvet mauve moth with folded dark lavender leaf-shaped wings, pale crescent motifs. Veilmora grand nocturnal moth with deep plum layered wings, silver eyespots and pale furry collar. Friendly mysterious creature.. Exact row-major cell mapping: 1: Glimlet standing; 2: Glimlet jumping; 3: Glimlet sitting; 4: Hushwing standing; 5: Hushwing jumping; 6: Hushwing sitting; 7: Veilmora standing; 8: Veilmora jumping; 9: Veilmora sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Inferred production design within confirmed manifest. Established design only after approval.",
+  "reference": null
+}

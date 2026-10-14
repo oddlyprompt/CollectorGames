@@ -1,0 +1,204 @@
+{
+ "task": "SHEET-03",
+ "file": "wildkin-production/incoming/SHEET-03.png",
+ "sha256": "4357c197eec7f3508d560250bb02af51a4a3804b70e8e8ba05c7dc968bcaa9be",
+ "checked": "2026-10-13T11:25:52Z",
+ "errors": [
+  "cell 4: subject touches the cell edge (clipped): right",
+  "cell 5: subject touches the cell edge (clipped): left",
+  "cell 6: subject touches the cell edge (clipped): left",
+  "cell 7: subject touches the cell edge (clipped): left+right",
+  "cell 8: subject touches the cell edge (clipped): left+right",
+  "cell 9: subject touches the cell edge (clipped): left+top+right"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 3: margin is tight (7 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.005-bashlet.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.431,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    18,
+    60,
+    15,
+    19
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.027
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.005-bashlet.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4299,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    16,
+    16,
+    27,
+    38
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.005-bashlet.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4058,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    32,
+    67,
+    7,
+    23
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.006-maceback.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5576,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    4,
+    13,
+    2,
+    4
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.006-maceback.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): left"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5117,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    5,
+    3,
+    17
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.006-maceback.sitting",
+   "errors": [
+    "subject touches the cell edge (clipped): left"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5651,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    55,
+    5,
+    8
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.021
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.007-fortisaur.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): left+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.6439,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    5,
+    0,
+    21
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.007-fortisaur.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): left+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5691,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    17,
+    0,
+    15
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.007-fortisaur.sitting",
+   "errors": [
+    "subject touches the cell edge (clipped): left+top+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.64,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    0,
+    1,
+    18
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.02
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-03",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Create a NEW SQUARE 3x3 Wildkin creature cutout sheet, not a landscape triptych. Native square PNG at least 1254x1254. The attached landscape reference contains THREE approved evolution designs: left Bashlet, middle Maceback, right Fortisaur. Match those exact designs and render them in a new nine-cell studio layout. EXACT cell mapping: TOP ROW Bashlet standing front 3/4; Bashlet joyful airborne jump; Bashlet seated resting. MIDDLE ROW Maceback standing; Maceback airborne leap; Maceback seated resting. BOTTOM ROW Fortisaur standing proudly; Fortisaur four-legged airborne leap; Fortisaur sitting on haunches. One FULL BODY character per cell, precisely nine, no environments. Bashlet has cute round blue ankylosaur anatomy, cream face/belly, blue plated shell, small cream spikes, brown eyes, small blue spiked club tail. Maceback exact middle reference: stockier muscular quadruped, thicker layered blue stone armor, larger cream conical spikes, heavier blue mace tail, cream jaw and belly, brown eyes. Fortisaur exact right reference: taller regal powerful quadruped, enormous angular cream shoulder/back spikes, broad layered blue stone armor, giant spiked blue club tail, cream throat and belly, brown eyes. Within each row anatomy, markings, scales, spikes and colors IDENTICAL across three poses. Frontal soft studio lighting, high-quality smooth matte dimensional 3D same approved renderer. Each equal square cell has generous 12 percent margin all around including tail and spikes, all subjects fit entirely. Thin straight near-black grid gutters. Perfectly flat UNIFORM chroma green RGB(40,160,60) across whole sheet cells. No floor shadows, gradients, glow, sparkles, motion lines, text, icons, frames, environmental objects. Do not clone the reference composition: transform its three designs into requested 3 ROWS of distinct poses.",
+  "references": [
+   "reference/recovered/Blue-Scaled Ankylosaur Evolution Triptych.png"
+  ],
+  "continuity": "All three stages use inspected original evolution triptych. Existing approved Bashlet cells must not be replaced."
+ }
+}

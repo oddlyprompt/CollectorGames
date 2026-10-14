@@ -1,0 +1,233 @@
+{
+ "task": "SHEET-31",
+ "file": "wildkin-production/incoming/SHEET-31.png",
+ "sha256": "9aa5686db7b775135aab50d18a7f6121acd6e3cd1f013d238f3ddc9bd73f671f",
+ "checked": "2026-10-13T15:54:55Z",
+ "errors": [
+  "cell 1: subject touches the cell edge (clipped): bottom",
+  "cell 2: subject touches the cell edge (clipped): top+bottom",
+  "cell 3: subject touches the cell edge (clipped): bottom",
+  "cell 4: subject touches the cell edge (clipped): top+bottom",
+  "cell 5: subject touches the cell edge (clipped): top+bottom",
+  "cell 6: subject touches the cell edge (clipped): top+bottom",
+  "cell 7: subject touches the cell edge (clipped): top",
+  "cell 8: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [
+  "cell 1: background is not a clean flat screen (median [28, 236, 25])",
+  "cell 2: background is not a clean flat screen (median [28, 235, 25])",
+  "cell 3: background is not a clean flat screen (median [28, 235, 26])",
+  "cell 4: background is not a clean flat screen (median [28, 236, 25])",
+  "cell 5: background is not a clean flat screen (median [28, 235, 25])",
+  "cell 6: background is not a clean flat screen (median [28, 235, 26])",
+  "cell 7: background is not a clean flat screen (median [28, 236, 25])",
+  "cell 8: background is not a clean flat screen (median [28, 235, 26])"
+ ],
+ "notes": [
+  "cell 9: margin is tight (3 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.084-renn-calder.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): bottom"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 236, 25])"
+   ],
+   "screen": "green",
+   "coverage": 0.2616,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    101,
+    4,
+    79,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.07
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.085-mira-quill.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): top+bottom"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 235, 25])"
+   ],
+   "screen": "green",
+   "coverage": 0.309,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    82,
+    2,
+    92,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.066
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.086-sel-veyra.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): bottom"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 235, 26])"
+   ],
+   "screen": "green",
+   "coverage": 0.2789,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    89,
+    6,
+    89,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.059
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.087-cass-rell.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): top+bottom"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 236, 25])"
+   ],
+   "screen": "green",
+   "coverage": 0.217,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    124,
+    0,
+    108,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.057
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.088-dr-cyl-vane.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): top+bottom"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 235, 25])"
+   ],
+   "screen": "green",
+   "coverage": 0.3102,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    76,
+    0,
+    100,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.058
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.089-marshal-rook.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): top+bottom"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 235, 26])"
+   ],
+   "screen": "green",
+   "coverage": 0.3136,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    92,
+    0,
+    102,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.042
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.090-iris-shade.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 236, 25])"
+   ],
+   "screen": "green",
+   "coverage": 0.2865,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    98,
+    0,
+    92,
+    4
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.067
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.091-dex-harrow.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [
+    "background is not a clean flat screen (median [28, 235, 26])"
+   ],
+   "screen": "green",
+   "coverage": 0.2428,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    103,
+    0,
+    96,
+    4
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.068
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.092-brin-hollow.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.204,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    118,
+    3,
+    135,
+    11
+   ],
+   "notes": [
+    "margin is tight (3 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-31",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-31 3x3 production PNG at least 1254x1254, equal square cells, thin dark gutters. Dimensional stylized 3D renders consistent with toy-like creatures. Human characters have stylized animated-film proportions, recognizable faces/clothes from reference. Preserve age and silhouette. One full body standing three-quarter portrait per cell. Cell1 Renn Calder: rival teenage boy 15-16, tousled black hair, blue scarf, navy coat over dark pants, crossed arms, hiking boots; match reference lower-left. Cell2 Mira Quill: adult trader woman, curly chestnut hair, plum long vest, cream shirt, tan trousers, colorful trade satchel. Cell3 Sel Veyra: older silver-haired woman, sculpted swept bob, sharp white long tailored coat with discreet gold details, high black collar, tailored black trousers, elegant cane, tall triangular authority silhouette; match reference lower third. Cell4 Cass Rell: adult executive man, slick dark hair, burgundy suit jacket and black trousers, restrained metal clasp pin. Cell5 Dr Cyl Vane: adult scientist man, pale long face, gray hair, silver goggles, cream lab coat over charcoal clothes, closed metal equipment case. Cell6 Marshal Rook: imposing adult security man, cropped gray-black hair, charcoal structured guard coat, steel shoulder details, heavy boots. Cell7 Iris Shade: teen girl 16-17 with dark hair, charcoal tunic, restrained purple feather shoulder mantle, fitted cloth trousers and boots, handler glove; keep cosplayable and understated, NO leather bodysuit, not same outfit as Brin. Cell8 Dex Harrow: young adult Veyra Keeper man, dark short hair, gray navy field uniform with burgundy accents, gloves, satchel. Cell9 Brin Hollow: young recruit boy, brown hair, short black cropped cloak/shoulder mantle, charcoal practical fitted uniform, boots; preserve short mantle, different from Iris.. Each whole subject maximum 55% cell height and width with 22% blank margin around all hats, boots, staff, straps. FLAT RGB(40,160,60) GREEN screen, except mostly green outfits or green objects use FLAT RGB(235,18,128) magenta in that cell. No gradients, floor shadows, text, frames or external glow. Reference is identity and clothing source only; translate rendering to dimensional 3D. No creature companions in cells.",
+  "notes": "Maren, June, Pip, Renn, Sel, Iris, Brin use recovered silhouette/wardrobe anchors; other exact name-to-design mappings not recovered and appearance inferred. Render adaptation pending review.",
+  "identity_status": "reference-derived and/or inferred; not owner-approved"
+ }
+}

@@ -1,0 +1,223 @@
+{
+ "task": "SHEET-04",
+ "file": "wildkin-production/incoming/SHEET-04.png",
+ "sha256": "aecd240b59fda466042fb11ca4ee9deb417f82e7c09700d18971c4d347be5154",
+ "checked": "2026-10-13T15:02:18Z",
+ "errors": [
+  "cell 4: subject touches the cell edge (clipped): top+right",
+  "cell 5: subject touches the cell edge (clipped): top+right",
+  "cell 6: subject touches the cell edge (clipped): top",
+  "cell 7: subject touches the cell edge (clipped): top",
+  "cell 8: subject touches the cell edge (clipped): left+top+right",
+  "cell 9: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [
+  "cell 1: 2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 2: 2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 3: 1 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 4: 2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 5: 4 stray mark(s) removed (\"!\" bursts, sparkles); check the piece",
+  "cell 6: 2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+ ],
+ "notes": [
+  "cell 2: margin is tight (7 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.008-koilet.standing",
+   "errors": [],
+   "warnings": [
+    "2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.3249,
+   "stray_pieces_dropped": 2,
+   "margins_LTRB": [
+    47,
+    51,
+    38,
+    49
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.008-koilet.jumping",
+   "errors": [],
+   "warnings": [
+    "2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.3347,
+   "stray_pieces_dropped": 2,
+   "margins_LTRB": [
+    19,
+    22,
+    7,
+    86
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.008-koilet.sitting",
+   "errors": [],
+   "warnings": [
+    "1 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.3192,
+   "stray_pieces_dropped": 1,
+   "margins_LTRB": [
+    38,
+    39,
+    53,
+    43
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.009-runakoi.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top+right"
+   ],
+   "warnings": [
+    "2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.4167,
+   "stray_pieces_dropped": 2,
+   "margins_LTRB": [
+    21,
+    0,
+    0,
+    73
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.031
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.009-runakoi.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top+right"
+   ],
+   "warnings": [
+    "4 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.3617,
+   "stray_pieces_dropped": 4,
+   "margins_LTRB": [
+    7,
+    0,
+    1,
+    111
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.031
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.009-runakoi.sitting",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [
+    "2 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.3716,
+   "stray_pieces_dropped": 2,
+   "margins_LTRB": [
+    23,
+    0,
+    34,
+    69
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.010-koirune.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5135,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    24,
+    0,
+    11,
+    33
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.010-koirune.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): left+top+right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.466,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    0,
+    0,
+    109
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.010-koirune.sitting",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4962,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    17,
+    0,
+    36,
+    30
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-04",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-04 NEW square PNG minimum native 1254x1254. Exactly 3 rows x3 columns, thin straight black gutters, 9 equal square cells. ONE COMPLETE creature in each cell. All bodies including fins, whiskers and tails fit comfortably in central 65 percent of cell, leaving at least 15 percent empty on ALL sides. Use perfectly uniform flat chroma green RGB(40,160,60) with no gradient, NO floor shadows. Attached SINGLE character is KOIRUNE FINAL FORM, keep it EXACTLY in bottom row: orange-and-cream koi-dragon with four cream clawed paws, elongated orange-scaled body and cream plated belly, cream cheek fins and white/orange tall dorsal fin, long curled orange/white plume tail, two long fine cream whiskers, huge brown eyes, friendly rounded expressive face. Row1 cells1-3 KOILET baby precursor: small plump short-bodied quadrupedal koi-dragon, same orange/cream markings, brown eyes, short cheek fins, stubby whiskers and short finned tail. Pose1 standing on 4 paws, pose2 airborne leap, pose3 seated. Row2 cells4-6 RUNAKOI adolescent: visibly longer body and tail than baby, medium swept cheek fins and dorsal fin, medium cream whiskers; same colors and face lineage. Poses standing, leaping, sitting. Row3 cells7-9 KOIRUNE exactly matches attached approved mature character. Poses standing quadruped, airborne swimming leap, sitting on haunches. Preserve identical anatomy, markings, proportions within each row. Three stages visibly distinct but related. No horns or wings, no accessories. Soft frontal studio lighting, polished friendly dimensional 3D matte renderer, fine scale detail. No text, symbols, sparkles, glow, motion lines, environmental objects, ground, shadows or card frames. Do not allow any tail or whisker to touch border. Neutral flat backdrop must NOT inherit reference shading.",
+  "references": [
+   "reference/koirune-identity.png"
+  ],
+  "continuity": "Original koi-dragon mapped to Koirune final form by recovered conversation. Koilet and Runakoi inferred precursors."
+ }
+}

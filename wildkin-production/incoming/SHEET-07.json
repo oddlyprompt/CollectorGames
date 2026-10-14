@@ -1,0 +1,8 @@
+{
+  "task_id": "SHEET-07",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin production SHEET-07, a square 1536x1536 PNG with exactly 3 columns by 3 rows, thin near-black straight gutters at exact thirds. Reference image is canonical Candicoil identity, not an edit target. Soft dimensional toy-like 3D render, even front lighting. ALL nine cell backgrounds perfectly FLAT RGB(40,160,60), NO gradients, NO floor shadows or glows. Each subject occupies at most 65% width and height of its cell with at least 15% clear screen on every side, including antennae and shells. Row 1: Candicoil exactly matching reference: lavender shiny snail body, cream underside, expressive big brown eyes on lavender eyestalks, glossy peach-orange candy spiral shell with gold sugary bands. Cells 1 standing, 2 buoyant jumping with whole body airborne, 3 sitting compact. Rows 2 and 3: Spiramel evolved from same snail: larger double spiral caramel-orange shell with cream ribbons and tiny rounded candy knobs, lavender body, same face and eye stalks, stronger curled foot. Cells 4 standing, 5 jumping, 6 sitting, 7 waving one curled side of foot, 8 running forward stretched snail foot, 9 looking up. Keep each stage identical across poses. No additional creatures, lettering, logos, frames, sparkles or effect marks. Full subject in every cell. Do not clip anything.",
+  "notes": "Candicoil matches recovered approved candy-snail identity. Spiramel is an inferred evolution; no prior evolution reference recovered."
+}

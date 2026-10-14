@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-02",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin production SHEET-02. Create square PNG native at least 1254x1254. EXACT equal 3x3 grid, thin straight near-black gutters, each subject fully inside its own cell with generous 12 percent margin INCLUDING all fronds and tail. One creature per cell, nine total. Every background pixel uniform chroma green RGB(40,160,60), no gradient, lighting only on creatures, NO FLOOR SHADOWS. Match attached ORIGINAL PRISMOTL reference exactly for the base form: round creamy white four-legged axolotl creature, short rounded toes with blush pink pads, enormous blue-purple eyes, tiny smiling mouth, huge graceful PASTEL RAINBOW FEATHER-LIKE external gills/fronds sweeping upward beside head, layered pastel rainbow fronds along back and curling tail. Soft matte dimensional animated-feature 3D rendering, soft frontal studio light. Do NOT make a conventional pink salamander. ROW 1 cells 1-3 Prismotl in standing front-three-quarter, joyful airborne jump, seated resting poses. ROW 2 cells 4-6 Opalotl, SAME lineage but a little more developed: slightly longer white body and tail, fuller overlapping iridescent pastel fronds, same eyes and gentle face, standing, jumping, sitting. ROW 3 cells 7-9 Aurorotl, elegant mature final form: longer graceful white quadrupedal silhouette, more flowing opalescent pastel feather-like gill fans and long layered rainbow tail, same facial anatomy and palette, standing, leaping, sitting. These are progressive stages, each row's three poses has IDENTICAL stage anatomy/proportions/markings. Keep all at comparable readable cell scale, final form distinct by silhouette rather than just size. NO props, glow, glitter, floating particles, letters, text, symbols, speed lines, ground, environmental imagery or card frames. Reference is identity and renderer; remove its background shadows and use requested exact flat chroma.",
+  "references": [
+    "reference/recovered/image-gen-10(3).png"
+  ],
+  "continuity": "Prismotl matched to inspected original; Opalotl and Aurorotl newly inferred evolution treatments; pending visual review."
+}

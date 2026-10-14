@@ -1,0 +1,177 @@
+{
+ "task": "SHEET-28",
+ "file": "wildkin-production/incoming/SHEET-28.png",
+ "sha256": "4f352fde22619f995a1991d16d678409f91b8afd2bcd274b1122238a8475f804",
+ "checked": "2026-10-13T15:48:03Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.069-orbitot.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2462,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    95,
+    64,
+    81,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.04
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.069-orbitot.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2552,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    90,
+    51,
+    57,
+    61
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.049
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.069-orbitot.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.222,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    96,
+    98,
+    80,
+    47
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.070-lunapip.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2805,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    54,
+    77,
+    62,
+    46
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.042
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.070-lunapip.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2624,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    57,
+    28,
+    59,
+    70
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.070-lunapip.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2533,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    66,
+    93,
+    74,
+    47
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.04
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.071-mothmur.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3226,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    34,
+    69,
+    31,
+    57
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.071-mothmur.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3204,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    33,
+    30,
+    25,
+    85
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.035
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.071-mothmur.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2445,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    56,
+    89,
+    61,
+    54
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-28",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-28 production PNG sheet, exactly 3x3 equal square cells, thin near-black gutters at thirds, at least 1254x1254. Dimensional 3D toy rendering, even front lighting. ALL backgrounds perfectly FLAT RGB(40,160,60) green, no shading of screen, no shadows, no floor plane. IMPORTANT: miniatures remain SMALL, centered, maximum 55% cell width and height, 22% blank margin on every side. Do not make bottom row larger. Orbitot: tiny navy starry squid with cream face and purple curled tentacles. Lunapip: cream moon mouse with lilac ears and crescent forehead marking. Mothmur: small deep purple moth with dusty rose wings and furry pale collar. Three species one row each.. Exact cell order left-right top-bottom: 1: Orbitot standing; 2: Orbitot jumping; 3: Orbitot sitting; 4: Lunapip standing; 5: Lunapip jumping; 6: Lunapip sitting; 7: Mothmur standing; 8: Mothmur jumping; 9: Mothmur sitting. All stages visually distinct. All poses of each species have identical colors, proportions and markings. No external glows, text, sparkle, symbols, frames. Full subjects including tails and wings.",
+  "notes": "Inferred production design within confirmed manifest. Not established canon until approval."
+ }
+}

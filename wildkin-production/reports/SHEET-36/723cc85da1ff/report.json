@@ -1,0 +1,115 @@
+{
+ "task": "SHEET-36",
+ "file": "wildkin-production/incoming/SHEET-36.png",
+ "sha256": "723cc85da1ff8541d52503d0a2c955cc6a46cf25194fea79dc95dd09632cfd0b",
+ "checked": "2026-10-13T05:19:47Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "scene.storm.01",
+   "errors": [],
+   "warnings": [],
+   "std": 51.8,
+   "cell_px": [
+    400,
+    398
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "scene.storm.02",
+   "errors": [],
+   "warnings": [],
+   "std": 53.8,
+   "cell_px": [
+    395,
+    398
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "scene.storm.03",
+   "errors": [],
+   "warnings": [],
+   "std": 54.4,
+   "cell_px": [
+    399,
+    398
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "scene.storm.04",
+   "errors": [],
+   "warnings": [],
+   "std": 51.0,
+   "cell_px": [
+    400,
+    396
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "scene.storm.05",
+   "errors": [],
+   "warnings": [],
+   "std": 51.8,
+   "cell_px": [
+    395,
+    396
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": "scene.dusk.01",
+   "errors": [],
+   "warnings": [],
+   "std": 46.3,
+   "cell_px": [
+    399,
+    396
+   ]
+  },
+  {
+   "cell": 7,
+   "asset_id": "scene.dusk.02",
+   "errors": [],
+   "warnings": [],
+   "std": 42.4,
+   "cell_px": [
+    400,
+    402
+   ]
+  },
+  {
+   "cell": 8,
+   "asset_id": "scene.dusk.03",
+   "errors": [],
+   "warnings": [],
+   "std": 48.5,
+   "cell_px": [
+    395,
+    402
+   ]
+  },
+  {
+   "cell": 9,
+   "asset_id": "scene.dusk.04",
+   "errors": [],
+   "warnings": [],
+   "std": 49.5,
+   "cell_px": [
+    399,
+    402
+   ]
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass"
+}

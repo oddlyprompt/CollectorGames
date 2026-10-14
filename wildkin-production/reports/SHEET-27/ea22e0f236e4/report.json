@@ -1,0 +1,177 @@
+{
+ "task": "SHEET-27",
+ "file": "wildkin-production/incoming/SHEET-27.png",
+ "sha256": "ea22e0f236e4c11183c33c5b29e93f4ce206785cbdeb94c2a2bdfac0be33d779",
+ "checked": "2026-10-13T15:47:51Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.066-coaloo.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2743,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    72,
+    75,
+    74,
+    51
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.066-coaloo.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2764,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    83,
+    53,
+    52,
+    55
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.066-coaloo.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2699,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    78,
+    99,
+    56,
+    48
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.067-kitecoon.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3142,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    59,
+    74,
+    61,
+    52
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.067-kitecoon.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3215,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    36,
+    49,
+    39,
+    78
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.029
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.067-kitecoon.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2712,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    47,
+    112,
+    86,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.068-thundrop.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2732,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    71,
+    100,
+    79,
+    76
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.022
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.068-thundrop.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.293,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    58,
+    49,
+    49,
+    77
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.068-thundrop.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2365,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    76,
+    126,
+    76,
+    77
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-27",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-27 production PNG sheet, exactly 3x3 equal square cells, thin near-black gutters at thirds, at least 1254x1254. Dimensional 3D toy rendering, even front lighting. ALL backgrounds perfectly FLAT RGB(40,160,60) green, no shading of screen, no shadows, no floor plane. IMPORTANT: miniatures remain SMALL, centered, maximum 55% cell width and height, 22% blank margin on every side. Do not make bottom row larger. Coaloo: small charcoal koala with warm ember-orange ear tufts and cream nose/chest. Kitecoon: cream raccoon with sky-blue mask and folded wing-shaped blue arm membranes. Thundrop: plump yellow rain frog with navy lightning-shaped forehead marking and cream belly. Three species one row each.. Exact cell order left-right top-bottom: 1: Coaloo standing; 2: Coaloo jumping; 3: Coaloo sitting; 4: Kitecoon standing; 5: Kitecoon jumping; 6: Kitecoon sitting; 7: Thundrop standing; 8: Thundrop jumping; 9: Thundrop sitting. All stages visually distinct. All poses of each species have identical colors, proportions and markings. No external glows, text, sparkle, symbols, frames. Full subjects including tails and wings.",
+  "notes": "Inferred production design within confirmed manifest. Not established canon until approval."
+ }
+}

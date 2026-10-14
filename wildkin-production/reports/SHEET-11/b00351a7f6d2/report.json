@@ -1,0 +1,178 @@
+{
+ "task": "SHEET-11",
+ "file": "wildkin-production/incoming/SHEET-11.png",
+ "sha256": "b00351a7f6d28988c797105968bc55a4ee219df891975393d86302d7183ab340",
+ "checked": "2026-10-13T15:32:53Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.024-mistip.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.213,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    76,
+    98,
+    90,
+    58
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.031
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.024-mistip.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2192,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    82,
+    74,
+    69,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.035
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.024-mistip.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2113,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    97,
+    108,
+    76,
+    59
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.025-cumulfin.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3288,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    66,
+    39,
+    53,
+    64
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.025-cumulfin.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3057,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    43,
+    42,
+    63,
+    28
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.025-cumulfin.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3289,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    65,
+    70,
+    43,
+    45
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.026-nimbusail.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3413,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    20,
+    51,
+    25,
+    81
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.026-nimbusail.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3601,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    32,
+    22,
+    18,
+    73
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.026-nimbusail.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3692,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    17,
+    50,
+    32,
+    76
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-11",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-11 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma GREEN RGB(40,160,60). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Mistip is a tiny pastel blue dolphin with white cotton cloud tufts, cream belly, big dark-blue eyes and small fins. Cumulfin larger cloud dolphin, more puffed cloud shoulder/body tufts and broader blue fins. Nimbusail majestic final cloud dolphin with long graceful blue body, white cloud mane and flowing wide sail-like cloud dorsal fin. Matches recovered cloud dolphin reference, friendly without changing into a whale.. Exact row-major cell mapping: 1: Mistip standing; 2: Mistip jumping; 3: Mistip sitting; 4: Cumulfin standing; 5: Cumulfin jumping; 6: Cumulfin sitting; 7: Nimbusail standing; 8: Nimbusail jumping; 9: Nimbusail sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Base identity recovered from earlier approved artwork; undescribed evolution inferred.",
+  "reference": "/workspace/scratch/b718be279b35/wildkin-art/reference/recovered/Cloud Dolphin Character Pose Grid.png"
+ }
+}

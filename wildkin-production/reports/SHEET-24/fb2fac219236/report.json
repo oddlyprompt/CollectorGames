@@ -1,0 +1,187 @@
+{
+ "task": "SHEET-24",
+ "file": "wildkin-production/incoming/SHEET-24.png",
+ "sha256": "fb2fac2192364c5fd243b7aff751185165b23cbd01cfe641bf3625b50cb86990",
+ "checked": "2026-10-13T15:47:13Z",
+ "errors": [],
+ "warnings": [
+  "cell 1: a lot of half-transparent pixels (43%): soft edges or a glow on the screen",
+  "cell 2: a lot of half-transparent pixels (40%): soft edges or a glow on the screen",
+  "cell 3: a lot of half-transparent pixels (41%): soft edges or a glow on the screen"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.057-fernibble.standing",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (43%): soft edges or a glow on the screen"
+   ],
+   "screen": "green",
+   "coverage": 0.2447,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    55,
+    62,
+    54,
+    69
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.427
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.057-fernibble.jumping",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (40%): soft edges or a glow on the screen"
+   ],
+   "screen": "green",
+   "coverage": 0.2352,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    40,
+    48,
+    36,
+    87
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.404
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.057-fernibble.sitting",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (41%): soft edges or a glow on the screen"
+   ],
+   "screen": "green",
+   "coverage": 0.2166,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    89,
+    67,
+    87,
+    63
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.412
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.058-acornox.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3403,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    47,
+    60,
+    31,
+    66
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.058-acornox.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2993,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    53,
+    36,
+    42,
+    89
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.058-acornox.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2847,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    52,
+    84,
+    71,
+    65
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.022
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.059-shelloop.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2856,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    60,
+    85,
+    63,
+    83
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.019
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.059-shelloop.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2814,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    55,
+    58,
+    49,
+    108
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.02
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.059-shelloop.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2699,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    66,
+    102,
+    64,
+    78
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.016
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "warn",
+ "metadata": {
+  "task_id": "SHEET-24",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-24 production PNG sheet, exactly 3x3 equal square cells, thin near-black gutters at thirds, at least 1254x1254. Dimensional 3D toy rendering, even front lighting. ALL backgrounds perfectly FLAT RGB(40,160,60) green, no shading of screen, no shadows, no floor plane. IMPORTANT: miniatures remain SMALL, centered, maximum 55% cell width and height, 22% blank margin on every side. Do not make bottom row larger. Fernibble: tiny tan fern mouse with green fern leaf ears and back tuft. Acornox: round brown ox calf with acorn cap shoulder armor and tiny ivory horns. Shelloop: cream turtle with peach spiral shell and large brown eyes. Three species, one row each.. Exact cell order left-right top-bottom: 1: Fernibble standing; 2: Fernibble jumping; 3: Fernibble sitting; 4: Acornox standing; 5: Acornox jumping; 6: Acornox sitting; 7: Shelloop standing; 8: Shelloop jumping; 9: Shelloop sitting. All stages visually distinct. All poses of each species have identical colors, proportions and markings. No external glows, text, sparkle, symbols, frames. Full subjects including tails and wings.",
+  "notes": "Inferred production design within confirmed manifest. Not established canon until approval."
+ }
+}
