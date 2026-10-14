@@ -2,7 +2,7 @@
  "task": "SHEET-31",
  "file": "wildkin-production/incoming/SHEET-31.png",
  "sha256": "9aa5686db7b775135aab50d18a7f6121acd6e3cd1f013d238f3ddc9bd73f671f",
- "checked": "2026-10-13T15:54:55Z",
+ "checked": "2026-10-14T01:50:54Z",
  "errors": [
   "cell 1: subject touches the cell edge (clipped): bottom",
   "cell 2: subject touches the cell edge (clipped): top+bottom",

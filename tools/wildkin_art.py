@@ -163,7 +163,8 @@ def cmd_check(args, auto=False):
 # ---------------------------------------------------------------- promotion
 def latest_for(task_id):
     I=intake(); c=[(h,r) for h,r in I['deliveries'].items() if r['task']==task_id and r['state'] in ('checked','partly-approved') and os.path.exists(os.path.join(INC,r['file']))]
-    return sorted(c,key=lambda x:x[1]['checked'])[-1] if c else (None,None)
+    def ver(r): m=FNAME.match(r['file']); return int(m.group(2)) if m and m.group(2) else 1
+    return sorted(c,key=lambda x:(ver(x[1]),x[1]['checked']))[-1] if c else (None,None)   # the newest attempt (--v3 beats --v2 beats the original)
 def approve(task_id, cells=None, replace=False, allow_warnings=False, by='owner'):
     Q=queue(); task=Q.get(task_id)
     if not task: sys.exit('unknown task '+task_id)

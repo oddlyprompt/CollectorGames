@@ -2,7 +2,7 @@
  "task": "SHEET-23",
  "file": "wildkin-production/incoming/SHEET-23.png",
  "sha256": "b627e40c42e17cefcad083aa690222b50407d6bdc9ffc7b7485046ddadef9554",
- "checked": "2026-10-13T15:47:05Z",
+ "checked": "2026-10-14T01:48:37Z",
  "errors": [],
  "warnings": [
   "cell 1: a lot of half-transparent pixels (62%): soft edges or a glow on the screen",
