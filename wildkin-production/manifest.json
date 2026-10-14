@@ -8753,7 +8753,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.ember.02": {
    "asset_id": "scene.ember.02",
@@ -8772,7 +8772,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.ember.03": {
    "asset_id": "scene.ember.03",
@@ -8791,7 +8791,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.ember.04": {
    "asset_id": "scene.ember.04",
@@ -8811,7 +8811,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.ember.05": {
    "asset_id": "scene.ember.05",
@@ -8830,7 +8830,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.iron.01": {
    "asset_id": "scene.iron.01",
@@ -8849,7 +8849,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.iron.02": {
    "asset_id": "scene.iron.02",
@@ -8868,7 +8868,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.iron.03": {
    "asset_id": "scene.iron.03",
@@ -8888,7 +8888,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.iron.04": {
    "asset_id": "scene.iron.04",
@@ -8908,7 +8908,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.storm.01": {
    "asset_id": "scene.storm.01",
@@ -8928,7 +8928,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.storm.02": {
    "asset_id": "scene.storm.02",
@@ -8947,7 +8947,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.storm.03": {
    "asset_id": "scene.storm.03",
@@ -8967,7 +8967,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.storm.04": {
    "asset_id": "scene.storm.04",
@@ -8986,7 +8986,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.storm.05": {
    "asset_id": "scene.storm.05",
@@ -9006,7 +9006,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.dusk.01": {
    "asset_id": "scene.dusk.01",
@@ -9025,7 +9025,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.dusk.02": {
    "asset_id": "scene.dusk.02",
@@ -9045,7 +9045,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.dusk.03": {
    "asset_id": "scene.dusk.03",
@@ -9065,7 +9065,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.dusk.04": {
    "asset_id": "scene.dusk.04",
@@ -9085,7 +9085,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "scene.astral.01": {
    "asset_id": "scene.astral.01",
@@ -9871,7 +9871,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.002-prismotl.jumping": {
    "asset_id": "cut.002-prismotl.jumping",
@@ -9888,7 +9888,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.002-prismotl.sitting": {
    "asset_id": "cut.002-prismotl.sitting",
@@ -9905,7 +9905,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.003-opalotl.standing": {
    "asset_id": "cut.003-opalotl.standing",
@@ -9924,7 +9924,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.003-opalotl.jumping": {
    "asset_id": "cut.003-opalotl.jumping",
@@ -9941,7 +9941,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.003-opalotl.sitting": {
    "asset_id": "cut.003-opalotl.sitting",
@@ -9958,7 +9958,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.004-aurorotl.standing": {
    "asset_id": "cut.004-aurorotl.standing",
@@ -9977,7 +9977,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.004-aurorotl.jumping": {
    "asset_id": "cut.004-aurorotl.jumping",
@@ -9994,7 +9994,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.004-aurorotl.sitting": {
    "asset_id": "cut.004-aurorotl.sitting",
@@ -10011,7 +10011,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.005-bashlet.standing": {
    "asset_id": "cut.005-bashlet.standing",
@@ -10083,7 +10083,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.006-maceback.jumping": {
    "asset_id": "cut.006-maceback.jumping",
@@ -10100,7 +10100,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.006-maceback.sitting": {
    "asset_id": "cut.006-maceback.sitting",
@@ -10117,7 +10117,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.007-fortisaur.standing": {
    "asset_id": "cut.007-fortisaur.standing",
@@ -10136,7 +10136,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.007-fortisaur.jumping": {
    "asset_id": "cut.007-fortisaur.jumping",
@@ -10153,7 +10153,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.007-fortisaur.sitting": {
    "asset_id": "cut.007-fortisaur.sitting",
@@ -10170,7 +10170,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.008-koilet.standing": {
    "asset_id": "cut.008-koilet.standing",
@@ -10401,7 +10401,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.012-shelladin.jumping": {
    "asset_id": "cut.012-shelladin.jumping",
@@ -10418,7 +10418,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.012-shelladin.sitting": {
    "asset_id": "cut.012-shelladin.sitting",
@@ -10435,7 +10435,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.013-aegisopod.standing": {
    "asset_id": "cut.013-aegisopod.standing",
@@ -10454,7 +10454,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.013-aegisopod.jumping": {
    "asset_id": "cut.013-aegisopod.jumping",
@@ -10471,7 +10471,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.013-aegisopod.sitting": {
    "asset_id": "cut.013-aegisopod.sitting",
@@ -10488,7 +10488,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.014-frondolin.standing": {
    "asset_id": "cut.014-frondolin.standing",
@@ -10560,7 +10560,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.015-pangrove.jumping": {
    "asset_id": "cut.015-pangrove.jumping",
@@ -10577,7 +10577,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.015-pangrove.sitting": {
    "asset_id": "cut.015-pangrove.sitting",
@@ -10594,7 +10594,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.016-canopang.standing": {
    "asset_id": "cut.016-canopang.standing",
@@ -10613,7 +10613,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.016-canopang.jumping": {
    "asset_id": "cut.016-canopang.jumping",
@@ -10630,7 +10630,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.016-canopang.sitting": {
    "asset_id": "cut.016-canopang.sitting",
@@ -10647,7 +10647,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.017-candicoil.standing": {
    "asset_id": "cut.017-candicoil.standing",
@@ -10666,7 +10666,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.017-candicoil.jumping": {
    "asset_id": "cut.017-candicoil.jumping",
@@ -10683,7 +10683,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.017-candicoil.sitting": {
    "asset_id": "cut.017-candicoil.sitting",
@@ -10700,7 +10700,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.018-spiramel.standing": {
    "asset_id": "cut.018-spiramel.standing",
@@ -10719,7 +10719,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.018-spiramel.jumping": {
    "asset_id": "cut.018-spiramel.jumping",
@@ -10736,7 +10736,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.018-spiramel.sitting": {
    "asset_id": "cut.018-spiramel.sitting",
@@ -10753,7 +10753,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.018-spiramel.waving": {
    "asset_id": "cut.018-spiramel.waving",
@@ -10770,7 +10770,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.018-spiramel.running": {
    "asset_id": "cut.018-spiramel.running",
@@ -10787,7 +10787,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.018-spiramel.looking-up": {
    "asset_id": "cut.018-spiramel.looking-up",
@@ -10804,7 +10804,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.019-creskit.standing": {
    "asset_id": "cut.019-creskit.standing",
@@ -10823,7 +10823,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.019-creskit.jumping": {
    "asset_id": "cut.019-creskit.jumping",
@@ -10840,7 +10840,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.019-creskit.sitting": {
    "asset_id": "cut.019-creskit.sitting",
@@ -10857,7 +10857,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.020-astrynx.standing": {
    "asset_id": "cut.020-astrynx.standing",
@@ -10876,7 +10876,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.020-astrynx.jumping": {
    "asset_id": "cut.020-astrynx.jumping",
@@ -10893,7 +10893,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.020-astrynx.sitting": {
    "asset_id": "cut.020-astrynx.sitting",
@@ -10910,7 +10910,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.020-astrynx.waving": {
    "asset_id": "cut.020-astrynx.waving",
@@ -10927,7 +10927,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.020-astrynx.running": {
    "asset_id": "cut.020-astrynx.running",
@@ -10944,7 +10944,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.020-astrynx.looking-up": {
    "asset_id": "cut.020-astrynx.looking-up",
@@ -10961,7 +10961,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.021-berribat.standing": {
    "asset_id": "cut.021-berribat.standing",
@@ -10980,7 +10980,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.021-berribat.jumping": {
    "asset_id": "cut.021-berribat.jumping",
@@ -10997,7 +10997,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.021-berribat.sitting": {
    "asset_id": "cut.021-berribat.sitting",
@@ -11014,7 +11014,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.022-pompyre.standing": {
    "asset_id": "cut.022-pompyre.standing",
@@ -11033,7 +11033,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.022-pompyre.jumping": {
    "asset_id": "cut.022-pompyre.jumping",
@@ -11050,7 +11050,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.022-pompyre.sitting": {
    "asset_id": "cut.022-pompyre.sitting",
@@ -11067,7 +11067,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.022-pompyre.waving": {
    "asset_id": "cut.022-pompyre.waving",
@@ -11084,7 +11084,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.022-pompyre.running": {
    "asset_id": "cut.022-pompyre.running",
@@ -11101,7 +11101,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.022-pompyre.looking-up": {
    "asset_id": "cut.022-pompyre.looking-up",
@@ -11118,7 +11118,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.023-flapod.standing": {
    "asset_id": "cut.023-flapod.standing",
@@ -11292,7 +11292,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.024-mistip.jumping": {
    "asset_id": "cut.024-mistip.jumping",
@@ -11309,7 +11309,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.024-mistip.sitting": {
    "asset_id": "cut.024-mistip.sitting",
@@ -11326,7 +11326,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.025-cumulfin.standing": {
    "asset_id": "cut.025-cumulfin.standing",
@@ -11345,7 +11345,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.025-cumulfin.jumping": {
    "asset_id": "cut.025-cumulfin.jumping",
@@ -11362,7 +11362,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.025-cumulfin.sitting": {
    "asset_id": "cut.025-cumulfin.sitting",
@@ -11379,7 +11379,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.026-nimbusail.standing": {
    "asset_id": "cut.026-nimbusail.standing",
@@ -11398,7 +11398,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.026-nimbusail.jumping": {
    "asset_id": "cut.026-nimbusail.jumping",
@@ -11415,7 +11415,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.026-nimbusail.sitting": {
    "asset_id": "cut.026-nimbusail.sitting",
@@ -11432,7 +11432,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.027-cindikit.standing": {
    "asset_id": "cut.027-cindikit.standing",
@@ -11451,7 +11451,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.027-cindikit.jumping": {
    "asset_id": "cut.027-cindikit.jumping",
@@ -11468,7 +11468,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.027-cindikit.sitting": {
    "asset_id": "cut.027-cindikit.sitting",
@@ -11485,7 +11485,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.028-emberuff.standing": {
    "asset_id": "cut.028-emberuff.standing",
@@ -11504,7 +11504,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.028-emberuff.jumping": {
    "asset_id": "cut.028-emberuff.jumping",
@@ -11521,7 +11521,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.028-emberuff.sitting": {
    "asset_id": "cut.028-emberuff.sitting",
@@ -11538,7 +11538,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.029-pyrenox.standing": {
    "asset_id": "cut.029-pyrenox.standing",
@@ -11557,7 +11557,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.029-pyrenox.jumping": {
    "asset_id": "cut.029-pyrenox.jumping",
@@ -11574,7 +11574,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.029-pyrenox.sitting": {
    "asset_id": "cut.029-pyrenox.sitting",
@@ -11591,7 +11591,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.030-breezit.standing": {
    "asset_id": "cut.030-breezit.standing",
@@ -11610,7 +11610,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.030-breezit.jumping": {
    "asset_id": "cut.030-breezit.jumping",
@@ -11627,7 +11627,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.030-breezit.sitting": {
    "asset_id": "cut.030-breezit.sitting",
@@ -11644,7 +11644,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.031-gustrel.standing": {
    "asset_id": "cut.031-gustrel.standing",
@@ -11663,7 +11663,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.031-gustrel.jumping": {
    "asset_id": "cut.031-gustrel.jumping",
@@ -11680,7 +11680,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.031-gustrel.sitting": {
    "asset_id": "cut.031-gustrel.sitting",
@@ -11697,7 +11697,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.032-tempestral.standing": {
    "asset_id": "cut.032-tempestral.standing",
@@ -11716,7 +11716,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.032-tempestral.jumping": {
    "asset_id": "cut.032-tempestral.jumping",
@@ -11733,7 +11733,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.032-tempestral.sitting": {
    "asset_id": "cut.032-tempestral.sitting",
@@ -11750,7 +11750,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.033-glimlet.standing": {
    "asset_id": "cut.033-glimlet.standing",
@@ -11769,7 +11769,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.033-glimlet.jumping": {
    "asset_id": "cut.033-glimlet.jumping",
@@ -11786,7 +11786,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.033-glimlet.sitting": {
    "asset_id": "cut.033-glimlet.sitting",
@@ -11803,7 +11803,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.034-hushwing.standing": {
    "asset_id": "cut.034-hushwing.standing",
@@ -11822,7 +11822,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.034-hushwing.jumping": {
    "asset_id": "cut.034-hushwing.jumping",
@@ -11839,7 +11839,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.034-hushwing.sitting": {
    "asset_id": "cut.034-hushwing.sitting",
@@ -11856,7 +11856,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.035-veilmora.standing": {
    "asset_id": "cut.035-veilmora.standing",
@@ -11875,7 +11875,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.035-veilmora.jumping": {
    "asset_id": "cut.035-veilmora.jumping",
@@ -11892,7 +11892,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.035-veilmora.sitting": {
    "asset_id": "cut.035-veilmora.sitting",
@@ -11909,7 +11909,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.036-rivbit.standing": {
    "asset_id": "cut.036-rivbit.standing",
@@ -12246,7 +12246,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.042-quibbit.jumping": {
    "asset_id": "cut.042-quibbit.jumping",
@@ -12263,7 +12263,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.042-quibbit.sitting": {
    "asset_id": "cut.042-quibbit.sitting",
@@ -12280,7 +12280,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.043-whimhare.standing": {
    "asset_id": "cut.043-whimhare.standing",
@@ -12299,7 +12299,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.043-whimhare.jumping": {
    "asset_id": "cut.043-whimhare.jumping",
@@ -12316,7 +12316,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.043-whimhare.sitting": {
    "asset_id": "cut.043-whimhare.sitting",
@@ -12333,7 +12333,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.044-fablehorn.standing": {
    "asset_id": "cut.044-fablehorn.standing",
@@ -12352,7 +12352,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.044-fablehorn.jumping": {
    "asset_id": "cut.044-fablehorn.jumping",
@@ -12369,7 +12369,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.044-fablehorn.sitting": {
    "asset_id": "cut.044-fablehorn.sitting",
@@ -12386,7 +12386,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.045-mossnip.standing": {
    "asset_id": "cut.045-mossnip.standing",
@@ -12405,7 +12405,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.045-mossnip.jumping": {
    "asset_id": "cut.045-mossnip.jumping",
@@ -12422,7 +12422,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.045-mossnip.sitting": {
    "asset_id": "cut.045-mossnip.sitting",
@@ -12439,7 +12439,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.046-bramblebuck.standing": {
    "asset_id": "cut.046-bramblebuck.standing",
@@ -12458,7 +12458,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.046-bramblebuck.jumping": {
    "asset_id": "cut.046-bramblebuck.jumping",
@@ -12475,7 +12475,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.046-bramblebuck.sitting": {
    "asset_id": "cut.046-bramblebuck.sitting",
@@ -12492,7 +12492,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.047-reefkin.standing": {
    "asset_id": "cut.047-reefkin.standing",
@@ -12511,7 +12511,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.047-reefkin.jumping": {
    "asset_id": "cut.047-reefkin.jumping",
@@ -12528,7 +12528,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.047-reefkin.sitting": {
    "asset_id": "cut.047-reefkin.sitting",
@@ -12545,7 +12545,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.048-corallume.standing": {
    "asset_id": "cut.048-corallume.standing",
@@ -12564,7 +12564,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.048-corallume.jumping": {
    "asset_id": "cut.048-corallume.jumping",
@@ -12581,7 +12581,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.048-corallume.sitting": {
    "asset_id": "cut.048-corallume.sitting",
@@ -12598,7 +12598,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.049-sootkit.standing": {
    "asset_id": "cut.049-sootkit.standing",
@@ -12617,7 +12617,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.049-sootkit.jumping": {
    "asset_id": "cut.049-sootkit.jumping",
@@ -12634,7 +12634,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.049-sootkit.sitting": {
    "asset_id": "cut.049-sootkit.sitting",
@@ -12651,7 +12651,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.050-smolderlynx.standing": {
    "asset_id": "cut.050-smolderlynx.standing",
@@ -12670,7 +12670,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.050-smolderlynx.jumping": {
    "asset_id": "cut.050-smolderlynx.jumping",
@@ -12687,7 +12687,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.050-smolderlynx.sitting": {
    "asset_id": "cut.050-smolderlynx.sitting",
@@ -12704,7 +12704,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.051-zephroo.standing": {
    "asset_id": "cut.051-zephroo.standing",
@@ -12723,7 +12723,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.051-zephroo.jumping": {
    "asset_id": "cut.051-zephroo.jumping",
@@ -12740,7 +12740,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.051-zephroo.sitting": {
    "asset_id": "cut.051-zephroo.sitting",
@@ -12757,7 +12757,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.052-cometrail.standing": {
    "asset_id": "cut.052-cometrail.standing",
@@ -12776,7 +12776,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.052-cometrail.jumping": {
    "asset_id": "cut.052-cometrail.jumping",
@@ -12793,7 +12793,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.052-cometrail.sitting": {
    "asset_id": "cut.052-cometrail.sitting",
@@ -12810,7 +12810,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.053-nibrock.standing": {
    "asset_id": "cut.053-nibrock.standing",
@@ -12829,7 +12829,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.053-nibrock.jumping": {
    "asset_id": "cut.053-nibrock.jumping",
@@ -12846,7 +12846,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.053-nibrock.sitting": {
    "asset_id": "cut.053-nibrock.sitting",
@@ -12863,7 +12863,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.054-drillbadger.standing": {
    "asset_id": "cut.054-drillbadger.standing",
@@ -12882,7 +12882,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.054-drillbadger.jumping": {
    "asset_id": "cut.054-drillbadger.jumping",
@@ -12899,7 +12899,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.054-drillbadger.sitting": {
    "asset_id": "cut.054-drillbadger.sitting",
@@ -12916,7 +12916,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.055-dewink.standing": {
    "asset_id": "cut.055-dewink.standing",
@@ -13200,7 +13200,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.060-driftail.jumping": {
    "asset_id": "cut.060-driftail.jumping",
@@ -13217,7 +13217,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.060-driftail.sitting": {
    "asset_id": "cut.060-driftail.sitting",
@@ -13234,7 +13234,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.061-craggle.standing": {
    "asset_id": "cut.061-craggle.standing",
@@ -13253,7 +13253,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.061-craggle.jumping": {
    "asset_id": "cut.061-craggle.jumping",
@@ -13270,7 +13270,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.061-craggle.sitting": {
    "asset_id": "cut.061-craggle.sitting",
@@ -13287,7 +13287,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.062-tumbear.standing": {
    "asset_id": "cut.062-tumbear.standing",
@@ -13306,7 +13306,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.062-tumbear.jumping": {
    "asset_id": "cut.062-tumbear.jumping",
@@ -13323,7 +13323,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.062-tumbear.sitting": {
    "asset_id": "cut.062-tumbear.sitting",
@@ -13340,7 +13340,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.063-nutbolt.standing": {
    "asset_id": "cut.063-nutbolt.standing",
@@ -13359,7 +13359,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.063-nutbolt.jumping": {
    "asset_id": "cut.063-nutbolt.jumping",
@@ -13376,7 +13376,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.063-nutbolt.sitting": {
    "asset_id": "cut.063-nutbolt.sitting",
@@ -13393,7 +13393,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.064-clampup.standing": {
    "asset_id": "cut.064-clampup.standing",
@@ -13412,7 +13412,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.064-clampup.jumping": {
    "asset_id": "cut.064-clampup.jumping",
@@ -13429,7 +13429,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.064-clampup.sitting": {
    "asset_id": "cut.064-clampup.sitting",
@@ -13446,7 +13446,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.065-ashhopper.standing": {
    "asset_id": "cut.065-ashhopper.standing",
@@ -13465,7 +13465,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.065-ashhopper.jumping": {
    "asset_id": "cut.065-ashhopper.jumping",
@@ -13482,7 +13482,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.065-ashhopper.sitting": {
    "asset_id": "cut.065-ashhopper.sitting",
@@ -13499,7 +13499,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.066-coaloo.standing": {
    "asset_id": "cut.066-coaloo.standing",
@@ -13518,7 +13518,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.066-coaloo.jumping": {
    "asset_id": "cut.066-coaloo.jumping",
@@ -13535,7 +13535,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.066-coaloo.sitting": {
    "asset_id": "cut.066-coaloo.sitting",
@@ -13552,7 +13552,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.067-kitecoon.standing": {
    "asset_id": "cut.067-kitecoon.standing",
@@ -13571,7 +13571,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.067-kitecoon.jumping": {
    "asset_id": "cut.067-kitecoon.jumping",
@@ -13588,7 +13588,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.067-kitecoon.sitting": {
    "asset_id": "cut.067-kitecoon.sitting",
@@ -13605,7 +13605,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.068-thundrop.standing": {
    "asset_id": "cut.068-thundrop.standing",
@@ -13624,7 +13624,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.068-thundrop.jumping": {
    "asset_id": "cut.068-thundrop.jumping",
@@ -13641,7 +13641,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.068-thundrop.sitting": {
    "asset_id": "cut.068-thundrop.sitting",
@@ -13658,7 +13658,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.069-orbitot.standing": {
    "asset_id": "cut.069-orbitot.standing",
@@ -13677,7 +13677,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.069-orbitot.jumping": {
    "asset_id": "cut.069-orbitot.jumping",
@@ -13694,7 +13694,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.069-orbitot.sitting": {
    "asset_id": "cut.069-orbitot.sitting",
@@ -13711,7 +13711,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.070-lunapip.standing": {
    "asset_id": "cut.070-lunapip.standing",
@@ -13730,7 +13730,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.070-lunapip.jumping": {
    "asset_id": "cut.070-lunapip.jumping",
@@ -13747,7 +13747,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.070-lunapip.sitting": {
    "asset_id": "cut.070-lunapip.sitting",
@@ -13764,7 +13764,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.071-mothmur.standing": {
    "asset_id": "cut.071-mothmur.standing",
@@ -13783,7 +13783,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.071-mothmur.jumping": {
    "asset_id": "cut.071-mothmur.jumping",
@@ -13800,7 +13800,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.071-mothmur.sitting": {
    "asset_id": "cut.071-mothmur.sitting",
@@ -13817,7 +13817,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.072-winkrow.standing": {
    "asset_id": "cut.072-winkrow.standing",
@@ -13836,7 +13836,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.072-winkrow.jumping": {
    "asset_id": "cut.072-winkrow.jumping",
@@ -13853,7 +13853,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.072-winkrow.sitting": {
    "asset_id": "cut.072-winkrow.sitting",
@@ -13870,7 +13870,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.073-puffluff.standing": {
    "asset_id": "cut.073-puffluff.standing",
@@ -13889,7 +13889,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.073-puffluff.jumping": {
    "asset_id": "cut.073-puffluff.jumping",
@@ -13906,7 +13906,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.073-puffluff.sitting": {
    "asset_id": "cut.073-puffluff.sitting",
@@ -13923,7 +13923,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.074-oddoodle.standing": {
    "asset_id": "cut.074-oddoodle.standing",
@@ -13942,7 +13942,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.074-oddoodle.jumping": {
    "asset_id": "cut.074-oddoodle.jumping",
@@ -13959,7 +13959,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.074-oddoodle.sitting": {
    "asset_id": "cut.074-oddoodle.sitting",
@@ -13976,7 +13976,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.075-professor-maren-vale.portrait": {
    "asset_id": "cut.075-professor-maren-vale.portrait",
@@ -14335,7 +14335,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.094-keeper-satchel": {
    "asset_id": "obj.094-keeper-satchel",
@@ -14352,7 +14352,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.095-rescue-whistle": {
    "asset_id": "obj.095-rescue-whistle",
@@ -14369,7 +14369,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.096-biome-compass": {
    "asset_id": "obj.096-biome-compass",
@@ -14386,7 +14386,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.097-glow-lantern": {
    "asset_id": "obj.097-glow-lantern",
@@ -14403,7 +14403,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.098-trail-rations": {
    "asset_id": "obj.098-trail-rations",
@@ -14420,7 +14420,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.099-medic-salve": {
    "asset_id": "obj.099-medic-salve",
@@ -14437,7 +14437,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.100-echo-flute": {
    "asset_id": "obj.100-echo-flute",
@@ -14454,7 +14454,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.101-tide-lure": {
    "asset_id": "obj.101-tide-lure",
@@ -14471,7 +14471,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.102-thermal-cloak": {
    "asset_id": "obj.102-thermal-cloak",
@@ -14488,7 +14488,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.103-climbing-line": {
    "asset_id": "obj.103-climbing-line",
@@ -14505,7 +14505,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.104-field-scope": {
    "asset_id": "obj.104-field-scope",
@@ -14522,7 +14522,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.105-wildseed-treat": {
    "asset_id": "obj.105-wildseed-treat",
@@ -14539,7 +14539,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.106-sanctuary-bell": {
    "asset_id": "obj.106-sanctuary-bell",
@@ -14556,7 +14556,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.107-veyra-snare": {
    "asset_id": "obj.107-veyra-snare",
@@ -14573,7 +14573,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.108-clasp-rig": {
    "asset_id": "obj.108-clasp-rig",
@@ -14590,7 +14590,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.109-null-collar": {
    "asset_id": "obj.109-null-collar",
@@ -14607,7 +14607,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.110-purity-sigil": {
    "asset_id": "obj.110-purity-sigil",
@@ -14624,7 +14624,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.111-verdant-canopy": {
    "asset_id": "ill.111-verdant-canopy",
@@ -14642,7 +14642,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.112-tideglass-bay": {
    "asset_id": "ill.112-tideglass-bay",
@@ -14660,7 +14660,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.113-stoneback-range": {
    "asset_id": "ill.113-stoneback-range",
@@ -14678,7 +14678,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.114-ironroot-basin": {
    "asset_id": "ill.114-ironroot-basin",
@@ -14696,7 +14696,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.115-ember-crags": {
    "asset_id": "ill.115-ember-crags",
@@ -14714,7 +14714,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.116-stormreach-heights": {
    "asset_id": "ill.116-stormreach-heights",
@@ -14732,7 +14732,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.117-astral-steppe": {
    "asset_id": "ill.117-astral-steppe",
@@ -14750,7 +14750,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.118-duskmire": {
    "asset_id": "ill.118-duskmire",
@@ -14768,7 +14768,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.119-wondergrove": {
    "asset_id": "ill.119-wondergrove",
@@ -14786,7 +14786,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.120-first-bond": {
    "asset_id": "ill.120-first-bond",

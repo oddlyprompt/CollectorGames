@@ -1,0 +1,190 @@
+{
+ "task": "SHEET-07",
+ "file": "wildkin-production/incoming/SHEET-07.png",
+ "sha256": "194a669ab664f395c4e40b79783ded6cf45abafeb1ba6986f6fdfc7d00973b5a",
+ "checked": "2026-10-14T01:44:26Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [
+  "cell 1: margin is tight (14 px); the spec asks for about 10%",
+  "cell 4: margin is tight (13 px); the spec asks for about 10%",
+  "cell 8: margin is tight (10 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.017-candicoil.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4452,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    36,
+    90,
+    14,
+    37
+   ],
+   "notes": [
+    "margin is tight (14 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.016
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.017-candicoil.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.452,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    27,
+    51,
+    16,
+    53
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.018
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.017-candicoil.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4234,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    46,
+    104,
+    21,
+    28
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.015
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.018-spiramel.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5531,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    28,
+    29,
+    13,
+    29
+   ],
+   "notes": [
+    "margin is tight (13 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.014
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.018-spiramel.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4918,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    32,
+    29,
+    20,
+    65
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.017
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.018-spiramel.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4682,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    31,
+    80,
+    23,
+    27
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.014
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.018-spiramel.waving",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4882,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    37,
+    47,
+    18,
+    40
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.016
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.018-spiramel.running",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4959,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    15,
+    40,
+    10,
+    49
+   ],
+   "notes": [
+    "margin is tight (10 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.017
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.018-spiramel.looking-up",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.49,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    36,
+    53,
+    38,
+    39
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.014
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-07",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin production SHEET-07, a square 1536x1536 PNG with exactly 3 columns by 3 rows, thin near-black straight gutters at exact thirds. Reference image is canonical Candicoil identity, not an edit target. Soft dimensional toy-like 3D render, even front lighting. ALL nine cell backgrounds perfectly FLAT RGB(40,160,60), NO gradients, NO floor shadows or glows. Each subject occupies at most 65% width and height of its cell with at least 15% clear screen on every side, including antennae and shells. Row 1: Candicoil exactly matching reference: lavender shiny snail body, cream underside, expressive big brown eyes on lavender eyestalks, glossy peach-orange candy spiral shell with gold sugary bands. Cells 1 standing, 2 buoyant jumping with whole body airborne, 3 sitting compact. Rows 2 and 3: Spiramel evolved from same snail: larger double spiral caramel-orange shell with cream ribbons and tiny rounded candy knobs, lavender body, same face and eye stalks, stronger curled foot. Cells 4 standing, 5 jumping, 6 sitting, 7 waving one curled side of foot, 8 running forward stretched snail foot, 9 looking up. Keep each stage identical across poses. No additional creatures, lettering, logos, frames, sparkles or effect marks. Full subject in every cell. Do not clip anything.",
+  "notes": "Candicoil matches recovered approved candy-snail identity. Spiramel is an inferred evolution; no prior evolution reference recovered."
+ }
+}

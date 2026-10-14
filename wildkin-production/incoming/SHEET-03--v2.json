@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-03",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-03 revision. NEW square PNG native1254x1254 minimum. EXACT equal3x3 grid thin black gutters. Nine SMALL full-body creatures. Each entire creature INCLUDING mace tail/spikes fits inside CENTRAL60% width/height of cell leaving80px green margin. Do NOT enlarge later stages to fill cells. Uniform chroma green RGB40,160,60, no floor shadow or background gradients. Attached triptych identity ONLY: left Bashlet blue baby ankylosaur, middle Maceback stocky blue armored ankylosaur, right Fortisaur regal powerful blue ankylosaur. Reproduce exact reference designs. ROW1: Bashlet standing; jumping; sitting. ROW2: Maceback standing; jumping; sitting. ROW3: Fortisaur standing; jumping; sitting. All four-legged with cream belly/face, brown eyes, blue plated stone shells and cream spikes, blue spiked club tails. Maceback has much heavier shell and mace than Bashlet; Fortisaur large angular cream shoulder armor/spikes and massive mace, strong mature silhouette. Identical stage markings/anatomy within each row. Soft frontal studio light on subject only, matte dimensional3D same reference renderer. Absolutely no text, environment, glow, effect marks, ground/shadows. Visible GREEN GAP80PX between every appendage and EVERY cell border. Keep tails curled inward to fit. No chopped clubs or paws.",
+  "references": [
+    "reference/recovered/Blue-Scaled Ankylosaur Evolution Triptych.png"
+  ],
+  "notes": "Margin correction. All stages reference original triptych. Existing approved Bashlet cells retained."
+}

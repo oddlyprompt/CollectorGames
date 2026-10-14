@@ -4,46 +4,46 @@ Generated from `wildkin-production/manifest.json` by `tools/wildkin_manifest.py`
 
 Status: **complete** = every cell approved, **partial** = some cells approved (they will not be overwritten), **todo** = nothing yet.
 
-Overall: 27 of 358 required cells approved.
+Overall: 246 of 358 required cells approved.
 
 | Task | What | Kind | Status | Cells | Expected file |
 |---|---|---|---|---|---|
 | SHEET-01 | Mascot pose sheet: Cactuft | cutout-sheet | complete | 9/9 | `incoming/SHEET-01.png` |
-| SHEET-02 | Mascot family (3 stages x 3 poses): Prismotl, Opalotl, Aurorotl | cutout-sheet | todo | 0/9 | `incoming/SHEET-02.png` |
-| SHEET-03 | Mascot family (3 stages x 3 poses): Bashlet, Maceback, Fortisaur | cutout-sheet | partial | 3/9 | `incoming/SHEET-03.png` |
+| SHEET-02 | Mascot family (3 stages x 3 poses): Prismotl, Opalotl, Aurorotl | cutout-sheet | complete | 9/9 | `incoming/SHEET-02.png` |
+| SHEET-03 | Mascot family (3 stages x 3 poses): Bashlet, Maceback, Fortisaur | cutout-sheet | complete | 9/9 | `incoming/SHEET-03.png` |
 | SHEET-04 | Mascot family (3 stages x 3 poses): Koilet, Runakoi, Koirune | cutout-sheet | todo | 0/9 | `incoming/SHEET-04.png` |
-| SHEET-05 | Mascot family (3 stages x 3 poses): Rolyte, Shelladin, Aegisopod | cutout-sheet | partial | 3/9 | `incoming/SHEET-05.png` |
-| SHEET-06 | Mascot family (3 stages x 3 poses): Frondolin, Pangrove, Canopang | cutout-sheet | partial | 3/9 | `incoming/SHEET-06.png` |
-| SHEET-07 | Mascot family (2 stages, 9 cells): Candicoil, Spiramel | cutout-sheet | todo | 0/9 | `incoming/SHEET-07.png` |
-| SHEET-08 | Mascot family (2 stages, 9 cells): Creskit, Astrynx | cutout-sheet | todo | 0/9 | `incoming/SHEET-08.png` |
-| SHEET-09 | Mascot family (2 stages, 9 cells): Berribat, Pompyre | cutout-sheet | todo | 0/9 | `incoming/SHEET-09.png` |
+| SHEET-05 | Mascot family (3 stages x 3 poses): Rolyte, Shelladin, Aegisopod | cutout-sheet | complete | 9/9 | `incoming/SHEET-05.png` |
+| SHEET-06 | Mascot family (3 stages x 3 poses): Frondolin, Pangrove, Canopang | cutout-sheet | complete | 9/9 | `incoming/SHEET-06.png` |
+| SHEET-07 | Mascot family (2 stages, 9 cells): Candicoil, Spiramel | cutout-sheet | complete | 9/9 | `incoming/SHEET-07.png` |
+| SHEET-08 | Mascot family (2 stages, 9 cells): Creskit, Astrynx | cutout-sheet | complete | 9/9 | `incoming/SHEET-08.png` |
+| SHEET-09 | Mascot family (2 stages, 9 cells): Berribat, Pompyre | cutout-sheet | complete | 9/9 | `incoming/SHEET-09.png` |
 | SHEET-10 | Mascot pose sheet: Flapod | cutout-sheet | complete | 9/9 | `incoming/SHEET-10.png` |
-| SHEET-11 | Evolution family (3 stages x 3 poses): Mistip, Cumulfin, Nimbusail | cutout-sheet | todo | 0/9 | `incoming/SHEET-11.png` |
-| SHEET-12 | Evolution family (3 stages x 3 poses): Cindikit, Emberuff, Pyrenox | cutout-sheet | todo | 0/9 | `incoming/SHEET-12.png` |
-| SHEET-13 | Evolution family (3 stages x 3 poses): Breezit, Gustrel, Tempestral | cutout-sheet | todo | 0/9 | `incoming/SHEET-13.png` |
-| SHEET-14 | Evolution family (3 stages x 3 poses): Glimlet, Hushwing, Veilmora | cutout-sheet | todo | 0/9 | `incoming/SHEET-14.png` |
+| SHEET-11 | Evolution family (3 stages x 3 poses): Mistip, Cumulfin, Nimbusail | cutout-sheet | complete | 9/9 | `incoming/SHEET-11.png` |
+| SHEET-12 | Evolution family (3 stages x 3 poses): Cindikit, Emberuff, Pyrenox | cutout-sheet | complete | 9/9 | `incoming/SHEET-12.png` |
+| SHEET-13 | Evolution family (3 stages x 3 poses): Breezit, Gustrel, Tempestral | cutout-sheet | complete | 9/9 | `incoming/SHEET-13.png` |
+| SHEET-14 | Evolution family (3 stages x 3 poses): Glimlet, Hushwing, Veilmora | cutout-sheet | complete | 9/9 | `incoming/SHEET-14.png` |
 | SHEET-15 | Evolution family (3 stages x 3 poses): Rivbit, Boltusk, Ferradon | cutout-sheet | todo | 0/9 | `incoming/SHEET-15.png` |
 | SHEET-16 | Evolution family (3 stages x 3 poses): Pebblamb, Cairnram, Monolox | cutout-sheet | todo | 0/9 | `incoming/SHEET-16.png` |
-| SHEET-17 | Evolution family (3 stages x 3 poses): Quibbit, Whimhare, Fablehorn | cutout-sheet | todo | 0/9 | `incoming/SHEET-17.png` |
-| SHEET-18 | Evolution family (2 stages x 3 poses, 3 cells empty): Mossnip, Bramblebuck | cutout-sheet | todo | 0/6 | `incoming/SHEET-18.png` |
-| SHEET-19 | Evolution family (2 stages x 3 poses, 3 cells empty): Reefkin, Corallume | cutout-sheet | todo | 0/6 | `incoming/SHEET-19.png` |
-| SHEET-20 | Evolution family (2 stages x 3 poses, 3 cells empty): Sootkit, Smolderlynx | cutout-sheet | todo | 0/6 | `incoming/SHEET-20.png` |
-| SHEET-21 | Evolution family (2 stages x 3 poses, 3 cells empty): Zephroo, Cometrail | cutout-sheet | todo | 0/6 | `incoming/SHEET-21.png` |
-| SHEET-22 | Evolution family (2 stages x 3 poses, 3 cells empty): Nibrock, Drillbadger | cutout-sheet | todo | 0/6 | `incoming/SHEET-22.png` |
+| SHEET-17 | Evolution family (3 stages x 3 poses): Quibbit, Whimhare, Fablehorn | cutout-sheet | complete | 9/9 | `incoming/SHEET-17.png` |
+| SHEET-18 | Evolution family (2 stages x 3 poses, 3 cells empty): Mossnip, Bramblebuck | cutout-sheet | complete | 6/6 | `incoming/SHEET-18.png` |
+| SHEET-19 | Evolution family (2 stages x 3 poses, 3 cells empty): Reefkin, Corallume | cutout-sheet | complete | 6/6 | `incoming/SHEET-19.png` |
+| SHEET-20 | Evolution family (2 stages x 3 poses, 3 cells empty): Sootkit, Smolderlynx | cutout-sheet | complete | 6/6 | `incoming/SHEET-20.png` |
+| SHEET-21 | Evolution family (2 stages x 3 poses, 3 cells empty): Zephroo, Cometrail | cutout-sheet | complete | 6/6 | `incoming/SHEET-21.png` |
+| SHEET-22 | Evolution family (2 stages x 3 poses, 3 cells empty): Nibrock, Drillbadger | cutout-sheet | complete | 6/6 | `incoming/SHEET-22.png` |
 | SHEET-23 | Evolution family (2 stages x 3 poses, 3 cells empty): Dewink, Bloomble | cutout-sheet | todo | 0/6 | `incoming/SHEET-23.png` |
 | SHEET-24 | Standalone creatures (3 creatures x 3 poses): Fernibble, Acornox, Shelloop | cutout-sheet | todo | 0/9 | `incoming/SHEET-24.png` |
-| SHEET-25 | Standalone creatures (3 creatures x 3 poses): Driftail, Craggle, Tumbear | cutout-sheet | todo | 0/9 | `incoming/SHEET-25.png` |
-| SHEET-26 | Standalone creatures (3 creatures x 3 poses): Nutbolt, Clampup, Ashhopper | cutout-sheet | todo | 0/9 | `incoming/SHEET-26.png` |
-| SHEET-27 | Standalone creatures (3 creatures x 3 poses): Coaloo, Kitecoon, Thundrop | cutout-sheet | todo | 0/9 | `incoming/SHEET-27.png` |
-| SHEET-28 | Standalone creatures (3 creatures x 3 poses): Orbitot, Lunapip, Mothmur | cutout-sheet | todo | 0/9 | `incoming/SHEET-28.png` |
-| SHEET-29 | Standalone creatures (3 creatures x 3 poses): Winkrow, Puffluff, Oddoodle | cutout-sheet | todo | 0/9 | `incoming/SHEET-29.png` |
+| SHEET-25 | Standalone creatures (3 creatures x 3 poses): Driftail, Craggle, Tumbear | cutout-sheet | complete | 9/9 | `incoming/SHEET-25.png` |
+| SHEET-26 | Standalone creatures (3 creatures x 3 poses): Nutbolt, Clampup, Ashhopper | cutout-sheet | complete | 9/9 | `incoming/SHEET-26.png` |
+| SHEET-27 | Standalone creatures (3 creatures x 3 poses): Coaloo, Kitecoon, Thundrop | cutout-sheet | complete | 9/9 | `incoming/SHEET-27.png` |
+| SHEET-28 | Standalone creatures (3 creatures x 3 poses): Orbitot, Lunapip, Mothmur | cutout-sheet | complete | 9/9 | `incoming/SHEET-28.png` |
+| SHEET-29 | Standalone creatures (3 creatures x 3 poses): Winkrow, Puffluff, Oddoodle | cutout-sheet | complete | 9/9 | `incoming/SHEET-29.png` |
 | SHEET-30 | Allies sheet A: Professor Maren Vale, June Kestrel, Warden Sorrel Pike, Toma Reed, Lita Moss, Nessa Flint, Elder Oren, Pip Rowan, Archivist Sera Wynn | cutout-sheet | todo | 0/9 | `incoming/SHEET-30.png` |
 | SHEET-31 | Allies sheet B: Renn Calder, Mira Quill, Sel Veyra, Cass Rell, Dr. Cyl Vane, Marshal Rook, Iris Shade, Dex Harrow, Brin Hollow | cutout-sheet | todo | 0/9 | `incoming/SHEET-31.png` |
-| SHEET-32 | Gear sheet A: Bond Charm, Keeper Satchel, Rescue Whistle, Biome Compass, Glow Lantern, Trail Rations, Medic Salve, Echo Flute, Tide Lure | cutout-sheet | todo | 0/9 | `incoming/SHEET-32.png` |
-| SHEET-33 | Gear sheet B: Thermal Cloak, Climbing Line, Field Scope, Wildseed Treat, Sanctuary Bell, Veyra Snare, Clasp Rig, Null Collar, Purity Sigil | cutout-sheet | todo | 0/9 | `incoming/SHEET-33.png` |
-| SHEET-34 | Biomes A: one illustration per biome card | illustration-sheet | todo | 0/9 | `incoming/SHEET-34.png` |
-| SHEET-35 | Biomes B: Ember and Iron backgrounds for creature cards | scene-sheet | todo | 0/9 | `incoming/SHEET-35.png` |
-| SHEET-36 | Biomes C: Storm and Dusk backgrounds for creature cards | scene-sheet | todo | 0/9 | `incoming/SHEET-36.png` |
+| SHEET-32 | Gear sheet A: Bond Charm, Keeper Satchel, Rescue Whistle, Biome Compass, Glow Lantern, Trail Rations, Medic Salve, Echo Flute, Tide Lure | cutout-sheet | complete | 9/9 | `incoming/SHEET-32.png` |
+| SHEET-33 | Gear sheet B: Thermal Cloak, Climbing Line, Field Scope, Wildseed Treat, Sanctuary Bell, Veyra Snare, Clasp Rig, Null Collar, Purity Sigil | cutout-sheet | complete | 9/9 | `incoming/SHEET-33.png` |
+| SHEET-34 | Biomes A: one illustration per biome card | illustration-sheet | complete | 9/9 | `incoming/SHEET-34.png` |
+| SHEET-35 | Biomes B: Ember and Iron backgrounds for creature cards | scene-sheet | complete | 9/9 | `incoming/SHEET-35.png` |
+| SHEET-36 | Biomes C: Storm and Dusk backgrounds for creature cards | scene-sheet | complete | 9/9 | `incoming/SHEET-36.png` |
 | SHEET-37 | Tactics A | illustration-sheet | todo | 0/9 | `incoming/SHEET-37.png` |
 | SHEET-38 | Tactics B | illustration-sheet | todo | 0/3 | `incoming/SHEET-38.png` |
 | SHEET-39 | Illustration Rares A | premium-sheet | todo | 0/9 | `incoming/SHEET-39.png` |
@@ -88,7 +88,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-002 **Prismotl** (Basic), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-003 **Opalotl** (Stage 1, evolves from SP-002), affinity Tide / Astral (canon). Role: Wonder mascot; beautiful, magical, collector-friendly. Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -96,15 +96,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.002-prismotl.standing` | Prismotl | standing | missing |
-| 2 | `cut.002-prismotl.jumping` | Prismotl | jumping | missing |
-| 3 | `cut.002-prismotl.sitting` | Prismotl | sitting | missing |
-| 4 | `cut.003-opalotl.standing` | Opalotl | standing | missing |
-| 5 | `cut.003-opalotl.jumping` | Opalotl | jumping | missing |
-| 6 | `cut.003-opalotl.sitting` | Opalotl | sitting | missing |
-| 7 | `cut.004-aurorotl.standing` | Aurorotl | standing | missing |
-| 8 | `cut.004-aurorotl.jumping` | Aurorotl | jumping | missing |
-| 9 | `cut.004-aurorotl.sitting` | Aurorotl | sitting | missing |
+| 1 | `cut.002-prismotl.standing` | Prismotl | standing | approved |
+| 2 | `cut.002-prismotl.jumping` | Prismotl | jumping | approved |
+| 3 | `cut.002-prismotl.sitting` | Prismotl | sitting | approved |
+| 4 | `cut.003-opalotl.standing` | Opalotl | standing | approved |
+| 5 | `cut.003-opalotl.jumping` | Opalotl | jumping | approved |
+| 6 | `cut.003-opalotl.sitting` | Opalotl | sitting | approved |
+| 7 | `cut.004-aurorotl.standing` | Aurorotl | standing | approved |
+| 8 | `cut.004-aurorotl.jumping` | Aurorotl | jumping | approved |
+| 9 | `cut.004-aurorotl.sitting` | Aurorotl | sitting | approved |
 
 ## SHEET-03: Mascot family (3 stages x 3 poses): Bashlet, Maceback, Fortisaur
 
@@ -114,7 +114,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: partial (3/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-005 **Bashlet** (Basic), affinity Stone (canon). Role: Classic starter-style hero; toughness and progression. Look: Small blue ankylosaur: blue armoured back with cream spikes, cream belly and face, spiked tail club, big brown eyes. Green screen.
   - SP-006 **Maceback** (Stage 1, evolves from SP-005), affinity Stone (canon). Role: Classic starter-style hero; toughness and progression. Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -125,12 +125,12 @@ Overall: 27 of 358 required cells approved.
 | 1 | `cut.005-bashlet.standing` | Bashlet | standing | approved |
 | 2 | `cut.005-bashlet.jumping` | Bashlet | jumping | approved |
 | 3 | `cut.005-bashlet.sitting` | Bashlet | sitting | approved |
-| 4 | `cut.006-maceback.standing` | Maceback | standing | missing |
-| 5 | `cut.006-maceback.jumping` | Maceback | jumping | missing |
-| 6 | `cut.006-maceback.sitting` | Maceback | sitting | missing |
-| 7 | `cut.007-fortisaur.standing` | Fortisaur | standing | missing |
-| 8 | `cut.007-fortisaur.jumping` | Fortisaur | jumping | missing |
-| 9 | `cut.007-fortisaur.sitting` | Fortisaur | sitting | missing |
+| 4 | `cut.006-maceback.standing` | Maceback | standing | approved |
+| 5 | `cut.006-maceback.jumping` | Maceback | jumping | approved |
+| 6 | `cut.006-maceback.sitting` | Maceback | sitting | approved |
+| 7 | `cut.007-fortisaur.standing` | Fortisaur | standing | approved |
+| 8 | `cut.007-fortisaur.jumping` | Fortisaur | jumping | approved |
+| 9 | `cut.007-fortisaur.sitting` | Fortisaur | sitting | approved |
 
 ## SHEET-04: Mascot family (3 stages x 3 poses): Koilet, Runakoi, Koirune
 
@@ -166,7 +166,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: partial (3/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-011 **Rolyte** (Basic), affinity Stone / Iron (canon). Role: Defender mascot; noble but slightly ridiculous. Look: Armoured roly-poly (pill bug): navy and steel segmented shell, silver knight-helmet visor with slits, pale face, rosy cheeks, two antennae, six dark legs. Green screen.
   - SP-012 **Shelladin** (Stage 1, evolves from SP-011), affinity Stone / Iron (canon). Role: Defender mascot; noble but slightly ridiculous. Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -177,12 +177,12 @@ Overall: 27 of 358 required cells approved.
 | 1 | `cut.011-rolyte.standing` | Rolyte | standing | approved |
 | 2 | `cut.011-rolyte.jumping` | Rolyte | jumping | approved |
 | 3 | `cut.011-rolyte.sitting` | Rolyte | sitting | approved |
-| 4 | `cut.012-shelladin.standing` | Shelladin | standing | missing |
-| 5 | `cut.012-shelladin.jumping` | Shelladin | jumping | missing |
-| 6 | `cut.012-shelladin.sitting` | Shelladin | sitting | missing |
-| 7 | `cut.013-aegisopod.standing` | Aegisopod | standing | missing |
-| 8 | `cut.013-aegisopod.jumping` | Aegisopod | jumping | missing |
-| 9 | `cut.013-aegisopod.sitting` | Aegisopod | sitting | missing |
+| 4 | `cut.012-shelladin.standing` | Shelladin | standing | approved |
+| 5 | `cut.012-shelladin.jumping` | Shelladin | jumping | approved |
+| 6 | `cut.012-shelladin.sitting` | Shelladin | sitting | approved |
+| 7 | `cut.013-aegisopod.standing` | Aegisopod | standing | approved |
+| 8 | `cut.013-aegisopod.jumping` | Aegisopod | jumping | approved |
+| 9 | `cut.013-aegisopod.sitting` | Aegisopod | sitting | approved |
 
 ## SHEET-06: Mascot family (3 stages x 3 poses): Frondolin, Pangrove, Canopang
 
@@ -192,7 +192,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: magenta
 - Identity status: canon
-- Production: partial (3/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-014 **Frondolin** (Basic), affinity Verdant (canon). Role: Forest guardian; calm, sturdy, ancient. Look: Leaf pangolin: overlapping green leaf scales over a tan furry body, cream belly, curled leafy tail, green eyes. Magenta screen.
   - SP-015 **Pangrove** (Stage 1, evolves from SP-014), affinity Verdant (canon). Role: Forest guardian; calm, sturdy, ancient. Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -203,12 +203,12 @@ Overall: 27 of 358 required cells approved.
 | 1 | `cut.014-frondolin.standing` | Frondolin | standing | approved |
 | 2 | `cut.014-frondolin.jumping` | Frondolin | jumping | approved |
 | 3 | `cut.014-frondolin.sitting` | Frondolin | sitting | approved |
-| 4 | `cut.015-pangrove.standing` | Pangrove | standing | missing |
-| 5 | `cut.015-pangrove.jumping` | Pangrove | jumping | missing |
-| 6 | `cut.015-pangrove.sitting` | Pangrove | sitting | missing |
-| 7 | `cut.016-canopang.standing` | Canopang | standing | missing |
-| 8 | `cut.016-canopang.jumping` | Canopang | jumping | missing |
-| 9 | `cut.016-canopang.sitting` | Canopang | sitting | missing |
+| 4 | `cut.015-pangrove.standing` | Pangrove | standing | approved |
+| 5 | `cut.015-pangrove.jumping` | Pangrove | jumping | approved |
+| 6 | `cut.015-pangrove.sitting` | Pangrove | sitting | approved |
+| 7 | `cut.016-canopang.standing` | Canopang | standing | approved |
+| 8 | `cut.016-canopang.jumping` | Canopang | jumping | approved |
+| 9 | `cut.016-canopang.sitting` | Canopang | sitting | approved |
 
 ## SHEET-07: Mascot family (2 stages, 9 cells): Candicoil, Spiramel
 
@@ -218,22 +218,22 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-017 **Candicoil** (Basic), affinity Wonder (canon). Role: Oddball fan favourite; playful and visually strange. Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-018 **Spiramel** (Stage 1, evolves from SP-017), affinity Wonder (canon). Role: Oddball fan favourite; playful and visually strange. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.017-candicoil.standing` | Candicoil | standing | missing |
-| 2 | `cut.017-candicoil.jumping` | Candicoil | jumping | missing |
-| 3 | `cut.017-candicoil.sitting` | Candicoil | sitting | missing |
-| 4 | `cut.018-spiramel.standing` | Spiramel | standing | missing |
-| 5 | `cut.018-spiramel.jumping` | Spiramel | jumping | missing |
-| 6 | `cut.018-spiramel.sitting` | Spiramel | sitting | missing |
-| 7 | `cut.018-spiramel.waving` | Spiramel | waving | missing |
-| 8 | `cut.018-spiramel.running` | Spiramel | running | missing |
-| 9 | `cut.018-spiramel.looking-up` | Spiramel | looking-up | missing |
+| 1 | `cut.017-candicoil.standing` | Candicoil | standing | approved |
+| 2 | `cut.017-candicoil.jumping` | Candicoil | jumping | approved |
+| 3 | `cut.017-candicoil.sitting` | Candicoil | sitting | approved |
+| 4 | `cut.018-spiramel.standing` | Spiramel | standing | approved |
+| 5 | `cut.018-spiramel.jumping` | Spiramel | jumping | approved |
+| 6 | `cut.018-spiramel.sitting` | Spiramel | sitting | approved |
+| 7 | `cut.018-spiramel.waving` | Spiramel | waving | approved |
+| 8 | `cut.018-spiramel.running` | Spiramel | running | approved |
+| 9 | `cut.018-spiramel.looking-up` | Spiramel | looking-up | approved |
 
 ## SHEET-08: Mascot family (2 stages, 9 cells): Creskit, Astrynx
 
@@ -243,22 +243,22 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-019 **Creskit** (Basic), affinity Astral (canon). Role: Cool mascot; mysterious night creature. Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-020 **Astrynx** (Stage 1, evolves from SP-019), affinity Astral (canon). Role: Cool mascot; mysterious night creature. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.019-creskit.standing` | Creskit | standing | missing |
-| 2 | `cut.019-creskit.jumping` | Creskit | jumping | missing |
-| 3 | `cut.019-creskit.sitting` | Creskit | sitting | missing |
-| 4 | `cut.020-astrynx.standing` | Astrynx | standing | missing |
-| 5 | `cut.020-astrynx.jumping` | Astrynx | jumping | missing |
-| 6 | `cut.020-astrynx.sitting` | Astrynx | sitting | missing |
-| 7 | `cut.020-astrynx.waving` | Astrynx | waving | missing |
-| 8 | `cut.020-astrynx.running` | Astrynx | running | missing |
-| 9 | `cut.020-astrynx.looking-up` | Astrynx | looking-up | missing |
+| 1 | `cut.019-creskit.standing` | Creskit | standing | approved |
+| 2 | `cut.019-creskit.jumping` | Creskit | jumping | approved |
+| 3 | `cut.019-creskit.sitting` | Creskit | sitting | approved |
+| 4 | `cut.020-astrynx.standing` | Astrynx | standing | approved |
+| 5 | `cut.020-astrynx.jumping` | Astrynx | jumping | approved |
+| 6 | `cut.020-astrynx.sitting` | Astrynx | sitting | approved |
+| 7 | `cut.020-astrynx.waving` | Astrynx | waving | approved |
+| 8 | `cut.020-astrynx.running` | Astrynx | running | approved |
+| 9 | `cut.020-astrynx.looking-up` | Astrynx | looking-up | approved |
 
 ## SHEET-09: Mascot family (2 stages, 9 cells): Berribat, Pompyre
 
@@ -268,22 +268,22 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-021 **Berribat** (Basic), affinity Dusk / Verdant (canon). Role: Mischief mascot; spooky-cute, seasonal potential. Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-022 **Pompyre** (Stage 1, evolves from SP-021), affinity Dusk / Verdant (canon). Role: Mischief mascot; spooky-cute, seasonal potential. Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.021-berribat.standing` | Berribat | standing | missing |
-| 2 | `cut.021-berribat.jumping` | Berribat | jumping | missing |
-| 3 | `cut.021-berribat.sitting` | Berribat | sitting | missing |
-| 4 | `cut.022-pompyre.standing` | Pompyre | standing | missing |
-| 5 | `cut.022-pompyre.jumping` | Pompyre | jumping | missing |
-| 6 | `cut.022-pompyre.sitting` | Pompyre | sitting | missing |
-| 7 | `cut.022-pompyre.waving` | Pompyre | waving | missing |
-| 8 | `cut.022-pompyre.running` | Pompyre | running | missing |
-| 9 | `cut.022-pompyre.looking-up` | Pompyre | looking-up | missing |
+| 1 | `cut.021-berribat.standing` | Berribat | standing | approved |
+| 2 | `cut.021-berribat.jumping` | Berribat | jumping | approved |
+| 3 | `cut.021-berribat.sitting` | Berribat | sitting | approved |
+| 4 | `cut.022-pompyre.standing` | Pompyre | standing | approved |
+| 5 | `cut.022-pompyre.jumping` | Pompyre | jumping | approved |
+| 6 | `cut.022-pompyre.sitting` | Pompyre | sitting | approved |
+| 7 | `cut.022-pompyre.waving` | Pompyre | waving | approved |
+| 8 | `cut.022-pompyre.running` | Pompyre | running | approved |
+| 9 | `cut.022-pompyre.looking-up` | Pompyre | looking-up | approved |
 
 ## SHEET-10: Mascot pose sheet: Flapod
 
@@ -317,7 +317,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-024 **Mistip** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-025 **Cumulfin** (Stage 1, evolves from SP-024), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -325,15 +325,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.024-mistip.standing` | Mistip | standing | missing |
-| 2 | `cut.024-mistip.jumping` | Mistip | jumping | missing |
-| 3 | `cut.024-mistip.sitting` | Mistip | sitting | missing |
-| 4 | `cut.025-cumulfin.standing` | Cumulfin | standing | missing |
-| 5 | `cut.025-cumulfin.jumping` | Cumulfin | jumping | missing |
-| 6 | `cut.025-cumulfin.sitting` | Cumulfin | sitting | missing |
-| 7 | `cut.026-nimbusail.standing` | Nimbusail | standing | missing |
-| 8 | `cut.026-nimbusail.jumping` | Nimbusail | jumping | missing |
-| 9 | `cut.026-nimbusail.sitting` | Nimbusail | sitting | missing |
+| 1 | `cut.024-mistip.standing` | Mistip | standing | approved |
+| 2 | `cut.024-mistip.jumping` | Mistip | jumping | approved |
+| 3 | `cut.024-mistip.sitting` | Mistip | sitting | approved |
+| 4 | `cut.025-cumulfin.standing` | Cumulfin | standing | approved |
+| 5 | `cut.025-cumulfin.jumping` | Cumulfin | jumping | approved |
+| 6 | `cut.025-cumulfin.sitting` | Cumulfin | sitting | approved |
+| 7 | `cut.026-nimbusail.standing` | Nimbusail | standing | approved |
+| 8 | `cut.026-nimbusail.jumping` | Nimbusail | jumping | approved |
+| 9 | `cut.026-nimbusail.sitting` | Nimbusail | sitting | approved |
 
 ## SHEET-12: Evolution family (3 stages x 3 poses): Cindikit, Emberuff, Pyrenox
 
@@ -343,7 +343,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-027 **Cindikit** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-028 **Emberuff** (Stage 1, evolves from SP-027), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -351,15 +351,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.027-cindikit.standing` | Cindikit | standing | missing |
-| 2 | `cut.027-cindikit.jumping` | Cindikit | jumping | missing |
-| 3 | `cut.027-cindikit.sitting` | Cindikit | sitting | missing |
-| 4 | `cut.028-emberuff.standing` | Emberuff | standing | missing |
-| 5 | `cut.028-emberuff.jumping` | Emberuff | jumping | missing |
-| 6 | `cut.028-emberuff.sitting` | Emberuff | sitting | missing |
-| 7 | `cut.029-pyrenox.standing` | Pyrenox | standing | missing |
-| 8 | `cut.029-pyrenox.jumping` | Pyrenox | jumping | missing |
-| 9 | `cut.029-pyrenox.sitting` | Pyrenox | sitting | missing |
+| 1 | `cut.027-cindikit.standing` | Cindikit | standing | approved |
+| 2 | `cut.027-cindikit.jumping` | Cindikit | jumping | approved |
+| 3 | `cut.027-cindikit.sitting` | Cindikit | sitting | approved |
+| 4 | `cut.028-emberuff.standing` | Emberuff | standing | approved |
+| 5 | `cut.028-emberuff.jumping` | Emberuff | jumping | approved |
+| 6 | `cut.028-emberuff.sitting` | Emberuff | sitting | approved |
+| 7 | `cut.029-pyrenox.standing` | Pyrenox | standing | approved |
+| 8 | `cut.029-pyrenox.jumping` | Pyrenox | jumping | approved |
+| 9 | `cut.029-pyrenox.sitting` | Pyrenox | sitting | approved |
 
 ## SHEET-13: Evolution family (3 stages x 3 poses): Breezit, Gustrel, Tempestral
 
@@ -369,7 +369,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-030 **Breezit** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-031 **Gustrel** (Stage 1, evolves from SP-030), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -377,15 +377,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.030-breezit.standing` | Breezit | standing | missing |
-| 2 | `cut.030-breezit.jumping` | Breezit | jumping | missing |
-| 3 | `cut.030-breezit.sitting` | Breezit | sitting | missing |
-| 4 | `cut.031-gustrel.standing` | Gustrel | standing | missing |
-| 5 | `cut.031-gustrel.jumping` | Gustrel | jumping | missing |
-| 6 | `cut.031-gustrel.sitting` | Gustrel | sitting | missing |
-| 7 | `cut.032-tempestral.standing` | Tempestral | standing | missing |
-| 8 | `cut.032-tempestral.jumping` | Tempestral | jumping | missing |
-| 9 | `cut.032-tempestral.sitting` | Tempestral | sitting | missing |
+| 1 | `cut.030-breezit.standing` | Breezit | standing | approved |
+| 2 | `cut.030-breezit.jumping` | Breezit | jumping | approved |
+| 3 | `cut.030-breezit.sitting` | Breezit | sitting | approved |
+| 4 | `cut.031-gustrel.standing` | Gustrel | standing | approved |
+| 5 | `cut.031-gustrel.jumping` | Gustrel | jumping | approved |
+| 6 | `cut.031-gustrel.sitting` | Gustrel | sitting | approved |
+| 7 | `cut.032-tempestral.standing` | Tempestral | standing | approved |
+| 8 | `cut.032-tempestral.jumping` | Tempestral | jumping | approved |
+| 9 | `cut.032-tempestral.sitting` | Tempestral | sitting | approved |
 
 ## SHEET-14: Evolution family (3 stages x 3 poses): Glimlet, Hushwing, Veilmora
 
@@ -395,7 +395,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-033 **Glimlet** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-034 **Hushwing** (Stage 1, evolves from SP-033), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -403,15 +403,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.033-glimlet.standing` | Glimlet | standing | missing |
-| 2 | `cut.033-glimlet.jumping` | Glimlet | jumping | missing |
-| 3 | `cut.033-glimlet.sitting` | Glimlet | sitting | missing |
-| 4 | `cut.034-hushwing.standing` | Hushwing | standing | missing |
-| 5 | `cut.034-hushwing.jumping` | Hushwing | jumping | missing |
-| 6 | `cut.034-hushwing.sitting` | Hushwing | sitting | missing |
-| 7 | `cut.035-veilmora.standing` | Veilmora | standing | missing |
-| 8 | `cut.035-veilmora.jumping` | Veilmora | jumping | missing |
-| 9 | `cut.035-veilmora.sitting` | Veilmora | sitting | missing |
+| 1 | `cut.033-glimlet.standing` | Glimlet | standing | approved |
+| 2 | `cut.033-glimlet.jumping` | Glimlet | jumping | approved |
+| 3 | `cut.033-glimlet.sitting` | Glimlet | sitting | approved |
+| 4 | `cut.034-hushwing.standing` | Hushwing | standing | approved |
+| 5 | `cut.034-hushwing.jumping` | Hushwing | jumping | approved |
+| 6 | `cut.034-hushwing.sitting` | Hushwing | sitting | approved |
+| 7 | `cut.035-veilmora.standing` | Veilmora | standing | approved |
+| 8 | `cut.035-veilmora.jumping` | Veilmora | jumping | approved |
+| 9 | `cut.035-veilmora.sitting` | Veilmora | sitting | approved |
 
 ## SHEET-15: Evolution family (3 stages x 3 poses): Rivbit, Boltusk, Ferradon
 
@@ -473,7 +473,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-042 **Quibbit** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-043 **Whimhare** (Stage 1, evolves from SP-042), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -481,15 +481,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.042-quibbit.standing` | Quibbit | standing | missing |
-| 2 | `cut.042-quibbit.jumping` | Quibbit | jumping | missing |
-| 3 | `cut.042-quibbit.sitting` | Quibbit | sitting | missing |
-| 4 | `cut.043-whimhare.standing` | Whimhare | standing | missing |
-| 5 | `cut.043-whimhare.jumping` | Whimhare | jumping | missing |
-| 6 | `cut.043-whimhare.sitting` | Whimhare | sitting | missing |
-| 7 | `cut.044-fablehorn.standing` | Fablehorn | standing | missing |
-| 8 | `cut.044-fablehorn.jumping` | Fablehorn | jumping | missing |
-| 9 | `cut.044-fablehorn.sitting` | Fablehorn | sitting | missing |
+| 1 | `cut.042-quibbit.standing` | Quibbit | standing | approved |
+| 2 | `cut.042-quibbit.jumping` | Quibbit | jumping | approved |
+| 3 | `cut.042-quibbit.sitting` | Quibbit | sitting | approved |
+| 4 | `cut.043-whimhare.standing` | Whimhare | standing | approved |
+| 5 | `cut.043-whimhare.jumping` | Whimhare | jumping | approved |
+| 6 | `cut.043-whimhare.sitting` | Whimhare | sitting | approved |
+| 7 | `cut.044-fablehorn.standing` | Fablehorn | standing | approved |
+| 8 | `cut.044-fablehorn.jumping` | Fablehorn | jumping | approved |
+| 9 | `cut.044-fablehorn.sitting` | Fablehorn | sitting | approved |
 
 ## SHEET-18: Evolution family (2 stages x 3 poses, 3 cells empty): Mossnip, Bramblebuck
 
@@ -499,19 +499,19 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: magenta
 - Identity status: canon
-- Production: todo (0/6 cells approved)
+- Production: complete (6/6 cells approved)
 - Subjects:
   - SP-045 **Mossnip** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-046 **Bramblebuck** (Stage 1, evolves from SP-045), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.045-mossnip.standing` | Mossnip | standing | missing |
-| 2 | `cut.045-mossnip.jumping` | Mossnip | jumping | missing |
-| 3 | `cut.045-mossnip.sitting` | Mossnip | sitting | missing |
-| 4 | `cut.046-bramblebuck.standing` | Bramblebuck | standing | missing |
-| 5 | `cut.046-bramblebuck.jumping` | Bramblebuck | jumping | missing |
-| 6 | `cut.046-bramblebuck.sitting` | Bramblebuck | sitting | missing |
+| 1 | `cut.045-mossnip.standing` | Mossnip | standing | approved |
+| 2 | `cut.045-mossnip.jumping` | Mossnip | jumping | approved |
+| 3 | `cut.045-mossnip.sitting` | Mossnip | sitting | approved |
+| 4 | `cut.046-bramblebuck.standing` | Bramblebuck | standing | approved |
+| 5 | `cut.046-bramblebuck.jumping` | Bramblebuck | jumping | approved |
+| 6 | `cut.046-bramblebuck.sitting` | Bramblebuck | sitting | approved |
 | 7 | - | (leave empty: flat screen colour) |  | leave empty |
 | 8 | - | (leave empty: flat screen colour) |  | leave empty |
 | 9 | - | (leave empty: flat screen colour) |  | leave empty |
@@ -524,19 +524,19 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/6 cells approved)
+- Production: complete (6/6 cells approved)
 - Subjects:
   - SP-047 **Reefkin** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-048 **Corallume** (Stage 1, evolves from SP-047), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.047-reefkin.standing` | Reefkin | standing | missing |
-| 2 | `cut.047-reefkin.jumping` | Reefkin | jumping | missing |
-| 3 | `cut.047-reefkin.sitting` | Reefkin | sitting | missing |
-| 4 | `cut.048-corallume.standing` | Corallume | standing | missing |
-| 5 | `cut.048-corallume.jumping` | Corallume | jumping | missing |
-| 6 | `cut.048-corallume.sitting` | Corallume | sitting | missing |
+| 1 | `cut.047-reefkin.standing` | Reefkin | standing | approved |
+| 2 | `cut.047-reefkin.jumping` | Reefkin | jumping | approved |
+| 3 | `cut.047-reefkin.sitting` | Reefkin | sitting | approved |
+| 4 | `cut.048-corallume.standing` | Corallume | standing | approved |
+| 5 | `cut.048-corallume.jumping` | Corallume | jumping | approved |
+| 6 | `cut.048-corallume.sitting` | Corallume | sitting | approved |
 | 7 | - | (leave empty: flat screen colour) |  | leave empty |
 | 8 | - | (leave empty: flat screen colour) |  | leave empty |
 | 9 | - | (leave empty: flat screen colour) |  | leave empty |
@@ -549,19 +549,19 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/6 cells approved)
+- Production: complete (6/6 cells approved)
 - Subjects:
   - SP-049 **Sootkit** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-050 **Smolderlynx** (Stage 1, evolves from SP-049), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.049-sootkit.standing` | Sootkit | standing | missing |
-| 2 | `cut.049-sootkit.jumping` | Sootkit | jumping | missing |
-| 3 | `cut.049-sootkit.sitting` | Sootkit | sitting | missing |
-| 4 | `cut.050-smolderlynx.standing` | Smolderlynx | standing | missing |
-| 5 | `cut.050-smolderlynx.jumping` | Smolderlynx | jumping | missing |
-| 6 | `cut.050-smolderlynx.sitting` | Smolderlynx | sitting | missing |
+| 1 | `cut.049-sootkit.standing` | Sootkit | standing | approved |
+| 2 | `cut.049-sootkit.jumping` | Sootkit | jumping | approved |
+| 3 | `cut.049-sootkit.sitting` | Sootkit | sitting | approved |
+| 4 | `cut.050-smolderlynx.standing` | Smolderlynx | standing | approved |
+| 5 | `cut.050-smolderlynx.jumping` | Smolderlynx | jumping | approved |
+| 6 | `cut.050-smolderlynx.sitting` | Smolderlynx | sitting | approved |
 | 7 | - | (leave empty: flat screen colour) |  | leave empty |
 | 8 | - | (leave empty: flat screen colour) |  | leave empty |
 | 9 | - | (leave empty: flat screen colour) |  | leave empty |
@@ -574,19 +574,19 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/6 cells approved)
+- Production: complete (6/6 cells approved)
 - Subjects:
   - SP-051 **Zephroo** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-052 **Cometrail** (Stage 1, evolves from SP-051), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.051-zephroo.standing` | Zephroo | standing | missing |
-| 2 | `cut.051-zephroo.jumping` | Zephroo | jumping | missing |
-| 3 | `cut.051-zephroo.sitting` | Zephroo | sitting | missing |
-| 4 | `cut.052-cometrail.standing` | Cometrail | standing | missing |
-| 5 | `cut.052-cometrail.jumping` | Cometrail | jumping | missing |
-| 6 | `cut.052-cometrail.sitting` | Cometrail | sitting | missing |
+| 1 | `cut.051-zephroo.standing` | Zephroo | standing | approved |
+| 2 | `cut.051-zephroo.jumping` | Zephroo | jumping | approved |
+| 3 | `cut.051-zephroo.sitting` | Zephroo | sitting | approved |
+| 4 | `cut.052-cometrail.standing` | Cometrail | standing | approved |
+| 5 | `cut.052-cometrail.jumping` | Cometrail | jumping | approved |
+| 6 | `cut.052-cometrail.sitting` | Cometrail | sitting | approved |
 | 7 | - | (leave empty: flat screen colour) |  | leave empty |
 | 8 | - | (leave empty: flat screen colour) |  | leave empty |
 | 9 | - | (leave empty: flat screen colour) |  | leave empty |
@@ -599,19 +599,19 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/6 cells approved)
+- Production: complete (6/6 cells approved)
 - Subjects:
   - SP-053 **Nibrock** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-054 **Drillbadger** (Stage 1, evolves from SP-053), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.053-nibrock.standing` | Nibrock | standing | missing |
-| 2 | `cut.053-nibrock.jumping` | Nibrock | jumping | missing |
-| 3 | `cut.053-nibrock.sitting` | Nibrock | sitting | missing |
-| 4 | `cut.054-drillbadger.standing` | Drillbadger | standing | missing |
-| 5 | `cut.054-drillbadger.jumping` | Drillbadger | jumping | missing |
-| 6 | `cut.054-drillbadger.sitting` | Drillbadger | sitting | missing |
+| 1 | `cut.053-nibrock.standing` | Nibrock | standing | approved |
+| 2 | `cut.053-nibrock.jumping` | Nibrock | jumping | approved |
+| 3 | `cut.053-nibrock.sitting` | Nibrock | sitting | approved |
+| 4 | `cut.054-drillbadger.standing` | Drillbadger | standing | approved |
+| 5 | `cut.054-drillbadger.jumping` | Drillbadger | jumping | approved |
+| 6 | `cut.054-drillbadger.sitting` | Drillbadger | sitting | approved |
 | 7 | - | (leave empty: flat screen colour) |  | leave empty |
 | 8 | - | (leave empty: flat screen colour) |  | leave empty |
 | 9 | - | (leave empty: flat screen colour) |  | leave empty |
@@ -675,7 +675,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-060 **Driftail** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-061 **Craggle** (Basic), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -683,15 +683,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.060-driftail.standing` | Driftail | standing | missing |
-| 2 | `cut.060-driftail.jumping` | Driftail | jumping | missing |
-| 3 | `cut.060-driftail.sitting` | Driftail | sitting | missing |
-| 4 | `cut.061-craggle.standing` | Craggle | standing | missing |
-| 5 | `cut.061-craggle.jumping` | Craggle | jumping | missing |
-| 6 | `cut.061-craggle.sitting` | Craggle | sitting | missing |
-| 7 | `cut.062-tumbear.standing` | Tumbear | standing | missing |
-| 8 | `cut.062-tumbear.jumping` | Tumbear | jumping | missing |
-| 9 | `cut.062-tumbear.sitting` | Tumbear | sitting | missing |
+| 1 | `cut.060-driftail.standing` | Driftail | standing | approved |
+| 2 | `cut.060-driftail.jumping` | Driftail | jumping | approved |
+| 3 | `cut.060-driftail.sitting` | Driftail | sitting | approved |
+| 4 | `cut.061-craggle.standing` | Craggle | standing | approved |
+| 5 | `cut.061-craggle.jumping` | Craggle | jumping | approved |
+| 6 | `cut.061-craggle.sitting` | Craggle | sitting | approved |
+| 7 | `cut.062-tumbear.standing` | Tumbear | standing | approved |
+| 8 | `cut.062-tumbear.jumping` | Tumbear | jumping | approved |
+| 9 | `cut.062-tumbear.sitting` | Tumbear | sitting | approved |
 
 ## SHEET-26: Standalone creatures (3 creatures x 3 poses): Nutbolt, Clampup, Ashhopper
 
@@ -701,7 +701,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-063 **Nutbolt** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-064 **Clampup** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -709,15 +709,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.063-nutbolt.standing` | Nutbolt | standing | missing |
-| 2 | `cut.063-nutbolt.jumping` | Nutbolt | jumping | missing |
-| 3 | `cut.063-nutbolt.sitting` | Nutbolt | sitting | missing |
-| 4 | `cut.064-clampup.standing` | Clampup | standing | missing |
-| 5 | `cut.064-clampup.jumping` | Clampup | jumping | missing |
-| 6 | `cut.064-clampup.sitting` | Clampup | sitting | missing |
-| 7 | `cut.065-ashhopper.standing` | Ashhopper | standing | missing |
-| 8 | `cut.065-ashhopper.jumping` | Ashhopper | jumping | missing |
-| 9 | `cut.065-ashhopper.sitting` | Ashhopper | sitting | missing |
+| 1 | `cut.063-nutbolt.standing` | Nutbolt | standing | approved |
+| 2 | `cut.063-nutbolt.jumping` | Nutbolt | jumping | approved |
+| 3 | `cut.063-nutbolt.sitting` | Nutbolt | sitting | approved |
+| 4 | `cut.064-clampup.standing` | Clampup | standing | approved |
+| 5 | `cut.064-clampup.jumping` | Clampup | jumping | approved |
+| 6 | `cut.064-clampup.sitting` | Clampup | sitting | approved |
+| 7 | `cut.065-ashhopper.standing` | Ashhopper | standing | approved |
+| 8 | `cut.065-ashhopper.jumping` | Ashhopper | jumping | approved |
+| 9 | `cut.065-ashhopper.sitting` | Ashhopper | sitting | approved |
 
 ## SHEET-27: Standalone creatures (3 creatures x 3 poses): Coaloo, Kitecoon, Thundrop
 
@@ -727,7 +727,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-066 **Coaloo** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-067 **Kitecoon** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -735,15 +735,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.066-coaloo.standing` | Coaloo | standing | missing |
-| 2 | `cut.066-coaloo.jumping` | Coaloo | jumping | missing |
-| 3 | `cut.066-coaloo.sitting` | Coaloo | sitting | missing |
-| 4 | `cut.067-kitecoon.standing` | Kitecoon | standing | missing |
-| 5 | `cut.067-kitecoon.jumping` | Kitecoon | jumping | missing |
-| 6 | `cut.067-kitecoon.sitting` | Kitecoon | sitting | missing |
-| 7 | `cut.068-thundrop.standing` | Thundrop | standing | missing |
-| 8 | `cut.068-thundrop.jumping` | Thundrop | jumping | missing |
-| 9 | `cut.068-thundrop.sitting` | Thundrop | sitting | missing |
+| 1 | `cut.066-coaloo.standing` | Coaloo | standing | approved |
+| 2 | `cut.066-coaloo.jumping` | Coaloo | jumping | approved |
+| 3 | `cut.066-coaloo.sitting` | Coaloo | sitting | approved |
+| 4 | `cut.067-kitecoon.standing` | Kitecoon | standing | approved |
+| 5 | `cut.067-kitecoon.jumping` | Kitecoon | jumping | approved |
+| 6 | `cut.067-kitecoon.sitting` | Kitecoon | sitting | approved |
+| 7 | `cut.068-thundrop.standing` | Thundrop | standing | approved |
+| 8 | `cut.068-thundrop.jumping` | Thundrop | jumping | approved |
+| 9 | `cut.068-thundrop.sitting` | Thundrop | sitting | approved |
 
 ## SHEET-28: Standalone creatures (3 creatures x 3 poses): Orbitot, Lunapip, Mothmur
 
@@ -753,7 +753,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-069 **Orbitot** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-070 **Lunapip** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -761,15 +761,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.069-orbitot.standing` | Orbitot | standing | missing |
-| 2 | `cut.069-orbitot.jumping` | Orbitot | jumping | missing |
-| 3 | `cut.069-orbitot.sitting` | Orbitot | sitting | missing |
-| 4 | `cut.070-lunapip.standing` | Lunapip | standing | missing |
-| 5 | `cut.070-lunapip.jumping` | Lunapip | jumping | missing |
-| 6 | `cut.070-lunapip.sitting` | Lunapip | sitting | missing |
-| 7 | `cut.071-mothmur.standing` | Mothmur | standing | missing |
-| 8 | `cut.071-mothmur.jumping` | Mothmur | jumping | missing |
-| 9 | `cut.071-mothmur.sitting` | Mothmur | sitting | missing |
+| 1 | `cut.069-orbitot.standing` | Orbitot | standing | approved |
+| 2 | `cut.069-orbitot.jumping` | Orbitot | jumping | approved |
+| 3 | `cut.069-orbitot.sitting` | Orbitot | sitting | approved |
+| 4 | `cut.070-lunapip.standing` | Lunapip | standing | approved |
+| 5 | `cut.070-lunapip.jumping` | Lunapip | jumping | approved |
+| 6 | `cut.070-lunapip.sitting` | Lunapip | sitting | approved |
+| 7 | `cut.071-mothmur.standing` | Mothmur | standing | approved |
+| 8 | `cut.071-mothmur.jumping` | Mothmur | jumping | approved |
+| 9 | `cut.071-mothmur.sitting` | Mothmur | sitting | approved |
 
 ## SHEET-29: Standalone creatures (3 creatures x 3 poses): Winkrow, Puffluff, Oddoodle
 
@@ -779,7 +779,7 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green
 - Identity status: canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 - Subjects:
   - SP-072 **Winkrow** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
   - SP-073 **Puffluff** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
@@ -787,15 +787,15 @@ Overall: 27 of 358 required cells approved.
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `cut.072-winkrow.standing` | Winkrow | standing | missing |
-| 2 | `cut.072-winkrow.jumping` | Winkrow | jumping | missing |
-| 3 | `cut.072-winkrow.sitting` | Winkrow | sitting | missing |
-| 4 | `cut.073-puffluff.standing` | Puffluff | standing | missing |
-| 5 | `cut.073-puffluff.jumping` | Puffluff | jumping | missing |
-| 6 | `cut.073-puffluff.sitting` | Puffluff | sitting | missing |
-| 7 | `cut.074-oddoodle.standing` | Oddoodle | standing | missing |
-| 8 | `cut.074-oddoodle.jumping` | Oddoodle | jumping | missing |
-| 9 | `cut.074-oddoodle.sitting` | Oddoodle | sitting | missing |
+| 1 | `cut.072-winkrow.standing` | Winkrow | standing | approved |
+| 2 | `cut.072-winkrow.jumping` | Winkrow | jumping | approved |
+| 3 | `cut.072-winkrow.sitting` | Winkrow | sitting | approved |
+| 4 | `cut.073-puffluff.standing` | Puffluff | standing | approved |
+| 5 | `cut.073-puffluff.jumping` | Puffluff | jumping | approved |
+| 6 | `cut.073-puffluff.sitting` | Puffluff | sitting | approved |
+| 7 | `cut.074-oddoodle.standing` | Oddoodle | standing | approved |
+| 8 | `cut.074-oddoodle.jumping` | Oddoodle | jumping | approved |
+| 9 | `cut.074-oddoodle.sitting` | Oddoodle | sitting | approved |
 
 ## SHEET-30: Allies sheet A: Professor Maren Vale, June Kestrel, Warden Sorrel Pike, Toma Reed, Lita Moss, Nessa Flint, Elder Oren, Pip Rowan, Archivist Sera Wynn
 
@@ -869,19 +869,19 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green (magenta for green objects)
 - Identity status: names canon; SOL designs the objects
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `obj.093-bond-charm` | Bond Charm | object, three-quarter view | missing |
-| 2 | `obj.094-keeper-satchel` | Keeper Satchel | object, three-quarter view | missing |
-| 3 | `obj.095-rescue-whistle` | Rescue Whistle | object, three-quarter view | missing |
-| 4 | `obj.096-biome-compass` | Biome Compass | object, three-quarter view | missing |
-| 5 | `obj.097-glow-lantern` | Glow Lantern | object, three-quarter view | missing |
-| 6 | `obj.098-trail-rations` | Trail Rations | object, three-quarter view | missing |
-| 7 | `obj.099-medic-salve` | Medic Salve | object, three-quarter view | missing |
-| 8 | `obj.100-echo-flute` | Echo Flute | object, three-quarter view | missing |
-| 9 | `obj.101-tide-lure` | Tide Lure | object, three-quarter view | missing |
+| 1 | `obj.093-bond-charm` | Bond Charm | object, three-quarter view | approved |
+| 2 | `obj.094-keeper-satchel` | Keeper Satchel | object, three-quarter view | approved |
+| 3 | `obj.095-rescue-whistle` | Rescue Whistle | object, three-quarter view | approved |
+| 4 | `obj.096-biome-compass` | Biome Compass | object, three-quarter view | approved |
+| 5 | `obj.097-glow-lantern` | Glow Lantern | object, three-quarter view | approved |
+| 6 | `obj.098-trail-rations` | Trail Rations | object, three-quarter view | approved |
+| 7 | `obj.099-medic-salve` | Medic Salve | object, three-quarter view | approved |
+| 8 | `obj.100-echo-flute` | Echo Flute | object, three-quarter view | approved |
+| 9 | `obj.101-tide-lure` | Tide Lure | object, three-quarter view | approved |
 
 ## SHEET-33: Gear sheet B: Thermal Cloak, Climbing Line, Field Scope, Wildseed Treat, Sanctuary Bell, Veyra Snare, Clasp Rig, Null Collar, Purity Sigil
 
@@ -891,19 +891,19 @@ Overall: 27 of 358 required cells approved.
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Screen colour: green (magenta for green objects)
 - Identity status: names canon; SOL designs the objects
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `obj.102-thermal-cloak` | Thermal Cloak | object, three-quarter view | missing |
-| 2 | `obj.103-climbing-line` | Climbing Line | object, three-quarter view | missing |
-| 3 | `obj.104-field-scope` | Field Scope | object, three-quarter view | missing |
-| 4 | `obj.105-wildseed-treat` | Wildseed Treat | object, three-quarter view | missing |
-| 5 | `obj.106-sanctuary-bell` | Sanctuary Bell | object, three-quarter view | missing |
-| 6 | `obj.107-veyra-snare` | Veyra Snare | object, three-quarter view | missing |
-| 7 | `obj.108-clasp-rig` | Clasp Rig | object, three-quarter view | missing |
-| 8 | `obj.109-null-collar` | Null Collar | object, three-quarter view | missing |
-| 9 | `obj.110-purity-sigil` | Purity Sigil | object, three-quarter view | missing |
+| 1 | `obj.102-thermal-cloak` | Thermal Cloak | object, three-quarter view | approved |
+| 2 | `obj.103-climbing-line` | Climbing Line | object, three-quarter view | approved |
+| 3 | `obj.104-field-scope` | Field Scope | object, three-quarter view | approved |
+| 4 | `obj.105-wildseed-treat` | Wildseed Treat | object, three-quarter view | approved |
+| 5 | `obj.106-sanctuary-bell` | Sanctuary Bell | object, three-quarter view | approved |
+| 6 | `obj.107-veyra-snare` | Veyra Snare | object, three-quarter view | approved |
+| 7 | `obj.108-clasp-rig` | Clasp Rig | object, three-quarter view | approved |
+| 8 | `obj.109-null-collar` | Null Collar | object, three-quarter view | approved |
+| 9 | `obj.110-purity-sigil` | Purity Sigil | object, three-quarter view | approved |
 
 ## SHEET-34: Biomes A: one illustration per biome card
 
@@ -912,19 +912,19 @@ Overall: 27 of 358 required cells approved.
 - Style: 3D miniature-diorama environments matching art-source/scenes/, soft even light
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Identity status: names canon
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.111-verdant-canopy` | Verdant Canopy |  | missing |
-| 2 | `ill.112-tideglass-bay` | Tideglass Bay |  | missing |
-| 3 | `ill.113-stoneback-range` | Stoneback Range |  | missing |
-| 4 | `ill.114-ironroot-basin` | Ironroot Basin |  | missing |
-| 5 | `ill.115-ember-crags` | Ember Crags |  | missing |
-| 6 | `ill.116-stormreach-heights` | Stormreach Heights |  | missing |
-| 7 | `ill.117-astral-steppe` | Astral Steppe |  | missing |
-| 8 | `ill.118-duskmire` | Duskmire |  | missing |
-| 9 | `ill.119-wondergrove` | Wondergrove |  | missing |
+| 1 | `ill.111-verdant-canopy` | Verdant Canopy |  | approved |
+| 2 | `ill.112-tideglass-bay` | Tideglass Bay |  | approved |
+| 3 | `ill.113-stoneback-range` | Stoneback Range |  | approved |
+| 4 | `ill.114-ironroot-basin` | Ironroot Basin |  | approved |
+| 5 | `ill.115-ember-crags` | Ember Crags |  | approved |
+| 6 | `ill.116-stormreach-heights` | Stormreach Heights |  | approved |
+| 7 | `ill.117-astral-steppe` | Astral Steppe |  | approved |
+| 8 | `ill.118-duskmire` | Duskmire |  | approved |
+| 9 | `ill.119-wondergrove` | Wondergrove |  | approved |
 
 ## SHEET-35: Biomes B: Ember and Iron backgrounds for creature cards
 
@@ -933,19 +933,19 @@ Overall: 27 of 358 required cells approved.
 - Style: 3D miniature-diorama backgrounds matching art-source/scenes/, soft even lighting (no dramatic coloured light)
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Identity status: planned library (see reconciliation)
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `scene.ember.01` | Ember biome background 1 |  | missing |
-| 2 | `scene.ember.02` | Ember biome background 2 |  | missing |
-| 3 | `scene.ember.03` | Ember biome background 3 |  | missing |
-| 4 | `scene.ember.04` | Ember biome background 4 |  | missing |
-| 5 | `scene.ember.05` | Ember biome background 5 |  | missing |
-| 6 | `scene.iron.01` | Iron biome background 1 |  | missing |
-| 7 | `scene.iron.02` | Iron biome background 2 |  | missing |
-| 8 | `scene.iron.03` | Iron biome background 3 |  | missing |
-| 9 | `scene.iron.04` | Iron biome background 4 |  | missing |
+| 1 | `scene.ember.01` | Ember biome background 1 |  | approved |
+| 2 | `scene.ember.02` | Ember biome background 2 |  | approved |
+| 3 | `scene.ember.03` | Ember biome background 3 |  | approved |
+| 4 | `scene.ember.04` | Ember biome background 4 |  | approved |
+| 5 | `scene.ember.05` | Ember biome background 5 |  | approved |
+| 6 | `scene.iron.01` | Iron biome background 1 |  | approved |
+| 7 | `scene.iron.02` | Iron biome background 2 |  | approved |
+| 8 | `scene.iron.03` | Iron biome background 3 |  | approved |
+| 9 | `scene.iron.04` | Iron biome background 4 |  | approved |
 
 ## SHEET-36: Biomes C: Storm and Dusk backgrounds for creature cards
 
@@ -954,19 +954,19 @@ Overall: 27 of 358 required cells approved.
 - Style: 3D miniature-diorama backgrounds matching art-source/scenes/, soft even lighting (no dramatic coloured light)
 - Minimum size: 1254 x 1254 px, aspect 1:1
 - Identity status: planned library (see reconciliation)
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `scene.storm.01` | Storm biome background 1 |  | missing |
-| 2 | `scene.storm.02` | Storm biome background 2 |  | missing |
-| 3 | `scene.storm.03` | Storm biome background 3 |  | missing |
-| 4 | `scene.storm.04` | Storm biome background 4 |  | missing |
-| 5 | `scene.storm.05` | Storm biome background 5 |  | missing |
-| 6 | `scene.dusk.01` | Dusk biome background 1 |  | missing |
-| 7 | `scene.dusk.02` | Dusk biome background 2 |  | missing |
-| 8 | `scene.dusk.03` | Dusk biome background 3 |  | missing |
-| 9 | `scene.dusk.04` | Dusk biome background 4 |  | missing |
+| 1 | `scene.storm.01` | Storm biome background 1 |  | approved |
+| 2 | `scene.storm.02` | Storm biome background 2 |  | approved |
+| 3 | `scene.storm.03` | Storm biome background 3 |  | approved |
+| 4 | `scene.storm.04` | Storm biome background 4 |  | approved |
+| 5 | `scene.storm.05` | Storm biome background 5 |  | approved |
+| 6 | `scene.dusk.01` | Dusk biome background 1 |  | approved |
+| 7 | `scene.dusk.02` | Dusk biome background 2 |  | approved |
+| 8 | `scene.dusk.03` | Dusk biome background 3 |  | approved |
+| 9 | `scene.dusk.04` | Dusk biome background 4 |  | approved |
 
 ## SHEET-37: Tactics A
 

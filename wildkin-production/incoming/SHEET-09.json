@@ -1,0 +1,8 @@
+{
+  "task_id": "SHEET-09",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case stylized-concept. Wildkin SHEET-09 production square PNG, exactly 3x3 equal cells, thin dark gutters. Reference is Berribat approved purple berry fruit-bat identity. Dimensional toy-like 3D, even soft front light. Every cell plain chroma green RGB(40,160,60), no gradient, floor shadow, glow, outside-body effects, text or frames. Full creatures occupy only 60% width and height with 18% empty margins, including wings. Row1 Berribat: purple fluffy round baby bat, giant coral-pink inner ears, burgundy eyes, berry cluster and two olive leaves on forehead, coral pink wing membranes, pink heart-shaped chest tuft, tiny cream fangs. Cell1 standing folded wings, 2 jumping open wings, 3 sitting folded wings. Rows2+3 Pompyre evolved fruit bat: same purple fur, coral membranes, burgundy eyes, broader elegant wings, heavier burgundy berry crown with olive leaves, longer pink chest ruff and two small visible ivory fangs, larger but still cute. Cells4 standing,5 jumping/flying,6 sitting,7 waving wing tip,8 running with partly folded wings,9 looking up. Precisely same anatomy and markings in every pose of same species, distinct evolved stage. No clipping.",
+  "notes": "Berribat from recovered image-gen-8(5).png. Pompyre inferred evolution. Mislabeled berribat-identity.png excluded."
+}

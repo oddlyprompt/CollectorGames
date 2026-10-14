@@ -1,0 +1,193 @@
+{
+ "task": "SHEET-05",
+ "file": "wildkin-production/incoming/SHEET-05.png",
+ "sha256": "7a4f56f95d9f40c1180e8b51aa990ce90e9dce893a5c89bea2180a038b4fbfdf",
+ "checked": "2026-10-14T01:43:53Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [
+  "cell 7: margin is tight (10 px); the spec asks for about 10%",
+  "cell 8: margin is tight (5 px); the spec asks for about 10%",
+  "cell 9: margin is tight (8 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.011-rolyte.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2959,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    79,
+    86,
+    77,
+    38
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.029
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.011-rolyte.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2938,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    77,
+    68,
+    77,
+    54
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.031
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.011-rolyte.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2375,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    74,
+    150,
+    76,
+    44
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.012-shelladin.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4373,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    43,
+    43,
+    42,
+    40
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.012-shelladin.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.409,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    41,
+    24,
+    42,
+    56
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.027
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.012-shelladin.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3991,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    31,
+    97,
+    33,
+    41
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.013-aegisopod.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5618,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    20,
+    10,
+    19,
+    32
+   ],
+   "notes": [
+    "margin is tight (10 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.013-aegisopod.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4869,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    24,
+    5,
+    24,
+    59
+   ],
+   "notes": [
+    "margin is tight (5 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.013-aegisopod.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4453,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    8,
+    94,
+    10,
+    44
+   ],
+   "notes": [
+    "margin is tight (8 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-05",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-05: square1254x1254 minimum PNG, precisely equal3x3 grid thin black gutters. Nine separate SMALL complete creatures, each centered with20% EMPTY margins all four sides, appendages inside CENTRAL60% of cell. Flat uniform green screen RGB40,160,60 no shadows/gradients. Reference is the currently established Rolyte look: cute pillbug, navy/silver segmented armored shell, pale face with huge dark eyes/rosy cheeks, silver slitted knight-helmet crest, six short dark legs and two antennae. Do not turn into human knight. Top row Rolyte: neutral standing; all six feet lifted in little jump; resting low with feet tucked. Middle row Shelladin evolution: wider oval pillbug with thicker three-tier silver-edged navy shell armor, more pronounced helmet brow and raised dorsal ridge, same pale face/eyes/cheeks, exactly six dark legs/two antennae; neutral standing, jumping, resting. Bottom row Aegisopod final: broad squat fortress-like pillbug silhouette with expanded overlapping shield-shaped shell plates and prominent silver central crest, broad silver brow, same cute pale face, dark eyes, six sturdy short legs, two antennae; standing, leaping, resting low. Clear related evolutionary progression, no weapons, clothes, shields held in hands or extra limbs. Same proportions/design within each row. Soft frontal studio illumination on subject only, refined matte dimensional3D matching original. Keep the larger final creature at SAME central60% cell size by pulling camera back. No clipped shell or feet. No glow, sparkles, marks, labels, text, props, floor, floor shadows or environment.",
+  "references": [
+   "reference/rolyte-identity.png"
+  ],
+  "notes": "Preserves manifest-approved Rolyte mapping. Historical conversation called this original middle-stage Shelladin; discrepancy recorded, no canonical IDs changed. Evolutions newly inferred."
+ }
+}

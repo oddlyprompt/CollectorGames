@@ -1,0 +1,178 @@
+{
+ "task": "SHEET-06",
+ "file": "wildkin-production/incoming/SHEET-06--v2.png",
+ "sha256": "89dec7fab1004a49026c316da356ea9bb8cc2dc2064c2548f49ee7ee7005ecc0",
+ "checked": "2026-10-14T01:44:08Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.014-frondolin.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1084,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    116,
+    124,
+    139,
+    89
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.014-frondolin.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1317,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    98,
+    106,
+    116,
+    89
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.014-frondolin.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1041,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    110,
+    144,
+    144,
+    87
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.021
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.015-pangrove.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1961,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    82,
+    75,
+    117,
+    76
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.021
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.015-pangrove.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1733,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    81,
+    75,
+    91,
+    86
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.015-pangrove.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1917,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    74,
+    97,
+    107,
+    75
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.017
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.016-canopang.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2041,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    76,
+    71,
+    109,
+    112
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.017
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.016-canopang.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1711,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    78,
+    73,
+    87,
+    125
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.022
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.016-canopang.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2052,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    71,
+    82,
+    102,
+    117
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.017
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-06",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style.  Exact cells 1:Frondolin standing;2:Frondolin jumping;3:Frondolin sitting;4:Pangrove standing;5:Pangrove jumping;6:Pangrove sitting;7:Canopang standing;8:Canopang jumping;9:Canopang sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(235,18,128), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+  "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+  "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-06.png"
+ }
+}

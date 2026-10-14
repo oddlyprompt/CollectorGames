@@ -1,0 +1,193 @@
+{
+ "task": "SHEET-02",
+ "file": "wildkin-production/incoming/SHEET-02--v2.png",
+ "sha256": "acc2976fad9473bab2eb1e2fb43302d7bbe9beafcc944e8edc138a3762839dfd",
+ "checked": "2026-10-14T01:41:47Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [
+  "cell 4: margin is tight (11 px); the spec asks for about 10%",
+  "cell 7: margin is tight (15 px); the spec asks for about 10%",
+  "cell 9: margin is tight (12 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.002-prismotl.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2759,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    83,
+    98,
+    38,
+    26
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.038
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.002-prismotl.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2668,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    72,
+    73,
+    55,
+    47
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.002-prismotl.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2888,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    83,
+    85,
+    56,
+    25
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.003-opalotl.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2824,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    46,
+    61,
+    11,
+    63
+   ],
+   "notes": [
+    "margin is tight (11 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.047
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.003-opalotl.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2541,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    46,
+    52,
+    19,
+    68
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.05
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.003-opalotl.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2561,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    94,
+    69,
+    24,
+    62
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.044
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.004-aurorotl.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3343,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    27,
+    15,
+    17,
+    45
+   ],
+   "notes": [
+    "margin is tight (15 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.061
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.004-aurorotl.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3036,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    34,
+    15,
+    16,
+    61
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.068
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.004-aurorotl.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3242,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    76,
+    12,
+    28,
+    45
+   ],
+   "notes": [
+    "margin is tight (12 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.048
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-02",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Create NEW square 3x3 creature sheet SHEET-02. Use attached SINGLE Prismotl image for identity only; do NOT repeat its size or background. Image native minimum 1254x1254. Nine equal square cells, thin straight dark gutters. Very important ALL CREATURES SMALLER with huge EMPTY SCREEN MARGINS: every character including its biggest gills and tail fits in the CENTRAL 60% width and CENTRAL 60% height of its cell. This means approximately 80 pixels EMPTY on every side in a 418px cell. Never let fronds touch edges. ONE creature per cell. Entire sheet cells have ONE EXACT FLAT GREEN RGB(40,160,60), NO dark-green gradients and NO shadows below creatures. Soft studio light ONLY on subject. DIMENSIONAL soft matte 3D, not flat illustration. Exact pose and stage mapping: cell1 Prismotl neutral four-legged stand; cell2 SAME Prismotl airborne jump four paws lifted; cell3 SAME Prismotl sitting on rear haunches upright (not lying down). Prismotl matches reference: round cream-white body, blue-purple huge eyes, pink toes, pastel pink/lavender/blue/yellow feather-shaped axolotl external gill fans, pastel layered fronds and tail. Cell4 Opalotl standing four-legged; cell5 SAME Opalotl leaping; cell6 SAME Opalotl sitting upright. Opalotl clearly evolves by LENGTHENED body, longer neck, distinct long curved tail with THREE tiers of opalescent petal fronds, smaller head-to-body ratio than Prismotl, same white body and eyes, gill fans swept horizontally. Cell7 Aurorotl standing quadruped; cell8 SAME Aurorotl leaping; cell9 SAME Aurorotl seated upright. Aurorotl is CLEARLY different final silhouette: long elegant white quadrupedal body, graceful high neck, flowing long tail with full layered rainbow plume, tall sweeping six-branch rainbow head fronds, longer legs, serene facial structure still recognizable as same family. Keep stage identities identical across each row. Bigger evolutionary anatomy does NOT mean occupying more of cell; keep identical central 60% bounds. No text, labels, symbols, sparkles, glow, particles, ground, floor shadow or props. All nine full bodies safely separated from gutters.",
+  "references": [
+   "reference/prismotl-identity.png"
+  ],
+  "continuity": "Prismotl original reference. Evolution treatments newly inferred. Revision corrects pose/stage differentiation and source clipping."
+ }
+}

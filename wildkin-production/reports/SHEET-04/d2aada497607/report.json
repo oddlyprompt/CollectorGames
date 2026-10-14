@@ -1,0 +1,182 @@
+{
+ "task": "SHEET-04",
+ "file": "wildkin-production/incoming/SHEET-04--v2.png",
+ "sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+ "checked": "2026-10-14T01:43:32Z",
+ "errors": [],
+ "warnings": [
+  "cell 1: 1 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.008-koilet.standing",
+   "errors": [],
+   "warnings": [
+    "1 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ],
+   "screen": "green",
+   "coverage": 0.1142,
+   "stray_pieces_dropped": 1,
+   "margins_LTRB": [
+    109,
+    112,
+    105,
+    101
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.045
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.008-koilet.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1257,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    86,
+    99,
+    86,
+    121
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.05
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.008-koilet.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.119,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    96,
+    107,
+    117,
+    94
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.05
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.009-runakoi.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1596,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    89,
+    89,
+    85,
+    91
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.051
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.009-runakoi.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1553,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    71,
+    79,
+    75,
+    110
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.048
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.009-runakoi.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1557,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    84,
+    85,
+    97,
+    87
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.010-koirune.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1766,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    99,
+    75,
+    89,
+    82
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.05
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.010-koirune.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1796,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    71,
+    72,
+    78,
+    119
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.047
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.010-koirune.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1735,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    88,
+    76,
+    101,
+    84
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.049
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "warn",
+ "metadata": {
+  "task_id": "SHEET-04",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+  "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+  "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+ }
+}

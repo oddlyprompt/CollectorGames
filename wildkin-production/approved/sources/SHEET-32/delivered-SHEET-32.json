@@ -1,0 +1,9 @@
+{
+  "task_id": "SHEET-32",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-32 3x3 production PNG at least 1254x1254, equal square cells, thin dark gutters. Dimensional stylized 3D renders consistent with toy-like creatures. Single object three-quarter product view in each cell. Cell1 Bond Charm: round brass pendant with cream/pale blue stone and brown cord. 2 Keeper Satchel tan canvas leather bag. 3 Rescue Whistle small silver whistle on ochre cord. 4 Biome Compass brass folding compass with nine colored inlays, NO lettering. 5 Glow Lantern brass lantern with warm cream crystal, glow contained within glass. 6 Trail Rations cloth wrapped bread, nuts and dried berries in a single bundle. 7 Medic Salve brown pot with cream lid and sage leaf embossed motif. 8 Echo Flute carved pale wooden flute. 9 Tide Lure iridescent blue shell lure with copper hook.. Each whole subject maximum 55% cell height and width with 22% blank margin around all hats, boots, staff, straps. FLAT RGB(40,160,60) GREEN screen, except mostly green outfits or green objects use FLAT RGB(235,18,128) magenta in that cell. No gradients, floor shadows, text, frames or external glow. Reference is identity and clothing source only; translate rendering to dimensional 3D. No creature companions in cells.",
+  "notes": "Gear design inferred within canonical card names. Clasp design shared with premium program.",
+  "identity_status": "reference-derived and/or inferred; not owner-approved"
+}

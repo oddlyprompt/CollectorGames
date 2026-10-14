@@ -1,0 +1,205 @@
+{
+ "task": "SHEET-09",
+ "file": "wildkin-production/incoming/SHEET-09.png",
+ "sha256": "c227d3b38fe483ae1f06fe89e99616ce0ed8f4d1a65fbaf2e451ea799ea1f254",
+ "checked": "2026-10-14T01:45:24Z",
+ "errors": [
+  "cell 8: subject touches the cell edge (clipped): top",
+  "cell 9: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 2: margin is tight (14 px); the spec asks for about 10%",
+  "cell 4: margin is tight (5 px); the spec asks for about 10%",
+  "cell 5: margin is tight (3 px); the spec asks for about 10%",
+  "cell 6: margin is tight (10 px); the spec asks for about 10%",
+  "cell 7: margin is tight (6 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.021-berribat.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3535,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    63,
+    44,
+    63,
+    34
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.051
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.021-berribat.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3704,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    14,
+    23,
+    29,
+    80
+   ],
+   "notes": [
+    "margin is tight (14 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.055
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.021-berribat.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3028,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    109,
+    60,
+    20,
+    45
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.059
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.022-pompyre.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4555,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    21,
+    5,
+    32,
+    23
+   ],
+   "notes": [
+    "margin is tight (5 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.048
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.022-pompyre.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4654,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    3,
+    11,
+    4,
+    57
+   ],
+   "notes": [
+    "margin is tight (3 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.047
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.022-pompyre.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.391,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    43,
+    10,
+    71,
+    31
+   ],
+   "notes": [
+    "margin is tight (10 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.054
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.022-pompyre.waving",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4148,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    30,
+    6,
+    41,
+    58
+   ],
+   "notes": [
+    "margin is tight (6 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.044
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.022-pompyre.running",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4269,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    13,
+    0,
+    54,
+    60
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.044
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.022-pompyre.looking-up",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3861,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    90,
+    0,
+    30,
+    51
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-09",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case stylized-concept. Wildkin SHEET-09 production square PNG, exactly 3x3 equal cells, thin dark gutters. Reference is Berribat approved purple berry fruit-bat identity. Dimensional toy-like 3D, even soft front light. Every cell plain chroma green RGB(40,160,60), no gradient, floor shadow, glow, outside-body effects, text or frames. Full creatures occupy only 60% width and height with 18% empty margins, including wings. Row1 Berribat: purple fluffy round baby bat, giant coral-pink inner ears, burgundy eyes, berry cluster and two olive leaves on forehead, coral pink wing membranes, pink heart-shaped chest tuft, tiny cream fangs. Cell1 standing folded wings, 2 jumping open wings, 3 sitting folded wings. Rows2+3 Pompyre evolved fruit bat: same purple fur, coral membranes, burgundy eyes, broader elegant wings, heavier burgundy berry crown with olive leaves, longer pink chest ruff and two small visible ivory fangs, larger but still cute. Cells4 standing,5 jumping/flying,6 sitting,7 waving wing tip,8 running with partly folded wings,9 looking up. Precisely same anatomy and markings in every pose of same species, distinct evolved stage. No clipping.",
+  "notes": "Berribat from recovered image-gen-8(5).png. Pompyre inferred evolution. Mislabeled berribat-identity.png excluded."
+ }
+}

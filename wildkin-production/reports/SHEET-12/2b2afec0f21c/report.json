@@ -1,0 +1,191 @@
+{
+ "task": "SHEET-12",
+ "file": "wildkin-production/incoming/SHEET-12.png",
+ "sha256": "2b2afec0f21cff589aa04a3785d09d35d887d9cb264dc4bcaa01ae60c66fdb6f",
+ "checked": "2026-10-14T01:45:58Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [
+  "cell 7: margin is tight (9 px); the spec asks for about 10%",
+  "cell 8: margin is tight (9 px); the spec asks for about 10%",
+  "cell 9: margin is tight (8 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.027-cindikit.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2568,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    68,
+    63,
+    60,
+    45
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.029
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.027-cindikit.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.242,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    64,
+    56,
+    65,
+    69
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.029
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.027-cindikit.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.245,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    86,
+    77,
+    81,
+    47
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.028-emberuff.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3672,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    35,
+    18,
+    77,
+    16
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.028-emberuff.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3454,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    52,
+    24,
+    41,
+    62
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.024
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.028-emberuff.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3542,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    54,
+    54,
+    72,
+    23
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.022
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.029-pyrenox.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4218,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    32,
+    9,
+    36,
+    44
+   ],
+   "notes": [
+    "margin is tight (9 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.026
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.029-pyrenox.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.387,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    28,
+    9,
+    30,
+    79
+   ],
+   "notes": [
+    "margin is tight (9 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.021
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.029-pyrenox.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4327,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    38,
+    8,
+    41,
+    48
+   ],
+   "notes": [
+    "margin is tight (8 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.022
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-12",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-12 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma GREEN RGB(40,160,60). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Cindikit is a small golden orange fire fox with cream muzzle/chest, amber eyes, ember-tipped ears and fluffy tail; Emberuff larger russet fox with layered orange ember ruff; Pyrenox mature dark russet fire fox with sculpted gold-orange flame-shaped ruff and broad plume tail. Preserve fox anatomy and progression.. Exact row-major cell mapping: 1: Cindikit standing; 2: Cindikit jumping; 3: Cindikit sitting; 4: Emberuff standing; 5: Emberuff jumping; 6: Emberuff sitting; 7: Pyrenox standing; 8: Pyrenox jumping; 9: Pyrenox sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Base identity recovered from earlier approved artwork; undescribed evolution inferred.",
+  "reference": "/workspace/scratch/b718be279b35/wildkin-art/reference/recovered/image-gen-1(20261001-051042).png"
+ }
+}

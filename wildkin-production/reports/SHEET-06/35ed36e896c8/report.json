@@ -1,0 +1,198 @@
+{
+ "task": "SHEET-06",
+ "file": "wildkin-production/incoming/SHEET-06.png",
+ "sha256": "35ed36e896c89ba19ae1a62c03b4223588bfcf1fffec1a4db3f52777b5b9a281",
+ "checked": "2026-10-14T01:44:14Z",
+ "errors": [
+  "cell 7: subject touches the cell edge (clipped): top",
+  "cell 8: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 4: margin is tight (8 px); the spec asks for about 10%",
+  "cell 5: margin is tight (10 px); the spec asks for about 10%",
+  "cell 9: margin is tight (7 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.014-frondolin.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2793,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    86,
+    60,
+    84,
+    40
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.02
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.014-frondolin.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.3022,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    50,
+    36,
+    73,
+    49
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.02
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.014-frondolin.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2538,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    64,
+    98,
+    111,
+    39
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.018
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.015-pangrove.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.4712,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    32,
+    8,
+    59,
+    13
+   ],
+   "notes": [
+    "margin is tight (8 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.015
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.015-pangrove.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.3897,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    24,
+    10,
+    36,
+    41
+   ],
+   "notes": [
+    "margin is tight (10 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.017
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.015-pangrove.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.4177,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    22,
+    57,
+    54,
+    17
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.013
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.016-canopang.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.5482,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    17,
+    1,
+    35,
+    32
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.012
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.016-canopang.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.4369,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    15,
+    2,
+    16,
+    64
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.015
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.016-canopang.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.5109,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    7,
+    46,
+    37,
+    29
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.011
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-06",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-06 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma MAGENTA RGB(235,18,128). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Frondolin matches leaf pangolin reference: tan furry upright pangolin, overlapping green leaf scales, cream belly, curled long leafy tail, green eyes. Pangrove is larger, heavier overlapping oak-like scales, stronger tan limbs, longer layered tail. Canopang is mature guardian, broader deep emerald leaf armor, woody brown limbs, large layered canopy collar, same green eyes and cream belly. Keep species visibly distinct.. Exact row-major cell mapping: 1: Frondolin standing; 2: Frondolin jumping; 3: Frondolin sitting; 4: Pangrove standing; 5: Pangrove jumping; 6: Pangrove sitting; 7: Canopang standing; 8: Canopang jumping; 9: Canopang sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Base identity recovered from earlier approved artwork; undescribed evolution inferred.",
+  "reference": "/workspace/scratch/b718be279b35/wildkin-art/reference/frondolin-identity.png"
+ }
+}
