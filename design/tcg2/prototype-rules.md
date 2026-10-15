@@ -47,7 +47,11 @@ Working design approved by the owner on 2026-10-16: the two-front Shore and Deep
 
 Keywords: *Charge* (attacks the turn it arrives), *Surge*, *Rampart* (+2 toughness when blocking at home), *Leader* (other units on its front +1 power), *Ambush* (can be played from hand during the opponent's battle as a blocker), *Undertow* (a unit that fights it and survives returns to its owner's hand), *Tough* (takes 1 less damage), *Trample* (excess damage carries through), *Swift*.
 
-## What the simulation found (3,000 games, `prototype-report.md`)
+## Round 2 (2026-10-15): read `round2-report.md` first
+
+Round 2 found a shuffle bug that gave the deck in seat A a 54-56% edge, so the round 1 balance numbers below were too optimistic (corrected baseline: deck spread 16.7 points, 12 of 15 matchups within 40-60%). With a stronger computer player, Sea decks win 59.5% and Land 37.4%, games last about 7 turns, and expensive cards win by selection, not power. Round 2 proposes rules 0.3 (Stranded as the only crossing cost, a Ferry keyword replacing carry and escort, Vessels screening the Deep, Ambush folded into Swift) and lists the owner decisions. This file still describes rules 0.2 until those decisions are made.
+
+## What the round 1 simulation found (3,000 games, `prototype-report.md`; numbers affected by the seat bias)
 
 1. **Balance is close to the target.** Deck averages 46% to 55%; 13 of 15 matchups inside 40-60%, 7 inside 45-55%. Land, Sea and hybrid decks all compete.
 2. **Game length:** about 8 turns per player (middle half 6 to 9). Inside the provisional 8-10 target, at its low end.
