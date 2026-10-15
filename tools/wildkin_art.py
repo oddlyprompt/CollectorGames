@@ -8,6 +8,8 @@
   python3 tools/wildkin_art.py reject TASK --reason "..."   move the delivery to rejected/ with the reason
   python3 tools/wildkin_art.py ingest [--auto-approve] [--build]   check everything, optionally approve clean deliveries and rebuild the game
   python3 tools/wildkin_art.py legacy [--koi N]       register the owner's earlier sheets in art-source/ (already approved) under manifest asset IDs
+  python3 tools/wildkin_art.py singles-check [--accept-below-spec ID ...]   check single premium paintings listed in incoming/premium-individuals/card-map.json
+  python3 tools/wildkin_art.py singles-approve [--assets ID ...] [--replace] [--by NAME]   approve the checked ones that have no errors
 
 Rules it enforces
   * The only way into the game is approved/registry.json. An approved asset is never replaced because a new file exists:
@@ -134,7 +136,7 @@ def write_report_md(task, rep, path):
     open(path,'w').write('\n'.join(L)+'\n')
 
 def cmd_check(args, auto=False):
-    Q=queue(); I=intake(); os.makedirs(INC,exist_ok=True); files=sorted(f for f in os.listdir(INC) if not f.startswith('.') and not f.endswith('.json') and not f.endswith('.md')); bad=0; done=[]
+    Q=queue(); I=intake(); os.makedirs(INC,exist_ok=True); files=sorted(f for f in os.listdir(INC) if os.path.isfile(os.path.join(INC,f)) and not f.startswith('.') and not f.endswith('.json') and not f.endswith('.md')); bad=0; done=[]
     for f in files:
         m=FNAME.match(f); path=os.path.join(INC,f)
         if not m or m.group(1) not in Q:
@@ -248,6 +250,80 @@ def cmd_legacy(args):
         n+=1
     jsave(os.path.join(APP,'registry.json'),R); print('registered %d earlier pieces'%n); regenerate(False)
 
+# ---------------------------------------------------------------- single premium paintings (one image per card, with a card map)
+SINGLES=os.path.join(INC,'premium-individuals')
+def singles_min(task):
+    """The minimum for one painting: a premium sheet's cell (the sheet minimum divided by 3) or the whole size for a SIR single."""
+    w,h=task['min_px']; return (w,h) if task['kind']=='single-illustration' else (w//3,h//3)
+def cmd_singles_check(args):
+    """Validate every painting listed in incoming/premium-individuals/card-map.json against the manifest and art queue."""
+    M=manifest(); A=M.get('art_assets',{}); Q=queue(); mp=jload(os.path.join(SINGLES,'card-map.json'),None)
+    if not mp: sys.exit('no incoming/premium-individuals/card-map.json')
+    out={'checked':now(),'map':os.path.relpath(os.path.join(SINGLES,'card-map.json'),ROOT),'items':[]}; pieces={}
+    for rec in mp['artworks']:
+        aid=rec['asset_id']; it={'asset_id':aid,'card':rec.get('card'),'file':rec.get('filename'),'errors':[],'warnings':[],'notes':[]}
+        path=os.path.join(SINGLES,'art',rec.get('filename','')); a=A.get(aid); task=Q.get(rec.get('task_id'))
+        if not a: it['errors'].append('asset id is not in the manifest')
+        elif rec.get('card') not in a['linked_cards']: it['errors'].append('the manifest links %s to %s, not %s'%(aid,a['linked_cards'],rec.get('card')))
+        if not task: it['errors'].append('unknown task %s'%rec.get('task_id'))
+        elif not any(c.get('asset_id')==aid for c in task['cells']): it['errors'].append('%s is not a cell of %s'%(aid,task['task_id']))
+        if not os.path.exists(path): it['errors'].append('file missing'); out['items'].append(it); continue
+        it['sha256']=sha(path)
+        if rec.get('sha256') and rec['sha256']!=it['sha256']: it['errors'].append('file does not match the checksum in its metadata')
+        try: im=Image.open(path); im.load(); im=im.convert('RGB')
+        except Exception as e: it['errors'].append('cannot read image: %s'%e); out['items'].append(it); continue
+        W,H=im.size; it['size']=[W,H]
+        if abs(W/H-5/7)/(5/7)>0.02: it['errors'].append('aspect %.3f, want 5:7 (0.714)'%(W/H))
+        if task:
+            mw,mh=singles_min(task); it['min_px']=[mw,mh]
+            if W<mw or H<mh:
+                if aid in (args.accept_below_spec or []): it['warnings'].append('below the %dx%d minimum (%dx%d); accepted by the owner at its actual size'%(mw,mh,W,H)); it['below_spec_accepted']=True
+                else: it['errors'].append('too small: %dx%d, need at least %dx%d'%(W,H,mw,mh))
+        if float(np.asarray(im.convert('L')).std())<8: it['errors'].append('image is blank')
+        if aid in registry()['assets']: it['notes'].append('already approved; will not be replaced without --replace')
+        it['result']='fail' if it['errors'] else 'warn' if it['warnings'] else 'pass'; pieces[aid]=im; out['items'].append(it)
+    rd=os.path.join(REP,'premium-individuals'); os.makedirs(os.path.join(rd,'pieces'),exist_ok=True)
+    for aid,im in pieces.items(): im.save(os.path.join(rd,'pieces',aid+'.webp'),'WEBP',quality=90,method=6)
+    S=150; n=len(out['items']); cols=10; cs=Image.new('RGB',(cols*S,((n+cols-1)//cols)*(S*7//5+16)),(128,128,128)); d=ImageDraw.Draw(cs)
+    for i,it in enumerate(out['items']):
+        x=(i%cols)*S; y=(i//cols)*(S*7//5+16); im=pieces.get(it['asset_id'])
+        if im: t=im.copy(); t.thumbnail((S-8,S*7//5-8)); cs.paste(t,(x+4,y+14))
+        col=(220,40,40) if it['errors'] else (240,150,30) if it['warnings'] else (60,180,90); d.rectangle((x+1,y+1,x+S-2,y+S*7//5+14),outline=col,width=3); d.text((x+5,y+2),(it['card'] or '')[-3:]+' '+it['result'],fill=(0,0,0))
+    cs.save(os.path.join(rd,'contact.png')); jsave(os.path.join(rd,'report.json'),out)
+    L=['# Single premium paintings','','- Checked: %s'%out['checked'],'','![contact sheet](contact.png)','','| Card | Asset | Size | Result | Notes |','|---|---|---|---|---|']
+    L+=['| %s | %s | %s | %s | %s |'%(i['card'],i['asset_id'],'x'.join(map(str,i.get('size',[]))),i.get('result','fail'),'; '.join(i['errors']+i['warnings']+i['notes'])) for i in out['items']]
+    open(os.path.join(rd,'report.md'),'w').write('\n'.join(L)+'\n')
+    for i in out['items']: print('  %-4s %s %s %s'%({'pass':'ok','warn':'!','fail':'X'}.get(i.get('result','fail')),i['card'],i['asset_id'],'; '.join(i['errors']+i['warnings'])))
+    print('%d pass, %d warn, %d fail -> %s'%tuple([sum(1 for i in out['items'] if i.get('result',"fail")==r) for r in ('pass','warn','fail')]+[os.path.relpath(rd,ROOT)]))
+def cmd_singles_approve(args):
+    """Approve the checked single paintings that have no errors (warnings only if accepted at check time). Never overwrites without --replace."""
+    rd=os.path.join(REP,'premium-individuals'); rep=jload(os.path.join(rd,'report.json'),None)
+    if not rep: sys.exit('run singles-check first')
+    R=registry(); mp={r['asset_id']:r for r in jload(os.path.join(SINGLES,'card-map.json'),{'artworks':[]})['artworks']}; took=[]; skipped=[]
+    for it in rep['items']:
+        aid=it['asset_id']
+        if args.assets and aid not in args.assets: continue
+        if it['errors']: skipped.append((aid,'has errors')); continue
+        if aid in R['assets'] and not args.replace: skipped.append((aid,'already approved')); continue
+        src=os.path.join(SINGLES,'art',it['file'])
+        if sha(src)!=it['sha256']: skipped.append((aid,'file changed since it was checked; run singles-check again')); continue
+        if aid in R['assets']:
+            old=os.path.join(ROOT,R['assets'][aid]['file']); sup=os.path.join(APP,'superseded',aid,os.path.basename(old)+'.'+R['assets'][aid].get('sha256','')[:8]); os.makedirs(os.path.dirname(sup),exist_ok=True)
+            if os.path.exists(old): shutil.move(old,sup)
+            R.setdefault('history',[]).append(dict(asset_id=aid,**R['assets'][aid]))
+        keep=os.path.join(APP,'sources','premium-individuals',it['file']); os.makedirs(os.path.dirname(keep),exist_ok=True); shutil.copy2(src,keep)
+        mj=os.path.join(SINGLES,'metadata',it['card']+'.json')
+        if os.path.exists(mj): shutil.copy2(mj,keep.rsplit('.',1)[0]+'.json')
+        dst=os.path.join(APP,'assets',aid+'.webp'); shutil.copy2(os.path.join(rd,'pieces',aid+'.webp'),dst)
+        rec=mp.get(aid,{})
+        R['assets'][aid]={'file':os.path.relpath(dst,ROOT),'sha256':sha(dst),'task':rec.get('task_id'),'cell':rec.get('cell'),'source':os.path.relpath(keep,ROOT),'source_sha256':it['sha256'],'approved':now(),'approved_by':args.by,
+            'provenance':{'delivered_as':'incoming/premium-individuals/art/'+it['file'],'metadata':{k:rec.get(k) for k in ('generation','prompt','source_reference','native_dimensions','resolution_status','visual_review') if k in rec}},
+            'checks':{'size':it.get('size'),'min_px':it.get('min_px')},'warnings_accepted':it['warnings']}
+        took.append(aid)
+    jsave(os.path.join(APP,'registry.json'),R)
+    print('approved %d painting(s)%s'%(len(took),'' if not skipped else '; skipped: '+'; '.join('%s %s'%s for s in skipped)))
+    if took: regenerate(False)
+
 def cmd_status(args):
     Q=queue(); tot=ok=0
     for t in Q.values():
@@ -262,6 +338,8 @@ def main():
     r=sub.add_parser('reject'); r.add_argument('task'); r.add_argument('--reason',required=True)
     i=sub.add_parser('ingest'); i.add_argument('--auto-approve',action='store_true'); i.add_argument('--build',action='store_true'); i.add_argument('--force',action='store_true'); i.add_argument('--ci',action='store_true')
     l=sub.add_parser('legacy'); l.add_argument('--koi',type=int)
+    sc=sub.add_parser('singles-check'); sc.add_argument('--accept-below-spec',nargs='*',help='asset ids the owner accepts below the size minimum (recorded as an accepted warning)')
+    sa=sub.add_parser('singles-approve'); sa.add_argument('--assets',nargs='*'); sa.add_argument('--replace',action='store_true'); sa.add_argument('--by',default='owner')
     x=ap.parse_args()
     if x.cmd=='status': cmd_status(x)
     elif x.cmd=='check': cmd_check(x)
@@ -271,4 +349,6 @@ def main():
     elif x.cmd=='reject': cmd_reject(x)
     elif x.cmd=='ingest': cmd_ingest(x)
     elif x.cmd=='legacy': cmd_legacy(x)
+    elif x.cmd=='singles-check': cmd_singles_check(x)
+    elif x.cmd=='singles-approve': cmd_singles_approve(x)
 if __name__=='__main__': main()

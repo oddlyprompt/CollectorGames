@@ -29,7 +29,8 @@ def sheet_cells(path):
 tmp=tempfile.mkdtemp(prefix='wkart-'); WP=os.path.join(tmp,'wildkin-production'); shutil.copytree(os.path.join(ROOT,'wildkin-production'),WP)
 # start from a clean baseline whatever has been delivered for real: only the owner's earlier (legacy) art approved, nothing delivered, nothing checked
 for f in os.listdir(os.path.join(WP,'incoming')):
-    if f!='README.md': os.remove(os.path.join(WP,'incoming',f))
+    q=os.path.join(WP,'incoming',f)
+    if f!='README.md': shutil.rmtree(q) if os.path.isdir(q) else os.remove(q)
 _rp=os.path.join(WP,'approved','registry.json'); _R=json.load(open(_rp)); _R['assets']={k:v for k,v in _R['assets'].items() if v.get('task')=='legacy'}; _R.pop('history',None); json.dump(_R,open(_rp,'w'))
 for f in os.listdir(os.path.join(WP,'reports')):
     if f.startswith(('SHEET-','SIR-')): shutil.rmtree(os.path.join(WP,'reports',f))

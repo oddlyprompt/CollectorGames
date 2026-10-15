@@ -1,0 +1,24 @@
+{
+  "cell": 2,
+  "asset_id": "ill.142-prismotl-ir",
+  "subject": "Prismotl IR",
+  "card": "WK-S001-142",
+  "task_id": "SHEET-39",
+  "filename": "WK-S001-142__ill.142-prismotl-ir.png",
+  "min_px": [
+    700,
+    980
+  ],
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-142, Prismotl IR, asset ill.142-prismotl-ir. Reference image is a 3x3 sheet. Use ONLY cell 2 (row 1, column 2) as this painting's species/scene reference. Repaint that ONE panel as a complete full-bleed single portrait 5:7 illustration at 1600 x 2240 or the highest native resolution available. Preserve the exact creature anatomy, face, proportions, colors and markings shown in that cell, its environment and its distinct pose. All other cells must be ignored. Dimensional soft toy-like character, richly detailed premium storybook environment, polished cinematic painterly lighting. Compose the entire subject within central half of height: clear head below top quarter, all feet/tail/wings above bottom quarter, with surroundings filling these text-safe spaces. Whole creature visible and identifiable. No text, no frames, no grid, no collage, no extra panels, no watermark. Do not crop out a small existing panel: freshly render its details across the full standalone image.",
+  "generation": "built-in imagegen; individual full-frame generation",
+  "source_reference": "SHEET-39--v2.png",
+  "sha256": "9f3a07b3e621f6ec1e0ba3556fe165d7c4b32847aed7237ba59b6f8f93b9fe3d",
+  "size_bytes": 2669404,
+  "resolution_status": "pass",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-142__ill.142-prismotl-ir.png"
+}

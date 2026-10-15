@@ -11810,6 +11810,1410 @@
     ]
    },
    "warnings_accepted": []
+  },
+  "ill.141-cactuft-ir": {
+   "file": "wildkin-production/approved/assets/ill.141-cactuft-ir.webp",
+   "sha256": "e8caf28459a4f3e058e9ec5c14978610595b617e0fc38ce1674b69412c68367f",
+   "task": "SHEET-39",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-141__ill.141-cactuft-ir.png",
+   "source_sha256": "0c089593b80a3392c403292c962a368c8005e7e278dcf2329bb9bf6de070d9e7",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-141__ill.141-cactuft-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Single Cactuft IR painting using top-left reference panel: green cactus-wool llama in a flowering sunlit conservatory; full-bleed 5:7; preserve identity, no text, no frame; requested 1600x2240. Actual native size verified separately.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.142-prismotl-ir": {
+   "file": "wildkin-production/approved/assets/ill.142-prismotl-ir.webp",
+   "sha256": "ccf5e97bcaef442c5f4a94f675ec6b795982d5a568c8c3b5823b7387c70a626d",
+   "task": "SHEET-39",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-142__ill.142-prismotl-ir.png",
+   "source_sha256": "9f3a07b3e621f6ec1e0ba3556fe165d7c4b32847aed7237ba59b6f8f93b9fe3d",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-142__ill.142-prismotl-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-142, Prismotl IR, asset ill.142-prismotl-ir. Reference image is a 3x3 sheet. Use ONLY cell 2 (row 1, column 2) as this painting's species/scene reference. Repaint that ONE panel as a complete full-bleed single portrait 5:7 illustration at 1600 x 2240 or the highest native resolution available. Preserve the exact creature anatomy, face, proportions, colors and markings shown in that cell, its environment and its distinct pose. All other cells must be ignored. Dimensional soft toy-like character, richly detailed premium storybook environment, polished cinematic painterly lighting. Compose the entire subject within central half of height: clear head below top quarter, all feet/tail/wings above bottom quarter, with surroundings filling these text-safe spaces. Whole creature visible and identifiable. No text, no frames, no grid, no collage, no extra panels, no watermark. Do not crop out a small existing panel: freshly render its details across the full standalone image.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.143-bashlet-ir": {
+   "file": "wildkin-production/approved/assets/ill.143-bashlet-ir.webp",
+   "sha256": "8948d29a925e951c866b698fdef2abb8e398370a613b5a2dcb783813ef1521ce",
+   "task": "SHEET-39",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-143__ill.143-bashlet-ir.png",
+   "source_sha256": "a75d24d353ca0a647430a5aeea758ec836e71a09c7b7e14c5d54510785a81d11",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-143__ill.143-bashlet-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-143, Bashlet IR, asset ill.143-bashlet-ir. Reference image is a 3x3 sheet. Use ONLY cell 3 (row 1, column 3) as this painting's species/scene reference. Repaint that ONE panel as a complete full-bleed single portrait 5:7 illustration at 1600 x 2240 or the highest native resolution available. Preserve the exact creature anatomy, face, proportions, colors and markings shown in that cell, its environment and its distinct pose. All other cells must be ignored. Dimensional soft toy-like character, richly detailed premium storybook environment, polished cinematic painterly lighting. Compose the entire subject within central half of height: clear head below top quarter, all feet/tail/wings above bottom quarter, with surroundings filling these text-safe spaces. Whole creature visible and identifiable. No text, no frames, no grid, no collage, no extra panels, no watermark. Do not crop out a small existing panel: freshly render its details across the full standalone image.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.144-koirune-ir": {
+   "file": "wildkin-production/approved/assets/ill.144-koirune-ir.webp",
+   "sha256": "ff94bb4d8229ec6a2b4b1eebfaf1debb56e13e2fafb27f7b3ba9239198fbaec3",
+   "task": "SHEET-39",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-144__ill.144-koirune-ir.png",
+   "source_sha256": "a22b1a92e7d15033c39b10b9895a494a4ab771265cc9d3e5fe8c61471218cf78",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-144__ill.144-koirune-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-144, Koirune IR, asset ill.144-koirune-ir. Reference image is a 3x3 sheet. Use ONLY cell 4 (row 2, column 1) as this painting's species/scene reference. Repaint that ONE panel as a complete full-bleed single portrait 5:7 illustration at 1600 x 2240 or the highest native resolution available. Preserve the exact creature anatomy, face, proportions, colors and markings shown in that cell, its environment and its distinct pose. All other cells must be ignored. Dimensional soft toy-like character, richly detailed premium storybook environment, polished cinematic painterly lighting. Compose the entire subject within central half of height: clear head below top quarter, all feet/tail/wings above bottom quarter, with surroundings filling these text-safe spaces. Whole creature visible and identifiable. No text, no frames, no grid, no collage, no extra panels, no watermark. Do not crop out a small existing panel: freshly render its details across the full standalone image.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.145-shelladin-ir": {
+   "file": "wildkin-production/approved/assets/ill.145-shelladin-ir.webp",
+   "sha256": "8c507a1dbf6145b59d064dd043bea746fc60a90e071193ca288fd0ea6d683abe",
+   "task": "SHEET-39",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-145__ill.145-shelladin-ir.png",
+   "source_sha256": "3ae53dd91d914df7ad061a6a8e2a393adda4286e6e8309d7bc6bd53747d452cc",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-145__ill.145-shelladin-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-145, Shelladin IR, asset ill.145-shelladin-ir. Reference is a 3x3 sheet: use ONLY cell 5 (row 2, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.146-frondolin-ir": {
+   "file": "wildkin-production/approved/assets/ill.146-frondolin-ir.webp",
+   "sha256": "a78ad0a03b72d5780e4c9e206436a094b074b87b394691ab0e6099682989397c",
+   "task": "SHEET-39",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-146__ill.146-frondolin-ir.png",
+   "source_sha256": "6cc099d9a1f19d5c534dcb1cc327b49f9e39aa6b29d53d43b236bb185a4cc389",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-146__ill.146-frondolin-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-146, Frondolin IR, asset ill.146-frondolin-ir. Reference is a 3x3 sheet: use ONLY cell 6 (row 2, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.147-candicoil-ir": {
+   "file": "wildkin-production/approved/assets/ill.147-candicoil-ir.webp",
+   "sha256": "31fbbb5e76052bf271e6f8c5933cbe6afbd9f44b797bba2663e1c8eb95f7f784",
+   "task": "SHEET-39",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-147__ill.147-candicoil-ir.png",
+   "source_sha256": "d22c9e46e3a2d0dfa90276bb98e9f976d06349cd9dfdda0a7efe194199879fad",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-147__ill.147-candicoil-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-147, Candicoil IR, asset ill.147-candicoil-ir. Reference is a 3x3 sheet: use ONLY cell 7 (row 3, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.148-astrynx-ir": {
+   "file": "wildkin-production/approved/assets/ill.148-astrynx-ir.webp",
+   "sha256": "26fd5087f8c169baef1764c988e3aaaedcf9d749f956e092d4c0eed4df04303f",
+   "task": "SHEET-39",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-148__ill.148-astrynx-ir.png",
+   "source_sha256": "0f084f4556a59b226f0165fec604d78e3297124b4b52133daf3f6bff59a20273",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-148__ill.148-astrynx-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-148, Astrynx IR, asset ill.148-astrynx-ir. Reference is a 3x3 sheet: use ONLY cell 8 (row 3, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.149-berribat-ir": {
+   "file": "wildkin-production/approved/assets/ill.149-berribat-ir.webp",
+   "sha256": "3daef1c0e03170c43e0713c6175140d3ec840131e821f8b1ff3bd1ea2f2921d1",
+   "task": "SHEET-39",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-149__ill.149-berribat-ir.png",
+   "source_sha256": "63419335f51f8100608465a10400194dbd663834b076e0b410d87dce85f2439f",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-149__ill.149-berribat-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-149, Berribat IR, asset ill.149-berribat-ir. Reference is a 3x3 sheet: use ONLY cell 9 (row 3, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-39--v2.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.150-flapod-ir": {
+   "file": "wildkin-production/approved/assets/ill.150-flapod-ir.webp",
+   "sha256": "7112fad6e5bc95f0a6a25989b5cd0b815ff56dbbf1bde2a5d12b70f99f4bb6b6",
+   "task": "SHEET-40",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-150__ill.150-flapod-ir.png",
+   "source_sha256": "c0facd8ce97273776afb1066cb92f86e7984278e2374899995d8328b95f2c8da",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-150__ill.150-flapod-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-150, Flapod IR, asset ill.150-flapod-ir. Reference is a 3x3 sheet: use ONLY cell 1 (row 1, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.151-cactuft-fa": {
+   "file": "wildkin-production/approved/assets/ill.151-cactuft-fa.webp",
+   "sha256": "5d09a097816cd20c1879d8eacf6b72eb8a0819a28e0cb1849341616451cc2d61",
+   "task": "SHEET-41",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-151__ill.151-cactuft-fa.png",
+   "source_sha256": "59d84bb9980cb2b77bb1aa03bc0985181b503125db37704a99c54cb4e8b8ce71",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-151__ill.151-cactuft-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-151, Cactuft FA, asset ill.151-cactuft-fa. Reference is a 3x3 sheet: use ONLY cell 1 (row 1, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.152-aurorotl-fa": {
+   "file": "wildkin-production/approved/assets/ill.152-aurorotl-fa.webp",
+   "sha256": "bd9bf2148251376aae0e5730fd4093a719165221e06322c2aaab318bf5b0a94b",
+   "task": "SHEET-41",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-152__ill.152-aurorotl-fa.png",
+   "source_sha256": "b83ef98fb48f58bc767c80e6b3bf01130927f555bd55f6dcb8940410ead1f52e",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-152__ill.152-aurorotl-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-152, Aurorotl FA, asset ill.152-aurorotl-fa. Reference is a 3x3 sheet: use ONLY cell 2 (row 1, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.153-fortisaur-fa": {
+   "file": "wildkin-production/approved/assets/ill.153-fortisaur-fa.webp",
+   "sha256": "b69e61ceaa0b46742805103869b97df0127fd6e38f4d1df3ffbf5cef6b96174a",
+   "task": "SHEET-41",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-153__ill.153-fortisaur-fa.png",
+   "source_sha256": "31a28e546432b9051f0c4e1604255caaf1ee50ab83408f0924efa29c09ea1bda",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-153__ill.153-fortisaur-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-153, Fortisaur FA, asset ill.153-fortisaur-fa. Reference is a 3x3 sheet: use ONLY cell 3 (row 1, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.154-koirune-fa": {
+   "file": "wildkin-production/approved/assets/ill.154-koirune-fa.webp",
+   "sha256": "d75a337c33ea15d46749a159f218fe0a09d2cc626d0ad07a62b6de0332ae29fb",
+   "task": "SHEET-41",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-154__ill.154-koirune-fa.png",
+   "source_sha256": "f46084509498463c3812c3205b91ae6bb8cd8f6e74f4f3000f58affad8199057",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-154__ill.154-koirune-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-154, Koirune FA, asset ill.154-koirune-fa. Reference is a 3x3 sheet: use ONLY cell 4 (row 2, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.155-aegisopod-fa": {
+   "file": "wildkin-production/approved/assets/ill.155-aegisopod-fa.webp",
+   "sha256": "5efff64e99b7199dd092e6aaa0c6c572159d27597b760d06c2a8a8b1e18c11c2",
+   "task": "SHEET-41",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-155__ill.155-aegisopod-fa.png",
+   "source_sha256": "3c0565b84ce5122a6c145e6cd5b9e1779f34cb4ec3de5ab28e7bc4e7fcc868be",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-155__ill.155-aegisopod-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-155, Aegisopod FA, asset ill.155-aegisopod-fa. Reference is a 3x3 sheet: use ONLY cell 5 (row 2, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.156-canopang-fa": {
+   "file": "wildkin-production/approved/assets/ill.156-canopang-fa.webp",
+   "sha256": "28d0230bf76c39062f2bcc0e5cc159ff3d5055c0c54726c1f575f487239e7eb3",
+   "task": "SHEET-41",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-156__ill.156-canopang-fa.png",
+   "source_sha256": "c0fc6bf519ca96107dad80c54af9b0dab3bbacc7d3f5a1c972ef60774c5db771",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-156__ill.156-canopang-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-156, Canopang FA, asset ill.156-canopang-fa. Reference is a 3x3 sheet: use ONLY cell 6 (row 2, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.157-spiramel-fa": {
+   "file": "wildkin-production/approved/assets/ill.157-spiramel-fa.webp",
+   "sha256": "6143847ad7de1509366184a3c3f9b96b6b14e85bbeb87727ab33cf3fb13554f8",
+   "task": "SHEET-41",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-157__ill.157-spiramel-fa.png",
+   "source_sha256": "094d0ed268b83e0687cce9a1cee4a24f601697e09d9cf9a9d725ec267d203a79",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-157__ill.157-spiramel-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-157, Spiramel FA, asset ill.157-spiramel-fa. Reference is a 3x3 sheet: use ONLY cell 7 (row 3, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.158-astrynx-fa": {
+   "file": "wildkin-production/approved/assets/ill.158-astrynx-fa.webp",
+   "sha256": "a39e2d664c7e4ea937477106653efc1388d6efd4834199bbc82149e90636d8d7",
+   "task": "SHEET-41",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-158__ill.158-astrynx-fa.png",
+   "source_sha256": "b65030fdead372fb0ead4e545f421981c409c5883116e23a46e3378c8007b4dd",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-158__ill.158-astrynx-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-158, Astrynx FA, asset ill.158-astrynx-fa. Reference is a 3x3 sheet: use ONLY cell 8 (row 3, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.159-pompyre-fa": {
+   "file": "wildkin-production/approved/assets/ill.159-pompyre-fa.webp",
+   "sha256": "676becb6d33d88d373a27c46480c190fafaa0c4ce120b22a17515228d7aa88b1",
+   "task": "SHEET-41",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-159__ill.159-pompyre-fa.png",
+   "source_sha256": "fefdb25013be21f612edaa96e29c7855dad34ee325b56b8561c1d78edbeceb03",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-159__ill.159-pompyre-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-159, Pompyre FA, asset ill.159-pompyre-fa. Reference is a 3x3 sheet: use ONLY cell 9 (row 3, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-41.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.160-flapod-fa": {
+   "file": "wildkin-production/approved/assets/ill.160-flapod-fa.webp",
+   "sha256": "f25a513b0d6725f8eec1c61e6f9601f92fc3bc3a3028263c7ebce504b46240c3",
+   "task": "SHEET-42",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-160__ill.160-flapod-fa.png",
+   "source_sha256": "dab1428ba940c7fac6ab0eb8b6f3882fb2a2466b181fbe12f34c4d06f031e9f4",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-160__ill.160-flapod-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-160, Flapod FA, asset ill.160-flapod-fa. Reference is a 3x3 sheet: use ONLY cell 1 (row 1, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-42.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.161-nimbusail-ir": {
+   "file": "wildkin-production/approved/assets/ill.161-nimbusail-ir.webp",
+   "sha256": "7a3ba508c257f0ff57f00c55dc5508c94611daddd9b551b7a66999a64b271051",
+   "task": "SHEET-40",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-161__ill.161-nimbusail-ir.png",
+   "source_sha256": "4a6c82179f8c492af1d7245e90d157c2deb6d359a8ec1cae2581bcaf9b55b639",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-161__ill.161-nimbusail-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-161, Nimbusail IR, asset ill.161-nimbusail-ir. Reference is a 3x3 sheet: use ONLY cell 2 (row 1, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.162-veilmora-ir": {
+   "file": "wildkin-production/approved/assets/ill.162-veilmora-ir.webp",
+   "sha256": "d1f16721b3739b5832d594fed209fe72e1062ffbcffb12968849f5b49b13b7b9",
+   "task": "SHEET-40",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-162__ill.162-veilmora-ir.png",
+   "source_sha256": "549710ea7ed9e58b7b9211b8c0b677d2fc8be1742669b2f2f5e1866683fbbd01",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-162__ill.162-veilmora-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-162, Veilmora IR, asset ill.162-veilmora-ir. Reference is a 3x3 sheet: use ONLY cell 3 (row 1, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.163-ferradon-ir": {
+   "file": "wildkin-production/approved/assets/ill.163-ferradon-ir.webp",
+   "sha256": "0d94a70761bf2e05000dc905bac49436d0cfaf56e4e9f7cd28088bb86211c226",
+   "task": "SHEET-40",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-163__ill.163-ferradon-ir.png",
+   "source_sha256": "2337ca5fb02109219c155eb133e5d2da0eaba6e632f0796df754f595ff307567",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-163__ill.163-ferradon-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-163, Ferradon IR, asset ill.163-ferradon-ir. Reference is a 3x3 sheet: use ONLY cell 4 (row 2, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.164-fablehorn-ir": {
+   "file": "wildkin-production/approved/assets/ill.164-fablehorn-ir.webp",
+   "sha256": "102fb8df949fe567f808f04b6e093460a215cda1ed334f3117657f196bbbf24c",
+   "task": "SHEET-40",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-164__ill.164-fablehorn-ir.png",
+   "source_sha256": "0be6db471214f8aa277f07d4e7b61547ef9041dc24e1bee49b035df591d4b807",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-164__ill.164-fablehorn-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-164, Fablehorn IR, asset ill.164-fablehorn-ir. Reference is a 3x3 sheet: use ONLY cell 5 (row 2, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.165-bramblebuck-ir": {
+   "file": "wildkin-production/approved/assets/ill.165-bramblebuck-ir.webp",
+   "sha256": "9aa5146c566c270ddcc1aee3645a273cfd28a5746a07b34fe48ec79ddd260854",
+   "task": "SHEET-40",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-165__ill.165-bramblebuck-ir.png",
+   "source_sha256": "316abed0221bd9b73b9c989673f145a167d7b0b92b113b6d42097a182feb95ab",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-165__ill.165-bramblebuck-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-165, Bramblebuck IR, asset ill.165-bramblebuck-ir. Reference is a 3x3 sheet: use ONLY cell 6 (row 2, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.166-corallume-ir": {
+   "file": "wildkin-production/approved/assets/ill.166-corallume-ir.webp",
+   "sha256": "82a0731fb1b2c3cdacc45b1d8699d12af812d441334bd04097cb418f63c8dc14",
+   "task": "SHEET-40",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-166__ill.166-corallume-ir.png",
+   "source_sha256": "fad416f746f7ed976833895a2fe943723be1a6703bd1c8e770aa0b1b0f0971b9",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-166__ill.166-corallume-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-166, Corallume IR, asset ill.166-corallume-ir. Reference is a 3x3 sheet: use ONLY cell 7 (row 3, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.167-cometrail-ir": {
+   "file": "wildkin-production/approved/assets/ill.167-cometrail-ir.webp",
+   "sha256": "ab1014ce40d208fdd77d8e2b7aa5ec8e3e70f3d31dbcae21efc0b5fc93faf4bc",
+   "task": "SHEET-40",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-167__ill.167-cometrail-ir.png",
+   "source_sha256": "02cc3e0810e086a077a04c0f4a52c0d306af5260c296f62a2b1c9a83db95fe31",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-167__ill.167-cometrail-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-167, Cometrail IR, asset ill.167-cometrail-ir. Reference is a 3x3 sheet: use ONLY cell 8 (row 3, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.168-puffluff-ir": {
+   "file": "wildkin-production/approved/assets/ill.168-puffluff-ir.webp",
+   "sha256": "ba3f6dff7efcf7b33449d4266ee62212588fb62eca672b347427134dab8f94ef",
+   "task": "SHEET-40",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-168__ill.168-puffluff-ir.png",
+   "source_sha256": "c142bfb9d121f091eb7aa990984cff1aff54bb956dc6bef8c83fc9c1fa53c8ba",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-168__ill.168-puffluff-ir.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-168, Puffluff IR, asset ill.168-puffluff-ir. Reference is a 3x3 sheet: use ONLY cell 9 (row 3, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-40.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.169-professor-maren-vale-fa": {
+   "file": "wildkin-production/approved/assets/ill.169-professor-maren-vale-fa.webp",
+   "sha256": "f0d2c8079186d29c537021435d144d45aa79fd875da119a0c7d9771b4a360b07",
+   "task": "SHEET-42",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-169__ill.169-professor-maren-vale-fa.png",
+   "source_sha256": "eb68fb2605804c8a2b76b09c54959c35016b7f7c6a95743e023d7741aa3df1c8",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-169__ill.169-professor-maren-vale-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-169, Professor Maren Vale FA, asset ill.169-professor-maren-vale-fa. Reference is a 3x3 sheet: use ONLY cell 2 (row 1, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-42.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.170-june-kestrel-fa": {
+   "file": "wildkin-production/approved/assets/ill.170-june-kestrel-fa.webp",
+   "sha256": "8ded0918f86ccf9576c881f90999de712608a265713ee0423db190b890fdeacf",
+   "task": "SHEET-42",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-170__ill.170-june-kestrel-fa.png",
+   "source_sha256": "ec48c7141815a5d55833c47b9899556d3f5e45549d65ffa5639a96050a0e4f91",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-170__ill.170-june-kestrel-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-170, June Kestrel FA, asset ill.170-june-kestrel-fa. Reference is a 3x3 sheet: use ONLY cell 3 (row 1, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-42.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.171-sel-veyra-fa": {
+   "file": "wildkin-production/approved/assets/ill.171-sel-veyra-fa.webp",
+   "sha256": "0abf6bf6341037a2daf5ab8928fa799d287824d66dea7a82b3dcc9708ebc053f",
+   "task": "SHEET-42",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-171__ill.171-sel-veyra-fa.png",
+   "source_sha256": "ca03198f3198b65543b8e34fe879603dd91a0e906b8ad62dbb8d03c173424a02",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-171__ill.171-sel-veyra-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-171, Sel Veyra FA, asset ill.171-sel-veyra-fa. Reference is a 3x3 sheet: use ONLY cell 4 (row 2, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-42.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.172-iris-shade-fa": {
+   "file": "wildkin-production/approved/assets/ill.172-iris-shade-fa.webp",
+   "sha256": "cfc263aa7bc24a0a94118b5f6451b97ab95e45ebf70fc7556973d513b8adf1d8",
+   "task": "SHEET-42",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-172__ill.172-iris-shade-fa.png",
+   "source_sha256": "d3fa574634bdf989111021ae748eefbd77213767d9cc49d0ce424c52969cf9a2",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-172__ill.172-iris-shade-fa.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-172, Iris Shade FA, asset ill.172-iris-shade-fa. Reference is a 3x3 sheet: use ONLY cell 5 (row 2, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-42.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.173-cactuft-sir": {
+   "file": "wildkin-production/approved/assets/ill.173-cactuft-sir.webp",
+   "sha256": "64acd030cbb82729540b957f2b8b085fa61419277983d8333dd506fde8d2005b",
+   "task": "SIR-173",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-173__ill.173-cactuft-sir.png",
+   "source_sha256": "4e5c092bc951c5d5e293904d209335e8636a4a655f4646ff509aa18b1b2a2997",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-173__ill.173-cactuft-sir.png",
+    "metadata": {
+     "generation": "preserved previously generated individual SIR; not regenerated",
+     "source_reference": "SIR-173.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "below_original_SIR_print_requirement",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     1500,
+     2100
+    ]
+   },
+   "warnings_accepted": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ]
+  },
+  "ill.174-nimbusail-sir": {
+   "file": "wildkin-production/approved/assets/ill.174-nimbusail-sir.webp",
+   "sha256": "0b4f97b8047667b3c8d021db7333b600bdcd98627300f0cb3959b8aba394ce82",
+   "task": "SIR-174",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-174__ill.174-nimbusail-sir.png",
+   "source_sha256": "7e39a9f3c919df010dd84275913567252fb0ac90a4ae1c8600384ca69b8fe5cd",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-174__ill.174-nimbusail-sir.png",
+    "metadata": {
+     "generation": "preserved previously generated individual SIR; not regenerated",
+     "source_reference": "SIR-174.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "below_original_SIR_print_requirement",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     1500,
+     2100
+    ]
+   },
+   "warnings_accepted": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ]
+  },
+  "ill.175-june-kestrel-sir": {
+   "file": "wildkin-production/approved/assets/ill.175-june-kestrel-sir.webp",
+   "sha256": "430b699d59f844fa839f2f3c6df68cd134b53a501b2af165c70719cb8aeb26a2",
+   "task": "SIR-175",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-175__ill.175-june-kestrel-sir.png",
+   "source_sha256": "e8e45d0c962ea373271a7f3933e7ec664b433515743667323a99f39b7ac89836",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-175__ill.175-june-kestrel-sir.png",
+    "metadata": {
+     "generation": "preserved previously generated individual SIR; not regenerated",
+     "source_reference": "SIR-175.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "below_original_SIR_print_requirement",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     1500,
+     2100
+    ]
+   },
+   "warnings_accepted": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ]
+  },
+  "ill.176-sel-veyra-sir": {
+   "file": "wildkin-production/approved/assets/ill.176-sel-veyra-sir.webp",
+   "sha256": "533bd2d34812ab740acd69675a88291e97f0595720fa6f015697fbf842b87992",
+   "task": "SIR-176",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-176__ill.176-sel-veyra-sir.png",
+   "source_sha256": "cc2f4a49f9b9702c5ce23f413df64eb979c3286847aed7f9d101d0643b4ac540",
+   "approved": "2026-10-15T11:34:29Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-176__ill.176-sel-veyra-sir.png",
+    "metadata": {
+     "generation": "preserved previously generated individual SIR; not regenerated",
+     "source_reference": "SIR-176.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "below_original_SIR_print_requirement",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     1500,
+     2100
+    ]
+   },
+   "warnings_accepted": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ]
+  },
+  "ill.177-clasped-aegisopod": {
+   "file": "wildkin-production/approved/assets/ill.177-clasped-aegisopod.webp",
+   "sha256": "15bd6b7ef86ec6d9239f9041f879531d3f29395bbe8ebbe60de290313c6905ed",
+   "task": "SHEET-43",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-177__ill.177-clasped-aegisopod.png",
+   "source_sha256": "c119152a60c6310db89a99412c2e171f1633153247f888468b2052fdd2de0cda",
+   "approved": "2026-10-15T11:34:30Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-177__ill.177-clasped-aegisopod.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-177, Clasped Aegisopod, asset ill.177-clasped-aegisopod. Reference is a 3x3 sheet: use ONLY cell 1 (row 1, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-43.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.178-clasped-pompyre": {
+   "file": "wildkin-production/approved/assets/ill.178-clasped-pompyre.webp",
+   "sha256": "3ecd0b22b39933c6fa07e4c3cb142ae63b7fb1354c592360a07db14b2c602e1d",
+   "task": "SHEET-43",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-178__ill.178-clasped-pompyre.png",
+   "source_sha256": "6174beebd4b14b8ee56bf6e6aca6d324b1db0929043027d6cfc96ebb7f807b8f",
+   "approved": "2026-10-15T11:34:30Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-178__ill.178-clasped-pompyre.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-178, Clasped Pompyre, asset ill.178-clasped-pompyre. Reference is a 3x3 sheet: use ONLY cell 2 (row 1, column 2) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-43.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.179-clasped-ferradon": {
+   "file": "wildkin-production/approved/assets/ill.179-clasped-ferradon.webp",
+   "sha256": "963019722aa5029af2444e26766562a433b266b868bba3b2faa54f9a72a66c64",
+   "task": "SHEET-43",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-179__ill.179-clasped-ferradon.png",
+   "source_sha256": "56791358eb070f06d2356166b1247d51df552ff3d76d0e0760ec1012592a52c6",
+   "approved": "2026-10-15T11:34:30Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-179__ill.179-clasped-ferradon.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-179, Clasped Ferradon, asset ill.179-clasped-ferradon. Reference is a 3x3 sheet: use ONLY cell 3 (row 1, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-43.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.180-clasped-veilmora": {
+   "file": "wildkin-production/approved/assets/ill.180-clasped-veilmora.webp",
+   "sha256": "a53caa82abea2f4f2c9b4e625137b0c59667fe6b2ae4ff276726cd746d4cca5f",
+   "task": "SHEET-43",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/premium-individuals/WK-S001-180__ill.180-clasped-veilmora.png",
+   "source_sha256": "6fb6a78ec50debc01d59476ea0ad8df4c7a1b7bbce44b7eeae17c32b864743df",
+   "approved": "2026-10-15T11:34:30Z",
+   "approved_by": "owner (asked Claude Code to approve the single premium paintings, SIRs accepted below the print minimum, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "incoming/premium-individuals/art/WK-S001-180__ill.180-clasped-veilmora.png",
+    "metadata": {
+     "generation": "built-in imagegen; individual full-frame generation",
+     "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-180, Clasped Veilmora, asset ill.180-clasped-veilmora. Reference is a 3x3 sheet: use ONLY cell 4 (row 2, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+     "source_reference": "SHEET-43.png",
+     "native_dimensions": [
+      1060,
+      1484
+     ],
+     "resolution_status": "pass",
+     "visual_review": "reviewed; final card-overlay check required during integration"
+    }
+   },
+   "checks": {
+    "size": [
+     1060,
+     1484
+    ],
+    "min_px": [
+     700,
+     980
+    ]
+   },
+   "warnings_accepted": []
   }
  }
 }

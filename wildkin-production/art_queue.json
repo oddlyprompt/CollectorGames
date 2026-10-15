@@ -4291,12 +4291,12 @@
    ],
    "aspect": "5:7",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4369,12 +4369,12 @@
    ],
    "aspect": "5:7",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4447,12 +4447,12 @@
    ],
    "aspect": "5:7",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4521,12 +4521,12 @@
    ],
    "aspect": "5:7",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 5,
     "required_cells": 5
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4594,12 +4594,12 @@
    ],
    "aspect": "5:7",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 4,
     "required_cells": 4
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4624,12 +4624,12 @@
    "aspect": "5:7",
    "identity_status": "canon subject",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 1,
     "required_cells": 1
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4654,12 +4654,12 @@
    "aspect": "5:7",
    "identity_status": "canon subject",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 1,
     "required_cells": 1
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4684,12 +4684,12 @@
    "aspect": "5:7",
    "identity_status": "canon subject",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 1,
     "required_cells": 1
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4714,12 +4714,12 @@
    "aspect": "5:7",
    "identity_status": "canon subject",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 1,
     "required_cells": 1
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   }
  ]
