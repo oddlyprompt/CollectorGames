@@ -71,6 +71,8 @@ Sheets are generated elsewhere as 3x3 grids with thin dark gutters and no text. 
 
 ## Design documents
 - `design/wildkin-v1-production-bible.md`: the owner's Version 1 production bible (180-card First Bond roster, 43-sheet art plan). Source of truth for Wildkin; supersedes the roster numbers below where they differ.
+- `design/tcg2/brief.md`: the owner's brief for the second card game (Land versus Sea high fantasy, launching at its 10th anniversary). `design/tcg2/proposals.md` answers its open decisions as proposals; nothing is approved or built yet, and no cards may be generated before the owner approves the systems.
+- `design/platform-direction.md`: one app hosting four card games (proposal).
 - `design/wildkin-universe.md`: the owner's locked plan for the Wildkin creature roster (150 roots, 245 forms, evolution families, affinities, art sheet plan) and the decisions still open. Read it before touching Wildkin species, cards or art.
 
 ## Source art
