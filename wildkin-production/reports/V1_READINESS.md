@@ -4,7 +4,7 @@ Date: 2026-10-13. Manifest 1.0.0. Written by Claude Code after milestones A to D
 
 ## Short answer
 
-The game machinery for Version 1 is done and tested. First Bond (Set 001, 180 cards) has replaced the prototype set in the game. The art pipeline works. **Version 1 is not ready to ship** because of three gaps the code cannot close: art (87 of 180 cards are finished after SOL's first delivery), card rules (all provisional), and owner confirmations (inferred families and provisional affinities).
+The game machinery for Version 1 is done and tested. First Bond (Set 001, 180 cards) has replaced the prototype set in the game. The art pipeline works. **Version 1 is not ready to ship** because of three gaps the code cannot close: art (131 of 180 cards finished; all 40 premium cards still need full-size art), card rules (all provisional), and owner confirmations (inferred families and provisional affinities).
 
 ## Milestones
 
@@ -14,7 +14,7 @@ The game machinery for Version 1 is done and tested. First Bond (Set 001, 180 ca
 | B. Set 001 data system and stable IDs | **Done** | Cards come only from the manifest. Card identity = `WK-S001-NNN`, engine id = 1000 + number, the same in every world. Premium prints share their base card's identity |
 | C. Renderer, packs and gameplay on the new set | **Done** | Frames for creatures, allies, gear, biomes, tactics, Essence, IR, FA, SIR, Clasped. 6/2/1/1 packs with manifest odds. Market, grading, metagame, bans, saves all run on First Bond |
 | D. Automated art intake | **Done** | `tools/wildkin_art.py` (check, approve, reject, ingest, legacy) and `.github/workflows/wildkin-art.yml`. `tools/test_art_pipeline.py` proves it on synthetic deliveries |
-| E. Integrate SOL artwork | **In progress** | 2026-10-14: SOL delivered 44 sheet files. 27 sheets passed and were approved (222 pieces), so 87 cards have finished art. Sheets 04, 23, 24 passed with warnings and wait for a look; 16, 30, 31 failed (clipping, wrong screen shade); 15, 37-43 and the four SIR singles are not delivered yet |
+| E. Integrate SOL artwork | **Done for the base set; premium pending** | 2026-10-14 and 2026-10-15: 36 sheets approved (294 pieces). Every base card has finished art: all 74 creatures, 18 allies, 18 gear, 9 biomes and 12 tactics (Essence is drawn by the frame). The nine premium images (sheets 39-43, SIR 173-176) arrived at 1060 x 1484, below the 2100 x 2940 / 1500 x 2100 minimum, and are filed in `rejected/` until full-size versions come |
 | F. Outstanding assets and this assessment | **Done** | `outstanding_assets.md`, this file |
 
 ## What was tested (and passed on 2026-10-13)
@@ -32,7 +32,7 @@ The game machinery for Version 1 is done and tested. First Bond (Set 001, 180 ca
 
 ## Blockers for shipping Version 1
 
-1. **Art.** 84 cards wait for art: 14 creatures (sheets 04, 15, 16, 23, 24), all 18 allies (30, 31), all 12 tactics (37, 38) and all 40 premium cards (39-43 and the SIR singles). See `outstanding_assets.md`.
+1. **Art.** The 40 premium cards wait for art: SOL's versions are too small (1060 x 1484). Sheets 39-43 need at least 2100 x 2940 and SIR 173-176 at least 1500 x 2100, made at that size (not upscaled). Every base card is done. See `outstanding_assets.md`.
 2. **Designs.** SOL decides the art direction from its earlier Wildkin work; no owner concept approval is needed. The first approved sheet of each subject becomes its reference.
 3. **Owner confirmations** (`reconciliation.md`): the provisional affinities of 51 creatures, the order of 173-176, 177-180 and 075-092, mascot fandom ranking, which stage the existing koi sheet is.
 4. **Card rules.** Every attack, HP value, weakness and effect is a generic placeholder so the simulation runs, and cards say "Provisional rules". Real rules need a design pass. When they exist, they go into `manifest.json` and nothing else changes.

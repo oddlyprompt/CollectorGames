@@ -134,7 +134,7 @@ def write_report_md(task, rep, path):
     open(path,'w').write('\n'.join(L)+'\n')
 
 def cmd_check(args, auto=False):
-    Q=queue(); I=intake(); os.makedirs(INC,exist_ok=True); files=sorted(f for f in os.listdir(INC) if not f.startswith('.') and not f.endswith('.json') and f!='README.md'); bad=0; done=[]
+    Q=queue(); I=intake(); os.makedirs(INC,exist_ok=True); files=sorted(f for f in os.listdir(INC) if not f.startswith('.') and not f.endswith('.json') and not f.endswith('.md')); bad=0; done=[]
     for f in files:
         m=FNAME.match(f); path=os.path.join(INC,f)
         if not m or m.group(1) not in Q:

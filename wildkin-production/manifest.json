@@ -10189,7 +10189,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.008-koilet.jumping": {
    "asset_id": "cut.008-koilet.jumping",
@@ -10206,7 +10206,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.008-koilet.sitting": {
    "asset_id": "cut.008-koilet.sitting",
@@ -10223,7 +10223,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.009-runakoi.standing": {
    "asset_id": "cut.009-runakoi.standing",
@@ -10242,7 +10242,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.009-runakoi.jumping": {
    "asset_id": "cut.009-runakoi.jumping",
@@ -10259,7 +10259,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.009-runakoi.sitting": {
    "asset_id": "cut.009-runakoi.sitting",
@@ -10276,7 +10276,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.010-koirune.standing": {
    "asset_id": "cut.010-koirune.standing",
@@ -10295,7 +10295,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.010-koirune.jumping": {
    "asset_id": "cut.010-koirune.jumping",
@@ -10312,7 +10312,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.010-koirune.sitting": {
    "asset_id": "cut.010-koirune.sitting",
@@ -10329,7 +10329,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.011-rolyte.standing": {
    "asset_id": "cut.011-rolyte.standing",
@@ -11928,7 +11928,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.036-rivbit.jumping": {
    "asset_id": "cut.036-rivbit.jumping",
@@ -11945,7 +11945,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.036-rivbit.sitting": {
    "asset_id": "cut.036-rivbit.sitting",
@@ -11962,7 +11962,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.037-boltusk.standing": {
    "asset_id": "cut.037-boltusk.standing",
@@ -11981,7 +11981,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.037-boltusk.jumping": {
    "asset_id": "cut.037-boltusk.jumping",
@@ -11998,7 +11998,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.037-boltusk.sitting": {
    "asset_id": "cut.037-boltusk.sitting",
@@ -12015,7 +12015,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.038-ferradon.standing": {
    "asset_id": "cut.038-ferradon.standing",
@@ -12034,7 +12034,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.038-ferradon.jumping": {
    "asset_id": "cut.038-ferradon.jumping",
@@ -12051,7 +12051,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.038-ferradon.sitting": {
    "asset_id": "cut.038-ferradon.sitting",
@@ -12068,7 +12068,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.039-pebblamb.standing": {
    "asset_id": "cut.039-pebblamb.standing",
@@ -12087,7 +12087,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.039-pebblamb.jumping": {
    "asset_id": "cut.039-pebblamb.jumping",
@@ -12104,7 +12104,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.039-pebblamb.sitting": {
    "asset_id": "cut.039-pebblamb.sitting",
@@ -12121,7 +12121,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.040-cairnram.standing": {
    "asset_id": "cut.040-cairnram.standing",
@@ -12140,7 +12140,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.040-cairnram.jumping": {
    "asset_id": "cut.040-cairnram.jumping",
@@ -12157,7 +12157,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.040-cairnram.sitting": {
    "asset_id": "cut.040-cairnram.sitting",
@@ -12174,7 +12174,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.041-monolox.standing": {
    "asset_id": "cut.041-monolox.standing",
@@ -12193,7 +12193,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.041-monolox.jumping": {
    "asset_id": "cut.041-monolox.jumping",
@@ -12210,7 +12210,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.041-monolox.sitting": {
    "asset_id": "cut.041-monolox.sitting",
@@ -12227,7 +12227,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.042-quibbit.standing": {
    "asset_id": "cut.042-quibbit.standing",
@@ -12935,7 +12935,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.055-dewink.jumping": {
    "asset_id": "cut.055-dewink.jumping",
@@ -12952,7 +12952,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.055-dewink.sitting": {
    "asset_id": "cut.055-dewink.sitting",
@@ -12969,7 +12969,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.056-bloomble.standing": {
    "asset_id": "cut.056-bloomble.standing",
@@ -12988,7 +12988,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.056-bloomble.jumping": {
    "asset_id": "cut.056-bloomble.jumping",
@@ -13005,7 +13005,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.056-bloomble.sitting": {
    "asset_id": "cut.056-bloomble.sitting",
@@ -13022,7 +13022,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.057-fernibble.standing": {
    "asset_id": "cut.057-fernibble.standing",
@@ -13041,7 +13041,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.057-fernibble.jumping": {
    "asset_id": "cut.057-fernibble.jumping",
@@ -13058,7 +13058,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.057-fernibble.sitting": {
    "asset_id": "cut.057-fernibble.sitting",
@@ -13075,7 +13075,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.058-acornox.standing": {
    "asset_id": "cut.058-acornox.standing",
@@ -13094,7 +13094,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.058-acornox.jumping": {
    "asset_id": "cut.058-acornox.jumping",
@@ -13111,7 +13111,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.058-acornox.sitting": {
    "asset_id": "cut.058-acornox.sitting",
@@ -13128,7 +13128,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.059-shelloop.standing": {
    "asset_id": "cut.059-shelloop.standing",
@@ -13147,7 +13147,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.059-shelloop.jumping": {
    "asset_id": "cut.059-shelloop.jumping",
@@ -13164,7 +13164,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.059-shelloop.sitting": {
    "asset_id": "cut.059-shelloop.sitting",
@@ -13181,7 +13181,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.060-driftail.standing": {
    "asset_id": "cut.060-driftail.standing",
@@ -13995,7 +13995,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.076-june-kestrel.portrait": {
    "asset_id": "cut.076-june-kestrel.portrait",
@@ -14014,7 +14014,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.077-warden-sorrel-pike.portrait": {
    "asset_id": "cut.077-warden-sorrel-pike.portrait",
@@ -14033,7 +14033,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.078-toma-reed.portrait": {
    "asset_id": "cut.078-toma-reed.portrait",
@@ -14052,7 +14052,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.079-lita-moss.portrait": {
    "asset_id": "cut.079-lita-moss.portrait",
@@ -14071,7 +14071,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.080-nessa-flint.portrait": {
    "asset_id": "cut.080-nessa-flint.portrait",
@@ -14090,7 +14090,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.081-elder-oren.portrait": {
    "asset_id": "cut.081-elder-oren.portrait",
@@ -14109,7 +14109,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.082-pip-rowan.portrait": {
    "asset_id": "cut.082-pip-rowan.portrait",
@@ -14128,7 +14128,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.083-archivist-sera-wynn.portrait": {
    "asset_id": "cut.083-archivist-sera-wynn.portrait",
@@ -14147,7 +14147,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.084-renn-calder.portrait": {
    "asset_id": "cut.084-renn-calder.portrait",
@@ -14166,7 +14166,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.085-mira-quill.portrait": {
    "asset_id": "cut.085-mira-quill.portrait",
@@ -14185,7 +14185,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.086-sel-veyra.portrait": {
    "asset_id": "cut.086-sel-veyra.portrait",
@@ -14204,7 +14204,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.087-cass-rell.portrait": {
    "asset_id": "cut.087-cass-rell.portrait",
@@ -14223,7 +14223,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.088-dr-cyl-vane.portrait": {
    "asset_id": "cut.088-dr-cyl-vane.portrait",
@@ -14242,7 +14242,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.089-marshal-rook.portrait": {
    "asset_id": "cut.089-marshal-rook.portrait",
@@ -14261,7 +14261,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.090-iris-shade.portrait": {
    "asset_id": "cut.090-iris-shade.portrait",
@@ -14280,7 +14280,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.091-dex-harrow.portrait": {
    "asset_id": "cut.091-dex-harrow.portrait",
@@ -14299,7 +14299,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "cut.092-brin-hollow.portrait": {
    "asset_id": "cut.092-brin-hollow.portrait",
@@ -14318,7 +14318,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "obj.093-bond-charm": {
    "asset_id": "obj.093-bond-charm",
@@ -14803,7 +14803,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.121-call-of-the-wild": {
    "asset_id": "ill.121-call-of-the-wild",
@@ -14820,7 +14820,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.122-sanctuary-rescue": {
    "asset_id": "ill.122-sanctuary-rescue",
@@ -14837,7 +14837,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.123-keepers-lesson": {
    "asset_id": "ill.123-keepers-lesson",
@@ -14854,7 +14854,7 @@
      "cell": 4
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.124-pack-rally": {
    "asset_id": "ill.124-pack-rally",
@@ -14871,7 +14871,7 @@
      "cell": 5
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.125-quick-retreat": {
    "asset_id": "ill.125-quick-retreat",
@@ -14888,7 +14888,7 @@
      "cell": 6
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.126-shared-instinct": {
    "asset_id": "ill.126-shared-instinct",
@@ -14905,7 +14905,7 @@
      "cell": 7
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.127-veyra-directive": {
    "asset_id": "ill.127-veyra-directive",
@@ -14922,7 +14922,7 @@
      "cell": 8
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.128-forced-capture": {
    "asset_id": "ill.128-forced-capture",
@@ -14939,7 +14939,7 @@
      "cell": 9
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.129-override-signal": {
    "asset_id": "ill.129-override-signal",
@@ -14956,7 +14956,7 @@
      "cell": 1
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.130-break-the-clasp": {
    "asset_id": "ill.130-break-the-clasp",
@@ -14973,7 +14973,7 @@
      "cell": 2
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.131-stand-together": {
    "asset_id": "ill.131-stand-together",
@@ -14990,7 +14990,7 @@
      "cell": 3
     }
    ],
-   "status": "missing"
+   "status": "approved"
   },
   "ill.141-cactuft-ir": {
    "asset_id": "ill.141-cactuft-ir",

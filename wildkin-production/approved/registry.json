@@ -9255,6 +9255,2561 @@
     ]
    },
    "warnings_accepted": []
+  },
+  "cut.008-koilet.standing": {
+   "file": "wildkin-production/approved/assets/cut.008-koilet.standing.webp",
+   "sha256": "1ae73c46fba612ef3ebc9c7d2c92254cef278e669b8707f2a0282244163f928b",
+   "task": "SHEET-04",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     109,
+     112,
+     105,
+     101
+    ],
+    "coverage": 0.1142,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 1
+   },
+   "warnings_accepted": [
+    "1 stray mark(s) removed (\"!\" bursts, sparkles); check the piece"
+   ]
+  },
+  "cut.008-koilet.jumping": {
+   "file": "wildkin-production/approved/assets/cut.008-koilet.jumping.webp",
+   "sha256": "d8bc81132795726c4adc61636bdaae665ffa04c9c20d82619e4e4a643439e507",
+   "task": "SHEET-04",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     86,
+     99,
+     86,
+     121
+    ],
+    "coverage": 0.1257,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.008-koilet.sitting": {
+   "file": "wildkin-production/approved/assets/cut.008-koilet.sitting.webp",
+   "sha256": "363a3428c8561113a44658d06f0ec8672dbdee58f1563a77a221d67143f2613a",
+   "task": "SHEET-04",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     96,
+     107,
+     117,
+     94
+    ],
+    "coverage": 0.119,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.009-runakoi.standing": {
+   "file": "wildkin-production/approved/assets/cut.009-runakoi.standing.webp",
+   "sha256": "7ff05034b3c2a268c8f5cd37fd50a8ee23826ff8ec4176ffdeed30a15c976f3f",
+   "task": "SHEET-04",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     89,
+     89,
+     85,
+     91
+    ],
+    "coverage": 0.1596,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.009-runakoi.jumping": {
+   "file": "wildkin-production/approved/assets/cut.009-runakoi.jumping.webp",
+   "sha256": "e5b70f05f7fe2c64c5f7045c63a9ebadcc04e451f0e055f6d52189d79f20a61b",
+   "task": "SHEET-04",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     71,
+     79,
+     75,
+     110
+    ],
+    "coverage": 0.1553,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.009-runakoi.sitting": {
+   "file": "wildkin-production/approved/assets/cut.009-runakoi.sitting.webp",
+   "sha256": "9461422f80daf213d77c39882e6e6c65aa10735d8874d62c5c941c19ed3ade12",
+   "task": "SHEET-04",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     84,
+     85,
+     97,
+     87
+    ],
+    "coverage": 0.1557,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.010-koirune.standing": {
+   "file": "wildkin-production/approved/assets/cut.010-koirune.standing.webp",
+   "sha256": "f6277205f9c5226070221fc9d5138b0225b6beadf7257b177e569f6cd240e6c2",
+   "task": "SHEET-04",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     99,
+     75,
+     89,
+     82
+    ],
+    "coverage": 0.1766,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.010-koirune.jumping": {
+   "file": "wildkin-production/approved/assets/cut.010-koirune.jumping.webp",
+   "sha256": "adfc7f1592fae7cf33559b95bba931bb54b47cce884c2e2e7beee7e3a2ae5bdb",
+   "task": "SHEET-04",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     71,
+     72,
+     78,
+     119
+    ],
+    "coverage": 0.1796,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.010-koirune.sitting": {
+   "file": "wildkin-production/approved/assets/cut.010-koirune.sitting.webp",
+   "sha256": "c1230a8b67ee57f086a81062d41039f745b331aa90c7021d1941dee44a12df18",
+   "task": "SHEET-04",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/SHEET-04/d2aada497607.png",
+   "source_sha256": "d2aada4976072abdd71a5347faeb76c056a7b1cd56e43aea797f12d3337697d2",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15); sparkle-removal warning reviewed",
+   "provenance": {
+    "delivered_as": "SHEET-04--v2.png",
+    "metadata": {
+     "task_id": "SHEET-04",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-13",
+     "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style. Koirune final row retains original orange-white koi dragon identity. Exact cells 1:Koilet standing;2:Koilet jumping;3:Koilet sitting;4:Runakoi standing;5:Runakoi jumping;6:Runakoi sitting;7:Koirune standing;8:Koirune jumping;9:Koirune sitting. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+     "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+     "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-04.png"
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     88,
+     76,
+     101,
+     84
+    ],
+    "coverage": 0.1735,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.036-rivbit.standing": {
+   "file": "wildkin-production/approved/assets/cut.036-rivbit.standing.webp",
+   "sha256": "857c51e8c81773005f4e40402828ad8ac63b8031724144b643687ca296a810de",
+   "task": "SHEET-15",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     124,
+     127,
+     131,
+     116
+    ],
+    "coverage": 0.0883,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.036-rivbit.jumping": {
+   "file": "wildkin-production/approved/assets/cut.036-rivbit.jumping.webp",
+   "sha256": "26b8099a2c43efa476c90822379140b842c759ff426e796d59a360902958ebbd",
+   "task": "SHEET-15",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     119,
+     109,
+     110,
+     125
+    ],
+    "coverage": 0.0941,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.036-rivbit.sitting": {
+   "file": "wildkin-production/approved/assets/cut.036-rivbit.sitting.webp",
+   "sha256": "7316d47e4b311d584c58dd777ff638cdd0258c427597264c6750529cb257fe83",
+   "task": "SHEET-15",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     122,
+     128,
+     136,
+     113
+    ],
+    "coverage": 0.086,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.037-boltusk.standing": {
+   "file": "wildkin-production/approved/assets/cut.037-boltusk.standing.webp",
+   "sha256": "1db05da9374dbdd1e2bd3195980bf28e055207af9b8dad386af7407d432dad67",
+   "task": "SHEET-15",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     103,
+     101,
+     103,
+     106
+    ],
+    "coverage": 0.1476,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.037-boltusk.jumping": {
+   "file": "wildkin-production/approved/assets/cut.037-boltusk.jumping.webp",
+   "sha256": "30fdce401beb50498bd1c3abb4d00160953c48ca9b93b62456bad307112bfbc6",
+   "task": "SHEET-15",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     105,
+     89,
+     102,
+     128
+    ],
+    "coverage": 0.1307,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.037-boltusk.sitting": {
+   "file": "wildkin-production/approved/assets/cut.037-boltusk.sitting.webp",
+   "sha256": "98de912a6ef4023fdba9b930d0fe20d1e87e5bf8381b5fac3f45b51fed7af16f",
+   "task": "SHEET-15",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     111,
+     100,
+     122,
+     101
+    ],
+    "coverage": 0.1338,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.038-ferradon.standing": {
+   "file": "wildkin-production/approved/assets/cut.038-ferradon.standing.webp",
+   "sha256": "37103044726bf7a2d4818f9fc74900eaacf36031a144cc93e41f843a28073c60",
+   "task": "SHEET-15",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     88,
+     82,
+     88,
+     98
+    ],
+    "coverage": 0.2036,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.038-ferradon.jumping": {
+   "file": "wildkin-production/approved/assets/cut.038-ferradon.jumping.webp",
+   "sha256": "3462fd181a146c5a6b6e1dd685f94f8b5b761bf4634a34cac54d1c121c29f9b1",
+   "task": "SHEET-15",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     87,
+     76,
+     84,
+     125
+    ],
+    "coverage": 0.1857,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.038-ferradon.sitting": {
+   "file": "wildkin-production/approved/assets/cut.038-ferradon.sitting.webp",
+   "sha256": "2d33cb276f9d63028163f4a0be5e410f8a8b0419ce0c6f1687bb127ada1c1f4d",
+   "task": "SHEET-15",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/SHEET-15/b802f1db78d8.png",
+   "source_sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-15--v2.png",
+    "metadata": {
+     "task_id": "SHEET-15",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+     ],
+     "notes": "QA revision; preserve previous version."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     87,
+     72,
+     98,
+     94
+    ],
+    "coverage": 0.2057,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.039-pebblamb.standing": {
+   "file": "wildkin-production/approved/assets/cut.039-pebblamb.standing.webp",
+   "sha256": "0cb8200df4588a09634f2a673a2dd16d0c62e4667e3be89071d82ec47824ed8c",
+   "task": "SHEET-16",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     148,
+     167,
+     144,
+     109
+    ],
+    "coverage": 0.0537,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.039-pebblamb.jumping": {
+   "file": "wildkin-production/approved/assets/cut.039-pebblamb.jumping.webp",
+   "sha256": "04e179271a47ba4f40a086a862c639b66be3abd0c03529317c9f46caf2b9cc41",
+   "task": "SHEET-16",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     138,
+     147,
+     140,
+     127
+    ],
+    "coverage": 0.0562,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.039-pebblamb.sitting": {
+   "file": "wildkin-production/approved/assets/cut.039-pebblamb.sitting.webp",
+   "sha256": "daca3354623559b30376a297f002db081c146afd8f8423dc04b01f912d558b80",
+   "task": "SHEET-16",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     150,
+     167,
+     146,
+     109
+    ],
+    "coverage": 0.051,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.040-cairnram.standing": {
+   "file": "wildkin-production/approved/assets/cut.040-cairnram.standing.webp",
+   "sha256": "366231995a69f0d4ce6837dee64b6db58d02fd9ffa6715d1d52de97c8cc99f7f",
+   "task": "SHEET-16",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     133,
+     122,
+     130,
+     123
+    ],
+    "coverage": 0.0893,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.040-cairnram.jumping": {
+   "file": "wildkin-production/approved/assets/cut.040-cairnram.jumping.webp",
+   "sha256": "59ac55f3138ab5a99aeda3731773258053c8bbe9c55675acc94f0bf8340554e1",
+   "task": "SHEET-16",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     138,
+     113,
+     136,
+     142
+    ],
+    "coverage": 0.077,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.040-cairnram.sitting": {
+   "file": "wildkin-production/approved/assets/cut.040-cairnram.sitting.webp",
+   "sha256": "b6d2f14cc297ad7939d35244754142aa195ebd85367a955f3c3bd4bd24d70283",
+   "task": "SHEET-16",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     132,
+     136,
+     133,
+     131
+    ],
+    "coverage": 0.0816,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.041-monolox.standing": {
+   "file": "wildkin-production/approved/assets/cut.041-monolox.standing.webp",
+   "sha256": "7d742f6e438d506de1101e174d3c19ac7040e4ea2cb8cdb5d86b52eeaedcf880",
+   "task": "SHEET-16",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     134,
+     111,
+     123,
+     124
+    ],
+    "coverage": 0.1014,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.041-monolox.jumping": {
+   "file": "wildkin-production/approved/assets/cut.041-monolox.jumping.webp",
+   "sha256": "2f9f877ae7ca3624ad84839edbc32244457c8c57d8bc89e61712652b9ead8578",
+   "task": "SHEET-16",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     128,
+     98,
+     128,
+     138
+    ],
+    "coverage": 0.0937,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.041-monolox.sitting": {
+   "file": "wildkin-production/approved/assets/cut.041-monolox.sitting.webp",
+   "sha256": "6bf8c6638c207fe512336def32a2f3901cef47c867afe798244a2e43f128e9d6",
+   "task": "SHEET-16",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/SHEET-16/da02df5dd903.png",
+   "source_sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "approved": "2026-10-15T05:46:25Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-16--v3.png",
+    "metadata": {
+     "task_id": "SHEET-16",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     128,
+     129,
+     137,
+     129
+    ],
+    "coverage": 0.092,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.055-dewink.standing": {
+   "file": "wildkin-production/approved/assets/cut.055-dewink.standing.webp",
+   "sha256": "253da9aa5f36f28c7e8b86951352fbdd6166bf19f2e812eac76c534feb365eff",
+   "task": "SHEET-23",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-23/a4b44a41ec6a.png",
+   "source_sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-23--v3.png",
+    "metadata": {
+     "task_id": "SHEET-23",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+     ],
+     "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     142,
+     69,
+     131,
+     56
+    ],
+    "coverage": 0.1331,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.055-dewink.jumping": {
+   "file": "wildkin-production/approved/assets/cut.055-dewink.jumping.webp",
+   "sha256": "85577fe062d4a778138cbfa64db4319352f8a5a4d73a308e41625e82d7d371a1",
+   "task": "SHEET-23",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-23/a4b44a41ec6a.png",
+   "source_sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-23--v3.png",
+    "metadata": {
+     "task_id": "SHEET-23",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+     ],
+     "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     132,
+     44,
+     129,
+     69
+    ],
+    "coverage": 0.1489,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.055-dewink.sitting": {
+   "file": "wildkin-production/approved/assets/cut.055-dewink.sitting.webp",
+   "sha256": "9f6e3334b06bacdd015caf82789730167880aac4a7084a05a47a898aa1b71e44",
+   "task": "SHEET-23",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-23/a4b44a41ec6a.png",
+   "source_sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-23--v3.png",
+    "metadata": {
+     "task_id": "SHEET-23",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+     ],
+     "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     138,
+     100,
+     129,
+     66
+    ],
+    "coverage": 0.1331,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.056-bloomble.standing": {
+   "file": "wildkin-production/approved/assets/cut.056-bloomble.standing.webp",
+   "sha256": "34773e3853e30f5be4bcd245c957febdf26629a495ffbe3039ae126986da21c5",
+   "task": "SHEET-23",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-23/a4b44a41ec6a.png",
+   "source_sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-23--v3.png",
+    "metadata": {
+     "task_id": "SHEET-23",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+     ],
+     "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     113,
+     22,
+     126,
+     29
+    ],
+    "coverage": 0.2181,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.056-bloomble.jumping": {
+   "file": "wildkin-production/approved/assets/cut.056-bloomble.jumping.webp",
+   "sha256": "eb28f649ff9a5cea474393cac0706d835eb2b4b6366740a3c133ef770312f6e9",
+   "task": "SHEET-23",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-23/a4b44a41ec6a.png",
+   "source_sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-23--v3.png",
+    "metadata": {
+     "task_id": "SHEET-23",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+     ],
+     "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     76,
+     14,
+     92,
+     34
+    ],
+    "coverage": 0.2505,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.056-bloomble.sitting": {
+   "file": "wildkin-production/approved/assets/cut.056-bloomble.sitting.webp",
+   "sha256": "b0a3b2ef100d07ff0fceb85c5e6f408689f50a74d6f541264eb47221eb4e7057",
+   "task": "SHEET-23",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-23/a4b44a41ec6a.png",
+   "source_sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-23--v3.png",
+    "metadata": {
+     "task_id": "SHEET-23",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+     "references": [
+      "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+     ],
+     "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     108,
+     69,
+     96,
+     40
+    ],
+    "coverage": 0.2155,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.057-fernibble.standing": {
+   "file": "wildkin-production/approved/assets/cut.057-fernibble.standing.webp",
+   "sha256": "ac85bdc40b421fdb1eb408fc656a2bee38981a48737a700ab529e7b44762bd82",
+   "task": "SHEET-24",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     55,
+     63,
+     45,
+     67
+    ],
+    "coverage": 0.2529,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.057-fernibble.jumping": {
+   "file": "wildkin-production/approved/assets/cut.057-fernibble.jumping.webp",
+   "sha256": "e24adcf8ed5244e61020d50c3556363ad97774b18b23f57d525f27b25d4a255c",
+   "task": "SHEET-24",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     40,
+     48,
+     35,
+     86
+    ],
+    "coverage": 0.2426,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.057-fernibble.sitting": {
+   "file": "wildkin-production/approved/assets/cut.057-fernibble.sitting.webp",
+   "sha256": "be96150746000759db339ec0ec4c73309e10d77434d40d28ffa5c044e6bebfc8",
+   "task": "SHEET-24",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     90,
+     68,
+     85,
+     60
+    ],
+    "coverage": 0.2238,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.058-acornox.standing": {
+   "file": "wildkin-production/approved/assets/cut.058-acornox.standing.webp",
+   "sha256": "75d08d4328af4b9045e1656b1b734db7c1d125026d1a45f1ee31403af8951041",
+   "task": "SHEET-24",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     46,
+     59,
+     27,
+     64
+    ],
+    "coverage": 0.3456,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.058-acornox.jumping": {
+   "file": "wildkin-production/approved/assets/cut.058-acornox.jumping.webp",
+   "sha256": "5786149d966ae13e10ed55fa89deb113f2a6ed754ec4d9018ab0aff14f9bcbb4",
+   "task": "SHEET-24",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     48,
+     36,
+     42,
+     87
+    ],
+    "coverage": 0.3024,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.058-acornox.sitting": {
+   "file": "wildkin-production/approved/assets/cut.058-acornox.sitting.webp",
+   "sha256": "89f9b5c3f2fb74fd241165734f97f7dc548e5d9b3486af2fe9592789c861709f",
+   "task": "SHEET-24",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     48,
+     83,
+     66,
+     63
+    ],
+    "coverage": 0.2924,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.059-shelloop.standing": {
+   "file": "wildkin-production/approved/assets/cut.059-shelloop.standing.webp",
+   "sha256": "bf9280c6e9e0543ccbd7ddb5b36fd707bebe9fc535a99a57c96f7f8f4463a926",
+   "task": "SHEET-24",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     60,
+     83,
+     62,
+     82
+    ],
+    "coverage": 0.2894,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.059-shelloop.jumping": {
+   "file": "wildkin-production/approved/assets/cut.059-shelloop.jumping.webp",
+   "sha256": "9ca5a2a27c95eadabd0a73803fb4f6b68df7c186a4bf3128b4314e136eff9afe",
+   "task": "SHEET-24",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     55,
+     57,
+     49,
+     108
+    ],
+    "coverage": 0.2848,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.059-shelloop.sitting": {
+   "file": "wildkin-production/approved/assets/cut.059-shelloop.sitting.webp",
+   "sha256": "11079ea420f7a0ba9eb721835719c38b4163f06ceddd62aaba20d6e9e275ccfb",
+   "task": "SHEET-24",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/SHEET-24/c930346a4629.png",
+   "source_sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-24--v2.png",
+    "metadata": {
+     "task_id": "SHEET-24",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+     ],
+     "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     64,
+     102,
+     62,
+     77
+    ],
+    "coverage": 0.2722,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.075-professor-maren-vale.portrait": {
+   "file": "wildkin-production/approved/assets/cut.075-professor-maren-vale.portrait.webp",
+   "sha256": "0c6991e795abe927f2814b728b9d95d37f1877f82d733c3d050020a57768b92c",
+   "task": "SHEET-30",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     138,
+     83,
+     141,
+     75
+    ],
+    "coverage": 0.0988,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.076-june-kestrel.portrait": {
+   "file": "wildkin-production/approved/assets/cut.076-june-kestrel.portrait.webp",
+   "sha256": "6a9a730d0e0d34fa14c02aca8e4a3c1a6a785a7030e0cc09b06a5ceecf763ce4",
+   "task": "SHEET-30",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     108,
+     89,
+     137,
+     76
+    ],
+    "coverage": 0.1044,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.077-warden-sorrel-pike.portrait": {
+   "file": "wildkin-production/approved/assets/cut.077-warden-sorrel-pike.portrait.webp",
+   "sha256": "839df6816d96dfeea60b00ae07c8efa16b1ef6810f47f7e73917c32a14d813c2",
+   "task": "SHEET-30",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     128,
+     85,
+     132,
+     76
+    ],
+    "coverage": 0.1131,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.078-toma-reed.portrait": {
+   "file": "wildkin-production/approved/assets/cut.078-toma-reed.portrait.webp",
+   "sha256": "1f8464f8de3c4277c84af81664598a62a3c59fea8e7d8437ff9dc3fec003076c",
+   "task": "SHEET-30",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     125,
+     72,
+     131,
+     66
+    ],
+    "coverage": 0.1277,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.079-lita-moss.portrait": {
+   "file": "wildkin-production/approved/assets/cut.079-lita-moss.portrait.webp",
+   "sha256": "ed9c17b51e29d1d667ef857a728f258509aeda11065a9eecdc804d0ad1c66a04",
+   "task": "SHEET-30",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     130,
+     73,
+     147,
+     67
+    ],
+    "coverage": 0.1139,
+    "screen": "magenta",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.080-nessa-flint.portrait": {
+   "file": "wildkin-production/approved/assets/cut.080-nessa-flint.portrait.webp",
+   "sha256": "0909fc1c20f181f432b15a53f1f2f5b846821e87d0b917328e8e4ca04902a548",
+   "task": "SHEET-30",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     138,
+     74,
+     139,
+     67
+    ],
+    "coverage": 0.1145,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.081-elder-oren.portrait": {
+   "file": "wildkin-production/approved/assets/cut.081-elder-oren.portrait.webp",
+   "sha256": "643694381da52dca8229eee4354a0e1dfddd47a2917a380e109447fcc01538d9",
+   "task": "SHEET-30",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     127,
+     64,
+     130,
+     83
+    ],
+    "coverage": 0.1299,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.082-pip-rowan.portrait": {
+   "file": "wildkin-production/approved/assets/cut.082-pip-rowan.portrait.webp",
+   "sha256": "4ecb9f65b7c7d40145a5e21254d737c8359dfba5d3b554f69d7f23efd2bc4d41",
+   "task": "SHEET-30",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     126,
+     80,
+     134,
+     88
+    ],
+    "coverage": 0.1055,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.083-archivist-sera-wynn.portrait": {
+   "file": "wildkin-production/approved/assets/cut.083-archivist-sera-wynn.portrait.webp",
+   "sha256": "59b1234553e36bc3a165ad4033986b74d83e0b4cd95b084c89a5a4a8abc83881",
+   "task": "SHEET-30",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/SHEET-30/4bce68f81bd2.png",
+   "source_sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "approved": "2026-10-15T05:46:26Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-30--v3.png",
+    "metadata": {
+     "task_id": "SHEET-30",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     140,
+     74,
+     141,
+     86
+    ],
+    "coverage": 0.1042,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.084-renn-calder.portrait": {
+   "file": "wildkin-production/approved/assets/cut.084-renn-calder.portrait.webp",
+   "sha256": "4a709e6ff6519954d9c5db05539a9a443c3db03374983400021f093225b55f38",
+   "task": "SHEET-31",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     139,
+     107,
+     136,
+     59
+    ],
+    "coverage": 0.0859,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.085-mira-quill.portrait": {
+   "file": "wildkin-production/approved/assets/cut.085-mira-quill.portrait.webp",
+   "sha256": "04d060d1619bee64bcec2533df9df8c2312ab03fb160162d8ffef16420edd95d",
+   "task": "SHEET-31",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     133,
+     106,
+     137,
+     59
+    ],
+    "coverage": 0.1039,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.086-sel-veyra.portrait": {
+   "file": "wildkin-production/approved/assets/cut.086-sel-veyra.portrait.webp",
+   "sha256": "c7742cdf1d81b0665e7efc2d330285a2f3ed79e23d923685cddb053f23232bf7",
+   "task": "SHEET-31",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     139,
+     109,
+     137,
+     60
+    ],
+    "coverage": 0.0921,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.087-cass-rell.portrait": {
+   "file": "wildkin-production/approved/assets/cut.087-cass-rell.portrait.webp",
+   "sha256": "67ce4879f1990070779801beaa207d1029732d744f088ee42f75606f55980b78",
+   "task": "SHEET-31",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     153,
+     99,
+     147,
+     50
+    ],
+    "coverage": 0.0833,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.088-dr-cyl-vane.portrait": {
+   "file": "wildkin-production/approved/assets/cut.088-dr-cyl-vane.portrait.webp",
+   "sha256": "6d9bb90c8d099ebc2b28e4a084bd3ca6b9cefed8ea41edd3738832052043a5e3",
+   "task": "SHEET-31",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     124,
+     100,
+     139,
+     50
+    ],
+    "coverage": 0.1179,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.089-marshal-rook.portrait": {
+   "file": "wildkin-production/approved/assets/cut.089-marshal-rook.portrait.webp",
+   "sha256": "24333c60649e6407373475448d1056e458067bca6ad20615364903b9d1951a6a",
+   "task": "SHEET-31",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     136,
+     101,
+     137,
+     50
+    ],
+    "coverage": 0.1197,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.090-iris-shade.portrait": {
+   "file": "wildkin-production/approved/assets/cut.090-iris-shade.portrait.webp",
+   "sha256": "537857e455fc00342487755adafe9ea7cc42fc4a09f3dd21a5842085e41f79fa",
+   "task": "SHEET-31",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     140,
+     85,
+     135,
+     75
+    ],
+    "coverage": 0.1077,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.091-dex-harrow.portrait": {
+   "file": "wildkin-production/approved/assets/cut.091-dex-harrow.portrait.webp",
+   "sha256": "29e181fca7d4eac584efd0c016e3e0e5ffe7dbfa9d435f8689ab725ed57e2ae2",
+   "task": "SHEET-31",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     142,
+     87,
+     145,
+     76
+    ],
+    "coverage": 0.0869,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "cut.092-brin-hollow.portrait": {
+   "file": "wildkin-production/approved/assets/cut.092-brin-hollow.portrait.webp",
+   "sha256": "3ed809c5e07857ada608c9f2a254bf01136f5b2a69379cd7c904b205abedb56c",
+   "task": "SHEET-31",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/SHEET-31/81ca89d9c470.png",
+   "source_sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-31--v2.png",
+    "metadata": {
+     "task_id": "SHEET-31",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+    }
+   },
+   "checks": {
+    "margins_LTRB": [
+     152,
+     89,
+     158,
+     79
+    ],
+    "coverage": 0.0775,
+    "screen": "green",
+    "screen_left": 0.0,
+    "stray_pieces_dropped": 0
+   },
+   "warnings_accepted": []
+  },
+  "ill.120-first-bond": {
+   "file": "wildkin-production/approved/assets/ill.120-first-bond.jpg",
+   "sha256": "68841b66c138a462cce61fcef5701c08ffa94c6e44fa44463aeae41958ce4c40",
+   "task": "SHEET-37",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     400,
+     399
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.121-call-of-the-wild": {
+   "file": "wildkin-production/approved/assets/ill.121-call-of-the-wild.jpg",
+   "sha256": "0a252ec8fbf229ec740bb8d6e172ab68250a1510db3cf09ef394ba536b55923b",
+   "task": "SHEET-37",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     396,
+     399
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.122-sanctuary-rescue": {
+   "file": "wildkin-production/approved/assets/ill.122-sanctuary-rescue.jpg",
+   "sha256": "e47436ca971ffc4c61bfb638536897e9ebf76ee9fe80453dd3f61be9554f9be0",
+   "task": "SHEET-37",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     399,
+     399
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.123-keepers-lesson": {
+   "file": "wildkin-production/approved/assets/ill.123-keepers-lesson.jpg",
+   "sha256": "254a1d1cc83233afc74eeb040e10b8e45d7e8c3efc44e2f00cc77f9fe8e42940",
+   "task": "SHEET-37",
+   "cell": 4,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     400,
+     392
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.124-pack-rally": {
+   "file": "wildkin-production/approved/assets/ill.124-pack-rally.jpg",
+   "sha256": "914893295f5137628b404ccf3f433a168c34801ac6ce71d826729e24a4acc383",
+   "task": "SHEET-37",
+   "cell": 5,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     396,
+     392
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.125-quick-retreat": {
+   "file": "wildkin-production/approved/assets/ill.125-quick-retreat.jpg",
+   "sha256": "397e8308479eba6f77e22cd085f889e7d5d6c6f398215fa85c97c7c4fcd1fa13",
+   "task": "SHEET-37",
+   "cell": 6,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     399,
+     392
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.126-shared-instinct": {
+   "file": "wildkin-production/approved/assets/ill.126-shared-instinct.jpg",
+   "sha256": "c79e5d0bf62da1f0465775bdc199cfce30c326a233a23785ad7662b51fd7f184",
+   "task": "SHEET-37",
+   "cell": 7,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     400,
+     404
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.127-veyra-directive": {
+   "file": "wildkin-production/approved/assets/ill.127-veyra-directive.jpg",
+   "sha256": "c3330b0f12eb6a7cb8839e1c51d07e334099993ba623a732d128d2dc22736096",
+   "task": "SHEET-37",
+   "cell": 8,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     396,
+     404
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.128-forced-capture": {
+   "file": "wildkin-production/approved/assets/ill.128-forced-capture.jpg",
+   "sha256": "29362f8bce5d322d340fb91814d4a87fc590da475c2ba3e1a146c9de2e6cacf9",
+   "task": "SHEET-37",
+   "cell": 9,
+   "source": "wildkin-production/approved/sources/SHEET-37/2e02399291ad.png",
+   "source_sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-37.png",
+    "metadata": {
+     "task_id": "SHEET-37",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+     "notes": "Generated from production queue; pending intake validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     399,
+     404
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.129-override-signal": {
+   "file": "wildkin-production/approved/assets/ill.129-override-signal.jpg",
+   "sha256": "473797cc004573ab9170ada857a2130b04ac751151debc27c6cfc31c075eb393",
+   "task": "SHEET-38",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/SHEET-38/379031cf4270.png",
+   "source_sha256": "379031cf42706673329860c062938fd9e2982447953bf6607d148f2916aaecad",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-38.png",
+    "metadata": {
+     "task_id": "SHEET-38",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-38 Tactics B. Square PNG at least1254x1254, EXACT 3x3 square-cell grid with thin black straight gutters at exact thirds. ONLY TOP ROW has three full-bleed dimensional 3D story illustrations, match supplied identity references. Cells4,5,6,7,8,9 MUST BE EMPTY uniformly flat near-black RGB(20,20,24), NO subjects, texture, lighting or decoration there. Top-left Override Signal: silver-haired Sel Veyra in ivory/gold coat and black clothes activates a teal mechanical control console while a Cactuft llama in the background wears a small angular charcoal/silver restraint collar with tiny teal indicator. Top-middle Break the Clasp: brown ponytail young June in red jacket, cream shirt, blue scarf and sash, practical boots, carefully unfastens same mechanical collar from green cactus-wool Cactuft, hopeful escape, no injury. Top-right Stand Together: June stands protectively with free green Cactuft and blue spiky ankylosaur Bashlet at forest edge facing distant industrial compound. No magical evil transformations: Veyra control is mechanical, humans and creatures. No text, captions, card frames, logos. Fill the three top cells only.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/reference/cactuft-poses-magenta.png",
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png",
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "Reference-led generation; pending validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     400,
+     401
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.130-break-the-clasp": {
+   "file": "wildkin-production/approved/assets/ill.130-break-the-clasp.jpg",
+   "sha256": "2f83a441b895d6ef9bb09553aed171d8ea87323488034bcd819c662a27664fcb",
+   "task": "SHEET-38",
+   "cell": 2,
+   "source": "wildkin-production/approved/sources/SHEET-38/379031cf4270.png",
+   "source_sha256": "379031cf42706673329860c062938fd9e2982447953bf6607d148f2916aaecad",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-38.png",
+    "metadata": {
+     "task_id": "SHEET-38",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-38 Tactics B. Square PNG at least1254x1254, EXACT 3x3 square-cell grid with thin black straight gutters at exact thirds. ONLY TOP ROW has three full-bleed dimensional 3D story illustrations, match supplied identity references. Cells4,5,6,7,8,9 MUST BE EMPTY uniformly flat near-black RGB(20,20,24), NO subjects, texture, lighting or decoration there. Top-left Override Signal: silver-haired Sel Veyra in ivory/gold coat and black clothes activates a teal mechanical control console while a Cactuft llama in the background wears a small angular charcoal/silver restraint collar with tiny teal indicator. Top-middle Break the Clasp: brown ponytail young June in red jacket, cream shirt, blue scarf and sash, practical boots, carefully unfastens same mechanical collar from green cactus-wool Cactuft, hopeful escape, no injury. Top-right Stand Together: June stands protectively with free green Cactuft and blue spiky ankylosaur Bashlet at forest edge facing distant industrial compound. No magical evil transformations: Veyra control is mechanical, humans and creatures. No text, captions, card frames, logos. Fill the three top cells only.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/reference/cactuft-poses-magenta.png",
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png",
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "Reference-led generation; pending validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     396,
+     401
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "ill.131-stand-together": {
+   "file": "wildkin-production/approved/assets/ill.131-stand-together.jpg",
+   "sha256": "9d8fb23e54df9ef82d58b9d6d07eb731070e22f77054927ca84c9e09958237bd",
+   "task": "SHEET-38",
+   "cell": 3,
+   "source": "wildkin-production/approved/sources/SHEET-38/379031cf4270.png",
+   "source_sha256": "379031cf42706673329860c062938fd9e2982447953bf6607d148f2916aaecad",
+   "approved": "2026-10-15T05:46:27Z",
+   "approved_by": "owner (asked Claude Code to approve passing repairs, 2026-10-15)",
+   "provenance": {
+    "delivered_as": "SHEET-38.png",
+    "metadata": {
+     "task_id": "SHEET-38",
+     "manifest_version": "1.0.0",
+     "made_by": "SOL",
+     "created": "2026-10-14",
+     "prompt": "Use case: illustration-story. Wildkin SHEET-38 Tactics B. Square PNG at least1254x1254, EXACT 3x3 square-cell grid with thin black straight gutters at exact thirds. ONLY TOP ROW has three full-bleed dimensional 3D story illustrations, match supplied identity references. Cells4,5,6,7,8,9 MUST BE EMPTY uniformly flat near-black RGB(20,20,24), NO subjects, texture, lighting or decoration there. Top-left Override Signal: silver-haired Sel Veyra in ivory/gold coat and black clothes activates a teal mechanical control console while a Cactuft llama in the background wears a small angular charcoal/silver restraint collar with tiny teal indicator. Top-middle Break the Clasp: brown ponytail young June in red jacket, cream shirt, blue scarf and sash, practical boots, carefully unfastens same mechanical collar from green cactus-wool Cactuft, hopeful escape, no injury. Top-right Stand Together: June stands protectively with free green Cactuft and blue spiky ankylosaur Bashlet at forest edge facing distant industrial compound. No magical evil transformations: Veyra control is mechanical, humans and creatures. No text, captions, card frames, logos. Fill the three top cells only.",
+     "references": [
+      "/workspace/scratch/b718be279b35/wildkin-art/reference/cactuft-poses-magenta.png",
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png",
+      "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+     ],
+     "notes": "Reference-led generation; pending validation."
+    }
+   },
+   "checks": {
+    "cell_px": [
+     400,
+     401
+    ]
+   },
+   "warnings_accepted": []
   }
  }
 }

@@ -1,0 +1,160 @@
+{
+ "task": "SHEET-41",
+ "file": "wildkin-production/incoming/SHEET-41.png",
+ "sha256": "981563a0a44d2c738faf488c297c44396f73e12e3433e0219a64afcc19cd00f2",
+ "checked": "2026-10-15T05:45:57Z",
+ "errors": [
+  "too small: 1060x1484, need at least 2100x2940"
+ ],
+ "warnings": [
+  "cell 1: cell is only 336 px wide; card art wants 700+",
+  "cell 2: cell is only 334 px wide; card art wants 700+",
+  "cell 3: cell is only 334 px wide; card art wants 700+",
+  "cell 4: cell is only 336 px wide; card art wants 700+",
+  "cell 5: cell is only 334 px wide; card art wants 700+",
+  "cell 6: cell is only 334 px wide; card art wants 700+",
+  "cell 7: cell is only 336 px wide; card art wants 700+",
+  "cell 8: cell is only 334 px wide; card art wants 700+",
+  "cell 9: cell is only 334 px wide; card art wants 700+"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.151-cactuft-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 336 px wide; card art wants 700+"
+   ],
+   "std": 54.2,
+   "cell_px": [
+    336,
+    477
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "ill.152-aurorotl-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 334 px wide; card art wants 700+"
+   ],
+   "std": 51.9,
+   "cell_px": [
+    334,
+    477
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "ill.153-fortisaur-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 334 px wide; card art wants 700+"
+   ],
+   "std": 56.1,
+   "cell_px": [
+    334,
+    477
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "ill.154-koirune-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 336 px wide; card art wants 700+"
+   ],
+   "std": 65.1,
+   "cell_px": [
+    336,
+    477
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "ill.155-aegisopod-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 334 px wide; card art wants 700+"
+   ],
+   "std": 61.5,
+   "cell_px": [
+    334,
+    477
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": "ill.156-canopang-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 334 px wide; card art wants 700+"
+   ],
+   "std": 57.9,
+   "cell_px": [
+    334,
+    477
+   ]
+  },
+  {
+   "cell": 7,
+   "asset_id": "ill.157-spiramel-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 336 px wide; card art wants 700+"
+   ],
+   "std": 55.0,
+   "cell_px": [
+    336,
+    476
+   ]
+  },
+  {
+   "cell": 8,
+   "asset_id": "ill.158-astrynx-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 334 px wide; card art wants 700+"
+   ],
+   "std": 56.4,
+   "cell_px": [
+    334,
+    476
+   ]
+  },
+  {
+   "cell": 9,
+   "asset_id": "ill.159-pompyre-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 334 px wide; card art wants 700+"
+   ],
+   "std": 52.6,
+   "cell_px": [
+    334,
+    476
+   ]
+  }
+ ],
+ "size": [
+  1060,
+  1484
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-41",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SHEET-41 Full Arts A. EXACT2100x2940 portrait PNG5:7, 3x3 equal portrait5:7 cells, thin black gutters at thirds. NEW full-bleed epic dimensional3D paintings, not cutouts or recolorings. Nine canonical creatures, detailed expressive anatomy consistent with refs; subject concentrated in central HALF height with environmental space top/bottom quarters. Row-major1 Cactuft green cactus woolly llama cream face brown eyes pink flowers short gold spines, walks through immense arched succulent botanical garden at sunrise;2 Aurorotl final evolution BOTTOM ROW axolotl sheet, elegant long cream axolotl/dragon body, pastel rainbow large antler-like external gills and feathered rainbow tail, among pastel aurora waterfalls;3 Fortisaur bottom row blue ankylosaur sheet, powerful blue cream spiked dinosaur with sweeping ivory shoulder spikes, blue mace tail, in ancient mountain amphitheater;4 Koirune orange white koi-dragon quadruped with long curled white whiskers, cream mane and ornate orange white fins, leaps through moonlit temple pond;5 Aegisopod bottom row pillbug sheet, large cute navy silver knight-armored pillbug, ivory round face black eyes and segmented navy legs/antennae, at massive forest guardian gate;6 Canopang bottom row pangolin sheet, tan and cream pangolin with layered green leaf armor leafy long curl tail, unfurls atop giant tree root in emerald canopy;7 Spiramel evolved large lavender cream snail with thick orange cream spiral shell and golden spherical shell nodules, traverses fantastical orchard at blue hour;8 Astrynx navy cream celestial lynx with large blue eyes cream crescent forehead and galaxy fluffy curled tail, stands under starlit observatory arch;9 Pompyre large purple berry bat, pink wing membranes, huge pink ears, cream pink neck tuft, berry leaf crown, flies through glowing dusk vineyard. Preserve species identities, no text, typography, frames, logos. Distinct composition per cell, refined evocative color.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-02--v2.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-03--v3.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-05.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-06--v2.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/reference/mascot-reference-survey.png"
+  ],
+  "notes": "Native image generation output; see QA report for resolution."
+ }
+}

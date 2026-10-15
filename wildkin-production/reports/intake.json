@@ -627,7 +627,18 @@
    "report": "reports/SHEET-04/d2aada497607",
    "errors": 0,
    "warnings": 1,
-   "state": "checked"
+   "state": "approved",
+   "approved_cells": [
+    "cut.008-koilet.standing",
+    "cut.008-koilet.jumping",
+    "cut.008-koilet.sitting",
+    "cut.009-runakoi.standing",
+    "cut.009-runakoi.jumping",
+    "cut.009-runakoi.sitting",
+    "cut.010-koirune.standing",
+    "cut.010-koirune.jumping",
+    "cut.010-koirune.sitting"
+   ]
   },
   "SHEET-06:89dec7fab1004a49026c316da356ea9bb8cc2dc2064c2548f49ee7ee7005ecc0": {
    "task": "SHEET-06",
@@ -757,6 +768,281 @@
    "errors": 5,
    "warnings": 0,
    "state": "checked"
+  },
+  "SHEET-15:b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326": {
+   "task": "SHEET-15",
+   "sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+   "file": "SHEET-15--v2.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:12Z",
+   "report": "reports/SHEET-15/b802f1db78d8",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "cut.036-rivbit.standing",
+    "cut.036-rivbit.jumping",
+    "cut.036-rivbit.sitting",
+    "cut.037-boltusk.standing",
+    "cut.037-boltusk.jumping",
+    "cut.037-boltusk.sitting",
+    "cut.038-ferradon.standing",
+    "cut.038-ferradon.jumping",
+    "cut.038-ferradon.sitting"
+   ]
+  },
+  "SHEET-16:da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4": {
+   "task": "SHEET-16",
+   "sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+   "file": "SHEET-16--v3.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:21Z",
+   "report": "reports/SHEET-16/da02df5dd903",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "cut.039-pebblamb.standing",
+    "cut.039-pebblamb.jumping",
+    "cut.039-pebblamb.sitting",
+    "cut.040-cairnram.standing",
+    "cut.040-cairnram.jumping",
+    "cut.040-cairnram.sitting",
+    "cut.041-monolox.standing",
+    "cut.041-monolox.jumping",
+    "cut.041-monolox.sitting"
+   ]
+  },
+  "SHEET-23:a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf": {
+   "task": "SHEET-23",
+   "sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+   "file": "SHEET-23--v3.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:27Z",
+   "report": "reports/SHEET-23/a4b44a41ec6a",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "cut.055-dewink.standing",
+    "cut.055-dewink.jumping",
+    "cut.055-dewink.sitting",
+    "cut.056-bloomble.standing",
+    "cut.056-bloomble.jumping",
+    "cut.056-bloomble.sitting"
+   ]
+  },
+  "SHEET-24:c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81": {
+   "task": "SHEET-24",
+   "sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+   "file": "SHEET-24--v2.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:33Z",
+   "report": "reports/SHEET-24/c930346a4629",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "cut.057-fernibble.standing",
+    "cut.057-fernibble.jumping",
+    "cut.057-fernibble.sitting",
+    "cut.058-acornox.standing",
+    "cut.058-acornox.jumping",
+    "cut.058-acornox.sitting",
+    "cut.059-shelloop.standing",
+    "cut.059-shelloop.jumping",
+    "cut.059-shelloop.sitting"
+   ]
+  },
+  "SHEET-30:4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b": {
+   "task": "SHEET-30",
+   "sha256": "4bce68f81bd22d2977adae5746cb692246a347f2049ab6c05be7ce7d56e8dc2b",
+   "file": "SHEET-30--v3.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:42Z",
+   "report": "reports/SHEET-30/4bce68f81bd2",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "cut.075-professor-maren-vale.portrait",
+    "cut.076-june-kestrel.portrait",
+    "cut.077-warden-sorrel-pike.portrait",
+    "cut.078-toma-reed.portrait",
+    "cut.079-lita-moss.portrait",
+    "cut.080-nessa-flint.portrait",
+    "cut.081-elder-oren.portrait",
+    "cut.082-pip-rowan.portrait",
+    "cut.083-archivist-sera-wynn.portrait"
+   ]
+  },
+  "SHEET-31:81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4": {
+   "task": "SHEET-31",
+   "sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+   "file": "SHEET-31--v2.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:48Z",
+   "report": "reports/SHEET-31/81ca89d9c470",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "cut.084-renn-calder.portrait",
+    "cut.085-mira-quill.portrait",
+    "cut.086-sel-veyra.portrait",
+    "cut.087-cass-rell.portrait",
+    "cut.088-dr-cyl-vane.portrait",
+    "cut.089-marshal-rook.portrait",
+    "cut.090-iris-shade.portrait",
+    "cut.091-dex-harrow.portrait",
+    "cut.092-brin-hollow.portrait"
+   ]
+  },
+  "SHEET-37:2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b": {
+   "task": "SHEET-37",
+   "sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+   "file": "SHEET-37.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:55Z",
+   "report": "reports/SHEET-37/2e02399291ad",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "ill.120-first-bond",
+    "ill.121-call-of-the-wild",
+    "ill.122-sanctuary-rescue",
+    "ill.123-keepers-lesson",
+    "ill.124-pack-rally",
+    "ill.125-quick-retreat",
+    "ill.126-shared-instinct",
+    "ill.127-veyra-directive",
+    "ill.128-forced-capture"
+   ]
+  },
+  "SHEET-38:379031cf42706673329860c062938fd9e2982447953bf6607d148f2916aaecad": {
+   "task": "SHEET-38",
+   "sha256": "379031cf42706673329860c062938fd9e2982447953bf6607d148f2916aaecad",
+   "file": "SHEET-38.png",
+   "result": "pass",
+   "checked": "2026-10-15T05:45:55Z",
+   "report": "reports/SHEET-38/379031cf4270",
+   "errors": 0,
+   "warnings": 0,
+   "state": "approved",
+   "approved_cells": [
+    "ill.129-override-signal",
+    "ill.130-break-the-clasp",
+    "ill.131-stand-together"
+   ]
+  },
+  "SHEET-39:9231bc7fd6794a1249ef25e82a67d99241ac2bf10652559aa4ac80483c152cd7": {
+   "task": "SHEET-39",
+   "sha256": "9231bc7fd6794a1249ef25e82a67d99241ac2bf10652559aa4ac80483c152cd7",
+   "file": "SHEET-39--v2.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:45:55Z",
+   "report": "reports/SHEET-39/9231bc7fd679",
+   "errors": 1,
+   "warnings": 9,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SHEET-40:8a793ac201b38f8b9c01c89440d81626c66eba76f38c72e20806506eff5b6010": {
+   "task": "SHEET-40",
+   "sha256": "8a793ac201b38f8b9c01c89440d81626c66eba76f38c72e20806506eff5b6010",
+   "file": "SHEET-40.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:45:56Z",
+   "report": "reports/SHEET-40/8a793ac201b3",
+   "errors": 1,
+   "warnings": 9,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SHEET-41:981563a0a44d2c738faf488c297c44396f73e12e3433e0219a64afcc19cd00f2": {
+   "task": "SHEET-41",
+   "sha256": "981563a0a44d2c738faf488c297c44396f73e12e3433e0219a64afcc19cd00f2",
+   "file": "SHEET-41.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:45:57Z",
+   "report": "reports/SHEET-41/981563a0a44d",
+   "errors": 1,
+   "warnings": 9,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SHEET-42:e6c45ed5d64c4915f088db13cdcc2514d49fbdf17684e76221a9a2e850b831f1": {
+   "task": "SHEET-42",
+   "sha256": "e6c45ed5d64c4915f088db13cdcc2514d49fbdf17684e76221a9a2e850b831f1",
+   "file": "SHEET-42.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:45:58Z",
+   "report": "reports/SHEET-42/e6c45ed5d64c",
+   "errors": 1,
+   "warnings": 8,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SHEET-43:c4ab5e8516f626c79b9c760b9f69e24bc2d5f475549860fd5533c648662e7c01": {
+   "task": "SHEET-43",
+   "sha256": "c4ab5e8516f626c79b9c760b9f69e24bc2d5f475549860fd5533c648662e7c01",
+   "file": "SHEET-43.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:45:58Z",
+   "report": "reports/SHEET-43/c4ab5e8516f6",
+   "errors": 1,
+   "warnings": 4,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SIR-173:4e5c092bc951c5d5e293904d209335e8636a4a655f4646ff509aa18b1b2a2997": {
+   "task": "SIR-173",
+   "sha256": "4e5c092bc951c5d5e293904d209335e8636a4a655f4646ff509aa18b1b2a2997",
+   "file": "SIR-173.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:45:59Z",
+   "report": "reports/SIR-173/4e5c092bc951",
+   "errors": 1,
+   "warnings": 0,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SIR-174:7e39a9f3c919df010dd84275913567252fb0ac90a4ae1c8600384ca69b8fe5cd": {
+   "task": "SIR-174",
+   "sha256": "7e39a9f3c919df010dd84275913567252fb0ac90a4ae1c8600384ca69b8fe5cd",
+   "file": "SIR-174.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:45:59Z",
+   "report": "reports/SIR-174/7e39a9f3c919",
+   "errors": 1,
+   "warnings": 0,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SIR-175:e8e45d0c962ea373271a7f3933e7ec664b433515743667323a99f39b7ac89836": {
+   "task": "SIR-175",
+   "sha256": "e8e45d0c962ea373271a7f3933e7ec664b433515743667323a99f39b7ac89836",
+   "file": "SIR-175.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:46:00Z",
+   "report": "reports/SIR-175/e8e45d0c962e",
+   "errors": 1,
+   "warnings": 0,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
+  },
+  "SIR-176:cc2f4a49f9b9702c5ce23f413df64eb979c3286847aed7f9d101d0643b4ac540": {
+   "task": "SIR-176",
+   "sha256": "cc2f4a49f9b9702c5ce23f413df64eb979c3286847aed7f9d101d0643b4ac540",
+   "file": "SIR-176.png",
+   "result": "fail",
+   "checked": "2026-10-15T05:46:01Z",
+   "report": "reports/SIR-176/cc2f4a49f9b9",
+   "errors": 1,
+   "warnings": 0,
+   "state": "rejected",
+   "reason": "Too small (1060x1484). Premium sheets need at least 2100x2940, SIR singles 1500x2100. Kept as SOL's pending source; resend at full size (do not upscale)."
   }
  }
 }

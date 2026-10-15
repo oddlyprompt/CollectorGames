@@ -27,7 +27,14 @@ def sheet_cells(path):
     im=Image.open(path).convert('RGB'); sys.path.insert(0,os.path.join(ROOT,'tools')); import ingest
     xr,yr=ingest.cells(im,3,3); return [im.crop((x0,y0,x1,y1)) for (y0,y1) in yr for (x0,x1) in xr]
 tmp=tempfile.mkdtemp(prefix='wkart-'); WP=os.path.join(tmp,'wildkin-production'); shutil.copytree(os.path.join(ROOT,'wildkin-production'),WP)
-for d in ('incoming',): [os.remove(os.path.join(WP,d,f)) for f in os.listdir(os.path.join(WP,d)) if f.endswith('.png')]
+# start from a clean baseline whatever has been delivered for real: only the owner's earlier (legacy) art approved, nothing delivered, nothing checked
+for f in os.listdir(os.path.join(WP,'incoming')):
+    if f!='README.md': os.remove(os.path.join(WP,'incoming',f))
+_rp=os.path.join(WP,'approved','registry.json'); _R=json.load(open(_rp)); _R['assets']={k:v for k,v in _R['assets'].items() if v.get('task')=='legacy'}; _R.pop('history',None); json.dump(_R,open(_rp,'w'))
+for f in os.listdir(os.path.join(WP,'reports')):
+    if f.startswith(('SHEET-','SIR-')): shutil.rmtree(os.path.join(WP,'reports',f))
+if os.path.exists(os.path.join(WP,'reports','intake.json')): os.remove(os.path.join(WP,'reports','intake.json'))
+subprocess.run([sys.executable,os.path.join(ROOT,'tools','wildkin_manifest.py')],env=dict(os.environ,WILDKIN_PRODUCTION=WP),capture_output=True)
 ENV=dict(os.environ, WILDKIN_PRODUCTION=WP); INC=os.path.join(WP,'incoming')
 reg0=json.load(open(os.path.join(WP,'approved','registry.json')))['assets']
 cact=os.path.join(ROOT,'art-source','creatures','cactuft-poses-magenta.png'); bash=os.path.join(ROOT,'art-source','creatures','bashlet-poses-green.png'); koi=os.path.join(ROOT,'art-source','creatures','koi-poses-green.png')

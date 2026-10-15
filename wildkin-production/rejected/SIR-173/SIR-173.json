@@ -1,0 +1,11 @@
+{
+  "task_id": "SIR-173",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SIR-173 Special Illustration Rare, Cactuft. Create one premium SHOWPIECE painting, EXACT1500x2100 PNG portrait5:7, no grid, no text/frame/logo. Identity reference is the green cactus-wool llama: cream small muzzle/face, big warm brown eyes, upright soft ears, cream ankles, dark little hooves, rounded mossy cactus wool with tiny golden spines and pink flowers. MUST remain this llama, no cat/fox or different species. Invent a new emotionally memorable scene: a very small Cactuft pauses halfway across a mossy footbridge spanning a tranquil irrigation channel inside an immense forgotten glasshouse overgrown with blooming succulents. An ordinary flower petal falls near its nose and it gently follows it. Quiet intimate discovery with monumental layered botanical setting, weathered warm stone, overhanging blossoms, fine dust rays through broken glass roof, morning coral/gold against sage/teal. Painterly cinematic dimensional3D consistent with Wildkin, extraordinarily detailed but calm, refined coherent composition. Cactuft occupies middle HALF vertically and approx30% image height, focal face sharp, top quarter arch canopy and diffuse light, bottom quarter tranquil water reflections and stone detail for future card text. Creature fully uncropped including ears hooves. Not a collage, no border, no glyphs, no additional characters. Highest-quality source art, output at requested native1500x2100.",
+  "references": [
+    "/workspace/scratch/b718be279b35/wildkin-art/reference/cactuft-poses-magenta.png"
+  ],
+  "notes": "Native generation output; see QA for resolution."
+}

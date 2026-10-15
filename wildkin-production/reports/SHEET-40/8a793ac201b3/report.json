@@ -1,0 +1,160 @@
+{
+ "task": "SHEET-40",
+ "file": "wildkin-production/incoming/SHEET-40.png",
+ "sha256": "8a793ac201b38f8b9c01c89440d81626c66eba76f38c72e20806506eff5b6010",
+ "checked": "2026-10-15T05:45:56Z",
+ "errors": [
+  "too small: 1060x1484, need at least 2100x2940"
+ ],
+ "warnings": [
+  "cell 1: cell is only 337 px wide; card art wants 700+",
+  "cell 2: cell is only 333 px wide; card art wants 700+",
+  "cell 3: cell is only 333 px wide; card art wants 700+",
+  "cell 4: cell is only 337 px wide; card art wants 700+",
+  "cell 5: cell is only 333 px wide; card art wants 700+",
+  "cell 6: cell is only 333 px wide; card art wants 700+",
+  "cell 7: cell is only 337 px wide; card art wants 700+",
+  "cell 8: cell is only 333 px wide; card art wants 700+",
+  "cell 9: cell is only 333 px wide; card art wants 700+"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.150-flapod-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 337 px wide; card art wants 700+"
+   ],
+   "std": 61.5,
+   "cell_px": [
+    337,
+    476
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "ill.161-nimbusail-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 42.2,
+   "cell_px": [
+    333,
+    476
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "ill.162-veilmora-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 51.8,
+   "cell_px": [
+    333,
+    476
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "ill.163-ferradon-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 337 px wide; card art wants 700+"
+   ],
+   "std": 64.2,
+   "cell_px": [
+    337,
+    473
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "ill.164-fablehorn-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 55.3,
+   "cell_px": [
+    333,
+    473
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": "ill.165-bramblebuck-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 54.3,
+   "cell_px": [
+    333,
+    473
+   ]
+  },
+  {
+   "cell": 7,
+   "asset_id": "ill.166-corallume-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 337 px wide; card art wants 700+"
+   ],
+   "std": 52.8,
+   "cell_px": [
+    337,
+    479
+   ]
+  },
+  {
+   "cell": 8,
+   "asset_id": "ill.167-cometrail-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 49.4,
+   "cell_px": [
+    333,
+    479
+   ]
+  },
+  {
+   "cell": 9,
+   "asset_id": "ill.168-puffluff-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 46.0,
+   "cell_px": [
+    333,
+    479
+   ]
+  }
+ ],
+ "size": [
+  1060,
+  1484
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-40",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SHEET-40 Illustration Rares B. EXACT2100x2940 portrait PNG 5:7, nine equal portrait5:7 paintings in3x3 with thin straight black gutters at thirds. Nine original full-bleed rich dimensional3D premium illustrations with clear subject centered in middle50% vertical, atmospheric environment top/bottom quarter; no text/frames. Supplied images identity references only; preserve anatomy markings colors. Row-major1 Flapod peach-coral Dumbo OCTOPUS, two large ear fins, curled tentacles pale suckers, freckles brown eyes, drifting in tide pool lit through water;2 Nimbusail graceful long pastel blue CLOUD DOLPHIN, cream belly, big blue eyes, white cloud mane and upright white cloud SAIL dorsal fin, blue fluke, soaring through huge dawn cloud canyon;3 Veilmora exact bottom row moth sheet, plum furry moth with cream collar, long feather antennae and large plum wings with cream crescent markings, on lanternlit tree at dusk;4 Ferradon charcoal warm-gray armored BOAR with cream muzzle, curved ivory tusks, dark layered steel back armor/copper rivets, crossing abandoned forge at morning light;5 Fablehorn exact bottom row rabbit-deer sheet, cream body pale pink/lavender mane and leaf tufts, translucent branching antlers, amber eyes long pink ears, finding ancient storybook ruin in blossom grove;6 Bramblebuck exact middle row deer sheet, tan deer with green moss/leaf mantle and branching wood antlers sprouting leaves, amid forest shafts of sun;7 Corallume exact middle row coral crab sheet, salmon coral crab with cream face and big teal eyes, branched pink coral crown, strong claws, coral reef twilight;8 Cometrail pale blue cream kangaroo/hare, long upright blue/cream ears, large long blue tail bearing white star-shaped markings, leaping over windswept wildflowers;9 Puffluff round cream woolly llama with beige face, pink cheeks, upright ears, dark eyes and little brown hooves, asleep in cozy snowdrift. Each card different scene and lighting, not floating cutouts.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/reference/mascot-reference-survey.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-14--v2.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-17.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-18.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-19.png"
+  ],
+  "notes": "Native image generation output; see QA report for resolution."
+ }
+}

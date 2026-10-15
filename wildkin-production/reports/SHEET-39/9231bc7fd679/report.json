@@ -1,0 +1,156 @@
+{
+ "task": "SHEET-39",
+ "file": "wildkin-production/incoming/SHEET-39--v2.png",
+ "sha256": "9231bc7fd6794a1249ef25e82a67d99241ac2bf10652559aa4ac80483c152cd7",
+ "checked": "2026-10-15T05:45:55Z",
+ "errors": [
+  "too small: 1060x1484, need at least 2100x2940"
+ ],
+ "warnings": [
+  "cell 1: cell is only 340 px wide; card art wants 700+",
+  "cell 2: cell is only 326 px wide; card art wants 700+",
+  "cell 3: cell is only 336 px wide; card art wants 700+",
+  "cell 4: cell is only 340 px wide; card art wants 700+",
+  "cell 5: cell is only 326 px wide; card art wants 700+",
+  "cell 6: cell is only 336 px wide; card art wants 700+",
+  "cell 7: cell is only 340 px wide; card art wants 700+",
+  "cell 8: cell is only 326 px wide; card art wants 700+",
+  "cell 9: cell is only 336 px wide; card art wants 700+"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.141-cactuft-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 340 px wide; card art wants 700+"
+   ],
+   "std": 55.4,
+   "cell_px": [
+    340,
+    476
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "ill.142-prismotl-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 326 px wide; card art wants 700+"
+   ],
+   "std": 57.1,
+   "cell_px": [
+    326,
+    476
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "ill.143-bashlet-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 336 px wide; card art wants 700+"
+   ],
+   "std": 61.4,
+   "cell_px": [
+    336,
+    476
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "ill.144-koirune-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 340 px wide; card art wants 700+"
+   ],
+   "std": 54.2,
+   "cell_px": [
+    340,
+    476
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "ill.145-shelladin-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 326 px wide; card art wants 700+"
+   ],
+   "std": 65.5,
+   "cell_px": [
+    326,
+    476
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": "ill.146-frondolin-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 336 px wide; card art wants 700+"
+   ],
+   "std": 56.2,
+   "cell_px": [
+    336,
+    476
+   ]
+  },
+  {
+   "cell": 7,
+   "asset_id": "ill.147-candicoil-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 340 px wide; card art wants 700+"
+   ],
+   "std": 63.2,
+   "cell_px": [
+    340,
+    476
+   ]
+  },
+  {
+   "cell": 8,
+   "asset_id": "ill.148-astrynx-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 326 px wide; card art wants 700+"
+   ],
+   "std": 59.8,
+   "cell_px": [
+    326,
+    476
+   ]
+  },
+  {
+   "cell": 9,
+   "asset_id": "ill.149-berribat-ir",
+   "errors": [],
+   "warnings": [
+    "cell is only 336 px wide; card art wants 700+"
+   ],
+   "std": 54.3,
+   "cell_px": [
+    336,
+    476
+   ]
+  }
+ ],
+ "size": [
+  1060,
+  1484
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-39",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Upscale and enhance this exact Wildkin illustration production sheet to NATIVE output2100x2940PNG. Required final PNG dimensions2100pixels wide2940pixels high, same portrait5:7 exact3x3 equal portrait paintings, same subjects and order, same composition, same identities and colors. Increase fine detail fidelity at native2x output resolution. Do NOT change layout or insert text/frames; do not return1060x1484 or other smaller image. This task is specifically the resolution-compliant delivery of the already approved-looking artwork. All9 paintings must remain intact with thin black gutters.",
+  "references": [
+   "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-39.png"
+  ],
+  "notes": "QA revision; preserve previous version."
+ }
+}

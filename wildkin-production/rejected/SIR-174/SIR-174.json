@@ -1,0 +1,11 @@
+{
+  "task_id": "SIR-174",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SIR-174 Nimbusail Special Illustration Rare. One SHOWPIECE painting EXACT1500x2100 PNG portrait5:7, no grid/no text/cardframes/logos. Use exact BOTTOM ROW final evolution of supplied dolphin reference: long graceful pastelblue dolphin, cream belly, big warm blue eyes, smooth blue pectoral fins and split dolphin fluke, billowing white cloud mane and dorsal cloud sail. Do not use round baby from top row, not whale, no feet/legs. New breathtaking scene with strong quiet narrative: Nimbusail floats above a vast cloud inversion between ancient stone mountain spires; a tiny abandoned wooden lookout with wind ribbons suggests human scale below. Sunset seen through translucent cloud dorsal sail, rose gold silver blue air, immense depth, distant waterfalls vanish into clouds. Main dolphin centered middle50% of vertical image, entirely uncropped, approx40% image height, traversing horizontal across composition with face sharp. Top quarter peach sky light rays, bottom quarter deep floating cloud valley, suitable for future card overlay. Warmth and wonder, cinematic richly painted dimensional3D faithful creature anatomy/materials, beautiful composition beyond generic floating mascot. Native1500x2100 source resolution.",
+  "references": [
+    "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-11--v3.png"
+  ],
+  "notes": "Native generation output; see QA for resolution."
+}

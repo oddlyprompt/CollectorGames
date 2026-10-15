@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-39",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Upscale and enhance this exact Wildkin illustration production sheet to NATIVE output2100x2940PNG. Required final PNG dimensions2100pixels wide2940pixels high, same portrait5:7 exact3x3 equal portrait paintings, same subjects and order, same composition, same identities and colors. Increase fine detail fidelity at native2x output resolution. Do NOT change layout or insert text/frames; do not return1060x1484 or other smaller image. This task is specifically the resolution-compliant delivery of the already approved-looking artwork. All9 paintings must remain intact with thin black gutters.",
+  "references": [
+    "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-39.png"
+  ],
+  "notes": "QA revision; preserve previous version."
+}

@@ -467,12 +467,12 @@
    ],
    "aspect": "1:1",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -1784,12 +1784,12 @@
    ],
    "aspect": "1:1",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -1910,12 +1910,12 @@
    ],
    "aspect": "1:1",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -2702,12 +2702,12 @@
    ],
    "aspect": "1:1",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 6,
     "required_cells": 6
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -2819,12 +2819,12 @@
    ],
    "aspect": "1:1",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -3557,12 +3557,12 @@
    ],
    "aspect": "1:1",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -3710,12 +3710,12 @@
    ],
    "aspect": "1:1",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4144,12 +4144,12 @@
    "aspect": "1:1 sheet; the card crops each cell to about 4:3",
    "identity_status": "names canon; scenes need design",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 9,
     "required_cells": 9
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {
@@ -4213,12 +4213,12 @@
    "aspect": "1:1",
    "identity_status": "names canon; scenes need design",
    "production": {
-    "status": "todo",
-    "approved_cells": 0,
+    "status": "complete",
+    "approved_cells": 3,
     "required_cells": 3
    },
    "qa": {
-    "status": "pending"
+    "status": "approved"
    }
   },
   {

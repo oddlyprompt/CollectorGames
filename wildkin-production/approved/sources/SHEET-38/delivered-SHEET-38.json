@@ -1,0 +1,13 @@
+{
+  "task_id": "SHEET-38",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case: illustration-story. Wildkin SHEET-38 Tactics B. Square PNG at least1254x1254, EXACT 3x3 square-cell grid with thin black straight gutters at exact thirds. ONLY TOP ROW has three full-bleed dimensional 3D story illustrations, match supplied identity references. Cells4,5,6,7,8,9 MUST BE EMPTY uniformly flat near-black RGB(20,20,24), NO subjects, texture, lighting or decoration there. Top-left Override Signal: silver-haired Sel Veyra in ivory/gold coat and black clothes activates a teal mechanical control console while a Cactuft llama in the background wears a small angular charcoal/silver restraint collar with tiny teal indicator. Top-middle Break the Clasp: brown ponytail young June in red jacket, cream shirt, blue scarf and sash, practical boots, carefully unfastens same mechanical collar from green cactus-wool Cactuft, hopeful escape, no injury. Top-right Stand Together: June stands protectively with free green Cactuft and blue spiky ankylosaur Bashlet at forest edge facing distant industrial compound. No magical evil transformations: Veyra control is mechanical, humans and creatures. No text, captions, card frames, logos. Fill the three top cells only.",
+  "references": [
+    "/workspace/scratch/b718be279b35/wildkin-art/reference/cactuft-poses-magenta.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+  ],
+  "notes": "Reference-led generation; pending validation."
+}
