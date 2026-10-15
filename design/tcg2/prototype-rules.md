@@ -53,13 +53,28 @@ Keywords: *Charge* (attacks the turn it arrives), *Surge*, *Rampart* (+2 toughne
 2. **Game length:** about 8 turns per player (middle half 6 to 9). Inside the provisional 8-10 target, at its low end.
 3. **Expensive cards stay viable:** 7+ cost cards arrive around turn 8 and the side that plays one wins about two thirds of the time.
 4. **The first rule set failed and was changed.** In version 0.1 defenders could only block on the front they stood on, so Land and Sea armies ran past each other in a damage race (first player won 67%, Strongholds absorbed 3% of damage). Letting defenders block from either front, with Home ground deciding who strikes first, fixed that: 43% of blocks are now made away from home, so where units stand matters in most fights.
-5. **Attacking across fronts is rare (2% of attacks).** It is allowed, but the prototype cards give little reason to: blockers can come from anywhere, and an away attacker strikes second and is Stranded. This is the main open design problem; see below.
+5. **Crossing attacks (corrected 2026-10-16).** The first report said 2% of attacks crossed fronts. That figure only counted attacks *away from home*; it left out Sea units with Surge raiding the Shore, which are crossings too. Measured properly, **15.6% of attacks go into the other front** in rules 0.2, almost all of them Surge raids. What is rare (about 2%) is a unit fighting at a real disadvantage, which is as intended.
 6. **Strongholds on the Shore only absorb 5% of unblocked damage;** a variant where they guard both fronts (except against Vessels) absorbed 14% and made Land control stronger (Crown Bastion 46% to 53%). Kept on the Shore for now.
 7. **Ambush and Swift tricks are underused** (Ambush about once in 50 games). Partly the simulated player (it rarely holds Influence back), partly the cards. Real players would use them more; the simulator understates them.
 
+## Four ways to make crossing worthwhile (compared, `crossing-variants.md`)
+
+Each variant was run for 3,000 games on the same 60 cards:
+
+| Variant | Attacks into the other front | Matchups 40-60% | Deck spread | Notes |
+|---|---|---|---|---|
+| Baseline (rules 0.2) | 15.6% | 13 of 15 | 8.7 pts | Surge raids are most of the crossing |
+| 1. Vessels screen the Deep (as Strongholds screen the Shore) | 15.4% | **14 of 15** | 7.8 pts | Vessels gain a defensive job (4.8% of damage); best balance |
+| 2. A Domain that rewards crossing (Coral Spire reef) | 16.0% | 12 of 15 | 9.7 pts | Works, but only when that one card is in play (0.2 times a game) |
+| 3. Raid keyword on eight fast raiders | 16.3% | 12 of 15 | 9.0 pts | Works on the cards that have it (0.1 hits a game); a card tool, not a rule |
+| 4. Dual units escort one crossing attacker | **20.1%** | 12 of 15 | 8.0 pts | The biggest change; gives the Harbor Leagues a clear role |
+| All four together | 21.1% | 12 of 15 | 7.6 pts | Balance holds; game length unchanged (8 turns) |
+
+**Recommendation:** make 1 (Vessels screen the Deep) and 4 (Dual escorts) part of the rules: they are symmetric, cheap to explain, and the two strongest effects. Keep 2 (reef-style Domains) and 3 (Raid) as card-level tools to use in sets, not as rules. None of the variants harms balance or game length.
+
 ## Open questions for the next round (owner decisions)
 
-1. **Reasons to attack across.** Options: fronts with different targets (Shore damage hits Strongholds, Deep damage hits Vessels before the Harbor); Domains that reward crossing (a Reef that lets Sea units cross the Shore unblocked once per turn); a *Raid* keyword (attacking away from home: +1 damage to the Harbor if unblocked, still Stranded); or cheaper crossing for Dual units.
+1. Adopt the recommended combination (1 + 4), with reef Domains and Raid as card tools?
 2. **Strongholds:** Shore only (current) or both fronts except against Vessels.
 3. **Going second:** 2 extra Influence on the first turn (current) or 1 extra Influence plus an extra card.
 4. **Longer games** if the owner wants the middle of the 8-10 range: a 25-point Harbor added about half a turn in testing.

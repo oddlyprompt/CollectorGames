@@ -4,6 +4,11 @@
 const {CARDS}=require('./cards.js');
 const R0={HARBOR:+(process.env.TM_HARBOR||20), HAND:6, DECK:50, MAXCAP:10, TURNCAP:40, SECOND_BONUS:+(process.env.TM_BONUS||2)};
 function mk(seed){ let h=(seed>>>0)||1; return ()=>{ h^=h<<13; h>>>=0; h^=h>>>17; h^=h<<5; h>>>=0; return h/4294967296; }; }
+const VAR=new Set((process.env.TM_VAR||'').split(',').filter(Boolean));
+// variant 'raid': the fast raiders get Raid (an away attacker that goes unblocked deals +1 to the Harbor)
+if (VAR.has('raid')) for (const c of CARDS) if (['Thicket Fox','Mossback Boar','Royal Lancer','Reef Scout','Current Dancer','Deckhand Brawler','Privateer Captain','Swift Cutter'].includes(c.n)) c.kw=c.kw.concat('raid');
+// variant 'reef': Coral Spire rewards crossing instead of punishing it (the first Sea unit attacking the Shore each turn can't be blocked)
+if (VAR.has('reef')) for (const c of CARDS) if (c.n==='Coral Spire') c.fx=[['reef_cross']];
 const ID={}; for (const c of CARDS) ID[c.id]=c;
 const has=(c,k)=>c.kw.includes(k);
 const fxOf=(c,k)=>c.fx.find(o=>o[0]===k);
@@ -123,6 +128,7 @@ function battle(S, P, O){
   // the counterattack we must survive: keep blockers back when the opponent could hit hard next turn
   const oppNext=O.units.reduce((q,u)=>q+powOf(S,O,u),0); const danger=oppNext>=P.harbor-4;
   const sorted=atkers.sort((a,b)=>powOf(S,P,b)-powOf(S,P,a));
+  let escorts=VAR.has('escort')? atkers.filter(u=>u.c.al==='D').length : 0; let reefFree=VAR.has('reef') && S.dom.D && fxOf(S.dom.D.c,'reef_cross') ? 1 : 0;
   for (const u of sorted){
     if (danger && !lethal && P.units.filter(x=>x.ready && !plan.some(p=>p.u===x)).length<=2 && u.c.t!=='vessel'){ continue; }
     let best=null, bs=-1e9;
@@ -131,21 +137,26 @@ function battle(S, P, O){
       if (f==='S' && maxS && nS>=maxS[1]) continue;
       let home=homes(u.c).includes(f) || (f==='S' && surgeOf(P,u)); let carriedHere=false;
       if (!home && f==='D' && u.c.al==='L' && usedCarry<carry && !domainFx(S,'D','strand_all')){ home=true; carriedHere=true; }
+      let escorted=false; if (!home && escorts>0 && u.c.al!=='D'){ home=true; escorted=true; }
+      const reefHere= reefFree>0 && f==='S' && u.c.al==='S';
       const bl=oppBlockers(f); let s=powOf(S,P,u);
       // would a blocker beat it? (the defender picks the best block)
-      let worst=0; for (const b of bl){ const r=fight(S,P,u,home,O,b,bHome(b,f),false); if (r.aDies && !r.bDies) worst=Math.max(worst, 2); else if (r.aDies && r.bDies) worst=Math.max(worst, val(S,P,u)>val(S,O,b)? 1:0.3); }
+      let worst=0; if (!reefHere) for (const b of bl){ const r=fight(S,P,u,home,O,b,bHome(b,f),false); if (r.aDies && !r.bDies) worst=Math.max(worst, 2); else if (r.aDies && r.bDies) worst=Math.max(worst, val(S,P,u)>val(S,O,b)? 1:0.3); }
       s-= worst*val(S,P,u)*0.6;
       if (O.holds.length && (f==='S' || (process.env.TM_WALLS||'shore')!=='shore') && u.c.t!=='vessel') s*=0.55;          // a Stronghold soaks unblocked damage on the Shore
       if (f==='S' && domainFx(S,'S','raid_bonus')) s+=1;
       if (!home) s-=2.5;                                  // stranded next turn and struck first by home defenders
-      if (s>bs){ bs=s; best={f,home,carriedHere}; }
+      if (!home && has(u.c,'raid')) s+=1.5;
+      if (reefHere) s+=2;
+      if (VAR.has('targets') && f==='D' && O.units.some(x=>x.c.t==='vessel') && u.c.t!=='vessel') s*=0.6;   // the defender's Vessels screen the Deep
+      if (s>bs){ bs=s; best={f,home,carriedHere,escorted,reefHere}; }
     }
     if (!best) continue;
     if (bs<=0.5 && !lethal) continue;
-    if (best.carriedHere){ usedCarry++; carried.add(u.uid); } if (best.f==='S') nS++;
-    plan.push({u, f:best.f, home:best.home});
+    if (best.carriedHere){ usedCarry++; carried.add(u.uid); } if (best.f==='S') nS++; if (best.escorted){ escorts--; S.log.escorted[P.i]++; } if (best.reefHere){ reefFree--; S.log.reef[P.i]++; }
+    plan.push({u, f:best.f, home:best.home, unb:!!best.reefHere});
   }
-  if (!plan.length) return; S.log.attacks[P.i]+=plan.length;
+  if (!plan.length) return; S.log.attacks[P.i]+=plan.length; for (const a of plan) if (!homes(a.u.c).includes(a.f)) S.log.cross[P.i]++;
   for (const a of plan) a.u.ready=false;
   // defender: Ambush units come in from hand to block
   for (const c of O.hand.slice()){ if (!has(c,'ambush') || c.cost>O.inf || !reqOk(O,c)) continue; const front=homes(c)[0]; O.hand.splice(O.hand.indexOf(c),1); O.inf-=c.cost; S.log.played.push([O.i,c.id,S.turn]); const nu=enter(S,O,P,c,front); nu.ready=true; S.log.ambush[O.i]++; }
@@ -155,7 +166,7 @@ function battle(S, P, O){
   const incoming=plan.reduce((q,a)=>q+powOf(S,P,a.u),0); const desperate=incoming>=O.harbor-3;
   const used=new Set(); const blocks=new Map();
   for (const a of plan.slice().sort((x,y)=>powOf(S,P,y.u)-powOf(S,P,x.u))){
-    const cand=oppBlockers(a.f).filter(b=>!used.has(b.uid)); let pick=null, ps=-1e9;
+    const cand=a.unb? [] : oppBlockers(a.f).filter(b=>!used.has(b.uid)); let pick=null, ps=-1e9;
     for (const b of cand){ const r=fight(S,P,a.u,a.home,O,b,bHome(b,a.f),false); let s=0;
       if (r.aDies && !r.bDies) s=10+val(S,P,a.u); else if (r.aDies && r.bDies) s= val(S,P,a.u)-val(S,O,b)+1; else if (!r.aDies && !r.bDies) s=powOf(S,P,a.u)>=3? 1 : -1; else s= desperate? 2-val(S,O,b)*0.2 : -5;
       if (s>ps){ ps=s; pick=b; } }
@@ -171,11 +182,12 @@ function battle(S, P, O){
     if (b){ const r=fight(S,P,a.u,a.home,O,b,bHome(b,a.f),true); if (has(a.u.c,'trample') && r.bDies) toHarbor[a.f]+=r.excess;
       if (has(a.u.c,'undertow') && !r.bDies && O.units.includes(b)){ O.units.splice(O.units.indexOf(b),1); if (!b.tok) O.hand.push(b.c); O.disc.push(...b.eq); }
       if (has(b.c,'undertow') && !r.aDies && P.units.includes(a.u)){ P.units.splice(P.units.indexOf(a.u),1); if (!a.u.tok) P.hand.push(a.u.c); P.disc.push(...a.u.eq); } }
-    else { let d=powOf(S,P,a.u); if (a.f==='S' && domainFx(S,'S','raid_bonus')) d+=1; if (a.u.c.t==='vessel' && (process.env.TM_WALLS||'shore')!=='shore') toHarbor.V=(toHarbor.V||0)+d; else toHarbor[a.f]+=d; }
+    else { let d=powOf(S,P,a.u); if (a.f==='S' && domainFx(S,'S','raid_bonus')) d+=1; if (!a.home && has(a.u.c,'raid')){ d+=1; S.log.raids[P.i]++; } if (a.u.c.t==='vessel' && (process.env.TM_WALLS||'shore')!=='shore') toHarbor.V=(toHarbor.V||0)+d; else toHarbor[a.f]+=d; }
     if (!a.home){ S.log.away[P.i]++; if (P.units.includes(a.u) && a.u.dmg<999) a.u.stranded=true; } if (carried.has(a.u.uid)) S.log.carried[P.i]++; }
   for (const u of P.units.concat(O.units)){ delete u.trickP; delete u.trickT; }
   // unblocked damage: on the Shore a Stronghold takes it first, then the Harbor
   let s=toHarbor.S+((process.env.TM_WALLS||'shore')==='shore'?0:toHarbor.D); if ((process.env.TM_WALLS||'shore')!=='shore') toHarbor.D=toHarbor.V||0; for (const h of O.holds){ if (s<=0) break; const k=Math.min(s,h.dur); h.dur-=k; s-=k; S.log.holdDmg[P.i]+=k; }
+  if (VAR.has('targets')){ for (const v of O.units.filter(x=>x.c.t==='vessel')){ if (toHarbor.D<=0) break; const left=Math.max(0,tghOf(S,O,v,false)-v.dmg); const k=Math.min(toHarbor.D,left); v.dmg+=k; toHarbor.D-=k; S.log.vesselDmg[P.i]+=k; } }
   const w=O.ench.find(e=>fxOf(e,'harbor_ward')); const nUnb=plan.filter(a=>!blocks.has(a)).length;
   let total=s+toHarbor.D; if (w) total=Math.max(0,total-nUnb); O.harbor-=total; S.log.harborDmg[P.i]+=total;
   cleanup(S);
@@ -192,7 +204,7 @@ function rise(S, P, O){
 }
 function play1(deckA, deckB, seed){
   const r=mk(seed); const S={r, turn:0, dom:{S:null,D:null}, over:false, win:-1, why:'',
-    log:{blocks:[0,0], awayBlocks:[0,0], away:[0,0], carried:[0,0], played:[], deaths:[0,0], harborDmg:[0,0], holdDmg:[0,0], attacks:[0,0], ambush:[0,0], strandedTurns:[0,0], unitsPlayed:[0,0]}};
+    log:{cross:[0,0], escorted:[0,0], reef:[0,0], raids:[0,0], vesselDmg:[0,0], blocks:[0,0], awayBlocks:[0,0], away:[0,0], carried:[0,0], played:[], deaths:[0,0], harborDmg:[0,0], holdDmg:[0,0], attacks:[0,0], ambush:[0,0], strandedTurns:[0,0], unitsPlayed:[0,0]}};
   S.p=[deckA,deckB].map((d,i)=>{ const deck=d.slice(); for (let k=deck.length-1;k>0;k--){ const j=Math.floor(r()*(k+1)); [deck[k],deck[j]]=[deck[j],deck[k]]; }
     return {i, deck, hand:[], disc:[], units:[], holds:[], ench:[], relics:[], harbor:R0.HARBOR, cap:0, inf:0, domCount:{L:0,S:0,X:0}}; });
   for (const P of S.p){ draw(S,P,R0.HAND); if (!P.hand.some(c=>c.cost<=3)){ P.deck.push(...P.hand.splice(0)); for (let k=P.deck.length-1;k>0;k--){ const j=Math.floor(r()*(k+1)); [P.deck[k],P.deck[j]]=[P.deck[j],P.deck[k]]; } draw(S,P,R0.HAND); } }
