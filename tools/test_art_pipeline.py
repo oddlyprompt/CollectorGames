@@ -73,6 +73,8 @@ r2=run('check'); check(r2.stdout.count('already checked')==len(I), 'rerunning ch
 r=run('approve','SHEET-10'); R=json.load(open(os.path.join(WP,'approved','registry.json')))['assets']
 same=all(R[k]['sha256']==reg0[k]['sha256'] for k in reg0)
 check('approved 0 piece' in r.stdout and same, 'approving a sheet never overwrites approved art', r.stdout.strip()[:120])
+I10=[v for v in json.load(open(os.path.join(WP,'reports','intake.json')))['deliveries'].values() if v['file']=='SHEET-10.png'][0]
+check(not os.path.exists(os.path.join(WP,'approved','sources','SHEET-10')) and I10['state']=='superseded', 'a sheet with nothing new to approve leaves no source copy and is not retried', I10['state'])
 r=run('approve','SHEET-03','--allow-warnings'); R=json.load(open(os.path.join(WP,'approved','registry.json')))['assets']
 new=[k for k in R if k not in reg0]
 check(any('maceback' in k for k in new) and any('fortisaur' in k for k in new) and R['cut.005-bashlet.standing']['sha256']==reg0['cut.005-bashlet.standing']['sha256'], 'new cells approved, the approved Bashlet poses kept', new)

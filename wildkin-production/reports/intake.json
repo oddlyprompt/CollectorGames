@@ -410,7 +410,7 @@
    "report": "reports/SHEET-23/b627e40c42e1",
    "errors": 0,
    "warnings": 6,
-   "state": "checked"
+   "state": "superseded"
   },
   "SHEET-24:fb2fac2192364c5fd243b7aff751185165b23cbd01cfe641bf3625b50cb86990": {
    "task": "SHEET-24",
@@ -421,7 +421,7 @@
    "report": "reports/SHEET-24/fb2fac219236",
    "errors": 0,
    "warnings": 3,
-   "state": "checked"
+   "state": "superseded"
   },
   "SHEET-25:6d905aed8ff87dad909d46d39fc9624948c60e1c0b7b17916327299e83b934eb": {
    "task": "SHEET-25",

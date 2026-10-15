@@ -171,8 +171,7 @@ def approve(task_id, cells=None, replace=False, allow_warnings=False, by='owner'
     h,rec=latest_for(task_id)
     if not h: sys.exit('no checked delivery for %s in incoming/ (run check first)'%task_id)
     rd=os.path.join(WP,rec['report']); rep=json.load(open(os.path.join(rd,'report.json'))); R=registry(); I=intake(); src=os.path.join(INC,rec['file']); hs=rec['sha256']
-    keep=os.path.join(APP,'sources',task_id,'%s.png'%hs[:12]); os.makedirs(os.path.dirname(keep),exist_ok=True)
-    if not os.path.exists(keep): shutil.copy2(src,keep)
+    keep=os.path.join(APP,'sources',task_id,'%s.png'%hs[:12])   # the original sheet is kept only once something from it is approved (below)
     meta=rep.get('metadata') or {}; took=[]; skipped=[]
     for cr in rep['cells']:
         aid=cr.get('asset_id')
@@ -189,6 +188,7 @@ def approve(task_id, cells=None, replace=False, allow_warnings=False, by='owner'
             os.makedirs(os.path.dirname(sup),exist_ok=True)
             if os.path.exists(old): shutil.move(old,sup)
             prev=R['assets'][aid]; prev['superseded_by']=hs[:12]; R.setdefault('history',[]).append(dict(asset_id=aid,**prev))
+        if not os.path.exists(keep): os.makedirs(os.path.dirname(keep),exist_ok=True); shutil.copy2(src,keep)
         os.makedirs(os.path.dirname(dst),exist_ok=True); shutil.copy2(os.path.join(rd,'cells',piece[0]),dst)
         R['assets'][aid]={'file':os.path.relpath(dst,ROOT),'sha256':sha(dst),'task':task_id,'cell':cr['cell'],'source':os.path.relpath(keep,ROOT),'source_sha256':hs,
                           'approved':now(),'approved_by':by,'provenance':{'delivered_as':rec['file'],'metadata':meta},'checks':{k:cr[k] for k in ('margins_LTRB','coverage','screen','screen_left','stray_pieces_dropped','cell_px') if k in cr},'warnings_accepted':cr['warnings']}
@@ -198,6 +198,8 @@ def approve(task_id, cells=None, replace=False, allow_warnings=False, by='owner'
         I['deliveries'][h]['state']='approved' if not skipped else 'partly-approved'; I['deliveries'][h]['approved_cells']=took
         done=os.path.join(APP,'sources',task_id,'delivered-'+rec['file'])
         if not skipped and os.path.exists(src): os.replace(src,done); mj=src.rsplit('.',1)[0]+'.json'; os.path.exists(mj) and os.replace(mj,done.rsplit('.',1)[0]+'.json')
+    elif skipped and all('already approved' in why for _,why in skipped):
+        I['deliveries'][h]['state']='superseded'   # every cell it offers is already approved: nothing to take, never retried
     jsave(os.path.join(REP,'intake.json'),I)
     print('%s: approved %d piece(s)%s'%(task_id,len(took),'' if not skipped else ', skipped: '+'; '.join('cell %d %s'%s for s in skipped)))
     return took
