@@ -39,7 +39,7 @@ function tcFairRaw(key){
   const ck=key+'@'+G.day; let v=TCFV.get(ck); if (v!=null) return v;
   const d=tcD(key); if (d.sealed){ v=tcSealedFair(d); } else {
     const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=TC_RB[c.rar+'|'+d.v]||0.1;
-    const nov=Math.max(0.6, 1+1.4*Math.exp(-wk/2.2)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(wk/4.33-12)/12));
+    const nov=Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(wk/4.33-12)/12));
     const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop;
     const st=tcLegalState(c.cid), u=Math.min(1,(G.tcg.usage[c.cid]||0)/4), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.tcg.hy[c.cid]||0;
     const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(tcIsPrem(c)?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
@@ -91,7 +91,7 @@ function tcBuySealed(set, f, q){
 }
 function tcPreorder(set, f, q){ const T=G.tcg; const lim=f==='B'?2:12; const have=T.pre.filter(p=>p.set===set&&p.f===f).reduce((s,p)=>s+p.q,0); if (have+q>lim) return 'Limit '+lim+' per account.'; const e=T.pre.find(p=>p.set===set&&p.f===f); if (e) e.q+=q; else T.pre.push({set,f,q}); return null; }
 function tcFulfilPreorders(set, t){ const T=G.tcg; const mine=T.pre.filter(p=>p.set===set); T.pre=T.pre.filter(p=>p.set!==set); const key0=n=>tcKey(set,0,n);
-  for (const p of mine){ const price=TC_MSRP[p.f]; let got=0; for (let i=0;i<p.q;i++){ if (G.player.cash<price){ toast('Preorder: you ran out of cash after '+got+'.'); break; } G.player.cash-=price; G.player.bought+=price; const cp=tcMakeCopy(key0(p.f),0,[t,'preorder',price,'Wildkin Games shop'],'shop'); cp.nw=1; cp.pv={d:t,v:Math.round(tcFairRaw(key0(p.f))*100)/100,n:'Preordered before release.'}; got++; }
+  for (const p of mine){ const price=p.paid? 0 : TC_MSRP[p.f]; let got=0; for (let i=0;i<p.q;i++){ if (G.player.cash<price){ toast('Preorder: you ran out of cash after '+got+'.'); break; } G.player.cash-=price; G.player.bought+=price; const cp=tcMakeCopy(key0(p.f),0,[t,'preorder',p.paid? TC_MSRP[p.f] : price,'Wildkin Games shop'],'shop'); cp.nw=1; cp.pv={d:t,v:Math.round(tcFairRaw(key0(p.f))*100)/100,n:'Preordered before release.'}; got++; }
     if (got) toast('Preorder in: '+got+' '+tcD(key0(p.f)).title, true); }
 }
 // opening: returns the cards, never charges anything (the sealed copy is what you paid for)

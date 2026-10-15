@@ -8,6 +8,10 @@ async def main():
         await pg.route('**/fonts.g*/**', lambda r: r.abort())
         await pg.goto(f'http://localhost:8770/{PACK}/index.html'); await pg.wait_for_selector('#launch'); await pg.click('[data-lact=new]'); await pg.click('[data-lact=start]')
         await pg.wait_for_function("window.G && G.player && G.player.start>0 && document.getElementById('boot').style.display==='none'", timeout=280000)
+        if PACK=='tcg':   # First Bond launches a week after the game starts: play to launch day first
+            while await pg.evaluate("!tcReleasedSets(G.day).length"):
+                await pg.evaluate("ACT.adv('1')"); await pg.wait_for_function("!UI.busy", timeout=120000); await pg.wait_for_timeout(150)
+                await pg.evaluate("closeSheet(true); if (UI.rvl) rvClose(); const t=document.getElementById('tco'); if (t) ACT.tcoclose();")
         r=await pg.evaluate("""(()=>{ G.player.cash=8000; const out={};
           const kind = PACK.id==='sports'?'c': PACK.id==='comics'?'m':'t';
           const l=G.lst.filter(x=>x.it===kind&&x.sel>0&&x.ty==='bin').sort((a,b)=>a.pr-b.pr)[2]; out.listing=l? itemLabel(l):'none'; if (l){ const e=buyListing(l.id); out.buy=e||'ok'; }

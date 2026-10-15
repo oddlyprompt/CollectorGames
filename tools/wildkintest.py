@@ -101,14 +101,26 @@ async def main():
         near=lambda a,b,tol: abs(a-b)<=tol
         check(near(c.get('ir',0),o['ir'],0.006) and near(c.get('fa',0),o['fa'],0.004) and near(c.get('sir',0),o['sir'],0.0025) and near(c.get('csr',0),o['csr'],0.0018) and near(c.get('holo',0),o['rare_holo'],0.01),
               'rare-slot odds match the manifest over 40,000 packs', {k:round(v,4) for k,v in c.items()})
-        # ---------------- economy readings at the start
+        # ---------------- launch week: a new game starts a week before First Bond
+        pre=await pg.evaluate("""(()=>{ const rel=tcSetDef(1).rel; return {days:rel-G.day, released:tcReleasedSets(G.day).length, stock:tcStock(1,'P'), news:G.news.filter(n=>n.k==='tcg').map(n=>n.h).slice(0,4), revealed:tcRevealed(1).length,
+          pre:tcPreorder(1,'P',2)||'ok', pending:G.tcg.pre.reduce((s,p)=>s+p.q,0), bought:G.player.bought}; })()""")
+        check(pre['days']==7 and pre['released']==0 and pre['stock']==0, 'First Bond releases one week after the game starts; nothing on sale before', pre)
+        check(any('ANNOUNCED' in h for h in pre['news']) and pre['revealed']==180 and pre['pre']=='ok', 'the set is announced on day one with every card shown, and preorders work', (pre['news'],pre['revealed'],pre['pre']))
+        for i in range(7):
+            await pg.evaluate("ACT.adv('1')"); await pg.wait_for_function("!UI.busy", timeout=120000); await pg.wait_for_timeout(150)
+            await pg.evaluate("closeSheet(true); if (UI.rvl) rvClose(); const t=document.getElementById('tco'); if (t) ACT.tcoclose();")
+        post=await pg.evaluate("""(()=>({released:tcReleasedSets(G.day).length, day:G.day-tcSetDef(1).rel, stock:tcStock(1,'P'), arch:G.tcg.arch.length, pending:G.tcg.pre.length, packs:myTc().filter(c=>tcD(c.k).sealed).length, listed:G.lst.filter(l=>l.it==='t').length,
+          spent:Math.round((G.player.bought-%s)*100)/100}))()"""%pre['bought'])
+        check(post['released']==1 and post['day']==0 and post['stock']>0 and post['arch']>=8 and post['listed']>20, 'on launch day the set is in shops, on the market and in the metagame', post)
+        check(post['pending']==0 and post['packs']>=2 and post['spent']>=9, 'preorders arrive on launch day and are charged then', post)
+        # ---------------- economy readings at launch (prices carry a launch premium that fades within about a month)
         ec=await pg.evaluate("""(()=>{ const ks=tcAllKeys(1).filter(k=>!tcD(k).sealed); const v=ks.map(k=>[k,tcFairRaw(k)]).sort((a,b)=>b[1]-a[1]);
           const by={}; for (const [k,x] of v){ const d=tcD(k); const g=d.rar+(d.v==='H'?' holo':d.v==='R'?' rev':''); (by[g]=by[g]||[]).push(x); }
           const med=a=>a.slice().sort((x,y)=>x-y)[Math.floor(a.length/2)]; const tiers={}; for (const g in by) tiers[g]=+med(by[g]).toFixed(2);
           return {ev:+tcPackEV(1).toFixed(2), pack:+tcFairRaw(tcKey(1,0,'P')).toFixed(2), box:+tcFairRaw(tcKey(1,0,'B')).toFixed(2), top:v.slice(0,8).map(([k,x])=>tcCardLabel(k)+' $'+x.toFixed(0)), tiers}; })()""")
-        print('     economy at start: pack EV $%s, pack $%s, box $%s'%(ec['ev'],ec['pack'],ec['box'])); print('     medians:',ec['tiers']); print('     top:',ec['top'])
-        check(3.0<=ec['ev']<=6.5, 'pack expected value near the $4.50 price', ec['ev'])
-        check(100<=ec['box']<=260, 'box value near the $150 price', ec['box'])
+        print('     economy at launch: pack EV $%s, pack $%s, box $%s'%(ec['ev'],ec['pack'],ec['box'])); print('     medians:',ec['tiers']); print('     top:',ec['top'])
+        check(4.0<=ec['ev']<=8.0, 'pack expected value at launch a little above the $4.50 price', ec['ev'])
+        check(140<=ec['box']<=300, 'box value at launch a little above the $150 price', ec['box'])
         # ---------------- play loop
         loop=await pg.evaluate("""(()=>{ G.player.cash=5000; const out={};
           out.shop=tcBuySealed(1,'P',3)||'ok'; const pk=myTc().find(c=>tcD(c.k).sealed&&tcD(c.k).v==='P'); const o=tcOpenSealed(pk.id); out.pulled=o.packs.flat().length;

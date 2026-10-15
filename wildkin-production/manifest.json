@@ -48,14 +48,14 @@
   "name": "First Bond",
   "name_status": "canon",
   "code": "FBD",
-  "code_status": "provisional",
+  "code_status": "decided",
   "total": 180,
   "base": 140,
   "premium": 40,
   "release_date": {
-   "value": "2026-02-06",
-   "status": "provisional",
-   "note": "engine calendar; the game starts four months after release"
+   "value": "2026-06-08",
+   "status": "decided",
+   "note": "engine calendar: a new game starts on 2026-06-01, so First Bond launches one week in (owner, 2026-10-15). Announced with preorders on day one"
   },
   "pack": {
    "cards": 10,
@@ -81,7 +81,7 @@
    "status": "canon (6/2/1/1)"
   },
   "rare_slot_odds": {
-   "status": "provisional",
+   "status": "decided",
    "note": "per pack; tuned with the headless economy check",
    "rare": 0.6215,
    "rare_holo": 0.25,
@@ -92,12 +92,12 @@
   },
   "box": {
    "packs": 36,
-   "status": "provisional (engine)"
+   "status": "decided"
   },
   "msrp": {
    "pack": 4.5,
    "box": 150,
-   "status": "provisional (engine)"
+   "status": "decided"
   }
  },
  "affinities": [

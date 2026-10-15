@@ -22,7 +22,7 @@ First Bond (Set 001, 180 cards) is complete as a game: every card has approved a
 
 - `tools/wildkin_sim.js` (Node, headless): about 0.8 ms per game; games last about 12 turns (6 per player); 74% end on the last Prize, 23% when a player runs out of creatures, 3% by deck-out, none at the turn limit; first player wins about 56%. Top-15 round robin (16 games per pair): average win rates from 38% to 63%. Flagship mascot decks, head to head over 200 games each: 42% to 60%. 44 of 140 base cards are never in a simulated deck (mostly narrow Gear, Tactics and off-affinity Biomes), which is normal for a set and gives bulk.
 - `tools/wildkintest.py`: all checks pass, including the new ones: every base card has designed rules and no placeholder attack names; every creature has one of the nine affinities; mascot affinities unchanged; premium ordering as established; fandom favours the mascot and the chase subjects; evolution decks carry every earlier stage; the engine plays 60 games inside the game with 40-card decks and none hits the turn limit; tournament finals are played by the engine; no deck averages above 68% or below 32%; a forced dominant deck triggers a ban, the banned card (Spiramel in the test) leaves every rebuilt deck and drops from $0.58 to $0.16; the card page and card face show the rules; plus every earlier check (catalog, art mapping, packs and odds, play loop, saves, prototype-save protection, 3D viewer).
-- `tools/wildkin_econ.py`, 12 months: pack value $5.35 to $6.11 (price $4.50), box $183 to $266 (price $150), Cactuft SIR $412 to $470 raw and about $2,100 to $2,400 at GCS 10; the lead deck changed five times in the year (Veilmora, Cactuft, Spiramel, Astrynx/Koirune decks); top deck 13% to 21%; no ban triggered.
+- `tools/wildkin_econ.py`, 12 months from the start of a new game (launch on day 8): pack value $7.07 at launch, $5.34 two months in, $5.77 after a year (price $4.50); box $237, $184, $197 (price $150); Cactuft SIR $539 at launch, then $396 to $433; the lead deck changed between the Veilmora, Spiramel and Astrynx/Koirune decks; top deck 12% to 17%; no ban triggered.
 - A save made with the previous version (before the rules engine) was exported, imported into this build, opened and played for three weeks: the field is rebuilt on load, events run with engine-played finals, no errors.
 - `tools/shelltest.py` for sports, comics and tcg; `tools/playtest.py` for comics and tcg; `tools/test_art_pipeline.py`; `tools/wildkin_manifest.py --check`: clean.
 
@@ -31,12 +31,16 @@ First Bond (Set 001, 180 cards) is complete as a game: every card has approved a
 - No human has played these rules. The balance comes from the simulated player, which is greedy and does not plan ahead; real players would find stronger lines.
 - Real phones, itch.io, a GPU 3D viewer (unchanged from before).
 
+## Decided on 2026-10-15 (second round)
+
+- **Release:** First Bond launches on 8 June 2026 in the game calendar, one week after a new game starts. On day one it is announced with every card shown and preorders open; the two Wildkin starting scenarios are now paid preorders that arrive on launch day. Set code `FBD`, $4.50 packs, $150 boxes of 36 and the rare-slot odds are final (status "decided").
+- **Launch prices:** a launch premium (pack worth about $7, box about $237, Cactuft SIR about $540) fades within about a month to about $5.40 and $185.
+
 ## Open decisions (genuinely unresolved, none blocks play)
 
-1. **Release date and set code** of First Bond (6 February 2026 in the game calendar, code `FBD`), pack and box prices and the rare-slot odds are still engine numbers (status "provisional").
-2. **Essence art.** No sheet in the 43-sheet plan; Essence cards are vector designs drawn by the frame. Fine for launch; paint them only if wanted.
-3. **SIR resolution.** The 4 SIR paintings are 1060 x 1484, accepted by the owner for screen; they are below print size.
-4. **The old koi sheet** in `art-source/` was never mapped to a stage. All three koi cards have SOL art, so it is only an unused legacy asset now.
+1. **Essence art.** No sheet in the 43-sheet plan; Essence cards are vector designs drawn by the frame. Fine for launch; paint them only if wanted.
+2. **SIR resolution.** The 4 SIR paintings are 1060 x 1484, accepted by the owner for screen; they are below print size.
+3. **The old koi sheet** in `art-source/` was never mapped to a stage. All three koi cards have SOL art, so it is only an unused legacy asset now.
 
 ## Known limits of the current game
 
