@@ -1,0 +1,23 @@
+{
+  "cell": 1,
+  "asset_id": "ill.175-june-kestrel-sir",
+  "subject": "June Kestrel SIR",
+  "card": "WK-S001-175",
+  "task_id": "SIR-175",
+  "filename": "WK-S001-175__ill.175-june-kestrel-sir.png",
+  "min_px": [
+    1500,
+    2100
+  ],
+  "generation": "preserved previously generated individual SIR; not regenerated",
+  "source_reference": "SIR-175.png",
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "sha256": "e8e45d0c962ea373271a7f3933e7ec664b433515743667323a99f39b7ac89836",
+  "size_bytes": 2925670,
+  "resolution_status": "below_original_SIR_print_requirement",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-175__ill.175-june-kestrel-sir.png"
+}

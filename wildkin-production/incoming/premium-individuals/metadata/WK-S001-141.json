@@ -1,0 +1,24 @@
+{
+  "cell": 1,
+  "asset_id": "ill.141-cactuft-ir",
+  "subject": "Cactuft IR",
+  "card": "WK-S001-141",
+  "task_id": "SHEET-39",
+  "filename": "WK-S001-141__ill.141-cactuft-ir.png",
+  "min_px": [
+    700,
+    980
+  ],
+  "generation": "built-in imagegen; individual full-frame generation",
+  "prompt": "Single Cactuft IR painting using top-left reference panel: green cactus-wool llama in a flowering sunlit conservatory; full-bleed 5:7; preserve identity, no text, no frame; requested 1600x2240. Actual native size verified separately.",
+  "source_reference": "SHEET-39--v2.png",
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "sha256": "0c089593b80a3392c403292c962a368c8005e7e278dcf2329bb9bf6de070d9e7",
+  "size_bytes": 2851504,
+  "resolution_status": "pass",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-141__ill.141-cactuft-ir.png"
+}

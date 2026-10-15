@@ -1,0 +1,23 @@
+{
+  "cell": 1,
+  "asset_id": "ill.176-sel-veyra-sir",
+  "subject": "Sel Veyra SIR",
+  "card": "WK-S001-176",
+  "task_id": "SIR-176",
+  "filename": "WK-S001-176__ill.176-sel-veyra-sir.png",
+  "min_px": [
+    1500,
+    2100
+  ],
+  "generation": "preserved previously generated individual SIR; not regenerated",
+  "source_reference": "SIR-176.png",
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "sha256": "cc2f4a49f9b9702c5ce23f413df64eb979c3286847aed7f9d101d0643b4ac540",
+  "size_bytes": 3011649,
+  "resolution_status": "below_original_SIR_print_requirement",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-176__ill.176-sel-veyra-sir.png"
+}

@@ -1,0 +1,738 @@
+{
+ "checked": "2026-10-15T11:33:49Z",
+ "map": "wildkin-production/incoming/premium-individuals/card-map.json",
+ "items": [
+  {
+   "asset_id": "ill.141-cactuft-ir",
+   "card": "WK-S001-141",
+   "file": "WK-S001-141__ill.141-cactuft-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "0c089593b80a3392c403292c962a368c8005e7e278dcf2329bb9bf6de070d9e7",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.142-prismotl-ir",
+   "card": "WK-S001-142",
+   "file": "WK-S001-142__ill.142-prismotl-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "9f3a07b3e621f6ec1e0ba3556fe165d7c4b32847aed7237ba59b6f8f93b9fe3d",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.143-bashlet-ir",
+   "card": "WK-S001-143",
+   "file": "WK-S001-143__ill.143-bashlet-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "a75d24d353ca0a647430a5aeea758ec836e71a09c7b7e14c5d54510785a81d11",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.144-koirune-ir",
+   "card": "WK-S001-144",
+   "file": "WK-S001-144__ill.144-koirune-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "a22b1a92e7d15033c39b10b9895a494a4ab771265cc9d3e5fe8c61471218cf78",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.145-shelladin-ir",
+   "card": "WK-S001-145",
+   "file": "WK-S001-145__ill.145-shelladin-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "3ae53dd91d914df7ad061a6a8e2a393adda4286e6e8309d7bc6bd53747d452cc",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.146-frondolin-ir",
+   "card": "WK-S001-146",
+   "file": "WK-S001-146__ill.146-frondolin-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "6cc099d9a1f19d5c534dcb1cc327b49f9e39aa6b29d53d43b236bb185a4cc389",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.147-candicoil-ir",
+   "card": "WK-S001-147",
+   "file": "WK-S001-147__ill.147-candicoil-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "d22c9e46e3a2d0dfa90276bb98e9f976d06349cd9dfdda0a7efe194199879fad",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.148-astrynx-ir",
+   "card": "WK-S001-148",
+   "file": "WK-S001-148__ill.148-astrynx-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "0f084f4556a59b226f0165fec604d78e3297124b4b52133daf3f6bff59a20273",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.149-berribat-ir",
+   "card": "WK-S001-149",
+   "file": "WK-S001-149__ill.149-berribat-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "63419335f51f8100608465a10400194dbd663834b076e0b410d87dce85f2439f",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.150-flapod-ir",
+   "card": "WK-S001-150",
+   "file": "WK-S001-150__ill.150-flapod-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "c0facd8ce97273776afb1066cb92f86e7984278e2374899995d8328b95f2c8da",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.151-cactuft-fa",
+   "card": "WK-S001-151",
+   "file": "WK-S001-151__ill.151-cactuft-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "59d84bb9980cb2b77bb1aa03bc0985181b503125db37704a99c54cb4e8b8ce71",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.152-aurorotl-fa",
+   "card": "WK-S001-152",
+   "file": "WK-S001-152__ill.152-aurorotl-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "b83ef98fb48f58bc767c80e6b3bf01130927f555bd55f6dcb8940410ead1f52e",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.153-fortisaur-fa",
+   "card": "WK-S001-153",
+   "file": "WK-S001-153__ill.153-fortisaur-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "31a28e546432b9051f0c4e1604255caaf1ee50ab83408f0924efa29c09ea1bda",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.154-koirune-fa",
+   "card": "WK-S001-154",
+   "file": "WK-S001-154__ill.154-koirune-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "f46084509498463c3812c3205b91ae6bb8cd8f6e74f4f3000f58affad8199057",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.155-aegisopod-fa",
+   "card": "WK-S001-155",
+   "file": "WK-S001-155__ill.155-aegisopod-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "3c0565b84ce5122a6c145e6cd5b9e1779f34cb4ec3de5ab28e7bc4e7fcc868be",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.156-canopang-fa",
+   "card": "WK-S001-156",
+   "file": "WK-S001-156__ill.156-canopang-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "c0fc6bf519ca96107dad80c54af9b0dab3bbacc7d3f5a1c972ef60774c5db771",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.157-spiramel-fa",
+   "card": "WK-S001-157",
+   "file": "WK-S001-157__ill.157-spiramel-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "094d0ed268b83e0687cce9a1cee4a24f601697e09d9cf9a9d725ec267d203a79",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.158-astrynx-fa",
+   "card": "WK-S001-158",
+   "file": "WK-S001-158__ill.158-astrynx-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "b65030fdead372fb0ead4e545f421981c409c5883116e23a46e3378c8007b4dd",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.159-pompyre-fa",
+   "card": "WK-S001-159",
+   "file": "WK-S001-159__ill.159-pompyre-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "fefdb25013be21f612edaa96e29c7855dad34ee325b56b8561c1d78edbeceb03",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.160-flapod-fa",
+   "card": "WK-S001-160",
+   "file": "WK-S001-160__ill.160-flapod-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "dab1428ba940c7fac6ab0eb8b6f3882fb2a2466b181fbe12f34c4d06f031e9f4",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.161-nimbusail-ir",
+   "card": "WK-S001-161",
+   "file": "WK-S001-161__ill.161-nimbusail-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "4a6c82179f8c492af1d7245e90d157c2deb6d359a8ec1cae2581bcaf9b55b639",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.162-veilmora-ir",
+   "card": "WK-S001-162",
+   "file": "WK-S001-162__ill.162-veilmora-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "549710ea7ed9e58b7b9211b8c0b677d2fc8be1742669b2f2f5e1866683fbbd01",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.163-ferradon-ir",
+   "card": "WK-S001-163",
+   "file": "WK-S001-163__ill.163-ferradon-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "2337ca5fb02109219c155eb133e5d2da0eaba6e632f0796df754f595ff307567",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.164-fablehorn-ir",
+   "card": "WK-S001-164",
+   "file": "WK-S001-164__ill.164-fablehorn-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "0be6db471214f8aa277f07d4e7b61547ef9041dc24e1bee49b035df591d4b807",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.165-bramblebuck-ir",
+   "card": "WK-S001-165",
+   "file": "WK-S001-165__ill.165-bramblebuck-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "316abed0221bd9b73b9c989673f145a167d7b0b92b113b6d42097a182feb95ab",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.166-corallume-ir",
+   "card": "WK-S001-166",
+   "file": "WK-S001-166__ill.166-corallume-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "fad416f746f7ed976833895a2fe943723be1a6703bd1c8e770aa0b1b0f0971b9",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.167-cometrail-ir",
+   "card": "WK-S001-167",
+   "file": "WK-S001-167__ill.167-cometrail-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "02cc3e0810e086a077a04c0f4a52c0d306af5260c296f62a2b1c9a83db95fe31",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.168-puffluff-ir",
+   "card": "WK-S001-168",
+   "file": "WK-S001-168__ill.168-puffluff-ir.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "c142bfb9d121f091eb7aa990984cff1aff54bb956dc6bef8c83fc9c1fa53c8ba",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.169-professor-maren-vale-fa",
+   "card": "WK-S001-169",
+   "file": "WK-S001-169__ill.169-professor-maren-vale-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "eb68fb2605804c8a2b76b09c54959c35016b7f7c6a95743e023d7741aa3df1c8",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.170-june-kestrel-fa",
+   "card": "WK-S001-170",
+   "file": "WK-S001-170__ill.170-june-kestrel-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "ec48c7141815a5d55833c47b9899556d3f5e45549d65ffa5639a96050a0e4f91",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.171-sel-veyra-fa",
+   "card": "WK-S001-171",
+   "file": "WK-S001-171__ill.171-sel-veyra-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "ca03198f3198b65543b8e34fe879603dd91a0e906b8ad62dbb8d03c173424a02",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.172-iris-shade-fa",
+   "card": "WK-S001-172",
+   "file": "WK-S001-172__ill.172-iris-shade-fa.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "d3fa574634bdf989111021ae748eefbd77213767d9cc49d0ce424c52969cf9a2",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.173-cactuft-sir",
+   "card": "WK-S001-173",
+   "file": "WK-S001-173__ill.173-cactuft-sir.png",
+   "errors": [],
+   "warnings": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ],
+   "notes": [],
+   "sha256": "4e5c092bc951c5d5e293904d209335e8636a4a655f4646ff509aa18b1b2a2997",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    1500,
+    2100
+   ],
+   "below_spec_accepted": true,
+   "result": "warn"
+  },
+  {
+   "asset_id": "ill.174-nimbusail-sir",
+   "card": "WK-S001-174",
+   "file": "WK-S001-174__ill.174-nimbusail-sir.png",
+   "errors": [],
+   "warnings": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ],
+   "notes": [],
+   "sha256": "7e39a9f3c919df010dd84275913567252fb0ac90a4ae1c8600384ca69b8fe5cd",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    1500,
+    2100
+   ],
+   "below_spec_accepted": true,
+   "result": "warn"
+  },
+  {
+   "asset_id": "ill.175-june-kestrel-sir",
+   "card": "WK-S001-175",
+   "file": "WK-S001-175__ill.175-june-kestrel-sir.png",
+   "errors": [],
+   "warnings": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ],
+   "notes": [],
+   "sha256": "e8e45d0c962ea373271a7f3933e7ec664b433515743667323a99f39b7ac89836",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    1500,
+    2100
+   ],
+   "below_spec_accepted": true,
+   "result": "warn"
+  },
+  {
+   "asset_id": "ill.176-sel-veyra-sir",
+   "card": "WK-S001-176",
+   "file": "WK-S001-176__ill.176-sel-veyra-sir.png",
+   "errors": [],
+   "warnings": [
+    "below the 1500x2100 minimum (1060x1484); accepted by the owner at its actual size"
+   ],
+   "notes": [],
+   "sha256": "cc2f4a49f9b9702c5ce23f413df64eb979c3286847aed7f9d101d0643b4ac540",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    1500,
+    2100
+   ],
+   "below_spec_accepted": true,
+   "result": "warn"
+  },
+  {
+   "asset_id": "ill.177-clasped-aegisopod",
+   "card": "WK-S001-177",
+   "file": "WK-S001-177__ill.177-clasped-aegisopod.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "c119152a60c6310db89a99412c2e171f1633153247f888468b2052fdd2de0cda",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.178-clasped-pompyre",
+   "card": "WK-S001-178",
+   "file": "WK-S001-178__ill.178-clasped-pompyre.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "6174beebd4b14b8ee56bf6e6aca6d324b1db0929043027d6cfc96ebb7f807b8f",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.179-clasped-ferradon",
+   "card": "WK-S001-179",
+   "file": "WK-S001-179__ill.179-clasped-ferradon.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "56791358eb070f06d2356166b1247d51df552ff3d76d0e0760ec1012592a52c6",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  },
+  {
+   "asset_id": "ill.180-clasped-veilmora",
+   "card": "WK-S001-180",
+   "file": "WK-S001-180__ill.180-clasped-veilmora.png",
+   "errors": [],
+   "warnings": [],
+   "notes": [],
+   "sha256": "6fb6a78ec50debc01d59476ea0ad8df4c7a1b7bbce44b7eeae17c32b864743df",
+   "size": [
+    1060,
+    1484
+   ],
+   "min_px": [
+    700,
+    980
+   ],
+   "result": "pass"
+  }
+ ]
+}

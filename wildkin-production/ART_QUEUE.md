@@ -4,7 +4,7 @@ Generated from `wildkin-production/manifest.json` by `tools/wildkin_manifest.py`
 
 Status: **complete** = every cell approved, **partial** = some cells approved (they will not be overwritten), **todo** = nothing yet.
 
-Overall: 318 of 358 required cells approved.
+Overall: 358 of 358 required cells approved.
 
 | Task | What | Kind | Status | Cells | Expected file |
 |---|---|---|---|---|---|
@@ -46,15 +46,15 @@ Overall: 318 of 358 required cells approved.
 | SHEET-36 | Biomes C: Storm and Dusk backgrounds for creature cards | scene-sheet | complete | 9/9 | `incoming/SHEET-36.png` |
 | SHEET-37 | Tactics A | illustration-sheet | complete | 9/9 | `incoming/SHEET-37.png` |
 | SHEET-38 | Tactics B | illustration-sheet | complete | 3/3 | `incoming/SHEET-38.png` |
-| SHEET-39 | Illustration Rares A | premium-sheet | todo | 0/9 | `incoming/SHEET-39.png` |
-| SHEET-40 | Illustration Rares B | premium-sheet | todo | 0/9 | `incoming/SHEET-40.png` |
-| SHEET-41 | Full Arts A | premium-sheet | todo | 0/9 | `incoming/SHEET-41.png` |
-| SHEET-42 | Full Arts B | premium-sheet | todo | 0/5 | `incoming/SHEET-42.png` |
-| SHEET-43 | Clasp Program: Clasped Secret Rares | premium-sheet | todo | 0/4 | `incoming/SHEET-43.png` |
-| SIR-173 | Special Illustration Rare: Cactuft SIR | single-illustration | todo | 0/1 | `incoming/SIR-173.png` |
-| SIR-174 | Special Illustration Rare: Nimbusail SIR | single-illustration | todo | 0/1 | `incoming/SIR-174.png` |
-| SIR-175 | Special Illustration Rare: June Kestrel SIR | single-illustration | todo | 0/1 | `incoming/SIR-175.png` |
-| SIR-176 | Special Illustration Rare: Sel Veyra SIR | single-illustration | todo | 0/1 | `incoming/SIR-176.png` |
+| SHEET-39 | Illustration Rares A | premium-sheet | complete | 9/9 | `incoming/SHEET-39.png` |
+| SHEET-40 | Illustration Rares B | premium-sheet | complete | 9/9 | `incoming/SHEET-40.png` |
+| SHEET-41 | Full Arts A | premium-sheet | complete | 9/9 | `incoming/SHEET-41.png` |
+| SHEET-42 | Full Arts B | premium-sheet | complete | 5/5 | `incoming/SHEET-42.png` |
+| SHEET-43 | Clasp Program: Clasped Secret Rares | premium-sheet | complete | 4/4 | `incoming/SHEET-43.png` |
+| SIR-173 | Special Illustration Rare: Cactuft SIR | single-illustration | complete | 1/1 | `incoming/SIR-173.png` |
+| SIR-174 | Special Illustration Rare: Nimbusail SIR | single-illustration | complete | 1/1 | `incoming/SIR-174.png` |
+| SIR-175 | Special Illustration Rare: June Kestrel SIR | single-illustration | complete | 1/1 | `incoming/SIR-175.png` |
+| SIR-176 | Special Illustration Rare: Sel Veyra SIR | single-illustration | complete | 1/1 | `incoming/SIR-176.png` |
 
 ## SHEET-01: Mascot pose sheet: Cactuft
 
@@ -1017,19 +1017,19 @@ Overall: 318 of 358 required cells approved.
 - Style: Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly
 - Minimum size: 2100 x 2940 px, aspect 5:7
 - Identity status: canon subjects
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.141-cactuft-ir` | Cactuft IR |  | missing |
-| 2 | `ill.142-prismotl-ir` | Prismotl IR |  | missing |
-| 3 | `ill.143-bashlet-ir` | Bashlet IR |  | missing |
-| 4 | `ill.144-koirune-ir` | Koirune IR |  | missing |
-| 5 | `ill.145-shelladin-ir` | Shelladin IR |  | missing |
-| 6 | `ill.146-frondolin-ir` | Frondolin IR |  | missing |
-| 7 | `ill.147-candicoil-ir` | Candicoil IR |  | missing |
-| 8 | `ill.148-astrynx-ir` | Astrynx IR |  | missing |
-| 9 | `ill.149-berribat-ir` | Berribat IR |  | missing |
+| 1 | `ill.141-cactuft-ir` | Cactuft IR |  | approved |
+| 2 | `ill.142-prismotl-ir` | Prismotl IR |  | approved |
+| 3 | `ill.143-bashlet-ir` | Bashlet IR |  | approved |
+| 4 | `ill.144-koirune-ir` | Koirune IR |  | approved |
+| 5 | `ill.145-shelladin-ir` | Shelladin IR |  | approved |
+| 6 | `ill.146-frondolin-ir` | Frondolin IR |  | approved |
+| 7 | `ill.147-candicoil-ir` | Candicoil IR |  | approved |
+| 8 | `ill.148-astrynx-ir` | Astrynx IR |  | approved |
+| 9 | `ill.149-berribat-ir` | Berribat IR |  | approved |
 
 ## SHEET-40: Illustration Rares B
 
@@ -1038,19 +1038,19 @@ Overall: 318 of 358 required cells approved.
 - Style: Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly
 - Minimum size: 2100 x 2940 px, aspect 5:7
 - Identity status: canon subjects
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.150-flapod-ir` | Flapod IR |  | missing |
-| 2 | `ill.161-nimbusail-ir` | Nimbusail IR |  | missing |
-| 3 | `ill.162-veilmora-ir` | Veilmora IR |  | missing |
-| 4 | `ill.163-ferradon-ir` | Ferradon IR |  | missing |
-| 5 | `ill.164-fablehorn-ir` | Fablehorn IR |  | missing |
-| 6 | `ill.165-bramblebuck-ir` | Bramblebuck IR |  | missing |
-| 7 | `ill.166-corallume-ir` | Corallume IR |  | missing |
-| 8 | `ill.167-cometrail-ir` | Cometrail IR |  | missing |
-| 9 | `ill.168-puffluff-ir` | Puffluff IR |  | missing |
+| 1 | `ill.150-flapod-ir` | Flapod IR |  | approved |
+| 2 | `ill.161-nimbusail-ir` | Nimbusail IR |  | approved |
+| 3 | `ill.162-veilmora-ir` | Veilmora IR |  | approved |
+| 4 | `ill.163-ferradon-ir` | Ferradon IR |  | approved |
+| 5 | `ill.164-fablehorn-ir` | Fablehorn IR |  | approved |
+| 6 | `ill.165-bramblebuck-ir` | Bramblebuck IR |  | approved |
+| 7 | `ill.166-corallume-ir` | Corallume IR |  | approved |
+| 8 | `ill.167-cometrail-ir` | Cometrail IR |  | approved |
+| 9 | `ill.168-puffluff-ir` | Puffluff IR |  | approved |
 
 ## SHEET-41: Full Arts A
 
@@ -1059,19 +1059,19 @@ Overall: 318 of 358 required cells approved.
 - Style: Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly
 - Minimum size: 2100 x 2940 px, aspect 5:7
 - Identity status: canon subjects
-- Production: todo (0/9 cells approved)
+- Production: complete (9/9 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.151-cactuft-fa` | Cactuft FA |  | missing |
-| 2 | `ill.152-aurorotl-fa` | Aurorotl FA |  | missing |
-| 3 | `ill.153-fortisaur-fa` | Fortisaur FA |  | missing |
-| 4 | `ill.154-koirune-fa` | Koirune FA |  | missing |
-| 5 | `ill.155-aegisopod-fa` | Aegisopod FA |  | missing |
-| 6 | `ill.156-canopang-fa` | Canopang FA |  | missing |
-| 7 | `ill.157-spiramel-fa` | Spiramel FA |  | missing |
-| 8 | `ill.158-astrynx-fa` | Astrynx FA |  | missing |
-| 9 | `ill.159-pompyre-fa` | Pompyre FA |  | missing |
+| 1 | `ill.151-cactuft-fa` | Cactuft FA |  | approved |
+| 2 | `ill.152-aurorotl-fa` | Aurorotl FA |  | approved |
+| 3 | `ill.153-fortisaur-fa` | Fortisaur FA |  | approved |
+| 4 | `ill.154-koirune-fa` | Koirune FA |  | approved |
+| 5 | `ill.155-aegisopod-fa` | Aegisopod FA |  | approved |
+| 6 | `ill.156-canopang-fa` | Canopang FA |  | approved |
+| 7 | `ill.157-spiramel-fa` | Spiramel FA |  | approved |
+| 8 | `ill.158-astrynx-fa` | Astrynx FA |  | approved |
+| 9 | `ill.159-pompyre-fa` | Pompyre FA |  | approved |
 
 ## SHEET-42: Full Arts B
 
@@ -1080,15 +1080,15 @@ Overall: 318 of 358 required cells approved.
 - Style: Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly
 - Minimum size: 2100 x 2940 px, aspect 5:7
 - Identity status: canon subjects; 4 cells empty
-- Production: todo (0/5 cells approved)
+- Production: complete (5/5 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.160-flapod-fa` | Flapod FA |  | missing |
-| 2 | `ill.169-professor-maren-vale-fa` | Professor Maren Vale FA |  | missing |
-| 3 | `ill.170-june-kestrel-fa` | June Kestrel FA |  | missing |
-| 4 | `ill.171-sel-veyra-fa` | Sel Veyra FA |  | missing |
-| 5 | `ill.172-iris-shade-fa` | Iris Shade FA |  | missing |
+| 1 | `ill.160-flapod-fa` | Flapod FA |  | approved |
+| 2 | `ill.169-professor-maren-vale-fa` | Professor Maren Vale FA |  | approved |
+| 3 | `ill.170-june-kestrel-fa` | June Kestrel FA |  | approved |
+| 4 | `ill.171-sel-veyra-fa` | Sel Veyra FA |  | approved |
+| 5 | `ill.172-iris-shade-fa` | Iris Shade FA |  | approved |
 | 6 | - | (leave empty: flat dark) |  | leave empty |
 | 7 | - | (leave empty: flat dark) |  | leave empty |
 | 8 | - | (leave empty: flat dark) |  | leave empty |
@@ -1101,14 +1101,14 @@ Overall: 318 of 358 required cells approved.
 - Style: Full painting, richer lighting allowed (chase art), the creature must match its approved cutout design exactly
 - Minimum size: 2100 x 2940 px, aspect 5:7
 - Identity status: canon subjects; 5 cells empty. SOL designs the look of a Clasp (a Veyra Industries device)
-- Production: todo (0/4 cells approved)
+- Production: complete (4/4 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.177-clasped-aegisopod` | Clasped Aegisopod |  | missing |
-| 2 | `ill.178-clasped-pompyre` | Clasped Pompyre |  | missing |
-| 3 | `ill.179-clasped-ferradon` | Clasped Ferradon |  | missing |
-| 4 | `ill.180-clasped-veilmora` | Clasped Veilmora |  | missing |
+| 1 | `ill.177-clasped-aegisopod` | Clasped Aegisopod |  | approved |
+| 2 | `ill.178-clasped-pompyre` | Clasped Pompyre |  | approved |
+| 3 | `ill.179-clasped-ferradon` | Clasped Ferradon |  | approved |
+| 4 | `ill.180-clasped-veilmora` | Clasped Veilmora |  | approved |
 | 5 | - | (leave empty: flat dark) |  | leave empty |
 | 6 | - | (leave empty: flat dark) |  | leave empty |
 | 7 | - | (leave empty: flat dark) |  | leave empty |
@@ -1122,11 +1122,11 @@ Overall: 318 of 358 required cells approved.
 - Style: Showpiece painting, the highest-effort art in the set; creature/character must match the approved design
 - Minimum size: 1500 x 2100 px, aspect 5:7
 - Identity status: canon subject
-- Production: todo (0/1 cells approved)
+- Production: complete (1/1 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.173-cactuft-sir` | Cactuft SIR |  | missing |
+| 1 | `ill.173-cactuft-sir` | Cactuft SIR |  | approved |
 
 ## SIR-174: Special Illustration Rare: Nimbusail SIR
 
@@ -1135,11 +1135,11 @@ Overall: 318 of 358 required cells approved.
 - Style: Showpiece painting, the highest-effort art in the set; creature/character must match the approved design
 - Minimum size: 1500 x 2100 px, aspect 5:7
 - Identity status: canon subject
-- Production: todo (0/1 cells approved)
+- Production: complete (1/1 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.174-nimbusail-sir` | Nimbusail SIR |  | missing |
+| 1 | `ill.174-nimbusail-sir` | Nimbusail SIR |  | approved |
 
 ## SIR-175: Special Illustration Rare: June Kestrel SIR
 
@@ -1148,11 +1148,11 @@ Overall: 318 of 358 required cells approved.
 - Style: Showpiece painting, the highest-effort art in the set; creature/character must match the approved design
 - Minimum size: 1500 x 2100 px, aspect 5:7
 - Identity status: canon subject
-- Production: todo (0/1 cells approved)
+- Production: complete (1/1 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.175-june-kestrel-sir` | June Kestrel SIR |  | missing |
+| 1 | `ill.175-june-kestrel-sir` | June Kestrel SIR |  | approved |
 
 ## SIR-176: Special Illustration Rare: Sel Veyra SIR
 
@@ -1161,8 +1161,8 @@ Overall: 318 of 358 required cells approved.
 - Style: Showpiece painting, the highest-effort art in the set; creature/character must match the approved design
 - Minimum size: 1500 x 2100 px, aspect 5:7
 - Identity status: canon subject
-- Production: todo (0/1 cells approved)
+- Production: complete (1/1 cells approved)
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
-| 1 | `ill.176-sel-veyra-sir` | Sel Veyra SIR |  | missing |
+| 1 | `ill.176-sel-veyra-sir` | Sel Veyra SIR |  | approved |

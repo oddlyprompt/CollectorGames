@@ -1,0 +1,24 @@
+{
+  "cell": 6,
+  "asset_id": "ill.165-bramblebuck-ir",
+  "subject": "Bramblebuck IR",
+  "card": "WK-S001-165",
+  "task_id": "SHEET-40",
+  "filename": "WK-S001-165__ill.165-bramblebuck-ir.png",
+  "min_px": [
+    700,
+    980
+  ],
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-165, Bramblebuck IR, asset ill.165-bramblebuck-ir. Reference is a 3x3 sheet: use ONLY cell 6 (row 2, column 3) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+  "generation": "built-in imagegen; individual full-frame generation",
+  "source_reference": "SHEET-40.png",
+  "sha256": "316abed0221bd9b73b9c989673f145a167d7b0b92b113b6d42097a182feb95ab",
+  "size_bytes": 2969742,
+  "resolution_status": "pass",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-165__ill.165-bramblebuck-ir.png"
+}

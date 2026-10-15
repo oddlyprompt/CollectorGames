@@ -1,0 +1,41 @@
+card,asset_id,subject,task_id,cell,path,resolution_status,sha256
+WK-S001-141,ill.141-cactuft-ir,Cactuft IR,SHEET-39,1,art/WK-S001-141__ill.141-cactuft-ir.png,pass,0c089593b80a3392c403292c962a368c8005e7e278dcf2329bb9bf6de070d9e7
+WK-S001-142,ill.142-prismotl-ir,Prismotl IR,SHEET-39,2,art/WK-S001-142__ill.142-prismotl-ir.png,pass,9f3a07b3e621f6ec1e0ba3556fe165d7c4b32847aed7237ba59b6f8f93b9fe3d
+WK-S001-143,ill.143-bashlet-ir,Bashlet IR,SHEET-39,3,art/WK-S001-143__ill.143-bashlet-ir.png,pass,a75d24d353ca0a647430a5aeea758ec836e71a09c7b7e14c5d54510785a81d11
+WK-S001-144,ill.144-koirune-ir,Koirune IR,SHEET-39,4,art/WK-S001-144__ill.144-koirune-ir.png,pass,a22b1a92e7d15033c39b10b9895a494a4ab771265cc9d3e5fe8c61471218cf78
+WK-S001-145,ill.145-shelladin-ir,Shelladin IR,SHEET-39,5,art/WK-S001-145__ill.145-shelladin-ir.png,pass,3ae53dd91d914df7ad061a6a8e2a393adda4286e6e8309d7bc6bd53747d452cc
+WK-S001-146,ill.146-frondolin-ir,Frondolin IR,SHEET-39,6,art/WK-S001-146__ill.146-frondolin-ir.png,pass,6cc099d9a1f19d5c534dcb1cc327b49f9e39aa6b29d53d43b236bb185a4cc389
+WK-S001-147,ill.147-candicoil-ir,Candicoil IR,SHEET-39,7,art/WK-S001-147__ill.147-candicoil-ir.png,pass,d22c9e46e3a2d0dfa90276bb98e9f976d06349cd9dfdda0a7efe194199879fad
+WK-S001-148,ill.148-astrynx-ir,Astrynx IR,SHEET-39,8,art/WK-S001-148__ill.148-astrynx-ir.png,pass,0f084f4556a59b226f0165fec604d78e3297124b4b52133daf3f6bff59a20273
+WK-S001-149,ill.149-berribat-ir,Berribat IR,SHEET-39,9,art/WK-S001-149__ill.149-berribat-ir.png,pass,63419335f51f8100608465a10400194dbd663834b076e0b410d87dce85f2439f
+WK-S001-150,ill.150-flapod-ir,Flapod IR,SHEET-40,1,art/WK-S001-150__ill.150-flapod-ir.png,pass,c0facd8ce97273776afb1066cb92f86e7984278e2374899995d8328b95f2c8da
+WK-S001-151,ill.151-cactuft-fa,Cactuft FA,SHEET-41,1,art/WK-S001-151__ill.151-cactuft-fa.png,pass,59d84bb9980cb2b77bb1aa03bc0985181b503125db37704a99c54cb4e8b8ce71
+WK-S001-152,ill.152-aurorotl-fa,Aurorotl FA,SHEET-41,2,art/WK-S001-152__ill.152-aurorotl-fa.png,pass,b83ef98fb48f58bc767c80e6b3bf01130927f555bd55f6dcb8940410ead1f52e
+WK-S001-153,ill.153-fortisaur-fa,Fortisaur FA,SHEET-41,3,art/WK-S001-153__ill.153-fortisaur-fa.png,pass,31a28e546432b9051f0c4e1604255caaf1ee50ab83408f0924efa29c09ea1bda
+WK-S001-154,ill.154-koirune-fa,Koirune FA,SHEET-41,4,art/WK-S001-154__ill.154-koirune-fa.png,pass,f46084509498463c3812c3205b91ae6bb8cd8f6e74f4f3000f58affad8199057
+WK-S001-155,ill.155-aegisopod-fa,Aegisopod FA,SHEET-41,5,art/WK-S001-155__ill.155-aegisopod-fa.png,pass,3c0565b84ce5122a6c145e6cd5b9e1779f34cb4ec3de5ab28e7bc4e7fcc868be
+WK-S001-156,ill.156-canopang-fa,Canopang FA,SHEET-41,6,art/WK-S001-156__ill.156-canopang-fa.png,pass,c0fc6bf519ca96107dad80c54af9b0dab3bbacc7d3f5a1c972ef60774c5db771
+WK-S001-157,ill.157-spiramel-fa,Spiramel FA,SHEET-41,7,art/WK-S001-157__ill.157-spiramel-fa.png,pass,094d0ed268b83e0687cce9a1cee4a24f601697e09d9cf9a9d725ec267d203a79
+WK-S001-158,ill.158-astrynx-fa,Astrynx FA,SHEET-41,8,art/WK-S001-158__ill.158-astrynx-fa.png,pass,b65030fdead372fb0ead4e545f421981c409c5883116e23a46e3378c8007b4dd
+WK-S001-159,ill.159-pompyre-fa,Pompyre FA,SHEET-41,9,art/WK-S001-159__ill.159-pompyre-fa.png,pass,fefdb25013be21f612edaa96e29c7855dad34ee325b56b8561c1d78edbeceb03
+WK-S001-160,ill.160-flapod-fa,Flapod FA,SHEET-42,1,art/WK-S001-160__ill.160-flapod-fa.png,pass,dab1428ba940c7fac6ab0eb8b6f3882fb2a2466b181fbe12f34c4d06f031e9f4
+WK-S001-161,ill.161-nimbusail-ir,Nimbusail IR,SHEET-40,2,art/WK-S001-161__ill.161-nimbusail-ir.png,pass,4a6c82179f8c492af1d7245e90d157c2deb6d359a8ec1cae2581bcaf9b55b639
+WK-S001-162,ill.162-veilmora-ir,Veilmora IR,SHEET-40,3,art/WK-S001-162__ill.162-veilmora-ir.png,pass,549710ea7ed9e58b7b9211b8c0b677d2fc8be1742669b2f2f5e1866683fbbd01
+WK-S001-163,ill.163-ferradon-ir,Ferradon IR,SHEET-40,4,art/WK-S001-163__ill.163-ferradon-ir.png,pass,2337ca5fb02109219c155eb133e5d2da0eaba6e632f0796df754f595ff307567
+WK-S001-164,ill.164-fablehorn-ir,Fablehorn IR,SHEET-40,5,art/WK-S001-164__ill.164-fablehorn-ir.png,pass,0be6db471214f8aa277f07d4e7b61547ef9041dc24e1bee49b035df591d4b807
+WK-S001-165,ill.165-bramblebuck-ir,Bramblebuck IR,SHEET-40,6,art/WK-S001-165__ill.165-bramblebuck-ir.png,pass,316abed0221bd9b73b9c989673f145a167d7b0b92b113b6d42097a182feb95ab
+WK-S001-166,ill.166-corallume-ir,Corallume IR,SHEET-40,7,art/WK-S001-166__ill.166-corallume-ir.png,pass,fad416f746f7ed976833895a2fe943723be1a6703bd1c8e770aa0b1b0f0971b9
+WK-S001-167,ill.167-cometrail-ir,Cometrail IR,SHEET-40,8,art/WK-S001-167__ill.167-cometrail-ir.png,pass,02cc3e0810e086a077a04c0f4a52c0d306af5260c296f62a2b1c9a83db95fe31
+WK-S001-168,ill.168-puffluff-ir,Puffluff IR,SHEET-40,9,art/WK-S001-168__ill.168-puffluff-ir.png,pass,c142bfb9d121f091eb7aa990984cff1aff54bb956dc6bef8c83fc9c1fa53c8ba
+WK-S001-169,ill.169-professor-maren-vale-fa,Professor Maren Vale FA,SHEET-42,2,art/WK-S001-169__ill.169-professor-maren-vale-fa.png,pass,eb68fb2605804c8a2b76b09c54959c35016b7f7c6a95743e023d7741aa3df1c8
+WK-S001-170,ill.170-june-kestrel-fa,June Kestrel FA,SHEET-42,3,art/WK-S001-170__ill.170-june-kestrel-fa.png,pass,ec48c7141815a5d55833c47b9899556d3f5e45549d65ffa5639a96050a0e4f91
+WK-S001-171,ill.171-sel-veyra-fa,Sel Veyra FA,SHEET-42,4,art/WK-S001-171__ill.171-sel-veyra-fa.png,pass,ca03198f3198b65543b8e34fe879603dd91a0e906b8ad62dbb8d03c173424a02
+WK-S001-172,ill.172-iris-shade-fa,Iris Shade FA,SHEET-42,5,art/WK-S001-172__ill.172-iris-shade-fa.png,pass,d3fa574634bdf989111021ae748eefbd77213767d9cc49d0ce424c52969cf9a2
+WK-S001-173,ill.173-cactuft-sir,Cactuft SIR,SIR-173,1,art/WK-S001-173__ill.173-cactuft-sir.png,below_original_SIR_print_requirement,4e5c092bc951c5d5e293904d209335e8636a4a655f4646ff509aa18b1b2a2997
+WK-S001-174,ill.174-nimbusail-sir,Nimbusail SIR,SIR-174,1,art/WK-S001-174__ill.174-nimbusail-sir.png,below_original_SIR_print_requirement,7e39a9f3c919df010dd84275913567252fb0ac90a4ae1c8600384ca69b8fe5cd
+WK-S001-175,ill.175-june-kestrel-sir,June Kestrel SIR,SIR-175,1,art/WK-S001-175__ill.175-june-kestrel-sir.png,below_original_SIR_print_requirement,e8e45d0c962ea373271a7f3933e7ec664b433515743667323a99f39b7ac89836
+WK-S001-176,ill.176-sel-veyra-sir,Sel Veyra SIR,SIR-176,1,art/WK-S001-176__ill.176-sel-veyra-sir.png,below_original_SIR_print_requirement,cc2f4a49f9b9702c5ce23f413df64eb979c3286847aed7f9d101d0643b4ac540
+WK-S001-177,ill.177-clasped-aegisopod,Clasped Aegisopod,SHEET-43,1,art/WK-S001-177__ill.177-clasped-aegisopod.png,pass,c119152a60c6310db89a99412c2e171f1633153247f888468b2052fdd2de0cda
+WK-S001-178,ill.178-clasped-pompyre,Clasped Pompyre,SHEET-43,2,art/WK-S001-178__ill.178-clasped-pompyre.png,pass,6174beebd4b14b8ee56bf6e6aca6d324b1db0929043027d6cfc96ebb7f807b8f
+WK-S001-179,ill.179-clasped-ferradon,Clasped Ferradon,SHEET-43,3,art/WK-S001-179__ill.179-clasped-ferradon.png,pass,56791358eb070f06d2356166b1247d51df552ff3d76d0e0760ec1012592a52c6
+WK-S001-180,ill.180-clasped-veilmora,Clasped Veilmora,SHEET-43,4,art/WK-S001-180__ill.180-clasped-veilmora.png,pass,6fb6a78ec50debc01d59476ea0ad8df4c7a1b7bbce44b7eeae17c32b864743df

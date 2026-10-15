@@ -1,0 +1,23 @@
+{
+  "cell": 1,
+  "asset_id": "ill.174-nimbusail-sir",
+  "subject": "Nimbusail SIR",
+  "card": "WK-S001-174",
+  "task_id": "SIR-174",
+  "filename": "WK-S001-174__ill.174-nimbusail-sir.png",
+  "min_px": [
+    1500,
+    2100
+  ],
+  "generation": "preserved previously generated individual SIR; not regenerated",
+  "source_reference": "SIR-174.png",
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "sha256": "7e39a9f3c919df010dd84275913567252fb0ac90a4ae1c8600384ca69b8fe5cd",
+  "size_bytes": 2354228,
+  "resolution_status": "below_original_SIR_print_requirement",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-174__ill.174-nimbusail-sir.png"
+}

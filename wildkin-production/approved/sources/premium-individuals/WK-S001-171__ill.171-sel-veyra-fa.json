@@ -1,0 +1,24 @@
+{
+  "cell": 4,
+  "asset_id": "ill.171-sel-veyra-fa",
+  "subject": "Sel Veyra FA",
+  "card": "WK-S001-171",
+  "task_id": "SHEET-42",
+  "filename": "WK-S001-171__ill.171-sel-veyra-fa.png",
+  "min_px": [
+    700,
+    980
+  ],
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "prompt": "Use case: illustration-story. Asset: individual premium Wildkin trading-card painting WK-S001-171, Sel Veyra FA, asset ill.171-sel-veyra-fa. Reference is a 3x3 sheet: use ONLY cell 4 (row 2, column 1) as this painting's exact character and scene reference. Repaint that ONE panel as a complete single full-bleed portrait 5:7 illustration at highest native resolution. Preserve exact subject identity, face, anatomy, proportions, colors, markings, costume, props, environment and distinct pose from that panel. Ignore all other panels. Dimensional soft toy-like creature or stylized anatomically correct human, with richly detailed premium storybook environment and cinematic painterly lighting. Whole subject entirely visible, centered with generous environment above and below for card overlays: head below upper quarter, feet or tail above lower quarter. For Clasped subjects retain the Veyra mechanical collar and its cyan light exactly, no injury or change to creature design. No text, frame, grid, collage, borders, extra panels, watermarks or other characters. Fresh full-resolution single painting, not a crop or enlargement of a small panel.",
+  "generation": "built-in imagegen; individual full-frame generation",
+  "source_reference": "SHEET-42.png",
+  "sha256": "ca03198f3198b65543b8e34fe879603dd91a0e906b8ad62dbb8d03c173424a02",
+  "size_bytes": 2812508,
+  "resolution_status": "pass",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-171__ill.171-sel-veyra-fa.png"
+}

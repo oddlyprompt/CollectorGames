@@ -1,0 +1,23 @@
+{
+  "cell": 1,
+  "asset_id": "ill.173-cactuft-sir",
+  "subject": "Cactuft SIR",
+  "card": "WK-S001-173",
+  "task_id": "SIR-173",
+  "filename": "WK-S001-173__ill.173-cactuft-sir.png",
+  "min_px": [
+    1500,
+    2100
+  ],
+  "generation": "preserved previously generated individual SIR; not regenerated",
+  "source_reference": "SIR-173.png",
+  "native_dimensions": [
+    1060,
+    1484
+  ],
+  "sha256": "4e5c092bc951c5d5e293904d209335e8636a4a655f4646ff509aa18b1b2a2997",
+  "size_bytes": 2962915,
+  "resolution_status": "below_original_SIR_print_requirement",
+  "visual_review": "reviewed; final card-overlay check required during integration",
+  "path": "art/WK-S001-173__ill.173-cactuft-sir.png"
+}
