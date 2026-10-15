@@ -1,6 +1,8 @@
 // Tidemark round 2: every configuration and experiment behind design/tcg2/round2-report.md.
 //   node tools/tidemark/round2.js [games-per-pair=200]
 // Writes design/tcg2/round2-data.md (all tables) and design/tcg2/round2-data.json (raw numbers).
+// Every configuration runs with oldEntry (units enter exhausted), the engine bug found in round 3, so this script still
+// reproduces the round 2 numbers exactly. For corrected results see round3.js and design/tcg2/round3-report.md.
 const fs=require('fs'), path=require('path'); const L=require('./lib.js'); const {E,DECKS,CARDS}=L;
 const N=+(process.argv[2]||200); const OUT=path.join(__dirname,'..','..','design','tcg2');
 const REC=['targets','escort'];
@@ -19,10 +21,10 @@ const CFGS={
 const ABL=['homeground','strand','carry','escort','screen','walls','surge','domains','tricks','fronts'];
 for (const k of ABL) CFGS['off_'+k]={name:'Recommended, AI v2, without '+k, cfg:{ai:2,v:REC,off:[k]}};
 const R={};
-for (const [k,x] of Object.entries(CFGS)){ log('running '+k); R[k]=L.runConfig(x.cfg,N); R[k].name=x.name; }
+for (const [k,x] of Object.entries(CFGS)){ log('running '+k); x.cfg.oldEntry=true; R[k]=L.runConfig(x.cfg,N); R[k].name=x.name; }
 // head-to-head: v2 against v1, all deck pairs including mirrors, seats alternating by the game's coin flip
 log('head-to-head'); const H={games:0,v2:0,byDeck:{}}; const NH=Math.max(40,Math.round(N/2));
-for (let i=0;i<DECKS.length;i++) for (let j=0;j<DECKS.length;j++) for (let g=0;g<NH;g++){ const r=E.play(DECKS[i].d,DECKS[j].d,9001*i+31*j+g,{ai:[2,1],v:REC}); H.games++; if (r.w===0){ H.v2++; H.byDeck[DECKS[i].a.id]=(H.byDeck[DECKS[i].a.id]||0)+1; } }
+for (let i=0;i<DECKS.length;i++) for (let j=0;j<DECKS.length;j++) for (let g=0;g<NH;g++){ const r=E.play(DECKS[i].d,DECKS[j].d,9001*i+31*j+g,{ai:[2,1],v:REC,oldEntry:true}); H.games++; if (r.w===0){ H.v2++; H.byDeck[DECKS[i].a.id]=(H.byDeck[DECKS[i].a.id]||0)+1; } }
 for (const k in H.byDeck) H.byDeck[k]/=NH*DECKS.length;
 // ---------- tables ----------
 const pct=x=>(x*100).toFixed(1)+'%'; const f1=x=>(+x).toFixed(1); const Lm=[]; const out=(...s)=>Lm.push(...s);

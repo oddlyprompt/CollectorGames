@@ -10,6 +10,10 @@
 //   scale {cost7: factor} scales Power/Toughness of 7+ cost cards (balance experiments)
 //   blk 1|2 or [b0,b1] uses that version's blocking logic only (AI experiments)
 //   harbor starting Harbor (default 20)
+//   tide T (experiment): after turn T, each player's Harbor loses 1 at their Rise (a clock that ends board stalls)
+//   oldEntry true: units enter exhausted, as in rounds 1 and 2 (an engine bug; for reproducing old results only)
+//   rules '0.2' (default) or '0.3' (round 3: no Home-ground strike order, Vessels screen the Deep, Ferry keyword instead of
+//         carry and escort, Swift units instead of Ambush; play pool 0.3 from cards.js with it). Ablation key 'ferry'.
 const {CARDS}=require('./cards.js');
 const R0={HAND:6, DECK:50, MAXCAP:10, TURNCAP:40};
 // xorshift32 with a mixed seed: small consecutive seeds (0, 1, 2...) used to give nearly unshuffled first decks and a
@@ -23,6 +27,10 @@ const ON=k=>!CFG.off.has(k), V=k=>CFG.v.has(k);
 const AI=P=>CFG.ais[P.i];   // which computer player controls this side (1 or 2)
 const BLK=P=>CFG.blk? CFG.blk[P.i] : AI(P);   // blocking logic, normally the same as AI (cfg.blk overrides it for experiments)
 const has=(c,k)=> c.kw.includes(k) || (k==='raid' && V('raid') && RAIDERS.has(c.n));
+// a unit that can enter during the opponent's battle as a blocker: Ambush (rules 0.2) or a Swift unit (rules 0.3)
+const amb=c=> has(c,'ambush') || (has(c,'swift') && (c.t==='unit'||c.t==='vessel'));
+// attackers your units can make count as at home: rules 0.3 Ferry (any front, any attacker); rules 0.2 carry (Land units into the Deep)
+const ferryCap=P=> CFG.r3? (ON('ferry')? P.units.reduce((q,u)=>q+(u.c.ferry||0),0) : 0) : (ON('carry')? P.units.reduce((q,u)=>q+(u.c.carry||0),0) : 0);
 const effFx=c=> (V('reef') && c.n==='Coral Spire')? [['reef_cross']] : c.fx;
 const fxOf=(c,k)=>effFx(c).find(o=>o[0]===k);
 const powBase=c=> c.cost>=7 && CFG.scale.cost7? Math.round(c.pow*CFG.scale.cost7) : c.pow;
@@ -30,15 +38,20 @@ const tghBase=c=> c.cost>=7 && CFG.scale.cost7? Math.max(1,Math.round(c.tgh*CFG.
 // where a card is at home: Land on the Shore, Sea in the Deep, Dual and Neutral in both. Vessels belong to the Deep.
 function homes(c){ if (!CFG || !ON('fronts')) return ['S','D']; if (c.t==='vessel') return ['D']; return c.al==='L'? ['S'] : c.al==='S'? ['D'] : ['S','D']; }
 let UID=1;
-function newUnit(c, front, S, tok){ return {uid:UID++, c, front, dmg:0, ready:false, entered:S.turn, stranded:false, eq:[], tp:0, tt:0, tok:!!tok}; }
+// A unit enters ready: it can block on the opponent's next turn, but cannot attack the turn it arrives (canAttack checks
+// 'entered'; Charge lifts that). Until round 3 units entered exhausted, which the written rules never said: a unit you
+// played could not block the next turn, so defensive decks were heavily punished (found in round 3; cfg.oldEntry restores it).
+function newUnit(c, front, S, tok){ return {uid:UID++, c, front, dmg:0, ready:!CFG.oldEntry, entered:S.turn, stranded:false, eq:[], tp:0, tt:0, tok:!!tok}; }
 // ---------- statics ----------
 function domainFx(S, front, k){ if (!ON('domains')) return null; if (!ON('fronts')){ for (const f of ['S','D']){ const d=S.dom[f]; const x=d&&fxOf(d.c,k); if (x) return x; } return null; } const d=S.dom[front]; return d && fxOf(d.c,k); }
 function powOf(S, P, u){ let p=powBase(u.c)+u.tp; for (const e of u.eq) p+=e.fx[0][1]; for (const o of P.units) if (o!==u && o.front===u.front && has(o.c,'leader')) p+=1;
-  const fb=domainFx(S,u.front,'front_buff'); if (fb) p+=fb[1]; if (P.rally) p+=P.rally; return Math.max(0,p); }
+  const fb=domainFx(S,u.front,'front_buff'); if (fb) p+=fb[1]; const hp=domainFx(S,u.front,'home_power'); if (hp && homes(u.c).includes(u.front)) p+=hp[1];
+  if (P.rally) p+=P.rally; return Math.max(0,p); }
 function tghOf(S, P, u, blockingHome){ let t=tghBase(u.c)+u.tt; for (const e of u.eq) t+=e.fx[0][2];
   for (const s of P.holds) { const f=fxOf(s.c,'shore_toughness'); if (f && u.front==='S') t+=f[1]; const g=fxOf(s.c,'all_toughness'); if (g) t+=g[1]; }
   const fb=domainFx(S,u.front,'front_buff'); if (fb) t+=fb[2];
-  if (blockingHome && (has(u.c,'rampart') || u.eq.some(e=>e.fx[0][3]==='rampart'))) t+=2; return t; }
+  if (blockingHome && (has(u.c,'rampart') || u.eq.some(e=>e.fx[0][3]==='rampart'))) t+=2;
+  if (blockingHome){ const hg=domainFx(S,u.front,'home_guard'); if (hg) t+=hg[1]; } return t; }
 const surgeOf=(P,u)=> ON('surge') && (has(u.c,'surge') || (P.ench.some(e=>fxOf(e,'grant_surge')) && (u.c.al==='S'||u.c.t==='vessel')));
 function allegiance(P, side){ let n=0; const cnt=c=>{ if (c.al===side || c.al==='D') n++; };
   for (const u of P.units) if (!u.tok) cnt(u.c); for (const h of P.holds) cnt(h.c); for (const e of P.ench) cnt(e); for (const u of P.units) for (const r of u.eq) cnt(r); for (const r of P.relics) cnt(r);
@@ -83,7 +96,7 @@ function shoreLean(S, O){ if (!O.units.length) return 0.5; let n=0; for (const u
 function wantScore(S, P, O, c){
   const t=c.t; let s=c.cost*1.0+0.5;
   if (t==='unit'||t==='vessel'){ if (P.units.length>=8) return -1; let v=s+(c.pow+c.tgh)*0.2;
-    if (AI(P)===2){ if (t==='vessel'){ v+=0.4*Math.min(c.carry||0, P.units.filter(u=>u.c.al==='L').length); if (V('targets') && ON('screen')) v+=1.5*(1-shoreLean(S,O)); }
+    if (AI(P)===2){ if (c.ferry) v+=0.4*Math.min(c.ferry, P.units.length); if (t==='vessel'){ v+=0.4*Math.min(c.carry||0, P.units.filter(u=>u.c.al==='L').length); if (V('targets') && ON('screen')) v+=1.5*(1-shoreLean(S,O)); }
       if (c.al==='D' && V('escort') && ON('escort')) v+=0.4*P.units.filter(u=>u.c.al!=='D').length; }
     return v; }
   if (t==='stronghold'){ if (P.holds.length>=2) return -1; return AI(P)===2 && ON('walls')? s+0.5+2.5*shoreLean(S,O) : s+1; }
@@ -108,6 +121,8 @@ function domainNet(S, P, O, c){ if (!ON('domains')) return -9; const o=effFx(c)[
   if (k==='strand_all') return O.units.some(u=>u.c.al==='L') && O.units.some(u=>u.c.carry)? 2 : -1;
   if (k==='max_attackers') return O.units.length>=3 && shoreLean(S,O)>0.5? 2 : -1;
   if (k==='raid_bonus') return shoreLean(S,P)-shoreLean(S,O)>0? 1 : -1;
+  if (k==='home_power'){ const hm=(Q)=>Q.units.filter(u=>homes(u.c).includes(c.front)).length; return 1.0*(hm(P)-hm(O))+0.3; }
+  if (k==='home_guard'){ const hm=(Q)=>Q.units.filter(u=>homes(u.c).includes(c.front)).length; return 1.0*(hm(P)-hm(O))+0.3; }
   if (k==='reef_cross') return P.units.filter(u=>u.c.al==='S').length>=2? 2 : -1;
   return 0; }
 function canAttack(S, P, u){ return u.ready && !u.stranded && (u.entered<S.turn || has(u.c,'charge')); }
@@ -116,7 +131,7 @@ function play(S, P, O, c, front){
   if (c.t==='unit'||c.t==='vessel') return enter(S,P,O,c,front);
   if (c.t==='stronghold'){ P.holds.push({c,dur:c.fort}); return; }
   if (c.t==='domain'){ const cur=S.dom[c.front]; if (cur){ S.p[cur.owner].disc.push(cur.c); S.p[cur.owner].domCount[cur.c.al==='L'?'L':cur.c.al==='S'?'S':'X']--; } S.dom[c.front]={c,owner:P.i}; P.domCount[c.al==='L'?'L':c.al==='S'?'S':'X']++; return; }
-  if (c.t==='enchantment'){ P.ench.push(c); return; }
+  if (c.t==='enchantment'){ P.ench.push(c); const dr=fxOf(c,'draw'); if (dr) draw(S,P,dr[1]); return; }
   if (c.t==='relic'){ if (fxOf(c,'equip')) applyFx(S,P,O,c,fxOf(c,'equip')); else { P.relics.push(c); for (const o of effFx(c)) if (o[0]==='ramp') P.cap=Math.min(R0.MAXCAP,P.cap+o[1]); } return; }
   for (const o of effFx(c)) applyFx(S,P,O,c,o); P.disc.push(c);
 }
@@ -135,7 +150,7 @@ function reserveFor(S, P, O){
   const incoming=threats.reduce((q,u)=>q+powOf(S,O,u),0);
   let best=null, bv=0;
   for (const c of cheap){ let v=0;
-    if (has(c,'ambush')) v=Math.min(powOf(S,O,threats.sort((a,b)=>powOf(S,O,b)-powOf(S,O,a))[0]), c.pow)+tghBase(c)*0.3;
+    if (amb(c)) v=Math.min(powOf(S,O,threats.sort((a,b)=>powOf(S,O,b)-powOf(S,O,a))[0]), c.pow)+tghBase(c)*0.3;
     else if (fxOf(c,'pump')) v= P.units.length? 3 : 0;
     else if (fxOf(c,'shift')||fxOf(c,'bounce')) v= Math.max(...threats.map(u=>powOf(S,O,u)))>=4? 4 : 1;
     if (incoming>=P.harbor-4) v*=1.6;
@@ -152,14 +167,14 @@ function mainPhase(S, P, O, post){
     for (const c of P.hand){ if (!reqOk(P,c)) continue; const reactive=isReactive(c);
       // v1 let reactive cards ignore the reserve (and played Ambush units in its own turn); v2 never plays reactive cards in its own main phase unless it is the last chance to use the Influence well
       const room=P.inf-(reactive? 0 : keep); if (c.cost>room) continue;
-      if (AI(P)===2 && reactive && has(c,'ambush') && keep>0 && c.cost<=keep) continue;
-      if (AI(P)===2 && reactive && !has(c,'ambush') && (fxOf(c,'pump')||fxOf(c,'shift')||fxOf(c,'bounce'))) continue;   // Swift tricks wait for battle
+      if (AI(P)===2 && reactive && amb(c) && keep>0 && c.cost<=keep) continue;
+      if (AI(P)===2 && reactive && !amb(c) && (fxOf(c,'pump')||fxOf(c,'shift')||fxOf(c,'bounce'))) continue;   // Swift tricks wait for battle
       const s=wantScore(S,P,O,c); if (s>bs){ bs=s; best=c; } }
     if (!best) break; play(S,P,O,best); if (over(S)) return;
   }
   // a Shift before battle: move the opponent's best blocker out of position (it arrives exhausted)
   if (!post && ON('tricks')){ const sh=P.hand.find(c=>fxOf(c,'shift') && c.cost<=P.inf && reqOk(P,c)); const atk=P.units.filter(u=>canAttack(S,P,u)); const tg=O.units.filter(u=>u.ready).sort((a,b)=>val(S,O,b)-val(S,O,a))[0];
-    if (sh && atk.length>=2 && tg && val(S,O,tg)>=6 && (AI(P)===1 || O.units.filter(u=>u.ready).length<=atk.length)){ P.hand.splice(P.hand.indexOf(sh),1); P.inf-=sh.cost; S.log.played.push([P.i,sh.id,S.turn,0,0]); tg.front=tg.front==='S'?'D':'S'; tg.ready=false; P.disc.push(sh); S.log.shiftOff[P.i]++; } }
+    if (sh && atk.length>=2 && tg && val(S,O,tg)>=6 && (AI(P)===1 || O.units.filter(u=>u.ready).length<=atk.length)){ P.hand.splice(P.hand.indexOf(sh),1); P.inf-=sh.cost; S.log.played.push([P.i,sh.id,S.turn,0,0]); tg.front=tg.front==='S'?'D':'S'; tg.ready=false; P.disc.push(sh); S.log.shiftOff[P.i]++; const dr=fxOf(sh,'draw'); if (dr) draw(S,P,dr[1]); } }
 }
 // ---------- battle ----------
 // result of one fight (who dies), honouring Home ground: a unit at home strikes first against one that is not
@@ -212,11 +227,11 @@ function planValue(S, P, O, plan, oppBlockers, atkers){
   return v;
 }
 function frontOption(S, P, u, f, ctx){ let home=homes(u.c).includes(f) || (f==='S' && surgeOf(P,u)); let car=false, esc=false;
-  if (!home && f==='D' && u.c.al==='L' && ctx.carry>0 && !domainFx(S,'D','strand_all')){ home=true; car=true; }
+  if (!home && ctx.carry>0 && (CFG.r3 || (f==='D' && u.c.al==='L' && !domainFx(S,'D','strand_all')))){ home=true; car=true; }
   if (!home && ctx.escorts>0 && u.c.al!=='D'){ home=true; esc=true; }
   const unb= ctx.reef>0 && f==='S' && u.c.al==='S'; return {u, f, home, car, esc, unb}; }
 function planAttackV2(S, P, O, atkers, oppBlockers, fronts, maxS){
-  const ctx0=()=>({carry:ON('carry')? P.units.reduce((q,u)=>q+(u.c.carry||0),0) : 0, escorts:V('escort') && ON('escort')? atkers.filter(u=>u.c.al==='D').length : 0, reef:domainFx(S,'D','reef_cross')? 1 : 0});
+  const ctx0=()=>({carry:ferryCap(P), escorts:V('escort') && ON('escort')? atkers.filter(u=>u.c.al==='D').length : 0, reef:domainFx(S,'D','reef_cross')? 1 : 0});
   // rebuild options so carry/escort/reef capacity is honoured in plan order
   const realise=sel=>{ const ctx=ctx0(); const out=[]; let nS=0; for (const [u,f] of sel){ if (f==='S' && maxS && nS>=maxS[1]) continue; const o=frontOption(S,P,u,f,ctx); if (o.car) ctx.carry--; if (o.esc) ctx.escorts--; if (o.unb) ctx.reef--; if (f==='S') nS++; out.push(o); } return out; };
   const natural=u=>{ const h=homes(u.c); return h.length===1? h[0] : (screenOf(S,O,'S',u)<=screenOf(S,O,'D',u)? 'S':'D'); };
@@ -234,7 +249,7 @@ function planAttackV2(S, P, O, atkers, oppBlockers, fronts, maxS){
 }
 function battle(S, P, O){
   const atkers=P.units.filter(u=>canAttack(S,P,u)); if (!atkers.length) return;
-  let carry=0; if (ON('carry')) for (const u of P.units) if (u.c.carry) carry+=u.c.carry;
+  const carry=ferryCap(P);
   const oppBlockers=f=>O.units.filter(u=>u.ready && !u.stranded && (!(u.c.t==='vessel' && f==='S') || !ON('fronts')));
   const fronts=ON('fronts')? ['S','D'] : ['S'];
   const totalPow=atkers.reduce((q,u)=>q+powOf(S,P,u),0);
@@ -253,7 +268,7 @@ function battle(S, P, O){
     for (const f of fronts){
       if (f==='S' && maxS && nS>=maxS[1]) continue;
       let home=homes(u.c).includes(f) || (f==='S' && surgeOf(P,u)); let carriedHere=false, escorted=false;
-      if (!home && f==='D' && u.c.al==='L' && usedCarry<carry && !domainFx(S,'D','strand_all')){ home=true; carriedHere=true; }
+      if (!home && usedCarry<carry && (CFG.r3 || (f==='D' && u.c.al==='L' && !domainFx(S,'D','strand_all')))){ home=true; carriedHere=true; }
       if (!home && escorts>0 && u.c.al!=='D'){ home=true; escorted=true; }
       const reefHere= reefFree>0 && f==='S' && u.c.al==='S';
       const bl=reefHere? [] : oppBlockers(f); let s;
@@ -287,7 +302,7 @@ function battle(S, P, O){
   for (const a of plan) a.u.ready=false;
   const tricksOn=ON('tricks');
   // defender: Ambush units come in from hand to block. v1 plays every one it can afford; v2 only those that make a good block
-  if (tricksOn) for (const c of O.hand.slice()){ if (!has(c,'ambush') || c.cost>O.inf || !reqOk(O,c)) continue; const front=homes(c)[0];
+  if (tricksOn) for (const c of O.hand.slice()){ if (!amb(c) || c.cost>O.inf || !reqOk(O,c)) continue; const front=homes(c)[0];
     if (AI(O)===2){ const tmp={uid:-1,c,front,dmg:0,eq:[],tp:0,tt:0}; let good=false; for (const a of plan){ if (a.unb) continue; const r=fight(S,P,a.u,a.home,O,tmp,bHome(tmp,a.f),false); if ((r.aDies && !r.bDies) || (r.aDies && val(S,P,a.u)>=c.cost*1.5+2) || (!r.aDies && !r.bDies && powOf(S,P,a.u)>=4)) good=true; } if (!good) continue; }
     O.hand.splice(O.hand.indexOf(c),1); O.inf-=c.cost; S.log.played.push([O.i,c.id,S.turn,0,0]); const nu=enter(S,O,P,c,front); nu.ready=true; nu.amb=true; S.log.ambush[O.i]++; }
   // defender: Shift or a Swift bounce removes an attacker from the fight
@@ -296,7 +311,7 @@ function battle(S, P, O){
     if (sh){ const big=plan.slice().sort((x,y)=>powOf(S,P,y.u)-powOf(S,P,x.u))[0];
       const use= AI(O)===1? (fxOf(sh,'shift') && big && powOf(S,P,big.u)>=4) : (big && (powOf(S,P,big.u)>=4 || incoming0>=O.harbor) );
       if (use){ O.hand.splice(O.hand.indexOf(sh),1); O.inf-=sh.cost; S.log.played.push([O.i,sh.id,S.turn,0,0]); plan.splice(plan.indexOf(big),1); S.log.tricks.push([O.i,sh.id,'removed',powOf(S,P,big.u)]);
-        if (fxOf(sh,'bounce')) bounceUnit(P,big.u); else big.u.front=big.u.front==='S'?'D':'S'; O.disc.push(sh); } } }
+        if (fxOf(sh,'bounce')) bounceUnit(P,big.u); else big.u.front=big.u.front==='S'?'D':'S'; O.disc.push(sh); const dr=fxOf(sh,'draw'); if (dr) draw(S,O,dr[1]); } } }
   // defender blocks
   const incoming=plan.reduce((q,a)=>q+powOf(S,P,a.u),0); const desperate=incoming>=O.harbor-3;
   const used=new Set(); const blocks=new Map();
@@ -346,6 +361,7 @@ function battle(S, P, O){
 function over(S){ for (const P of S.p) if (P.harbor<=0 || P.decked){ S.over=true; S.win=1-P.i; S.why=P.harbor<=0?'harbor':'deck'; return true; } return false; }
 function rise(S, P, O){
   P.cap=Math.min(R0.MAXCAP,P.cap+1); P.inf=P.cap; P.rally=0;
+  if (CFG.tide && Math.ceil(S.turn/2)>CFG.tide){ P.harbor-=1; S.log.tideDmg[P.i]++; }   // experiment: the rising tide ends board stalls
   for (const u of P.units){ if (u.stranded){ u.stranded=false; u.ready=false; S.log.strandedTurns[P.i]++; } else u.ready=true; }
   for (const r of P.relics){ const f=fxOf(r,'rise_ping'); if (f){ const t=bestKill(S,O,f[2],u=>u.front===f[1]); if (t) damageUnit(S,O,t,f[2]); } }
   for (const h of P.holds){ const f=fxOf(h.c,'rise_heal'); if (f) P.harbor=Math.min(CFG.harbor,P.harbor+f[1]); }
@@ -354,9 +370,10 @@ function rise(S, P, O){
 }
 const ZERO=()=>[0,0];
 function play1(deckA, deckB, seed, cfg){
-  cfg=cfg||{}; CFG={v:cfg.v instanceof Set? cfg.v : new Set(cfg.v||[]), off:cfg.off instanceof Set? cfg.off : new Set(cfg.off||[]), blk:cfg.blk? (Array.isArray(cfg.blk)? cfg.blk : [cfg.blk,cfg.blk]) : null, ai:cfg.ai||1, ais:Array.isArray(cfg.ai)? cfg.ai : [cfg.ai||1,cfg.ai||1], bonus:cfg.bonus||{inf:2,card:0}, scale:cfg.scale||{}, harbor:cfg.harbor||20};
+  cfg=cfg||{}; CFG={r3:cfg.rules==='0.3', oldEntry:!!cfg.oldEntry, v:new Set(cfg.v||[]), off:new Set(cfg.off||[]), blk:cfg.blk? (Array.isArray(cfg.blk)? cfg.blk : [cfg.blk,cfg.blk]) : null, ai:cfg.ai||1, ais:Array.isArray(cfg.ai)? cfg.ai : [cfg.ai||1,cfg.ai||1], bonus:cfg.bonus||{inf:2,card:0}, scale:cfg.scale||{}, harbor:cfg.harbor||20, tide:cfg.tide||0};
+  if (CFG.r3){ CFG.v.add('targets'); CFG.v.delete('escort'); CFG.off.add('homeground'); }
   const r=mk(seed); const S={r, turn:0, dom:{S:null,D:null}, over:false, win:-1, why:'', log:{played:[], tricks:[]}};
-  for (const k of ['cross','escorted','reef','raids','vesselDmg','blocks','awayBlocks','away','carried','deaths','harborDmg','holdDmg','attacks','ambush','ambushBlocks','strandedTurns','unitsPlayed','fights','prioDecided','escortDecided','carryDecided','crossDecided','screenSaved','decisions','closeChoices','chooseCross','shiftOff']) S.log[k]=ZERO();
+  for (const k of ['cross','escorted','reef','raids','vesselDmg','blocks','awayBlocks','away','carried','deaths','harborDmg','holdDmg','attacks','ambush','ambushBlocks','strandedTurns','unitsPlayed','fights','prioDecided','escortDecided','carryDecided','crossDecided','screenSaved','decisions','closeChoices','chooseCross','shiftOff','tideDmg']) S.log[k]=ZERO();
   S.p=[deckA,deckB].map((d,i)=>{ const deck=d.slice(); for (let k=deck.length-1;k>0;k--){ const j=Math.floor(r()*(k+1)); [deck[k],deck[j]]=[deck[j],deck[k]]; }
     return {i, deck, hand:[], disc:[], units:[], holds:[], ench:[], relics:[], harbor:CFG.harbor, cap:0, inf:0, domCount:{L:0,S:0,X:0}}; });
   for (const P of S.p){ draw(S,P,R0.HAND); if (!P.hand.some(c=>c.cost<=3)){ P.deck.push(...P.hand.splice(0)); for (let k=P.deck.length-1;k>0;k--){ const j=Math.floor(r()*(k+1)); [P.deck[k],P.deck[j]]=[P.deck[j],P.deck[k]]; } draw(S,P,R0.HAND); } }

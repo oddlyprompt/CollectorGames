@@ -1,5 +1,19 @@
 # Tidemark prototype rules validation, round 2
 
+> **Correction (round 3): read `round3-report.md` before using any balance number in this report.**
+>
+> Round 3 found a second simulator bug. Units entered play exhausted, so a unit could not block on the opponent's next turn. The written rules never said that.
+>
+> - **What it did:** it heavily punished defensive play. With the bug fixed, the round 2 main configuration plays about 9 to 10 turns, not 6.7, and the Land/Sea gap shrinks a lot.
+> - **What no longer holds:** the conclusions about fast games, Sea dominance and Tideborn Tempo's lead.
+> - **What still stands, re-measured in round 3:**
+>   - which rules barely matter;
+>   - that Rootcall is weak;
+>   - that expensive cards win mostly by selection;
+>   - the second-player compensation finding.
+>
+> `round2.js` and `probe.js` keep the old engine behaviour (`oldEntry`), so the numbers below can still be reproduced.
+
 Date: 2026-10-15 (prototype rules 0.2, 60-card pool). Data: `round2-data.md` (all tables), `round2-probes.md` (cause-finding experiments), `round2-data.json` (raw numbers). Code: `tools/tidemark/` (not part of any game build).
 
 **Read this first.** Everything here comes from two computer players playing six fixed prototype decks against each other. A simulation can show that a rule does nothing, that a card is weak against a decent opponent, or that a deck wins too often against these opponents. It cannot prove that the game is balanced or fun for people. Every claim below is marked:
