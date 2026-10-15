@@ -1,6 +1,6 @@
 // ===================== TCG: COPIES, VALUE AND THE MARKET =====================
 const TC_MSRP={P:4.5,B:150}, TC_COND_MULT={NM:1,LP:0.82,MP:0.6,HP:0.4,DMG:0.22};
-const TC_RB={'common|N':0.05,'common|R':0.30,'unc|N':0.18,'unc|R':0.55,'rare|N':0.22,'rare|R':0.5,'rare|H':1.3,'ess|N':0.03,'ir|I':7,'fa|F':12,'sir|X':130,'csr|C':150};   // provisional, tuned with tools/econtest.py
+const TC_RB={'common|N':0.05,'common|R':0.30,'unc|N':0.18,'unc|R':0.55,'rare|N':0.22,'rare|R':0.5,'rare|H':1.3,'ess|N':0.03,'ir|I':7,'fa|F':10,'sir|X':130,'csr|C':150};   // provisional, tuned with tools/econtest.py
 const TC_TUNE={fanPrem:4.5, fanRare:1.2};   // how hard collector fandom (manifest, provisional) bends prices: premium prints feel it most
 const TC_PB={ess:0,common:1.6,unc:2.5,rare:3.5,ir:9,fa:12,sir:14,csr:12};
 const TC_GB=[0,0.35,0.4,0.45,0.55,0.65,0.78,0.9,1.0,1.55,3.4], TC_GS={ess:0.3,common:0.55,unc:0.7,rare:1,ir:1.4,fa:1.5,sir:1.7,csr:1.8};

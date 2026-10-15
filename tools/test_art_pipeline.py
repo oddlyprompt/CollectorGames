@@ -104,7 +104,7 @@ check(t3['production']['status']=='complete', 'the queue status updates after ap
 sys.path.insert(0,os.path.join(ROOT,'tools')); os.environ['WILDKIN_PRODUCTION']=WP
 import importlib, wildkin_build; importlib.reload(wildkin_build)
 js,na,nc=wildkin_build.canon_js(os.path.join(tmp,'dist'))
-art=json.loads(js.split('const WK_ART=')[1].rstrip().rstrip(';'))
+art=json.loads(js.split('const WK_ART=')[1].split(';\n')[0])
 check('ill.173-cactuft-sir' in art and 'cut.006-maceback.standing' in art and os.path.exists(os.path.join(tmp,'dist','art','ill.173-cactuft-sir.webp')), 'approved pieces reach the game build (art map and files)', na)
 r=run('ingest','--auto-approve'); check(r.returncode==0, 'ingest --auto-approve runs cleanly on a rerun', r.stdout.strip()[-120:])
 mf=subprocess.run([sys.executable,os.path.join(ROOT,'tools','wildkin_manifest.py'),'--check'],capture_output=True,text=True,env=ENV)

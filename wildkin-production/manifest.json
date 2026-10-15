@@ -1,6 +1,6 @@
 {
  "schema": "wildkin-manifest/1",
- "manifest_version": "1.0.0",
+ "manifest_version": "1.1.0",
  "generated_by": "tools/wildkin_manifest.py",
  "sources": {
   "bible": "design/wildkin-v1-production-bible.md",
@@ -12,8 +12,35 @@
   "canon": "stated in the bible or the owner design doc",
   "canon-rule": "follows the owner rule for rarity by stage",
   "inferred": "follows from canon numbering and the sheet plan, needs owner confirmation",
-  "provisional": "placeholder chosen by Claude Code so the game runs, not canon",
+  "designed": "card rules designed by Claude Code under the owner instruction of 2026-10-15",
+  "decided": "reasoned choice under the owner instruction of 2026-10-15 where the bible left it open",
+  "provisional": "an engine number still open (release date, code, prices, odds), not canon",
   "unresolved": "unknown"
+ },
+ "rules": {
+  "version": 1,
+  "deck": "40 cards. At most 4 copies of a card with the same name (premium prints count as their base card). Essence cards are unlimited.",
+  "setup": "Each player shuffles, draws 7 and puts a Basic Wildkin face down as their Active, plus up to 4 Basics on the Bench. No Basic in hand: reveal, shuffle back, draw 7 again; the opponent may draw 1 extra card for each redraw. Each player sets aside the top 4 cards of their deck as Prize cards.",
+  "turn": "Draw a card. Then, in any order: put Basics on the Bench (5 at most), evolve, attach 1 Essence from hand, play any number of Gear, 1 Ally, 1 Tactic and 1 Biome, use abilities, retreat once. Attacking ends the turn. The player who goes first cannot attack or play an Ally on their first turn; the player who goes second draws 1 extra card on their first turn.",
+  "evolve": "An Evolution card is put on the creature it evolves from. A creature cannot evolve on the turn it came into play, and nothing evolves on a player's first turn. Evolving keeps damage, Essence and Gear, and removes Special Conditions.",
+  "attack": "Pay the cost with attached Essence: an affinity symbol needs that Essence, a C symbol takes any. A creature with two affinities may use Essence of either for its own symbols. Damage is the printed number, plus or minus effects, doubled by Weakness (the defender's weak affinity), then reduced by protection.",
+  "knockout": "A creature with damage equal to its HP is Knocked Out and goes to the discard pile with its cards. Its opponent takes 1 Prize card. The owner moves a Benched creature up to Active.",
+  "retreat": "Once per turn, discard Essence equal to the Retreat Cost to swap the Active with a Benched creature. Asleep or Paralyzed creatures cannot retreat.",
+  "conditions": "Asleep: cannot attack or retreat; flip at the end of each turn, heads wakes it. Paralyzed: cannot attack or retreat; ends after its owner's next turn. Confused: when attacking, flip; tails means 30 damage to itself and no attack. Poisoned: 10 damage between turns. Burned: 20 damage between turns, then flip: heads removes it. Moving to the Bench or evolving removes all conditions.",
+  "cards": "Allies: 1 per turn. Tactics: 1 per turn. Gear: any number; a Gear that says \"Attach\" stays on a creature (1 per creature). Biome: 1 per turn, stays in play for both players until another Biome replaces it.",
+  "win": "Take your last Prize card, or your opponent has no creature to move up, or your opponent cannot draw at the start of their turn.",
+  "premium": "Illustration Rares, Full Arts, Special Illustration Rares and Clasped Secret Rares play exactly as their base card. The Clasp is a collector treatment, not a mechanic."
+ },
+ "weakness": {
+  "Verdant": "Ember",
+  "Ember": "Tide",
+  "Tide": "Storm",
+  "Storm": "Stone",
+  "Stone": "Verdant",
+  "Dusk": "Wonder",
+  "Astral": "Dusk",
+  "Iron": "Astral",
+  "Wonder": "Iron"
  },
  "set": {
   "id": "WK-S001",
@@ -673,7 +700,8 @@
    },
    "fandom": {
     "value": 1.0,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "established",
@@ -715,8 +743,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.7,
-    "status": "provisional"
+    "value": 0.8,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -752,8 +781,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.75,
-    "status": "provisional"
+    "value": 0.7,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -790,7 +820,8 @@
    },
    "fandom": {
     "value": 0.85,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -826,8 +857,9 @@
     "status": "canon"
    },
    "fandom": {
-    "value": 0.6,
-    "status": "provisional"
+    "value": 0.7,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "established",
@@ -863,8 +895,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.45,
-    "status": "provisional"
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -900,8 +933,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.6,
-    "status": "provisional"
+    "value": 0.65,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -938,7 +972,8 @@
    },
    "fandom": {
     "value": 0.5,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -975,7 +1010,8 @@
    },
    "fandom": {
     "value": 0.5,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1012,7 +1048,8 @@
    },
    "fandom": {
     "value": 0.95,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1048,8 +1085,9 @@
     "status": "canon"
    },
    "fandom": {
-    "value": 0.55,
-    "status": "provisional"
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "established",
@@ -1085,8 +1123,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.6,
-    "status": "provisional"
+    "value": 0.7,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1123,7 +1162,8 @@
    },
    "fandom": {
     "value": 0.75,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1159,8 +1199,9 @@
     "status": "canon"
    },
    "fandom": {
-    "value": 0.55,
-    "status": "provisional"
+    "value": 0.65,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "established",
@@ -1197,7 +1238,8 @@
    },
    "fandom": {
     "value": 0.45,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1234,7 +1276,8 @@
    },
    "fandom": {
     "value": 0.6,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1270,8 +1313,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.6,
-    "status": "provisional"
+    "value": 0.65,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1308,7 +1352,8 @@
    },
    "fandom": {
     "value": 0.65,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1347,8 +1392,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.55,
-    "status": "provisional"
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1385,7 +1431,8 @@
    },
    "fandom": {
     "value": 0.8,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1424,8 +1471,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.6,
-    "status": "provisional"
+    "value": 0.65,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1462,7 +1510,8 @@
    },
    "fandom": {
     "value": 0.7,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1501,8 +1550,9 @@
     "status": "canon"
    },
    "fandom": {
-    "value": 0.65,
-    "status": "provisional"
+    "value": 0.75,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "established",
@@ -1535,8 +1585,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1544,8 +1594,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.45,
-    "status": "provisional"
+    "value": 0.55,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1572,8 +1623,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1582,7 +1633,8 @@
    },
    "fandom": {
     "value": 0.5,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1609,8 +1661,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1618,8 +1670,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.75,
-    "status": "provisional"
+    "value": 0.8,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1646,8 +1699,8 @@
    "affinity": {
     "primary": "Ember",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1656,7 +1709,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1683,8 +1737,8 @@
    "affinity": {
     "primary": "Ember",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1693,7 +1747,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1720,8 +1775,8 @@
    "affinity": {
     "primary": "Ember",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1729,8 +1784,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.3,
-    "status": "provisional"
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1757,8 +1813,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1767,7 +1823,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1794,8 +1851,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1804,7 +1861,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1831,8 +1889,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1840,8 +1898,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.3,
-    "status": "provisional"
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1868,8 +1927,8 @@
    "affinity": {
     "primary": "Dusk",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1878,7 +1937,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1905,8 +1965,8 @@
    "affinity": {
     "primary": "Dusk",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1915,7 +1975,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1942,8 +2003,8 @@
    "affinity": {
     "primary": "Dusk",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1952,7 +2013,8 @@
    },
    "fandom": {
     "value": 0.7,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -1979,8 +2041,8 @@
    "affinity": {
     "primary": "Iron",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -1989,7 +2051,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2016,8 +2079,8 @@
    "affinity": {
     "primary": "Iron",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2026,7 +2089,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2053,8 +2117,8 @@
    "affinity": {
     "primary": "Iron",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2062,8 +2126,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.7,
-    "status": "provisional"
+    "value": 0.65,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2090,8 +2155,8 @@
    "affinity": {
     "primary": "Stone",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2100,7 +2165,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2127,8 +2193,8 @@
    "affinity": {
     "primary": "Stone",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2137,7 +2203,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2164,8 +2231,8 @@
    "affinity": {
     "primary": "Stone",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2174,7 +2241,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2201,8 +2269,8 @@
    "affinity": {
     "primary": "Wonder",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2211,7 +2279,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2238,8 +2307,8 @@
    "affinity": {
     "primary": "Wonder",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2248,7 +2317,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2275,8 +2345,8 @@
    "affinity": {
     "primary": "Wonder",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2284,8 +2354,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.3,
-    "status": "provisional"
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2312,8 +2383,8 @@
    "affinity": {
     "primary": "Verdant",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2322,7 +2393,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2349,8 +2421,8 @@
    "affinity": {
     "primary": "Verdant",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2358,8 +2430,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.3,
-    "status": "provisional"
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2386,8 +2459,8 @@
    "affinity": {
     "primary": "Tide",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2396,7 +2469,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2423,8 +2497,8 @@
    "affinity": {
     "primary": "Tide",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2432,8 +2506,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.3,
-    "status": "provisional"
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2460,8 +2535,8 @@
    "affinity": {
     "primary": "Ember",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2470,7 +2545,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2497,8 +2573,8 @@
    "affinity": {
     "primary": "Ember",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2507,7 +2583,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2534,8 +2611,8 @@
    "affinity": {
     "primary": "Astral",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2544,7 +2621,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2571,8 +2649,8 @@
    "affinity": {
     "primary": "Astral",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2580,8 +2658,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.3,
-    "status": "provisional"
+    "value": 0.55,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2608,8 +2687,8 @@
    "affinity": {
     "primary": "Iron",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2618,7 +2697,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2645,8 +2725,8 @@
    "affinity": {
     "primary": "Iron",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2655,7 +2735,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2680,10 +2761,10 @@
    "evolves_from": null,
    "evolves_to": "SP-056",
    "affinity": {
-    "primary": "Verdant",
-    "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "primary": "Tide",
+    "secondary": "Verdant",
+    "status": "decided",
+    "note": "water-and-bloom creature: Tide first, Verdant second (was provisional Verdant)"
    },
    "mascot": false,
    "movement": {
@@ -2692,7 +2773,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2717,10 +2799,10 @@
    "evolves_from": "SP-055",
    "evolves_to": null,
    "affinity": {
-    "primary": "Verdant",
-    "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "primary": "Tide",
+    "secondary": "Verdant",
+    "status": "decided",
+    "note": "see Dewink"
    },
    "mascot": false,
    "movement": {
@@ -2729,7 +2811,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2756,8 +2839,8 @@
    "affinity": {
     "primary": "Verdant",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2766,7 +2849,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2793,8 +2877,8 @@
    "affinity": {
     "primary": "Verdant",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2803,7 +2887,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2830,8 +2915,8 @@
    "affinity": {
     "primary": "Tide",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2840,7 +2925,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2867,8 +2953,8 @@
    "affinity": {
     "primary": "Tide",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2877,7 +2963,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2904,8 +2991,8 @@
    "affinity": {
     "primary": "Stone",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2914,7 +3001,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2941,8 +3029,8 @@
    "affinity": {
     "primary": "Stone",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2951,7 +3039,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -2978,8 +3067,8 @@
    "affinity": {
     "primary": "Iron",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -2988,7 +3077,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3013,10 +3103,10 @@
    "evolves_from": null,
    "evolves_to": null,
    "affinity": {
-    "primary": "Tide",
+    "primary": "Iron",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "its approved art is bronze and metal: Iron (was provisional Tide)"
    },
    "mascot": false,
    "movement": {
@@ -3025,7 +3115,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3052,8 +3143,8 @@
    "affinity": {
     "primary": "Ember",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3062,7 +3153,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3089,8 +3181,8 @@
    "affinity": {
     "primary": "Ember",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3099,7 +3191,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3126,8 +3219,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3136,7 +3229,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3163,8 +3257,8 @@
    "affinity": {
     "primary": "Storm",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3173,7 +3267,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3200,8 +3295,8 @@
    "affinity": {
     "primary": "Astral",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3210,7 +3305,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3237,8 +3333,8 @@
    "affinity": {
     "primary": "Astral",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3247,7 +3343,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3274,8 +3371,8 @@
    "affinity": {
     "primary": "Dusk",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3284,7 +3381,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3311,8 +3409,8 @@
    "affinity": {
     "primary": "Dusk",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3321,7 +3419,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3348,8 +3447,8 @@
    "affinity": {
     "primary": "Wonder",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3357,8 +3456,9 @@
     "status": "provisional"
    },
    "fandom": {
-    "value": 0.3,
-    "status": "provisional"
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3385,8 +3485,8 @@
    "affinity": {
     "primary": "Wonder",
     "secondary": null,
-    "status": "provisional",
-    "note": "chosen from the name so the game runs; confirm"
+    "status": "decided",
+    "note": "decided from the name, design and family (2026-10-15)"
    },
    "mascot": false,
    "movement": {
@@ -3395,7 +3495,8 @@
    },
    "fandom": {
     "value": 0.3,
-    "status": "provisional"
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
    },
    "visual_identity": {
     "status": "sol_designs",
@@ -3422,25 +3523,51 @@
    "species": "SP-001",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 130,
+    "status": "designed",
+    "hp": 90,
+    "retreat": 1,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Burst",
-      "cost": 1,
-      "damage": 30,
-      "text": ""
+      "name": "Spine Spray",
+      "cost": "V",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "This attack also does 10 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        10
+       ]
+      ]
      },
      {
-      "name": "Crash",
-      "cost": 2,
+      "name": "Blossom Charge",
+      "cost": "VVC",
       "damage": 70,
-      "text": ""
+      "damage_label": "70",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
      }
     ],
-    "weakness": "Wonder",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Sunny Bloom",
+     "kind": "once",
+     "text": "Once during your turn, you may heal 10 damage from 1 of your Verdant creatures.",
+     "ops": [
+      [
+       "heal_one",
+       10,
+       "Verdant"
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3461,19 +3588,35 @@
    "species": "SP-002",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
+      "name": "Bubble Glint",
+      "cost": "T",
       "damage": 20,
-      "text": ""
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Prism Flicker",
+      "cost": "TC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3494,25 +3637,34 @@
    "species": "SP-003",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 1,
-      "damage": 30,
-      "text": ""
+      "name": "Opal Shimmer",
+      "cost": "C",
+      "damage": 0,
+      "damage_label": "",
+      "text": "Draw 2 cards.",
+      "ops": [
+       [
+        "draw",
+        2
+       ]
+      ]
      },
      {
-      "name": "Burst",
-      "cost": 2,
-      "damage": 60,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "name": "Lustre Jet",
+      "cost": "TTC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3533,25 +3685,36 @@
    "species": "SP-004",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 150,
+    "status": "designed",
+    "hp": 160,
+    "retreat": 2,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 1,
-      "damage": 30,
-      "text": "Draw 2 cards."
-     },
-     {
-      "name": "Slam",
-      "cost": 3,
-      "damage": 130,
-      "text": "Heal 30 damage from this creature."
+      "name": "Spectrum Wave",
+      "cost": "TC",
+      "damage": 50,
+      "damage_label": "50+",
+      "text": "This attack does 20 more damage for each Essence attached to this creature.",
+      "ops": [
+       [
+        "per_essence",
+        20
+       ]
+      ]
      }
     ],
-    "weakness": "Verdant",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Aurora Veil",
+     "kind": "passive",
+     "text": "Prevent all damage done to your Benched creatures by your opponent's attacks.",
+     "ops": [
+      [
+       "bench_shield"
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3572,19 +3735,29 @@
    "species": "SP-005",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 1,
+      "name": "Headbutt",
+      "cost": "S",
       "damage": 20,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Tail Bump",
+      "cost": "SC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3605,25 +3778,34 @@
    "species": "SP-006",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 100,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 1,
-      "damage": 30,
-      "text": ""
+      "name": "Club Swing",
+      "cost": "SC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Slam",
-      "cost": 2,
-      "damage": 90,
-      "text": ""
+      "name": "Plated Guard",
+      "cost": "SSC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "During your opponent's next turn, this creature takes 20 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3644,25 +3826,33 @@
    "species": "SP-007",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 140,
+    "status": "designed",
+    "hp": 170,
+    "retreat": 3,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 1,
-      "damage": 40,
-      "text": ""
+      "name": "Bastion Stomp",
+      "cost": "SSC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Charge",
-      "cost": 3,
-      "damage": 130,
-      "text": ""
+      "name": "Fortress Smash",
+      "cost": "SSSC",
+      "damage": 180,
+      "damage_label": "180",
+      "text": "During your next turn, this creature can't attack.",
+      "ops": [
+       [
+        "cant_attack_next"
+       ]
+      ]
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3683,19 +3873,29 @@
    "species": "SP-008",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 2,
-      "damage": 30,
-      "text": ""
+      "name": "Ripple",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Splash Leap",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3716,25 +3916,34 @@
    "species": "SP-009",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 1,
-      "damage": 50,
-      "text": ""
+      "name": "Rune Current",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
      },
      {
-      "name": "Surge",
-      "cost": 2,
+      "name": "Tidal Rune",
+      "cost": "TTC",
       "damage": 90,
-      "text": ""
+      "damage_label": "90",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3755,25 +3964,31 @@
    "species": "SP-010",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 130,
+    "status": "designed",
+    "hp": 170,
+    "retreat": 2,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 1,
-      "damage": 30,
-      "text": "Search your deck for an Essence card and attach it to this creature."
-     },
-     {
-      "name": "Charge",
-      "cost": 3,
-      "damage": 110,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "name": "Celestial Rapids",
+      "cost": "TAC",
+      "damage": 140,
+      "damage_label": "140",
+      "text": "",
+      "ops": []
      }
     ],
-    "weakness": "Verdant",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Runic Flow",
+     "kind": "once",
+     "text": "Once during your turn, you may attach an Essence card from your hand to 1 of your Benched creatures. This does not count as your Essence attachment for the turn.",
+     "ops": [
+      [
+       "attach_hand"
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3794,19 +4009,34 @@
    "species": "SP-011",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 70,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 2,
+      "name": "Curl Up",
+      "cost": "S",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "During your opponent's next turn, this creature takes 20 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Roll Bash",
+      "cost": "SC",
       "damage": 30,
-      "text": ""
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3827,25 +4057,32 @@
    "species": "SP-012",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 20,
-      "text": "The Defending creature is now Asleep."
-     },
-     {
-      "name": "Tackle",
-      "cost": 2,
-      "damage": 70,
-      "text": ""
+      "name": "Shield Bash",
+      "cost": "SIC",
+      "damage": 60,
+      "damage_label": "60",
+      "text": "",
+      "ops": []
      }
     ],
-    "weakness": "Tide",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Knight's Plating",
+     "kind": "passive",
+     "text": "This creature takes 10 less damage from attacks.",
+     "ops": [
+      [
+       "reduce",
+       10
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3866,25 +4103,37 @@
    "species": "SP-013",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 120,
+    "status": "designed",
+    "hp": 180,
+    "retreat": 3,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 1,
-      "damage": 30,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
-     },
-     {
-      "name": "Tackle",
-      "cost": 3,
-      "damage": 110,
-      "text": "Heal 30 damage from this creature."
+      "name": "Rolling Rampart",
+      "cost": "SSC",
+      "damage": 90,
+      "damage_label": "90+",
+      "text": "If this creature has any damage on it, this attack does 40 more damage.",
+      "ops": [
+       [
+        "bonus_self_damaged",
+        40
+       ]
+      ]
      }
     ],
-    "weakness": "Tide",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Aegis Shell",
+     "kind": "passive",
+     "text": "This creature takes 20 less damage from attacks.",
+     "ops": [
+      [
+       "reduce",
+       20
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3905,19 +4154,34 @@
    "species": "SP-014",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 1,
+      "name": "Leaf Curl",
+      "cost": "V",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Scale Swipe",
+      "cost": "VC",
       "damage": 30,
-      "text": ""
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3938,25 +4202,34 @@
    "species": "SP-015",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 100,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 1,
-      "damage": 0,
-      "text": "Heal 30 damage from this creature."
+      "name": "Rooted Swipe",
+      "cost": "VC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Slam",
-      "cost": 2,
+      "name": "Grove Mend",
+      "cost": "VVC",
       "damage": 60,
-      "text": ""
+      "damage_label": "60",
+      "text": "Heal 10 damage from each of your creatures.",
+      "ops": [
+       [
+        "heal_team",
+        10
+       ]
+      ]
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -3977,25 +4250,35 @@
    "species": "SP-016",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 120,
+    "status": "designed",
+    "hp": 170,
+    "retreat": 3,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 60,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "name": "Verdant Roar",
+      "cost": "VC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Search your deck for a Verdant Essence card and attach it to 1 of your Benched creatures.",
+      "ops": [
+       [
+        "accel",
+        "Verdant",
+        1
+       ]
+      ]
      },
      {
-      "name": "Rush",
-      "cost": 3,
-      "damage": 90,
-      "text": ""
+      "name": "Thousand Leaves",
+      "cost": "VVVC",
+      "damage": 150,
+      "damage_label": "150",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4016,19 +4299,35 @@
    "species": "SP-017",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 1,
+      "name": "Candy Twirl",
+      "cost": "W",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Sticky Coil",
+      "cost": "WC",
       "damage": 30,
-      "text": ""
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Dusk",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4049,25 +4348,41 @@
    "species": "SP-018",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Iron",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 1,
-      "damage": 30,
-      "text": ""
+      "name": "Spiral Sweetness",
+      "cost": "WC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
      },
      {
-      "name": "Swipe",
-      "cost": 2,
-      "damage": 70,
-      "text": ""
+      "name": "Sugar Rush",
+      "cost": "WWC",
+      "damage": 0,
+      "damage_label": "30×",
+      "text": "Flip 4 coins. This attack does 30 damage for each heads.",
+      "ops": [
+       [
+        "multi_coin",
+        4,
+        30
+       ]
+      ]
      }
-    ],
-    "weakness": "Dusk",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4088,19 +4403,34 @@
    "species": "SP-019",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
+      "name": "Moon Pounce",
+      "cost": "A",
       "damage": 20,
-      "text": "Flip a coin. If heads, the Defending creature is Paralyzed."
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Crescent Claw",
+      "cost": "AC",
+      "damage": 30,
+      "damage_label": "30+",
+      "text": "Flip a coin. If heads, this attack does 20 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Storm",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4121,25 +4451,40 @@
    "species": "SP-020",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 100,
+    "status": "designed",
+    "hp": 120,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 1,
-      "damage": 30,
-      "text": "Search your deck for an Essence card and attach it to this creature."
+      "name": "Starlit Pounce",
+      "cost": "AC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Burst",
-      "cost": 2,
-      "damage": 60,
-      "text": ""
+      "name": "Starfall Strike",
+      "cost": "AAC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
      }
     ],
-    "weakness": "Storm",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Night Vision",
+     "kind": "once",
+     "text": "Once during your turn, you may draw a card.",
+     "ops": [
+      [
+       "draw",
+       1
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4160,19 +4505,35 @@
    "species": "SP-021",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 70,
+    "status": "designed",
+    "hp": 50,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
+      "name": "Berry Bite",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "The Defending creature is now Poisoned.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Night Flutter",
+      "cost": "DC",
       "damage": 30,
-      "text": "Flip a coin. If heads, the Defending creature is Paralyzed."
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Astral",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4193,25 +4554,45 @@
    "species": "SP-022",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Burst",
-      "cost": 1,
+      "name": "Pumpkin Hex",
+      "cost": "DC",
       "damage": 30,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "damage_label": "30",
+      "text": "The Defending creature is now Poisoned. The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ],
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
      },
      {
-      "name": "Surge",
-      "cost": 2,
+      "name": "Hollow Feast",
+      "cost": "DDC",
       "damage": 70,
-      "text": "Draw 2 cards."
+      "damage_label": "70",
+      "text": "Heal 30 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        30
+       ]
+      ]
      }
-    ],
-    "weakness": "Astral",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4232,25 +4613,44 @@
    "species": "SP-023",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 120,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 1,
+      "name": "Bubble Hug",
+      "cost": "TC",
       "damage": 40,
-      "text": ""
+      "damage_label": "40",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
      },
      {
-      "name": "Swipe",
-      "cost": 2,
-      "damage": 110,
-      "text": ""
+      "name": "Deep Paddle",
+      "cost": "TTC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
      }
     ],
-    "weakness": "Verdant",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Ear Glide",
+     "kind": "once",
+     "text": "Once during your turn, if this creature is on your Bench, you may switch it with your Active creature.",
+     "ops": [
+      [
+       "switch_in"
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4271,19 +4671,35 @@
    "species": "SP-024",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 50,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 2,
-      "damage": 50,
-      "text": ""
+      "name": "Drizzle",
+      "cost": "L",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Static Puff",
+      "cost": "LC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4304,25 +4720,34 @@
    "species": "SP-025",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 90,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 1,
-      "damage": 20,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "name": "Cloud Fin",
+      "cost": "LC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Crash",
-      "cost": 2,
+      "name": "Thunderhead",
+      "cost": "LLC",
       "damage": 70,
-      "text": ""
+      "damage_label": "70",
+      "text": "This attack also does 20 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4343,25 +4768,39 @@
    "species": "SP-026",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 160,
+    "status": "designed",
+    "hp": 150,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 60,
-      "text": "Flip a coin. If heads, the Defending creature is Paralyzed."
+      "name": "Squall Line",
+      "cost": "LC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "This attack also does 30 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        30
+       ]
+      ]
      },
      {
-      "name": "Slam",
-      "cost": 3,
+      "name": "Thunder Sail",
+      "cost": "LLC",
       "damage": 130,
-      "text": ""
+      "damage_label": "130",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4382,19 +4821,35 @@
    "species": "SP-027",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 60,
+    "retreat": 1,
+    "weakness": "Tide",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 40,
-      "text": ""
+      "name": "Ember Nip",
+      "cost": "E",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Spark Pounce",
+      "cost": "EC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Burned.",
+      "ops": [
+       [
+        "status",
+        "burned",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Iron",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4415,25 +4870,34 @@
    "species": "SP-028",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 90,
+    "retreat": 2,
+    "weakness": "Tide",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
+      "name": "Flame Ruff",
+      "cost": "EC",
       "damage": 50,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Tackle",
-      "cost": 2,
-      "damage": 60,
-      "text": ""
+      "name": "Blazing Mane",
+      "cost": "EEC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Iron",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4454,25 +4918,40 @@
    "species": "SP-029",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 160,
+    "retreat": 3,
+    "weakness": "Tide",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 1,
-      "damage": 60,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "name": "Inferno Fang",
+      "cost": "EC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Flip a coin. If heads, the Defending creature is now Burned.",
+      "ops": [
+       [
+        "status",
+        "burned",
+        1
+       ]
+      ]
      },
      {
-      "name": "Charge",
-      "cost": 3,
-      "damage": 110,
-      "text": ""
+      "name": "Pyre Nova",
+      "cost": "EEC",
+      "damage": 180,
+      "damage_label": "180",
+      "text": "Discard 2 Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        2
+       ]
+      ]
      }
-    ],
-    "weakness": "Iron",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4493,19 +4972,33 @@
    "species": "SP-030",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 50,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 2,
+      "name": "Breeze Peck",
+      "cost": "L",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Tailwind",
+      "cost": "LC",
       "damage": 30,
-      "text": "Flip a coin. If heads, the Defending creature is Paralyzed."
+      "damage_label": "30",
+      "text": "Switch this creature with 1 of your Benched creatures.",
+      "ops": [
+       [
+        "self_switch"
+       ]
+      ]
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4526,25 +5019,33 @@
    "species": "SP-031",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 80,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 1,
-      "damage": 50,
-      "text": ""
+      "name": "Downdraft",
+      "cost": "LC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Before doing damage, you may switch 1 of your opponent's Benched creatures with their Active creature.",
+      "ops": [
+       [
+        "gust"
+       ]
+      ]
      },
      {
-      "name": "Crash",
-      "cost": 2,
-      "damage": 60,
-      "text": ""
+      "name": "Razor Wind",
+      "cost": "LLC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4565,25 +5066,40 @@
    "species": "SP-032",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 120,
+    "status": "designed",
+    "hp": 140,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
+      "name": "Gale Burst",
+      "cost": "LC",
       "damage": 30,
-      "text": ""
+      "damage_label": "30",
+      "text": "This attack also does 20 damage to each of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "spread",
+        20
+       ]
+      ]
      },
      {
-      "name": "Burst",
-      "cost": 3,
+      "name": "Tempest Dive",
+      "cost": "LLC",
       "damage": 110,
-      "text": ""
+      "damage_label": "110",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4604,19 +5120,35 @@
    "species": "SP-033",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 2,
-      "damage": 50,
-      "text": ""
+      "name": "Glimmer Hex",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Shade Bite",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Astral",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4637,25 +5169,35 @@
    "species": "SP-034",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 20,
-      "text": "Draw 2 cards."
+      "name": "Silent Wing",
+      "cost": "DC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        0
+       ]
+      ]
      },
      {
-      "name": "Rush",
-      "cost": 2,
-      "damage": 70,
-      "text": ""
+      "name": "Night Swoop",
+      "cost": "DDC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Astral",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4676,25 +5218,37 @@
    "species": "SP-035",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 130,
+    "status": "designed",
+    "hp": 160,
+    "retreat": 2,
+    "weakness": "Wonder",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 1,
-      "damage": 0,
-      "text": "Heal 30 damage from this creature."
-     },
-     {
-      "name": "Slam",
-      "cost": 3,
-      "damage": 110,
-      "text": ""
+      "name": "Shroud Rend",
+      "cost": "DDC",
+      "damage": 100,
+      "damage_label": "100+",
+      "text": "If the Defending creature is affected by a Special Condition, this attack does 50 more damage.",
+      "ops": [
+       [
+        "bonus_status",
+        50
+       ]
+      ]
      }
     ],
-    "weakness": "Astral",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Veil of Night",
+     "kind": "once",
+     "text": "Once during your turn, if this creature is your Active creature, you may make your opponent's Active creature Poisoned.",
+     "ops": [
+      [
+       "status_def",
+       "poisoned"
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4715,19 +5269,29 @@
    "species": "SP-036",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 2,
-      "damage": 40,
-      "text": ""
+      "name": "Rivet Ram",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Metal Nibble",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Stone",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4748,25 +5312,34 @@
    "species": "SP-037",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 100,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 1,
+      "name": "Bolt Tusk",
+      "cost": "IC",
       "damage": 50,
-      "text": ""
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Burst",
-      "cost": 2,
-      "damage": 60,
-      "text": ""
+      "name": "Steel Charge",
+      "cost": "IIC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "This creature also does 10 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        10
+       ]
+      ]
      }
-    ],
-    "weakness": "Stone",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4787,25 +5360,45 @@
    "species": "SP-038",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 160,
+    "status": "designed",
+    "hp": 170,
+    "retreat": 3,
+    "weakness": "Astral",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 1,
+      "name": "Ferrous Charge",
+      "cost": "IC",
       "damage": 60,
-      "text": ""
+      "damage_label": "60",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Rush",
-      "cost": 3,
-      "damage": 90,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "name": "Anvil Crush",
+      "cost": "IIIC",
+      "damage": 170,
+      "damage_label": "170",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
      }
     ],
-    "weakness": "Stone",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Forged Plating",
+     "kind": "passive",
+     "text": "If this creature has a Gear attached, it takes 30 less damage from attacks.",
+     "ops": [
+      [
+       "tool_reduce",
+       30
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4826,19 +5419,29 @@
    "species": "SP-039",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 2,
-      "damage": 40,
-      "text": ""
+      "name": "Pebble Toss",
+      "cost": "S",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Woolly Shove",
+      "cost": "SC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4859,25 +5462,34 @@
    "species": "SP-040",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 30,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "name": "Cairn Charge",
+      "cost": "SC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Tackle",
-      "cost": 2,
+      "name": "Boulder Ram",
+      "cost": "SSC",
       "damage": 90,
-      "text": "Flip a coin. If heads, the Defending creature is Paralyzed."
+      "damage_label": "90",
+      "text": "This creature also does 20 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4898,25 +5510,34 @@
    "species": "SP-041",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 130,
+    "status": "designed",
+    "hp": 180,
+    "retreat": 4,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 40,
-      "text": ""
+      "name": "Monolith Press",
+      "cost": "SSC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "During your opponent's next turn, this creature takes 30 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        30
+       ]
+      ]
      },
      {
-      "name": "Rush",
-      "cost": 3,
-      "damage": 90,
-      "text": ""
+      "name": "Standing Stone",
+      "cost": "SSSC",
+      "damage": 150,
+      "damage_label": "150",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4937,19 +5558,34 @@
    "species": "SP-042",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 60,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
+      "name": "Quizzical Hop",
+      "cost": "W",
+      "damage": 0,
+      "damage_label": "",
+      "text": "Draw 2 cards.",
+      "ops": [
+       [
+        "draw",
+        2
+       ]
+      ]
+     },
+     {
+      "name": "Hop Kick",
+      "cost": "WC",
       "damage": 30,
-      "text": "Search your deck for an Essence card and attach it to this creature."
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Dusk",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -4970,25 +5606,40 @@
    "species": "SP-043",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 100,
+    "status": "designed",
+    "hp": 90,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 1,
-      "damage": 50,
-      "text": ""
+      "name": "Whimsy Kick",
+      "cost": "WC",
+      "damage": 40,
+      "damage_label": "40+",
+      "text": "Flip a coin. If heads, this attack does 30 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        30
+       ]
+      ]
      },
      {
-      "name": "Burst",
-      "cost": 2,
-      "damage": 90,
-      "text": ""
+      "name": "Hare Trick",
+      "cost": "WWC",
+      "damage": 60,
+      "damage_label": "60",
+      "text": "The Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        0
+       ]
+      ]
      }
-    ],
-    "weakness": "Dusk",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5009,25 +5660,50 @@
    "species": "SP-044",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 150,
+    "retreat": 2,
+    "weakness": "Iron",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 1,
-      "damage": 40,
-      "text": ""
+      "name": "Fairy Horn",
+      "cost": "WC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
      },
      {
-      "name": "Crash",
-      "cost": 3,
-      "damage": 90,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "name": "Happily Ever After",
+      "cost": "WWC",
+      "damage": 70,
+      "damage_label": "70+",
+      "text": "Flip a coin. If heads, this attack does 80 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        80
+       ]
+      ]
      }
     ],
-    "weakness": "Dusk",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    "ability": {
+     "name": "Once Upon a Time",
+     "kind": "once",
+     "text": "Once during your turn, you may flip a coin. If heads, draw 2 cards.",
+     "ops": [
+      [
+       "coin_draw",
+       2
+      ]
+     ]
+    }
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5048,19 +5724,34 @@
    "species": "SP-045",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
-      "damage": 40,
-      "text": "The Defending creature is now Asleep."
+      "name": "Moss Nip",
+      "cost": "V",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Soft Graze",
+      "cost": "VC",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5081,25 +5772,38 @@
    "species": "SP-046",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 1,
-      "damage": 30,
-      "text": ""
+      "name": "Briar Snare",
+      "cost": "VC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature can't retreat during your opponent's next turn.",
+      "ops": [
+       [
+        "no_retreat_def"
+       ]
+      ]
      },
      {
-      "name": "Surge",
-      "cost": 2,
-      "damage": 70,
-      "text": ""
+      "name": "Bramble Charge",
+      "cost": "VVC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "This creature also does 20 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5120,19 +5824,29 @@
    "species": "SP-047",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 2,
+      "name": "Reef Bubble",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Coral Dart",
+      "cost": "TC",
       "damage": 30,
-      "text": ""
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5153,25 +5867,39 @@
    "species": "SP-048",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 1,
-      "damage": 50,
-      "text": ""
+      "name": "Glow Current",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
      },
      {
-      "name": "Tackle",
-      "cost": 2,
-      "damage": 90,
-      "text": ""
+      "name": "Reef Lantern",
+      "cost": "TTC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5192,19 +5920,35 @@
    "species": "SP-049",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 70,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Tide",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 2,
-      "damage": 40,
-      "text": ""
+      "name": "Soot Puff",
+      "cost": "E",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Flip a coin. If heads, the Defending creature is now Burned.",
+      "ops": [
+       [
+        "status",
+        "burned",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Coal Scratch",
+      "cost": "EC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Iron",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5225,25 +5969,34 @@
    "species": "SP-050",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Tide",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Burst",
-      "cost": 1,
+      "name": "Smoulder Claw",
+      "cost": "EC",
       "damage": 50,
-      "text": "Heal 30 damage from this creature."
+      "damage_label": "50",
+      "text": "",
+      "ops": []
      },
      {
-      "name": "Tackle",
-      "cost": 2,
-      "damage": 70,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "name": "Wildfire Pounce",
+      "cost": "EEC",
+      "damage": 110,
+      "damage_label": "110",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Iron",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5264,19 +6017,34 @@
    "species": "SP-051",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 60,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 40,
-      "text": ""
+      "name": "Star Hop",
+      "cost": "A",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Pouch Bounce",
+      "cost": "AC",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Storm",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5297,25 +6065,34 @@
    "species": "SP-052",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 1,
+      "name": "Tail Comet",
+      "cost": "AC",
       "damage": 50,
-      "text": ""
+      "damage_label": "50",
+      "text": "This attack also does 20 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        20
+       ]
+      ]
      },
      {
-      "name": "Tackle",
-      "cost": 2,
-      "damage": 60,
-      "text": ""
+      "name": "Comet Dash",
+      "cost": "AAC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Storm",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5336,19 +6113,34 @@
    "species": "SP-053",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 50,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 2,
-      "damage": 50,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "name": "Iron Nibble",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Burrow",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "During your opponent's next turn, this creature takes 10 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        10
+       ]
+      ]
      }
-    ],
-    "weakness": "Stone",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5369,25 +6161,34 @@
    "species": "SP-054",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 90,
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 20,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "name": "Drill Claw",
+      "cost": "IC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
      },
      {
-      "name": "Slam",
-      "cost": 2,
-      "damage": 90,
-      "text": ""
+      "name": "Core Drill",
+      "cost": "IIC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Stone",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5408,24 +6209,39 @@
    "species": "SP-055",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 50,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 1,
-      "damage": 40,
-      "text": "Draw 2 cards."
+      "name": "Dew Splash",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Morning Drop",
+      "cost": "TC",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
     "subject": "cut.055-dewink.standing",
-    "background": "scene.verdant.08"
+    "background": "scene.tide.08"
    }
   },
   {
@@ -5441,30 +6257,39 @@
    "species": "SP-056",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 100,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 50,
-      "text": ""
+      "name": "Bloom Bubble",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Heal 10 damage from each of your creatures.",
+      "ops": [
+       [
+        "heal_team",
+        10
+       ]
+      ]
      },
      {
-      "name": "Rush",
-      "cost": 2,
-      "damage": 60,
-      "text": "Does 10 damage to each of your opponent's Benched creatures."
+      "name": "Petal Tide",
+      "cost": "TTC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
     "subject": "cut.056-bloomble.standing",
-    "background": "scene.verdant.06"
+    "background": "scene.tide.03"
    }
   },
   {
@@ -5480,19 +6305,34 @@
    "species": "SP-057",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 70,
+    "retreat": 1,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
-      "damage": 40,
-      "text": "Draw 2 cards."
+      "name": "Fern Nibble",
+      "cost": "V",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Heal 10 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "Frond Whip",
+      "cost": "VVC",
+      "damage": 60,
+      "damage_label": "60",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5513,19 +6353,34 @@
    "species": "SP-058",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 70,
+    "status": "designed",
+    "hp": 90,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 2,
-      "damage": 40,
-      "text": ""
+      "name": "Acorn Toss",
+      "cost": "VC",
+      "damage": 30,
+      "damage_label": "30+",
+      "text": "Flip a coin. If heads, this attack does 30 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        30
+       ]
+      ]
+     },
+     {
+      "name": "Oaken Charge",
+      "cost": "VVC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Wonder",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5546,19 +6401,38 @@
    "species": "SP-059",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 80,
+    "retreat": 2,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 1,
-      "damage": 0,
-      "text": "Heal 30 damage from this creature."
+      "name": "Shell Spin",
+      "cost": "TC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "During your opponent's next turn, this creature takes 20 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Loop Current",
+      "cost": "TTC",
+      "damage": 60,
+      "damage_label": "60",
+      "text": "Switch this creature with 1 of your Benched creatures.",
+      "ops": [
+       [
+        "self_switch"
+       ]
+      ]
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5579,19 +6453,34 @@
    "species": "SP-060",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 70,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Surge",
-      "cost": 2,
-      "damage": 30,
-      "text": ""
+      "name": "Drift",
+      "cost": "T",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Tail Wave",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5612,19 +6501,34 @@
    "species": "SP-061",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 70,
+    "status": "designed",
+    "hp": 90,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Rush",
-      "cost": 1,
-      "damage": 20,
-      "text": ""
+      "name": "Crag Toss",
+      "cost": "SC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Rockslide",
+      "cost": "SSC",
+      "damage": 60,
+      "damage_label": "60",
+      "text": "This attack also does 20 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5645,19 +6549,38 @@
    "species": "SP-062",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 70,
+    "status": "designed",
+    "hp": 100,
+    "retreat": 3,
+    "weakness": "Verdant",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Burst",
-      "cost": 2,
-      "damage": 50,
-      "text": ""
+      "name": "Tumble",
+      "cost": "SC",
+      "damage": 40,
+      "damage_label": "40+",
+      "text": "Flip a coin. If heads, this attack does 20 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Bear Hug",
+      "cost": "SSC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "The Defending creature can't retreat during your opponent's next turn.",
+      "ops": [
+       [
+        "no_retreat_def"
+       ]
+      ]
      }
-    ],
-    "weakness": "Tide",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5678,19 +6601,29 @@
    "species": "SP-063",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Astral",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 2,
-      "damage": 30,
-      "text": "Take 30 less damage during your opponent's next turn."
+      "name": "Bolt Spin",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Nut Cracker",
+      "cost": "IIC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Stone",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5711,24 +6644,40 @@
    "species": "SP-064",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 80,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Burst",
-      "cost": 1,
+      "name": "Clamp",
+      "cost": "IC",
       "damage": 30,
-      "text": ""
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Bronze Bite",
+      "cost": "IIC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Verdant",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
     "subject": "cut.064-clampup.standing",
-    "background": "scene.tide.03"
+    "background": "scene.iron.01"
    }
   },
   {
@@ -5744,19 +6693,34 @@
    "species": "SP-065",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 60,
+    "retreat": 1,
+    "weakness": "Tide",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
-      "damage": 40,
-      "text": ""
+      "name": "Ash Hop",
+      "cost": "E",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Cinder Leap",
+      "cost": "EC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "This creature also does 10 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        10
+       ]
+      ]
      }
-    ],
-    "weakness": "Iron",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5777,19 +6741,40 @@
    "species": "SP-066",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 80,
+    "retreat": 2,
+    "weakness": "Tide",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
-      "damage": 20,
-      "text": ""
+      "name": "Coal Toss",
+      "cost": "EC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Burned.",
+      "ops": [
+       [
+        "status",
+        "burned",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Kiln Hug",
+      "cost": "EEC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Iron",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5810,19 +6795,40 @@
    "species": "SP-067",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 2,
-      "damage": 50,
-      "text": "Search your deck for an Essence card and attach it to this creature."
+      "name": "Kite Dive",
+      "cost": "L",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "This attack also does 10 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "String Snap",
+      "cost": "LC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5843,19 +6849,34 @@
    "species": "SP-068",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 60,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 2,
+      "name": "Drop Zap",
+      "cost": "L",
       "damage": 30,
-      "text": ""
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Thunder Splash",
+      "cost": "LLC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "This attack also does 10 damage to each of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "spread",
+        10
+       ]
+      ]
      }
-    ],
-    "weakness": "Ember",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5876,19 +6897,38 @@
    "species": "SP-069",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Crash",
-      "cost": 1,
-      "damage": 40,
-      "text": ""
+      "name": "Orbit",
+      "cost": "A",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Gravity Pull",
+      "cost": "AC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Before doing damage, you may switch 1 of your opponent's Benched creatures with their Active creature.",
+      "ops": [
+       [
+        "gust"
+       ]
+      ]
      }
-    ],
-    "weakness": "Storm",
-    "retreat": 1,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5909,19 +6949,35 @@
    "species": "SP-070",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 60,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Charge",
-      "cost": 1,
-      "damage": 20,
-      "text": "Flip a coin. If heads, the Defending creature is Paralyzed."
+      "name": "Lullaby",
+      "cost": "A",
+      "damage": 0,
+      "damage_label": "",
+      "text": "The Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Moon Peep",
+      "cost": "AC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Storm",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5942,19 +6998,41 @@
    "species": "SP-071",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 70,
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Slam",
-      "cost": 1,
-      "damage": 40,
-      "text": "Heal 30 damage from this creature."
+      "name": "Dust Wing",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "The Defending creature is now Poisoned.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Murmur",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        1
+       ]
+      ]
      }
-    ],
-    "weakness": "Astral",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -5975,19 +7053,34 @@
    "species": "SP-072",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
+    "status": "designed",
     "hp": 70,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 2,
+      "name": "Trinket Theft",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Your opponent discards a random card from their hand.",
+      "ops": [
+       [
+        "opp_discard_random",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Wink Peck",
+      "cost": "DC",
       "damage": 40,
-      "text": "Heal 30 damage from this creature."
+      "damage_label": "40",
+      "text": "",
+      "ops": []
      }
-    ],
-    "weakness": "Astral",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -6008,19 +7101,44 @@
    "species": "SP-073",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 80,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Tackle",
-      "cost": 1,
-      "damage": 20,
-      "text": "Flip a coin. If heads, the Defending creature is Paralyzed."
+      "name": "Pillow Puff",
+      "cost": "W",
+      "damage": 0,
+      "damage_label": "",
+      "text": "The Defending creature is now Asleep. Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        0
+       ],
+       [
+        "heal_self",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Fluff Bounce",
+      "cost": "WC",
+      "damage": 40,
+      "damage_label": "40+",
+      "text": "Flip a coin. If heads, this attack does 20 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        20
+       ]
+      ]
      }
-    ],
-    "weakness": "Dusk",
-    "retreat": 3,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -6041,19 +7159,39 @@
    "species": "SP-074",
    "variant": "base",
    "gameplay": {
-    "status": "provisional",
-    "hp": 60,
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Iron",
+    "prizes": 1,
     "attacks": [
      {
-      "name": "Swipe",
-      "cost": 1,
-      "damage": 20,
-      "text": ""
+      "name": "Scribble Swap",
+      "cost": "W",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Switch this creature with 1 of your Benched creatures.",
+      "ops": [
+       [
+        "self_switch"
+       ]
+      ]
+     },
+     {
+      "name": "Odd Twist",
+      "cost": "WWC",
+      "damage": 0,
+      "damage_label": "40×",
+      "text": "Flip 3 coins. This attack does 40 damage for each heads.",
+      "ops": [
+       [
+        "multi_coin",
+        3,
+        40
+       ]
+      ]
      }
-    ],
-    "weakness": "Dusk",
-    "retreat": 2,
-    "note": "Placeholder numbers and generic attack names so the simulation runs. Real card rules need design."
+    ]
    },
    "art": {
     "layout": "cutout-on-scene",
@@ -6068,6 +7206,11 @@
    "roster_name": "Professor Maren Vale",
    "name": "Professor Maren Vale",
    "variant": "base",
+   "fandom": {
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-075",
     "identity": {
@@ -6082,14 +7225,19 @@
    },
    "rarity": {
     "value": "rare",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Draw 3 cards.",
-    "style": "combo",
-    "power": 0.641,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Discard your hand and draw 6 cards.",
+    "ops": [
+     [
+      "discard_draw",
+      6
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
    }
   },
   {
@@ -6099,6 +7247,11 @@
    "roster_name": "June Kestrel",
    "name": "June Kestrel",
    "variant": "base",
+   "fandom": {
+    "value": 0.8,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-076",
     "identity": {
@@ -6113,14 +7266,23 @@
    },
    "rarity": {
     "value": "rare",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Your opponent shuffles their hand into their deck and draws 4 cards.",
-    "style": "control",
-    "power": 0.642,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Search your deck for a creature and put it into your hand. Search your deck for an Essence card and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "creature"
+     ],
+     [
+      "search",
+      "essence"
+     ]
+    ],
+    "role": "search",
+    "subtype": null
    }
   },
   {
@@ -6130,6 +7292,11 @@
    "roster_name": "Warden Sorrel Pike",
    "name": "Warden Sorrel Pike",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-077",
     "identity": {
@@ -6144,14 +7311,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Switch your Active creature with 1 of your Benched creatures. Draw a card.",
-    "style": "control",
-    "power": 0.489,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Heal 30 damage from each of your creatures.",
+    "ops": [
+     [
+      "heal_all",
+      30
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
    }
   },
   {
@@ -6161,6 +7333,11 @@
    "roster_name": "Toma Reed",
    "name": "Toma Reed",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-078",
     "identity": {
@@ -6175,14 +7352,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Look at the top 5 cards of your deck. Put 2 into your hand.",
-    "style": "combo",
-    "power": 0.496,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Draw 3 cards.",
+    "ops": [
+     [
+      "draw",
+      3
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
    }
   },
   {
@@ -6192,6 +7374,11 @@
    "roster_name": "Lita Moss",
    "name": "Lita Moss",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-079",
     "identity": {
@@ -6206,14 +7393,27 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Draw 3 cards.",
-    "style": "combo",
-    "power": 0.482,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Search your deck for an Essence card and put it into your hand. Search your deck for an Essence card and put it into your hand. Draw a card.",
+    "ops": [
+     [
+      "search",
+      "essence"
+     ],
+     [
+      "search",
+      "essence"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "search",
+    "subtype": null
    }
   },
   {
@@ -6223,6 +7423,11 @@
    "roster_name": "Nessa Flint",
    "name": "Nessa Flint",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-080",
     "identity": {
@@ -6237,14 +7442,23 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Draw 3 cards.",
-    "style": "combo",
-    "power": 0.49,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Attach an Essence card from your discard pile to 1 of your creatures. Draw a card.",
+    "ops": [
+     [
+      "essence_from_discard",
+      1
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "accel",
+    "subtype": null
    }
   },
   {
@@ -6254,6 +7468,11 @@
    "roster_name": "Elder Oren",
    "name": "Elder Oren",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-081",
     "identity": {
@@ -6268,14 +7487,23 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Your opponent shuffles their hand into their deck and draws 4 cards.",
-    "style": "control",
-    "power": 0.488,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Put up to 2 creatures from your discard pile into your hand. Put up to 2 Essence cards from your discard pile into your hand.",
+    "ops": [
+     [
+      "recover",
+      2
+     ],
+     [
+      "recover_ess",
+      2
+     ]
+    ],
+    "role": "recover",
+    "subtype": null
    }
   },
   {
@@ -6285,6 +7513,11 @@
    "roster_name": "Pip Rowan",
    "name": "Pip Rowan",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-082",
     "identity": {
@@ -6299,14 +7532,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Heal 40 damage from each of your creatures.",
-    "style": "stall",
-    "power": 0.501,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Shuffle your hand into your deck. Draw 5 cards.",
+    "ops": [
+     [
+      "shuffle_draw",
+      5
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
    }
   },
   {
@@ -6316,6 +7554,11 @@
    "roster_name": "Archivist Sera Wynn",
    "name": "Archivist Sera Wynn",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-083",
     "identity": {
@@ -6330,14 +7573,20 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Your opponent shuffles their hand into their deck and draws 4 cards.",
-    "style": "control",
-    "power": 0.555,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Look at the top 6 cards of your deck. Put 2 of them into your hand and shuffle the rest back.",
+    "ops": [
+     [
+      "look_take",
+      6,
+      2
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
    }
   },
   {
@@ -6347,6 +7596,11 @@
    "roster_name": "Renn Calder",
    "name": "Renn Calder",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-084",
     "identity": {
@@ -6361,14 +7615,22 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Your opponent shuffles their hand into their deck and draws 4 cards.",
-    "style": "control",
-    "power": 0.565,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Switch your Active creature with 1 of your Benched creatures. Draw 2 cards.",
+    "ops": [
+     [
+      "switch"
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "switch",
+    "subtype": null
    }
   },
   {
@@ -6378,6 +7640,11 @@
    "roster_name": "Mira Quill",
    "name": "Mira Quill",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-085",
     "identity": {
@@ -6392,14 +7659,23 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Your opponent shuffles their hand into their deck and draws 4 cards.",
-    "style": "control",
-    "power": 0.558,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Search your deck for an Evolution creature and put it into your hand. Draw a card.",
+    "ops": [
+     [
+      "search",
+      "evolution"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "search",
+    "subtype": null
    }
   },
   {
@@ -6409,6 +7685,11 @@
    "roster_name": "Sel Veyra",
    "name": "Sel Veyra",
    "variant": "base",
+   "fandom": {
+    "value": 0.78,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-086",
     "identity": {
@@ -6423,14 +7704,22 @@
    },
    "rarity": {
     "value": "rare",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Draw 3 cards.",
-    "style": "combo",
-    "power": 0.644,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Switch 1 of your opponent's Benched creatures with their Active creature. Draw a card.",
+    "ops": [
+     [
+      "gust"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "gust",
+    "subtype": null
    }
   },
   {
@@ -6440,6 +7729,11 @@
    "roster_name": "Cass Rell",
    "name": "Cass Rell",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-087",
     "identity": {
@@ -6454,14 +7748,23 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Switch your Active creature with 1 of your Benched creatures. Draw a card.",
-    "style": "control",
-    "power": 0.517,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Your opponent shuffles their hand into their deck and draws 3 cards. Draw 2 cards.",
+    "ops": [
+     [
+      "opp_shuffle_draw",
+      3
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
    }
   },
   {
@@ -6471,6 +7774,11 @@
    "roster_name": "Dr. Cyl Vane",
    "name": "Dr. Cyl Vane",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-088",
     "identity": {
@@ -6485,14 +7793,22 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Switch your Active creature with 1 of your Benched creatures. Draw a card.",
-    "style": "control",
-    "power": 0.512,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Discard an Essence attached to 1 of your opponent's creatures. Draw a card.",
+    "ops": [
+     [
+      "strip_any"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
    }
   },
   {
@@ -6502,6 +7818,11 @@
    "roster_name": "Marshal Rook",
    "name": "Marshal Rook",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-089",
     "identity": {
@@ -6516,14 +7837,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Draw 3 cards.",
-    "style": "combo",
-    "power": 0.562,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. During this turn, your Active creature's attacks do 30 more damage to your opponent's Active creature.",
+    "ops": [
+     [
+      "boost",
+      30
+     ]
+    ],
+    "role": "boost",
+    "subtype": null
    }
   },
   {
@@ -6533,6 +7859,11 @@
    "roster_name": "Iris Shade",
    "name": "Iris Shade",
    "variant": "base",
+   "fandom": {
+    "value": 0.55,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-090",
     "identity": {
@@ -6547,14 +7878,22 @@
    },
    "rarity": {
     "value": "rare",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Heal 40 damage from each of your creatures.",
-    "style": "stall",
-    "power": 0.692,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Look at your opponent's hand. Choose a card other than an Essence; they discard it. Draw 2 cards.",
+    "ops": [
+     [
+      "opp_discard_choice"
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
    }
   },
   {
@@ -6564,6 +7903,11 @@
    "roster_name": "Dex Harrow",
    "name": "Dex Harrow",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-091",
     "identity": {
@@ -6578,14 +7922,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Search your deck for a creature and put it into your hand.",
-    "style": "combo",
-    "power": 0.48,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Draw cards until you have 6 cards in your hand.",
+    "ops": [
+     [
+      "draw_to",
+      6
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
    }
   },
   {
@@ -6595,6 +7944,11 @@
    "roster_name": "Brin Hollow",
    "name": "Brin Hollow",
    "variant": "base",
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
    "character": {
     "id": "CH-092",
     "identity": {
@@ -6609,14 +7963,22 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Heal 40 damage from each of your creatures.",
-    "style": "stall",
-    "power": 0.478,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Heal 60 damage from your Active creature. Remove all Special Conditions from your Active creature.",
+    "ops": [
+     [
+      "heal_active",
+      60
+     ],
+     [
+      "cure"
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
    }
   },
   {
@@ -6633,14 +7995,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. It has no Retreat Cost.",
-    "style": "control",
-    "power": 0.525,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Attach to a creature. It gets +30 HP. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_hp",
+      30
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
    }
   },
   {
@@ -6657,14 +8024,19 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. It has no Retreat Cost.",
-    "style": "control",
-    "power": 0.398,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Search your deck for a Basic creature and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "basic"
+     ]
+    ],
+    "role": "search",
+    "subtype": "item"
    }
   },
   {
@@ -6681,14 +8053,19 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. Its attacks do 20 more damage.",
-    "style": "aggro",
-    "power": 0.372,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Put a creature from your discard pile into your hand.",
+    "ops": [
+     [
+      "recover",
+      1
+     ]
+    ],
+    "role": "recover",
+    "subtype": "item"
    }
   },
   {
@@ -6705,14 +8082,19 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. Its attacks do 20 more damage.",
-    "style": "aggro",
-    "power": 0.447,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Search your deck for a Biome or an Essence card and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "biome_or_essence"
+     ]
+    ],
+    "role": "search",
+    "subtype": "item"
    }
   },
   {
@@ -6729,14 +8111,20 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. It takes 20 less damage from attacks.",
-    "style": "stall",
-    "power": 0.378,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Look at the top 3 cards of your deck. Put 1 of them into your hand and shuffle the rest back.",
+    "ops": [
+     [
+      "look_take",
+      3,
+      1
+     ]
+    ],
+    "role": "draw",
+    "subtype": "item"
    }
   },
   {
@@ -6753,14 +8141,19 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Search your deck for an Essence card and attach it to 1 of your creatures.",
-    "style": "combo",
-    "power": 0.448,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Heal 30 damage from 1 of your creatures.",
+    "ops": [
+     [
+      "heal_one",
+      30
+     ]
+    ],
+    "role": "heal",
+    "subtype": "item"
    }
   },
   {
@@ -6777,14 +8170,22 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Search your deck for an Essence card and attach it to 1 of your creatures.",
-    "style": "combo",
-    "power": 0.379,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Heal 20 damage from your Active creature. Remove all Special Conditions from your Active creature.",
+    "ops": [
+     [
+      "heal_active",
+      20
+     ],
+     [
+      "cure"
+     ]
+    ],
+    "role": "heal",
+    "subtype": "item"
    }
   },
   {
@@ -6801,14 +8202,19 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Heal 30 damage from 1 of your creatures.",
-    "style": "stall",
-    "power": 0.373,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Search your deck for a creature that evolves from 1 of your creatures in play and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "evolves_in_play"
+     ]
+    ],
+    "role": "search",
+    "subtype": "item"
    }
   },
   {
@@ -6825,14 +8231,18 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Heal 30 damage from 1 of your creatures.",
-    "style": "stall",
-    "power": 0.411,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Flip a coin. If heads, switch 1 of your opponent's Benched creatures with their Active creature.",
+    "ops": [
+     [
+      "coin_gust"
+     ]
+    ],
+    "role": "gust",
+    "subtype": "item"
    }
   },
   {
@@ -6849,14 +8259,19 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Heal 30 damage from 1 of your creatures.",
-    "style": "stall",
-    "power": 0.362,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "If this creature has a Gear attached, it takes 20 less damage from attacks. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_reduce",
+      20
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
    }
   },
   {
@@ -6873,14 +8288,18 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. Its attacks do 20 more damage.",
-    "style": "aggro",
-    "power": 0.408,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Attach to a creature. It has no Retreat Cost. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_free_retreat"
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
    }
   },
   {
@@ -6897,14 +8316,23 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. Its attacks do 20 more damage.",
-    "style": "aggro",
-    "power": 0.389,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Draw 2 cards. Then discard a card from your hand.",
+    "ops": [
+     [
+      "draw",
+      2
+     ],
+     [
+      "discard_hand",
+      1
+     ]
+    ],
+    "role": "draw",
+    "subtype": "item"
    }
   },
   {
@@ -6921,14 +8349,18 @@
    },
    "rarity": {
     "value": "common",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. Its attacks do 20 more damage.",
-    "style": "aggro",
-    "power": 0.419,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Choose 1 of your Basic creatures that was in play at the start of your turn. Put a Stage 2 card from your hand that evolves from its Stage 1 onto it, skipping Stage 1. You can't play this card on your first turn.",
+    "ops": [
+     [
+      "skip_evolve"
+     ]
+    ],
+    "role": "search",
+    "subtype": "item"
    }
   },
   {
@@ -6945,14 +8377,22 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. It has no Retreat Cost.",
-    "style": "control",
-    "power": 0.45,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Remove all Special Conditions from your creatures. Heal 10 damage from each of your creatures.",
+    "ops": [
+     [
+      "cure_all"
+     ],
+     [
+      "heal_all",
+      10
+     ]
+    ],
+    "role": "heal",
+    "subtype": "item"
    }
   },
   {
@@ -6969,14 +8409,22 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Search your deck for an Essence card and attach it to 1 of your creatures.",
-    "style": "combo",
-    "power": 0.543,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Your opponent's Active creature can't retreat during their next turn. During this turn, that creature takes 10 more damage from attacks.",
+    "ops": [
+     [
+      "no_retreat_def"
+     ],
+     [
+      "vuln",
+      10
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": "item"
    }
   },
   {
@@ -6993,14 +8441,23 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. Its attacks do 20 more damage.",
-    "style": "aggro",
-    "power": 0.45,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Attach to a creature. Its attacks do 30 more damage to the opponent's Active creature. At the end of each of your turns in which it attacked, put 10 damage on it. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_dmg",
+      30
+     ],
+     [
+      "tool_recoil",
+      10
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
    }
   },
   {
@@ -7017,14 +8474,18 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Heal 30 damage from 1 of your creatures.",
-    "style": "stall",
-    "power": 0.544,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Attach to a creature. It has no Weakness. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_no_weak"
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
    }
   },
   {
@@ -7041,14 +8502,22 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attach to a creature. It has no Retreat Cost.",
-    "style": "control",
-    "power": 0.57,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Attach to a creature. It can't be affected by Special Conditions. It also gets +10 HP. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_status_immune"
+     ],
+     [
+      "tool_hp",
+      10
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
    }
   },
   {
@@ -7071,14 +8540,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Once during each player's turn, that player may draw a card.",
-    "style": "combo",
-    "power": 0.516,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Between turns, heal 10 damage from each Verdant creature in play.",
+    "ops": [
+     [
+      "biome",
+      "Verdant"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7101,14 +8575,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Creatures of this biome's affinity take 10 less damage from attacks.",
-    "style": "stall",
-    "power": 0.455,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Tide creatures in play have no Retreat Cost.",
+    "ops": [
+     [
+      "biome",
+      "Tide"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7131,14 +8610,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Once during each player's turn, that player may draw a card.",
-    "style": "combo",
-    "power": 0.531,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Stone creatures take 10 less damage from attacks.",
+    "ops": [
+     [
+      "biome",
+      "Stone"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7161,14 +8645,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Once during each player's turn, that player may draw a card.",
-    "style": "combo",
-    "power": 0.455,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Iron creatures get +20 HP.",
+    "ops": [
+     [
+      "biome",
+      "Iron"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7191,14 +8680,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Once during each player's turn, that player may draw a card.",
-    "style": "combo",
-    "power": 0.565,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Attacks from Ember creatures do 10 more damage to the opponent's Active creature.",
+    "ops": [
+     [
+      "biome",
+      "Ember"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7221,14 +8715,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Creatures of this biome's affinity take 10 less damage from attacks.",
-    "style": "stall",
-    "power": 0.473,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Once during each player's turn, that player may attach a Storm Essence from their hand to 1 of their Storm creatures, in addition to the normal attachment.",
+    "ops": [
+     [
+      "biome",
+      "Storm"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7251,14 +8750,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Once during each player's turn, that player may draw a card.",
-    "style": "combo",
-    "power": 0.546,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Once during each player's turn, if that player has an Astral creature in play, they may draw a card.",
+    "ops": [
+     [
+      "biome",
+      "Astral"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7281,14 +8785,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Creatures of this biome's affinity take 10 less damage from attacks.",
-    "style": "stall",
-    "power": 0.566,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Poisoned creatures take 10 more damage between turns.",
+    "ops": [
+     [
+      "biome",
+      "Dusk"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7311,14 +8820,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Attacks of this biome's affinity do 10 more damage.",
-    "style": "aggro",
-    "power": 0.474,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Wonder creatures can evolve on the turn they come into play (not on a player's first turn).",
+    "ops": [
+     [
+      "biome",
+      "Wonder"
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
    }
   },
   {
@@ -7334,14 +8848,18 @@
    },
    "rarity": {
     "value": "rare",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Put a Basic creature from your discard pile onto your Bench.",
-    "style": "combo",
-    "power": 0.69,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Search your deck for a Basic creature and an Essence card of its affinity. Put the creature onto your Bench and attach the Essence to it.",
+    "ops": [
+     [
+      "first_bond"
+     ]
+    ],
+    "role": "search",
+    "subtype": null
    }
   },
   {
@@ -7357,14 +8875,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Discard an Essence card attached to your opponent's Active creature.",
-    "style": "control",
-    "power": 0.527,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Search your deck for up to 2 Basic creatures and put them onto your Bench.",
+    "ops": [
+     [
+      "bench_basic",
+      2
+     ]
+    ],
+    "role": "search",
+    "subtype": null
    }
   },
   {
@@ -7380,14 +8903,18 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Put a Basic creature from your discard pile onto your Bench.",
-    "style": "combo",
-    "power": 0.493,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Put a Basic creature from your discard pile onto your Bench.",
+    "ops": [
+     [
+      "revive_basic"
+     ]
+    ],
+    "role": "recover",
+    "subtype": null
    }
   },
   {
@@ -7403,14 +8930,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Discard an Essence card attached to your opponent's Active creature.",
-    "style": "control",
-    "power": 0.481,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Draw 2 cards.",
+    "ops": [
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
    }
   },
   {
@@ -7426,14 +8958,18 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Each of your creatures heals 20 damage.",
-    "style": "stall",
-    "power": 0.547,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. During this turn, your Active creature's attacks do 10 more damage for each of your Benched creatures.",
+    "ops": [
+     [
+      "rally"
+     ]
+    ],
+    "role": "boost",
+    "subtype": null
    }
   },
   {
@@ -7449,14 +8985,18 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Each of your creatures heals 20 damage.",
-    "style": "stall",
-    "power": 0.547,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Switch your Active creature with 1 of your Benched creatures.",
+    "ops": [
+     [
+      "switch"
+     ]
+    ],
+    "role": "switch",
+    "subtype": null
    }
   },
   {
@@ -7472,14 +9012,18 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Discard an Essence card attached to your opponent's Active creature.",
-    "style": "control",
-    "power": 0.465,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Draw a card for each of your Benched creatures.",
+    "ops": [
+     [
+      "draw_per_bench"
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
    }
   },
   {
@@ -7495,14 +9039,23 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Each of your creatures heals 20 damage.",
-    "style": "stall",
-    "power": 0.547,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Your opponent discards a random card from their hand. Draw a card.",
+    "ops": [
+     [
+      "opp_discard_random",
+      1
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
    }
   },
   {
@@ -7518,14 +9071,21 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Put a Basic creature from your discard pile onto your Bench.",
-    "style": "combo",
-    "power": 0.515,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Discard an Essence card from your hand. If you can't, you can't play this card. Switch 1 of your opponent's Benched creatures with their Active creature.",
+    "ops": [
+     [
+      "cost_discard_essence"
+     ],
+     [
+      "gust"
+     ]
+    ],
+    "role": "gust",
+    "subtype": null
    }
   },
   {
@@ -7541,14 +9101,18 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Your opponent's Active creature is now Confused.",
-    "style": "control",
-    "power": 0.543,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Discard an Essence attached to your opponent's Active creature.",
+    "ops": [
+     [
+      "strip_active"
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
    }
   },
   {
@@ -7564,14 +9128,18 @@
    },
    "rarity": {
     "value": "rare",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Draw 2 cards. Switch your Active creature with 1 of your Benched creatures.",
-    "style": "control",
-    "power": 0.667,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Heal all damage from your Active creature and remove its Special Conditions. Discard all Essence attached to it.",
+    "ops": [
+     [
+      "heal_full_discard"
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
    }
   },
   {
@@ -7587,14 +9155,19 @@
    },
    "rarity": {
     "value": "uncommon",
-    "status": "provisional"
+    "status": "decided"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Each of your creatures heals 20 damage.",
-    "style": "stall",
-    "power": 0.467,
-    "note": "Placeholder effect so the simulation runs. Real card rules need design."
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Heal 20 damage from each of your creatures.",
+    "ops": [
+     [
+      "heal_all",
+      20
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
    }
   },
   {
@@ -7617,8 +9190,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Verdant Essence."
+    "status": "designed",
+    "rules": "Provides 1 Verdant Essence.",
+    "ops": [
+     [
+      "essence",
+      "Verdant"
+     ]
+    ]
    }
   },
   {
@@ -7641,8 +9220,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Tide Essence."
+    "status": "designed",
+    "rules": "Provides 1 Tide Essence.",
+    "ops": [
+     [
+      "essence",
+      "Tide"
+     ]
+    ]
    }
   },
   {
@@ -7665,8 +9250,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Stone Essence."
+    "status": "designed",
+    "rules": "Provides 1 Stone Essence.",
+    "ops": [
+     [
+      "essence",
+      "Stone"
+     ]
+    ]
    }
   },
   {
@@ -7689,8 +9280,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Iron Essence."
+    "status": "designed",
+    "rules": "Provides 1 Iron Essence.",
+    "ops": [
+     [
+      "essence",
+      "Iron"
+     ]
+    ]
    }
   },
   {
@@ -7713,8 +9310,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Ember Essence."
+    "status": "designed",
+    "rules": "Provides 1 Ember Essence.",
+    "ops": [
+     [
+      "essence",
+      "Ember"
+     ]
+    ]
    }
   },
   {
@@ -7737,8 +9340,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Storm Essence."
+    "status": "designed",
+    "rules": "Provides 1 Storm Essence.",
+    "ops": [
+     [
+      "essence",
+      "Storm"
+     ]
+    ]
    }
   },
   {
@@ -7761,8 +9370,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Astral Essence."
+    "status": "designed",
+    "rules": "Provides 1 Astral Essence.",
+    "ops": [
+     [
+      "essence",
+      "Astral"
+     ]
+    ]
    }
   },
   {
@@ -7785,8 +9400,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Dusk Essence."
+    "status": "designed",
+    "rules": "Provides 1 Dusk Essence.",
+    "ops": [
+     [
+      "essence",
+      "Dusk"
+     ]
+    ]
    }
   },
   {
@@ -7809,8 +9430,14 @@
     "status": "canon-rule"
    },
    "gameplay": {
-    "status": "provisional",
-    "rules": "Provides 1 Wonder Essence."
+    "status": "designed",
+    "rules": "Provides 1 Wonder Essence.",
+    "ops": [
+     [
+      "essence",
+      "Wonder"
+     ]
+    ]
    }
   },
   {
@@ -7825,7 +9452,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-001",
-   "identity_note": "Plays as the same card as WK-S001-001 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-001 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -7848,7 +9475,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-002",
-   "identity_note": "Plays as the same card as WK-S001-002 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-002 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -7871,7 +9498,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-005",
-   "identity_note": "Plays as the same card as WK-S001-005 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-005 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -7894,7 +9521,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-010",
-   "identity_note": "Plays as the same card as WK-S001-010 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-010 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -7917,7 +9544,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-012",
-   "identity_note": "Plays as the same card as WK-S001-012 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-012 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -7940,7 +9567,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-014",
-   "identity_note": "Plays as the same card as WK-S001-014 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-014 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -7963,7 +9590,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-017",
-   "identity_note": "Plays as the same card as WK-S001-017 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-017 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -7986,7 +9613,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-020",
-   "identity_note": "Plays as the same card as WK-S001-020 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-020 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8009,7 +9636,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-021",
-   "identity_note": "Plays as the same card as WK-S001-021 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-021 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8032,7 +9659,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-023",
-   "identity_note": "Plays as the same card as WK-S001-023 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-023 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8055,7 +9682,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-001",
-   "identity_note": "Plays as the same card as WK-S001-001 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-001 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8078,7 +9705,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-004",
-   "identity_note": "Plays as the same card as WK-S001-004 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-004 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8101,7 +9728,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-007",
-   "identity_note": "Plays as the same card as WK-S001-007 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-007 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8124,7 +9751,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-010",
-   "identity_note": "Plays as the same card as WK-S001-010 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-010 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8147,7 +9774,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-013",
-   "identity_note": "Plays as the same card as WK-S001-013 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-013 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8170,7 +9797,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-016",
-   "identity_note": "Plays as the same card as WK-S001-016 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-016 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8193,7 +9820,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-018",
-   "identity_note": "Plays as the same card as WK-S001-018 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-018 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8216,7 +9843,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-020",
-   "identity_note": "Plays as the same card as WK-S001-020 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-020 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8239,7 +9866,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-022",
-   "identity_note": "Plays as the same card as WK-S001-022 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-022 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8262,7 +9889,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-023",
-   "identity_note": "Plays as the same card as WK-S001-023 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-023 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8285,7 +9912,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-026",
-   "identity_note": "Plays as the same card as WK-S001-026 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-026 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8308,7 +9935,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-035",
-   "identity_note": "Plays as the same card as WK-S001-035 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-035 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8331,7 +9958,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-038",
-   "identity_note": "Plays as the same card as WK-S001-038 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-038 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8354,7 +9981,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-044",
-   "identity_note": "Plays as the same card as WK-S001-044 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-044 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8377,7 +10004,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-046",
-   "identity_note": "Plays as the same card as WK-S001-046 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-046 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8400,7 +10027,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-048",
-   "identity_note": "Plays as the same card as WK-S001-048 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-048 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8423,7 +10050,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-052",
-   "identity_note": "Plays as the same card as WK-S001-052 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-052 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8446,7 +10073,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-073",
-   "identity_note": "Plays as the same card as WK-S001-073 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-073 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "ir",
    "art": {
     "layout": "full-art",
@@ -8469,7 +10096,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-075",
-   "identity_note": "Plays as the same card as WK-S001-075 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-075 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8492,7 +10119,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-076",
-   "identity_note": "Plays as the same card as WK-S001-076 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-076 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8515,7 +10142,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-086",
-   "identity_note": "Plays as the same card as WK-S001-086 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-086 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8538,7 +10165,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-090",
-   "identity_note": "Plays as the same card as WK-S001-090 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-090 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "fa",
    "art": {
     "layout": "full-art",
@@ -8561,7 +10188,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-001",
-   "identity_note": "Plays as the same card as WK-S001-001 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-001 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "sir",
    "art": {
     "layout": "full-art",
@@ -8584,7 +10211,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-026",
-   "identity_note": "Plays as the same card as WK-S001-026 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-026 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "sir",
    "art": {
     "layout": "full-art",
@@ -8607,7 +10234,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-076",
-   "identity_note": "Plays as the same card as WK-S001-076 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-076 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "sir",
    "art": {
     "layout": "full-art",
@@ -8630,7 +10257,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-086",
-   "identity_note": "Plays as the same card as WK-S001-086 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-086 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "sir",
    "art": {
     "layout": "full-art",
@@ -8653,7 +10280,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-013",
-   "identity_note": "Plays as the same card as WK-S001-013 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-013 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "csr",
    "art": {
     "layout": "full-art",
@@ -8676,7 +10303,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-022",
-   "identity_note": "Plays as the same card as WK-S001-022 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-022 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "csr",
    "art": {
     "layout": "full-art",
@@ -8699,7 +10326,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-038",
-   "identity_note": "Plays as the same card as WK-S001-038 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-038 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "csr",
    "art": {
     "layout": "full-art",
@@ -8722,7 +10349,7 @@
     "status": "canon"
    },
    "identity_of": "WK-S001-035",
-   "identity_note": "Plays as the same card as WK-S001-035 (provisional: premium prints share gameplay; Clasped mechanics are not defined).",
+   "identity_note": "Plays as the same card as WK-S001-035 (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).",
    "variant": "csr",
    "art": {
     "layout": "full-art",
@@ -8835,7 +10462,8 @@
   "scene.iron.01": {
    "asset_id": "scene.iron.01",
    "linked_cards": [
-    "WK-S001-036"
+    "WK-S001-036",
+    "WK-S001-064"
    ],
    "kind": "scene",
    "subject": "Iron biome background 1",
@@ -9365,8 +10993,8 @@
     "WK-S001-008",
     "WK-S001-010",
     "WK-S001-048",
-    "WK-S001-060",
-    "WK-S001-064"
+    "WK-S001-056",
+    "WK-S001-060"
    ],
    "kind": "scene",
    "subject": "moonlit beach with glowing blue shoreline",
@@ -9431,6 +11059,7 @@
     "WK-S001-003",
     "WK-S001-009",
     "WK-S001-047",
+    "WK-S001-055",
     "WK-S001-059"
    ],
    "kind": "scene",
@@ -9524,9 +11153,7 @@
   },
   "scene.verdant.06": {
    "asset_id": "scene.verdant.06",
-   "linked_cards": [
-    "WK-S001-056"
-   ],
+   "linked_cards": [],
    "kind": "scene",
    "subject": "apple orchard glade",
    "biome": "verdant",
@@ -9554,8 +11181,7 @@
    "asset_id": "scene.verdant.08",
    "linked_cards": [
     "WK-S001-001",
-    "WK-S001-046",
-    "WK-S001-055"
+    "WK-S001-046"
    ],
    "kind": "scene",
    "subject": "blossom pillars and a petal-strewn lawn",

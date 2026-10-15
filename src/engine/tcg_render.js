@@ -11,11 +11,11 @@ function tcPic(c){
   if (a.l==='cutout-on-panel') return {fg:A(a.s), fgid:a.s, col, big:c.kind==='gear'};
   return {ill:null, ida:'', col};
 }
-function tcFoot(c){ const st=tcArtState(c).state; const rules=c.kind==='essence'?'':'Provisional rules'; const art= st==='pending'?'art pending': st==='partial'?'art in progress': st==='interim'?'interim art':''; return [rules,art].filter(Boolean).join('  ·  ')||'Illus. Wildkin Games'; }
+function tcFoot(c){ const st=tcArtState(c).state; const rules=''; const art= st==='pending'?'art pending': st==='partial'?'art in progress': st==='interim'?'interim art':''; return [rules,art].filter(Boolean).join('  ·  ')||'Illus. Wildkin Games'; }
 function tcFrameInput(d){
   const c=d.card;
   const o={ name:c.name, el:c.el||TC_EL[0], stage:c.stage, from:c.from, hp:c.hp, type:(c.el||'')+' Wildkin'+(c.el2?' / '+c.el2:''), size:c.to?'evolves into '+c.to: c.from? '' : (c.stage==='Basic'&&!c.to?'standalone':''),
-    atk:c.atk, weak:c.weak, ret:c.ret, rar:c.rar, num:tcNumLabel(c), kind:c.kind, rules:c.rules, flavor:'', sub:TC_SUB[c.kind]||'', top:c.kind==='biome'&&c.el? c.el.toUpperCase()+' BIOME' : (TC_KINDN[c.kind]||'').toUpperCase(), pk:c.pk, kindLabel:TC_KINDN[c.kind], foot:tcFoot(c), ffx:.5 };
+    atk:c.atk, ab:c.ab, weak:c.weak, ret:c.ret, rar:c.rar, num:tcNumLabel(c), kind:c.kind, rules:c.rules, flavor:'', sub:TC_SUB[c.kind]||'', top:c.kind==='biome'&&c.el? c.el.toUpperCase()+' BIOME' : (TC_KINDN[c.kind]||'').toUpperCase(), pk:c.pk, kindLabel:TC_KINDN[c.kind], foot:tcFoot(c), ffx:.5 };
   return o;
 }
 function tcFoilOverlay(d){

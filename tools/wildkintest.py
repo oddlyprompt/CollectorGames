@@ -38,6 +38,19 @@ async def main():
         check(dict(kinds)=={'creature':74,'ally':18,'gear':18,'biome':9,'tactic':12,'essence':9,'premium':40}, 'category counts 74/18/18/9/12/9 + 40 premium', dict(kinds))
         rar=Counter(c['rar'] for c in cat); check(rar['ir']==18 and rar['fa']==14 and rar['sir']==4 and rar['csr']==4 and rar['ess']==9, 'premium and essence rarities', dict(rar))
         base=[c for c in cat if not c['same']]; check(all(c['cid']==1000+c['no'] for c in base), 'stable ids: base card cid = 1000 + number')
+        # ---------------- Version 1 decisions: rules, affinities, ordering, fandom
+        undesigned=[c['number'] for c in M['cards'] if c['category']!='premium' and c.get('gameplay',{}).get('status')!='designed']
+        check(not undesigned, 'every base card has designed rules (no placeholders)', undesigned[:5])
+        oldnames={'Tackle','Swipe','Rush','Charge','Surge','Crash','Burst','Slam'}
+        check(not [a['name'] for c in M['cards'] if c['category']=='creature' for a in c['gameplay']['attacks'] if a['name'] in oldnames], 'no placeholder attack names left')
+        affs={s['affinity']['primary'] for s in M['species']}; st={s['affinity']['status'] for s in M['species']}
+        check(affs=={'Verdant','Tide','Stone','Iron','Ember','Storm','Astral','Dusk','Wonder'} and st<={'canon','decided'}, 'every creature has a final affinity from the nine (canon or decided)', (sorted(affs),sorted(st)))
+        canon_aff={1:'Verdant',2:'Tide',5:'Stone',8:'Tide',11:'Stone',14:'Verdant',17:'Wonder',19:'Astral',21:'Dusk',23:'Tide'}
+        check(all(M['species'][n-1]['affinity']['primary']==a for n,a in canon_aff.items()), 'mascot affinities unchanged from the owner design')
+        order={**{n:'IR' for n in range(141,151)},**{n:'FA' for n in range(151,161)},**{n:'IR' for n in range(161,169)},**{n:'FA' for n in range(169,173)},**{n:'SIR' for n in range(173,177)},**{n:'CSR' for n in range(177,181)}}
+        check(all(mc[n]['premium_kind']==k for n,k in order.items()), 'premium ordering 141-180 as established (IR, FA, supporting IR, ally FA, SIR, Clasped)')
+        fan={s['name']:s['fandom']['value'] for s in M['species']}; chase=['Cactuft','Nimbusail','Aegisopod','Pompyre','Ferradon','Veilmora']
+        check(fan['Cactuft']==max(fan.values()) and all(fan[x]>=0.65 for x in chase), 'collector demand favours the mascot and the chase subjects', {x:fan[x] for x in chase})
         byno={c['no']:c for c in cat}
         prem_ok=all(c['cid']==byno[c['same']]['cid'] and c['name'].endswith(byno[c['same']]['name']) for c in cat if c['same'])
         check(prem_ok, 'every premium card points at its base card (same identity in play)')
@@ -107,10 +120,26 @@ async def main():
         for i in range(5):
             await pg.evaluate("ACT.adv('7')"); await pg.wait_for_function("!UI.busy", timeout=120000); await pg.wait_for_timeout(200)
             await pg.evaluate("closeSheet(true); if (UI.rvl) rvClose(); const t=document.getElementById('tco'); if (t) ACT.tcoclose();")
-        mt=await pg.evaluate("""(()=>{ const A=G.tcg.arch; return {n:A.length, top:A.length?+A[0].sh.toFixed(3):0, lines:A.filter(a=>(a.line||[]).length).length, events:G.tcg.ev.length, graded:(G.player.rv||[]).filter(x=>x.k==='t').length, sales:Object.keys(G.sales).filter(k=>k[0]==='T').length,
+        mt=await pg.evaluate("""(()=>{ const A=G.tcg.arch; return {n:A.length, top:A.length?+A[0].sh.toFixed(3):0, lines:A.filter(a=>a.core.some(cid=>{ const c=tcCardByCid(cid); return c&&c.stage!=='Basic'; })).length, broken:A.filter(a=>a.core.some(cid=>{ const c=tcCardByCid(cid); if (!c||!c.from) return false; return !a.core.some(x=>tcCardByCid(x).name===c.from); })).length, events:G.tcg.ev.length, graded:(G.player.rv||[]).filter(x=>x.k==='t').length, sales:Object.keys(G.sales).filter(k=>k[0]==='T').length,
            ess:A.some(a=>a.core.concat(a.tr).some(cid=>{ const c=tcCardByCid(cid); return !c||c.kind==='essence'; })) }; })()""")
         check(mt['n']>=8 and mt['top']<0.45 and mt['events']>0 and mt['sales']>50, 'metagame runs: archetypes, events, market sales', mt)
-        check(mt['lines']>0, 'evolution lines feed into decks (Stage 1 and 2 decks carry their earlier stages)', mt['lines'])
+        check(mt['lines']>0 and mt['broken']==0, 'evolution decks carry every earlier stage of their lines', (mt['lines'],mt['broken']))
+        # ---------------- the rules engine: real games, tournament finals, bans that move prices
+        eng=await pg.evaluate("""(()=>{ const A=G.tcg.arch; const out={why:{}, turns:0, err:null};
+          try { for (let i=0;i<60;i++){ const a=A[i%A.length], b=A[(i*7+3)%A.length]; const r=WKR.play(tcDeckOf(a),tcDeckOf(b),1000+i); out.why[r.why]=(out.why[r.why]||0)+1; out.turns+=r.turns; } } catch(e){ out.err=e.message; }
+          out.decks=A.map(a=>tcDeckOf(a).length); out.fin=G.tcg.ev.filter(e=>e.fin).length; out.events=G.tcg.ev.length; out.mx=!!(G.tcg.mx&&G.tcg.mx.M.length===A.length);
+          out.wr=A.map(a=>a.str); return out; })()""")
+        check(not eng['err'] and all(n==40 for n in eng['decks']) and eng['mx'], 'the rules engine plays 60 games between the simulated decks (40 cards each)', (eng['err'],eng['why'],eng['turns']/60))
+        check(eng['why'].get('time',0)<=3, 'games end by prizes, knockouts or deck-out, not by the turn limit', eng['why'])
+        check(eng['fin']>0, 'tournament finals are played out by the engine', (eng['fin'],eng['events']))
+        check(max(eng['wr'])<0.68 and min(eng['wr'])>0.32, 'no deck in the field wins more than 68% or less than 32% on average', [round(x,3) for x in eng['wr']])
+        ban=await pg.evaluate("""(()=>{ const A=G.tcg.arch, top=A[0]; const key=c=>tcKey(1,c.no,tcVariants(c)[0]); G.tcg.dom[top.id]=TCP.domWeeks; G.tcg.lastBan=-999; top.sh=Math.max(top.sh,0.3);
+          const before=Object.keys(G.tcg.ban).length; tcBanCheck(G.day); const ids=Object.keys(G.tcg.ban).filter(k=>!(k in {})); const cid=+ids.find(k=>G.tcg.ban[k].ann===G.day); if (!cid) return {ok:false};
+          const c=tcCardByCid(cid); TCFV.clear(); const p0=tcFairRaw(key(c)); const d=G.tcg.ban[cid].d; for (let t=G.day+1;t<=d;t++) tcApplyBans(t); TCFV.clear(); const live=G.tcg.arch.some(a=>a.cnt[cid]);
+          const sv=G.day; G.day=d; TCFV.clear(); const p1=tcFairRaw(key(c)); G.day=sv; TCFV.clear();
+          return {ok:true, name:c.name, imp:G.tcg.ban[cid].imp, live, state:tcLegalState(cid,d), p0:+p0.toFixed(2), p1:+p1.toFixed(2), n:G.tcg.arch.length}; })()""")
+        check(ban.get('ok') and not ban['live'] and ban['state']=='ban' and ban['n']>=8, 'a dominant deck triggers a ban; the banned card leaves every rebuilt deck', ban)
+        check(ban.get('ok') and ban['p1']<ban['p0'], 'the banned card loses value', ban.get('p0') and (ban['p0'],ban['p1']))
         check(not mt['ess'], 'no deck lists Essence or unknown cards')
         check(mt['graded']>=1, 'a graded card came back from GCS', mt['graded'])
         tabs=await pg.evaluate("TABS.map(t=>t[0])")
@@ -121,7 +150,8 @@ async def main():
         await pg.evaluate("ACT.tset('1')"); await pg.wait_for_timeout(400); sheet=await pg.evaluate("document.body.innerText")
         check('First Bond' in sheet and '180 cards' in sheet, 'set page shows First Bond with 180 cards')
         key=await pg.evaluate("tcKey(1,173,'X')"); await pg.evaluate(f"closeSheet(true); ACT.tdesign('{key}')"); await pg.wait_for_timeout(400)
-        ds=await pg.evaluate("document.body.innerText"); check('Provisional' in ds and 'Art' in ds, 'card page states provisional rules and art status')
+        ds=await pg.evaluate("document.body.innerText"); check('Provisional' not in ds and 'HP' in ds and 'Art' in ds and 'Spine Spray' in ds and 'Sunny Bloom' in ds, 'card page shows the card rules (HP, ability, attacks) and art status')
+        face=await pg.evaluate("tcFront(tcKey(1,1,'N'))"); check('Blossom Charge' in face and 'Sunny Bloom' in face and 'rovisional' not in face, 'card face prints the ability and attacks')
         await pg.evaluate("closeSheet(true)")
         # 3D viewer rasterises linked art (inlined first)
         rr=await pg.evaluate("v3Raster(tcFront(tcKey(1,1,'N')),300).then(c=>{ const g=c.getContext('2d'); const d=g.getImageData(150,120,1,1).data; return [c.width,c.height,d[3]]; }).catch(e=>'ERR '+e.message)")

@@ -319,9 +319,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-024 **Mistip** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-025 **Cumulfin** (Stage 1, evolves from SP-024), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-026 **Nimbusail** (Stage 2, evolves from SP-025), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-024 **Mistip** (Basic), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-025 **Cumulfin** (Stage 1, evolves from SP-024), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-026 **Nimbusail** (Stage 2, evolves from SP-025), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -345,9 +345,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-027 **Cindikit** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-028 **Emberuff** (Stage 1, evolves from SP-027), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-029 **Pyrenox** (Stage 2, evolves from SP-028), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-027 **Cindikit** (Basic), affinity Ember (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-028 **Emberuff** (Stage 1, evolves from SP-027), affinity Ember (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-029 **Pyrenox** (Stage 2, evolves from SP-028), affinity Ember (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -371,9 +371,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-030 **Breezit** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-031 **Gustrel** (Stage 1, evolves from SP-030), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-032 **Tempestral** (Stage 2, evolves from SP-031), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-030 **Breezit** (Basic), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-031 **Gustrel** (Stage 1, evolves from SP-030), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-032 **Tempestral** (Stage 2, evolves from SP-031), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -397,9 +397,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-033 **Glimlet** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-034 **Hushwing** (Stage 1, evolves from SP-033), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-035 **Veilmora** (Stage 2, evolves from SP-034), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-033 **Glimlet** (Basic), affinity Dusk (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-034 **Hushwing** (Stage 1, evolves from SP-033), affinity Dusk (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-035 **Veilmora** (Stage 2, evolves from SP-034), affinity Dusk (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -423,9 +423,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-036 **Rivbit** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-037 **Boltusk** (Stage 1, evolves from SP-036), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-038 **Ferradon** (Stage 2, evolves from SP-037), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-036 **Rivbit** (Basic), affinity Iron (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-037 **Boltusk** (Stage 1, evolves from SP-036), affinity Iron (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-038 **Ferradon** (Stage 2, evolves from SP-037), affinity Iron (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -449,9 +449,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-039 **Pebblamb** (Basic), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-040 **Cairnram** (Stage 1, evolves from SP-039), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-041 **Monolox** (Stage 2, evolves from SP-040), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-039 **Pebblamb** (Basic), affinity Stone (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-040 **Cairnram** (Stage 1, evolves from SP-039), affinity Stone (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-041 **Monolox** (Stage 2, evolves from SP-040), affinity Stone (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -475,9 +475,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-042 **Quibbit** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-043 **Whimhare** (Stage 1, evolves from SP-042), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-044 **Fablehorn** (Stage 2, evolves from SP-043), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-042 **Quibbit** (Basic), affinity Wonder (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-043 **Whimhare** (Stage 1, evolves from SP-042), affinity Wonder (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-044 **Fablehorn** (Stage 2, evolves from SP-043), affinity Wonder (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -501,8 +501,8 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (6/6 cells approved)
 - Subjects:
-  - SP-045 **Mossnip** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-046 **Bramblebuck** (Stage 1, evolves from SP-045), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-045 **Mossnip** (Basic), affinity Verdant (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-046 **Bramblebuck** (Stage 1, evolves from SP-045), affinity Verdant (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -526,8 +526,8 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (6/6 cells approved)
 - Subjects:
-  - SP-047 **Reefkin** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-048 **Corallume** (Stage 1, evolves from SP-047), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-047 **Reefkin** (Basic), affinity Tide (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-048 **Corallume** (Stage 1, evolves from SP-047), affinity Tide (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -551,8 +551,8 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (6/6 cells approved)
 - Subjects:
-  - SP-049 **Sootkit** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-050 **Smolderlynx** (Stage 1, evolves from SP-049), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-049 **Sootkit** (Basic), affinity Ember (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-050 **Smolderlynx** (Stage 1, evolves from SP-049), affinity Ember (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -576,8 +576,8 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (6/6 cells approved)
 - Subjects:
-  - SP-051 **Zephroo** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-052 **Cometrail** (Stage 1, evolves from SP-051), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-051 **Zephroo** (Basic), affinity Astral (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-052 **Cometrail** (Stage 1, evolves from SP-051), affinity Astral (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -601,8 +601,8 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (6/6 cells approved)
 - Subjects:
-  - SP-053 **Nibrock** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-054 **Drillbadger** (Stage 1, evolves from SP-053), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-053 **Nibrock** (Basic), affinity Iron (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-054 **Drillbadger** (Stage 1, evolves from SP-053), affinity Iron (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -622,12 +622,12 @@ Overall: 358 of 358 required cells approved.
 - Layout: 3x3 grid, thin dark gutters, about 10% empty margin around each subject, nothing touching a cell edge, no text, no frames, no floor shadow, no effect marks ("!" bursts, sparkles, speed lines)
 - Style: Soft, toy-like dimensional 3D render, soft even studio light, consistent scale and quality with art-source/creatures/
 - Minimum size: 1254 x 1254 px, aspect 1:1
-- Screen colour: magenta
+- Screen colour: green
 - Identity status: canon
 - Production: complete (6/6 cells approved)
 - Subjects:
-  - SP-055 **Dewink** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-056 **Bloomble** (Stage 1, evolves from SP-055), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-055 **Dewink** (Basic), affinity Tide / Verdant (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-056 **Bloomble** (Stage 1, evolves from SP-055), affinity Tide / Verdant (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -651,9 +651,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-057 **Fernibble** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-058 **Acornox** (Basic), affinity Verdant (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-059 **Shelloop** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-057 **Fernibble** (Basic), affinity Verdant (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-058 **Acornox** (Basic), affinity Verdant (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-059 **Shelloop** (Basic), affinity Tide (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -677,9 +677,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-060 **Driftail** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-061 **Craggle** (Basic), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-062 **Tumbear** (Basic), affinity Stone (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-060 **Driftail** (Basic), affinity Tide (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-061 **Craggle** (Basic), affinity Stone (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-062 **Tumbear** (Basic), affinity Stone (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -703,9 +703,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-063 **Nutbolt** (Basic), affinity Iron (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-064 **Clampup** (Basic), affinity Tide (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-065 **Ashhopper** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-063 **Nutbolt** (Basic), affinity Iron (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-064 **Clampup** (Basic), affinity Iron (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-065 **Ashhopper** (Basic), affinity Ember (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -729,9 +729,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-066 **Coaloo** (Basic), affinity Ember (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-067 **Kitecoon** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-068 **Thundrop** (Basic), affinity Storm (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-066 **Coaloo** (Basic), affinity Ember (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-067 **Kitecoon** (Basic), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-068 **Thundrop** (Basic), affinity Storm (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -755,9 +755,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-069 **Orbitot** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-070 **Lunapip** (Basic), affinity Astral (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-071 **Mothmur** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-069 **Orbitot** (Basic), affinity Astral (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-070 **Lunapip** (Basic), affinity Astral (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-071 **Mothmur** (Basic), affinity Dusk (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|
@@ -781,9 +781,9 @@ Overall: 358 of 358 required cells approved.
 - Identity status: canon
 - Production: complete (9/9 cells approved)
 - Subjects:
-  - SP-072 **Winkrow** (Basic), affinity Dusk (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-073 **Puffluff** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
-  - SP-074 **Oddoodle** (Basic), affinity Wonder (provisional).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-072 **Winkrow** (Basic), affinity Dusk (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-073 **Puffluff** (Basic), affinity Wonder (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
+  - SP-074 **Oddoodle** (Basic), affinity Wonder (decided).  Look: _SOL designs it (first approved sheet becomes the reference)_
 
 | Cell | Asset ID | Subject | Pose | Status |
 |---|---|---|---|---|

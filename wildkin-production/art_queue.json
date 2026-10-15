@@ -1,6 +1,6 @@
 {
  "schema": "wildkin-art-queue/1",
- "manifest_version": "1.0.0",
+ "manifest_version": "1.1.0",
  "generated_by": "tools/wildkin_manifest.py",
  "handoff": "wildkin-production/SOL_HANDOFF.md",
  "tasks": [
@@ -1239,7 +1239,7 @@
      "name": "Mistip",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1251,7 +1251,7 @@
      "name": "Cumulfin",
      "stage": "Stage 1",
      "evolves_from": "SP-024",
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1263,7 +1263,7 @@
      "name": "Nimbusail",
      "stage": "Stage 2",
      "evolves_from": "SP-025",
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1365,7 +1365,7 @@
      "name": "Cindikit",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Ember (provisional)",
+     "affinity": "Ember (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1377,7 +1377,7 @@
      "name": "Emberuff",
      "stage": "Stage 1",
      "evolves_from": "SP-027",
-     "affinity": "Ember (provisional)",
+     "affinity": "Ember (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1389,7 +1389,7 @@
      "name": "Pyrenox",
      "stage": "Stage 2",
      "evolves_from": "SP-028",
-     "affinity": "Ember (provisional)",
+     "affinity": "Ember (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1491,7 +1491,7 @@
      "name": "Breezit",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1503,7 +1503,7 @@
      "name": "Gustrel",
      "stage": "Stage 1",
      "evolves_from": "SP-030",
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1515,7 +1515,7 @@
      "name": "Tempestral",
      "stage": "Stage 2",
      "evolves_from": "SP-031",
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1617,7 +1617,7 @@
      "name": "Glimlet",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Dusk (provisional)",
+     "affinity": "Dusk (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1629,7 +1629,7 @@
      "name": "Hushwing",
      "stage": "Stage 1",
      "evolves_from": "SP-033",
-     "affinity": "Dusk (provisional)",
+     "affinity": "Dusk (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1641,7 +1641,7 @@
      "name": "Veilmora",
      "stage": "Stage 2",
      "evolves_from": "SP-034",
-     "affinity": "Dusk (provisional)",
+     "affinity": "Dusk (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1743,7 +1743,7 @@
      "name": "Rivbit",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Iron (provisional)",
+     "affinity": "Iron (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1755,7 +1755,7 @@
      "name": "Boltusk",
      "stage": "Stage 1",
      "evolves_from": "SP-036",
-     "affinity": "Iron (provisional)",
+     "affinity": "Iron (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1767,7 +1767,7 @@
      "name": "Ferradon",
      "stage": "Stage 2",
      "evolves_from": "SP-037",
-     "affinity": "Iron (provisional)",
+     "affinity": "Iron (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1869,7 +1869,7 @@
      "name": "Pebblamb",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Stone (provisional)",
+     "affinity": "Stone (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1881,7 +1881,7 @@
      "name": "Cairnram",
      "stage": "Stage 1",
      "evolves_from": "SP-039",
-     "affinity": "Stone (provisional)",
+     "affinity": "Stone (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1893,7 +1893,7 @@
      "name": "Monolox",
      "stage": "Stage 2",
      "evolves_from": "SP-040",
-     "affinity": "Stone (provisional)",
+     "affinity": "Stone (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -1995,7 +1995,7 @@
      "name": "Quibbit",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Wonder (provisional)",
+     "affinity": "Wonder (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2007,7 +2007,7 @@
      "name": "Whimhare",
      "stage": "Stage 1",
      "evolves_from": "SP-042",
-     "affinity": "Wonder (provisional)",
+     "affinity": "Wonder (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2019,7 +2019,7 @@
      "name": "Fablehorn",
      "stage": "Stage 2",
      "evolves_from": "SP-043",
-     "affinity": "Wonder (provisional)",
+     "affinity": "Wonder (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2118,7 +2118,7 @@
      "name": "Mossnip",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Verdant (provisional)",
+     "affinity": "Verdant (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2130,7 +2130,7 @@
      "name": "Bramblebuck",
      "stage": "Stage 1",
      "evolves_from": "SP-045",
-     "affinity": "Verdant (provisional)",
+     "affinity": "Verdant (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2229,7 +2229,7 @@
      "name": "Reefkin",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Tide (provisional)",
+     "affinity": "Tide (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2241,7 +2241,7 @@
      "name": "Corallume",
      "stage": "Stage 1",
      "evolves_from": "SP-047",
-     "affinity": "Tide (provisional)",
+     "affinity": "Tide (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2340,7 +2340,7 @@
      "name": "Sootkit",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Ember (provisional)",
+     "affinity": "Ember (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2352,7 +2352,7 @@
      "name": "Smolderlynx",
      "stage": "Stage 1",
      "evolves_from": "SP-049",
-     "affinity": "Ember (provisional)",
+     "affinity": "Ember (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2451,7 +2451,7 @@
      "name": "Zephroo",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Astral (provisional)",
+     "affinity": "Astral (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2463,7 +2463,7 @@
      "name": "Cometrail",
      "stage": "Stage 1",
      "evolves_from": "SP-051",
-     "affinity": "Astral (provisional)",
+     "affinity": "Astral (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2562,7 +2562,7 @@
      "name": "Nibrock",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Iron (provisional)",
+     "affinity": "Iron (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2574,7 +2574,7 @@
      "name": "Drillbadger",
      "stage": "Stage 1",
      "evolves_from": "SP-053",
-     "affinity": "Iron (provisional)",
+     "affinity": "Iron (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2666,14 +2666,14 @@
      "pose": null
     }
    ],
-   "chroma": "magenta",
+   "chroma": "green",
    "identity": [
     {
      "species": "SP-055",
      "name": "Dewink",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Verdant (provisional)",
+     "affinity": "Tide / Verdant (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2685,7 +2685,7 @@
      "name": "Bloomble",
      "stage": "Stage 1",
      "evolves_from": "SP-055",
-     "affinity": "Verdant (provisional)",
+     "affinity": "Tide / Verdant (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2778,7 +2778,7 @@
      "name": "Fernibble",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Verdant (provisional)",
+     "affinity": "Verdant (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2790,7 +2790,7 @@
      "name": "Acornox",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Verdant (provisional)",
+     "affinity": "Verdant (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2802,7 +2802,7 @@
      "name": "Shelloop",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Tide (provisional)",
+     "affinity": "Tide (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2895,7 +2895,7 @@
      "name": "Driftail",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Tide (provisional)",
+     "affinity": "Tide (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2907,7 +2907,7 @@
      "name": "Craggle",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Stone (provisional)",
+     "affinity": "Stone (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -2919,7 +2919,7 @@
      "name": "Tumbear",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Stone (provisional)",
+     "affinity": "Stone (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3012,7 +3012,7 @@
      "name": "Nutbolt",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Iron (provisional)",
+     "affinity": "Iron (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3024,7 +3024,7 @@
      "name": "Clampup",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Tide (provisional)",
+     "affinity": "Iron (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3036,7 +3036,7 @@
      "name": "Ashhopper",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Ember (provisional)",
+     "affinity": "Ember (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3129,7 +3129,7 @@
      "name": "Coaloo",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Ember (provisional)",
+     "affinity": "Ember (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3141,7 +3141,7 @@
      "name": "Kitecoon",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3153,7 +3153,7 @@
      "name": "Thundrop",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Storm (provisional)",
+     "affinity": "Storm (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3246,7 +3246,7 @@
      "name": "Orbitot",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Astral (provisional)",
+     "affinity": "Astral (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3258,7 +3258,7 @@
      "name": "Lunapip",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Astral (provisional)",
+     "affinity": "Astral (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3270,7 +3270,7 @@
      "name": "Mothmur",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Dusk (provisional)",
+     "affinity": "Dusk (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3363,7 +3363,7 @@
      "name": "Winkrow",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Dusk (provisional)",
+     "affinity": "Dusk (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3375,7 +3375,7 @@
      "name": "Puffluff",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Wonder (provisional)",
+     "affinity": "Wonder (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",
@@ -3387,7 +3387,7 @@
      "name": "Oddoodle",
      "stage": "Basic",
      "evolves_from": null,
-     "affinity": "Wonder (provisional)",
+     "affinity": "Wonder (decided)",
      "role": "",
      "visual_identity": {
       "status": "sol_designs",

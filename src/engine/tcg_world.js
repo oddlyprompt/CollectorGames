@@ -1,66 +1,114 @@
 // ===================== TCG: THE METAGAME =====================
-// Nobody plays matches here. The game simulates what players bring, what wins, and what that does to what cards are worth.
-function tcInit(){ G.tc=G.tc||{}; G.tpop=G.tpop||{}; G.nextTid=G.nextTid||1; G.tcg={v:1, cv:TC_CV, mv:WK_CANON.set.mv, usage:{}, t8:{}, hy:{}, ban:{}, arch:[], ev:[], dom:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, lastBan:0}; }
-const STYLE_ADV={ aggro:{control:.5,combo:.3,stall:.1,mid:-.25,aggro:0}, control:{combo:.5,mid:.25,aggro:-.5,stall:-.2,control:0}, combo:{stall:.4,aggro:-.3,control:-.5,mid:.1,combo:0}, stall:{aggro:-.1,combo:-.4,mid:.35,control:.2,stall:0}, mid:{aggro:.25,control:-.25,combo:-.1,stall:-.35,mid:0} };
+// The player never plays matches. The rules engine (tcg_rules.js) plays them: it builds the decks the cards allow, plays
+// them against each other, and the results decide what the simulated players bring, who wins events, what gets banned,
+// and through usage and hype, what cards are worth.
+function tcInit(){ G.tc=G.tc||{}; G.tpop=G.tpop||{}; G.nextTid=G.nextTid||1; G.tcg={v:1, cv:TC_CV, mv:WK_CANON.set.mv, rv:WKR.RV, usage:{}, t8:{}, hy:{}, ban:{}, arch:[], ev:[], dom:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, lastBan:0, mx:null}; }
 function tcNews(h, b, ref){ if (!G.live || !G.tcg) return; const n={t:G.day,h,b,p:null,k:'tcg'}; if (ref){ if (ref.set!=null) n.ts=ref.set; if (ref.cid!=null) n.tcid=ref.cid; } G.news.unshift(n); if (G.news.length>320) G.news.length=320; }
 function tcCardByCid(cid){ tcSetCards(Math.floor(cid/1000)); return TC_BYCID.get(+cid)||null; }
-// the earlier stages a deck needs to reach this card (evolution lines matter: a Stage 2 deck plays its Basic and Stage 1)
-function tcLineOf(c){ const out=[]; let cur=c; const all=tcSetCards(c.set); for (let i=0;i<3&&cur&&cur.from;i++){ cur=all.find(x=>x.name===cur.from&&!tcAlt(x)&&x.kind==='creature'); if (cur) out.push(cur); } return out; }
 function tcLegalSets(t){ return tcReleasedSets(t).slice(-3); }
 function tcBanned(cid,t){ const b=G.tcg&&G.tcg.ban[cid]; return !!(b && b.d<=(t==null?G.day:t)); }
 // 'std' playable in Standard now, 'rot' only in the open format, 'ban' banned
 function tcLegalState(cid, t){
   t=t==null?G.day:t; if (tcBanned(cid,t)) return 'ban';
-  const legal=tcLegalSets(t); const key='L'+t; const c=G.tcg._lg||(G.tcg._lg={}); if (c.day!==t){ c.day=t; c.m=new Map(); }
+  const legal=tcLegalSets(t); const c=G.tcg._lg||(G.tcg._lg={}); if (c.day!==t){ c.day=t; c.m=new Map(); }
   let r=c.m.get(cid); if (r) return r;
   const sets=[]; for (const s of tcReleasedSets(t)){ if (tcSetCards(s).some(x=>x.cid===cid&&!tcAlt(x))) sets.push(s); }
   r= sets.some(s=>legal.includes(s))? 'std':'rot'; c.m.set(cid,r); return r;
 }
 function tcLegalIdentities(t){ const out=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)){ if (tcAlt(c)||c.kind==='essence') continue; if (tcBanned(c.cid,t)) continue; if (!out.has(c.cid)) out.set(c.cid,c); } return [...out.values()]; }
-const TCP={sens:2.6, eta:1.1, noise:0.01, hate:0.6, dom:0.24, domWeeks:10};
-function tcMatch(a, b){ const sa=(STYLE_ADV[a.st]||{})[b.st]||0; const d=(TC_EL.indexOf(b.el)-TC_EL.indexOf(a.el)+9)%9; const ta=(d===1||d===4)?0.07:(d===8||d===5)?-0.07:0; return 1/(1+Math.exp(-(TCP.sens*(a.str-b.str)+sa+ta))); }
+function tcEssOf(t){ const m={}; for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (c.kind==='essence' && !tcAlt(c)) m[c.el]=c; return m; }
+const TCP={eta:1.1, noise:0.012, hate:0.6, dom:0.24, domWeeks:10};
+// ---------- the field: the decks that exist and their simulated matchups ----------
+// With nothing banned this is WK_META, computed by the build with the same engine. After a ban, only the decks that
+// played the banned card are rebuilt and re-tested; the result is kept in the save (G.tcg.mx).
+let TC_FIELD0=null;
+function tcFieldKey(t){ return tcLegalSets(t).join(',')+'|'+Object.keys(G.tcg.ban).filter(cid=>tcBanned(+cid,t)).sort().join(','); }
+function tcBaseField(){
+  if (TC_FIELD0) return TC_FIELD0;
+  if (typeof WK_META!=='undefined' && WK_META && WK_META.rv===WKR.RV) return TC_FIELD0=WK_META;
+  const pool=tcSetCards(1).filter(c=>!tcAlt(c) && c.kind!=='essence'); return TC_FIELD0=WKR.buildMeta(pool, tcEssOf(G.day), {gauntlet:4, field:8, pair:8});
+}
+// a fingerprint of the base field: when card rules or the engine change, saved matchups are rebuilt
+function tcBaseSig(){ const b=tcBaseField(); return b._bs||(b._bs=String(hsh(b.top.map(p=>p.sig).join(';')+'|'+b.cands.length))); }
+function tcField(t){
+  const T=G.tcg, key=tcFieldKey(t); if (T.mx && T.mx.key===key && T.mx.rv===WKR.RV && T.mx.bs===tcBaseSig()) return T.mx;
+  const base=tcBaseField(); let f;
+  if (key==='1|') f=base;   // First Bond alone, nothing banned: exactly what the build computed
+  else { const pool=tcLegalIdentities(t); const byCid=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (!tcAlt(c)) byCid.set(c.cid,c); f=WKR.rebuildMeta(base, pool, tcEssOf(t), byCid); }
+  T.mx={key, rv:WKR.RV, bs:tcBaseSig(), top:f.top, M:f.M}; return T.mx;
+}
+function tcDeckOf(a){ const p=G.tcg.mx&&G.tcg.mx.top[a.ix]; if (!p) return null; const byCid=new Map(); for (const id of p.c.concat(p.t).map(x=>x[0]).concat([p.lead])) byCid.set(id,tcCardByCid(id)); const d=WKR.unpackDeck(p,byCid); return d? WKR.deckCards(d,tcEssOf(G.day)) : null; }
+function tcMatch(a, b){ if (a===b) return 0.5; const M=G.tcg.mx&&G.tcg.mx.M; const p=M&&M[a.ix]&&M[a.ix][b.ix]; return p==null? 0.5 : p; }
 function tcRebuildMeta(t){
-  const cards=tcLegalIdentities(t); if (!cards.length) return; const creatures=cards.filter(c=>c.kind==='creature'), trainers=cards.filter(c=>c.kind!=='creature'&&c.kind!=='essence'); const old={}; for (const a of G.tcg.arch) old[a.id]=a; const list=[];
-  for (const el of TC_EL) for (const st of TC_STYLES){
-    const cand=creatures.filter(c=>c.el===el).map(c=>[c, c.pw+(c.st===st?0.12:0)+(st==='aggro'&&c.stage==='Stage 2'?0.04:0)]).sort((a,b)=>b[1]-a[1]); if (cand.length<4) continue;
-    const core=cand.slice(0,6), tr=trainers.map(c=>[c, c.pw+(c.st===st?0.1:0)]).sort((a,b)=>b[1]-a[1]).slice(0,6); const m=a=>a.reduce((s,x)=>s+x[1],0)/Math.max(1,a.length);
-    const line=[]; let broken=0; for (const [c] of core) for (const p of tcLineOf(c)){ if (tcBanned(p.cid,t)) broken++; if (!core.some(x=>x[0].cid===p.cid) && !line.includes(p.cid)) line.push(p.cid); }
-    const str=0.55*m(core.slice(0,4))+0.2*m(core.slice(4))+0.25*m(tr)+0.06*(core.filter(x=>x[0].st===st).length/6)-0.05*broken-0.004*line.length;
-    list.push({id:el+'|'+st, el, st, name:core[0][0].name+' '+TC_STYN[st], str:+str.toFixed(4), core:core.map(x=>x[0].cid), tr:tr.map(x=>x[0].cid), line, lead:core[0][0].cid}); }
-  list.sort((a,b)=>b.str-a.str); const top=list.slice(0,15); const tot=top.reduce((s,a)=>s+Math.exp(7*a.str),0);
-  for (const a of top){ const o=old[a.id]; a.sh= o? o.sh : Math.exp(7*a.str)/tot*0.55; a.hist=o?o.hist:[]; a.wr=o?o.wr:0.5; a.conv=o?o.conv:1; }
-  const S=top.reduce((s,a)=>s+a.sh,0); top.forEach(a=>a.sh/=S); G.tcg.arch=top; tcUsage();
+  const f=tcField(t); if (!f || !f.top.length) return; const old={}; for (const a of G.tcg.arch) old[a.id]=a; const n=f.top.length;
+  const list=f.top.map((p,i)=>{ const lead=tcCardByCid(p.lead), par=p.partner!=null? tcCardByCid(p.partner) : null; const str=(f.M[i].reduce((x,y)=>x+y,0)-0.5)/Math.max(1,n-1);
+    return {id:p.lead+(p.partner!=null?'+'+p.partner:''), ix:i, el:lead.el, st:p.st, name:lead.name+(par&&par.name!==lead.name?' / '+par.name:''), str:+str.toFixed(4),
+      core:p.c.map(x=>x[0]), tr:p.t.map(x=>x[0]), cnt:Object.fromEntries(p.c.concat(p.t)), ess:p.e, line:[], lead:p.lead, partner:p.partner}; });
+  const tot=list.reduce((s,a)=>s+Math.exp(6*a.str),0);
+  for (const a of list){ const o=old[a.id]; a.sh= o? o.sh : Math.exp(6*a.str)/tot*0.6; a.hist=o?o.hist:[]; a.wr=o?o.wr:a.str; a.conv=o?o.conv:1; }
+  const S=list.reduce((s,a)=>s+a.sh,0); list.forEach(a=>a.sh/=S); list.sort((a,b)=>b.sh-a.sh); G.tcg.arch=list; G.tcg.rv=WKR.RV; tcUsage();
 }
 function tcUsage(){
-  const U={}; for (const a of G.tcg.arch){ a.core.forEach((cid,i)=>{ U[cid]=(U[cid]||0)+a.sh*(i<3?4:i<5?3:2); }); (a.line||[]).forEach(cid=>{ U[cid]=(U[cid]||0)+a.sh*2.5; }); a.tr.forEach((cid,i)=>{ U[cid]=(U[cid]||0)+a.sh*(i<2?4:3); }); }
+  const U={}; for (const a of G.tcg.arch) for (const cid in a.cnt) U[cid]=(U[cid]||0)+a.sh*a.cnt[cid];
   const old=G.tcg.usage; for (const cid in U) old[cid]=0.6*(old[cid]||0)+0.4*Math.min(4,U[cid]); for (const cid in old){ if (U[cid]==null){ old[cid]*=0.7; if (old[cid]<0.02) delete old[cid]; } }
 }
+// each week players drift toward what wins against what everyone else plays (and away from what everyone is ready for)
 function tcMetaWeek(t){
   const A=G.tcg.arch; if (!A.length) return;
   for (const a of A){ let w=0; for (const b of A) w+=b.sh*tcMatch(a,b); a.wr=w-TCP.hate*(a.sh-1/A.length); }
-  const avg=A.reduce((s,a)=>s+a.sh*a.wr,0); const tg=A.map(a=>a.sh*Math.exp(TCP.eta*(a.wr-avg))); const T=tg.reduce((x,y)=>x+y,0);
+  const avg=A.reduce((s,a)=>s+a.sh*a.wr,0); const tg=A.map(a=>a.sh*Math.exp(TCP.eta*6*(a.wr-avg))); const T=tg.reduce((x,y)=>x+y,0);
   A.forEach((a,i)=>{ a.sh=Math.max(0.004, 0.8*a.sh+0.2*tg[i]/T+(R()-0.5)*TCP.noise); }); const S=A.reduce((s,a)=>s+a.sh,0);
-  A.forEach(a=>{ a.sh/=S; a.hist.push(+a.sh.toFixed(3)); if (a.hist.length>20) a.hist.shift(); }); tcUsage();
+  A.forEach(a=>{ a.sh/=S; a.hist.push(+a.sh.toFixed(3)); if (a.hist.length>20) a.hist.shift(); }); A.sort((a,b)=>b.sh-a.sh); tcUsage();
   for (const k in G.tcg.hy){ G.tcg.hy[k]*=0.86; if (G.tcg.hy[k]<0.02) delete G.tcg.hy[k]; } for (const k in G.tcg.t8){ G.tcg.t8[k]*=0.95; if (G.tcg.t8[k]<0.05) delete G.tcg.t8[k]; }
 }
+// a tournament: Swiss rounds decided by the simulated matchups (plus each player's skill), a top-8 bracket, and a final that is played out card by card
 function tcRunEvent(t, kind, N){
-  const A=G.tcg.arch; if (!A.length) return; const decks=[]; const cum=[]; let s=0; for (const a of A){ s+=a.sh; cum.push(s); }
-  for (let i=0;i<N;i++){ const x=R()*s; let k=0; while (k<cum.length-1 && cum[k]<x) k++; decks.push({a:A[k], sc:A[k].wr+gauss()*0.18}); }
-  const top=decks.sort((x,y)=>y.sc-x.sc).slice(0,8); const win=top.map(d=>({a:d.a, sc:d.sc+gauss()*0.06})).sort((x,y)=>y.sc-x.sc)[0].a;
-  const cnt={}; for (const d of top) cnt[d.a.id]=(cnt[d.a.id]||0)+1; const fld={}; for (const d of decks) fld[d.a.id]=(fld[d.a.id]||0)+1;
+  const A=G.tcg.arch; if (!A.length) return; const cum=[]; let s=0; for (const a of A){ s+=a.sh; cum.push(s); }
+  const P=[]; for (let i=0;i<N;i++){ const x=R()*s; let k=0; while (k<cum.length-1 && cum[k]<x) k++; P.push({a:A[k], sk:gauss()*0.35, w:0, tb:R()}); }
+  const game=(x,y)=>{ const p=tcMatch(x.a,y.a); const q=1/(1+Math.exp(-(Math.log(p/(1-p))+x.sk-y.sk))); return R()<q? x : y; };
+  const rounds=Math.ceil(Math.log2(N))+(kind==='champ'?1:0);
+  for (let r=0;r<rounds;r++){ P.sort((x,y)=>y.w-x.w||y.tb-x.tb); for (let i=0;i+1<P.length;i+=2) game(P[i],P[i+1]).w++; if (P.length%2) P[P.length-1].w++; P.forEach(p=>p.tb=R()); }
+  P.sort((x,y)=>y.w-x.w||y.sk-x.sk); const top=P.slice(0,8);
+  const qf=[[0,7],[3,4],[1,6],[2,5]].map(([i,j])=>game(top[i],top[j])); const sf=[game(qf[0],qf[1]), game(qf[2],qf[3])];
+  // the final, played out by the rules engine
+  let champ=game(sf[0],sf[1]), fin=null; const da=tcDeckOf(sf[0].a), db=tcDeckOf(sf[1].a);
+  if (da && db){ const r=WKR.play(da,db,hsh('final'+G.seed+':'+t)); if (r.w>=0){ champ=r.w===0? sf[0] : sf[1]; } fin={turns:r.turns, why:r.why, pz:r.pz}; }
+  const win=champ.a, ru=(champ===sf[0]?sf[1]:sf[0]).a;
+  const cnt={}; for (const d of top) cnt[d.a.id]=(cnt[d.a.id]||0)+1;
   const exp=kind==='local'?0.03:0.1; for (const a of A){ const f=Math.max(0.004,a.sh); const conv=((cnt[a.id]||0)/8)/f; a.conv=conv; a.sh*=Math.max(0.9,Math.min(1.12,Math.pow(Math.max(0.2,conv),exp))); } win.sh+=kind==='champ'?0.02:kind==='regional'?0.008:0.002;
   const S=A.reduce((q,a)=>q+a.sh,0); A.forEach(a=>a.sh/=S);
-  const hot=kind==='champ'?0.5:kind==='regional'?0.22:0.05; for (const cid of win.core.concat(win.tr.slice(0,3))) G.tcg.hy[cid]=(G.tcg.hy[cid]||0)+hot; for (const d of top) for (const cid of d.a.core.concat(d.a.tr)) G.tcg.t8[cid]=(G.tcg.t8[cid]||0)+1/8;
+  const hot=kind==='champ'?0.5:kind==='regional'?0.22:0.05; const key=Object.keys(win.cnt).filter(cid=>{ const c=tcCardByCid(+cid); return c && c.kind!=='essence'; }).sort((x,y)=>win.cnt[y]-win.cnt[x]).slice(0,8);
+  for (const cid of key) G.tcg.hy[cid]=(G.tcg.hy[cid]||0)+hot; for (const d of top) for (const cid in d.a.cnt) G.tcg.t8[cid]=(G.tcg.t8[cid]||0)+1/8;
   const npcs=G.npcs.filter(n=>n.ty==='tpl'); const who=npcs.length? pick(npcs).h : 'a local player';
-  const ev={d:t, k:kind, n:N, top:top.map(d=>d.a.id), win:win.id, winner:who, cnt}; G.tcg.ev.unshift(ev); if (G.tcg.ev.length>40) G.tcg.ev.length=40;
-  if (kind!=='local'){ const lead=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a])[0]; const nm=id=>A.find(a=>a.id===id).name; tcNews(`${win.name.toUpperCase()} WINS THE ${kind==='champ'?'WILDKIN CHAMPIONSHIP':'REGIONAL'}`, `${who} piloted ${win.name} to the title among ${N} players. ${nm(lead)} put ${cnt[lead]} of the top 8 into the bracket.`, {cid:win.lead}); }
+  const ev={d:t, k:kind, n:N, top:top.map(d=>d.a.id), win:win.id, ru:ru.id, winner:who, cnt, fin}; G.tcg.ev.unshift(ev); if (G.tcg.ev.length>40) G.tcg.ev.length=40;
+  if (kind!=='local'){ const lead=Object.keys(cnt).sort((a,b)=>cnt[b]-cnt[a])[0]; const nm=id=>(A.find(a=>a.id===id)||{name:id}).name;
+    const how=fin? (fin.why==='prizes'? ` The final went ${Math.ceil(fin.turns/2)} turns and ended on the last Prize card.` : fin.why==='wipe'? ` The final ended when ${ru.name} ran out of creatures.` : fin.why==='deck'? ` The final ended with ${ru.name} decked out.` : '') : '';
+    tcNews(`${win.name.toUpperCase()} WINS THE ${kind==='champ'?'WILDKIN CHAMPIONSHIP':'REGIONAL'}`, `${who} piloted ${win.name} to the title among ${N} players, beating ${ru.name} in the final.${how} ${nm(lead)} put ${cnt[lead]} of the top 8 into the bracket.`, {cid:win.lead}); }
   return ev;
 }
 function tcEventsDay(t){ if (dowOf(t)!==6 || !G.tcg.arch.length) return; const [m,d]=mdOf(t); if ((m===6||m===12) && d>=8 && d<=14) tcRunEvent(t,'champ',640); else if (d<=7) tcRunEvent(t,'regional',140); else tcRunEvent(t,'local',24); }
+// the rules committee: when one deck holds too much of the field for too long, ban the card whose loss hurts that deck most
+// (never a format staple that every deck plays). Each candidate is tested by rebuilding the deck without it and replaying its matchups.
+function tcBanImpact(a, cid, t){
+  const pool=tcLegalIdentities(t).filter(c=>c.cid!==cid); const essOf=tcEssOf(t); const cur=G.tcg.mx.top[a.ix]; const lead=cid===a.lead? (a.partner!=null? tcCardByCid(a.partner) : null) : tcCardByCid(a.lead);
+  let d=lead && WKR.buildDeck(pool, lead, cur.v); if (!d && a.partner!=null && cid!==a.partner) d=WKR.buildDeck(pool, tcCardByCid(a.partner), 0);
+  const now0=G.tcg.arch.filter(b=>b!==a).slice(0,6).reduce((q,b)=>q+b.sh*tcMatch(a,b),0)/Math.max(1e-9,G.tcg.arch.filter(b=>b!==a).slice(0,6).reduce((q,b)=>q+b.sh,0));
+  if (!d) return now0-0.3; const byCid=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (!tcAlt(c)) byCid.set(c.cid,c);
+  const opp=G.tcg.arch.filter(b=>b!==a).slice(0,6); let now=0, after=0, w=0;
+  for (const b of opp){ const od=WKR.unpackDeck(G.tcg.mx.top[b.ix],byCid); if (!od) continue; now+=b.sh*tcMatch(a,b); after+=b.sh*WKR.matchup(d,od,essOf,8); w+=b.sh; }
+  return w? (now-after)/w : 0;
+}
 function tcBanCheck(t){
   const A=G.tcg.arch; if (!A.length) return; const D=G.tcg.dom; for (const a of A) D[a.id]= a.sh>TCP.dom? (D[a.id]||0)+1 : 0; const top=A.slice().sort((a,b)=>b.sh-a.sh)[0];
-  if (top && D[top.id]>=TCP.domWeeks && t-(G.tcg.lastBan||0)>120){ const c=top.core.map(tcCardByCid).filter(c=>c && !G.tcg.ban[c.cid]).sort((a,b)=>b.pw-a.pw)[0];
-    if (c){ G.tcg.ban[c.cid]={d:t+14, ann:t, why:top.name}; G.tcg.lastBan=t; D[top.id]=0; tcNews(`BAN ANNOUNCED: ${c.name.toUpperCase()}`, `The rules committee will remove ${c.name} from Standard on ${fmtDate(t+14)}, after ${top.name} held more than a quarter of the field for nine straight weeks. Copies are already moving.`, {cid:c.cid}); G.tcg.hy[c.cid]=(G.tcg.hy[c.cid]||0)+0.6; } }
+  if (top && D[top.id]>=TCP.domWeeks && t-(G.tcg.lastBan||0)>120){
+    const staple=cid=>A.filter(b=>b!==top && b.cnt[cid]).reduce((s,b)=>s+b.sh,0)>0.3;
+    const cand=Object.keys(top.cnt).map(Number).filter(cid=>{ const c=tcCardByCid(cid); return c && c.kind!=='essence' && !G.tcg.ban[cid] && !staple(cid); })
+      .sort((x,y)=>(y===top.lead?100:0)+(y===top.partner?50:0)+top.cnt[y]-(x===top.lead?100:0)-(x===top.partner?50:0)-top.cnt[x]).slice(0,5);
+    // score: how much the dominant deck loses, minus collateral damage to every other deck that plays the card
+    let best=null, bs=-9, bi=0; for (const cid of cand){ const im=tcBanImpact(top,cid,t); const col=A.filter(b=>b!==top && b.cnt[cid]).reduce((q,b)=>q+b.sh,0); const c=tcCardByCid(cid);
+      const sc=im-0.5*col-(c.kind==='creature' && c.to? 0.04 : 0); if (sc>bs){ bs=sc; bi=im; best=cid; } }
+    const c=best!=null? tcCardByCid(best) : null;
+    if (c){ G.tcg.ban[c.cid]={d:t+14, ann:t, why:top.name, imp:+bi.toFixed(3)}; G.tcg.lastBan=t; D[top.id]=0; tcNews(`BAN ANNOUNCED: ${c.name.toUpperCase()}`, `The rules committee will remove ${c.name} from Standard on ${fmtDate(t+14)}, after ${top.name} held more than ${Math.round(TCP.dom*100)}% of the field for ${TCP.domWeeks} straight weeks. In testing, the deck wins ${Math.round(bi*100)} points less often without it. Copies are already moving.`, {cid:c.cid}); G.tcg.hy[c.cid]=(G.tcg.hy[c.cid]||0)+0.6; } }
 }
 // previews: a new set is shown in stages, long before you can buy it. What gets revealed is a signal, not a verdict.
 function tcRevealed(n){ return (G.tcg&&G.tcg.rev[n])||[]; }
