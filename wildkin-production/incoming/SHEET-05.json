@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-05",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-05: square1254x1254 minimum PNG, precisely equal3x3 grid thin black gutters. Nine separate SMALL complete creatures, each centered with20% EMPTY margins all four sides, appendages inside CENTRAL60% of cell. Flat uniform green screen RGB40,160,60 no shadows/gradients. Reference is the currently established Rolyte look: cute pillbug, navy/silver segmented armored shell, pale face with huge dark eyes/rosy cheeks, silver slitted knight-helmet crest, six short dark legs and two antennae. Do not turn into human knight. Top row Rolyte: neutral standing; all six feet lifted in little jump; resting low with feet tucked. Middle row Shelladin evolution: wider oval pillbug with thicker three-tier silver-edged navy shell armor, more pronounced helmet brow and raised dorsal ridge, same pale face/eyes/cheeks, exactly six dark legs/two antennae; neutral standing, jumping, resting. Bottom row Aegisopod final: broad squat fortress-like pillbug silhouette with expanded overlapping shield-shaped shell plates and prominent silver central crest, broad silver brow, same cute pale face, dark eyes, six sturdy short legs, two antennae; standing, leaping, resting low. Clear related evolutionary progression, no weapons, clothes, shields held in hands or extra limbs. Same proportions/design within each row. Soft frontal studio illumination on subject only, refined matte dimensional3D matching original. Keep the larger final creature at SAME central60% cell size by pulling camera back. No clipped shell or feet. No glow, sparkles, marks, labels, text, props, floor, floor shadows or environment.",
+  "references": [
+    "reference/rolyte-identity.png"
+  ],
+  "notes": "Preserves manifest-approved Rolyte mapping. Historical conversation called this original middle-stage Shelladin; discrepancy recorded, no canonical IDs changed. Evolutions newly inferred."
+}

@@ -99,6 +99,8 @@ function newPlayer(o){
 }
 function emptyLine(p){ return isPitcher(p) ? [0,0,0,0,0,0,0,0] : [0,0,0,0,0,0,0,0]; }
 
+// the comics and Wildkin builds run no league: same empty containers the rest of the engine expects, nothing in them
+function initNoLeague(){ G.players=[]; G.names={}; G.stand=TEAMS_DEF.map(()=>[0,0]); G.champs={}; G.awards={}; G.rookieClass={}; G.news=[]; G.rot=TEAMS_DEF.map(()=>0); }
 function initLeague(){
   G.players=[]; G.names={}; G.stand=TEAMS_DEF.map(()=>[0,0]); G.champs={}; G.awards={}; G.rookieClass={}; G.news=[]; G.rot=TEAMS_DEF.map(()=>0);
   const yr=2020;
@@ -300,6 +302,7 @@ function bumpHype(p, x){ p.hy = clamp(p.hy + x, -0.35, 0.6); }
 function addNews(h, b, pid, k){ G.news.unshift({t:G.day, h, b, p:pid, k}); if (G.news.length>320) G.news.length=320; }
 
 function simLeagueDay(t){
+  if (!packHas('sports')) return;
   const yr=yearOf(t), d=seasonDates(yr);
   if (t===d.ny) newYear(yr, true);
   if (t===d.open){ G.stand=TEAMS_DEF.map(()=>[0,0]); for(const p of G.players){ if(p.tm>=0) p.cur=emptyLine(p); } }
@@ -810,7 +813,7 @@ function makeNPCs(){
 function refreshNPCTastes(){
   const stars = G.players.filter(p=>p.tm!==-1 && (p.S>0.45 || p.war>30));
   for (const n of G.npcs){
-    if (n.ty==='pc' && !n.pids.length) n.pids = [pick(stars).id, pick(stars).id];
+    if (n.ty==='pc' && !n.pids.length && stars.length) n.pids = [pick(stars).id, pick(stars).id];
     if (n.ty==='set' && (n.setProd<0 || R()<0.02)){ const rel=releasedProducts().filter(p=>B(p).name!=='Summit Luxe'); if (rel.length) n.setProd = pick(rel.slice(-14)).id; }
   }
 }
@@ -1082,7 +1085,7 @@ function releaseTick(){
 function advanceDay(){
   G.day++;
   const t=G.day;
-  { const md=mdOf(t); if (md[0]===12 && md[1]===1 && !G.products.some(p=>p.yr===yearOf(t)+1)) scheduleYear(yearOf(t)+1); }
+  { const md=mdOf(t); if (packHas('sports') && md[0]===12 && md[1]===1 && !G.products.some(p=>p.yr===yearOf(t)+1)) scheduleYear(yearOf(t)+1); }
   simLeagueDay(t);
   releaseTick();
   for (const p of G.players){ p.S = playerScore(p); }
@@ -1206,8 +1209,8 @@ async function newGame(seed, prog){
     nextCid:1, nextSid:1, nextLid:1, live:false,
     player:{ cash:75, bought:0, sold:0, fees:0, packs:0, listed:0, skill:0, subs:[], returned:[], watch:[], follow:[], show:{}, opened:[], soldCards:[], notes:{}, tips:{}, pending:null, paid:0, start:0, fav:[] } };
   R = worldRnd; DCACHE.clear(); fvClear();
-  initLeague();
-  for (let yr=2020; yr<=2025; yr++){
+  if (packHas('sports')) initLeague(); else initNoLeague();           // comics and Wildkin builds have no baseball league
+  if (packHas('sports')) for (let yr=2020; yr<=2025; yr++){
     await prog(0.05+(yr-2020)*0.09, 'Playing the '+yr+' season');
     G.day = dateToDay(yr,1,12);
     if (yr===2020) G.rookieClass[2020] = G.players.filter(p=>p.dy===2020 && p.tm>=0).map(p=>p.id); else newYear(yr,false);
@@ -1219,7 +1222,7 @@ async function newGame(seed, prog){
     offseason(yr,false);
   }
   for (const p of G.players){ p.S=playerScore(p); careerTotals(p); markMilestones(p); }
-  G.day=dateToDay(2026,1,2); scheduleYear(2026);
+  G.day=dateToDay(2026,1,2); if (packHas('sports')) scheduleYear(2026);
   await prog(0.6,'Printing six years of cards'); makeNPCs(); refreshNPCTastes();
   G._npcCardIds=[];
   for (const prod of G.products.filter(p=>p.cl)) worldOpen(prod, B(prod).luxe? 40 : 190, null);
@@ -3346,7 +3349,7 @@ function makePrivate(fromDealer){
   else if (type==='indie'){ const runs=G.cm.ser.filter(x=>tierOf(x)>=2 && x.n>=4 && yearOf(x.st)>=2005).sort(()=>R()-0.5).slice(0,ri(4,9)); for (const x of runs) for (let n=1;n<=Math.min(x.n,30);n++) if (R()<0.7){ const cp=cmMakeCopy(mk(x.id,n,1,R()<0.08&&x.v[n]?x.v[n].split(',')[0]:''),own,null,'npc'); if (n===1 && R()<0.15) cp.sg={c:x.w, s:'u', real:R()<0.8?1:0}; add('m',cp); } }
   else if (type==='oldread'){ for (let i=0;i<ri(80,300);i++){ const cp=cmMakeCopy(randComicKey({old:1}),own,null,'lot'); cp.c=cp.c.map(v=>Math.max(5,v-ri(0,12))); add('m',cp); } }
   else if (type==='dealer'){ for (let i=0;i<ri(40,120);i++){ const cat=pick(['mod','slab','key','comic','pros','ocomic']); const e=acquireFor(s,cat); if (e) s.inv.push({t:e.t,id:e.id,d:G.day}); } }
-  else { for (let i=0;i<ri(40,160);i++){ if (HCOMIC() && (!HCARD() || R()<0.5)){ const cp=cmMakeCopy(randComicKey({old:R()<0.6}),own,null,'lot'); add('m',cp); } else add('c', makeCard(randCardKey({old:1}),own,null)); } if (R()<0.3){ const prod=pick(releasedProducts()); add('s', makeSealed(prod.id,fmtOf(prod,'hobby'),own,null)); } }
+  else { for (let i=0;i<ri(40,160);i++){ if (HCOMIC() && (!HCARD() || R()<0.5)){ const cp=cmMakeCopy(randComicKey({old:R()<0.6}),own,null,'lot'); add('m',cp); } else add('c', makeCard(randCardKey({old:1}),own,null)); } if (HCARD() && R()<0.3){ const prod=pick(releasedProducts()); add('s', makeSealed(prod.id,fmtOf(prod,'hobby'),own,null)); } }
   // what the seller believes it's worth: the highlights they know about, plus a bulk rate
   const ests=s.inv.map(e=>[e, sellerEst(s,e)]).sort((a,b)=>b[1]-a[1]);
   let perceived = 0; ests.forEach(([e,v],i)=>{ perceived += i<15 ? v*0.85 : Math.min(v,8)*0.55; });
@@ -6400,8 +6403,8 @@ const SCENARIOS = [
   {id:'storage', n:'The storage unit', d:'A semi-retired dealer\'s leftover stock, $1,200, and no allowance. Sell to eat.', cash:1200, pay:0},
   {id:'fan', n:'Diehard fan', d:'A shoebox of one team\'s cards from childhood, $200, and $40 a week. You already know who your guys are.', cash:200, pay:40},
   {id:'reader', n:'Pull-list reader', d:'You have read one series since issue #1, and you have every issue. $200 and $40 a week.', cash:200, pay:40},
-  {id:'tcgbinder', n:'The old binder', d:'A binder of cards from the first two sets that you actually played with, four unopened packs, $100 and $40 a week.', cash:100, pay:40},
-  {id:'tcgbox', n:'A box to open', d:'Two sealed boxes of the newest set and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
+  {id:'tcgbinder', n:'The old binder', d:'A binder of First Bond cards you actually played with since launch, four unopened packs, $100 and $40 a week.', cash:100, pay:40},
+  {id:'tcgbox', n:'A box to open', d:'Two sealed boxes of First Bond and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
   {id:'windfall', n:'Deep pockets', d:'$10,000 and no allowance. Nothing forces you. See how the market treats a whale.', cash:10000, pay:0}
 ];
 function pickScenario(){
@@ -6418,7 +6421,7 @@ function scnComic(key, how, from, note, src){ const c=cmMakeCopy(key,0,[G.day,ho
 function applyScenario(id){
   G._scnId=id; const sc=SCENARIOS.find(x=>x.id===id)||SCENARIOS[0]; const P_=G.player; P_.cash=sc.cash; P_.pay=sc.pay; P_.scn=sc.id; P_.scnN=sc.n;
   if (sc.id==='inherit'){ for (let i=0;i<ri(220,300);i++){ const key=randComicKey(R()<0.7?{old:1}:{}); const c=scnComic(key,'inherited','Uncle Ray','Inherited from Uncle Ray'); c.c=c.c.map(v=>Math.max(5,v-ri(0,10))); } }
-  else if (sc.id==='storage'){ for (let i=0;i<ri(50,70);i++) scnCard(randCardKey({old:R()<0.5,hit:R()<0.1}),'found','the storage unit','Came out of the storage unit'); if (packHas('comics')) for (let i=0;i<ri(180,230);i++) scnComic(randComicKey(R()<0.5?{}:{old:1}),'found','the storage unit','Came out of the storage unit'); for (let i=0;i<4;i++){ const prod=pick(releasedProducts()); makeSealed(prod.id, fmtOf(prod,R()<0.5?'blaster':'hobby'), 0, [G.day,'found',0,'the storage unit']); } }
+  else if (sc.id==='storage'){ if (packHas('sports')) for (let i=0;i<ri(50,70);i++) scnCard(randCardKey({old:R()<0.5,hit:R()<0.1}),'found','the storage unit','Came out of the storage unit'); if (packHas('comics')) for (let i=0;i<ri(180,230);i++) scnComic(randComicKey(R()<0.5?{}:{old:1}),'found','the storage unit','Came out of the storage unit'); if (packHas('sports')) for (let i=0;i<4;i++){ const prod=pick(releasedProducts()); makeSealed(prod.id, fmtOf(prod,R()<0.5?'blaster':'hobby'), 0, [G.day,'found',0,'the storage unit']); } }
   else if (sc.id==='fan'){
     const tm=ri(0,TEAMS_DEF.length-1); const pids=new Set(G.players.filter(p=>p.tm===tm||(p.tm===-1&&p.org===tm)).map(p=>p.id)); const prods=releasedProducts().slice(-5); const keys=[];
     for (const prod of prods){ prod.cl.base.forEach((e,i)=>{ if (pids.has(e[0])) keys.push(dk(prod,'b',i,'')); }); }
@@ -6995,6 +6998,16 @@ if (PACK.id==='comics'){ UI.sub.comics='home'; }
 // ---- the Wildkin game: its own home, shop and collection ----
 if (PACK.id==='tcg'){
   UI.tcs='shop';
+  // Prototype saves (made before the Version 1 cards) are kept exactly as they are and are never loaded into the Version 1 world:
+  // their cards were prototype creatures that no longer exist. The launcher labels them and offers a backup or a new game.
+  const _smn=slotMetaNow; slotMetaNow=function(){ const m=_smn(); if (G&&G.tcg) m.cv=G.tcg.cv||0; return m; };
+  const tcLegacyMeta=m=>m&&m.day!=null&&!(m.cv>=TC_CV);
+  const _scd=slotCard; slotCard=function(r){ const h=_scd(r); return tcLegacyMeta(r.meta)? h.replace('<span class="dim">','<span class="lleg">Prototype save, from before the First Bond cards. Kept as it is.</span><span class="dim">') : h; };
+  const _sop=shellOpen; shellOpen=async function(id){ try { const x=await slotRead(id); const g=await unpackBytes(x.bytes,x.enc); if (tcIsLegacy(g)) return tcShowLegacy(x.rec); } catch(e){ console.warn(e); } return _sop(id); };
+  window.tcShowLegacy=function(rec){ const el=launchEl(); el.innerHTML=`<div class="lwrap"><div class="lhead small"><h1>A prototype save</h1><p>${esc(rec.name)}</p></div>
+    <div class="lmsg">This game was saved with the prototype Wildkin cards, before the Version 1 set (First Bond). Those prototype creatures were replaced, so this save cannot be played in this version. Nothing in it has been changed or deleted.</div>
+    <p class="lnote">Download a backup to keep it. You can start a new First Bond game alongside it.</p>
+    <div class="lrow"><button class="lbtn big" data-lact="export" data-id="${rec.id}">Download a backup</button></div><div class="lrow"><button class="lbtn" data-lact="new">Start a new game</button><button class="lbtn" data-lact="back">Back</button></div></div>`; };
   const _tcsP=ACT.tcs; ACT.tcs=a=>{ if (a==='coll'){ UI.tab='coll'; UI.sub.coll='cards'; render(true); return; } if (a==='home'){ UI.tab='home'; render(true); return; } if (UI.tab!=='shop') UI.tab='shop'; _tcsP(a); };
   VIEWS.shop=()=>`<div class="pagetitle"><h1>Wildkin</h1><span class="muted small">The card game</span></div>${tcView()}`;
   VIEWS.home=()=>{ const t=collectionTotals(); const n=rvQueue().length;

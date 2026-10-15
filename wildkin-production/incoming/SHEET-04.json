@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-04",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-04 NEW square PNG minimum native 1254x1254. Exactly 3 rows x3 columns, thin straight black gutters, 9 equal square cells. ONE COMPLETE creature in each cell. All bodies including fins, whiskers and tails fit comfortably in central 65 percent of cell, leaving at least 15 percent empty on ALL sides. Use perfectly uniform flat chroma green RGB(40,160,60) with no gradient, NO floor shadows. Attached SINGLE character is KOIRUNE FINAL FORM, keep it EXACTLY in bottom row: orange-and-cream koi-dragon with four cream clawed paws, elongated orange-scaled body and cream plated belly, cream cheek fins and white/orange tall dorsal fin, long curled orange/white plume tail, two long fine cream whiskers, huge brown eyes, friendly rounded expressive face. Row1 cells1-3 KOILET baby precursor: small plump short-bodied quadrupedal koi-dragon, same orange/cream markings, brown eyes, short cheek fins, stubby whiskers and short finned tail. Pose1 standing on 4 paws, pose2 airborne leap, pose3 seated. Row2 cells4-6 RUNAKOI adolescent: visibly longer body and tail than baby, medium swept cheek fins and dorsal fin, medium cream whiskers; same colors and face lineage. Poses standing, leaping, sitting. Row3 cells7-9 KOIRUNE exactly matches attached approved mature character. Poses standing quadruped, airborne swimming leap, sitting on haunches. Preserve identical anatomy, markings, proportions within each row. Three stages visibly distinct but related. No horns or wings, no accessories. Soft frontal studio lighting, polished friendly dimensional 3D matte renderer, fine scale detail. No text, symbols, sparkles, glow, motion lines, environmental objects, ground, shadows or card frames. Do not allow any tail or whisker to touch border. Neutral flat backdrop must NOT inherit reference shading.",
+  "references": [
+    "reference/koirune-identity.png"
+  ],
+  "continuity": "Original koi-dragon mapped to Koirune final form by recovered conversation. Koilet and Runakoi inferred precursors."
+}

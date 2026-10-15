@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art lab</title>
+<style>
+:root{--bg:#14161b;--card:#1d2128;--line:#343a44;--ink:#e9ecef;--mut:#9aa3af;--acc:#8e44ad;--bad:#ff5a4d;--ok:#4cc38a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,sans-serif;padding:0 16px 48px}
+main{max-width:980px;margin:0 auto}
+h1{font-size:24px;margin:20px 0 4px}h2{font-size:18px;margin:26px 0 8px}
+p{margin:6px 0;color:var(--mut)}
+.tabs{display:flex;gap:8px;margin:14px 0}
+.tabs button{flex:1;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer}
+.tabs button.on{background:var(--acc);border-color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(9,1fr)}}
+.cell{background:#808080;border-radius:6px;aspect-ratio:3/4;position:relative;display:flex;align-items:center;justify-content:center;padding:6px;outline:3px solid transparent}
+.cell img{max-width:100%;max-height:100%;object-fit:contain}
+.cell.flag{outline-color:var(--bad)}
+.cell .nm{position:absolute;left:4px;top:3px;font-size:11px;color:#111;background:#ffffffaa;border-radius:4px;padding:0 4px}
+.cell .fl{position:absolute;left:4px;right:4px;bottom:3px;font-size:11px;color:#fff;background:var(--bad);border-radius:4px;padding:1px 4px;text-align:center}
+.sum{padding:10px 12px;border-radius:10px;background:var(--card);border:1px solid var(--line);margin:10px 0}
+.sum b.bad{color:var(--bad)}.sum b.ok{color:var(--ok)}
+.ctl{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media(min-width:700px){.ctl{grid-template-columns:1fr 1fr 1fr}}
+label{display:block;font-size:13px;color:var(--mut)}
+select,input[type=range]{width:100%;margin-top:4px}
+select{padding:10px;border-radius:8px;background:var(--card);color:var(--ink);border:1px solid var(--line);font-size:15px}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0;align-items:center}
+.row label{display:flex;align-items:center;gap:6px;color:var(--ink)}
+canvas{width:100%;max-width:640px;display:block;border-radius:12px;border:1px solid var(--line);background:#000;margin:8px 0}
+.note{font-size:13px}
+#err{color:var(--bad)}
+</style></head><body><main>
+<h1>Art lab</h1>
+<p>Review page for the cut art in <code>assets/</code>. Nothing here is part of the games.</p>
+<div class="tabs"><button id="t1" class="on">Cutouts on grey</button><button id="t2">Compose a scene</button></div>
+<div id="err"></div>
+
+<section id="lib"></section>
+
+<section id="cmp" hidden>
+ <div class="ctl">
+  <label>Creature<select id="cr"></select></label>
+  <label>Pose<select id="po"></select></label>
+  <label>Scene<select id="sc"></select></label>
+ </div>
+ <div class="ctl">
+  <label>Left / right<input id="px" type="range" min="8" max="92" value="50"></label>
+  <label>Nearer / further (floor position)<input id="py" type="range" min="0" max="100" value="60"></label>
+  <label>Size<input id="sz" type="range" min="50" max="160" value="100"></label>
+ </div>
+ <div class="row">
+  <label><input id="lt" type="checkbox" checked> Match the scene's light (tint, rim light, shadow)</label>
+  <label>Light from <select id="ls" style="width:auto"><option value="auto">auto (brighter side of the scene)</option><option value="l">left</option><option value="r">right</option></select></label>
+ </div>
+ <canvas id="cv" width="900" height="900"></canvas>
+ <p class="note" id="info"></p>
+</section>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+let M=null, BASE='';
+const IMG=new Map();
+const loadImg=src=>{ if(!IMG.has(src)) IMG.set(src,new Promise((ok,no)=>{ const i=new Image(); i.onload=()=>ok(i); i.onerror=()=>no(new Error('cannot load '+src)); i.src=src; })); return IMG.get(src); };
+async function boot(){
+  for (const b of ['assets/','../assets/']){ try{ const r=await fetch(b+'manifest.json'); if(r.ok){ M=await r.json(); BASE=b; break; } }catch(e){} }
+  if(!M){ $('#err').textContent='Could not load assets/manifest.json. Open this page through a web server (not by double-clicking the file).'; return; }
+  library(); composer();
+}
+// ---------- tab 1: every cutout on grey ----------
+function library(){
+  const names=Object.keys(M.creature_info); let flagged=0, total=0; let h='';
+  for (const n of names){
+    const ps=M.creatures.filter(c=>c.name===n); const info=M.creature_info[n]; const bad=ps.filter(p=>p.touches_edge); flagged+=bad.length; total+=ps.length;
+    h+=`<h2>${n} <span style="font-size:13px;color:var(--mut)">${ps[0].screen} screen, ${info.move.join(' + ')}${bad.length?`, <span style="color:var(--bad)">${bad.length} touching the edge</span>`:''}</span></h2><div class="grid">`;
+    for (const p of ps){
+      const m=p.margins_LTRB, sides=['left','top','right','bottom'].filter((s,i)=>m[i]<3);
+      h+=`<div class="cell ${p.touches_edge?'flag':''}"><span class="nm">${p.pose}</span><img loading="lazy" src="${BASE}${p.file.replace(/^assets\//,'')}" alt="${p.id}">${p.touches_edge?`<span class="fl">touches ${sides.join(' + ')}</span>`:''}</div>`;
+    }
+    h+='</div>';
+  }
+  $('#lib').innerHTML=`<div class="sum"><b class="${flagged?'bad':'ok'}">${flagged} of ${total}</b> cutouts touch the edge of their cell on the sheet (red outline). That usually means an ear, tail or whisker was clipped by the generator, so ask for more margin on those poses. Grey is plain #808080.</div>`+h;
+}
+// ---------- tab 2: compose ----------
+// time of day -> tint (multiplied into the creature), rim light colour and strength, shadow strength
+const LIGHT={
+  day:   {tint:[255,250,243], rim:[255,238,200], rimK:0.55, shadow:0.34},
+  dusk:  {tint:[255,196,164], rim:[255,150,92],  rimK:0.95, shadow:0.28},
+  night: {tint:[118,140,208], rim:[150,186,255], rimK:0.95, shadow:0.22},
+  indoor:{tint:[255,228,196], rim:[255,214,150], rimK:0.6,  shadow:0.30}
+};
+function composer(){
+  const names=Object.keys(M.creature_info);
+  $('#cr').innerHTML=names.map(n=>`<option>${n}</option>`).join('');
+  $('#cr').onchange=()=>{ fillPoses(); fillScenes(); draw(); };
+  for (const id of ['po','sc','px','py','sz','lt','ls']) $('#'+id).oninput=draw;
+  fillPoses(); fillScenes(); draw();
+}
+function fillPoses(){ const n=$('#cr').value; $('#po').innerHTML=M.creatures.filter(c=>c.name===n).map(c=>`<option>${c.pose}</option>`).join(''); $('#po').value='standing'; }
+// walkers only on ground scenes; swimmers and floaters only on water (or air) scenes
+function floorsFor(n){ const mv=M.creature_info[n].move; const f=new Set(); if(mv.includes('walker')) f.add('ground'); if(mv.includes('swimmer')||mv.includes('floater')){ f.add('water'); f.add('air'); } return f; }
+function fillScenes(){
+  const n=$('#cr').value, ok=floorsFor(n), keep=$('#sc').value; let h='';
+  for (const b of [...new Set(M.scenes.map(s=>s.biome))]){
+    const ss=M.scenes.filter(s=>s.biome===b && ok.has(s.floor)); if(!ss.length) continue;
+    h+=`<optgroup label="${b}">`+ss.map(s=>`<option value="${s.id}">${s.id.split('-')[1]} ${s.description} (${s.time}, ${s.floor})</option>`).join('')+'</optgroup>';
+  }
+  $('#sc').innerHTML=h; if([...$('#sc').options].some(o=>o.value===keep)) $('#sc').value=keep;
+}
+const mix=(a,b,k)=>a.map((v,i)=>Math.round(v*(1-k)+b[i]*k));
+function sceneStats(img){
+  // brighter side of the sky half, and the average colour of the floor band; falls back quietly if the browser blocks pixel reads
+  try{
+    const c=document.createElement('canvas'); c.width=c.height=48; const x=c.getContext('2d',{willReadFrequently:true}); x.drawImage(img,0,0,48,48); const d=x.getImageData(0,0,48,48).data;
+    let l=0,r=0,fr=0,fg=0,fb=0,fn=0; const lum=i=>0.3*d[i]+0.59*d[i+1]+0.11*d[i+2];
+    for(let y=0;y<48;y++)for(let xx=0;xx<48;xx++){ const i=(y*48+xx)*4; if(y<26){ if(xx<24) l+=lum(i); else r+=lum(i); } if(y>=34){ fr+=d[i];fg+=d[i+1];fb+=d[i+2];fn++; } }
+    return {side:r>=l?1:-1, floor:[fr/fn,fg/fn,fb/fn]};
+  }catch(e){ return {side:1,floor:null}; }
+}
+let busy=false, again=false;
+async function draw(){
+  if(busy){ again=true; return; } busy=true;
+  try{ await render(); }catch(e){ $('#err').textContent=String(e.message||e); } busy=false; if(again){ again=false; draw(); }
+}
+async function render(){
+  const n=$('#cr').value, pose=$('#po').value, sid=$('#sc').value; if(!sid) return;
+  const sc=M.scenes.find(s=>s.id===sid), pc=M.creatures.find(c=>c.name===n&&c.pose===pose), st=M.creatures.find(c=>c.name===n&&c.pose==='standing'), info=M.creature_info[n];
+  const [simg,cimg]=await Promise.all([loadImg(BASE+sc.file.replace(/^assets\//,'')),loadImg(BASE+pc.file.replace(/^assets\//,''))]);
+  const cv=$('#cv'), ctx=cv.getContext('2d'), W=cv.width, H=cv.height; ctx.clearRect(0,0,W,H); ctx.imageSmoothingQuality='high'; ctx.drawImage(simg,0,0,W,H);
+  const stats=sceneStats(simg), on=$('#lt').checked, L=LIGHT[sc.time]||LIGHT.day;
+  const ls=$('#ls').value, side=ls==='l'?-1:ls==='r'?1:stats.side;
+  const t=$('#py').value/100, fy=0.72+0.23*t;                                   // floor line (fraction of scene height)
+  const persp=(0.8+0.4*t)/1.04;                                                  // further away = smaller
+  const hero=0.46*info.size*persp*($('#sz').value/100);                          // standing pose height as a fraction of the scene
+  const s=hero*H/st.size[1], w=pc.size[0]*s, h=pc.size[1]*s;                     // one scale for every pose of a creature, so poses stay in proportion
+  const floater=sc.floor!=='ground' && info.move.includes('floater'), swim=sc.floor==='water' && !floater;
+  const cx=W*$('#px').value/100, hover=floater? H*0.09 : 0, bottom=H*fy-hover, x0=cx-w/2, y0=bottom-h;
+  // sprite, lit for the scene
+  const spr=document.createElement('canvas'); spr.width=Math.ceil(w); spr.height=Math.ceil(h); const sx=spr.getContext('2d'); sx.imageSmoothingQuality='high'; sx.drawImage(cimg,0,0,spr.width,spr.height);
+  if(on){
+    let tint=L.tint; if(stats.floor){ const m=Math.max(...stats.floor,1), amb=stats.floor.map(v=>v/m*255); tint=mix(tint,amb.map((v,i)=>v*tint[i]/255),0.3); }
+    sx.globalCompositeOperation='multiply'; sx.fillStyle=`rgb(${tint})`; sx.fillRect(0,0,spr.width,spr.height); sx.globalCompositeOperation='destination-in'; sx.drawImage(cimg,0,0,spr.width,spr.height);
+    // rim light: the sprite's own outline minus a copy nudged away from the light leaves a thin bright edge on the lit side
+    const rc=document.createElement('canvas'); rc.width=spr.width; rc.height=spr.height; const rx=rc.getContext('2d'); const e=Math.max(2,Math.round(w/70));
+    rx.drawImage(cimg,0,0,spr.width,spr.height); rx.globalCompositeOperation='source-in'; rx.fillStyle=`rgb(${L.rim})`; rx.fillRect(0,0,rc.width,rc.height);
+    rx.globalCompositeOperation='destination-out'; rx.drawImage(cimg,-side*e,e*0.9,spr.width,spr.height);
+    sx.globalCompositeOperation='screen'; sx.globalAlpha=L.rimK; sx.filter='blur(0.6px)'; sx.drawImage(rc,0,0); sx.filter='none'; sx.globalAlpha=1;
+    sx.globalCompositeOperation='destination-in'; sx.drawImage(cimg,0,0,spr.width,spr.height); sx.globalCompositeOperation='source-over';
+  }
+  // contact shadow (ground and hovering) or ripples (water)
+  const sh=(cx2,cy2,rx2,ry2,a)=>{ ctx.save(); ctx.translate(cx2,cy2); ctx.scale(1,ry2/rx2); const g=ctx.createRadialGradient(0,0,0,0,0,rx2); g.addColorStop(0,`rgba(0,0,0,${a})`); g.addColorStop(1,'rgba(0,0,0,0)'); ctx.fillStyle=g; ctx.beginPath(); ctx.arc(0,0,rx2,0,7); ctx.fill(); ctx.restore(); };
+  const gy=H*fy;
+  if(sc.floor==='ground') sh(cx-side*w*0.06,gy-h*0.01,w*0.46,w*0.09,L.shadow*1.4);
+  else { sh(cx-side*w*0.04,gy+h*0.02,w*(floater?0.34:0.5),w*0.08,L.shadow*(floater?0.9:0.6)); }
+  if(swim||floater){ ctx.save(); ctx.globalAlpha=0.16; ctx.translate(0,bottom*2+ (swim?h*0.0:0)); ctx.scale(1,-1); ctx.drawImage(spr,x0,y0); ctx.restore(); }   // faint reflection
+  ctx.drawImage(spr,x0,y0);
+  if(swim){                                                                    // sit in the water: the lower part of the body is tinted by the water and a ripple ring crosses it
+    const wl=h*0.80, wc=document.createElement('canvas'); wc.width=spr.width; wc.height=spr.height; const wx=wc.getContext('2d'); const f=stats.floor||[60,170,190];
+    const gr=wx.createLinearGradient(0,wl,0,h); gr.addColorStop(0,`rgba(${f.map(Math.round)},0.0)`); gr.addColorStop(0.15,`rgba(${f.map(Math.round)},0.55)`); gr.addColorStop(1,`rgba(${f.map(Math.round)},0.8)`);
+    wx.fillStyle=gr; wx.fillRect(0,wl,wc.width,wc.height-wl); wx.globalCompositeOperation='destination-in'; wx.drawImage(spr,0,0); ctx.drawImage(wc,x0,y0);
+    ctx.strokeStyle='rgba(255,255,255,0.45)'; ctx.lineWidth=Math.max(1.5,w/90); ctx.beginPath(); ctx.ellipse(cx,y0+wl,w*0.52,w*0.07,0,0,7); ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,0.2)'; ctx.beginPath(); ctx.ellipse(cx,y0+wl,w*0.72,w*0.1,0,0,7); ctx.stroke();
+  }
+  $('#info').textContent=`${n} (${info.move.join(' + ')}) in ${sc.id}: ${sc.description}. Time: ${sc.time}. Floor: ${sc.floor}. Light from the ${side>0?'right':'left'}. Tags: ${sc.tags.join(', ')}.`;
+  $('#err').textContent='';
+}
+$('#t1').onclick=()=>{ $('#lib').hidden=false; $('#cmp').hidden=true; $('#t1').classList.add('on'); $('#t2').classList.remove('on'); };
+$('#t2').onclick=()=>{ $('#lib').hidden=true; $('#cmp').hidden=false; $('#t2').classList.add('on'); $('#t1').classList.remove('on'); draw(); };
+boot();
+</script></body></html>

@@ -1,0 +1,203 @@
+{
+ "task": "SHEET-03",
+ "file": "wildkin-production/incoming/SHEET-03--v2.png",
+ "sha256": "20e200697429ca4863e3f5f7210cace0f746987f8dd586638e28b1112801248b",
+ "checked": "2026-10-14T01:42:33Z",
+ "errors": [
+  "cell 7: subject touches the cell edge (clipped): right",
+  "cell 8: subject touches the cell edge (clipped): left+top",
+  "cell 9: subject touches the cell edge (clipped): left"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 4: margin is tight (6 px); the spec asks for about 10%",
+  "cell 5: margin is tight (8 px); the spec asks for about 10%",
+  "cell 6: margin is tight (11 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.005-bashlet.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2956,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    59,
+    68,
+    44,
+    49
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.033
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.005-bashlet.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2971,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    39,
+    44,
+    25,
+    80
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.033
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.005-bashlet.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2753,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    63,
+    112,
+    36,
+    49
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.032
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.006-maceback.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.441,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    12,
+    41,
+    6,
+    27
+   ],
+   "notes": [
+    "margin is tight (6 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.027
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.006-maceback.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4371,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    25,
+    11,
+    8,
+    44
+   ],
+   "notes": [
+    "margin is tight (8 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.006-maceback.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4056,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    30,
+    73,
+    11,
+    29
+   ],
+   "notes": [
+    "margin is tight (11 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.027
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.007-fortisaur.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5345,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    8,
+    11,
+    0,
+    27
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.007-fortisaur.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): left+top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5052,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    0,
+    10,
+    33
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.028
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.007-fortisaur.sitting",
+   "errors": [
+    "subject touches the cell edge (clipped): left"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.5828,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    0,
+    40,
+    6,
+    26
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.021
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-03",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-03 revision. NEW square PNG native1254x1254 minimum. EXACT equal3x3 grid thin black gutters. Nine SMALL full-body creatures. Each entire creature INCLUDING mace tail/spikes fits inside CENTRAL60% width/height of cell leaving80px green margin. Do NOT enlarge later stages to fill cells. Uniform chroma green RGB40,160,60, no floor shadow or background gradients. Attached triptych identity ONLY: left Bashlet blue baby ankylosaur, middle Maceback stocky blue armored ankylosaur, right Fortisaur regal powerful blue ankylosaur. Reproduce exact reference designs. ROW1: Bashlet standing; jumping; sitting. ROW2: Maceback standing; jumping; sitting. ROW3: Fortisaur standing; jumping; sitting. All four-legged with cream belly/face, brown eyes, blue plated stone shells and cream spikes, blue spiked club tails. Maceback has much heavier shell and mace than Bashlet; Fortisaur large angular cream shoulder armor/spikes and massive mace, strong mature silhouette. Identical stage markings/anatomy within each row. Soft frontal studio light on subject only, matte dimensional3D same reference renderer. Absolutely no text, environment, glow, effect marks, ground/shadows. Visible GREEN GAP80PX between every appendage and EVERY cell border. Keep tails curled inward to fit. No chopped clubs or paws.",
+  "references": [
+   "reference/recovered/Blue-Scaled Ankylosaur Evolution Triptych.png"
+  ],
+  "notes": "Margin correction. All stages reference original triptych. Existing approved Bashlet cells retained."
+ }
+}

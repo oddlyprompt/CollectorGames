@@ -1,0 +1,177 @@
+{
+ "task": "SHEET-25",
+ "file": "wildkin-production/incoming/SHEET-25.png",
+ "sha256": "6d905aed8ff87dad909d46d39fc9624948c60e1c0b7b17916327299e83b934eb",
+ "checked": "2026-10-14T01:49:03Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.060-driftail.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2368,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    44,
+    112,
+    48,
+    78
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.035
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.060-driftail.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2271,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    58,
+    84,
+    42,
+    79
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.037
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.060-driftail.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2341,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    79,
+    104,
+    45,
+    74
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.032
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.061-craggle.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2602,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    56,
+    92,
+    45,
+    87
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.03
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.061-craggle.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2475,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    68,
+    44,
+    66,
+    81
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.061-craggle.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2615,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    75,
+    84,
+    46,
+    74
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.025
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.062-tumbear.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4065,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    54,
+    49,
+    45,
+    65
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.017
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.062-tumbear.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3571,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    44,
+    22,
+    67,
+    54
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.018
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.062-tumbear.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3736,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    54,
+    47,
+    54,
+    61
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.015
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-25",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-25 production PNG sheet, exactly 3x3 equal square cells, thin near-black gutters at thirds, at least 1254x1254. Dimensional 3D toy rendering, even front lighting. ALL backgrounds perfectly FLAT RGB(40,160,60) green, no shading of screen, no shadows, no floor plane. IMPORTANT: miniatures remain SMALL, centered, maximum 55% cell width and height, 22% blank margin on every side. Do not make bottom row larger. Driftail: soft pale blue otter with cream face and wavy blue tail. Craggle: round gray rock gecko with ochre pebble spikes and cream belly. Tumbear: plump tan bear with slate stone shoulder plates and cream face. Three species one row each.. Exact cell order left-right top-bottom: 1: Driftail standing; 2: Driftail jumping; 3: Driftail sitting; 4: Craggle standing; 5: Craggle jumping; 6: Craggle sitting; 7: Tumbear standing; 8: Tumbear jumping; 9: Tumbear sitting. All stages visually distinct. All poses of each species have identical colors, proportions and markings. No external glows, text, sparkle, symbols, frames. Full subjects including tails and wings.",
+  "notes": "Inferred production design within confirmed manifest. Not established canon until approval."
+ }
+}

@@ -1,0 +1,181 @@
+# Appendix A of design/wildkin-v1-production-bible.md, extracted by script (no hand edits). number<TAB>section<TAB>roster name
+001	creature	Cactuft
+002	creature	Prismotl
+003	creature	Opalotl
+004	creature	Aurorotl
+005	creature	Bashlet
+006	creature	Maceback
+007	creature	Fortisaur
+008	creature	Koilet
+009	creature	Runakoi
+010	creature	Koirune
+011	creature	Rolyte
+012	creature	Shelladin
+013	creature	Aegisopod
+014	creature	Frondolin
+015	creature	Pangrove
+016	creature	Canopang
+017	creature	Candicoil
+018	creature	Spiramel
+019	creature	Creskit
+020	creature	Astrynx
+021	creature	Berribat
+022	creature	Pompyre
+023	creature	Flapod
+024	creature	Mistip
+025	creature	Cumulfin
+026	creature	Nimbusail
+027	creature	Cindikit
+028	creature	Emberuff
+029	creature	Pyrenox
+030	creature	Breezit
+031	creature	Gustrel
+032	creature	Tempestral
+033	creature	Glimlet
+034	creature	Hushwing
+035	creature	Veilmora
+036	creature	Rivbit
+037	creature	Boltusk
+038	creature	Ferradon
+039	creature	Pebblamb
+040	creature	Cairnram
+041	creature	Monolox
+042	creature	Quibbit
+043	creature	Whimhare
+044	creature	Fablehorn
+045	creature	Mossnip
+046	creature	Bramblebuck
+047	creature	Reefkin
+048	creature	Corallume
+049	creature	Sootkit
+050	creature	Smolderlynx
+051	creature	Zephroo
+052	creature	Cometrail
+053	creature	Nibrock
+054	creature	Drillbadger
+055	creature	Dewink
+056	creature	Bloomble
+057	creature	Fernibble
+058	creature	Acornox
+059	creature	Shelloop
+060	creature	Driftail
+061	creature	Craggle
+062	creature	Tumbear
+063	creature	Nutbolt
+064	creature	Clampup
+065	creature	Ashhopper
+066	creature	Coaloo
+067	creature	Kitecoon
+068	creature	Thundrop
+069	creature	Orbitot
+070	creature	Lunapip
+071	creature	Mothmur
+072	creature	Winkrow
+073	creature	Puffluff
+074	creature	Oddoodle
+075	ally	Professor Maren Vale
+076	ally	June Kestrel
+077	ally	Warden Sorrel Pike
+078	ally	Toma Reed
+079	ally	Lita Moss
+080	ally	Nessa Flint
+081	ally	Elder Oren
+082	ally	Pip Rowan
+083	ally	Archivist Sera Wynn
+084	ally	Renn Calder
+085	ally	Mira Quill
+086	ally	Sel Veyra
+087	ally	Cass Rell
+088	ally	Dr. Cyl Vane
+089	ally	Marshal Rook
+090	ally	Iris Shade
+091	ally	Dex Harrow
+092	ally	Brin Hollow
+093	gear	Bond Charm
+094	gear	Keeper Satchel
+095	gear	Rescue Whistle
+096	gear	Biome Compass
+097	gear	Glow Lantern
+098	gear	Trail Rations
+099	gear	Medic Salve
+100	gear	Echo Flute
+101	gear	Tide Lure
+102	gear	Thermal Cloak
+103	gear	Climbing Line
+104	gear	Field Scope
+105	gear	Wildseed Treat
+106	gear	Sanctuary Bell
+107	gear	Veyra Snare
+108	gear	Clasp Rig
+109	gear	Null Collar
+110	gear	Purity Sigil
+111	biome	Verdant Canopy
+112	biome	Tideglass Bay
+113	biome	Stoneback Range
+114	biome	Ironroot Basin
+115	biome	Ember Crags
+116	biome	Stormreach Heights
+117	biome	Astral Steppe
+118	biome	Duskmire
+119	biome	Wondergrove
+120	tactic	First Bond
+121	tactic	Call of the Wild
+122	tactic	Sanctuary Rescue
+123	tactic	Keeper's Lesson
+124	tactic	Pack Rally
+125	tactic	Quick Retreat
+126	tactic	Shared Instinct
+127	tactic	Veyra Directive
+128	tactic	Forced Capture
+129	tactic	Override Signal
+130	tactic	Break the Clasp
+131	tactic	Stand Together
+132	essence	Verdant
+133	essence	Tide
+134	essence	Stone
+135	essence	Iron
+136	essence	Ember
+137	essence	Storm
+138	essence	Astral
+139	essence	Dusk
+140	essence	Wonder
+141	premium	Cactuft IR
+142	premium	Prismotl IR
+143	premium	Bashlet IR
+144	premium	Koirune IR
+145	premium	Shelladin IR
+146	premium	Frondolin IR
+147	premium	Candicoil IR
+148	premium	Astrynx IR
+149	premium	Berribat IR
+150	premium	Flapod IR
+151	premium	Cactuft FA
+152	premium	Aurorotl FA
+153	premium	Fortisaur FA
+154	premium	Koirune FA
+155	premium	Aegisopod FA
+156	premium	Canopang FA
+157	premium	Spiramel FA
+158	premium	Astrynx FA
+159	premium	Pompyre FA
+160	premium	Flapod FA
+161	premium	Nimbusail IR
+162	premium	Veilmora IR
+163	premium	Ferradon IR
+164	premium	Fablehorn IR
+165	premium	Bramblebuck IR
+166	premium	Corallume IR
+167	premium	Cometrail IR
+168	premium	Puffluff IR
+169	premium	Professor Maren Vale FA
+170	premium	June Kestrel FA
+171	premium	Sel Veyra FA
+172	premium	Iris Shade FA
+173	premium	Cactuft SIR
+174	premium	Nimbusail SIR
+175	premium	June Kestrel SIR
+176	premium	Sel Veyra SIR
+177	premium	Clasped Aegisopod
+178	premium	Clasped Pompyre
+179	premium	Clasped Ferradon
+180	premium	Clasped Veilmora

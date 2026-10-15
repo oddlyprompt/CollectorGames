@@ -1,0 +1,186 @@
+{
+ "task": "SHEET-17",
+ "file": "wildkin-production/incoming/SHEET-17.png",
+ "sha256": "6af4484bb2de489574542ed2c9218c69842c6d1dfd1cc7b3b05d1dd2d3b75eee",
+ "checked": "2026-10-14T01:47:38Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [
+  "cell 7: margin is tight (13 px); the spec asks for about 10%",
+  "cell 8: margin is tight (7 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.042-quibbit.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1493,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    114,
+    75,
+    114,
+    81
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.042-quibbit.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1773,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    106,
+    68,
+    96,
+    96
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.041
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.042-quibbit.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1506,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    111,
+    87,
+    113,
+    82
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.043-whimhare.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.208,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    84,
+    50,
+    90,
+    61
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.061
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.043-whimhare.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2195,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    66,
+    41,
+    44,
+    98
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.055
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.043-whimhare.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2001,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    93,
+    69,
+    86,
+    67
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.053
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.044-fablehorn.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2527,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    94,
+    13,
+    91,
+    45
+   ],
+   "notes": [
+    "margin is tight (13 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.058
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.044-fablehorn.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2524,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    63,
+    7,
+    59,
+    79
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.054
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.044-fablehorn.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2521,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    97,
+    16,
+    86,
+    56
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.045
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-17",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-17 production PNG sheet, exactly 3x3 equal square cells, thin near-black gutters at thirds, at least 1254x1254. Dimensional 3D toy rendering, even front lighting. ALL backgrounds perfectly FLAT RGB(40,160,60) green, no shading of screen, no shadows, no floor plane. IMPORTANT: miniatures remain SMALL, centered, maximum 55% cell width and height, 22% blank margin on every side. Do not make bottom row larger. Quibbit tiny cream rabbit with rose ears, amber eyes and a single small forehead bud; Whimhare elegant cream peach hare with leafy ear edges, rose eye accents and small pearl horn; Fablehorn mature luminous ivory jackalope with branched pearlescent antlers, lilac mane and rose ears. Wonder affinity without external glows.. Exact cell order left-right top-bottom: 1: Quibbit standing; 2: Quibbit jumping; 3: Quibbit sitting; 4: Whimhare standing; 5: Whimhare jumping; 6: Whimhare sitting; 7: Fablehorn standing; 8: Fablehorn jumping; 9: Fablehorn sitting. All stages visually distinct. All poses of each species have identical colors, proportions and markings. No external glows, text, sparkle, symbols, frames. Full subjects including tails and wings.",
+  "notes": "Inferred production design within confirmed manifest. Not established canon until approval."
+ }
+}

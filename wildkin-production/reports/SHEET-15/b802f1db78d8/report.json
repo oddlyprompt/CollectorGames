@@ -1,0 +1,180 @@
+{
+ "task": "SHEET-15",
+ "file": "wildkin-production/incoming/SHEET-15--v2.png",
+ "sha256": "b802f1db78d837f750b152076d5450f4b847e0347109dab07a34b9380aa31326",
+ "checked": "2026-10-15T05:45:12Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.036-rivbit.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0883,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    124,
+    127,
+    131,
+    116
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.062
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.036-rivbit.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0941,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    119,
+    109,
+    110,
+    125
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.055
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.036-rivbit.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.086,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    122,
+    128,
+    136,
+    113
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.053
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.037-boltusk.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1476,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    103,
+    101,
+    103,
+    106
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.047
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.037-boltusk.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1307,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    105,
+    89,
+    102,
+    128
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.048
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.037-boltusk.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1338,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    111,
+    100,
+    122,
+    101
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.039
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.038-ferradon.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2036,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    88,
+    82,
+    88,
+    98
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.042
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.038-ferradon.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1857,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    87,
+    76,
+    84,
+    125
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.038-ferradon.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2057,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    87,
+    72,
+    98,
+    94
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-15",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+  "references": [
+   "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+  ],
+  "notes": "QA revision; preserve previous version."
+ }
+}

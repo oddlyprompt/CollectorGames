@@ -1,0 +1,207 @@
+{
+ "task": "SHEET-30",
+ "file": "wildkin-production/incoming/SHEET-30--v2.png",
+ "sha256": "1c66e7d85689c503b59f53a728c9d097deaea122b2afe9535973ceb73a20a2b0",
+ "checked": "2026-10-14T01:50:20Z",
+ "errors": [
+  "cell 2: subject touches the cell edge (clipped): bottom",
+  "cell 4: subject touches the cell edge (clipped): bottom",
+  "cell 5: subject touches the cell edge (clipped): bottom",
+  "cell 6: subject touches the cell edge (clipped): bottom",
+  "cell 7: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 1: margin is tight (3 px); the spec asks for about 10%",
+  "cell 3: margin is tight (3 px); the spec asks for about 10%",
+  "cell 9: margin is tight (12 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.075-professor-maren-vale.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2199,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    104,
+    45,
+    109,
+    3
+   ],
+   "notes": [
+    "margin is tight (3 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.076-june-kestrel.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): bottom"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2295,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    64,
+    53,
+    102,
+    2
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.069
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.077-warden-sorrel-pike.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.259,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    92,
+    45,
+    96,
+    3
+   ],
+   "notes": [
+    "margin is tight (3 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.062
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.078-toma-reed.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): bottom"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2791,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    89,
+    8,
+    101,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.079-lita-moss.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): bottom"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2549,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    100,
+    10,
+    121,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.055
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.080-nessa-flint.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): bottom"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2568,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    110,
+    9,
+    106,
+    0
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.081-elder-oren.portrait",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2968,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    87,
+    2,
+    94,
+    16
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.037
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.082-pip-rowan.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2562,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    91,
+    16,
+    97,
+    17
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.049
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.083-archivist-sera-wynn.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2305,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    111,
+    12,
+    109,
+    17
+   ],
+   "notes": [
+    "margin is tight (12 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-30",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Edit this sheet into a REAL DIMENSIONAL 3D ANIMATED FILM CHARACTER RENDER, physically shaded sculpted faces/hair and cloth, not flat illustration. Preserve each established face, age, hair, clothing palette, accessories and exact cell order. Cell1 Professor Maren Vale: adult woman researcher, brown wavy hair bun, round glasses, cream short practical field coat, olive blouse, brown trousers/boots, notebook. Cell2 June Kestrel: feminine teenage girl 15-16, brown ponytail, blue scarf, red cropped jacket, cream top, blue asymmetric overskirt over practical shorts, hiking boots and small wrist compass. Cell3 Warden Sorrel Pike: sturdy older woman, short auburn-gray hair, olive field jacket, tan trousers, tall boots, field staff. Cell4 Toma Reed: kind adult man, curly dark hair, tan rolled sleeve shirt, blue work overalls and sanctuary satchel. Cell5 Lita Moss: adult healer woman with dark skin, braided dark hair, cream tunic with sage apron, brown boots and medicine pouch. Cell6 Nessa Flint: adult gearsmit​h woman, short copper hair, goggles raised, rust vest over cream shirt, navy work trousers, brown tool belt. Cell7 Elder Oren: elderly man, white beard, warm brown long coat, cream tunic, wooden walking stick, calm mentor. Cell8 Pip Rowan: young boyish/unisex courier, tousled brown hair, oversized ochre cap with goggles, yellow scarf, brown vest, navy cropped trousers, sneakers and oversized tan courier bag; cute energetic small silhouette. Cell9 Archivist Sera Wynn: adult woman with dark bob, glasses, navy robe-like practical coat, cream blouse, book satchel and closed archive book.. Correct Nessa in cell6 SHEET-30 to adult woman copper short hair and goggles. Same 3x3 square PNG at least1254x1254. All full bodies SMALL, maximum 60% cell height and 50% width, at least20% empty margin on all sides INCLUDING hats/staff/boots/scarf. Keep tall Sel proportions. Straight thin dark gutters exact thirds. All backgrounds perfectly flat RGB(40,160,60); green outfits get flat RGB(235,18,128) magenta. No shadows on screen. No text or creatures. This is a rendering and margin correction, not a wardrobe redesign.",
+  "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+  "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30.png"
+ }
+}

@@ -1,5 +1,13 @@
 # Collector games: guide for Claude Code
 
+## Wildkin Version 1: First Bond comes from the manifest
+`design/wildkin-v1-production-bible.md` (the owner's production bible) is the source of truth. The prototype creatures, sets and art are gone from the game. The Wildkin build reads **only** `wildkin-production/manifest.json` (the 180 First Bond cards) and `wildkin-production/approved/registry.json` (approved art):
+- `tools/wildkin_manifest.py` builds the manifest, art queue and reports from `wildkin-production/source/appendix_a_roster.tsv` (extracted from the bible) and the tables in the script. Every fact has a status: **canon**, **inferred** (needs owner confirmation; the families 027-056 were confirmed on 2026-10-13) or **provisional** (stats, rules text, non-creature rarities, most affinities, prices). Never present provisional or inferred as canon, and never invent cards, names or numbers. `--check` fails if the files are stale or invalid.
+- `tools/wildkin_art.py` is the only way art gets into the game (check, approve, reject, ingest, legacy). Approved art is never overwritten without `--replace`. SOL (the art model) follows `wildkin-production/SOL_HANDOFF.md` and owns art direction: no concept approval step; a subject's first approved sheet is its reference.
+- `tools/wildkin_build.py` (called by `build.py` for tcg) writes `WK_CANON` and `WK_ART` into game.js and copies only approved images to `dist/tcg/art/`. Missing art draws a labelled "ART PENDING" placeholder, never another card's picture.
+- Saves carry `G.tcg.cv=2`. Prototype saves (no `cv`) are labelled in the launcher, never loaded, never modified (`pack_apply.js`).
+- Status and gaps: `wildkin-production/reports/V1_READINESS.md`, `outstanding_assets.md`, `reconciliation.md`.
+
 ## What this is
 Three browser games from one engine. All content is fictional.
 - **Sports Card Collector** (`sports`): a simulated baseball league, card products, packs, grading, shows, breaks.
@@ -15,45 +23,53 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 - Tests (need `pip install playwright` and `playwright install chromium`; start the server above first):
   - `python3 tools/shelltest.py <game> [port]`: launcher, new game, every tab, save slots, reload and Continue, backup export and import.
   - `python3 tools/playtest.py <game>`: buys, grades, lists, runs about two months, and checks the Hunt only sells what that game collects.
-- Before saying something is done: build, then run `shelltest` for every game you touched. A clean run prints `ERRS []`.
+  - `python3 tools/wildkintest.py`: First Bond against the manifest, art mapping, packs and odds, play loop, prototype-save protection.
+  - `python3 tools/wildkin_econ.py [months]`: headless Wildkin economy run (prices, chase cards, metagame health).
+  - `python3 tools/test_art_pipeline.py`: the art intake on synthetic deliveries (no server needed).
+- Before saying something is done: build, then run `shelltest` for every game you touched. A clean run prints `ERRS []`. For Wildkin also run `wildkintest.py`, and `wildkin_manifest.py --check` after touching the manifest tables.
 
 ## How the code is organised
 - `src/engine/*.js` is the whole simulation and UI. `src/packs/*.js` defines each game (`PACK`). `src/shell/` is the launcher, save slots and per-game screens.
 - **Everything is one global script.** `tools/build.py` concatenates files in a fixed order (see `ENGINE`, `TCG` lists), so load order matters. Later files often *wrap* earlier functions (`const _x=fn; fn=function(){...}`). A function name defined twice silently overwrites the first. Before adding a global, grep for the name. (A real clash happened with `evRow`.)
 - `PACK` is defined first. `packHas('sports'|'comics'|'tcg'|'hunt')` decides which worlds get generated. `src/shell/pack_apply.js` sets the tabs, market and news filters, and the Wildkin home, shop and collection screens.
-- **The baseball league always runs**, even in the comics and Wildkin builds. It is hidden but still generated (about 10 seconds at start, some save size). Removing it from those builds is a planned task.
+- **The baseball league only runs in the Sports build.** In comics and Wildkin, `newGame` calls `initNoLeague()` (empty players, products and standings) and the league, retail and release ticks do nothing (`packHas('sports')` gates in `market.js`, `world.js`). Old comics and Wildkin saves made before this still carry their frozen league data and load fine. Code shared with Sports (hunt, scenarios, market) must not assume baseball cards or products exist; gate with `HCARD()` or `packHas('sports')`.
 - **Saves:** `src/shell/saves.js` stores named slots in IndexedDB, gzip-compressed JSON. Backups are `.ccsave` files (magic `CCS1`, a JSON header, then the payload). Keys starting with `_` are never saved. What gets saved is controlled by `saveReplacer` (market.js, cm_save.js, tcg_boot.js).
-- **Determinism:** worlds come from `G.seed` through `mkRng(hsh(...))`. Wildkin sets and cards are regenerated from the seed, not stored.
+- **Determinism:** worlds come from `G.seed` through `mkRng(hsh(...))`. Wildkin cards come from the manifest (identical in every world); only hidden play-power jitter uses the seed. Nothing about cards is stored in saves.
 - **Adding a new kind of collectible to the shared market** follows the pattern at the bottom of `tcg_value.js`: wrap `interest`, `itemOf`, `createListing`, `removeListing`, `transfer`, `recordSale`, `playerList`, `npcPool`, `itemLabel`, then add UI wrappers (see `tcg_ui3.js`: `listingRow`, `lsText`, `marketFiltered`, `listingSheet`, `designSheet`). Old code often assumes every item is a baseball card, so grep for `D(key)` and loops over `G.sales` when something crashes.
 - The 3D inspector is `viewer3d.js` (three.js from `vendor/`). Print effects for close-ups are in `polish.js`. The grading reveal and crack-and-resubmit are in `drama.js`.
 
-## The Wildkin economy (balanced with headless simulations; re-measure after any change)
-- Pack worth about $3.50 to $5.50 against a $4.50 retail price. Box worth about $120 to $190 against $150.
-- Commons about 5 cents, uncommons about 40 cents, holo rares about $2.50, ultras $10 to $15, secrets $13 to $22.
-- Metagame: about 15 archetypes, top deck usually 15 to 25 percent, bans rare (about one or two a year), Standard is the newest three sets.
-- Known gap: no card is worth hundreds of dollars. Real hype sets have a $300 to $1,500 chase card (a loved species, a 1-in-1,000+ pull rate, a sold-out set, big slab premiums).
+## The Wildkin economy (First Bond, measured with `tools/wildkin_econ.py`; re-measure after any change)
+- Pack worth about $5.10 at the start, drifting to about $5.90 after a year, against $4.50 retail. Box about $175, about $255 after a year, against $150.
+- Medians: commons 4 cents, uncommons about 12 cents, rares about 85 cents, holo rares about $1.80, IR about $6, FA about $10, SIR and Clasped $150 to $200.
+- Chase: Cactuft SIR about $410 raw at the start (about $2,100 at GCS 10). Collector fandom per species (manifest, provisional) bends prices through `TC_TUNE` in `tcg_value.js`; the rare slot odds live in the manifest.
+- Metagame: about 15 archetypes, top deck about 20%. With one set there is no rotation and bans are rare.
 
 ## Known issues
-- Wildkin art is embedded as data inside `tcg_art.js` (7 MB). It should be real image files.
+- Wildkin: the 40 premium cards wait for full-size art (every base card has art); card rules are provisional placeholders; only one set exists (see `wildkin-production/reports/V1_READINESS.md`).
 - Wildkin has no Hunt, no follows or chases for cards, and no breaks or repacks.
 - A few Hunt shop descriptions in the comics build still mention cards.
-- Wildkin art is limited: sets 1 to 3 use unique art, Anthology reuses it, and sets after that reuse art with a name prefix.
 - Never tested on a real phone or on itch.io. The 3D viewer was only tested with a software renderer.
 
 ## Roadmap, in order
-1. **Wildkin milestone.**
-   - Art as image files, loaded on demand.
-   - Chase tier and hype sets (see economy above).
+1. **Wildkin milestone.** Done: First Bond as data (manifest), engine on the new set, art as image files loaded on demand, chase tier, art intake. Next: SOL art deliveries, the remaining owner confirmations (affinities, ordering, koi stage), real card rules. Then:
+   - Hype sets (more sets are needed first).
    - Hunt, follows and chases for cards.
    - A set-variation system that composes card art from species cutouts, poses and scenes (`tools/ingest.py` makes the cutouts).
    - Enough content for six or seven years of sets.
-2. Strip the baseball league out of the comics and Wildkin builds.
+2. ~~Strip the baseball league out of the comics and Wildkin builds.~~ Done.
 3. Comics milestone: real cover art sheets replace the vector covers.
 4. Sports milestone: player art sheets and stadiums.
 5. Two more card games: a Magic-style spell game and an anime character game, as options inside the Wildkin game.
 
 ## Art
 Sheets are generated elsewhere as 3x3 grids with thin dark gutters and no text. `tools/ingest.py` cuts them. Cutout sheets use a flat green screen (magenta for green creatures), about 10 percent margin, no floor shadow needed. The cutout method was tested and works (see README).
+
+## Design documents
+- `design/wildkin-v1-production-bible.md`: the owner's Version 1 production bible (180-card First Bond roster, 43-sheet art plan). Source of truth for Wildkin; supersedes the roster numbers below where they differ.
+- `design/wildkin-universe.md`: the owner's locked plan for the Wildkin creature roster (150 roots, 245 forms, evolution families, affinities, art sheet plan) and the decisions still open. Read it before touching Wildkin species, cards or art.
+
+## Source art
+`art-source/` holds the owner's generated sheets, untouched (see `art-source/README.md`). They are the real art direction for the rebuilt Wildkin: creatures are soft, toy-like 3D renders on a flat screen; scenes are matching 3D miniature-diorama backgrounds with an open floor in the lower third. `python3 tools/build_art.py` cuts every sheet into `assets/creatures/<name>/<pose>.webp` and `assets/scenes/<biome>/<biome>-NN.jpg` and writes `assets/manifest.json` (scene biome, floor ground/water/air, time of day, tags; creature name, screen colour, pose). The scene tags and pose order live in `tools/build_art.py`. `tools/ingest.py` does the cutting: soft matte that keeps hairlines, screen colour un-mixed from edges, `--drop-effects` removes stray "!"/sparkle marks. `lab/index.html` is the art review page (every cutout on grey with edge-touching flags, and a creature-in-scene composer with light matching); `build.py --publish` copies it and the cut art to `docs/lab/`. Creature movement types and sizes (walker, swimmer, floater) live in `CREATURES` in `tools/build_art.py`. `START_HERE.md` has the first tasks.
 
 ## Working with the owner
 The owner works mostly from a phone and is not a professional developer. Explain changes in plain language, keep commits small, ask at most one question at a time, and batch feedback. Always report what was tested and what was not, and never claim something works unless a test ran.

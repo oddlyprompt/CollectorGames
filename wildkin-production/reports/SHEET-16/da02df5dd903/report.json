@@ -1,0 +1,180 @@
+{
+ "task": "SHEET-16",
+ "file": "wildkin-production/incoming/SHEET-16--v3.png",
+ "sha256": "da02df5dd9038f52bc4f920085dc0f53e5bee30606a2d9238b8b66c7b49fcfd4",
+ "checked": "2026-10-15T05:45:21Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.039-pebblamb.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0537,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    148,
+    167,
+    144,
+    109
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.067
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.039-pebblamb.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0562,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    138,
+    147,
+    140,
+    127
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.066
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.039-pebblamb.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.051,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    150,
+    167,
+    146,
+    109
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.06
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.040-cairnram.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0893,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    133,
+    122,
+    130,
+    123
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.06
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.040-cairnram.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.077,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    138,
+    113,
+    136,
+    142
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.054
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.040-cairnram.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0816,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    132,
+    136,
+    133,
+    131
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.043
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.041-monolox.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1014,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    134,
+    111,
+    123,
+    124
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.059
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.041-monolox.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0937,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    128,
+    98,
+    128,
+    138
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.056
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.041-monolox.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.092,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    128,
+    129,
+    137,
+    129
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-16",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+  ],
+  "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+ }
+}

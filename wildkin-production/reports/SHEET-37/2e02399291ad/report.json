@@ -1,0 +1,123 @@
+{
+ "task": "SHEET-37",
+ "file": "wildkin-production/incoming/SHEET-37.png",
+ "sha256": "2e02399291ad09ea9678f5c5afa36a0f6b336ec3cf191275b7f25352b8e8029b",
+ "checked": "2026-10-15T05:45:55Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.120-first-bond",
+   "errors": [],
+   "warnings": [],
+   "std": 58.6,
+   "cell_px": [
+    400,
+    399
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "ill.121-call-of-the-wild",
+   "errors": [],
+   "warnings": [],
+   "std": 52.7,
+   "cell_px": [
+    396,
+    399
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "ill.122-sanctuary-rescue",
+   "errors": [],
+   "warnings": [],
+   "std": 65.8,
+   "cell_px": [
+    399,
+    399
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "ill.123-keepers-lesson",
+   "errors": [],
+   "warnings": [],
+   "std": 58.4,
+   "cell_px": [
+    400,
+    392
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "ill.124-pack-rally",
+   "errors": [],
+   "warnings": [],
+   "std": 55.7,
+   "cell_px": [
+    396,
+    392
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": "ill.125-quick-retreat",
+   "errors": [],
+   "warnings": [],
+   "std": 55.7,
+   "cell_px": [
+    399,
+    392
+   ]
+  },
+  {
+   "cell": 7,
+   "asset_id": "ill.126-shared-instinct",
+   "errors": [],
+   "warnings": [],
+   "std": 52.2,
+   "cell_px": [
+    400,
+    404
+   ]
+  },
+  {
+   "cell": 8,
+   "asset_id": "ill.127-veyra-directive",
+   "errors": [],
+   "warnings": [],
+   "std": 57.2,
+   "cell_px": [
+    396,
+    404
+   ]
+  },
+  {
+   "cell": 9,
+   "asset_id": "ill.128-forced-capture",
+   "errors": [],
+   "warnings": [],
+   "std": 50.5,
+   "cell_px": [
+    399,
+    404
+   ]
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-37",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case: illustration-story. Wildkin SHEET-37 Tactics A production. Create square PNG at least 1254x1254; exactly nine equal square illustrations in a straight 3x3 grid with thin near-black gutters. Full-bleed dimensional 3D story illustrations matching supplied Wildkin creature and character reference sheets. References are identity/style only; do not replicate cutout layout or green screen. Read row-major: 1 First Bond: June Kestrel crouches offering open hand to Cactuft at a garden gate, tender first friendship; 2 Call of the Wild: June calls across a forest valley and friendly creatures emerge; 3 Sanctuary Rescue: young Keepers carry tired Cactuft safely through sanctuary gate, relief, no injuries; 4 Keeper's Lesson: Professor Maren Vale teaches June how to observe a sleeping Cactuft by field notebook; 5 Pack Rally: Cactuft, blue cream spiky ankylosaur Bashlet and leaf pangolin Frondolin gather on a hill, unified; 6 Quick Retreat: June and Cactuft dash away from closing industrial gates along forest trail; 7 Shared Instinct: June and Cactuft pause together and look toward the same hidden path; 8 Veyra Directive: Sel Veyra calmly directs uniformed human operatives around a teal tactical projection in a refined industrial command room; 9 Forced Capture: human Veyra operatives use an open mechanical restraint cage to capture Cactuft, tense but nonviolent with NO injury. June is the brown ponytail girl with red cropped practical jacket, cream shirt, blue scarf and blue sash, shorts over practical leggings/boots, same reference outfit. Maren is brown hair up with glasses, ivory researcher coat over olive/beige field clothes. Sel is silver-haired adult woman in long ivory gold-trimmed coat, black tailored trousers and high collar, cane. Cactuft is exact green woolly cactus llama, cream face/legs, short gold spines, pink flowers, brown eyes; not a cat. Diverse camera angles, legible small-card storytelling, subject/action centered in each cell; no text, lettering, logos, card frames or typography.",
+  "notes": "Generated from production queue; pending intake validation."
+ }
+}

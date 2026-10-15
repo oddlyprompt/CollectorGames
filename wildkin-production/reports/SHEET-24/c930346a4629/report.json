@@ -1,0 +1,180 @@
+{
+ "task": "SHEET-24",
+ "file": "wildkin-production/incoming/SHEET-24--v2.png",
+ "sha256": "c930346a462995fb0af242b2b0c7b9acaa99e9897b98dfc6cbadbbeb95183d81",
+ "checked": "2026-10-15T05:45:33Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.057-fernibble.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2529,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    55,
+    63,
+    45,
+    67
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.057-fernibble.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2426,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    40,
+    48,
+    35,
+    86
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.022
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.057-fernibble.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2238,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    90,
+    68,
+    85,
+    60
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.018
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.058-acornox.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3456,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    46,
+    59,
+    27,
+    64
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.02
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.058-acornox.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3024,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    48,
+    36,
+    42,
+    87
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.058-acornox.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2924,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    48,
+    83,
+    66,
+    63
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.019
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.059-shelloop.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2894,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    60,
+    83,
+    62,
+    82
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.018
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.059-shelloop.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2848,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    55,
+    57,
+    49,
+    108
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.018
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.059-shelloop.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2722,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    64,
+    102,
+    62,
+    77
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.015
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-24",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit exact Wildkin3x3 Fernibble/Acornox/Shelloop sheet for clean opaque cutouts. KEEP existing creature identities colors and anatomy, row1 Fernibble tan cream fox-like creature with GREEN fern ears leaf collar green leaf tail, row2 Acornox brown acorn-scaled ox with ivory horns, cream muzzle/chest, dark hooves, row3 Shelloop ivory tan-spotted little turtle with salmon-peach spiral-shell. Columns standing jumping sitting, keep order. Change only render clarity, scale/margins and background. Use SOLID CHROMA MAGENTA RGB235,18,128 for ALL THREE TOP-ROW Fernibble cells so green fern ears survive keying. Use SOLID CHROMA GREEN RGB40,160,60 for all middle and bottom cells. Absolutely uniform flat backgrounds no vignette/gradient/shadow. Render completely opaque matte body/leaf materials, crisp leaf silhouette, no translucent leaves/glow/soft bloom/green spill/rimlight, neutral even studio lighting, sharp focus throughout. Maximum50%cell width/height per creature centered, at least25%empty margin all sides including whiskers/leaf ears/horns/tails. Exact1254x1254squarePNG, exactly3x3 equal cells straight4pixel nearblack gutters at exact thirds. No text/effects/stars/sparkles/speed marks, no floor shadow.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-24.png"
+  ],
+  "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+ }
+}

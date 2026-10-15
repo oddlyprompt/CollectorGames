@@ -1,0 +1,164 @@
+{
+ "task": "SHEET-23",
+ "file": "wildkin-production/incoming/SHEET-23--v3.png",
+ "sha256": "a4b44a41ec6ac441870503a8ea8eba868835c9547155a1b56c245f28f68826bf",
+ "checked": "2026-10-15T05:45:27Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [
+  "cell 5: margin is tight (14 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.055-dewink.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1331,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    142,
+    69,
+    131,
+    56
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.045
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.055-dewink.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1489,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    132,
+    44,
+    129,
+    69
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.049
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.055-dewink.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.1331,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    138,
+    100,
+    129,
+    66
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.047
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.056-bloomble.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2181,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    113,
+    22,
+    126,
+    29
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.097
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.056-bloomble.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2505,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    76,
+    14,
+    92,
+    34
+   ],
+   "notes": [
+    "margin is tight (14 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.116
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.056-bloomble.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.2155,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    108,
+    69,
+    96,
+    40
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.106
+  },
+  {
+   "cell": 7,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.0,
+   "stray_pieces_dropped": 0,
+   "empty": true
+  },
+  {
+   "cell": 8,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.0,
+   "stray_pieces_dropped": 0,
+   "empty": true
+  },
+  {
+   "cell": 9,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.0,
+   "stray_pieces_dropped": 0,
+   "empty": true
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-23",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+  "references": [
+   "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+  ],
+  "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+ }
+}

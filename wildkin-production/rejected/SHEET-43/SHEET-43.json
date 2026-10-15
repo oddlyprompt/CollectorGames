@@ -1,0 +1,14 @@
+{
+  "task_id": "SHEET-43",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SHEET-43 Clasp Program Secret Rares. EXACT2100x2940 portrait5:7 PNG,3x3 equal portrait5:7 cells thin straight black gutters at thirds. FOUR NEW fully painted cinematic dimensional3D illustrations in cells1,2,3,4 ONLY; cells5,6,7,8,9 flat near-black RGB20,20,24 EMPTY. Match exact creature identities in references: cell1 top-left Clasped Aegisopod BOTTOM ROW armored pillbug sheet: navy/silver armored round pillbug cream face huge black eyes segmented navy legs, at industrial holding bay; cell2 top-middle Clasped Pompyre MIDDLE/BOTTOM ROW bat sheet: purple berry bat with large pink inner ears pink wing membranes berry-leaf crown and pale-pink chest tuft, in glass examination chamber; cell3 top-right Clasped Ferradon BOTTOM ROW new boar sheet: charcoal warm gray stocky boar with cream muzzle ivory tusks layered riveted iron back armor copper rivets, in factory corridor; cell4 middle-left Clasped Veilmora BOTTOM ROW moth sheet: dark plum moth cream fluffy collar long feather antennae large plum wings cream crescent and oval markings, under industrial skylight. Every creature remains recognizable and alive, same original anatomy/markings/color, no evil monster transformation. The consistent Clasp device is a small angular brushed-silver charcoal mechanical collar/bracket with tiny TEAL indicator lights and short latch, worn on neck/thorax, recognizable same Veyra industrial design across all four. Dramatic cool teal/gray setting with restrained crimson warning lights, NOT supernatural magic, no chains or gore, no injury. Subjects entirely centered middle50% vertical with environmental negative space top/bottom quarter. No text, logos, lettering, cardframes. Five specified empty cells absolutely blank.",
+  "references": [
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-05.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-09--v2.png",
+    "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-14--v2.png"
+  ],
+  "notes": "Native generation output; see QA for resolution."
+}

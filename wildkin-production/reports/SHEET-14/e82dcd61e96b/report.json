@@ -1,0 +1,194 @@
+{
+ "task": "SHEET-14",
+ "file": "wildkin-production/incoming/SHEET-14.png",
+ "sha256": "e82dcd61e96bee0762e7f26050e0d36a6efcfe203a668b9f2e7bf356a374e28c",
+ "checked": "2026-10-14T01:46:48Z",
+ "errors": [
+  "cell 7: subject touches the cell edge (clipped): top",
+  "cell 8: subject touches the cell edge (clipped): right"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 5: margin is tight (7 px); the spec asks for about 10%",
+  "cell 9: margin is tight (10 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.033-glimlet.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1493,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    98,
+    109,
+    103,
+    76
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.069
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.033-glimlet.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1809,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    79,
+    70,
+    83,
+    109
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.051
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.033-glimlet.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1327,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    112,
+    126,
+    102,
+    79
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.064
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.034-hushwing.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2791,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    45,
+    33,
+    59,
+    59
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.041
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.034-hushwing.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3414,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    7,
+    9,
+    18,
+    73
+   ],
+   "notes": [
+    "margin is tight (7 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.033
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.034-hushwing.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2438,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    46,
+    55,
+    67,
+    67
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.035-veilmora.standing",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3986,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    21,
+    1,
+    49,
+    38
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.036
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.035-veilmora.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): right"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4143,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    4,
+    5,
+    1,
+    59
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.035
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.035-veilmora.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3463,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    10,
+    41,
+    22,
+    49
+   ],
+   "notes": [
+    "margin is tight (10 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.033
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-14",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-14 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma GREEN RGB(40,160,60). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Glimlet tiny lavender-gray moth with cream face, dark purple eyes, rounded wings and two feathery antennae. Hushwing larger velvet mauve moth with folded dark lavender leaf-shaped wings, pale crescent motifs. Veilmora grand nocturnal moth with deep plum layered wings, silver eyespots and pale furry collar. Friendly mysterious creature.. Exact row-major cell mapping: 1: Glimlet standing; 2: Glimlet jumping; 3: Glimlet sitting; 4: Hushwing standing; 5: Hushwing jumping; 6: Hushwing sitting; 7: Veilmora standing; 8: Veilmora jumping; 9: Veilmora sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Inferred production design within confirmed manifest. Established design only after approval.",
+  "reference": null
+ }
+}

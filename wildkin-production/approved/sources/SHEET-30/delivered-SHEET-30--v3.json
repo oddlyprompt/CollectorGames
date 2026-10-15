@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-30",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. For cells1,3,5 use solid MAGENTA RGB235,18,128 to protect olive/green garments. ALL other cells2,4,6,7,8,9 use solid GREEN RGB40,160,60. Preserve characters:1Professor Maren Vale ivory coat/glasses/brown updo/olive beige clothes/book;2June Kestrel brown ponytail redjacket blue scarf/sash fieldshorts practicalboots;3Warden Sorrel Pike olivecoat beige fieldtrousers staff;4Toma Reed darkhair/beard denimoveralls;5Lita Moss braided darkhair olive embroidered apron cream tunic;6Nessa Flint auburnhair goggles creamshirt redvest blueworktrousers tools;7Elder Oren whitehair/beard browncoat redscarf cane;8Pip Rowan boyish young courier brownhair goggles yellow scarf fieldclothes bag;9Archivist Sera Wynn blackhair glasses longnavy goldtrim scholarcoat book. Match reference exactly, no mixing identities.",
+  "references": [
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png"
+  ],
+  "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+}

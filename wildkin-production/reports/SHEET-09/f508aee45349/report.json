@@ -1,0 +1,178 @@
+{
+ "task": "SHEET-09",
+ "file": "wildkin-production/incoming/SHEET-09--v2.png",
+ "sha256": "f508aee453494ced32a9ddbdf58344d4e50cd6c65ce2946714e571696b7bbf33",
+ "checked": "2026-10-14T01:45:16Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.021-berribat.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1526,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    114,
+    113,
+    107,
+    75
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.063
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.021-berribat.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1612,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    77,
+    96,
+    80,
+    108
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.065
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.021-berribat.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1386,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    113,
+    120,
+    101,
+    80
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.062
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.022-pompyre.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1889,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    85,
+    85,
+    92,
+    66
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.053
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.022-pompyre.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.195,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    72,
+    85,
+    73,
+    86
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.053
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.022-pompyre.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1672,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    92,
+    84,
+    126,
+    70
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.06
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.022-pompyre.waving",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1632,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    97,
+    85,
+    92,
+    115
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.053
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.022-pompyre.running",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1595,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    84,
+    84,
+    109,
+    118
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.052
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.022-pompyre.looking-up",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1486,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    125,
+    84,
+    94,
+    112
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.062
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-09",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Edit the production sheet ONLY to correct subject size and crop safety. Preserve all species identities, pose order, colors, markings, all appendages, three evolution rows and rendering style.  Exact cells 1:Berribat standing;2:Berribat jumping;3:Berribat sitting;4:Pompyre standing;5:Pompyre jumping;6:Pompyre sitting;7:Pompyre waving;8:Pompyre running;9:Pompyre looking-up. Uniformly reduce EVERY creature to maximum 50% of its cell width and 50% height, centered with MINIMUM25% empty background on every side, including spikes/tails/wings. Bottom row must NOT fill its cells. All nine cells equal, EXACT square 3x3 thin near-black gutters at thirds; final PNG at least1254x1254. ALL backgrounds perfectly flat solid RGB(40,160,60), no gradients, no floor shadows, no sparkles or text. DO NOT clip or remove appendages; render complete creatures smaller.",
+  "notes": "Corrective production revision. Earlier source preserved. Approval pending.",
+  "source": "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-09.png"
+ }
+}

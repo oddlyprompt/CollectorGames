@@ -1,8 +1,9 @@
 // ===================== TCG: COPIES, VALUE AND THE MARKET =====================
 const TC_MSRP={P:4.5,B:150}, TC_COND_MULT={NM:1,LP:0.82,MP:0.6,HP:0.4,DMG:0.22};
-const TC_RB={'common|N':0.05,'common|R':0.30,'unc|N':0.10,'unc|R':0.55,'rare|N':0.45,'rare|H':2.4,'ultra|U':9,'secret|S':26};
-const TC_PB={common:1.6,unc:3,rare:9,ultra:22,secret:12};
-const TC_GB=[0,0.35,0.4,0.45,0.55,0.65,0.78,0.9,1.0,1.55,3.4], TC_GS={common:0.55,unc:0.7,rare:1,ultra:1.35,secret:1.5};
+const TC_RB={'common|N':0.05,'common|R':0.30,'unc|N':0.18,'unc|R':0.55,'rare|N':0.22,'rare|R':0.5,'rare|H':1.3,'ess|N':0.03,'ir|I':7,'fa|F':12,'sir|X':130,'csr|C':150};   // provisional, tuned with tools/econtest.py
+const TC_TUNE={fanPrem:4.5, fanRare:1.2};   // how hard collector fandom (manifest, provisional) bends prices: premium prints feel it most
+const TC_PB={ess:0,common:1.6,unc:2.5,rare:3.5,ir:9,fa:12,sir:14,csr:12};
+const TC_GB=[0,0.35,0.4,0.45,0.55,0.65,0.78,0.9,1.0,1.55,3.4], TC_GS={ess:0.3,common:0.55,unc:0.7,rare:1,ir:1.4,fa:1.5,sir:1.7,csr:1.8};
 const TCFV=new Map(), TCCV=new Map(); const TC_K=0.45;
 function tfvClear(k){ if (k){ for (const x of TCFV.keys()) if (x.startsWith(k+'@')) TCFV.delete(x); } else TCFV.clear(); }
 // ---------- condition ----------
@@ -33,15 +34,15 @@ const TC=id=>G.tc[id]; const myTc=()=>Object.values(G.tc).filter(c=>c.o===0);
 // ---------- value ----------
 function tcSetPrestige(n){ const d=tcSetDef(n); return d.reprint?0.8 : n===1?1.35 : n===2?1.1 : 1.0; }
 const tcJit=key=>0.9+0.2*((hsh('tj'+key)%1000)/1000);
-function tcPrintCount(cid){ const c=G.tcg._pc||(G.tcg._pc={day:-1,m:{}}); if (c.day!==G.day){ c.day=G.day; c.m={}; } if (c.m[cid]) return c.m[cid]; let n=0; for (const s of tcReleasedSets(G.day)) if (tcSetCards(s).some(x=>x.cid===cid&&x.rar!=='secret')) n++; return c.m[cid]=Math.max(1,n); }
+function tcPrintCount(cid){ const c=G.tcg._pc||(G.tcg._pc={day:-1,m:{}}); if (c.day!==G.day){ c.day=G.day; c.m={}; } if (c.m[cid]) return c.m[cid]; let n=0; for (const s of tcReleasedSets(G.day)) if (tcSetCards(s).some(x=>x.cid===cid&&!tcAlt(x))) n++; return c.m[cid]=Math.max(1,n); }
 function tcFairRaw(key){
   const ck=key+'@'+G.day; let v=TCFV.get(ck); if (v!=null) return v;
   const d=tcD(key); if (d.sealed){ v=tcSealedFair(d); } else {
     const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=TC_RB[c.rar+'|'+d.v]||0.1;
     const nov=Math.max(0.6, 1+1.4*Math.exp(-wk/2.2)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(wk/4.33-12)/12));
-    const coll=base*c.ap*tcSetPrestige(d.set)*nov*oop;
+    const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop;
     const st=tcLegalState(c.cid), u=Math.min(1,(G.tcg.usage[c.cid]||0)/4), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.tcg.hy[c.cid]||0;
-    const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(d.v==='S'?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
+    const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(tcIsPrem(c)?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
     v=Math.max(0.03,(coll+play)*TC_K*tcJit(key)*(1+Math.min(0.6,G.dp[key]||0))); }
   TCFV.set(ck,v); if (TCFV.size>5000) TCFV.clear(); return v;
 }
@@ -56,17 +57,26 @@ function tcEst(key, g, cp){
 }
 function tcHeat(cp){ const d=tcD(cp.k); if (d.sealed) return 0.9+0.8*Math.exp(-(G.day-d.def.rel)/45); const u=(G.tcg.usage[d.cid]||0)/4, hy=G.tcg.hy[d.cid]||0; return 0.4+1.2*u+hy+(TC_RAROR[d.rar]>=3?0.5:0)+0.7*Math.exp(-(G.day-d.def.rel)/21); }
 // ---------- packs and sealed ----------
-function tcPools(set){ const m=G.tcg._pl||(G.tcg._pl={}); if (m[set]) return m[set]; const cs=tcSetCards(set); const P={c:cs.filter(c=>c.rar==='common'),u:cs.filter(c=>c.rar==='unc'),r:cs.filter(c=>c.rar==='rare'),ult:cs.filter(c=>c.rar==='ultra'),sec:cs.filter(c=>c.rar==='secret')}; if (!P.c.length) P.c=P.u; if (!P.u.length) P.u=P.c; if (!P.r.length) P.r=P.u; return m[set]=P; }
+function tcPools(set){ const m=G.tcg._pl||(G.tcg._pl={}); if (m[set]) return m[set]; const cs=tcSetCards(set); const f=r=>cs.filter(c=>c.rar===r);
+  const P={c:f('common'),u:f('unc'),r:f('rare'),ess:f('ess'),ir:f('ir'),fa:f('fa'),sir:f('sir'),csr:f('csr')}; P.rv=P.c.concat(P.u,P.r); if (!P.c.length) P.c=P.u; if (!P.u.length) P.u=P.c; if (!P.r.length) P.r=P.u; return m[set]=P; }
+// pack: 6 commons (one may be a reverse holo of any common, uncommon or rare), 2 uncommons, 1 rare-or-better, 1 Essence (manifest: set.pack)
+const TC_ODDS=WK_CANON.set.odds, TC_REV=0.5;
+function tcRareSlot(P, r){ const x=r(); let a=0; const O=TC_ODDS; const arr=p=>p[Math.floor(r()*p.length)];
+  if (x<(a+=O.csr) && P.csr.length) return [arr(P.csr),'C']; if (x<(a+=O.sir) && P.sir.length) return [arr(P.sir),'X']; if (x<(a+=O.fa) && P.fa.length) return [arr(P.fa),'F']; if (x<(a+=O.ir) && P.ir.length) return [arr(P.ir),'I'];
+  if (x<(a+=O.rare_holo)) return [arr(P.r),'H']; return [arr(P.r),'N']; }
 function tcRollPack(set, r){
   const P=tcPools(set), keys=[], taken=new Set(); const pc=a=>{ let c; for (let i=0;i<6;i++){ c=a[Math.floor(r()*a.length)]; if (!taken.has(c.no)){ taken.add(c.no); return c; } } return c; };
-  for (let i=0;i<5;i++) keys.push(tcKey(set,pc(P.c).no,'N')); const rv=r()<0.7? pc(P.c): pc(P.u); keys.push(tcKey(set,rv.no,'R')); for (let i=0;i<3;i++) keys.push(tcKey(set,pc(P.u).no,'N'));
-  const x=r(); const arr=a=>a[Math.floor(r()*a.length)];
-  if (x<0.022 && P.sec.length) keys.push(tcKey(set,arr(P.sec).no,'S')); else if (x<0.082 && P.ult.length) keys.push(tcKey(set,arr(P.ult).no,'U')); else if (x<0.322) keys.push(tcKey(set,arr(P.r).no,'H')); else keys.push(tcKey(set,arr(P.r).no,'N'));
+  const rev=r()<TC_REV; for (let i=0;i<(rev?5:6);i++) keys.push(tcKey(set,pc(P.c).no,'N'));
+  if (rev){ const x=r(); const pool= x<0.62? P.c : x<0.92? P.u : P.r; keys.push(tcKey(set,pc(pool).no,'R')); }
+  for (let i=0;i<2;i++) keys.push(tcKey(set,pc(P.u).no,'N'));
+  const [rc,rv]=tcRareSlot(P,r); keys.push(tcKey(set,rc.no,rv));
+  if (P.ess.length) keys.push(tcKey(set,P.ess[Math.floor(r()*P.ess.length)].no,'N'));
   return keys;
 }
 function tcPackEV(set){
   const c=G.tcg._ev||(G.tcg._ev={}); const k=set+'@'+Math.floor(G.day/7); if (c[k]) return c[k]; const P=tcPools(set); const avg=(a,v)=>a.length? a.reduce((s,x)=>s+tcFairRaw(tcKey(set,x.no,v)),0)/a.length : 0;
-  const ev=5*avg(P.c,'N')+0.7*avg(P.c,'R')+0.3*avg(P.u,'R')+3*avg(P.u,'N')+0.678*avg(P.r,'N')+0.24*avg(P.r,'H')+0.06*avg(P.ult,'U')+0.022*avg(P.sec,'S'); return c[k]=ev;
+  const O=TC_ODDS, rn=1-O.csr-O.sir-O.fa-O.ir-O.rare_holo;
+  const ev=(6-TC_REV)*avg(P.c,'N')+TC_REV*(0.62*avg(P.c,'R')+0.3*avg(P.u,'R')+0.08*avg(P.r,'R'))+2*avg(P.u,'N')+rn*avg(P.r,'N')+O.rare_holo*avg(P.r,'H')+O.ir*avg(P.ir,'I')+O.fa*avg(P.fa,'F')+O.sir*avg(P.sir,'X')+O.csr*avg(P.csr,'C')+avg(P.ess,'N'); return c[k]=ev;
 }
 function tcSealedFair(d){
   const def=d.def; const age=(G.day-def.rel)/365; const ev=tcPackEV(d.set); const pr=tcSetPrestige(d.set); let pack;
@@ -110,7 +120,7 @@ function tcInterest(n, item){
   if (!isTcgNPC(n)) return n.tc? (d.sealed?0.5:0.3) : 0.03;
   if (d.sealed) return {tsl:1.25,tfl:0.95,tcl:0.7,tpl:0.55,tcm:0.5}[n.ty]||0.2;
   const card=d.card, u=(G.tcg.usage[card.cid]||0)/4, st=tcLegalState(card.cid); let f;
-  switch(n.ty){ case 'tpl': f= st==='std'&&u>0.18? 1.1+u*0.6 : st==='std'? 0.45 : 0.18; break; case 'tcl': f=(card.rar==='ultra'||card.rar==='secret'||d.v==='H'||d.v==='R')? 1.2+0.2*card.ap : 0.3; break; case 'tcm': f= n.setN===d.set? 1.3 : 0.25; break; case 'tfl': f=0.84; break; case 'tsl': f=0.12; break; case 'tgr': f= c.g>0? 1.3 : 0.12; break; default: f=0.5; }
+  switch(n.ty){ case 'tpl': f= st==='std'&&u>0.18? 1.1+u*0.6 : st==='std'? 0.45 : 0.18; break; case 'tcl': f=(tcIsPrem(card)||d.v==='H'||d.v==='R')? 1.2+0.2*card.ap+0.4*card.fan : 0.3; break; case 'tcm': f= n.setN===d.set? 1.3 : 0.25; break; case 'tfl': f=0.84; break; case 'tsl': f=0.12; break; case 'tgr': f= c.g>0? 1.3 : 0.12; break; default: f=0.5; }
   if (n.ty!=='tgr' && c.g>0) f*=0.9; return f;
 }
 function tcGive(key, src){ const cp=tcMakeCopy(key,0,null,src||'npc'); const it={tc:cp,v:tcCopyValue(cp)}; const pool=npcPool({tcg:1}); const c=[pick(pool),pick(pool),pick(pool),pick(pool)]; cp.o=c.sort((a,b)=>tcInterest(b,it)-tcInterest(a,it))[0].id; cp.a=[G.day,'held',0,'']; (G._npcTcIds=G._npcTcIds||[]).push(cp.id); return cp; }

@@ -1,0 +1,41 @@
+{
+ "task": "SIR-175",
+ "file": "wildkin-production/incoming/SIR-175.png",
+ "sha256": "e8e45d0c962ea373271a7f3933e7ec664b433515743667323a99f39b7ac89836",
+ "checked": "2026-10-15T05:46:00Z",
+ "errors": [
+  "too small: 1060x1484, need at least 1500x2100"
+ ],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.175-june-kestrel-sir",
+   "errors": [],
+   "warnings": [],
+   "std": 59.1,
+   "cell_px": [
+    1060,
+    1484
+   ]
+  }
+ ],
+ "size": [
+  1060,
+  1484
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SIR-175",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SIR-175 June Kestrel Special Illustration Rare. One SHOWPIECE full painting, EXACT1500x2100 PNG portrait5:7, no grid/text/frame/logos. Exact character identity SECOND cell of ally reference:15-16-year-old brown ponytail young Keeper, expressive kind brown eyes, red practical cropped jacket over cream buttonshirt, blue scarf and blue embroidered utility sash, shorts with practical dark legwear, cream/brown hiking boots, field pouches, anatomically realistic human proportions in stylized dimensional3D. Cactuft reference exact green cactus-wool llama, cream face and ankles, little dark hooves, gold spines/pink flowers. Emotional new scene: June kneels at midpoint of a long wooden boardwalk in a rain-washed sanctuary at dawn, tying a loose boot lace while Cactuft patiently leans close beside her. Their companionship is the focus, no battle or posed pinup. Vast weathered greenhouse towers and hanging plants curve overhead, wet timber reflecting amber light, small flowering herbs, a distant path beckons toward adventure. June/Cactuft complete silhouettes fit entirely middle half of image height, subject approx40% height, top quarter atmospheric architecture, bottom quarter boardwalk reflections and grasses. Subtle narrative details, refined painterly cinematic dimensional3D, mature coherent lighting, plausible hands/limbs. Match reference clothing and face, no lettering anywhere.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/reference/cactuft-poses-magenta.png"
+  ],
+  "notes": "Native generation output; see QA for resolution."
+ }
+}

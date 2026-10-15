@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-16",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit the supplied Wildkin3x3 stone sheep evolution sheet for production QA. Preserve exact same species identities, ivory wool/tan horns/gray stone plates, poses and row-major arrangement. Row1 Pebblamb, row2 Cairnram, row3 Monolox; columns standing jumping sitting. Change ONLY scale/spacing/background and remove unwanted effects. Reduce each creature to HALF the present width and height, center individually in its cell. ALL horns feet stone plates and tails fit within CENTRAL50% width and height of each cell, at least25% completely empty margin all4sides. ALL NINE backgrounds absolutely uniform solid chromaGREEN RGB40,160,60, no gradient/vignette/grain/shadows. Square1254x1254PNG, equal3x3 cells, straight4pixel nearblack gutters at exactly one-third/two-thirds BOTH axes. Sharp opaque well-defined edges, neutral even light, matte materials. Remove ALL detached sparkles/stars/lines/specks/glows, no effect marks of any kind anywhere. No floor plane/shadow, no text or frames. Evolved sheep must not fill the cell, render noticeably small with broad empty screen margins.",
+  "references": [
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-16--v2.png"
+  ],
+  "notes": "Owner requested QA corrections; identity and cell order preserved. Pending recheck."
+}

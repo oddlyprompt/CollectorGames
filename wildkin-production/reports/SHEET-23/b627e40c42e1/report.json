@@ -1,0 +1,175 @@
+{
+ "task": "SHEET-23",
+ "file": "wildkin-production/incoming/SHEET-23.png",
+ "sha256": "b627e40c42e17cefcad083aa690222b50407d6bdc9ffc7b7485046ddadef9554",
+ "checked": "2026-10-14T01:48:37Z",
+ "errors": [],
+ "warnings": [
+  "cell 1: a lot of half-transparent pixels (62%): soft edges or a glow on the screen",
+  "cell 2: a lot of half-transparent pixels (61%): soft edges or a glow on the screen",
+  "cell 3: a lot of half-transparent pixels (62%): soft edges or a glow on the screen",
+  "cell 4: a lot of half-transparent pixels (62%): soft edges or a glow on the screen",
+  "cell 5: a lot of half-transparent pixels (56%): soft edges or a glow on the screen",
+  "cell 6: a lot of half-transparent pixels (62%): soft edges or a glow on the screen"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.055-dewink.standing",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (62%): soft edges or a glow on the screen"
+   ],
+   "screen": "magenta",
+   "coverage": 0.1235,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    145,
+    71,
+    133,
+    59
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.624
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.055-dewink.jumping",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (61%): soft edges or a glow on the screen"
+   ],
+   "screen": "magenta",
+   "coverage": 0.1391,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    133,
+    47,
+    132,
+    72
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.613
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.055-dewink.sitting",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (62%): soft edges or a glow on the screen"
+   ],
+   "screen": "magenta",
+   "coverage": 0.1272,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    139,
+    102,
+    130,
+    67
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.622
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.056-bloomble.standing",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (62%): soft edges or a glow on the screen"
+   ],
+   "screen": "magenta",
+   "coverage": 0.2048,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    118,
+    23,
+    126,
+    31
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.623
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.056-bloomble.jumping",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (56%): soft edges or a glow on the screen"
+   ],
+   "screen": "magenta",
+   "coverage": 0.2363,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    77,
+    16,
+    93,
+    37
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.56
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.056-bloomble.sitting",
+   "errors": [],
+   "warnings": [
+    "a lot of half-transparent pixels (62%): soft edges or a glow on the screen"
+   ],
+   "screen": "magenta",
+   "coverage": 0.2036,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    110,
+    71,
+    97,
+    42
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.615
+  },
+  {
+   "cell": 7,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.0,
+   "stray_pieces_dropped": 0,
+   "empty": true
+  },
+  {
+   "cell": 8,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.0,
+   "stray_pieces_dropped": 0,
+   "empty": true
+  },
+  {
+   "cell": 9,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "screen": "magenta",
+   "coverage": 0.0,
+   "stray_pieces_dropped": 0,
+   "empty": true
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "warn",
+ "metadata": {
+  "task_id": "SHEET-23",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-23 production PNG sheet, exactly 3x3 equal square cells, thin near-black gutters at thirds, at least 1254x1254. Dimensional 3D toy rendering, even front lighting. ALL backgrounds perfectly FLAT RGB(235,18,128) magenta, no shading of screen, no shadows, no floor plane. IMPORTANT: miniatures remain SMALL, centered, maximum 55% cell width and height, 22% blank margin on every side. Do not make bottom row larger. Dewink tiny lilac seahorse with pale lavender belly, mint coral crest and curled tail; Bloomble larger lilac seahorse with petal-like pink and pale mint fins, leafy crest and rounded cream cheek, purple eyes. Matches whimsical seahorse visual lane.. Exact cell order left-right top-bottom: 1: Dewink standing; 2: Dewink jumping; 3: Dewink sitting; 4: Bloomble standing; 5: Bloomble jumping; 6: Bloomble sitting; 7: EMPTY perfectly solid screen; 8: EMPTY perfectly solid screen; 9: EMPTY perfectly solid screen. All stages visually distinct. All poses of each species have identical colors, proportions and markings. No external glows, text, sparkle, symbols, frames. Full subjects including tails and wings.",
+  "notes": "Inferred production design within confirmed manifest. Not established canon until approval."
+ }
+}

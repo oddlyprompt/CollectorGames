@@ -1,0 +1,15 @@
+{
+  "task_id": "SHEET-40",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SHEET-40 Illustration Rares B. EXACT2100x2940 portrait PNG 5:7, nine equal portrait5:7 paintings in3x3 with thin straight black gutters at thirds. Nine original full-bleed rich dimensional3D premium illustrations with clear subject centered in middle50% vertical, atmospheric environment top/bottom quarter; no text/frames. Supplied images identity references only; preserve anatomy markings colors. Row-major1 Flapod peach-coral Dumbo OCTOPUS, two large ear fins, curled tentacles pale suckers, freckles brown eyes, drifting in tide pool lit through water;2 Nimbusail graceful long pastel blue CLOUD DOLPHIN, cream belly, big blue eyes, white cloud mane and upright white cloud SAIL dorsal fin, blue fluke, soaring through huge dawn cloud canyon;3 Veilmora exact bottom row moth sheet, plum furry moth with cream collar, long feather antennae and large plum wings with cream crescent markings, on lanternlit tree at dusk;4 Ferradon charcoal warm-gray armored BOAR with cream muzzle, curved ivory tusks, dark layered steel back armor/copper rivets, crossing abandoned forge at morning light;5 Fablehorn exact bottom row rabbit-deer sheet, cream body pale pink/lavender mane and leaf tufts, translucent branching antlers, amber eyes long pink ears, finding ancient storybook ruin in blossom grove;6 Bramblebuck exact middle row deer sheet, tan deer with green moss/leaf mantle and branching wood antlers sprouting leaves, amid forest shafts of sun;7 Corallume exact middle row coral crab sheet, salmon coral crab with cream face and big teal eyes, branched pink coral crown, strong claws, coral reef twilight;8 Cometrail pale blue cream kangaroo/hare, long upright blue/cream ears, large long blue tail bearing white star-shaped markings, leaping over windswept wildflowers;9 Puffluff round cream woolly llama with beige face, pink cheeks, upright ears, dark eyes and little brown hooves, asleep in cozy snowdrift. Each card different scene and lighting, not floating cutouts.",
+  "references": [
+    "/workspace/scratch/b718be279b35/wildkin-art/reference/mascot-reference-survey.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-14--v2.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-17.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-18.png",
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-19.png"
+  ],
+  "notes": "Native image generation output; see QA report for resolution."
+}

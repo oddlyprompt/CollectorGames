@@ -23,7 +23,7 @@ function makeNPCs(){
 function refreshNPCTastes(){
   const stars = G.players.filter(p=>p.tm!==-1 && (p.S>0.45 || p.war>30));
   for (const n of G.npcs){
-    if (n.ty==='pc' && !n.pids.length) n.pids = [pick(stars).id, pick(stars).id];
+    if (n.ty==='pc' && !n.pids.length && stars.length) n.pids = [pick(stars).id, pick(stars).id];
     if (n.ty==='set' && (n.setProd<0 || R()<0.02)){ const rel=releasedProducts().filter(p=>B(p).name!=='Summit Luxe'); if (rel.length) n.setProd = pick(rel.slice(-14)).id; }
   }
 }
@@ -295,7 +295,7 @@ function releaseTick(){
 function advanceDay(){
   G.day++;
   const t=G.day;
-  { const md=mdOf(t); if (md[0]===12 && md[1]===1 && !G.products.some(p=>p.yr===yearOf(t)+1)) scheduleYear(yearOf(t)+1); }
+  { const md=mdOf(t); if (packHas('sports') && md[0]===12 && md[1]===1 && !G.products.some(p=>p.yr===yearOf(t)+1)) scheduleYear(yearOf(t)+1); }
   simLeagueDay(t);
   releaseTick();
   for (const p of G.players){ p.S = playerScore(p); }
@@ -419,8 +419,8 @@ async function newGame(seed, prog){
     nextCid:1, nextSid:1, nextLid:1, live:false,
     player:{ cash:75, bought:0, sold:0, fees:0, packs:0, listed:0, skill:0, subs:[], returned:[], watch:[], follow:[], show:{}, opened:[], soldCards:[], notes:{}, tips:{}, pending:null, paid:0, start:0, fav:[] } };
   R = worldRnd; DCACHE.clear(); fvClear();
-  initLeague();
-  for (let yr=2020; yr<=2025; yr++){
+  if (packHas('sports')) initLeague(); else initNoLeague();           // comics and Wildkin builds have no baseball league
+  if (packHas('sports')) for (let yr=2020; yr<=2025; yr++){
     await prog(0.05+(yr-2020)*0.09, 'Playing the '+yr+' season');
     G.day = dateToDay(yr,1,12);
     if (yr===2020) G.rookieClass[2020] = G.players.filter(p=>p.dy===2020 && p.tm>=0).map(p=>p.id); else newYear(yr,false);
@@ -432,7 +432,7 @@ async function newGame(seed, prog){
     offseason(yr,false);
   }
   for (const p of G.players){ p.S=playerScore(p); careerTotals(p); markMilestones(p); }
-  G.day=dateToDay(2026,1,2); scheduleYear(2026);
+  G.day=dateToDay(2026,1,2); if (packHas('sports')) scheduleYear(2026);
   await prog(0.6,'Printing six years of cards'); makeNPCs(); refreshNPCTastes();
   G._npcCardIds=[];
   for (const prod of G.products.filter(p=>p.cl)) worldOpen(prod, B(prod).luxe? 40 : 190, null);

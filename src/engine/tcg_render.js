@@ -1,23 +1,34 @@
 // ===================== TCG: HOW CARDS LOOK =====================
 const TCV=new Map(); let TFU=0;
-const TC_SUB={item:'Tool  ·  Keep it in play', supply:'Supply  ·  Use once, then discard', stadium:'Stadium  ·  Stays in play'};
-function tcFin(d){ if (d.sealed) return 'gloss'; return d.v==='H'||d.v==='U'?'refr': d.v==='S'?'super':'gloss'; }
+const TC_SUB={ally:'Ally  ·  Play one each turn', gear:'Gear  ·  Attach or use', biome:'Biome  ·  Stays in play', tactic:'Tactic  ·  Use once, then discard'};
+function tcFin(d){ if (d.sealed) return 'gloss'; return d.v==='H'||d.v==='I'||d.v==='F'?'refr': d.v==='X'||d.v==='C'?'super':'gloss'; }
+// the picture for a card: approved pieces from WK_ART, a labelled placeholder for anything not approved yet
+function tcPic(c){
+  const a=tcArtOf(c), A=id=>id? WK_ART[id]||null : null; const col=TCF.EL[c.el]||(c.kind!=='creature'? {c:TCF.KIND[c.kind]?TCF.KIND[c.kind].c:'#888',d:TCF.KIND[c.kind]?TCF.KIND[c.kind].d:'#333',l:TCF.KIND[c.kind]?TCF.KIND[c.kind].p:'#eee'} : null);
+  if (a.l==='vector-essence') return null;
+  if (a.l==='illustration' || a.l==='full-art'){ const ill=A(a.i)||(a.l==='illustration'? A(a.x) : null); return {ill:ill||null, ida:a.i, col, label:'ART PENDING'}; }
+  if (a.l==='cutout-on-scene') return {bg:A(a.b), bgid:a.b, fg:A(a.s), fgid:a.s, col};
+  if (a.l==='cutout-on-panel') return {fg:A(a.s), fgid:a.s, col, big:c.kind==='gear'};
+  return {ill:null, ida:'', col};
+}
+function tcFoot(c){ const st=tcArtState(c).state; const rules=c.kind==='essence'?'':'Provisional rules'; const art= st==='pending'?'art pending': st==='partial'?'art in progress': st==='interim'?'interim art':''; return [rules,art].filter(Boolean).join('  ·  ')||'Illus. Wildkin Games'; }
 function tcFrameInput(d){
-  const c=d.card; const main=tcSetCards(d.set).filter(x=>x.rar!=='secret').length;
-  const o={ name:c.name, el:c.el||'Flame', stage:c.stage, hp:c.hp, type:(c.el||'')+' Creature', size:(0.3+((c.art.i*13)%30)/10).toFixed(1)+' m  ·  '+(4+(c.art.i*11)%60)+' kg', atk:c.atk, weak:c.weak, rar:c.rar==='secret'?'ultra':c.rar, num:String(d.no).padStart(3,'0')+'/'+String(main).padStart(3,'0'), kind:c.kind, rules:c.rules, flavor:'', sub:TC_SUB[c.kind]||'', ffx:.5 };
+  const c=d.card;
+  const o={ name:c.name, el:c.el||TC_EL[0], stage:c.stage, from:c.from, hp:c.hp, type:(c.el||'')+' Wildkin'+(c.el2?' / '+c.el2:''), size:c.to?'evolves into '+c.to: c.from? '' : (c.stage==='Basic'&&!c.to?'standalone':''),
+    atk:c.atk, weak:c.weak, ret:c.ret, rar:c.rar, num:tcNumLabel(c), kind:c.kind, rules:c.rules, flavor:'', sub:TC_SUB[c.kind]||'', top:c.kind==='biome'&&c.el? c.el.toUpperCase()+' BIOME' : (TC_KINDN[c.kind]||'').toUpperCase(), pk:c.pk, kindLabel:TC_KINDN[c.kind], foot:tcFoot(c), ffx:.5 };
   return o;
 }
 function tcFoilOverlay(d){
   const v=d.v; if (v==='N') return ''; const id='tf'+(TFU++); const g=`<linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3c8c"/><stop offset=".18" stop-color="#ffc83c"/><stop offset=".36" stop-color="#3cffa0"/><stop offset=".54" stop-color="#3caaff"/><stop offset=".72" stop-color="#aa5aff"/><stop offset=".9" stop-color="#ff3c8c"/><stop offset="1" stop-color="#ffc83c"/></linearGradient><pattern id="${id}p" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M0 4 H8" stroke="#fff" stroke-width=".7" opacity=".55"/></pattern>`;
-  const isT=d.card.kind!=='creature'; const win= isT? [14,45,222,166] : [14,43,222,152]; const full= d.card.rar==='ultra'||d.card.rar==='secret';
+  const isT=d.card.kind!=='creature'; const win= isT? [14,45,222,166] : [14,43,222,152];
   if (v==='R') return `<defs>${g}</defs><path fill-rule="evenodd" d="M0 0H250V350H0Z M${win[0]} ${win[1]}H${win[0]+win[2]}V${win[1]+win[3]}H${win[0]}Z" fill="url(#${id})" opacity=".26" style="mix-blend-mode:color-dodge"/><path fill-rule="evenodd" d="M0 0H250V350H0Z M${win[0]} ${win[1]}H${win[0]+win[2]}V${win[1]+win[3]}H${win[0]}Z" fill="url(#${id}p)" opacity=".16"/>`;
   if (v==='H') return `<defs>${g}</defs><rect x="${win[0]}" y="${win[1]}" width="${win[2]}" height="${win[3]}" fill="url(#${id})" opacity=".34" style="mix-blend-mode:color-dodge"/><rect x="${win[0]}" y="${win[1]}" width="${win[2]}" height="${win[3]}" fill="url(#${id}p)" opacity=".2"/>`;
-  return `<defs>${g}</defs><rect width="250" height="350" rx="12" fill="url(#${id})" opacity=".26" style="mix-blend-mode:color-dodge"/><rect width="250" height="350" rx="12" fill="url(#${id}p)" opacity=".14"/>`;
+  const k=v==='X'||v==='C'? .3 : .2; return `<defs>${g}</defs><rect width="250" height="350" rx="12" fill="url(#${id})" opacity="${k}" style="mix-blend-mode:color-dodge"/><rect width="250" height="350" rx="12" fill="url(#${id}p)" opacity=".12"/>`;
 }
 function tcFront(key){
   let s=TCV.get(key); if (s) return s; const d=tcD(key); if (d.sealed){ s=tcPackSVG(d.set,d.v); TCV.set(key,s); return s; }
-  const c=d.card, o=tcFrameInput(d); const art=tcArtOf(c);
-  s = c.kind!=='creature'? TCF.trainer(o,art) : (c.rar==='ultra'||c.rar==='secret')? TCF.full(o,art) : TCF.creature(o,art);
+  const c=d.card, o=tcFrameInput(d); const art=tcPic(c);
+  s = tcIsPrem(c)? TCF.full(o,art) : c.kind==='essence'? TCF.energy(o,art) : c.kind!=='creature'? TCF.trainer(o,art) : TCF.creature(o,art);
   s=s.replace('class="tcgsvg"','class="tcgsvg cardsvg v2" data-fin="'+tcFin(d)+'" role="img" aria-label="'+esc(c.name+' '+TC_RARN[c.rar])+'"'); const f=tcFoilOverlay(d); if (f) s=s.slice(0,s.lastIndexOf('</svg>'))+f+'</svg>';
   if (TCV.size>500) TCV.clear(); TCV.set(key,s); return s;
 }
@@ -34,9 +45,10 @@ function tcWear(svg, cp){
 const tcFace=cp=>{ const d=tcD(cp.k); if (d.sealed||cp.g>0) return tcFront(cp.k); const lab=tcLabel(cp.c); return lab==='NM'&&Math.min(...cp.c)>=94? tcFront(cp.k) : tcWear(tcFront(cp.k),cp); };
 // ---------- packs and boxes ----------
 function tcPackSVG(set, f){
-  const def=tcSetDef(set); const hue=(hsh('pk'+set)%360); const c1=`hsl(${hue} 62% 46%)`, c2=`hsl(${(hue+40)%360} 70% 30%)`, hi=`hsl(${hue} 80% 74%)`; const F='font-family="Barlow Condensed,Arial Narrow,sans-serif"'; const art=TCG_ART.f[(set-1)%9];
-  if (f==='P') return `<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="packsvg"><defs><linearGradient id="pg${set}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${hi}"/><stop offset=".4" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient><clipPath id="pc${set}"><rect x="34" y="84" width="132" height="112" rx="8"/></clipPath></defs><path d="M30 18 H170 L180 48 V270 H20 V48 Z" fill="url(#pg${set})"/><path d="M30 18 H170 L180 48 H20 Z" fill="#000" opacity=".25"/>${Array.from({length:9},(_,i)=>`<path d="M${26+i*18} 18 v-8" stroke="#000" stroke-opacity=".35" stroke-width="3"/>`).join('')}<text x="100" y="40" text-anchor="middle" ${F} font-weight="800" font-size="19" letter-spacing="5" fill="#fff">WILDKIN</text><image href="${art}" x="34" y="84" width="132" height="112" clip-path="url(#pc${set})" preserveAspectRatio="xMidYMid slice"/><rect x="34" y="84" width="132" height="112" rx="8" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2"/><text x="100" y="228" text-anchor="middle" ${F} font-weight="800" font-size="22" fill="#fff">${esc(def.name.toUpperCase())}</text><text x="100" y="250" text-anchor="middle" ${F} font-size="10" letter-spacing="3" fill="#fff" opacity=".85">BOOSTER PACK · 10 CARDS</text><path d="M20 48 L180 48" stroke="#fff" stroke-opacity=".5"/></svg>`;
-  return `<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="packsvg"><defs><linearGradient id="bg${set}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${hi}"/><stop offset=".35" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient><clipPath id="bc${set}"><rect x="28" y="62" width="164" height="110" rx="6"/></clipPath></defs><path d="M20 60 L40 28 H180 L200 60 Z" fill="#000" opacity=".3"/><rect x="14" y="56" width="192" height="130" rx="6" fill="url(#bg${set})"/><rect x="14" y="56" width="192" height="16" fill="#000" opacity=".22"/><text x="110" y="68" text-anchor="middle" ${F} font-weight="800" font-size="12" letter-spacing="5" fill="#fff">WILDKIN</text><image href="${art}" x="28" y="76" width="164" height="86" clip-path="url(#bc${set})" preserveAspectRatio="xMidYMid slice"/><rect x="28" y="76" width="164" height="86" rx="4" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2"/><text x="110" y="178" text-anchor="middle" ${F} font-weight="800" font-size="16" fill="#fff">${esc(def.name.toUpperCase())}</text><text x="110" y="206" text-anchor="middle" ${F} font-size="9" letter-spacing="3" fill="#fff" opacity=".8">BOOSTER BOX · 36 PACKS</text></svg>`;
+  const def=tcSetDef(set); const hue=(hsh('pk'+set)%360); const c1=`hsl(${hue} 62% 46%)`, c2=`hsl(${(hue+40)%360} 70% 30%)`, hi=`hsl(${hue} 80% 74%)`; const F='font-family="Barlow Condensed,Arial Narrow,sans-serif"'; const m=WK_ART['cut.001-cactuft.standing'];
+  const mascot=(x,y,w,h)=>{ if (!m) return `<g transform="translate(${x+w/2} ${y+h/2}) scale(${(Math.min(w,h)/26).toFixed(2)})"><path d="${TCF.GLYPH.Verdant}" fill="#fff" fill-opacity=".85"/></g>`; const k=Math.min(w/m.w,h/m.h)*0.92; const fw=m.w*k, fh=m.h*k; return `<image href="${m.u}" x="${(x+(w-fw)/2).toFixed(1)}" y="${(y+h-fh).toFixed(1)}" width="${fw.toFixed(1)}" height="${fh.toFixed(1)}"/>`; };
+  if (f==='P') return `<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="packsvg"><defs><linearGradient id="pg${set}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${hi}"/><stop offset=".4" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient><radialGradient id="pr${set}" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M30 18 H170 L180 48 V270 H20 V48 Z" fill="url(#pg${set})"/><path d="M30 18 H170 L180 48 H20 Z" fill="#000" opacity=".25"/>${Array.from({length:9},(_,i)=>`<path d="M${26+i*18} 18 v-8" stroke="#000" stroke-opacity=".35" stroke-width="3"/>`).join('')}<text x="100" y="40" text-anchor="middle" ${F} font-weight="800" font-size="19" letter-spacing="5" fill="#fff">WILDKIN</text><circle cx="100" cy="142" r="62" fill="url(#pr${set})"/>${mascot(40,80,120,124)}<text x="100" y="228" text-anchor="middle" ${F} font-weight="800" font-size="22" fill="#fff">${esc(def.name.toUpperCase())}</text><text x="100" y="250" text-anchor="middle" ${F} font-size="10" letter-spacing="3" fill="#fff" opacity=".85">BOOSTER PACK · 10 CARDS</text><path d="M20 48 L180 48" stroke="#fff" stroke-opacity=".5"/></svg>`;
+  return `<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="packsvg"><defs><linearGradient id="bg${set}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${hi}"/><stop offset=".35" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><path d="M20 60 L40 28 H180 L200 60 Z" fill="#000" opacity=".3"/><rect x="14" y="56" width="192" height="130" rx="6" fill="url(#bg${set})"/><rect x="14" y="56" width="192" height="16" fill="#000" opacity=".22"/><text x="110" y="68" text-anchor="middle" ${F} font-weight="800" font-size="12" letter-spacing="5" fill="#fff">WILDKIN</text>${mascot(60,74,100,90)}<text x="110" y="178" text-anchor="middle" ${F} font-weight="800" font-size="16" fill="#fff">${esc(def.name.toUpperCase())}</text><text x="110" y="206" text-anchor="middle" ${F} font-size="9" letter-spacing="3" fill="#fff" opacity=".8">BOOSTER BOX · 36 PACKS</text></svg>`;
 }
 // ---------- graded slab ----------
 function tcSlab(cp){
@@ -63,3 +75,11 @@ const _rvValue=rvValue; rvValue=function(k,o){ return k==='t'? tcCopyValue(o) : 
 const _popLine=popLine; popLine=function(k,o){ if (k!=='t') return _popLine(k,o); const g=o.g; if (!(g>0)) return ''; const p=G.tpop[o.k]||[]; let tot=0, at=p[g]||0, hi=0; p.forEach((n,i)=>{ tot+=n; if (i>g) hi+=n; }); if (tot<=1) return 'The only copy GCS has graded so far'; if (!hi && at===1) return 'The highest grade of '+tot+' graded copies'; if (!hi) return 'Tied for the highest grade: '+at+' of '+tot+' graded copies'; return at+' at GCS '+g+', '+hi+' graded higher, '+tot+' graded in total'; };
 const _inspDetail=ACT.inspdetail; ACT.inspdetail=function(a,el,e){ const [k,id]=a.split(':'); if (k==='t'){ closeInspect(); return ACT.tcopy(id); } return _inspDetail(a,el,e); };
 const _rc2=resetCaches; resetCaches=function(){ _rc2(); TCV.clear(); };
+
+const TC_INL=new Map();
+async function tcInlineArt(svg){
+  const urls=[...new Set((svg.match(/href="(art\/[^"]+)"/g)||[]).map(x=>x.slice(6,-1)))];
+  for (const u of urls){ if (TC_INL.has(u)) continue; try { const b=await (await fetch(u)).blob(); TC_INL.set(u, await new Promise(res=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.readAsDataURL(b); })); } catch(e){ TC_INL.set(u,''); } }
+  return svg.replace(/href="(art\/[^"]+)"/g,(m,u)=>'href="'+(TC_INL.get(u)||u)+'"');
+}
+const _v3r=v3Raster; v3Raster=async function(svg,W){ return _v3r(svg.indexOf('href="art/')>=0? await tcInlineArt(svg) : svg, W); };

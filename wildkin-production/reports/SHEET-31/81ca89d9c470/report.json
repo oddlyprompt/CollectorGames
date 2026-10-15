@@ -1,0 +1,180 @@
+{
+ "task": "SHEET-31",
+ "file": "wildkin-production/incoming/SHEET-31--v2.png",
+ "sha256": "81ca89d9c470df7a1f90f80d7dcf16fbdfe22b1f819872f8e1f63be52ce30ed4",
+ "checked": "2026-10-15T05:45:48Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.084-renn-calder.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0859,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    139,
+    107,
+    136,
+    59
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.107
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.085-mira-quill.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1039,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    133,
+    106,
+    137,
+    59
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.075
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.086-sel-veyra.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0921,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    139,
+    109,
+    137,
+    60
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.076
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.087-cass-rell.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0833,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    153,
+    99,
+    147,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.072
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.088-dr-cyl-vane.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1179,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    124,
+    100,
+    139,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.071
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.089-marshal-rook.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1197,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    136,
+    101,
+    137,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.057
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.090-iris-shade.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1077,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    140,
+    85,
+    135,
+    75
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.091
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.091-dex-harrow.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0869,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    142,
+    87,
+    145,
+    76
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.081
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.092-brin-hollow.portrait",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.0775,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    152,
+    89,
+    158,
+    79
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.085
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-31",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+  ],
+  "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+ }
+}

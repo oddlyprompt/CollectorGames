@@ -1,0 +1,115 @@
+{
+ "task": "SHEET-34",
+ "file": "wildkin-production/incoming/SHEET-34.png",
+ "sha256": "9bff7a1d1f149840566d581754ddefd32cdda7a3ea25bf3d6c85c0cfadb216e3",
+ "checked": "2026-10-14T01:51:38Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.111-verdant-canopy",
+   "errors": [],
+   "warnings": [],
+   "std": 56.3,
+   "cell_px": [
+    399,
+    398
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "ill.112-tideglass-bay",
+   "errors": [],
+   "warnings": [],
+   "std": 50.1,
+   "cell_px": [
+    394,
+    398
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "ill.113-stoneback-range",
+   "errors": [],
+   "warnings": [],
+   "std": 50.6,
+   "cell_px": [
+    399,
+    398
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "ill.114-ironroot-basin",
+   "errors": [],
+   "warnings": [],
+   "std": 54.5,
+   "cell_px": [
+    399,
+    395
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "ill.115-ember-crags",
+   "errors": [],
+   "warnings": [],
+   "std": 51.3,
+   "cell_px": [
+    394,
+    395
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": "ill.116-stormreach-heights",
+   "errors": [],
+   "warnings": [],
+   "std": 52.7,
+   "cell_px": [
+    399,
+    395
+   ]
+  },
+  {
+   "cell": 7,
+   "asset_id": "ill.117-astral-steppe",
+   "errors": [],
+   "warnings": [],
+   "std": 47.1,
+   "cell_px": [
+    399,
+    401
+   ]
+  },
+  {
+   "cell": 8,
+   "asset_id": "ill.118-duskmire",
+   "errors": [],
+   "warnings": [],
+   "std": 47.4,
+   "cell_px": [
+    394,
+    401
+   ]
+  },
+  {
+   "cell": 9,
+   "asset_id": "ill.119-wondergrove",
+   "errors": [],
+   "warnings": [],
+   "std": 45.8,
+   "cell_px": [
+    399,
+    401
+   ]
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass"
+}

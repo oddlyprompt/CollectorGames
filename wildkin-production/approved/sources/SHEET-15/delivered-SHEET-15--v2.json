@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-15",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit this exact Wildkin3x3 boar family sprite sheet. Preserve same species identity, colours, anatomy, row/pose order, all nine creatures. Change ONLY sizing and background cleanliness: REDUCE EACH CREATURE TO HALF ITS CURRENT WIDTH AND HEIGHT while keeping centered in its own cell. Every silhouette must fit wholly in middle50% width and middle50% height; minimum25% EMPTY green padding on ALL FOUR SIDES, including tusks/tail/ears. Remove any shadows. Background all nine cells absolute uniform solid chromaGREEN RGB40,160,60, no gradients/vignette/no textures. Keep exactly straight black gutters 4pixels centered at exact thirds, output square1254x1254PNG. Row1 tiny Rivbit, row2 Boltusk, row3 Ferradon, poses standing jumping sitting unchanged. DO NOT ENLARGE evolved creatures to fill space. No text/frames/glow/sparkles.",
+  "references": [
+    "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png"
+  ],
+  "notes": "QA revision; preserve previous version."
+}

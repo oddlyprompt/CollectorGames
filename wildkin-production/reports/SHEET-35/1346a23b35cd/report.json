@@ -1,0 +1,115 @@
+{
+ "task": "SHEET-35",
+ "file": "wildkin-production/incoming/SHEET-35.png",
+ "sha256": "1346a23b35cdbce25310d4bffac738c5186c5746c36621b9a05b75295576bd8e",
+ "checked": "2026-10-14T01:51:38Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "scene.ember.01",
+   "errors": [],
+   "warnings": [],
+   "std": 47.3,
+   "cell_px": [
+    399,
+    399
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "scene.ember.02",
+   "errors": [],
+   "warnings": [],
+   "std": 42.2,
+   "cell_px": [
+    394,
+    399
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "scene.ember.03",
+   "errors": [],
+   "warnings": [],
+   "std": 52.1,
+   "cell_px": [
+    399,
+    399
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "scene.ember.04",
+   "errors": [],
+   "warnings": [],
+   "std": 50.8,
+   "cell_px": [
+    399,
+    395
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "scene.ember.05",
+   "errors": [],
+   "warnings": [],
+   "std": 44.9,
+   "cell_px": [
+    394,
+    395
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": "scene.iron.01",
+   "errors": [],
+   "warnings": [],
+   "std": 47.8,
+   "cell_px": [
+    399,
+    395
+   ]
+  },
+  {
+   "cell": 7,
+   "asset_id": "scene.iron.02",
+   "errors": [],
+   "warnings": [],
+   "std": 52.3,
+   "cell_px": [
+    399,
+    402
+   ]
+  },
+  {
+   "cell": 8,
+   "asset_id": "scene.iron.03",
+   "errors": [],
+   "warnings": [],
+   "std": 52.0,
+   "cell_px": [
+    394,
+    402
+   ]
+  },
+  {
+   "cell": 9,
+   "asset_id": "scene.iron.04",
+   "errors": [],
+   "warnings": [],
+   "std": 51.4,
+   "cell_px": [
+    399,
+    402
+   ]
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass"
+}

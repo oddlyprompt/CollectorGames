@@ -1,0 +1,1844 @@
+{
+ "about": "Pieces cut from art-source/ by tools/build_art.py. Do not edit by hand; edit the tags in tools/build_art.py and rebuild.",
+ "creatures": [
+  {
+   "id": "bashlet-standing",
+   "name": "bashlet",
+   "pose": "standing",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/standing.webp",
+   "size": [
+    357,
+    358
+   ],
+   "margins_LTRB": [
+    57,
+    25,
+    28,
+    38
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "bashlet-jumping",
+   "name": "bashlet",
+   "pose": "jumping",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/jumping.webp",
+   "size": [
+    382,
+    332
+   ],
+   "margins_LTRB": [
+    18,
+    22,
+    10,
+    55
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "bashlet-running",
+   "name": "bashlet",
+   "pose": "running",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/running.webp",
+   "size": [
+    396,
+    345
+   ],
+   "margins_LTRB": [
+    3,
+    40,
+    7,
+    27
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "bashlet-waving",
+   "name": "bashlet",
+   "pose": "waving",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/waving.webp",
+   "size": [
+    382,
+    372
+   ],
+   "margins_LTRB": [
+    36,
+    19,
+    6,
+    39
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "bashlet-sitting",
+   "name": "bashlet",
+   "pose": "sitting",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/sitting.webp",
+   "size": [
+    368,
+    313
+   ],
+   "margins_LTRB": [
+    29,
+    50,
+    9,
+    51
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "bashlet-sleeping",
+   "name": "bashlet",
+   "pose": "sleeping",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/sleeping.webp",
+   "size": [
+    393,
+    296
+   ],
+   "margins_LTRB": [
+    6,
+    90,
+    10,
+    30
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "bashlet-surprised",
+   "name": "bashlet",
+   "pose": "surprised",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/surprised.webp",
+   "size": [
+    362,
+    353
+   ],
+   "margins_LTRB": [
+    34,
+    14,
+    17,
+    56
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 1
+  },
+  {
+   "id": "bashlet-looking-up",
+   "name": "bashlet",
+   "pose": "looking-up",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/looking-up.webp",
+   "size": [
+    383,
+    361
+   ],
+   "margins_LTRB": [
+    5,
+    18,
+    19,
+    58
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "bashlet-back-view",
+   "name": "bashlet",
+   "pose": "back-view",
+   "screen": "green",
+   "file": "assets/creatures/bashlet/back-view.webp",
+   "size": [
+    368,
+    371
+   ],
+   "margins_LTRB": [
+    12,
+    12,
+    35,
+    62
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-standing",
+   "name": "cactuft",
+   "pose": "standing",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/standing.webp",
+   "size": [
+    221,
+    390
+   ],
+   "margins_LTRB": [
+    97,
+    3,
+    89,
+    13
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-jumping",
+   "name": "cactuft",
+   "pose": "jumping",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/jumping.webp",
+   "size": [
+    239,
+    358
+   ],
+   "margins_LTRB": [
+    83,
+    5,
+    82,
+    44
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-running",
+   "name": "cactuft",
+   "pose": "running",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/running.webp",
+   "size": [
+    312,
+    383
+   ],
+   "margins_LTRB": [
+    62,
+    8,
+    33,
+    16
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-waving",
+   "name": "cactuft",
+   "pose": "waving",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/waving.webp",
+   "size": [
+    246,
+    375
+   ],
+   "margins_LTRB": [
+    78,
+    4,
+    83,
+    19
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-sitting",
+   "name": "cactuft",
+   "pose": "sitting",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/sitting.webp",
+   "size": [
+    247,
+    368
+   ],
+   "margins_LTRB": [
+    86,
+    2,
+    71,
+    26
+   ],
+   "touches_edge": true,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-sleeping",
+   "name": "cactuft",
+   "pose": "sleeping",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/sleeping.webp",
+   "size": [
+    376,
+    236
+   ],
+   "margins_LTRB": [
+    15,
+    84,
+    16,
+    80
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-surprised",
+   "name": "cactuft",
+   "pose": "surprised",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/surprised.webp",
+   "size": [
+    253,
+    379
+   ],
+   "margins_LTRB": [
+    68,
+    0,
+    86,
+    30
+   ],
+   "touches_edge": true,
+   "stray_pieces_dropped": 3
+  },
+  {
+   "id": "cactuft-looking-up",
+   "name": "cactuft",
+   "pose": "looking-up",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/looking-up.webp",
+   "size": [
+    286,
+    377
+   ],
+   "margins_LTRB": [
+    64,
+    4,
+    54,
+    32
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "cactuft-back-view",
+   "name": "cactuft",
+   "pose": "back-view",
+   "screen": "magenta",
+   "file": "assets/creatures/cactuft/back-view.webp",
+   "size": [
+    232,
+    380
+   ],
+   "margins_LTRB": [
+    86,
+    4,
+    89,
+    29
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-standing",
+   "name": "flapod",
+   "pose": "standing",
+   "screen": "green",
+   "file": "assets/creatures/flapod/standing.webp",
+   "size": [
+    389,
+    288
+   ],
+   "margins_LTRB": [
+    15,
+    67,
+    5,
+    55
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-jumping",
+   "name": "flapod",
+   "pose": "jumping",
+   "screen": "green",
+   "file": "assets/creatures/flapod/jumping.webp",
+   "size": [
+    357,
+    333
+   ],
+   "margins_LTRB": [
+    37,
+    22,
+    11,
+    56
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-running",
+   "name": "flapod",
+   "pose": "running",
+   "screen": "green",
+   "file": "assets/creatures/flapod/running.webp",
+   "size": [
+    359,
+    293
+   ],
+   "margins_LTRB": [
+    20,
+    61,
+    30,
+    56
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-waving",
+   "name": "flapod",
+   "pose": "waving",
+   "screen": "green",
+   "file": "assets/creatures/flapod/waving.webp",
+   "size": [
+    357,
+    341
+   ],
+   "margins_LTRB": [
+    43,
+    12,
+    10,
+    37
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-sitting",
+   "name": "flapod",
+   "pose": "sitting",
+   "screen": "green",
+   "file": "assets/creatures/flapod/sitting.webp",
+   "size": [
+    394,
+    289
+   ],
+   "margins_LTRB": [
+    4,
+    57,
+    5,
+    43
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-sleeping",
+   "name": "flapod",
+   "pose": "sleeping",
+   "screen": "green",
+   "file": "assets/creatures/flapod/sleeping.webp",
+   "size": [
+    364,
+    269
+   ],
+   "margins_LTRB": [
+    21,
+    57,
+    26,
+    63
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-surprised",
+   "name": "flapod",
+   "pose": "surprised",
+   "screen": "green",
+   "file": "assets/creatures/flapod/surprised.webp",
+   "size": [
+    349,
+    335
+   ],
+   "margins_LTRB": [
+    38,
+    16,
+    23,
+    74
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-looking-up",
+   "name": "flapod",
+   "pose": "looking-up",
+   "screen": "green",
+   "file": "assets/creatures/flapod/looking-up.webp",
+   "size": [
+    352,
+    330
+   ],
+   "margins_LTRB": [
+    15,
+    26,
+    36,
+    68
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "flapod-back-view",
+   "name": "flapod",
+   "pose": "back-view",
+   "screen": "green",
+   "file": "assets/creatures/flapod/back-view.webp",
+   "size": [
+    333,
+    333
+   ],
+   "margins_LTRB": [
+    55,
+    25,
+    22,
+    65
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-standing",
+   "name": "frondolin",
+   "pose": "standing",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/standing.webp",
+   "size": [
+    296,
+    388
+   ],
+   "margins_LTRB": [
+    31,
+    5,
+    82,
+    15
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-jumping",
+   "name": "frondolin",
+   "pose": "jumping",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/jumping.webp",
+   "size": [
+    375,
+    357
+   ],
+   "margins_LTRB": [
+    6,
+    13,
+    24,
+    38
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-running",
+   "name": "frondolin",
+   "pose": "running",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/running.webp",
+   "size": [
+    364,
+    355
+   ],
+   "margins_LTRB": [
+    24,
+    26,
+    21,
+    27
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-waving",
+   "name": "frondolin",
+   "pose": "waving",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/waving.webp",
+   "size": [
+    338,
+    382
+   ],
+   "margins_LTRB": [
+    46,
+    2,
+    26,
+    21
+   ],
+   "touches_edge": true,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-sitting",
+   "name": "frondolin",
+   "pose": "sitting",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/sitting.webp",
+   "size": [
+    301,
+    351
+   ],
+   "margins_LTRB": [
+    76,
+    21,
+    28,
+    35
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-sleeping",
+   "name": "frondolin",
+   "pose": "sleeping",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/sleeping.webp",
+   "size": [
+    343,
+    305
+   ],
+   "margins_LTRB": [
+    35,
+    64,
+    31,
+    38
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-surprised",
+   "name": "frondolin",
+   "pose": "surprised",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/surprised.webp",
+   "size": [
+    301,
+    376
+   ],
+   "margins_LTRB": [
+    25,
+    10,
+    83,
+    23
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 2
+  },
+  {
+   "id": "frondolin-looking-up",
+   "name": "frondolin",
+   "pose": "looking-up",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/looking-up.webp",
+   "size": [
+    361,
+    374
+   ],
+   "margins_LTRB": [
+    12,
+    12,
+    32,
+    23
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "frondolin-back-view",
+   "name": "frondolin",
+   "pose": "back-view",
+   "screen": "magenta",
+   "file": "assets/creatures/frondolin/back-view.webp",
+   "size": [
+    310,
+    381
+   ],
+   "margins_LTRB": [
+    79,
+    7,
+    20,
+    22
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "koi-standing",
+   "name": "koi",
+   "pose": "standing",
+   "screen": "green",
+   "file": "assets/creatures/koi/standing.webp",
+   "size": [
+    352,
+    377
+   ],
+   "margins_LTRB": [
+    18,
+    13,
+    38,
+    20
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "koi-jumping",
+   "name": "koi",
+   "pose": "jumping",
+   "screen": "green",
+   "file": "assets/creatures/koi/jumping.webp",
+   "size": [
+    389,
+    352
+   ],
+   "margins_LTRB": [
+    11,
+    14,
+    9,
+    43
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 1
+  },
+  {
+   "id": "koi-running",
+   "name": "koi",
+   "pose": "running",
+   "screen": "green",
+   "file": "assets/creatures/koi/running.webp",
+   "size": [
+    400,
+    349
+   ],
+   "margins_LTRB": [
+    4,
+    30,
+    2,
+    30
+   ],
+   "touches_edge": true,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "koi-waving",
+   "name": "koi",
+   "pose": "waving",
+   "screen": "green",
+   "file": "assets/creatures/koi/waving.webp",
+   "size": [
+    340,
+    385
+   ],
+   "margins_LTRB": [
+    48,
+    0,
+    20,
+    15
+   ],
+   "touches_edge": true,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "koi-sitting",
+   "name": "koi",
+   "pose": "sitting",
+   "screen": "green",
+   "file": "assets/creatures/koi/sitting.webp",
+   "size": [
+    329,
+    382
+   ],
+   "margins_LTRB": [
+    44,
+    6,
+    36,
+    17
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "koi-sleeping",
+   "name": "koi",
+   "pose": "sleeping",
+   "screen": "green",
+   "file": "assets/creatures/koi/sleeping.webp",
+   "size": [
+    361,
+    285
+   ],
+   "margins_LTRB": [
+    27,
+    72,
+    21,
+    47
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "koi-surprised",
+   "name": "koi",
+   "pose": "surprised",
+   "screen": "green",
+   "file": "assets/creatures/koi/surprised.webp",
+   "size": [
+    364,
+    357
+   ],
+   "margins_LTRB": [
+    22,
+    23,
+    22,
+    29
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 3
+  },
+  {
+   "id": "koi-looking-up",
+   "name": "koi",
+   "pose": "looking-up",
+   "screen": "green",
+   "file": "assets/creatures/koi/looking-up.webp",
+   "size": [
+    388,
+    378
+   ],
+   "margins_LTRB": [
+    16,
+    7,
+    1,
+    24
+   ],
+   "touches_edge": true,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "koi-back-view",
+   "name": "koi",
+   "pose": "back-view",
+   "screen": "green",
+   "file": "assets/creatures/koi/back-view.webp",
+   "size": [
+    369,
+    360
+   ],
+   "margins_LTRB": [
+    20,
+    7,
+    19,
+    42
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "rolyte-standing",
+   "name": "rolyte",
+   "pose": "standing",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/standing.webp",
+   "size": [
+    300,
+    354
+   ],
+   "margins_LTRB": [
+    57,
+    22,
+    53,
+    29
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "rolyte-jumping",
+   "name": "rolyte",
+   "pose": "jumping",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/jumping.webp",
+   "size": [
+    351,
+    336
+   ],
+   "margins_LTRB": [
+    42,
+    16,
+    13,
+    54
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "rolyte-running",
+   "name": "rolyte",
+   "pose": "running",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/running.webp",
+   "size": [
+    379,
+    285
+   ],
+   "margins_LTRB": [
+    15,
+    76,
+    14,
+    46
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 2
+  },
+  {
+   "id": "rolyte-waving",
+   "name": "rolyte",
+   "pose": "waving",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/waving.webp",
+   "size": [
+    335,
+    349
+   ],
+   "margins_LTRB": [
+    47,
+    20,
+    28,
+    30
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "rolyte-sitting",
+   "name": "rolyte",
+   "pose": "sitting",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/sitting.webp",
+   "size": [
+    309,
+    353
+   ],
+   "margins_LTRB": [
+    47,
+    18,
+    49,
+    28
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "rolyte-sleeping",
+   "name": "rolyte",
+   "pose": "sleeping",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/sleeping.webp",
+   "size": [
+    328,
+    317
+   ],
+   "margins_LTRB": [
+    44,
+    43,
+    36,
+    38
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  },
+  {
+   "id": "rolyte-surprised",
+   "name": "rolyte",
+   "pose": "surprised",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/surprised.webp",
+   "size": [
+    328,
+    359
+   ],
+   "margins_LTRB": [
+    46,
+    11,
+    34,
+    46
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 2
+  },
+  {
+   "id": "rolyte-looking-up",
+   "name": "rolyte",
+   "pose": "looking-up",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/looking-up.webp",
+   "size": [
+    319,
+    375
+   ],
+   "margins_LTRB": [
+    41,
+    13,
+    43,
+    28
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 2
+  },
+  {
+   "id": "rolyte-back-view",
+   "name": "rolyte",
+   "pose": "back-view",
+   "screen": "green",
+   "file": "assets/creatures/rolyte/back-view.webp",
+   "size": [
+    325,
+    356
+   ],
+   "margins_LTRB": [
+    51,
+    24,
+    34,
+    38
+   ],
+   "touches_edge": false,
+   "stray_pieces_dropped": 0
+  }
+ ],
+ "scenes": [
+  {
+   "id": "astral-01",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "moonlit forest clearing with glowing stars",
+   "tags": [
+    "forest",
+    "grass",
+    "crescent-moon"
+   ],
+   "file": "assets/scenes/astral/astral-01.jpg",
+   "size": [
+    399,
+    399
+   ]
+  },
+  {
+   "id": "astral-02",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "ruined stone arch over a moon-circle floor",
+   "tags": [
+    "ruins",
+    "stone",
+    "flowers"
+   ],
+   "file": "assets/scenes/astral/astral-02.jpg",
+   "size": [
+    394,
+    399
+   ]
+  },
+  {
+   "id": "astral-03",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "dusk",
+   "description": "lantern plaza above a fairy-tale village",
+   "tags": [
+    "village",
+    "castle",
+    "crescent-moon",
+    "stone"
+   ],
+   "file": "assets/scenes/astral/astral-03.jpg",
+   "size": [
+    399,
+    399
+   ]
+  },
+  {
+   "id": "astral-04",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "night glade with waterfall and glowing flowers",
+   "tags": [
+    "forest",
+    "waterfall",
+    "grass"
+   ],
+   "file": "assets/scenes/astral/astral-04.jpg",
+   "size": [
+    399,
+    395
+   ]
+  },
+  {
+   "id": "astral-05",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "floating islands and a moon statue on a star-circle floor",
+   "tags": [
+    "floating-islands",
+    "clouds",
+    "stone"
+   ],
+   "file": "assets/scenes/astral/astral-05.jpg",
+   "size": [
+    394,
+    395
+   ]
+  },
+  {
+   "id": "astral-06",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "aurora over a lake, crystal meadow",
+   "tags": [
+    "aurora",
+    "lake",
+    "crystals",
+    "grass"
+   ],
+   "file": "assets/scenes/astral/astral-06.jpg",
+   "size": [
+    399,
+    395
+   ]
+  },
+  {
+   "id": "astral-07",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "purple crystal cave with a glowing stone floor",
+   "tags": [
+    "cave",
+    "crystals",
+    "indoor-feel"
+   ],
+   "file": "assets/scenes/astral/astral-07.jpg",
+   "size": [
+    399,
+    400
+   ]
+  },
+  {
+   "id": "astral-08",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "meadow with floating waterfall islands and a galaxy",
+   "tags": [
+    "floating-islands",
+    "galaxy",
+    "grass"
+   ],
+   "file": "assets/scenes/astral/astral-08.jpg",
+   "size": [
+    394,
+    400
+   ]
+  },
+  {
+   "id": "astral-09",
+   "biome": "astral",
+   "floor": "ground",
+   "time": "night",
+   "description": "golden observatory plaza with an armillary sphere",
+   "tags": [
+    "observatory",
+    "stone",
+    "planets"
+   ],
+   "file": "assets/scenes/astral/astral-09.jpg",
+   "size": [
+    399,
+    400
+   ]
+  },
+  {
+   "id": "stone-01",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "red canyon with a flat rock shelf",
+   "tags": [
+    "desert",
+    "canyon",
+    "cactus"
+   ],
+   "file": "assets/scenes/stone/stone-01.jpg",
+   "size": [
+    399,
+    398
+   ]
+  },
+  {
+   "id": "stone-02",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "purple crystal cave mouth",
+   "tags": [
+    "cave",
+    "crystals"
+   ],
+   "file": "assets/scenes/stone/stone-02.jpg",
+   "size": [
+    395,
+    398
+   ]
+  },
+  {
+   "id": "stone-03",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "mossy rock shelf above misty rock towers",
+   "tags": [
+    "cliffs",
+    "mist",
+    "tree"
+   ],
+   "file": "assets/scenes/stone/stone-03.jpg",
+   "size": [
+    400,
+    398
+   ]
+  },
+  {
+   "id": "stone-04",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "overgrown stone gateway with carved symbols",
+   "tags": [
+    "ruins",
+    "arch",
+    "moss"
+   ],
+   "file": "assets/scenes/stone/stone-04.jpg",
+   "size": [
+    399,
+    396
+   ]
+  },
+  {
+   "id": "stone-05",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "desert with giant ribcage bones",
+   "tags": [
+    "desert",
+    "bones",
+    "canyon"
+   ],
+   "file": "assets/scenes/stone/stone-05.jpg",
+   "size": [
+    395,
+    396
+   ]
+  },
+  {
+   "id": "stone-06",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "mossy boulders and a balanced rock",
+   "tags": [
+    "boulders",
+    "moss",
+    "trees"
+   ],
+   "file": "assets/scenes/stone/stone-06.jpg",
+   "size": [
+    400,
+    396
+   ]
+  },
+  {
+   "id": "stone-07",
+   "biome": "stone",
+   "floor": "water",
+   "time": "day",
+   "description": "crystal pool with stepping-stone slabs and a small waterfall",
+   "tags": [
+    "crystals",
+    "waterfall",
+    "stepping-stones"
+   ],
+   "file": "assets/scenes/stone/stone-07.jpg",
+   "size": [
+    399,
+    402
+   ]
+  },
+  {
+   "id": "stone-08",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "sunlit canyon spires over a sandstone ledge",
+   "tags": [
+    "canyon",
+    "spires",
+    "mist"
+   ],
+   "file": "assets/scenes/stone/stone-08.jpg",
+   "size": [
+    395,
+    402
+   ]
+  },
+  {
+   "id": "stone-09",
+   "biome": "stone",
+   "floor": "ground",
+   "time": "day",
+   "description": "ancient carved ruins on mossy steps",
+   "tags": [
+    "ruins",
+    "moss",
+    "carved-stone"
+   ],
+   "file": "assets/scenes/stone/stone-09.jpg",
+   "size": [
+    400,
+    402
+   ]
+  },
+  {
+   "id": "tide-01",
+   "biome": "tide",
+   "floor": "water",
+   "time": "day",
+   "description": "clear shallow lagoon with a rock arch",
+   "tags": [
+    "lagoon",
+    "sand",
+    "rock-arch"
+   ],
+   "file": "assets/scenes/tide/tide-01.jpg",
+   "size": [
+    399,
+    399
+   ]
+  },
+  {
+   "id": "tide-02",
+   "biome": "tide",
+   "floor": "water",
+   "time": "dusk",
+   "description": "sunset tide pool with coral and starfish",
+   "tags": [
+    "coral",
+    "starfish",
+    "sunset"
+   ],
+   "file": "assets/scenes/tide/tide-02.jpg",
+   "size": [
+    396,
+    399
+   ]
+  },
+  {
+   "id": "tide-03",
+   "biome": "tide",
+   "floor": "ground",
+   "time": "night",
+   "description": "moonlit beach with glowing blue shoreline",
+   "tags": [
+    "beach",
+    "moon",
+    "glow",
+    "palm"
+   ],
+   "file": "assets/scenes/tide/tide-03.jpg",
+   "size": [
+    399,
+    399
+   ]
+  },
+  {
+   "id": "tide-04",
+   "biome": "tide",
+   "floor": "water",
+   "time": "day",
+   "description": "lily pond with cattails and waterfalls",
+   "tags": [
+    "pond",
+    "lilies",
+    "waterfall"
+   ],
+   "file": "assets/scenes/tide/tide-04.jpg",
+   "size": [
+    399,
+    396
+   ]
+  },
+  {
+   "id": "tide-05",
+   "biome": "tide",
+   "floor": "water",
+   "time": "day",
+   "description": "coral shallows with sun rays",
+   "tags": [
+    "coral",
+    "underwater-feel",
+    "shells"
+   ],
+   "file": "assets/scenes/tide/tide-05.jpg",
+   "size": [
+    396,
+    396
+   ]
+  },
+  {
+   "id": "tide-06",
+   "biome": "tide",
+   "floor": "water",
+   "time": "day",
+   "description": "sea cave shore opening to a sunny bay",
+   "tags": [
+    "cave",
+    "shells",
+    "shore"
+   ],
+   "file": "assets/scenes/tide/tide-06.jpg",
+   "size": [
+    399,
+    396
+   ]
+  },
+  {
+   "id": "tide-07",
+   "biome": "tide",
+   "floor": "water",
+   "time": "day",
+   "description": "crystal waterfall pool",
+   "tags": [
+    "crystals",
+    "waterfall",
+    "moss"
+   ],
+   "file": "assets/scenes/tide/tide-07.jpg",
+   "size": [
+    399,
+    401
+   ]
+  },
+  {
+   "id": "tide-08",
+   "biome": "tide",
+   "floor": "ground",
+   "time": "day",
+   "description": "pearly shell beach",
+   "tags": [
+    "beach",
+    "shells",
+    "sand"
+   ],
+   "file": "assets/scenes/tide/tide-08.jpg",
+   "size": [
+    396,
+    401
+   ]
+  },
+  {
+   "id": "tide-09",
+   "biome": "tide",
+   "floor": "water",
+   "time": "day",
+   "description": "big waterfall lagoon",
+   "tags": [
+    "waterfall",
+    "mist",
+    "lagoon"
+   ],
+   "file": "assets/scenes/tide/tide-09.jpg",
+   "size": [
+    399,
+    401
+   ]
+  },
+  {
+   "id": "verdant-01",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "flower meadow under a big tree with a wooden fence",
+   "tags": [
+    "meadow",
+    "tree",
+    "flowers"
+   ],
+   "file": "assets/scenes/verdant/verdant-01.jpg",
+   "size": [
+    399,
+    399
+   ]
+  },
+  {
+   "id": "verdant-02",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "desert flower garden with giant flowering cacti",
+   "tags": [
+    "cactus",
+    "flowers",
+    "mesa"
+   ],
+   "file": "assets/scenes/verdant/verdant-02.jpg",
+   "size": [
+    395,
+    399
+   ]
+  },
+  {
+   "id": "verdant-03",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "mossy stone arch in a clover meadow",
+   "tags": [
+    "arch",
+    "ruins",
+    "clover"
+   ],
+   "file": "assets/scenes/verdant/verdant-03.jpg",
+   "size": [
+    399,
+    399
+   ]
+  },
+  {
+   "id": "verdant-04",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "wildflower hillside above a distant lake",
+   "tags": [
+    "meadow",
+    "flowers",
+    "lake"
+   ],
+   "file": "assets/scenes/verdant/verdant-04.jpg",
+   "size": [
+    399,
+    394
+   ]
+  },
+  {
+   "id": "verdant-05",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "sun-ray forest glade with mossy roots",
+   "tags": [
+    "forest",
+    "moss",
+    "sunbeams"
+   ],
+   "file": "assets/scenes/verdant/verdant-05.jpg",
+   "size": [
+    395,
+    394
+   ]
+  },
+  {
+   "id": "verdant-06",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "apple orchard glade",
+   "tags": [
+    "orchard",
+    "apples",
+    "fence"
+   ],
+   "file": "assets/scenes/verdant/verdant-06.jpg",
+   "size": [
+    399,
+    394
+   ]
+  },
+  {
+   "id": "verdant-07",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "clover meadow with a small waterfall pond behind",
+   "tags": [
+    "clover",
+    "waterfall",
+    "meadow"
+   ],
+   "file": "assets/scenes/verdant/verdant-07.jpg",
+   "size": [
+    399,
+    400
+   ]
+  },
+  {
+   "id": "verdant-08",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "blossom pillars and a petal-strewn lawn",
+   "tags": [
+    "blossoms",
+    "garden",
+    "stairs"
+   ],
+   "file": "assets/scenes/verdant/verdant-08.jpg",
+   "size": [
+    395,
+    400
+   ]
+  },
+  {
+   "id": "verdant-09",
+   "biome": "verdant",
+   "floor": "ground",
+   "time": "day",
+   "description": "meadow under a branch with a lake and rock island",
+   "tags": [
+    "meadow",
+    "lake",
+    "tree"
+   ],
+   "file": "assets/scenes/verdant/verdant-09.jpg",
+   "size": [
+    399,
+    400
+   ]
+  },
+  {
+   "id": "wonder-01",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "day",
+   "description": "candy meadow with lollipops and a pink castle",
+   "tags": [
+    "candy",
+    "castle",
+    "meadow"
+   ],
+   "file": "assets/scenes/wonder/wonder-01.jpg",
+   "size": [
+    401,
+    397
+   ]
+  },
+  {
+   "id": "wonder-02",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "indoor",
+   "description": "cosy star-and-moon nursery with a fluffy rug",
+   "tags": [
+    "bedroom",
+    "rug",
+    "stars",
+    "indoor"
+   ],
+   "file": "assets/scenes/wonder/wonder-02.jpg",
+   "size": [
+    394,
+    397
+   ]
+  },
+  {
+   "id": "wonder-03",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "day",
+   "description": "fairy cottage garden with a rainbow",
+   "tags": [
+    "cottage",
+    "fence",
+    "rainbow"
+   ],
+   "file": "assets/scenes/wonder/wonder-03.jpg",
+   "size": [
+    399,
+    397
+   ]
+  },
+  {
+   "id": "wonder-04",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "day",
+   "description": "carousel and funfair on a glossy floor",
+   "tags": [
+    "carousel",
+    "funfair",
+    "fairground"
+   ],
+   "file": "assets/scenes/wonder/wonder-04.jpg",
+   "size": [
+    401,
+    394
+   ]
+  },
+  {
+   "id": "wonder-05",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "day",
+   "description": "rainbow crystal waterfall pool with a stone pedestal",
+   "tags": [
+    "crystals",
+    "waterfall",
+    "pedestal",
+    "wisteria"
+   ],
+   "file": "assets/scenes/wonder/wonder-05.jpg",
+   "size": [
+    394,
+    394
+   ]
+  },
+  {
+   "id": "wonder-06",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "day",
+   "description": "mushroom and cotton-tree meadow",
+   "tags": [
+    "mushrooms",
+    "meadow",
+    "pink-trees"
+   ],
+   "file": "assets/scenes/wonder/wonder-06.jpg",
+   "size": [
+    399,
+    394
+   ]
+  },
+  {
+   "id": "wonder-07",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "day",
+   "description": "cloud terrace with moon-and-star pillars and a floating castle",
+   "tags": [
+    "floating",
+    "clouds",
+    "castle",
+    "rainbow",
+    "terrace"
+   ],
+   "file": "assets/scenes/wonder/wonder-07.jpg",
+   "size": [
+    401,
+    403
+   ]
+  },
+  {
+   "id": "wonder-08",
+   "biome": "wonder",
+   "floor": "water",
+   "time": "day",
+   "description": "soap-bubble pool with star bubbles",
+   "tags": [
+    "bubbles",
+    "iridescent",
+    "clouds"
+   ],
+   "file": "assets/scenes/wonder/wonder-08.jpg",
+   "size": [
+    394,
+    403
+   ]
+  },
+  {
+   "id": "wonder-09",
+   "biome": "wonder",
+   "floor": "ground",
+   "time": "dusk",
+   "description": "lantern tree hollow at sunset with a petal rug",
+   "tags": [
+    "lanterns",
+    "tree",
+    "sunset",
+    "cosy"
+   ],
+   "file": "assets/scenes/wonder/wonder-09.jpg",
+   "size": [
+    399,
+    403
+   ]
+  }
+ ],
+ "creature_info": {
+  "cactuft": {
+   "move": [
+    "walker"
+   ],
+   "size": 1.0
+  },
+  "frondolin": {
+   "move": [
+    "walker"
+   ],
+   "size": 0.86
+  },
+  "bashlet": {
+   "move": [
+    "walker"
+   ],
+   "size": 0.74
+  },
+  "rolyte": {
+   "move": [
+    "walker"
+   ],
+   "size": 0.66
+  },
+  "koi": {
+   "move": [
+    "walker",
+    "swimmer"
+   ],
+   "size": 0.88
+  },
+  "flapod": {
+   "move": [
+    "floater"
+   ],
+   "size": 0.7
+  }
+ }
+}

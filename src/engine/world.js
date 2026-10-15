@@ -39,6 +39,8 @@ function newPlayer(o){
 }
 function emptyLine(p){ return isPitcher(p) ? [0,0,0,0,0,0,0,0] : [0,0,0,0,0,0,0,0]; }
 
+// the comics and Wildkin builds run no league: same empty containers the rest of the engine expects, nothing in them
+function initNoLeague(){ G.players=[]; G.names={}; G.stand=TEAMS_DEF.map(()=>[0,0]); G.champs={}; G.awards={}; G.rookieClass={}; G.news=[]; G.rot=TEAMS_DEF.map(()=>0); }
 function initLeague(){
   G.players=[]; G.names={}; G.stand=TEAMS_DEF.map(()=>[0,0]); G.champs={}; G.awards={}; G.rookieClass={}; G.news=[]; G.rot=TEAMS_DEF.map(()=>0);
   const yr=2020;
@@ -240,6 +242,7 @@ function bumpHype(p, x){ p.hy = clamp(p.hy + x, -0.35, 0.6); }
 function addNews(h, b, pid, k){ G.news.unshift({t:G.day, h, b, p:pid, k}); if (G.news.length>320) G.news.length=320; }
 
 function simLeagueDay(t){
+  if (!packHas('sports')) return;
   const yr=yearOf(t), d=seasonDates(yr);
   if (t===d.ny) newYear(yr, true);
   if (t===d.open){ G.stand=TEAMS_DEF.map(()=>[0,0]); for(const p of G.players){ if(p.tm>=0) p.cur=emptyLine(p); } }

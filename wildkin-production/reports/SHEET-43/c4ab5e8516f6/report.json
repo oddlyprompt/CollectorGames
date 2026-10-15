@@ -1,0 +1,129 @@
+{
+ "task": "SHEET-43",
+ "file": "wildkin-production/incoming/SHEET-43.png",
+ "sha256": "c4ab5e8516f626c79b9c760b9f69e24bc2d5f475549860fd5533c648662e7c01",
+ "checked": "2026-10-15T05:45:58Z",
+ "errors": [
+  "too small: 1060x1484, need at least 2100x2940"
+ ],
+ "warnings": [
+  "cell 1: cell is only 333 px wide; card art wants 700+",
+  "cell 2: cell is only 330 px wide; card art wants 700+",
+  "cell 3: cell is only 333 px wide; card art wants 700+",
+  "cell 4: cell is only 333 px wide; card art wants 700+"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.177-clasped-aegisopod",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 61.0,
+   "cell_px": [
+    333,
+    475
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "ill.178-clasped-pompyre",
+   "errors": [],
+   "warnings": [
+    "cell is only 330 px wide; card art wants 700+"
+   ],
+   "std": 54.9,
+   "cell_px": [
+    330,
+    475
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "ill.179-clasped-ferradon",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 53.4,
+   "cell_px": [
+    333,
+    475
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "ill.180-clasped-veilmora",
+   "errors": [],
+   "warnings": [
+    "cell is only 333 px wide; card art wants 700+"
+   ],
+   "std": 56.4,
+   "cell_px": [
+    333,
+    472
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "std": 0.6,
+   "empty": true
+  },
+  {
+   "cell": 6,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "std": 0.6,
+   "empty": true
+  },
+  {
+   "cell": 7,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "std": 0.6,
+   "empty": true
+  },
+  {
+   "cell": 8,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "std": 0.6,
+   "empty": true
+  },
+  {
+   "cell": 9,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "std": 0.6,
+   "empty": true
+  }
+ ],
+ "size": [
+  1060,
+  1484
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-43",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SHEET-43 Clasp Program Secret Rares. EXACT2100x2940 portrait5:7 PNG,3x3 equal portrait5:7 cells thin straight black gutters at thirds. FOUR NEW fully painted cinematic dimensional3D illustrations in cells1,2,3,4 ONLY; cells5,6,7,8,9 flat near-black RGB20,20,24 EMPTY. Match exact creature identities in references: cell1 top-left Clasped Aegisopod BOTTOM ROW armored pillbug sheet: navy/silver armored round pillbug cream face huge black eyes segmented navy legs, at industrial holding bay; cell2 top-middle Clasped Pompyre MIDDLE/BOTTOM ROW bat sheet: purple berry bat with large pink inner ears pink wing membranes berry-leaf crown and pale-pink chest tuft, in glass examination chamber; cell3 top-right Clasped Ferradon BOTTOM ROW new boar sheet: charcoal warm gray stocky boar with cream muzzle ivory tusks layered riveted iron back armor copper rivets, in factory corridor; cell4 middle-left Clasped Veilmora BOTTOM ROW moth sheet: dark plum moth cream fluffy collar long feather antennae large plum wings cream crescent and oval markings, under industrial skylight. Every creature remains recognizable and alive, same original anatomy/markings/color, no evil monster transformation. The consistent Clasp device is a small angular brushed-silver charcoal mechanical collar/bracket with tiny TEAL indicator lights and short latch, worn on neck/thorax, recognizable same Veyra industrial design across all four. Dramatic cool teal/gray setting with restrained crimson warning lights, NOT supernatural magic, no chains or gore, no injury. Subjects entirely centered middle50% vertical with environmental negative space top/bottom quarter. No text, logos, lettering, cardframes. Five specified empty cells absolutely blank.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-05.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-09--v2.png",
+   "/workspace/scratch/d7e613614435/wildkin-completion/wildkin-production/incoming/SHEET-15.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-14--v2.png"
+  ],
+  "notes": "Native generation output; see QA for resolution."
+ }
+}

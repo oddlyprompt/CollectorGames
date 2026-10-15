@@ -7,8 +7,8 @@ const SCENARIOS = [
   {id:'storage', n:'The storage unit', d:'A semi-retired dealer\'s leftover stock, $1,200, and no allowance. Sell to eat.', cash:1200, pay:0},
   {id:'fan', n:'Diehard fan', d:'A shoebox of one team\'s cards from childhood, $200, and $40 a week. You already know who your guys are.', cash:200, pay:40},
   {id:'reader', n:'Pull-list reader', d:'You have read one series since issue #1, and you have every issue. $200 and $40 a week.', cash:200, pay:40},
-  {id:'tcgbinder', n:'The old binder', d:'A binder of cards from the first two sets that you actually played with, four unopened packs, $100 and $40 a week.', cash:100, pay:40},
-  {id:'tcgbox', n:'A box to open', d:'Two sealed boxes of the newest set and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
+  {id:'tcgbinder', n:'The old binder', d:'A binder of First Bond cards you actually played with since launch, four unopened packs, $100 and $40 a week.', cash:100, pay:40},
+  {id:'tcgbox', n:'A box to open', d:'Two sealed boxes of First Bond and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
   {id:'windfall', n:'Deep pockets', d:'$10,000 and no allowance. Nothing forces you. See how the market treats a whale.', cash:10000, pay:0}
 ];
 function pickScenario(){
@@ -25,7 +25,7 @@ function scnComic(key, how, from, note, src){ const c=cmMakeCopy(key,0,[G.day,ho
 function applyScenario(id){
   G._scnId=id; const sc=SCENARIOS.find(x=>x.id===id)||SCENARIOS[0]; const P_=G.player; P_.cash=sc.cash; P_.pay=sc.pay; P_.scn=sc.id; P_.scnN=sc.n;
   if (sc.id==='inherit'){ for (let i=0;i<ri(220,300);i++){ const key=randComicKey(R()<0.7?{old:1}:{}); const c=scnComic(key,'inherited','Uncle Ray','Inherited from Uncle Ray'); c.c=c.c.map(v=>Math.max(5,v-ri(0,10))); } }
-  else if (sc.id==='storage'){ for (let i=0;i<ri(50,70);i++) scnCard(randCardKey({old:R()<0.5,hit:R()<0.1}),'found','the storage unit','Came out of the storage unit'); if (packHas('comics')) for (let i=0;i<ri(180,230);i++) scnComic(randComicKey(R()<0.5?{}:{old:1}),'found','the storage unit','Came out of the storage unit'); for (let i=0;i<4;i++){ const prod=pick(releasedProducts()); makeSealed(prod.id, fmtOf(prod,R()<0.5?'blaster':'hobby'), 0, [G.day,'found',0,'the storage unit']); } }
+  else if (sc.id==='storage'){ if (packHas('sports')) for (let i=0;i<ri(50,70);i++) scnCard(randCardKey({old:R()<0.5,hit:R()<0.1}),'found','the storage unit','Came out of the storage unit'); if (packHas('comics')) for (let i=0;i<ri(180,230);i++) scnComic(randComicKey(R()<0.5?{}:{old:1}),'found','the storage unit','Came out of the storage unit'); if (packHas('sports')) for (let i=0;i<4;i++){ const prod=pick(releasedProducts()); makeSealed(prod.id, fmtOf(prod,R()<0.5?'blaster':'hobby'), 0, [G.day,'found',0,'the storage unit']); } }
   else if (sc.id==='fan'){
     const tm=ri(0,TEAMS_DEF.length-1); const pids=new Set(G.players.filter(p=>p.tm===tm||(p.tm===-1&&p.org===tm)).map(p=>p.id)); const prods=releasedProducts().slice(-5); const keys=[];
     for (const prod of prods){ prod.cl.base.forEach((e,i)=>{ if (pids.has(e[0])) keys.push(dk(prod,'b',i,'')); }); }

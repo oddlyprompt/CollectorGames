@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-23",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit this Wildkin seahorse production sheet. Make a SPECIFIC NOTICEABLE COLOR-LIGHTING CORRECTION to the six bodies, preserving silhouettes, eyes, fins, crests, poses and row order. Existing purple body is too saturated for magenta-screen keying. CHANGE ALL SIX MAIN BODIES from medium violet to VERY PALE COOL LAVENDER GRAY, near RGB225,221,237 in lit areas, nearRGB185,181,197 in shadows. Body must have almost equally high red/green/blue channels, faint lavender tint, not medium-purple. Keep violet iris and mint-green crests, mint fins and very pale blush petals. Maintain exact seahorse identities (Dewink top row, Bloomble middle row) and purple family recognizability using violet eyes and faint lavender shading, but diffuse opaque pale lavender-gray skin is ESSENTIAL. Neutral frontal studio lighting, no pink-magenta light spill onto body, no colored rim light, no bloom, no halo, no translucent fins or subsurface scattering. Outline crispy sharp. Every subject at most50%cell height centered with25%padding every side. Bottom row3cells remain EMPTY absolutely flat saturated magentaRGB235,18,128. Same saturated solid magenta background in ALL cells, no gradient/shadow/texture. Exactly1254x1254PNG,3x3 equal cells straight4pixel black gutters at exact thirds, no text/effects. Do not return unchanged purple bodies: this correction must visibly lighten/desaturate them.",
+  "references": [
+    "/workspace/scratch/d7e613614435/wildkin-corrections/wildkin-production/incoming/SHEET-23--v2.png"
+  ],
+  "notes": "Pale lavender diffuse-body correction to prevent erroneous magenta keying; same seahorse design and cell order."
+}

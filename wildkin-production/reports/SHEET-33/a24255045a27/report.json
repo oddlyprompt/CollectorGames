@@ -1,0 +1,178 @@
+{
+ "task": "SHEET-33",
+ "file": "wildkin-production/incoming/SHEET-33.png",
+ "sha256": "a24255045a278177ec786aafc179e1069d4973d62dc2bf7fc5c231ceaffcbc46",
+ "checked": "2026-10-14T01:51:24Z",
+ "errors": [],
+ "warnings": [],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "obj.102-thermal-cloak",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.4135,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    34,
+    50,
+    34,
+    56
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.01
+  },
+  {
+   "cell": 2,
+   "asset_id": "obj.103-climbing-line",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3063,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    44,
+    87,
+    46,
+    56
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.034
+  },
+  {
+   "cell": 3,
+   "asset_id": "obj.104-field-scope",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2041,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    33,
+    84,
+    32,
+    101
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.023
+  },
+  {
+   "cell": 4,
+   "asset_id": "obj.105-wildseed-treat",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2594,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    92,
+    74,
+    91,
+    71
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.012
+  },
+  {
+   "cell": 5,
+   "asset_id": "obj.106-sanctuary-bell",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2297,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    56,
+    17,
+    72,
+    34
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.022
+  },
+  {
+   "cell": 6,
+   "asset_id": "obj.107-veyra-snare",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.305,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    35,
+    72,
+    37,
+    73
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.064
+  },
+  {
+   "cell": 7,
+   "asset_id": "obj.108-clasp-rig",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3928,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    40,
+    16,
+    24,
+    64
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.055
+  },
+  {
+   "cell": 8,
+   "asset_id": "obj.109-null-collar",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3248,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    29,
+    80,
+    23,
+    118
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.037
+  },
+  {
+   "cell": 9,
+   "asset_id": "obj.110-purity-sigil",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2801,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    65,
+    22,
+    67,
+    54
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.016
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "pass",
+ "metadata": {
+  "task_id": "SHEET-33",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Wildkin SHEET-33 3x3 production PNG at least 1254x1254, equal square cells, thin dark gutters. Dimensional stylized 3D renders consistent with toy-like creatures. Single object three-quarter product view in each cell. Cell1 Thermal Cloak folded ochre lined navy cloak. 2 Climbing Line coil of pale rope with brass carabiner. 3 Field Scope brass and navy compact telescope. 4 Wildseed Treat peach seed-shaped biscuit. 5 Sanctuary Bell brass bell with wood handle. 6 Veyra Snare charcoal mechanical ring trap with burgundy insets. 7 Clasp Rig charcoal steel modular harness with overlapping triangular metal clasp and magenta-purple crystal core, non-injurious animal control device. 8 Null Collar black steel collar with one triangular magenta crystal clasp, same device language. 9 Purity Sigil ivory and brass engraved leaf medallion.. Each whole subject maximum 55% cell height and width with 22% blank margin around all hats, boots, staff, straps. FLAT RGB(40,160,60) GREEN screen, except mostly green outfits or green objects use FLAT RGB(235,18,128) magenta in that cell. No gradients, floor shadows, text, frames or external glow. Reference is identity and clothing source only; translate rendering to dimensional 3D. No creature companions in cells.",
+  "notes": "Gear design inferred within canonical card names. Clasp design shared with premium program.",
+  "identity_status": "reference-derived and/or inferred; not owner-approved"
+ }
+}

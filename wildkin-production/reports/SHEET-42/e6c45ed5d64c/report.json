@@ -1,0 +1,143 @@
+{
+ "task": "SHEET-42",
+ "file": "wildkin-production/incoming/SHEET-42.png",
+ "sha256": "e6c45ed5d64c4915f088db13cdcc2514d49fbdf17684e76221a9a2e850b831f1",
+ "checked": "2026-10-15T05:45:58Z",
+ "errors": [
+  "too small: 1060x1484, need at least 2100x2940"
+ ],
+ "warnings": [
+  "cell 1: cell is only 337 px wide; card art wants 700+",
+  "cell 2: cell is only 331 px wide; card art wants 700+",
+  "cell 3: cell is only 337 px wide; card art wants 700+",
+  "cell 4: cell is only 337 px wide; card art wants 700+",
+  "cell 5: cell is only 331 px wide; card art wants 700+",
+  "cell 6: this cell should be empty but has an image in it",
+  "cell 7: this cell should be empty but has an image in it",
+  "cell 8: this cell should be empty but has an image in it"
+ ],
+ "notes": [],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "ill.160-flapod-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 337 px wide; card art wants 700+"
+   ],
+   "std": 59.1,
+   "cell_px": [
+    337,
+    479
+   ]
+  },
+  {
+   "cell": 2,
+   "asset_id": "ill.169-professor-maren-vale-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 331 px wide; card art wants 700+"
+   ],
+   "std": 58.3,
+   "cell_px": [
+    331,
+    479
+   ]
+  },
+  {
+   "cell": 3,
+   "asset_id": "ill.170-june-kestrel-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 337 px wide; card art wants 700+"
+   ],
+   "std": 62.4,
+   "cell_px": [
+    337,
+    479
+   ]
+  },
+  {
+   "cell": 4,
+   "asset_id": "ill.171-sel-veyra-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 337 px wide; card art wants 700+"
+   ],
+   "std": 64.8,
+   "cell_px": [
+    337,
+    477
+   ]
+  },
+  {
+   "cell": 5,
+   "asset_id": "ill.172-iris-shade-fa",
+   "errors": [],
+   "warnings": [
+    "cell is only 331 px wide; card art wants 700+"
+   ],
+   "std": 48.1,
+   "cell_px": [
+    331,
+    477
+   ]
+  },
+  {
+   "cell": 6,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [
+    "this cell should be empty but has an image in it"
+   ],
+   "std": 28.5,
+   "empty": true
+  },
+  {
+   "cell": 7,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [
+    "this cell should be empty but has an image in it"
+   ],
+   "std": 51.2,
+   "empty": true
+  },
+  {
+   "cell": 8,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [
+    "this cell should be empty but has an image in it"
+   ],
+   "std": 33.1,
+   "empty": true
+  },
+  {
+   "cell": 9,
+   "asset_id": null,
+   "errors": [],
+   "warnings": [],
+   "std": 1.5,
+   "empty": true
+  }
+ ],
+ "size": [
+  1060,
+  1484
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-42",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Use case illustration-story. Wildkin SHEET-42 Full Arts B production. EXACT2100x2940 portrait5:7 PNG, exactly3x3 equal portrait5:7 cells, thin black gutters at exact thirds. FIVE NEW full-bleed dimensional3D paintings in cells1-5; cells6,7,8,9 MUST be uniform flat near-black RGB20,20,24 empty, no subjects or texture. Canon supplied references are identities only. Primary subjects in middle HALF height, upper/lower quarters environmental negative space for card overlay. Cell1 top-left Flapod canonical peach coral Dumbo octopus with two large ear fins, curled tentacles pale suckers, brown eyes freckles: open-water kelp cathedral with rippling turquoise light. Cell2 top-middle Professor Maren Vale, reference FIRST character in ally sheet30: adult brown-haired woman with curly updo and glasses, ivory field-research coat, olive blouse, beige trousers and boots, holding botanical field notebook amid vast sanctuary greenhouse. Cell3 top-right June Kestrel, reference SECOND character in ally30: 15-16 brown ponytail girl, red practical jacket cream shirt, blue scarf and sash, shorts with boots/leggings, adventuring across old mountain suspension bridge, realistic human anatomy. Cell4 middle-left Sel Veyra, reference THIRD character in ally31: mature silver-haired woman with swept white updo, ivory coat gold trim, black highcollar tailored outfit, cane, commanding bright glass/steel industrial atrium. Cell5 middle-middle Iris Shade, reference SEVENTH character in ally31: dark-haired young woman with purple feather mantle over practical dark field clothing gold hardware, contemplative in twilight rain garden. Match faces hair costumes precisely, preserve maturity, no sexualized poses. Five individually distinct scene paintings, no text, logos, letters or card frames. Bottom row and middle-right empty.",
+  "references": [
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-30--v2.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png",
+   "/workspace/scratch/b718be279b35/wildkin-art/reference/mascot-reference-survey.png"
+  ],
+  "notes": "Native generation output; see QA for resolution."
+ }
+}

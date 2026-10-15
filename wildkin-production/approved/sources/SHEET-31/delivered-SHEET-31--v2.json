@@ -1,0 +1,11 @@
+{
+  "task_id": "SHEET-31",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-14",
+  "prompt": "Edit the supplied Wildkin ally character sheet for production. Preserve all nine exact faces, age, hair, costumes, accessories, identities, full human anatomy and same row-major ordering. Change ONLY scale and backgrounds. SHRINK each whole character TO HALF the current HEIGHT AND WIDTH, individually centered, entirely within the MIDDLE50% of its cell vertically and horizontally. At least25% EMPTY screen padding at top and bottom for head/hair/hats and boots, and 25%at sides including capes, staffs, bags and canes. Characters should look noticeably SMALL surrounded by broad empty screen. Keep FULL BODY, never crop head or boots; no enlarged portrait/bust. Exact1254x1254squarePNG,3columns3rows equal cells,4pixel straight nearblack gutters exactly at1/3and2/3 on BOTH axes, perfectly regular GRID. Backgrounds are absolute uniform chroma screen, no gradients/vignette/spotlight/texture/floor plane/shadow, no glow or green spill. Sharp opaque materials and edges, soft even studio light inside subject only. No text/frames/sparkles/effect marks. ALL NINE CELL BACKGROUNDS solid GREEN RGB40,160,60 (a medium darker chroma green, NOT brightneon green RGB28,236,25). Keep all9identities:1Renn Calder young blackhair rival navy fieldoutfit blue scarf;2Mira Quill adult brown curlyhair glasses burgundy travelcoat beige trousers traderbag;3Sel Veyra mature silverupdo ivory goldtrim coat black highcollar outfit cane;4Cass Rell darkhair burgundy longjacket blacktrousers;5Dr Cyl Vane silverhair goggles ivory labcoat darktrousers black case;6Marshal Rook muscular middleaged man gray short hair black structured tactical coat;7Iris Shade young dark-haired woman purplefeather mantle dark fieldclothes;8Dex Harrow young darkhair navy outfit burgundy rolledsleeves;9Brin Hollow androgynous boyish teen brownhair dark gray cape fieldoutfit. Match each reference identity and mature age, preserve no sexualization, no artist change.",
+  "references": [
+    "/workspace/scratch/b718be279b35/wildkin-art/wildkin-production/incoming/SHEET-31.png"
+  ],
+  "notes": "QA correction: full-body25% margins, correct medium chroma screens, identity preserved."
+}

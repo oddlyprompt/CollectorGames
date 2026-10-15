@@ -1,0 +1,187 @@
+{
+ "task": "SHEET-13",
+ "file": "wildkin-production/incoming/SHEET-13.png",
+ "sha256": "dbccc5293c758880a6191ec346f1c270d5310c855daa8f8470d1b1e9db5e7045",
+ "checked": "2026-10-14T01:46:19Z",
+ "errors": [
+  "cell 8: subject touches the cell edge (clipped): top"
+ ],
+ "warnings": [],
+ "notes": [
+  "cell 7: margin is tight (10 px); the spec asks for about 10%"
+ ],
+ "cells": [
+  {
+   "cell": 1,
+   "asset_id": "cut.030-breezit.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1665,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    104,
+    110,
+    118,
+    51
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.047
+  },
+  {
+   "cell": 2,
+   "asset_id": "cut.030-breezit.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2315,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    64,
+    69,
+    63,
+    98
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.045
+  },
+  {
+   "cell": 3,
+   "asset_id": "cut.030-breezit.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1919,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    96,
+    135,
+    74,
+    50
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.04
+  },
+  {
+   "cell": 4,
+   "asset_id": "cut.031-gustrel.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2098,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    31,
+    45,
+    61,
+    54
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.063
+  },
+  {
+   "cell": 5,
+   "asset_id": "cut.031-gustrel.jumping",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2976,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    26,
+    20,
+    23,
+    76
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.06
+  },
+  {
+   "cell": 6,
+   "asset_id": "cut.031-gustrel.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.1976,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    36,
+    96,
+    46,
+    49
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.055
+  },
+  {
+   "cell": 7,
+   "asset_id": "cut.032-tempestral.standing",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2863,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    13,
+    10,
+    31,
+    43
+   ],
+   "notes": [
+    "margin is tight (10 px); the spec asks for about 10%"
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.067
+  },
+  {
+   "cell": 8,
+   "asset_id": "cut.032-tempestral.jumping",
+   "errors": [
+    "subject touches the cell edge (clipped): top"
+   ],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.3617,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    20,
+    0,
+    10,
+    34
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.069
+  },
+  {
+   "cell": 9,
+   "asset_id": "cut.032-tempestral.sitting",
+   "errors": [],
+   "warnings": [],
+   "screen": "green",
+   "coverage": 0.2465,
+   "stray_pieces_dropped": 0,
+   "margins_LTRB": [
+    24,
+    66,
+    32,
+    51
+   ],
+   "screen_left": 0.0,
+   "semi_transparent": 0.057
+  }
+ ],
+ "size": [
+  1254,
+  1254
+ ],
+ "result": "fail",
+ "metadata": {
+  "task_id": "SHEET-13",
+  "manifest_version": "1.0.0",
+  "made_by": "SOL",
+  "created": "2026-10-13",
+  "prompt": "Use case: stylized-concept. Wildkin SHEET-13 PRODUCTION asset. Deliver square PNG at least 1254x1254, exactly 3x3 equal cells, thin straight dark gutters at exact thirds. Soft dimensional toy-like 3D, neutral even studio lighting. Each cell background solid chroma GREEN RGB(40,160,60). NO gradient, floor shadows, floor plane, outside-body glows, sparkles, motion lines, text or frames. Each subject is SMALL in its cell: maximum 60% width and height and MINIMUM 18% empty margin on every side, including horns, tail, wings. Subject design: Breezit small cream-and-sky-blue wind fledgling with blue eyes and rounded wings; Gustrel longer blue and cream kestrel with swept head crest; Tempestral regal blue storm raptor with layered cream wing feathers and a long forked tail. Storm accents remain material markings, no electrical effects outside body.. Exact row-major cell mapping: 1: Breezit standing; 2: Breezit jumping; 3: Breezit sitting; 4: Gustrel standing; 5: Gustrel jumping; 6: Gustrel sitting; 7: Tempestral standing; 8: Tempestral jumping; 9: Tempestral sitting. Keep each species anatomy, colors, markings identical across its poses; evolved stages must visibly differ. Full uncropped subjects. Reference if supplied is identity/style canon, not an edit target.",
+  "notes": "Inferred production design within confirmed manifest. Established design only after approval.",
+  "reference": null
+ }
+}

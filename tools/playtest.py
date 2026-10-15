@@ -11,7 +11,7 @@ async def main():
         r=await pg.evaluate("""(()=>{ G.player.cash=8000; const out={};
           const kind = PACK.id==='sports'?'c': PACK.id==='comics'?'m':'t';
           const l=G.lst.filter(x=>x.it===kind&&x.sel>0&&x.ty==='bin').sort((a,b)=>a.pr-b.pr)[2]; out.listing=l? itemLabel(l):'none'; if (l){ const e=buyListing(l.id); out.buy=e||'ok'; }
-          if (PACK.id==='tcg'){ out.shop=tcBuySealed(3,'P',2)||'ok'; const pk=myTc().find(c=>tcD(c.k).sealed); const o=tcOpenSealed(pk.id); out.pulled=o.packs.flat().length; const c=myTc().filter(c=>!tcD(c.k).sealed).sort((a,b)=>tcCopyValue(b)-tcCopyValue(a))[0]; out.grade=tcSubmitGrade(c.id,'exp')||'sent'; const d=myTc().filter(c=>!tcD(c.k).sealed&&c.g===0)[0]; out.list=playerList('t',d.id,'bin',Math.max(1,tcCopyValue(d)*1.2),0,true)||'listed'; }
+          if (PACK.id==='tcg'){ out.shop=tcBuySealed(tcReleasedSets(G.day).slice(-1)[0],'P',2)||'ok'; const pk=myTc().find(c=>tcD(c.k).sealed); const o=tcOpenSealed(pk.id); out.pulled=o.packs.flat().length; const c=myTc().filter(c=>!tcD(c.k).sealed).sort((a,b)=>tcCopyValue(b)-tcCopyValue(a))[0]; out.grade=tcSubmitGrade(c.id,'exp')||'sent'; const d=myTc().filter(c=>!tcD(c.k).sealed&&c.g===0)[0]; out.list=playerList('t',d.id,'bin',Math.max(1,tcCopyValue(d)*1.2),0,true)||'listed'; }
           if (PACK.id==='sports'){ const c=myCards().filter(c=>c.g===0)[0]; if (c){ out.grade=submitGrading(c.id,'exp')||'sent'; } }
           if (PACK.id==='comics'){ const c=myComics().filter(c=>c.g===0)[0]; if (c){ out.grade=cmSubmitGrade(c.id,'exp',false)||'sent'; } }
           return out; })()""")
