@@ -44,11 +44,50 @@ function tcWear(svg, cp){
 }
 const tcFace=cp=>{ const d=tcD(cp.k); if (d.sealed||cp.g>0) return tcFront(cp.k); const lab=tcLabel(cp.c); return lab==='NM'&&Math.min(...cp.c)>=94? tcFront(cp.k) : tcWear(tcFront(cp.k),cp); };
 // ---------- packs and boxes ----------
+// ---------- sealed product: a foil booster pack and a three-quarter booster box, dressed in the set's own paintings ----------
+// Until SOL delivers product renders (see wildkin-production/SOL_PRODUCT_BRIEF.md) the packaging is drawn here.
+const TC_PACK_ART={P:['ill.151-cactuft-fa','ill.173-cactuft-sir','cut.001-cactuft.standing'], B:['ill.154-koirune-fa','ill.152-aurorotl-fa','ill.144-koirune-ir']};
+function tcPackArt(f){ for (const id of TC_PACK_ART[f]) if (WK_ART[id]) return WK_ART[id]; return null; }
 function tcPackSVG(set, f){
-  const def=tcSetDef(set); const hue=(hsh('pk'+set)%360); const c1=`hsl(${hue} 62% 46%)`, c2=`hsl(${(hue+40)%360} 70% 30%)`, hi=`hsl(${hue} 80% 74%)`; const F='font-family="Barlow Condensed,Arial Narrow,sans-serif"'; const m=WK_ART['cut.001-cactuft.standing'];
-  const mascot=(x,y,w,h)=>{ if (!m) return `<g transform="translate(${x+w/2} ${y+h/2}) scale(${(Math.min(w,h)/26).toFixed(2)})"><path d="${TCF.GLYPH.Verdant}" fill="#fff" fill-opacity=".85"/></g>`; const k=Math.min(w/m.w,h/m.h)*0.92; const fw=m.w*k, fh=m.h*k; return `<image href="${m.u}" x="${(x+(w-fw)/2).toFixed(1)}" y="${(y+h-fh).toFixed(1)}" width="${fw.toFixed(1)}" height="${fh.toFixed(1)}"/>`; };
-  if (f==='P') return `<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="packsvg"><defs><linearGradient id="pg${set}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${hi}"/><stop offset=".4" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient><radialGradient id="pr${set}" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M30 18 H170 L180 48 V270 H20 V48 Z" fill="url(#pg${set})"/><path d="M30 18 H170 L180 48 H20 Z" fill="#000" opacity=".25"/>${Array.from({length:9},(_,i)=>`<path d="M${26+i*18} 18 v-8" stroke="#000" stroke-opacity=".35" stroke-width="3"/>`).join('')}<text x="100" y="40" text-anchor="middle" ${F} font-weight="800" font-size="19" letter-spacing="5" fill="#fff">WILDKIN</text><circle cx="100" cy="142" r="62" fill="url(#pr${set})"/>${mascot(40,80,120,124)}<text x="100" y="228" text-anchor="middle" ${F} font-weight="800" font-size="22" fill="#fff">${esc(def.name.toUpperCase())}</text><text x="100" y="250" text-anchor="middle" ${F} font-size="10" letter-spacing="3" fill="#fff" opacity=".85">BOOSTER PACK · 10 CARDS</text><path d="M20 48 L180 48" stroke="#fff" stroke-opacity=".5"/></svg>`;
-  return `<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="packsvg"><defs><linearGradient id="bg${set}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${hi}"/><stop offset=".35" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><path d="M20 60 L40 28 H180 L200 60 Z" fill="#000" opacity=".3"/><rect x="14" y="56" width="192" height="130" rx="6" fill="url(#bg${set})"/><rect x="14" y="56" width="192" height="16" fill="#000" opacity=".22"/><text x="110" y="68" text-anchor="middle" ${F} font-weight="800" font-size="12" letter-spacing="5" fill="#fff">WILDKIN</text>${mascot(60,74,100,90)}<text x="110" y="178" text-anchor="middle" ${F} font-weight="800" font-size="16" fill="#fff">${esc(def.name.toUpperCase())}</text><text x="110" y="206" text-anchor="middle" ${F} font-size="9" letter-spacing="3" fill="#fff" opacity=".8">BOOSTER BOX · 36 PACKS</text></svg>`;
+  const def=tcSetDef(set); const hue=(hsh('pk'+set)%360); const c1=`hsl(${hue} 62% 46%)`, c2=`hsl(${(hue+40)%360} 70% 26%)`; const F='font-family="Barlow Condensed,Arial Narrow,Helvetica Neue,Arial,sans-serif"';
+  const u='k'+set+f; const art=tcPackArt(f); const name=def.name.toUpperCase();
+  const foil=`<linearGradient id="${u}f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7d6"/><stop offset=".25" stop-color="#e2b84a"/><stop offset=".5" stop-color="#fff2c2"/><stop offset=".75" stop-color="#c9952f"/><stop offset="1" stop-color="#ffeab0"/></linearGradient>`;
+  const holo=`<linearGradient id="${u}h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7ad9" stop-opacity=".0"/><stop offset=".35" stop-color="#7af3ff" stop-opacity=".22"/><stop offset=".5" stop-color="#fff" stop-opacity=".42"/><stop offset=".65" stop-color="#ffe17a" stop-opacity=".22"/><stop offset="1" stop-color="#b47aff" stop-opacity="0"/></linearGradient>`;
+  const img=(x,y,w,h)=> art? `<image href="${art.u}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c1}"/>`;
+  const logo=(x,y,sz,w)=>`<text x="${x}" y="${y}" text-anchor="middle" ${F} font-weight="800" font-size="${sz}" letter-spacing="${(sz*0.18).toFixed(1)}" fill="url(#${u}f)" stroke="#2a1606" stroke-width="${(sz*0.07).toFixed(2)}" paint-order="stroke" textLength="${w}" lengthAdjust="spacingAndGlyphs">WILDKIN</text>`;
+  if (f==='P'){
+    // a pillow pack: crimped seals top and bottom, slight bulge, painted front, foil wordmark, holo sheen
+    const crimp=(y,h)=>{ let d=`M16 ${y}`; for (let x=16;x<184;x+=6) d+=` L${x+3} ${y+h} L${x+6} ${y}`; return `<path d="${d} V${y+h+2} H16 Z" fill="url(#${u}f)" opacity=".95"/><rect x="16" y="${y}" width="168" height="${h}" fill="url(#${u}f)" opacity=".55"/>`; };
+    return `<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" class="packsvg" role="img" aria-label="${esc(def.name)} booster pack"><defs>${foil}${holo}
+      <clipPath id="${u}c"><path d="M18 24 Q100 18 182 24 L184 256 Q100 262 16 256 Z"/></clipPath>
+      <linearGradient id="${u}s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset=".12" stop-color="#000" stop-opacity=".0"/><stop offset=".5" stop-color="#fff" stop-opacity=".10"/><stop offset=".88" stop-color="#000" stop-opacity=".0"/><stop offset="1" stop-color="#000" stop-opacity=".5"/></linearGradient>
+      <linearGradient id="${u}b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c2}" stop-opacity=".0"/><stop offset=".55" stop-color="${c2}" stop-opacity=".1"/><stop offset="1" stop-color="${c2}" stop-opacity=".95"/></linearGradient></defs>
+      <ellipse cx="100" cy="272" rx="80" ry="5" fill="#000" opacity=".18"/>
+      <g clip-path="url(#${u}c)">${img(10,14,180,250)}<rect x="10" y="14" width="180" height="250" fill="url(#${u}b)"/><rect x="10" y="14" width="180" height="70" fill="${c2}" opacity=".55"/>
+        <rect x="-60" y="14" width="120" height="250" fill="url(#${u}h)" transform="rotate(18 100 140)"/><rect x="10" y="14" width="180" height="250" fill="url(#${u}s)"/></g>
+      ${crimp(6,18)}${crimp(256,18)}
+      ${logo(100,62,30,150)}
+      <rect x="40" y="196" width="120" height="26" rx="4" fill="#0b0f1a" opacity=".72" stroke="url(#${u}f)" stroke-width="1.2"/><text x="100" y="215" text-anchor="middle" ${F} font-weight="800" font-size="17" fill="#fff" letter-spacing="1.5" textLength="${Math.min(108,name.length*10)}" lengthAdjust="spacingAndGlyphs">${esc(name)}</text>
+      <text x="100" y="240" text-anchor="middle" ${F} font-weight="700" font-size="9" fill="#fff" letter-spacing="2" textLength="120" lengthAdjust="spacingAndGlyphs">BOOSTER PACK · 10 CARDS</text>
+      <g transform="translate(160 86)"><circle r="13" fill="#0b0f1a" opacity=".7" stroke="url(#${u}f)" stroke-width="1.2"/><text y="4" text-anchor="middle" ${F} font-weight="800" font-size="10" fill="#fff">${esc(def.code)}</text></g></svg>`;
+  }
+  // a booster box at three-quarter view: painted front, darker side, lid with the wordmark
+  const W=150, H=118, D=44, X=18, Y=74;   // front face size, depth, front-left corner
+  const side=`M${X+W} ${Y} L${X+W+D} ${Y-D*0.62} V${Y+H-D*0.62} L${X+W} ${Y+H} Z`, top=`M${X} ${Y} L${X+D} ${Y-D*0.62} H${X+W+D} L${X+W} ${Y} Z`;
+  return `<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="packsvg" role="img" aria-label="${esc(def.name)} booster box"><defs>${foil}${holo}
+    <clipPath id="${u}c"><rect x="${X}" y="${Y}" width="${W}" height="${H}"/></clipPath>
+    <linearGradient id="${u}b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c2}" stop-opacity=".15"/><stop offset=".6" stop-color="${c2}" stop-opacity=".05"/><stop offset="1" stop-color="${c2}" stop-opacity=".9"/></linearGradient>
+    <linearGradient id="${u}t" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs>
+    <ellipse cx="${X+W/2+D/2}" cy="${Y+H+6}" rx="${W/2+D/2+6}" ry="7" fill="#000" opacity=".2"/>
+    <path d="${top}" fill="url(#${u}t)"/><path d="${top}" fill="#fff" opacity=".12"/>
+    <path d="${side}" fill="${c2}"/><path d="${side}" fill="#000" opacity=".25"/>
+    <text transform="translate(${X+W+D*0.55} ${Y+H*0.5}) skewY(-31.8) rotate(-90)" text-anchor="middle" ${F} font-weight="800" font-size="11" letter-spacing="2" fill="url(#${u}f)" textLength="${H*0.8}" lengthAdjust="spacingAndGlyphs">${esc(name)}</text>
+    <g clip-path="url(#${u}c)">${img(X,Y-20,W,H+40)}<rect x="${X}" y="${Y}" width="${W}" height="${H}" fill="url(#${u}b)"/><rect x="${X-40}" y="${Y}" width="70" height="${H}" fill="url(#${u}h)" transform="rotate(20 ${X+W/2} ${Y+H/2})"/></g>
+    <rect x="${X}" y="${Y}" width="${W}" height="${H}" fill="none" stroke="url(#${u}f)" stroke-width="1.6"/>
+    ${logo(X+W/2,Y+24,22,104)}
+    <text x="${X+W/2}" y="${Y+H-22}" text-anchor="middle" ${F} font-weight="800" font-size="15" fill="#fff" letter-spacing="1.2" textLength="${Math.min(110,name.length*9)}" lengthAdjust="spacingAndGlyphs">${esc(name)}</text>
+    <text x="${X+W/2}" y="${Y+H-8}" text-anchor="middle" ${F} font-weight="700" font-size="8" fill="#fff" letter-spacing="1.8" textLength="112" lengthAdjust="spacingAndGlyphs">BOOSTER BOX · 36 PACKS</text>
+    <text transform="matrix(1 0 -0.62 0.38 ${X+W/2+D/2} ${Y-D*0.31+4})" text-anchor="middle" ${F} font-weight="800" font-size="13" letter-spacing="2.5" fill="#fff" opacity=".9" textLength="${W*0.72}" lengthAdjust="spacingAndGlyphs">36 PACKS · 360 CARDS</text></svg>`;
 }
 // ---------- graded slab ----------
 function tcSlab(cp){
