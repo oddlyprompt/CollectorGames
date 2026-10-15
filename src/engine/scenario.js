@@ -7,8 +7,8 @@ const SCENARIOS = [
   {id:'storage', n:'The storage unit', d:'A semi-retired dealer\'s leftover stock, $1,200, and no allowance. Sell to eat.', cash:1200, pay:0},
   {id:'fan', n:'Diehard fan', d:'A shoebox of one team\'s cards from childhood, $200, and $40 a week. You already know who your guys are.', cash:200, pay:40},
   {id:'reader', n:'Pull-list reader', d:'You have read one series since issue #1, and you have every issue. $200 and $40 a week.', cash:200, pay:40},
-  {id:'tcgbinder', n:'The old binder', d:'A binder of First Bond cards you actually played with since launch, four unopened packs, $100 and $40 a week.', cash:100, pay:40},
-  {id:'tcgbox', n:'A box to open', d:'Two sealed boxes of First Bond and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
+  {id:'tcgbinder', n:'Launch day preorder', d:'Twelve First Bond packs, already paid for, arriving on launch day next week. $100 and $40 a week.', cash:100, pay:40},
+  {id:'tcgbox', n:'A box to open', d:'Two First Bond boxes, already paid for, arriving on launch day next week, and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
   {id:'windfall', n:'Deep pockets', d:'$10,000 and no allowance. Nothing forces you. See how the market treats a whale.', cash:10000, pay:0}
 ];
 function pickScenario(){

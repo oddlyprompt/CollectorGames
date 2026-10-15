@@ -14,13 +14,17 @@ Inputs (never edited by this script):
 Every fact carries a status:
   canon        stated in the bible or the owner's design doc
   inferred     follows from canon numbering and the 43-sheet plan, but the bible says it was not recovered. Needs owner confirmation.
-  provisional  a placeholder Claude Code chose so the game can run (stats, rules text, rarities of non-creature cards, prices). Not canon.
+  designed     card rules written by Claude Code under the owner's instruction of 2026-10-15 (tools/wildkin_design.py)
+  decided      a reasoned choice made under the same instruction where the bible left it open (affinities, rarities, fandom)
+  provisional  an engine number still open (release date, set code, prices, odds). Not canon.
   unresolved   unknown and not used
 SOL (the art model) must read this file and never edit it."""
 import os, sys, json, re, hashlib, argparse
+sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+import wildkin_design as WD
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WP=os.environ.get('WILDKIN_PRODUCTION') or os.path.join(ROOT,'wildkin-production')
-MANIFEST_VERSION='1.0.0'
+MANIFEST_VERSION='1.1.0'   # 1.1.0: card rules designed, affinities and fandom decided (2026-10-15)
 
 # ---------------------------------------------------------------- canon inputs
 def roster():
@@ -67,14 +71,10 @@ FAMILIES=[
 AFF_CANON={1:('Verdant',None),2:('Tide','Astral'),3:('Tide','Astral'),4:('Tide','Astral'),5:('Stone',None),6:('Stone',None),7:('Stone',None),
  8:('Tide','Astral'),9:('Tide','Astral'),10:('Tide','Astral'),11:('Stone','Iron'),12:('Stone','Iron'),13:('Stone','Iron'),14:('Verdant',None),15:('Verdant',None),16:('Verdant',None),
  17:('Wonder',None),18:('Wonder',None),19:('Astral',None),20:('Astral',None),21:('Dusk','Verdant'),22:('Dusk','Verdant'),23:('Tide',None)}
-AFF_PROV={24:'Storm',25:'Storm',26:'Storm',27:'Ember',28:'Ember',29:'Ember',30:'Storm',31:'Storm',32:'Storm',33:'Dusk',34:'Dusk',35:'Dusk',36:'Iron',37:'Iron',38:'Iron',
- 39:'Stone',40:'Stone',41:'Stone',42:'Wonder',43:'Wonder',44:'Wonder',45:'Verdant',46:'Verdant',47:'Tide',48:'Tide',49:'Ember',50:'Ember',51:'Astral',52:'Astral',
- 53:'Iron',54:'Iron',55:'Verdant',56:'Verdant',57:'Verdant',58:'Verdant',59:'Tide',60:'Tide',61:'Stone',62:'Stone',63:'Iron',64:'Tide',65:'Ember',66:'Ember',
- 67:'Storm',68:'Storm',69:'Astral',70:'Astral',71:'Dusk',72:'Dusk',73:'Wonder',74:'Wonder'}
+# Non-mascot affinities live in tools/wildkin_design.py (AFF_DECIDED, decided 2026-10-15).
 # How a creature gets about decides which scene floors it can stand on. Known for the six creatures with approved art; walker elsewhere (provisional).
 MOVE_KNOWN={1:'walker',5:'walker',11:'walker',14:'walker',23:'floater'}
-# Collector fandom drives prices. The bible leaves mascot ranking open (decision 3), so these are provisional economy tuning.
-FANDOM={1:1.0,10:0.95,4:0.85,2:0.7,3:0.75,20:0.8,19:0.55,13:0.75,12:0.6,11:0.55,22:0.7,21:0.6,17:0.6,18:0.65,16:0.6,14:0.55,15:0.45,7:0.6,5:0.6,6:0.45,23:0.65,26:0.75,24:0.45,25:0.5,35:0.7,38:0.7}
+# Collector fandom (starting demand weights) lives in tools/wildkin_design.py (FANDOM, CHAR_FANDOM).
 POSES9=['standing','jumping','running','waving','sitting','sleeping','surprised','looking-up','back-view']
 POSES3=['standing','jumping','sitting']
 POSES_EXTRA=['waving','running','looking-up']
@@ -95,35 +95,7 @@ def rng(seed):
         nonlocal h; h=(h*6364136223846793005+1442695040888963407)&((1<<64)-1); return (h>>11)/float(1<<53)
     return r
 
-# ---------------------------------------------------------------- provisional gameplay (the engine needs numbers; none of this is canon)
-ATK_NAMES=['Tackle','Swipe','Rush','Charge','Surge','Crash','Burst','Slam']
-EFFECTS={'':('mid',0),'Draw 2 cards.':('combo',0.05),'Heal 30 damage from this creature.':('stall',0.04),'The Defending creature is now Asleep.':('control',0.06),
- 'Flip a coin. If heads, the Defending creature is Paralyzed.':('control',0.06),'Does 10 damage to each of your opponent\'s Benched creatures.':('aggro',0.05),
- 'Take 30 less damage during your opponent\'s next turn.':('stall',0.05),'Search your deck for an Essence card and attach it to this creature.':('combo',0.05)}
-TRAINER_RULES={
- 'ally':[('Draw 3 cards.','combo'),('Search your deck for a creature and put it into your hand.','combo'),('Switch your Active creature with 1 of your Benched creatures. Draw a card.','control'),('Heal 40 damage from each of your creatures.','stall'),('Your opponent shuffles their hand into their deck and draws 4 cards.','control'),('Look at the top 5 cards of your deck. Put 2 into your hand.','combo')],
- 'gear':[('Attach to a creature. It takes 20 less damage from attacks.','stall'),('Attach to a creature. Its attacks do 20 more damage.','aggro'),('Attach to a creature. It has no Retreat Cost.','control'),('Heal 30 damage from 1 of your creatures.','stall'),('Search your deck for an Essence card and attach it to 1 of your creatures.','combo')],
- 'biome':[('Creatures of this biome\'s affinity take 10 less damage from attacks.','stall'),('Once during each player\'s turn, that player may draw a card.','combo'),('Attacks of this biome\'s affinity do 10 more damage.','aggro')],
- 'tactic':[('Draw 2 cards. Switch your Active creature with 1 of your Benched creatures.','control'),('Put a Basic creature from your discard pile onto your Bench.','combo'),('Your opponent\'s Active creature is now Confused.','control'),('Each of your creatures heals 20 damage.','stall'),('Discard an Essence card attached to your opponent\'s Active creature.','control')]}
-def gameplay_creature(no, stage, nstages, rarity, aff):
-    r=rng('wk-play-%03d'%no)
-    if stage==1 and nstages==1: hp=(110 if rarity=='rare' else 60)+10*int(r()*3)
-    else: hp={1:50,2:80,3:120}[stage]+10*int(r()*(3 if stage<3 else 5))
-    n=1 if (stage==1 and rarity=='common') else 2; m={'common':1,'uncommon':1.15,'rare':1.4}[rarity]
-    atk=[]; keys=list(EFFECTS); names=ATK_NAMES[:]
-    for k in range(n):
-        cost=(1+int(r()*2)) if n==1 else (1+k+(1 if stage==3 and k==1 else 0))
-        eff=keys[int(r()*len(keys))] if r()<0.45 else ''
-        base=20+10*int(r()*3) if k==0 else 40+10*int(r()*3)
-        dmg=0 if (eff and 'Heal' in eff and r()<0.5) else int(round(base*m*(0.7+0.3*cost)/10)*10)
-        nm=names.pop(int(r()*len(names)))
-        atk.append({'name':nm,'cost':cost,'damage':dmg,'text':eff})
-    i=[a[1] for a in AFFINITIES].index(aff); weak=AFFINITIES[(i+8)%9][1]
-    return {'status':'provisional','hp':hp,'attacks':atk,'weakness':weak,'retreat':1+int(r()*3),'note':'Placeholder numbers and generic attack names so the simulation runs. Real card rules need design.'}
-def gameplay_trainer(no, cat, rarity):
-    r=rng('wk-play-%03d'%no); opts=TRAINER_RULES[cat]; t,st=opts[int(r()*len(opts))]
-    pw={'common':0.35,'uncommon':0.45,'rare':0.58}[rarity]+round(r()*0.12,3)
-    return {'status':'provisional','rules':t,'style':st,'power':round(pw,3),'note':'Placeholder effect so the simulation runs. Real card rules need design.'}
+# Card rules (HP, attacks, abilities, trainer effects) live in tools/wildkin_design.py.
 
 # ---------------------------------------------------------------- build
 def build(registry):
@@ -158,7 +130,8 @@ def build(registry):
     for n in range(1,75):
         nm=name[n]; fid=fam_of[n]; s=stage_of[n]; ns=nst[n]; fst=fam_status[fid]
         if n in AFF_CANON: a1,a2=AFF_CANON[n]; aff={'primary':a1,'secondary':a2,'status':'canon','note':'design/wildkin-universe.md lists dual affinities; the engine uses the first as the card\'s type' if a2 else ''}
-        else: aff={'primary':AFF_PROV[n],'secondary':None,'status':'provisional','note':'chosen from the name so the game runs; confirm'}
+        else:
+            a1,a2=WD.AFF_DECIDED[n]; aff={'primary':a1,'secondary':a2,'status':'decided','note':WD.AFF_REASON.get(n,'decided from the name, design and family (2026-10-15)')}
         mascot=fid in [f[0] for f in FAMILIES[:10]]
         move=MOVE_KNOWN.get(n,'walker'); rar=crar(n)
         sl='%03d-%s'%(n,slug(nm)); poses=POSES9 if ns==1 and mascot else (POSES3+(POSES_EXTRA if (ns==2 and s==2 and fid in ('FAM-07','FAM-08','FAM-09')) else []))
@@ -166,13 +139,13 @@ def build(registry):
         sp={'id':'SP-%03d'%n,'name':nm,'slug':slug(nm),'card':'WK-S001-%03d'%n,'family':fid,'family_status':fst,'stage':s,'stages_in_family':ns,
             'stage_label':'Basic' if s==1 else 'Stage %d'%(s-1),'evolves_from':('SP-%03d'%(n-1)) if s>1 else None,'evolves_to':('SP-%03d'%(n+1)) if s<ns else None,
             'affinity':aff,'mascot':mascot,'movement':{'value':move,'status':'canon' if n in MOVE_KNOWN else 'provisional'},
-            'fandom':{'value':FANDOM.get(n,0.3 if not mascot else 0.5),'status':'provisional'},
+            'fandom':{'value':WD.FANDOM.get(n,WD.FANDOM_DEFAULT_MASCOT if mascot else WD.FANDOM_DEFAULT),'status':'decided','note':'starting collector demand; prices still move with supply, demand and play'},
             'visual_identity':{'status':'established' if n in DESIGN_KNOWN else 'sol_designs','text':DESIGN_KNOWN.get(n,'Not drawn yet. SOL designs it from the art already generated for Wildkin, in the established style. Its first approved sheet then becomes the reference every later picture must match.')},
             'poses':poses}
         species.append(sp)
         bg=background(n,aff['primary'],move)
         cards.append({'id':'WK-S001-%03d'%n,'number':n,'category':'creature','roster_name':nm,'name':nm,'rarity':{'value':rar,'status':'canon-rule'},
-            'species':sp['id'],'variant':'base','gameplay':gameplay_creature(n,s,ns,rar,aff['primary']),
+            'species':sp['id'],'variant':'base','gameplay':WD.creature_gameplay(n,s,ns,aff['primary']),
             'art':{'layout':'cutout-on-scene','subject':'cut.%s.standing'%sl,'background':bg}})
         assets['cut.%s.standing'%sl]['linked_cards'].append('WK-S001-%03d'%n); assets[bg]['linked_cards'].append('WK-S001-%03d'%n)
     # allies, gear, biomes, tactics, essence
@@ -182,6 +155,7 @@ def build(registry):
         if cat=='ally':
             rar='rare' if n in ally_rare else 'uncommon'; aid='cut.%s.portrait'%sl
             add_asset(aid,kind='cutout',subject=nm,pose='portrait',character='CH-%03d'%n,format='webp',aspect='free (cut from sheet)')
+            c['fandom']={'value':WD.CHAR_FANDOM.get(n,WD.CHAR_DEFAULT),'status':'decided','note':'starting collector demand for the character'}
             c['character']={'id':'CH-%03d'%n,'identity':{'status':'established' if n in CHARACTER_CANON else 'sol_designs','text':CHARACTER_CANON.get(n,'Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference.')}}
             c['art']={'layout':'cutout-on-panel','subject':aid,'background':None}
         elif cat=='gear':
@@ -198,9 +172,9 @@ def build(registry):
             c['art']={'layout':'illustration','illustration':aid}
         else:
             rar='essence'; c['essence_affinity']={'value':nm,'status':'canon'}; c['art']={'layout':'vector-essence','note':'No Essence sheet exists in the 43-sheet plan; the card is drawn as a vector design. See reconciliation.'}
-        c['rarity']={'value':rar,'status':'canon-rule' if cat=='essence' else 'provisional'}
-        if cat in ('ally','gear','biome','tactic'): c['gameplay']=gameplay_trainer(n,cat,rar)
-        else: c['gameplay']={'status':'provisional','rules':'Provides 1 %s Essence.'%nm}
+        c['rarity']={'value':rar,'status':'canon-rule' if cat=='essence' else 'decided'}
+        if cat in ('ally','gear','biome','tactic'): c['gameplay']=WD.trainer_gameplay(n,cat,c['biome_affinity']['value'] if cat=='biome' else None)
+        else: c['gameplay']={'status':'designed','rules':'Provides 1 %s Essence.'%nm,'ops':[['essence',nm]]}
         for k in ('subject','illustration'):
             if c['art'].get(k): assets[c['art'][k]]['linked_cards'].append(c['id'])
         cards.append(c)
@@ -217,7 +191,7 @@ def build(registry):
                   format='png',aspect=aspect,premium=True)
         assets[aid]['linked_cards'].append('WK-S001-%03d'%n)
         cards.append({'id':'WK-S001-%03d'%n,'number':n,'category':'premium','roster_name':nm,'name':('Clasped '+base) if kind=='CSR' else base,'premium_kind':kind,
-            'rarity':{'value':rar,'status':'canon'},'identity_of':b['id'],'identity_note':'Plays as the same card as %s (provisional: premium prints share gameplay; Clasped mechanics are not defined).'%b['id'],
+            'rarity':{'value':rar,'status':'canon'},'identity_of':b['id'],'identity_note':'Plays as the same card as %s (rules: premium prints play as their base card; the Clasp is a collector treatment, not a mechanic).'%b['id'],
             'variant':kind.lower(),'art':{'layout':'full-art','illustration':aid,'must_differ_from':[b['art'].get('subject') or b['art'].get('illustration')],'note':'Premium art must be a real alternate illustration, never a recoloured or resized base cutout (bible section 7).'}})
     return species, cards, assets
 
@@ -315,13 +289,13 @@ def reconcile(species, cards, assets, S, registry):
     add('- **Evolution families for cards 027-056** (first inferred from the numbering and the sheet plan) were confirmed by the owner on 2026-10-13. Cards 057-074 are therefore the 18 standalones of sheets 24-29.')
     for fid,mem,kind,st,sheet,role in FAMILIES:
         if fid>='FAM-12' and fid<='FAM-23': add('  - %s: %s'%(fid,' -> '.join('%03d %s'%(m,[s['name'] for s in species if s['card'].endswith('%03d'%m)][0]) for m in mem)))
-    add('\n## Still provisional or open (needs owner confirmation)\n')
-    add('- **Affinities of 51 creatures** (all non-mascots, including the Mistip line) are provisional, read from the names. Mascot affinities come from `design/wildkin-universe.md` (canon). Dual affinities (Prismotl and Koi lines Tide/Astral, Rolyte line Stone/Iron, Berribat line Dusk/Verdant) are recorded; the engine still gives each card one type, so it uses the first.')
-    add('- **Rarities of allies, gear, biomes and tactics** are provisional. Creature rarities follow the owner\'s rule (Basic = common, Stage 1 = uncommon, Stage 2 = rare, standalone mascots = rare); lesser standalones are common (provisional reading of "Lesser Wildkin fill the commons and uncommons").')
-    add('- **All card rules, HP, attacks, weaknesses and retreat costs** are provisional placeholders with generic attack names, so the simulation runs. Cards say "Provisional rules" on their face. The bible: card rules need explicit design.')
-    add('- **Premium cards share gameplay with their base card** (provisional). Clasped mechanics are not defined.')
-    add('- **The order of 173-176 and 177-180** is taken from Appendix A; section 5 says "order to verify".')
-    add('- **Ally numbering 075-092** is the recovered lineup; section 4 says to check it against the original numbering before locking.')
+    add('\n## Decided on 2026-10-15 (owner instruction: finalise rules, affinities, ordering and mascot desirability)\n')
+    add('- **Card ordering** is final as in Appendix A: 141-150 mascot Illustration Rares, 151-160 mascot Full Arts, 161-168 supporting Illustration Rares, 169-172 ally Full Arts, 173-176 Special Illustration Rares, 177-180 Clasped Secret Rares; allies 075-092 keep their recovered numbers. Nothing was renumbered.')
+    add('- **Affinities of the 51 non-mascot creatures** are decided (`tools/wildkin_design.py`, status "decided"). Mascot affinities stay canon. Two changes from the earlier provisional reading: Clampup (064) is Iron (its approved art is bronze and metal), and Dewink and Bloomble (055-056) are Tide with Verdant as second affinity. Dual-affinity creatures may pay their own symbols with Essence of either affinity.')
+    add('- **Card rules** are designed for all 180 cards (status "designed"): HP, attacks with costs and effects, abilities, weakness, retreat, prize value, and the effects of every Ally, Gear, Biome and Tactic. The rules of play are in `manifest.json` (`rules`). The engine is `src/engine/tcg_rules.js`; `tools/wildkin_sim.js` checks balance.')
+    add('- **Premium prints play as their base card.** The Clasp is a collector treatment (Clasp Program art), not a mechanic.')
+    add('- **Rarities of allies, gear, biomes and tactics** are decided (unchanged values). Creature rarities follow the owner\'s rule.')
+    add('- **Collector demand (fandom)** has starting weights for every species and character: flagship mascots and the chase subjects (Cactuft, Nimbusail, June Kestrel, Sel Veyra, the four Clasped creatures) rank highest. These are starting preferences; prices still move with supply, demand and play.')
     add('\n## Sheet plan versus card needs\n')
     add('| Sheet | Queue title | Cells needed by the manifest | Note |'); add('|---|---|---|---|')
     for t in S:
@@ -350,6 +324,29 @@ def reconcile(species, cards, assets, S, registry):
     add('- Rarities: '+', '.join('%s %d'%(k,v) for k,v in rc.items()))
     add('- Species: %d in %d families (%d canon, %d inferred)'%(len(species),len(FAMILIES),sum(1 for f in FAMILIES if f[3]=='canon'),sum(1 for f in FAMILIES if f[3]=='inferred')))
     add('- Art assets required: %d (%d approved)'%(len(assets),sum(1 for a in assets.values() if a.get('status')=='approved')))
+    return '\n'.join(L)+'\n'
+
+def rules_md(m):
+    """A readable rules reference: the rules of play and every card's text, generated from the manifest."""
+    L=['# Wildkin: First Bond rules and card reference','','Generated from `wildkin-production/manifest.json` by `tools/wildkin_manifest.py` (do not edit). Card rules were designed on 2026-10-15 (`tools/wildkin_design.py`); the engine that plays them is `src/engine/tcg_rules.js`.','','## Rules of play','']
+    for k,v in m['rules'].items():
+        if k!='version': L.append('- **%s.** %s'%(k.capitalize(),v))
+    L+=['','## Weakness','','Each affinity is weak to exactly one other (double damage). No resistance.','','| Affinity | Weak to |','|---|---|']+['| %s | %s |'%(k,v) for k,v in m['weakness'].items()]
+    sp={s['id']:s for s in m['species']}; cost=lambda c: ' '.join('{%s}'%('any' if x=='C' else {'V':'Verdant','T':'Tide','S':'Stone','I':'Iron','E':'Ember','L':'Storm','A':'Astral','D':'Dusk','W':'Wonder'}[x]) for x in c)
+    L+=['','## Creatures (001-074)','']
+    for c in m['cards']:
+        if c['category']!='creature': continue
+        s=sp[c['species']]; g=c['gameplay']; a=s['affinity']
+        L.append('**%03d %s** (%s, %s%s), %s%s. HP %d, weak to %s, retreat %d.'%(c['number'],c['name'],c['rarity']['value'],s['stage_label'],', evolves from '+sp[s['evolves_from']]['name'] if s['evolves_from'] else '',a['primary'],' / '+a['secondary'] if a['secondary'] else '',g['hp'],g['weakness'],g['retreat']))
+        if g.get('ability'): L.append('- Ability: **%s**. %s'%(g['ability']['name'],g['ability']['text']))
+        for t in g['attacks']: L.append('- %s **%s** %s%s'%(cost(t['cost']),t['name'],t['damage_label'],('. '+t['text']) if t['text'] else ''))
+        L.append('')
+    for cat,title in (('ally','Allies (075-092)'),('gear','Gear (093-110)'),('biome','Biomes (111-119)'),('tactic','Tactics (120-131)'),('essence','Essence (132-140)')):
+        L+=['## '+title,'']
+        for c in m['cards']:
+            if c['category']==cat: L.append('- **%03d %s** (%s): %s'%(c['number'],c['name'],c['rarity']['value'],c['gameplay']['rules']))
+        L.append('')
+    L+=['## Premium prints (141-180)','','Each plays exactly as its base card.','']+['- %03d %s: plays as %s'%(c['number'],c['roster_name'],c['identity_of']) for c in m['cards'] if c['category']=='premium']
     return '\n'.join(L)+'\n'
 
 def validate(m):
@@ -459,12 +456,13 @@ def main():
     species,cards,assets=build(registry); S=sheets(species,cards,assets); queue_status(S,assets,registry)
     m={'schema':'wildkin-manifest/1','manifest_version':MANIFEST_VERSION,'generated_by':'tools/wildkin_manifest.py',
        'sources':{'bible':'design/wildkin-v1-production-bible.md','roster':'wildkin-production/source/appendix_a_roster.tsv','universe':'design/wildkin-universe.md','scene_library':'assets/manifest.json'},
-       'status_legend':{'canon':'stated in the bible or the owner design doc','canon-rule':'follows the owner rule for rarity by stage','inferred':'follows from canon numbering and the sheet plan, needs owner confirmation','provisional':'placeholder chosen by Claude Code so the game runs, not canon','unresolved':'unknown'},
-       'set':{'id':'WK-S001','number':1,'name':'First Bond','name_status':'canon','code':'FBD','code_status':'provisional','total':180,'base':140,'premium':40,
-              'release_date':{'value':'2026-02-06','status':'provisional','note':'engine calendar; the game starts four months after release'},
+       'status_legend':{'canon':'stated in the bible or the owner design doc','canon-rule':'follows the owner rule for rarity by stage','inferred':'follows from canon numbering and the sheet plan, needs owner confirmation','designed':'card rules designed by Claude Code under the owner instruction of 2026-10-15','decided':'reasoned choice under the owner instruction of 2026-10-15 where the bible left it open','provisional':'an engine number still open (release date, code, prices, odds), not canon','unresolved':'unknown'},
+       'rules':WD.RULES,'weakness':WD.WEAKNESS,
+       'set':{'id':'WK-S001','number':1,'name':'First Bond','name_status':'canon','code':'FBD','code_status':'decided','total':180,'base':140,'premium':40,
+              'release_date':{'value':'2026-06-08','status':'decided','note':'engine calendar: a new game starts on 2026-06-01, so First Bond launches one week in (owner, 2026-10-15). Announced with preorders on day one'},
               'pack':{'cards':10,'slots':[{'slot':'common','count':6,'note':'one of the six can be a reverse holo of any common, uncommon or rare (provisional: 1 in 2 packs)'},{'slot':'uncommon','count':2},{'slot':'rare-or-better','count':1},{'slot':'essence','count':1}],'status':'canon (6/2/1/1)'},
-              'rare_slot_odds':{'status':'provisional','note':'per pack; tuned with the headless economy check','rare':0.6215,'rare_holo':0.25,'ir':0.0835,'fa':0.0334,'sir':0.0083,'csr':0.0033},
-              'box':{'packs':36,'status':'provisional (engine)'},'msrp':{'pack':4.5,'box':150,'status':'provisional (engine)'}},
+              'rare_slot_odds':{'status':'decided','note':'per pack; tuned with the headless economy check','rare':0.6215,'rare_holo':0.25,'ir':0.0835,'fa':0.0334,'sir':0.0083,'csr':0.0033},
+              'box':{'packs':36,'status':'decided'},'msrp':{'pack':4.5,'box':150,'status':'decided'}},
        'affinities':[{'id':a[0],'name':a[1],'order':i,'colour':a[2],'dark':a[3],'light':a[4],'status':'canon','colour_status':'provisional'} for i,a in enumerate(AFFINITIES)],
        'legacy_prototype_types':{'note':'The prototype used Flame, Tide, Grove, Radiant, Void, Frost, Storm, Stone, Lunar. Prototype cards are NOT migrated: their creatures are not canon. Prototype saves are kept unchanged and marked legacy (see CLAUDE.md).'},
        'rarities':{'common':{'name':'Common','symbol':'●'},'uncommon':{'name':'Uncommon','symbol':'◆'},'rare':{'name':'Rare','symbol':'★'},'essence':{'name':'Essence','symbol':''},'ir':{'name':'Illustration Rare','symbol':'★ IR'},'fa':{'name':'Full Art','symbol':'★ FA'},'sir':{'name':'Special Illustration Rare','symbol':'★★ SIR'},'csr':{'name':'Clasped Secret Rare','symbol':'✦ CSR'}},
@@ -475,7 +473,7 @@ def main():
         print('VALIDATION FAILED'); [print(' -',e) for e in errs]; sys.exit(1)
     q={'schema':'wildkin-art-queue/1','manifest_version':MANIFEST_VERSION,'generated_by':'tools/wildkin_manifest.py','handoff':'wildkin-production/SOL_HANDOFF.md','tasks':S}
     outs={os.path.join(WP,'manifest.json'):json.dumps(m,indent=1,ensure_ascii=False)+'\n',os.path.join(WP,'art_queue.json'):json.dumps(q,indent=1,ensure_ascii=False)+'\n',
-          os.path.join(WP,'ART_QUEUE.md'):render_queue_md(S,assets),os.path.join(WP,'reports','reconciliation.md'):reconcile(species,cards,assets,S,registry),os.path.join(WP,'reports','outstanding_assets.md'):outstanding(m,S)}
+          os.path.join(WP,'ART_QUEUE.md'):render_queue_md(S,assets),os.path.join(WP,'reports','reconciliation.md'):reconcile(species,cards,assets,S,registry),os.path.join(WP,'reports','outstanding_assets.md'):outstanding(m,S),os.path.join(WP,'RULES.md'):rules_md(m)}
     if a.check:
         bad=[p for p,t in outs.items() if not os.path.exists(p) or open(p,encoding='utf-8').read()!=t]
         if bad: print('OUT OF DATE (run tools/wildkin_manifest.py):',*[os.path.relpath(p,ROOT) for p in bad]); sys.exit(1)

@@ -16,33 +16,19 @@ function tcSetDef(n){
   return {n:1, id:s.id, name:s.name, code:s.code, rel:dateToDay(y,m,d), reprint:false, base:s.base, total:s.total};
 }
 const TC_STYLES=['aggro','mid','control','combo','stall'], TC_STYN={aggro:'Aggro',mid:'Midrange',control:'Control',combo:'Combo',stall:'Stall'};
-function tcWeak(el){ const i=TC_EL.indexOf(el); return TC_EL[(i+8)%9]; }
 const TC_CACHE=new Map(), TCD=new Map(), TC_BYCID=new Map();
-// ---------- play power and style (the metagame's hidden numbers; derived from provisional stats) ----------
-function tcEffTags(t){ const s=t||''; return { ctl:/Asleep|Paralyzed|Confused|Switch|retreat|Burned|Poisoned|can't|cannot|shuffles their hand|Discard an Essence/i.test(s), stl:/Heal|less damage|Prevent|no Retreat/i.test(s), cmb:/Draw|Search|Attach|Look at|onto your Bench|into your hand/i.test(s) }; }
-function tcPw(c, r){
-  if (c.kind!=='creature') return c.pw0+(r()-0.5)*0.14;
-  let dpe=0, eff=0; for (const a of c.atk){ dpe=Math.max(dpe,(a.d||0)/Math.max(1,a.cost)); const t=tcEffTags(a.t); if (t.ctl||t.stl||t.cmb) eff=0.08; }
-  const stageB={'Basic':0,'Stage 1':0.03,'Stage 2':0.07}[c.stage]||0;
-  return Math.max(0.05, Math.min(0.98, 0.16+0.42*Math.min(1,dpe/30)+0.24*Math.min(1,c.hp/230)+eff+stageB+({common:0,unc:0.03,rare:0.07}[c.rar]||0)+(r()-0.5)*0.22));
-}
-function tcStyle(c){ if (c.kind!=='creature') return c.st0||'mid'; let ctl=0,stl=0,cmb=0,dpe=0; for (const a of c.atk){ dpe=Math.max(dpe,(a.d||0)/Math.max(1,a.cost)); const t=tcEffTags(a.t); ctl+=t.ctl?1:0; stl+=t.stl?1:0; cmb+=t.cmb?1:0; } if (ctl) return 'control'; if (cmb) return 'combo'; if (stl) return 'stall'; return dpe>=26?'aggro':'mid'; }
-// ---------- building the set from the manifest ----------
+// ---------- building the set from the manifest (the card mapping lives in tcg_rules.js, shared with the headless tools) ----------
+// pw: how strong a card is in play (0..1), from the rules engine's own ratings; st: what plan it serves. Both are the
+// same in every world: the metagame (tcg_world.js) decides how much each card is actually played.
 function tcBuildSet(n){
-  const r=mkRng(hsh('tcs'+G.seed+':'+n)); const S=WK_CANON.set; const cards=[]; const byNo={};
-  for (const x of WK_CANON.cards){
-    const c={set:n, no:x.no, id:x.id, cid:n*1000+x.no, kind:x.kind, rar:x.rar, name:x.name, art:x.art, rs:x.rs, fan:x.fan||0.3};
-    if (x.kind==='creature'){ Object.assign(c,{el:x.el, el2:x.el2, els:x.els, stage:x.stage, from:x.from, to:x.to, fam:x.fam, fams:x.fams, mascot:x.mascot, sp:x.sp, hp:x.hp, weak:x.weak, ret:x.ret,
-      atk:x.atk.map(a=>({n:a[0], cost:a[1], d:a[2]||'', t:a[3]}))}); }
-    else { c.rules=x.rules; c.st0=x.st0; c.pw0=x.pw0; if (x.el) c.el=x.el; }
-    if (x.same!=null){ c.same=x.same; c.pk=x.pk; }
-    // collector appeal: fandom sets the level, a little deterministic spread per card
-    c.ap=+(0.75+0.55*c.fan+0.25*((hsh('ap'+x.id)%1000)/1000)).toFixed(2); c.hue=0;
-    cards.push(c); byNo[c.no]=c;
-  }
-  for (const c of cards) if (c.same!=null){ const b=byNo[c.same]; c.cid=b.cid; for (const k of ['el','el2','els','stage','from','to','fam','fams','mascot','sp','hp','weak','ret','atk','rules','st0','pw0']) if (b[k]!==undefined && c[k]===undefined) c[k]=b[k]; c.kind=b.kind; }
-  for (const c of cards) if (c.same==null){ c.pw=+tcPw(c,r).toFixed(3); c.st=tcStyle(c); }
-  for (const c of cards) if (c.same!=null){ const b=byNo[c.same]; c.pw=b.pw; c.st=b.st; }
+  const cards=WKR.setFromCanon(WK_CANON,n);
+  const base=cards.filter(c=>c.same==null && c.kind!=='essence'); const rate=c=>c.kind==='creature'? WKR.creatureRating(c) : WKR.trainerRating(c,{evo:true,st2:true})*10;
+  const sorted=base.map(c=>[c,rate(c)]).sort((a,b)=>a[1]-b[1]); sorted.forEach(([c],i)=>{ c.pw=+(0.12+0.84*i/Math.max(1,sorted.length-1)).toFixed(3); });
+  const role={draw:'combo',search:'combo',accel:'combo',heal:'stall',tool:'stall',gust:'control',disrupt:'control',switch:'control',recover:'combo',boost:'aggro',biome:'mid'};
+  for (const c of cards){ c.ap=+(0.75+0.55*c.fan+0.25*((hsh('ap'+c.id)%1000)/1000)).toFixed(2); c.hue=0;
+    if (c.kind==='essence'){ c.pw=0.05; c.st='mid'; } else if (c.kind!=='creature') c.st=role[c.role]||'mid';
+    else { const fx=c.atk.flatMap(a=>a.fx.map(o=>o[0])); c.st= fx.some(k=>/status|strip|gust|opp_discard|no_retreat/.test(k))? 'control' : fx.some(k=>/heal|guard/.test(k))||(c.ab&&c.ab.k==='passive')? 'stall' : fx.some(k=>/draw|accel/.test(k))? 'combo' : Math.max(...c.atk.map(a=>a.d/a.cost.length))>=40? 'aggro' : 'mid'; } }
+  const byNo={}; for (const c of cards) byNo[c.no]=c; for (const c of cards) if (c.same!=null){ c.pw=byNo[c.same].pw; c.st=byNo[c.same].st; }
   for (const c of cards) if (c.same==null) TC_BYCID.set(c.cid,c);
   return cards;
 }

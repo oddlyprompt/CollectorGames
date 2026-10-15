@@ -2,7 +2,10 @@
 
 ## Wildkin Version 1: First Bond comes from the manifest
 `design/wildkin-v1-production-bible.md` (the owner's production bible) is the source of truth. The prototype creatures, sets and art are gone from the game. The Wildkin build reads **only** `wildkin-production/manifest.json` (the 180 First Bond cards) and `wildkin-production/approved/registry.json` (approved art):
-- `tools/wildkin_manifest.py` builds the manifest, art queue and reports from `wildkin-production/source/appendix_a_roster.tsv` (extracted from the bible) and the tables in the script. Every fact has a status: **canon**, **inferred** (needs owner confirmation; the families 027-056 were confirmed on 2026-10-13) or **provisional** (stats, rules text, non-creature rarities, most affinities, prices). Never present provisional or inferred as canon, and never invent cards, names or numbers. `--check` fails if the files are stale or invalid.
+- `tools/wildkin_manifest.py` builds the manifest, art queue and reports from `wildkin-production/source/appendix_a_roster.tsv` (extracted from the bible) and the tables in the script. Every fact has a status: **canon**, **designed** (card rules, 2026-10-15), **decided** (non-mascot affinities, non-creature rarities, fandom weights, decided under the owner's instruction of 2026-10-15) or **provisional** (nothing left in First Bond; kept for future sets). Never present provisional as canon, and never invent cards, names or numbers. `--check` fails if the files are stale or invalid. It also writes `wildkin-production/RULES.md`, the readable rules and card reference.
+- `tools/wildkin_design.py` holds the Version 1 card design: every attack, ability and trainer effect as small operations ("ops"), the weakness wheel, the decided affinities and the fandom weights. Card text is generated from the ops, so text and play never disagree.
+- `src/engine/tcg_rules.js` (`WKR`) is the rules engine: full games (setup, Essence, evolution, abilities, Allies/Gear/Tactics/Biomes, conditions, weakness, prizes), a greedy player for both sides, a deck builder, and the field (candidate decks, gauntlet, round robin). It runs in the browser and in Node. `tools/wildkin_meta.js` precomputes the field at build time (`WK_META`; without Node the game computes it). `tools/wildkin_sim.js` is the balance check: run it after any card or engine change.
+- The metagame (`tcg_world.js`) uses the engine's matchups: weekly share shifts, Swiss tournaments with a top-8 bracket and a final played card by card, and a rules committee that bans the card whose loss hurts a dominant deck most (tested by rebuilding the deck), never a staple. Saves keep the field they use (`G.tcg.mx`) with a fingerprint of the base field, so a change to card rules or the engine rebuilds it on load; bump `RV` in `tcg_rules.js` only for a change the fingerprint cannot see.
 - `tools/wildkin_art.py` is the only way art gets into the game (check, approve, reject, ingest, legacy for 3x3 sheets; singles-check and singles-approve for single premium paintings mapped by `incoming/premium-individuals/card-map.json`). Approved art is never overwritten without `--replace`. SOL (the art model) follows `wildkin-production/SOL_HANDOFF.md` and owns art direction: no concept approval step; a subject's first approved sheet is its reference.
 - `tools/wildkin_build.py` (called by `build.py` for tcg) writes `WK_CANON` and `WK_ART` into game.js and copies only approved images to `dist/tcg/art/`. Missing art draws a labelled "ART PENDING" placeholder, never another card's picture.
 - Saves carry `G.tcg.cv=2`. Prototype saves (no `cv`) are labelled in the launcher, never loaded, never modified (`pack_apply.js`).
@@ -26,7 +29,8 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
   - `python3 tools/wildkintest.py`: First Bond against the manifest, art mapping, packs and odds, play loop, prototype-save protection.
   - `python3 tools/wildkin_econ.py [months]`: headless Wildkin economy run (prices, chase cards, metagame health).
   - `python3 tools/test_art_pipeline.py`: the art intake on synthetic deliveries (no server needed).
-- Before saying something is done: build, then run `shelltest` for every game you touched. A clean run prints `ERRS []`. For Wildkin also run `wildkintest.py`, and `wildkin_manifest.py --check` after touching the manifest tables.
+  - `node tools/wildkin_sim.js [games-per-pair]`: the rules engine headless on First Bond (needs a built tcg): game length, how games end, every candidate deck's gauntlet, the top-15 round robin, card use.
+- Before saying something is done: build, then run `shelltest` for every game you touched. A clean run prints `ERRS []`. For Wildkin also run `wildkintest.py`, `wildkin_manifest.py --check` after touching the manifest or design tables, and `wildkin_sim.js` after touching card rules or the engine.
 
 ## How the code is organised
 - `src/engine/*.js` is the whole simulation and UI. `src/packs/*.js` defines each game (`PACK`). `src/shell/` is the launcher, save slots and per-game screens.
@@ -39,19 +43,20 @@ Plain HTML and JavaScript. No framework, no server, no build tool beyond one Pyt
 - The 3D inspector is `viewer3d.js` (three.js from `vendor/`). Print effects for close-ups are in `polish.js`. The grading reveal and crack-and-resubmit are in `drama.js`.
 
 ## The Wildkin economy (First Bond, measured with `tools/wildkin_econ.py`; re-measure after any change)
-- Pack worth about $5.10 at the start, drifting to about $5.90 after a year, against $4.50 retail. Box about $175, about $255 after a year, against $150.
-- Medians: commons 4 cents, uncommons about 12 cents, rares about 85 cents, holo rares about $1.80, IR about $6, FA about $10, SIR and Clasped $150 to $200.
-- Chase: Cactuft SIR about $410 raw at the start (about $2,100 at GCS 10). Collector fandom per species (manifest, provisional) bends prices through `TC_TUNE` in `tcg_value.js`; the rare slot odds live in the manifest.
-- Metagame: about 15 archetypes, top deck about 20%. With one set there is no rotation and bans are rare.
+- First Bond launches on 8 June 2026, one week after a new game starts (1 June); it is announced with every card shown and preorders on day one. Launch prices carry a premium that fades in about a month (`nov` in `tcFairRaw`).
+- Pack worth about $7 on launch day, about $5.40 a month later, about $5.80 after a year, against $4.50 retail. Box about $237 at launch, about $185 a month later, about $197 after a year, against $150.
+- Medians after launch: commons 3 to 4 cents, uncommons about 12 cents, rares about 40 to 50 cents, holo rares about $1.30, IR about $6 to $7, FA about $13, SIR about $200 to $220, Clasped about $130.
+- Chase: Cactuft SIR about $540 on launch day, then about $400 to $430 raw (about $2,100 at GCS 10), then Nimbusail, Sel Veyra and June Kestrel SIRs around $200, Clasped Aegisopod about $190. Collector fandom (manifest, decided starting weights) bends prices through `TC_TUNE` in `tcg_value.js`; play value comes from how much the simulated decks use a card; the rare slot odds live in the manifest.
+- Metagame: 15 decks from the engine's field, simulated win rates about 39% to 63% in the round robin, top deck 13% to 21% of the field, the lead deck changes several times a year. With one set there is no rotation; bans only follow 10 weeks above 24% and did not trigger in a 12-month run (the ban path is tested in `wildkintest.py`).
 
 ## Known issues
-- Wildkin: every card has approved art (the 4 SIR paintings are below the print minimum, accepted by the owner); card rules are provisional placeholders; only one set exists (see `wildkin-production/reports/V1_READINESS.md`).
+- Wildkin: every card has approved art (the 4 SIR paintings are below the print minimum, accepted by the owner); card rules are designed and balanced by simulation, but no human has playtested them; only one set exists (see `wildkin-production/reports/V1_READINESS.md`).
 - Wildkin has no Hunt, no follows or chases for cards, and no breaks or repacks.
 - A few Hunt shop descriptions in the comics build still mention cards.
 - Never tested on a real phone or on itch.io. The 3D viewer was only tested with a software renderer.
 
 ## Roadmap, in order
-1. **Wildkin milestone.** Done: First Bond as data (manifest), engine on the new set, art as image files loaded on demand, chase tier, art intake. Next: SOL art deliveries, the remaining owner confirmations (affinities, ordering, koi stage), real card rules. Then:
+1. **Wildkin milestone.** Done: First Bond as data (manifest), engine on the new set, art as image files loaded on demand, chase tier, art intake, all art, card rules with a simulated metagame. Then:
    - Hype sets (more sets are needed first).
    - Hunt, follows and chases for cards.
    - A set-variation system that composes card art from species cutouts, poses and scenes (`tools/ingest.py` makes the cutouts).

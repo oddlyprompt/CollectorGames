@@ -1,6 +1,6 @@
 // ===================== TCG: COPIES, VALUE AND THE MARKET =====================
 const TC_MSRP={P:4.5,B:150}, TC_COND_MULT={NM:1,LP:0.82,MP:0.6,HP:0.4,DMG:0.22};
-const TC_RB={'common|N':0.05,'common|R':0.30,'unc|N':0.18,'unc|R':0.55,'rare|N':0.22,'rare|R':0.5,'rare|H':1.3,'ess|N':0.03,'ir|I':7,'fa|F':12,'sir|X':130,'csr|C':150};   // provisional, tuned with tools/econtest.py
+const TC_RB={'common|N':0.05,'common|R':0.30,'unc|N':0.18,'unc|R':0.55,'rare|N':0.22,'rare|R':0.5,'rare|H':1.3,'ess|N':0.03,'ir|I':7,'fa|F':10,'sir|X':130,'csr|C':150};   // provisional, tuned with tools/econtest.py
 const TC_TUNE={fanPrem:4.5, fanRare:1.2};   // how hard collector fandom (manifest, provisional) bends prices: premium prints feel it most
 const TC_PB={ess:0,common:1.6,unc:2.5,rare:3.5,ir:9,fa:12,sir:14,csr:12};
 const TC_GB=[0,0.35,0.4,0.45,0.55,0.65,0.78,0.9,1.0,1.55,3.4], TC_GS={ess:0.3,common:0.55,unc:0.7,rare:1,ir:1.4,fa:1.5,sir:1.7,csr:1.8};
@@ -39,7 +39,7 @@ function tcFairRaw(key){
   const ck=key+'@'+G.day; let v=TCFV.get(ck); if (v!=null) return v;
   const d=tcD(key); if (d.sealed){ v=tcSealedFair(d); } else {
     const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=TC_RB[c.rar+'|'+d.v]||0.1;
-    const nov=Math.max(0.6, 1+1.4*Math.exp(-wk/2.2)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(wk/4.33-12)/12));
+    const nov=Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(wk/4.33-12)/12));
     const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop;
     const st=tcLegalState(c.cid), u=Math.min(1,(G.tcg.usage[c.cid]||0)/4), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.tcg.hy[c.cid]||0;
     const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(tcIsPrem(c)?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
@@ -91,7 +91,7 @@ function tcBuySealed(set, f, q){
 }
 function tcPreorder(set, f, q){ const T=G.tcg; const lim=f==='B'?2:12; const have=T.pre.filter(p=>p.set===set&&p.f===f).reduce((s,p)=>s+p.q,0); if (have+q>lim) return 'Limit '+lim+' per account.'; const e=T.pre.find(p=>p.set===set&&p.f===f); if (e) e.q+=q; else T.pre.push({set,f,q}); return null; }
 function tcFulfilPreorders(set, t){ const T=G.tcg; const mine=T.pre.filter(p=>p.set===set); T.pre=T.pre.filter(p=>p.set!==set); const key0=n=>tcKey(set,0,n);
-  for (const p of mine){ const price=TC_MSRP[p.f]; let got=0; for (let i=0;i<p.q;i++){ if (G.player.cash<price){ toast('Preorder: you ran out of cash after '+got+'.'); break; } G.player.cash-=price; G.player.bought+=price; const cp=tcMakeCopy(key0(p.f),0,[t,'preorder',price,'Wildkin Games shop'],'shop'); cp.nw=1; cp.pv={d:t,v:Math.round(tcFairRaw(key0(p.f))*100)/100,n:'Preordered before release.'}; got++; }
+  for (const p of mine){ const price=p.paid? 0 : TC_MSRP[p.f]; let got=0; for (let i=0;i<p.q;i++){ if (G.player.cash<price){ toast('Preorder: you ran out of cash after '+got+'.'); break; } G.player.cash-=price; G.player.bought+=price; const cp=tcMakeCopy(key0(p.f),0,[t,'preorder',p.paid? TC_MSRP[p.f] : price,'Wildkin Games shop'],'shop'); cp.nw=1; cp.pv={d:t,v:Math.round(tcFairRaw(key0(p.f))*100)/100,n:'Preordered before release.'}; got++; }
     if (got) toast('Preorder in: '+got+' '+tcD(key0(p.f)).title, true); }
 }
 // opening: returns the cards, never charges anything (the sealed copy is what you paid for)
