@@ -380,6 +380,12 @@ body.noscroll{ overflow:hidden; }
 .tco-sum{ padding:8px 16px; text-align:center; } .tco-sum h2{ margin:6px 0 2px; } .tco-sum p{ margin:2px 0 10px; color:#b9c1c9; }
 .tco-strip{ display:grid; grid-template-columns:repeat(5,1fr); gap:6px; max-width:520px; margin:0 auto 10px; } .tco-mini svg{ width:100%; height:auto; display:block; border-radius:6px; } .tco-mini.hit{ box-shadow:0 0 14px rgba(255,214,102,.6); border-radius:6px; }
 
+/* Wildkin collection: stacked copies and caption tags */
+.gcell .count{ position:absolute; top:4px; right:4px; background:var(--ink); color:var(--bg); font-size:11px; font-weight:700; padding:1px 6px; border-radius:10px; z-index:2; }
+.gcell .cap .tag{ font-style:normal; margin:0 0 0 6px; font-size:10px; padding:0 5px; }
+.gcell .cap b .tag{ margin:0 5px 0 0; }
+.tag.new{ background:var(--accent); color:#fff; }
+
 /* launcher and save slots */
 .launch{ position:fixed; inset:0; z-index:500; overflow-y:auto; background:radial-gradient(120% 70% at 50% 0%, #1d222b 0%, #0c0e12 62%); color:#e9ecef; display:flex; justify-content:center; font-family:'Barlow',system-ui,sans-serif; }
 .lwrap{ width:100%; max-width:560px; padding:calc(34px + env(safe-area-inset-top,0px)) 18px calc(40px + env(safe-area-inset-bottom,0px)); }
