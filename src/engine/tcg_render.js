@@ -6,9 +6,11 @@ function tcFin(d){ if (d.sealed) return 'gloss'; return d.v==='H'||d.v==='I'||d.
 function tcPic(c){
   const a=tcArtOf(c), A=id=>id? WK_ART[id]||null : null; const col=TCF.EL[c.el]||(c.kind!=='creature'? {c:TCF.KIND[c.kind]?TCF.KIND[c.kind].c:'#888',d:TCF.KIND[c.kind]?TCF.KIND[c.kind].d:'#333',l:TCF.KIND[c.kind]?TCF.KIND[c.kind].p:'#eee'} : null);
   if (a.l==='vector-essence') return null;
-  if (a.l==='illustration' || a.l==='full-art'){ const ill=A(a.i)||(a.l==='illustration'? A(a.x) : null); return {ill:ill||null, ida:a.i, col, label:'ART PENDING'}; }
+  // non-creature illustrations (Tactics, Biomes) are square paintings in a wide window: keep the top, where the faces are
+  if (a.l==='illustration' || a.l==='full-art'){ const ill=A(a.i)||(a.l==='illustration'? A(a.x) : null); return {ill:ill||null, ida:a.i, col, label:'ART PENDING', fy:c.kind!=='creature'&&a.l==='illustration'? 0.18 : 0.5}; }
   if (a.l==='cutout-on-scene') return {bg:A(a.b), bgid:a.b, fg:A(a.s), fgid:a.s, col};
-  if (a.l==='cutout-on-panel') return {fg:A(a.s), fgid:a.s, col, big:c.kind==='gear'};
+  // Allies: the hero drawn large (head to knee) in front of an approved biome scene (wildkin_build ALLY_BACKDROP)
+  if (a.l==='cutout-on-panel') return c.kind==='ally'&&!tcIsPrem(c)? {bg:A(a.bd), fg:A(a.s), fgid:a.s, col, hero:true} : {fg:A(a.s), fgid:a.s, col, big:c.kind==='gear'};
   return {ill:null, ida:'', col};
 }
 function tcFoot(c){ const st=tcArtState(c).state; const rules=''; const art= st==='pending'?'art pending': st==='partial'?'art in progress': st==='interim'?'interim art':''; return [rules,art].filter(Boolean).join('  ·  ')||'Illus. Wildkin Games'; }

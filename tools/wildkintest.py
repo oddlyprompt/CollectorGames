@@ -74,7 +74,7 @@ async def main():
         r=await pg.evaluate("""(()=>{ const out={n:0,bad:[],foreign:[],pend:0,final:0};
           for (const k of tcAllKeys(1)){ out.n++; let s; try { s=tcFront(k); } catch(e){ out.bad.push(k+': '+e.message); continue; }
             if (!s.startsWith('<svg')||/undefined|NaN/.test(s)) out.bad.push(k);
-            const c=tcD(k).card, a=c.art||{}; const own=new Set([a.s,a.b,a.i,a.x].filter(x=>x&&WK_ART[x]).map(x=>WK_ART[x].u));
+            const c=tcD(k).card, a=c.art||{}; const own=new Set([a.s,a.b,a.i,a.x,c.kind==='ally'?a.bd:null].filter(x=>x&&WK_ART[x]).map(x=>WK_ART[x].u));
             const hrefs=(s.match(/href="([^"#][^"]*)"/g)||[]).map(x=>x.slice(6,-1)); for (const h of hrefs) if (!own.has(h)) out.foreign.push(k+' '+h);
             const st=tcArtState(c).state; if (st==='final'||st==='interim') out.final++; else if (st!=='vector'){ out.pend++; if (!/ART PENDING|background pending/.test(s)) out.bad.push(k+' missing placeholder'); } }
           return out; })()""")

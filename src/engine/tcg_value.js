@@ -97,9 +97,14 @@ function tcFulfilPreorders(set, t){ const T=G.tcg; const mine=T.pre.filter(p=>p.
 // opening: returns the cards, never charges anything (the sealed copy is what you paid for)
 function tcOpenSealed(id){
   const cp=TC(id); if (!cp || cp.o!==0 || cp.l) return null; const d=tcD(cp.k); if (!d.sealed) return null; const paid=(cp.a&&cp.a[2])||0; const packs=d.v==='P'?1:36; const r=mkRng(hsh('open'+cp.id+G.day)); const out=[];
-  for (let i=0;i<packs;i++){ const keys=tcRollPack(d.set,r); const ids=keys.map(k=>{ const c=tcMakeCopy(k,0,[G.day,'pulled',Math.round(paid/packs/10*100)/100,'a '+d.title],'pull',r); c.nw=1; c.h=[[G.day,'Pulled from a '+d.title,0,'']]; const rr=tcCopyValue(c); c.pv={d:G.day,v:Math.round(rr*100)/100,n:''}; return c.id; }); out.push(ids); }
+  for (let i=0;i<packs;i++){ const keys=tcRollPack(d.set,r); const ei=keys.findIndex(k=>tcD(k).card.kind==='essence'); if (ei>0) keys.unshift(keys.splice(ei,1)[0]);   // reveal order: the Essence first, the rare slot last
+    const ids=keys.map(k=>{ const c=tcMakeCopy(k,0,[G.day,'pulled',Math.round(paid/packs/10*100)/100,'a '+d.title],'pull',r); c.nw=1; c.h=[[G.day,'Pulled from a '+d.title,0,'']]; const rr=tcCopyValue(c); c.pv={d:G.day,v:Math.round(rr*100)/100,n:''}; return c.id; }); out.push(ids); }
   delete G.tc[id]; G.player.packs=(G.player.packs||0)+packs; return {packs:out, set:d.set, title:d.title, paid};
 }
+// open several sealed items at once (every pack from 'Open all'): one result, packs in order
+function tcOpenMany(ids){ const res={packs:[], set:1, title:'', paid:0}; let n=0, t='';
+  for (const id of ids){ const r=tcOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; t=r.title; n++; }
+  if (!n) return null; res.title=n>1? n+' × '+t : t; return res; }
 // ---------- grading ----------
 function tcGradeOf(cp){ const c=cp.c; const mn=Math.min(...c), av=c.reduce((a,b)=>a+b,0)/4; const s=0.5*mn+0.5*av+withRng(mkRng(cp.id*7919+(cp.gt||0)*104729+11),()=>gauss()*1.7); return s>=97.5?10: s>=94?9: s>=89?8: s>=83?7: s>=76?6: s>=68?5: s>=58?4: s>=46?3: s>=32?2:1; }
 function tcGradeCopy(cp){ const g=tcGradeOf(cp); cp.gt=(cp.gt||0)+1; cp.g=g; cp.cert=10000000+Math.floor(R()*89999999); const p=G.tpop[cp.k]||(G.tpop[cp.k]=Array(11).fill(0)); p[g]++; tfvClear(cp.k); return g; }

@@ -385,6 +385,38 @@ body.noscroll{ overflow:hidden; }
 .gcell .cap .tag{ font-style:normal; margin:0 0 0 6px; font-size:10px; padding:0 5px; }
 .gcell .cap b .tag{ margin:0 5px 0 0; }
 .tag.new{ background:var(--accent); color:#fff; }
+/* ---- box grid: every pack a tile; packs with a good card glow, gold for a big hit ---- */
+.tcg-note{ text-align:center; margin:2px 16px 8px; color:#b9c1c9; font-size:13px; } .tcg-note .gold{ color:#ffd166; }
+.tcg-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(64px,1fr)); gap:10px; padding:6px 14px; max-width:760px; margin:0 auto; width:100%; box-sizing:border-box; }
+.tcg-tile{ position:relative; background:none; border:0; padding:0; color:#cfd6dd; font:600 11px/1.2 inherit; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:3px; animation:tcgIn .3s ease both; }
+.tcg-tile svg{ display:block; width:100%; height:auto; border-radius:5px; }
+.tcg-pack, .tcg-face{ width:100%; border-radius:6px; transition:transform .15s; } .tcg-tile:active .tcg-pack{ transform:scale(.95); }
+.tcg-tile.g1 .tcg-pack{ box-shadow:0 0 0 2px rgba(150,200,255,.75), 0 0 16px 3px rgba(120,180,255,.55); animation:tcgGlow 2.2s ease-in-out infinite; }
+.tcg-tile.g2 .tcg-pack{ box-shadow:0 0 0 2px #ffd166, 0 0 22px 6px rgba(255,209,102,.75); animation:tcgGold 1.4s ease-in-out infinite; }
+.tcg-tile.g2 span{ color:#ffd166; } .tcg-tile.open{ opacity:.92; } .tcg-tile.open span{ color:#9fe3b5; }
+@keyframes tcgGlow{ 0%,100%{ filter:brightness(1) } 50%{ filter:brightness(1.18) } }
+@keyframes tcgGold{ 0%,100%{ filter:brightness(1); transform:translateY(0) } 50%{ filter:brightness(1.3); transform:translateY(-2px) } }
+@keyframes tcgIn{ from{ opacity:0; transform:translateY(6px) } }
+.tco-card.back.lastcard{ box-shadow:0 0 30px rgba(255,209,102,.35), 0 24px 50px rgba(0,0,0,.6); }
+/* ---- a good card slides into a penny sleeve, then a top loader ---- */
+.tco-card.prot{ position:relative; }
+.tco-card .sleeve{ position:absolute; inset:-3px; border-radius:10px; background:linear-gradient(115deg,rgba(255,255,255,.22),rgba(255,255,255,.05) 40%,rgba(255,255,255,.16) 60%,rgba(255,255,255,.04)); border:1px solid rgba(255,255,255,.35); animation:sleeveIn .55s ease .7s both; pointer-events:none; }
+.tco-card .loader{ position:absolute; inset:-11px -11px -11px -11px; border-radius:8px; border:7px solid rgba(220,235,255,.28); box-shadow:inset 0 0 0 1px rgba(255,255,255,.45), 0 0 0 1px rgba(255,255,255,.3); background:linear-gradient(100deg,transparent 35%,rgba(255,255,255,.18) 50%,transparent 65%); animation:loaderIn .6s cubic-bezier(.2,.8,.2,1) 1.45s both; pointer-events:none; }
+.tco-card.prot svg{ animation:tcoPop .35s cubic-bezier(.2,.9,.2,1.2) both, protSink .4s ease 1.45s both; }
+.tco-prot{ color:#9fe3b5 !important; animation:serIn .4s ease 2s both; }
+@keyframes sleeveIn{ from{ transform:translateY(-110%); opacity:0 } 60%{ opacity:1 } to{ transform:none; opacity:1 } }
+@keyframes loaderIn{ from{ transform:translateY(115%); opacity:0 } to{ transform:none; opacity:1 } }
+@keyframes protSink{ to{ transform:scale(.97) } }
+/* ---- celebration for big hits and Gem Mint grades ---- */
+.cele{ position:fixed; inset:0; z-index:400; pointer-events:none; overflow:hidden; transition:opacity .45s; } .cele.out{ opacity:0; }
+.cele i{ position:absolute; top:-12px; border-radius:2px; animation:celeFall 2s cubic-bezier(.25,.6,.4,1) both; }
+@keyframes celeFall{ 0%{ transform:translateY(0) rotate(0); opacity:1 } 85%{ opacity:1 } 100%{ transform:translateY(105vh) rotate(var(--r)); opacity:0 } }
+.cele-burst{ position:absolute; left:50%; top:42%; width:20px; height:20px; margin:-10px; border-radius:50%; background:radial-gradient(circle,rgba(255,224,140,.9),rgba(255,209,102,0) 70%); animation:celeBurst .9s ease-out both; }
+@keyframes celeBurst{ from{ transform:scale(.2); opacity:1 } to{ transform:scale(38); opacity:0 } }
+.cele-ban{ position:absolute; left:50%; top:16%; transform:translateX(-50%); text-align:center; padding:10px 22px; border-radius:14px; background:linear-gradient(135deg,#3a2a05,#7a5a0c 45%,#3a2a05); border:2px solid #ffd166; box-shadow:0 10px 40px rgba(0,0,0,.5), 0 0 30px rgba(255,209,102,.5); color:#fff; animation:celeBan .5s cubic-bezier(.2,.9,.2,1.3) both; max-width:86vw; }
+.cele-ban b{ display:block; font:800 26px/1.1 'Barlow Condensed',sans-serif; letter-spacing:.06em; text-transform:uppercase; color:#ffe7a3; } .cele-ban span{ display:block; font-size:13px; margin-top:3px; color:#f5ecd2; }
+@keyframes celeBan{ from{ transform:translateX(-50%) scale(.5); opacity:0 } to{ transform:translateX(-50%) scale(1); opacity:1 } }
+@media (prefers-reduced-motion: reduce){ .tcg-tile.g1 .tcg-pack, .tcg-tile.g2 .tcg-pack, .cele-burst{ animation:none; } }
 
 /* launcher and save slots */
 .launch{ position:fixed; inset:0; z-index:500; overflow-y:auto; background:radial-gradient(120% 70% at 50% 0%, #1d222b 0%, #0c0e12 62%); color:#e9ecef; display:flex; justify-content:center; font-family:'Barlow',system-ui,sans-serif; }

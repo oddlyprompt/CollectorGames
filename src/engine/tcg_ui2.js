@@ -65,25 +65,54 @@ ACT.tcltype=a=>{ UI.tcl.ty=a; refreshSheet(); };
 ACT.tclist=a=>{ const price=parseFloat($('#tcprice').value), off=$('#tcoff')&&$('#tcoff').checked; const e=playerList('t',+a,UI.tcl.ty,price,5,off); if (e){ showToast(e); return; } showToast('Listed.', true); refreshSheet(); render(true); queueSave(); };
 ACT.tcgrade=a=>{ const [id,t]=a.split('|'); const e=tcSubmitGrade(+id,t); if (e){ showToast(e); return; } showToast('Sent to GCS. It comes back with a grade.', true); refreshSheet(); render(true); queueSave(); };
 // ---------- opening packs ----------
+// A box (or several packs) opens to a grid: each pack is a tile, and packs holding a good card glow (gold for a big hit).
+// Tap a pack to open it card by card: the Essence comes first and the rare slot last. Good cards get sleeved and
+// top-loaded; a big hit gets a short celebration. 'Reveal all' goes straight to the summary.
+const TC_GOOD=5, TC_BIG=50;   // dollars: a card worth sleeving, and a big hit worth a celebration
 function tcoOverlay(){ let el=$('#tco'); if (!el){ el=document.createElement('div'); el.id='tco'; el.className='tco'; el.setAttribute('role','dialog'); el.setAttribute('aria-label','Opening packs'); document.body.appendChild(el); document.body.classList.add('noscroll'); } return el; }
+function tcoMeta(res){ return res.packs.map(p=>{ const cs=p.map(TC).filter(Boolean); let best=cs[0], bv=0, tot=0; for (const c of cs){ const v=tcCopyValue(c); tot+=v; if (v>bv){ bv=v; best=c; } } return {best, bv, tot}; }); }
+// rarity and print in one line, without saying 'Full art · Full art'
+const tcRV=d=> TC_RARN[d.card.rar]+(TC_VARN[d.v]!==TC_RARN[d.card.rar]? ' · '+TC_VARN[d.v] : '');
+// a pack glows when its best card is premium (Illustration rare or better) or worth TC_GOOD; gold at TC_BIG
+const tcGood=c=> !!c && (tcIsPrem(tcD(c.k).card) || tcCopyValue(c)>=TC_GOOD);
+const tcoTier=(v,c)=> v>=TC_BIG? 'g2' : (v>=TC_GOOD || tcGood(c))? 'g1' : '';
+function tcoGrid(st, el){
+  const res=st.res, M=st.meta, n=res.packs.length, op=st.seen.length; const g1=M.filter(m=>tcoTier(m.bv,m.best)).length, g2=M.filter(m=>m.bv>=TC_BIG).length;
+  const tile=(m,i)=>{ const seen=st.seen.includes(i); return seen? `<button class="tcg-tile open" data-act="tcopack" data-a="${i}" aria-label="Pack ${i+1}, opened, best ${esc(tcD(m.best.k).title)}"><div class="tcg-face">${tcFace(m.best)}</div><span>${money(m.bv,true)}</span></button>`
+    : `<button class="tcg-tile ${tcoTier(m.bv,m.best)}" data-act="tcopack" data-a="${i}" aria-label="Pack ${i+1}${m.bv>=TC_BIG?', glowing gold':tcoTier(m.bv,m.best)?', glowing':''}"><div class="tcg-pack">${tcPackSVG(res.set,'P')}</div><span>${i+1}</span></button>`; };
+  const next=M.findIndex((m,i)=>!st.seen.includes(i));
+  el.innerHTML=`<div class="tco-top"><span>${esc(res.title)} · ${n} packs · ${op} opened</span><button class="btn sm" data-act="tcosum">Reveal all</button><button class="btn sm" data-act="tcoclose" aria-label="Close">✕</button></div>
+    <p class="tcg-note">${g2? `<b class="gold">${g2} gold</b> pack${g2>1?'s hold':' holds'} a big hit. `:''}${g1-g2>0? `${g1-g2} glowing pack${g1-g2>1?'s hold':' holds'} a premium card or one worth ${money(TC_GOOD)} or more. `:''}${!g1?'No standout cards in this lot. ':''}Tap any pack to open it.</p>
+    <div class="tcg-grid">${M.map(tile).join('')}</div>
+    <div class="tco-act">${next>=0?`<button class="btn pri" data-act="tcopack" data-a="${next}">Open pack ${next+1}</button>`:''}<button class="btn" data-act="tcosum">${next>=0?'Reveal all':'See everything'}</button></div>`; }
 function tcoRender(){
-  const st=UI.tco; if (!st) return; const el=tcoOverlay(); const res=st.res; const pack=res.packs[st.pi]; const total=res.packs.length; const ids=pack; const done=st.ci>=ids.length;
-  const top=`<div class="tco-top"><span>${esc(res.title)}${total>1?' · pack '+(st.pi+1)+' of '+total:''}</span>${total>1?'<button class="btn sm" data-act="tcosum">Skip to summary</button>':''}<button class="btn sm" data-act="tcoclose" aria-label="Close">✕</button></div>`;
+  const st=UI.tco; if (!st) return; const el=tcoOverlay(); const res=st.res; const multi=res.packs.length>1;
+  if (st.mode==='grid'){ tcoGrid(st, el); return; }
+  const pack=res.packs[st.pi]; const ids=pack; const done=st.ci>=ids.length;
+  const top=`<div class="tco-top"><span>${esc(res.title)}${multi?' · pack '+(st.pi+1)+' of '+res.packs.length:''}</span>${multi?'<button class="btn sm" data-act="tcogrid">All packs</button>':''}<button class="btn sm" data-act="tcoclose" aria-label="Close">✕</button></div>`;
   const enC=pack.map(TC).find(x=>x&&tcD(x.k).card&&tcD(x.k).card.kind==='essence'); const en=enC? tcD(enC.k).card.el : TC_EL[(st.pi*3+res.set)%9];
-  if (done){ const cs=ids.map(TC).filter(Boolean); const best=cs.slice().sort((a,b)=>tcCopyValue(b)-tcCopyValue(a)); const v=cs.reduce((s,c)=>s+tcCopyValue(c),0);
-    el.innerHTML=`${top}<div class="tco-sum"><h2>Pack ${st.pi+1}</h2><p>${cs.length} cards, worth about ${money(v,true)}</p><div class="tco-strip">${cs.map(c=>`<div class="tco-mini ${TC_RAROR[tcD(c.k).card.rar]>=2||tcD(c.k).v==='H'?'hit':''}">${tcFace(c)}</div>`).join('')}</div><p class="small">Best: ${esc(tcCardLabel(best[0].k))}, ${money(tcCopyValue(best[0]),true)}</p><div class="tco-act">${st.pi<total-1?'<button class="btn pri" data-act="tconext">Next pack</button>':'<button class="btn pri" data-act="tcosum">See everything</button>'}</div></div>`; return; }
-  const c=TC(ids[st.ci]); const d=tcD(c.k); const flash=tcIsPrem(d.card)?'ultra': (d.v==='H'||d.card.rar==='rare')?'rare':'';
+  if (done){ const cs=ids.map(TC).filter(Boolean); const best=cs.slice().sort((a,b)=>tcCopyValue(b)-tcCopyValue(a)); const v=cs.reduce((s,c)=>s+tcCopyValue(c),0); const nx=multi? st.meta.findIndex((m,i)=>!st.seen.includes(i)) : -1;
+    el.innerHTML=`${top}<div class="tco-sum"><h2>Pack ${st.pi+1}</h2><p>${cs.length} cards, worth about ${money(v,true)}</p><div class="tco-strip">${cs.map(c=>`<div class="tco-mini ${TC_RAROR[tcD(c.k).card.rar]>=2||tcD(c.k).v==='H'?'hit':''}">${tcFace(c)}</div>`).join('')}</div><p class="small">Best: ${esc(tcCardLabel(best[0].k))}, ${money(tcCopyValue(best[0]),true)}</p>
+      <div class="tco-act">${multi?`<button class="btn" data-act="tcogrid">All packs</button>${nx>=0?`<button class="btn pri" data-act="tcopack" data-a="${nx}">Open pack ${nx+1}</button>`:'<button class="btn pri" data-act="tcosum">See everything</button>'}`:'<button class="btn pri" data-act="tcoclose">Done</button>'}</div></div>`; return; }
+  const c=TC(ids[st.ci]); const d=tcD(c.k); const val=tcCopyValue(c); const flash=tcIsPrem(d.card)?'ultra': (d.v==='H'||d.card.rar==='rare')?'rare':''; const last=st.ci===ids.length-1;
+  const prot= st.rev && tcGood(c);   // a good card goes into a penny sleeve, then a top loader
   el.innerHTML=`${top}<div class="tco-energy"><span class="small muted">This pack's Essence</span><div class="tco-en"><svg viewBox="-12 -12 24 24" width="28" height="28" aria-hidden="true">${TCF.orb(0,0,11,en)}</svg><b>${en}</b></div></div>
-    <div class="tco-stage" data-act="${st.rev?'tconextcard':'tcoflip'}">${st.rev? `<div class="tco-card ${flash}">${tcFace(c)}</div><div class="tco-cap"><b>${esc(d.title)}</b><span>${TC_RARN[d.card.rar]} · ${TC_VARN[d.v]}</span><span>${money(tcCopyValue(c),true)}</span></div>` : `<div class="tco-card back">${TCF.back()}</div><div class="tco-cap"><span>Tap to reveal card ${st.ci+1} of ${ids.length}</span></div>`}</div>
+    <div class="tco-stage" data-act="${st.rev?'tconextcard':'tcoflip'}">${st.rev? `<div class="tco-card ${flash} ${prot?'prot':''}">${tcFace(c)}${prot?'<i class="sleeve"></i><i class="loader"></i>':''}</div><div class="tco-cap"><b>${esc(d.title)}</b><span>${tcRV(d)}</span><span>${money(val,true)}</span>${prot?'<span class="tco-prot">Sleeved and top-loaded</span>':''}</div>` : `<div class="tco-card back ${last?'lastcard':''}">${TCF.back()}</div><div class="tco-cap"><span>${last?'The rare slot. Tap to reveal':'Tap to reveal card '+(st.ci+1)+' of '+ids.length}</span></div>`}</div>
     <div class="tco-act"><button class="btn" data-act="tcoall">Reveal the rest</button></div>`;
 }
-ACT.tcopen=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const res=tcOpenSealed(+a); if (!res){ showToast('Can\'t open that.'); return; } closeSheet(true); UI.tco={res,pi:0,ci:0,rev:false}; tcoRender(); render(true); queueSave(); };
-ACT.tcoflip=()=>{ const st=UI.tco; if (!st) return; st.rev=true; tcoRender(); };
+function tcoStart(res){ closeSheet(true); const multi=res.packs.length>1; UI.tco={res, mode:multi?'grid':'pack', pi:0, ci:0, rev:false, seen:multi?[]:[0], meta:tcoMeta(res), cel:{}}; tcoRender(); render(true); queueSave(); }
+function tcoCheer(st, c){ if (!c || st.cel[c.id]) return; const v=tcCopyValue(c); if (v<TC_BIG) return; st.cel[c.id]=1; celebrate('Big hit!', tcD(c.k).title+' · '+money(v,true)); }
+ACT.tcopen=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const res=tcOpenSealed(+a); if (!res){ showToast('Can\'t open that.'); return; } tcoStart(res); };
+ACT.tcopenall=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const ids=myTc().filter(c=>c.k===a&&!c.l).map(c=>c.id); const res=tcOpenMany(ids); if (!res){ showToast('Nothing to open.'); return; } tcoStart(res); };
+ACT.tcopack=a=>{ const st=UI.tco; if (!st) return; st.mode='pack'; st.pi=+a; st.ci=0; st.rev=false; if (!st.seen.includes(st.pi)) st.seen.push(st.pi); tcoRender(); };
+ACT.tcogrid=()=>{ const st=UI.tco; if (!st) return; st.mode='grid'; tcoRender(); };
+ACT.tcoflip=()=>{ const st=UI.tco; if (!st) return; st.rev=true; tcoRender(); tcoCheer(st, TC(st.res.packs[st.pi][st.ci])); };
 ACT.tconextcard=()=>{ const st=UI.tco; if (!st) return; st.ci++; st.rev=false; tcoRender(); };
-ACT.tcoall=()=>{ const st=UI.tco; if (!st) return; st.ci=res_len(st); tcoRender(); }; const res_len=st=>st.res.packs[st.pi].length;
-ACT.tconext=()=>{ const st=UI.tco; if (!st) return; st.pi++; st.ci=0; st.rev=false; tcoRender(); };
-ACT.tcoclose=()=>{ const el=$('#tco'); if (el) el.remove(); document.body.classList.remove('noscroll'); const st=UI.tco; UI.tco=null; render(true); queueSave(); };
-ACT.tcosum=()=>{ const st=UI.tco; const res=st&&st.res; ACT.tcoclose(); if (res) openSheet(()=>tcOpenSummary(res)); };
+ACT.tcoall=()=>{ const st=UI.tco; if (!st) return; const rest=st.res.packs[st.pi].slice(st.rev? st.ci+1 : st.ci).map(TC).filter(Boolean); st.ci=st.res.packs[st.pi].length; tcoRender(); tcoCheer(st, rest.sort((x,y)=>tcCopyValue(y)-tcCopyValue(x))[0]); };
+ACT.tconext=()=>{ const st=UI.tco; if (!st) return; ACT.tcopack(String(st.pi+1)); };
+ACT.tcoclose=()=>{ const el=$('#tco'); if (el) el.remove(); document.body.classList.remove('noscroll'); UI.tco=null; render(true); queueSave(); };
+ACT.tcosum=()=>{ const st=UI.tco; const res=st&&st.res; const unseen=st? st.meta.map((m,i)=>i).filter(i=>!st.seen.includes(i)) : []; const big=st? unseen.map(i=>st.meta[i].best).filter(c=>!st.cel[c.id]).sort((x,y)=>tcCopyValue(y)-tcCopyValue(x))[0] : null;
+  ACT.tcoclose(); if (res){ openSheet(()=>tcOpenSummary(res)); if (big && tcCopyValue(big)>=TC_BIG) celebrate('Big hit!', tcD(big.k).title+' · '+money(tcCopyValue(big),true)); } };
 function tcOpenSummary(res){
   const all=res.packs.flat().map(TC).filter(Boolean); const val=all.reduce((s,c)=>s+tcCopyValue(c),0); const best=all.slice().sort((a,b)=>tcCopyValue(b)-tcCopyValue(a)).slice(0,10); const by={}; for (const c of all){ const d=tcD(c.k); const k=TC_RARN[d.card.rar]+(d.v==='H'?' (holo)':d.v==='R'?' (reverse holo)':''); by[k]=(by[k]||0)+1; }
   return { t:'What came out', h:`<div class="stack"><div class="kpis"><div class="kpi"><small>Cards</small><b>${all.length}</b></div><div class="kpi"><small>Worth about</small><b>${money(val,true)}</b></div><div class="kpi"><small>You paid</small><b>${res.paid?money(res.paid,true):'–'}</b></div><div class="kpi"><small>Difference</small><b class="${val>=res.paid?'up':'down'}">${val>=res.paid?'+':'−'}${money(Math.abs(val-res.paid),true)}</b></div></div><div class="panel"><h3>Best pulls</h3><div class="rows">${best.map(c=>`<button class="row" data-act="tcopy" data-a="${c.id}">${miniT(c)}<div class="rt"><b>${esc(tcD(c.k).title)}</b><span>${TC_RARN[tcD(c.k).card.rar]} · ${TC_VARN[tcD(c.k).v]} · ${TC_LABN[tcLabel(c.c)]}</span></div><div class="rv"><b>${money(tcCopyValue(c),true)}</b></div></button>`).join('')}</div></div><div class="panel"><h3>By rarity</h3><dl class="kv">${Object.keys(by).map(k=>`<dt>${esc(k)}</dt><dd>${by[k]}</dd>`).join('')}</dl></div><p class="small muted">Everything is in Your cards, marked New. Odds are fixed per pack; a box is just 36 of them.</p></div>` };

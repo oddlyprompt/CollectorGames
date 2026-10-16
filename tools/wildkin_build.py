@@ -27,6 +27,12 @@ def meta_json(canon):
         if old.startswith('.wk_meta_'): os.unlink(os.path.join(os.path.dirname(cache),old))
     open(cache,'w',encoding='utf-8').write(out); print('        Wildkin field computed with the rules engine (%d decks)'%len(json.loads(out)['cands'])); return out
 
+# Presentation only (not canon, not part of the manifest's art layout): the approved biome scene drawn behind each Ally's
+# cutout so heroes stand somewhere instead of on a flat panel. Keepers and friends get daylight places; Veyra's side gets dusk.
+ALLY_BACKDROP={'Professor Maren Vale':'scene.verdant.06','June Kestrel':'scene.verdant.01','Warden Sorrel Pike':'scene.stone.04','Toma Reed':'scene.tide.04',
+ 'Lita Moss':'scene.verdant.05','Nessa Flint':'scene.stone.08','Elder Oren':'scene.stone.09','Pip Rowan':'scene.wonder.03','Archivist Sera Wynn':'scene.astral.09',
+ 'Renn Calder':'scene.stone.01','Mira Quill':'scene.astral.03','Sel Veyra':'scene.dusk.03','Cass Rell':'scene.dusk.02','Dr. Cyl Vane':'scene.iron.04',
+ 'Marshal Rook':'scene.iron.01','Iris Shade':'scene.dusk.01','Dex Harrow':'scene.storm.01','Brin Hollow':'scene.astral.01'}
 def canon_js(out_dir):
     m=json.load(open(os.path.join(WP,'manifest.json'),encoding='utf-8'))
     reg=json.load(open(os.path.join(WP,'approved','registry.json'),encoding='utf-8'))['assets']
@@ -51,6 +57,7 @@ def canon_js(out_dir):
         art={'l':a['layout']}
         for k,s in (('subject','s'),('background','b'),('illustration','i'),('interim','x')):
             if a.get(k): art[s]=a[k]; used.add(a[k])
+        if base['category']=='ally' and ALLY_BACKDROP.get(x.get('name') or base.get('name')): art['bd']=ALLY_BACKDROP[x.get('name') or base.get('name')]; used.add(art['bd'])
         x['art']=art; cards.append(x)
     used.add('cut.001-cactuft.standing')   # booster wrapper art
     os.makedirs(os.path.join(out_dir,'art'),exist_ok=True); arts={}
@@ -58,7 +65,10 @@ def canon_js(out_dir):
         r=reg.get(aid)
         if not r: continue
         src=os.path.join(ROOT,r['file']); ext=src.rsplit('.',1)[1]; fn=aid+'.'+ext; shutil.copy2(src,os.path.join(out_dir,'art',fn))
-        w,h=Image.open(src).size; e={'u':'art/'+fn+'?h='+r['sha256'][:8],'w':w,'h':h}
+        im=Image.open(src); w,h=im.size; e={'u':'art/'+fn+'?h='+r['sha256'][:8],'w':w,'h':h}
+        if 'A' in im.getbands():   # cutouts: the subject's box inside its transparent margin, so the card can size the subject itself
+            bb=im.getchannel('A').point(lambda v:255 if v>24 else 0).getbbox()
+            if bb and bb!=(0,0,w,h): e['bb']=list(bb)
         if r.get('tags'): e['t']=r['tags'].get('time'); e['f']=r['tags'].get('floor')
         arts[aid]=e
     S=m['set']; head={'id':S['id'],'name':S['name'],'code':S['code'],'rel':S['release_date']['value'],'base':S['base'],'total':S['total'],'odds':S['rare_slot_odds'],'mv':m['manifest_version'],'rv':m['rules']['version'],'weak':m['weakness'],
