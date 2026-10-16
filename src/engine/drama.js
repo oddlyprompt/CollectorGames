@@ -27,6 +27,16 @@ function startReveal(){
   document.body.classList.add('noscroll'); rvRender();
 }
 function rvClose(){ const st=UI.rvl; if (st && st.timer) clearTimeout(st.timer); UI.rvl=null; const el=$('#rvl'); if (el) el.remove(); document.body.classList.remove('noscroll'); refresh(); queueSave(); }
+// a short celebration for the rare big moments (a big pull, a Gem Mint 10): confetti and a banner, gone in under 3 seconds,
+// never blocking a tap. Reduced-motion users get the banner only.
+function celebrate(title, sub){
+  const old=document.getElementById('cele'); if (old) old.remove(); const el=document.createElement('div'); el.id='cele'; el.className='cele'; el.setAttribute('aria-live','polite');
+  const calm=window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches; const cols=['#ffd166','#ef476f','#06d6a0','#4cc9f0','#f8f9fa','#c77dff'];
+  let bits=''; if (!calm) for (let i=0;i<70;i++){ const x=Math.random()*100, d=Math.random()*0.6, t=1.6+Math.random()*1.1, r=Math.round(Math.random()*720-360), w=5+Math.random()*6;
+    bits+=`<i style="left:${x.toFixed(1)}%;background:${cols[i%cols.length]};width:${w.toFixed(1)}px;height:${(w*0.45).toFixed(1)}px;animation-delay:${d.toFixed(2)}s;animation-duration:${t.toFixed(2)}s;--r:${r}deg"></i>`; }
+  el.innerHTML=`${bits}<div class="cele-burst"></div><div class="cele-ban"><b>${esc(title)}</b>${sub?`<span>${esc(sub)}</span>`:''}</div>`;
+  document.body.appendChild(el); try { if (navigator.vibrate) navigator.vibrate([25,40,70]); } catch(e){}
+  setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>el.remove(), 450); }, 2600); }
 function rvRender(){
   const st=UI.rvl; if (!st) return; const q=rvQueue(); if (!q.length || st.i>=q.length){ rvFinish(); return; }
   const r=q[st.i]; const o=objFor(r.k,r.id); const el=$('#rvl'); if (!el) return;
@@ -48,7 +58,7 @@ function rvRender(){
       <div class="rv-info ${tier}"><div class="rv-grade"><b>${rvGradeTxt(r.k,r.g)}</b><span>${esc(rvName(r.k,r.g))}</span></div><p class="rv-line">${esc(line)}</p>${pl?`<p class="rv-pop">${esc(pl)}</p>`:''}${notes.map(n=>`<p class="rv-note ${n[0]}">${esc(n[1])}</p>`).join('')}
       <dl class="kv"><dt>Raw estimate</dt><dd>${money(r.raw||0,true)}</dd><dt>As a slab</dt><dd>${money(v1,true)}</dd><dt>Change</dt><dd class="${d>=0?'up':'down'}">${d>=0?'+':'−'}${money(Math.abs(d),true)}</dd><dt>After the fee</dt><dd class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net),true)}</dd></dl></div>
       <div class="rv-act"><button class="btn" data-act="rvdetail" data-a="${r.k}:${r.id}">Details</button><button class="btn pri" data-act="rvnext">${st.i<q.length-1?'Next ('+(st.i+2)+' of '+q.length+')':'Finish'}</button></div>`;
-    if (!st.done.includes(r.k+':'+r.id)) st.done.push(r.k+':'+r.id);
+    if (!st.done.includes(r.k+':'+r.id)){ st.done.push(r.k+':'+r.id); if (r.g>=(r.k==='m'?98:10)) setTimeout(()=>celebrate(rvGradeTxt(r.k,r.g)==='10'?'Gem Mint 10!':'Gem Mint '+rvGradeTxt(r.k,r.g)+'!', rvTitle(r.k,o)), 350); }
   }
 }
 function rvFinish(){
