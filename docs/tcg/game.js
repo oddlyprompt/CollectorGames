@@ -4531,7 +4531,10 @@ function listingSheet(lid){
 }
 ACT.listing = a=>openSheet(()=>listingSheet(+a));
 ACT.watch = a=>{ const id=+a; const w=G.player.watch; const i=w.indexOf(id); if (i>=0) w.splice(i,1); else w.push(id); refresh(); queueSave(); };
-ACT.buy = (a,el)=>{ if (!armed(el)) return; const err=buyListing(+a); if (err) showToast(err); refresh(); afterAction(); };
+ACT.buy = (a,el)=>{ if (!armed(el)) return; const l=G.lst.find(x=>x.id===+a); const lab=l? itemLabel(l) : '', kind=l&&l.it, ref=l&&l.ref, price=l&&l.pr; const err=buyListing(+a); if (err){ showToast(err); refresh(); afterAction(); return; }
+  // the listing is gone because we bought it: say so, with a way to the item, instead of the generic 'Gone' sheet
+  if (UI.sheets.length){ const act=kind==='t'?'tcopy':kind==='m'?'ccopy':'card'; UI.sheets[UI.sheets.length-1]={fn:()=>({t:'Bought', h:`<div class="stack"><div class="panel"><h3>It's yours</h3><p class="small" style="margin:0 0 8px">${esc(lab)}${price?' for '+money(price,true):''}.</p><div class="formrow">${kind==="s"?"":`<button class="btn pri" data-act="${act}" data-a="${ref}">See it</button>`}<button class="btn" data-act="sheetclose">Done</button></div></div></div>`})}; }
+  showToast('Bought.', true); refresh(); afterAction(); };
 ACT.acccounter = (a,el)=>{ if (!armed(el)) return; const l=L(+a); if (!l||!l.counter) return; if (G.player.cash<l.counter){ showToast('Not enough cash.'); return; } transfer(l,0,l.counter,'offer'); refresh(); afterAction(); };
 ACT.offer = a=>{ const v=parseFloat($('#offeramt').value); if (!(v>0)){ $('#offermsg').innerHTML='<div class="err">Enter an amount.</div>'; return; } const r=playerOffer(+a, Math.round(v*100)/100);
   if (r.ok){ refresh(); afterAction(); return; }
@@ -5608,7 +5611,7 @@ function upNext(){
   if (G.cm){ add(nextDow(3, G.day-1)===G.day?G.day:nextDow(3),'New comics at '+SHOP_NAME,'goto','comics:week','comics');
     const pre=new Map(); for (const p of G.cm.pre){ const s=S_(p.sid); const k=p.d; pre.set(k,(pre.get(k)||[]).concat(sTitle(s)+' #'+p.n)); }
     for (const [d,l] of pre) add(d,'Preorder arrives: '+l.slice(0,2).join(', ')+(l.length>2?' +'+(l.length-2):''),'goto','comics:week','comics'); }
-  add(dowOf(G.day)===5?G.day:nextDow(5),'Payday: +'+money(50),null,null,'cash');
+  { const pay=G.player.pay!=null?G.player.pay:50; if (pay>0) add(dowOf(G.day)===5?G.day:nextDow(5),'Payday: +'+money(pay),null,null,'cash'); }   // the scenario's real allowance (none for Deep pockets)
   const rel=G.products.filter(p=>!p.cl && p.rel>=G.day).sort((a,b)=>a.rel-b.rel)[0]; if (rel) add(rel.rel,'Release: '+prodName(rel),'product',rel.id,'cards');
   if (G.hunt){ for (const ev of G.hunt.ev.filter(ev=>ev.ann<=G.day && ev.d+ev.days>G.day && ev.ty!=='flea' && ev.ty!=='garage').sort((a,b)=>a.d-b.d).slice(0,4)) add(Math.max(ev.d,G.day), ev.n+(ev.cost>40?' ('+money(ev.cost)+' to attend)':''),'goto','hunt:events','hunt');
     const gs=G.hunt.ev.filter(ev=>ev.ty==='garage' && ev.ann<=G.day && ev.d>=G.day); if (gs.length) add(gs[0].d, gs.length>1? gs.length+' garage sales':gs[0].n,'goto','hunt:events','hunt');
@@ -6454,7 +6457,7 @@ function applyScenario(id){
 
 // ===================== YOUR YEAR IN COLLECTING =====================
 // Built from what already exists: provenance, sale history, what you looked at and passed on, grading returns, chases.
-function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); return Math.round(v*100)/100; }
+function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); if (G.tcg && typeof myTc==='function') for (const c of myTc()) v+=tcCopyValue(c); return Math.round(v*100)/100; }   // everything owned except cash (Wildkin cards and sealed product included)
 function snapNW(force){ const P_=G.player; const L=P_.nw=P_.nw||[]; if (!force && L.length && G.day-L[L.length-1][0]<7) return; L.push([G.day, Math.round(P_.cash*100)/100, netWorthNow(), Math.round(P_.bought), Math.round(P_.sold), Math.round(P_.fees), P_.packs||0, P_.paid||0]); if (L.length>420) L.shift(); }
 function noteSeen(kind, id, price, where){ const P_=G.player; const S=P_.seen=P_.seen||{}; const k=kind+':'+id; if (S[k]) return; S[k]=[G.day, Math.round(price*100)/100, where]; const ks=Object.keys(S); if (ks.length>320){ ks.sort((a,b)=>S[a][0]-S[b][0]); for (let i=0;i<40;i++) delete S[ks[i]]; } }
 function objValue(k, o){ return k==='t'? tcCopyValue(o) : k==='m'? cmCopyValue(o) : cardValue(o); }
@@ -6469,7 +6472,7 @@ function buildYear(y){
   for (const [k,arr] of kinds) for (const o of arr){
     if (o.pv && !o.sc && o.pv.d>=t0 && o.pv.d<=t1){ if (k==='c'||k==='t') nCards++; else nComics++; const paid=(o.a&&o.a[2])||0; const soldH=(o.h||[]).filter(h=>typeof h[1]==='string' && h[1].startsWith('Sold') && h[0]>=o.pv.d).pop();
       if (o.o===0){ const now=objValue(k,o); acq.push({k, o, paid, now, gain:now-paid, sold:false}); } else if (soldH){ acq.push({k, o, paid, now:soldH[2], gain:soldH[2]-paid, sold:true}); }
-      if (k==='c' && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
+      if ((k==='c'||k==='t') && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
     if (o.h) for (const h of o.h) if (h[0]>=t0 && h[0]<=t1 && typeof h[1]==='string' && h[1].startsWith('Sold') && h[2]>0 && o.o!==0){ sold.push({k, o, price:h[2], now:objValue(k,o), t:h[0]}); }
   }
   const pick1=(arr,f)=>arr.slice().sort((a,b)=>f(b)-f(a))[0];
@@ -6481,7 +6484,7 @@ function buildYear(y){
   const gl=(P_.gl||[]).filter(x=>x.t>=t0 && x.t<=t1); const bestG=gl.slice().sort((a,b)=>(b.k==='m'?b.g/10:b.g)-(a.k==='m'?a.g/10:a.g))[0];
   const ev=(P_.evlog||[]).filter(e=>e.d>=t0 && e.d<=t1); const brks=(G.brk?G.brk.hist:[]).filter(h=>h.day>=t0 && h.day<=t1 && h.mine && h.res);
   const done=chases().filter(c=>c.done && c.done>=t0 && c.done<=t1);
-  const out={ y, t0, t1, days:t1-t0+1, start:s0?Math.round(s0[1]+s0[2]):0, end:s1?Math.round(s1[1]+s1[2]):0, paid:s1&&s0? s1[7]-s0[7]:0, bought:s1&&s0? s1[3]-s0[3]:0, soldT:s1&&s0? s1[4]-s0[4]:0, fees:s1&&s0? s1[5]-s0[5]:0, packs:s1&&s0? s1[6]-s0[6]:0,
+  const out={ y, t0, t1, days:t1-t0+1, start:s0?Math.round(s0[1]+s0[2]):0, end:s1?Math.round(s1[1]+s1[2]):0, endCash:s1?Math.round(s1[1]):0, endColl:s1?Math.round(s1[2]):0, paid:s1&&s0? s1[7]-s0[7]:0, bought:s1&&s0? s1[3]-s0[3]:0, soldT:s1&&s0? s1[4]-s0[4]:0, fees:s1&&s0? s1[5]-s0[5]:0, packs:s1&&s0? s1[6]-s0[6]:0,
     pts:inP.map(s=>[s[0], Math.round(s[1]+s[2])]), nCards, nComics, best:bf&&jRef(bf.k,bf.o,{paid:bf.paid, now:bf.now, sold:bf.sold}), flip:flip&&jRef(flip.k,flip.o,{paid:flip.paid, now:flip.now}),
     regret:regret&&jRef(regret.k,regret.o,{price:regret.price, now:regret.now}), away:away.slice(0,3).map(x=>jRef(x.k,x.o,{ask:x.ask, now:x.now, where:x.where})), pull:pull&&jRef(pull.k,pull.o,{now:pull.now}),
     grade:bestG&&{k:bestG.k, id:bestG.id, g:bestG.g}, nGraded:gl.length, events:ev.length, evNames:[...new Set(ev.map(e=>e.n))].slice(0,3), breaks:brks.map(h=>({host:h.host, cards:h.res.mine.length, paid:h.res.paid, val:h.res.mineVal})), chasesDone:done.map(c=>chaseName(c)),
@@ -6491,7 +6494,7 @@ function buildYear(y){
   if (out.regret) st.push(`The one you sold too soon: ${L(out.regret)}. You took ${money(out.regret.price,true)}; it's about ${money(out.regret.now,true)} now.`);
   if (out.away.length) st.push(`You passed on ${L(out.away[0])} at ${money(out.away[0].ask,true)}. It's about ${money(out.away[0].now,true)} now.`);
   if (out.pull && out.pull.now>=15) st.push(`Best pull: ${L(out.pull)}, about ${money(out.pull.now,true)}.`);
-  if (!st.length) st.push(out.nCards+out.nComics? 'A quiet stretch of collecting. Nothing dramatic yet, and that is how most great collections begin.' : 'You barely collected. The market kept moving without you.');
+  if (!st.length) st.push(out.nCards+out.nComics? 'A quiet stretch of collecting. Nothing dramatic yet, and that is how most great collections begin.' : (out.endColl>=50? `A quiet year of buying. Your collection, worth about ${money(out.endColl)}, kept moving with the market all the same.` : 'You barely collected. The market kept moving without you.'));
   out.story=st; return out;
 }
 function yrs(){ return G.player.yr||(G.player.yr={}); }
@@ -6510,11 +6513,11 @@ function yearSheetHTML(r, live){
   const net=r.end-r.start-r.paid; const bits=[];
   return `<div class="stack"><div class="title-block"><div class="yr">${live?'So far this year':'The year in review'}</div><h1>${r.y}</h1><div class="sub">${fmtDate(r.t0,true)} to ${fmtDate(r.t1,true)}</div></div>
     <div class="panel yrstory">${r.story.map(s=>`<p>${esc(s)}</p>`).join('')}</div>
-    <div class="kpis"><div class="kpi"><small>Net worth, start</small><b>${money(r.start)}</b></div><div class="kpi"><small>Net worth, end</small><b>${money(r.end)}</b></div><div class="kpi"><small>Beyond paydays</small><b class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net))}</b></div><div class="kpi"><small>Spent / sold</small><b style="font-size:15px">${money(r.bought)} / ${money(r.soldT)}</b></div></div>
+    <p class="small muted" style="margin:0 0 6px">Net worth is cash plus the estimated value of everything you own${r.endColl!=null?`: at the end, ${money(r.endCash)} cash and about ${money(r.endColl)} in cards and sealed product`:""}. Estimates, not what a quick sale would bring.</p><div class="kpis"><div class="kpi"><small>Net worth, start</small><b>${money(r.start)}</b></div><div class="kpi"><small>Net worth, end</small><b>${money(r.end)}</b></div><div class="kpi"><small>Beyond paydays</small><b class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net))}</b></div><div class="kpi"><small>Spent / sold</small><b style="font-size:15px">${money(r.bought)} / ${money(r.soldT)}</b></div></div>
     ${r.pts.length>=3?`<div class="panel"><h3>Cash plus collection</h3>${sparkSVG(r.pts,{h:100,axis:true})}</div>`:''}
     ${r.best||r.flip||r.regret?`<div class="panel"><h3>The big moments</h3><div class="rows">${r.best?`<div class="small muted" style="padding:6px 0 2px">Best find</div>${jRow(r.best)}`:''}${r.flip&&(!r.best||r.flip.id!==r.best.id)?`<div class="small muted" style="padding:6px 0 2px">Best flip</div>${jRow(r.flip)}`:''}${r.regret?`<div class="small muted" style="padding:6px 0 2px">Sold too soon</div>${jRow(r.regret)}`:''}${r.pull&&r.pull.now>=15?`<div class="small muted" style="padding:6px 0 2px">Best pull</div>${jRow(r.pull)}`:''}</div></div>`:''}
     ${r.away.length?`<div class="panel"><h3>The ones that got away</h3><p class="small muted" style="margin:0 0 6px">You looked, you passed. Here is what they're worth now.</p><div class="rows">${r.away.map(jRow).join('')}</div></div>`:''}
-    <div class="panel"><h3>The year in numbers</h3><dl class="kv"><dt>Cards acquired</dt><dd>${r.nCards}</dd><dt>Comics acquired</dt><dd>${r.nComics}</dd><dt>Packs opened</dt><dd>${r.packs}</dd><dt>Graded</dt><dd>${r.nGraded}${r.grade?`, best: ${rvGradeTxt(r.grade.k,r.grade.g)}`:''}</dd><dt>Events attended</dt><dd>${r.events}${r.evNames.length?' ('+esc(r.evNames.join(', '))+')':''}</dd>${r.breaks.length?`<dt>Group breaks</dt><dd>${r.breaks.length}: ${money(r.breaks.reduce((s,b)=>s+b.paid,0))} in, cards worth ${money(r.breaks.reduce((s,b)=>s+b.val,0),true)}</dd>`:''}<dt>Fees paid</dt><dd>${money(r.fees)}</dd></dl></div>
+    <div class="panel"><h3>The year in numbers</h3><dl class="kv"><dt>Cards acquired</dt><dd>${r.nCards}</dd>${G.cm?`<dt>Comics acquired</dt><dd>${r.nComics}</dd>`:''}<dt>Packs opened</dt><dd>${r.packs}</dd><dt>Graded</dt><dd>${r.nGraded}${r.grade?`, best: ${rvGradeTxt(r.grade.k,r.grade.g)}`:''}</dd><dt>Events attended</dt><dd>${r.events}${r.evNames.length?' ('+esc(r.evNames.join(', '))+')':''}</dd>${r.breaks.length?`<dt>Group breaks</dt><dd>${r.breaks.length}: ${money(r.breaks.reduce((s,b)=>s+b.paid,0))} in, cards worth ${money(r.breaks.reduce((s,b)=>s+b.val,0),true)}</dd>`:''}<dt>Fees paid</dt><dd>${money(r.fees)}</dd></dl></div>
     ${r.chasesDone.length||r.chases.length||r.grails.length?`<div class="panel"><h3>Chases</h3>${r.chasesDone.length?`<p class="small up" style="margin:0 0 6px">Completed: ${esc(r.chasesDone.join(', '))}</p>`:''}${r.chases.map(c=>`<p class="small" style="margin:0 0 4px">${esc(c.name)}: ${c.have} of ${c.total}</p>`).join('')}${r.grails.map(g=>`<p class="small" style="margin:0 0 4px">★ ${esc(g.name)}: ${g.found?'found':'still hunting after '+g.months+' months'}</p>`).join('')}</div>`:''}</div>`;
 }
 function yearSheet(y){ const live = y==='now'; const r = live? buildYear(yearOf(G.day)) : yrs()[y]; if (!r) return {t:'Year', h:'<div class="empty">No review for that year.</div>'}; return { t:r.y+(live?' so far':' in review'), h:yearSheetHTML(r, live) }; }
@@ -7516,21 +7519,37 @@ function tcRelease(n, t){
   if (typeof tcReleaseMarket==='function') tcReleaseMarket(n,t);
   if (typeof tcFulfilPreorders==='function') tcFulfilPreorders(n,t);
 }
+// ---------- the retail lifecycle ----------
+// A set is printed for about 14 months (TC_PRINT_DAYS). Until then retail restocks it every Monday; afterwards the shelves
+// only sell down. The market prices sealed product against that: near retail while it is on shelves, rising once it is gone
+// (tcSealedFair). Before this, the newest set was printed forever while its sealed price kept climbing, so buying at
+// retail and reselling was free money (found in the owner's three-year playtest).
+const TC_PRINT_DAYS=425;
+function tcPrintEnd(n){ return tcSetDef(n).rel+TC_PRINT_DAYS; }
+function tcInPrint(n,t){ return t<tcPrintEnd(n); }
 function tcShopWeek(t, only){
-  for (const n of tcRetailSets(t)){ if (only!=null && n!==only) continue; const s=G.tcg.shop[n]||(G.tcg.shop[n]={pack:0,box:0}); const age=t-tcSetDef(n).rel; const rel=tcReleasedSets(t); const cur=age<100||n===rel[rel.length-1];   // the newest set keeps being reprinted
-    s.pack=Math.min(300, s.pack+(cur? ri(70,150) : ri(15,45))); s.box=Math.min(20, s.box+(cur? ri(4,9) : ri(1,3))); }
+  const rel=tcReleasedSets(t), live=rel.filter(n=>tcInPrint(n,t));
+  for (const n of live){ if (only!=null && n!==only) continue; const s=G.tcg.shop[n]||(G.tcg.shop[n]={pack:0,box:0}); const age=t-tcSetDef(n).rel; const cur=age<100||n===live[live.length-1];   // the newest set in print keeps the big allocation
+    const wind=tcPrintEnd(n)-t<60? 0.5 : 1;   // the last two months of the print run ship less
+    s.pack=Math.min(300, s.pack+Math.round((cur? ri(70,150) : ri(15,45))*wind)); s.box=Math.min(20, s.box+Math.round((cur? ri(4,9) : ri(1,3))*wind)); }
 }
-function tcRetailSets(t){ const rel=tcReleasedSets(t); return rel.filter((n,i)=>t-tcSetDef(n).rel<=365 || i===rel.length-1); }   // the newest set stays in print until another one exists
+// what the store still sells: sets in print, plus whatever is left on the shelf of a set that is not
+function tcRetailSets(t){ return tcReleasedSets(t).filter(n=>tcInPrint(n,t) || (G.tcg && G.tcg.shop[n] && (G.tcg.shop[n].pack>0 || G.tcg.shop[n].box>0))); }
 function tcShopDay(t){
-  for (const n of tcRetailSets(t)){ const s=G.tcg.shop[n]; if (!s) continue; const age=t-tcSetDef(n).rel; const hot=age<=14?3.2: age<=45?1.2:0.35; const v=tcPackRetailPressure(n);
-    s.pack=Math.max(0, s.pack-poisson(hot*14*v)); const sb=poisson(hot*1.2*v); s.box=Math.max(0, s.box-sb); }
+  for (const n of tcRetailSets(t)){ const s=G.tcg.shop[n]; if (!s) continue; const age=t-tcSetDef(n).rel; let hot=age<=14?3.2: age<=45?1.2:0.35; const v=tcPackRetailPressure(n);
+    if (!tcInPrint(n,t)) hot=Math.max(hot,1.2);   // once the print run is over, collectors clear the shelves
+    s.pack=Math.max(0, s.pack-poisson(hot*14*v)); const sb=poisson(hot*1.2*v); s.box=Math.max(0, s.box-sb);
+    s.so=(s.so==null?1:s.so)*0.9+(s.box<1?0.1:0); s.sop=(s.sop==null?1:s.sop)*0.9+(s.pack<1?0.1:0); }   // how often the shelf has been empty lately
 }
+function tcPrintNews(t){ for (const n of tcReleasedSets(t)){ const e=tcPrintEnd(n), def=tcSetDef(n);
+  if (t===e-30) tcNews(`FINAL PRINT RUN FOR ${def.name.toUpperCase()}`, `Wildkin Games says ${def.name} retail restocks end on ${fmtDate(e,true)}. Whatever is on shelves after that is all there will be.`, {set:n});
+  if (t===e) tcNews(`${def.name.toUpperCase()} IS OUT OF PRINT`, `Stores received their last ${def.name} shipment. Sealed product now only gets scarcer.`, {set:n}); } }
 function tcPackRetailPressure(n){ return 0.7+0.9*Math.max(0, Math.min(1.6, tcSetPrestige(n)-0.7)); }
 function tcApplyBans(t){ for (const cid in G.tcg.ban){ if (G.tcg.ban[cid].d===t){ tcRebuildMeta(t); const c=tcCardByCid(+cid); if (c) tcNews(c.name.toUpperCase()+' IS NOW BANNED', `${c.name} is no longer legal in Standard. ${G.tcg.ban[cid].why} players are retooling.`, {cid:+cid}); } } }
 function tcDay(t){
   const T=G.tcg; if (!T) return; const nx=tcNextSet(t-1); if (nx && tcSetDef(nx).rel===t) tcRelease(nx,t);
   if (!T.arch.length && tcReleasedSets(t).length) tcRebuildMeta(t);
-  tcApplyBans(t);
+  tcApplyBans(t); tcPrintNews(t);
   if (dowOf(t)===1){ tcSetLife(t); if (T.arch.length){ tcMetaWeek(t); tcBanCheck(t); } tcShopWeek(t); }
   tcEventsDay(t); tcShopDay(t);
 }
@@ -7578,7 +7597,7 @@ function tcFairRaw(key){
   const ck=key+'@'+G.day; let v=TCFV.get(ck); if (v!=null) return v;
   const d=tcD(key); if (d.sealed){ v=tcSealedFair(d); } else {
     const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=TC_RB[c.rar+'|'+d.v]||0.1;
-    const nov=Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(wk/4.33-12)/12));
+    const nov=Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(G.day-tcPrintEnd(d.set))/365));   // the out-of-print premium starts when printing stops
     const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop;
     const st=tcLegalState(c.cid), u=Math.min(1,(G.tcg.usage[c.cid]||0)/4), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.tcg.hy[c.cid]||0;
     const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(tcIsPrem(c)?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
@@ -7618,8 +7637,11 @@ function tcPackEV(set){
   const ev=(6-TC_REV)*avg(P.c,'N')+TC_REV*(0.62*avg(P.c,'R')+0.3*avg(P.u,'R')+0.08*avg(P.r,'R'))+2*avg(P.u,'N')+rn*avg(P.r,'N')+O.rare_holo*avg(P.r,'H')+O.ir*avg(P.ir,'I')+O.fa*avg(P.fa,'F')+O.sir*avg(P.sir,'X')+O.csr*avg(P.csr,'C')+avg(P.ess,'N'); return c[k]=ev;
 }
 function tcSealedFair(d){
-  const def=d.def; const age=(G.day-def.rel)/365; const ev=tcPackEV(d.set); const pr=tcSetPrestige(d.set); let pack;
-  if (age<=1) pack=Math.max(TC_MSRP.P*0.8, Math.min(TC_MSRP.P*2.2, ev*1.02))*(1+0.18*Math.exp(-(G.day-def.rel)/21)*(pr-0.6)); else pack=Math.max(TC_MSRP.P*0.9, ev*(1+0.45*(age-1)*pr));
+  const def=d.def, n=d.set; const days=G.day-def.rel, age=days/365; const ev=tcPackEV(n); const pr=tcSetPrestige(n); let pack;
+  if (age<=1) pack=Math.max(TC_MSRP.P*0.8, Math.min(TC_MSRP.P*2.2, ev*1.02))*(1+0.18*Math.exp(-days/21)*(pr-0.6)); else pack=Math.max(TC_MSRP.P*0.9, ev);
+  const s=(G.tcg&&G.tcg.shop[n])||{}; const shelf=d.v==='P'? (s.pack||0) : (s.box||0); const so=d.v==='P'? (s.sop==null?1:s.sop) : (s.so==null?1:s.so);
+  if (tcInPrint(n,G.day) || shelf>0){ if (days>30) pack=Math.min(pack, TC_MSRP.P*(1.15+0.6*so)); }   // on retail shelves: anchored to retail (higher while it keeps selling out)
+  else pack=Math.max(TC_MSRP.P*1.15, ev)*(1+0.3*pr*Math.max(0,(G.day-tcPrintEnd(n))/365));   // out of print and off the shelves: scarcity grows
   return d.v==='P'? pack : pack*36*(age<=1?0.93:1.02);
 }
 function tcStock(set,f){ const s=G.tcg.shop[set]; return s? (f==='P'?s.pack:s.box) : 0; }
@@ -7638,11 +7660,12 @@ function tcOpenSealed(id){
   const cp=TC(id); if (!cp || cp.o!==0 || cp.l) return null; const d=tcD(cp.k); if (!d.sealed) return null; const paid=(cp.a&&cp.a[2])||0; const packs=d.v==='P'?1:36; const r=mkRng(hsh('open'+cp.id+G.day)); const out=[];
   for (let i=0;i<packs;i++){ const keys=tcRollPack(d.set,r); const ei=keys.findIndex(k=>tcD(k).card.kind==='essence'); if (ei>0) keys.unshift(keys.splice(ei,1)[0]);   // reveal order: the Essence first, the rare slot last
     const ids=keys.map(k=>{ const c=tcMakeCopy(k,0,[G.day,'pulled',Math.round(paid/packs/10*100)/100,'a '+d.title],'pull',r); c.nw=1; c.h=[[G.day,'Pulled from a '+d.title,0,'']]; const rr=tcCopyValue(c); c.pv={d:G.day,v:Math.round(rr*100)/100,n:''}; return c.id; }); out.push(ids); }
-  delete G.tc[id]; G.player.packs=(G.player.packs||0)+packs; return {packs:out, set:d.set, title:d.title, paid};
+  const sv=Math.round(tcCopyValue(cp)*100)/100;   // what it was worth sealed, the moment it was opened
+  delete G.tc[id]; G.player.packs=(G.player.packs||0)+packs; return {packs:out, set:d.set, title:d.title, paid, sv};
 }
 // open several sealed items at once (every pack from 'Open all'): one result, packs in order
 function tcOpenMany(ids){ const res={packs:[], set:1, title:'', paid:0}; let n=0, t='';
-  for (const id of ids){ const r=tcOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; t=r.title; n++; }
+  for (const id of ids){ const r=tcOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; res.sv=(res.sv||0)+r.sv; t=r.title; n++; }
   if (!n) return null; res.title=n>1? n+' × '+t : t; return res; }
 // ---------- grading ----------
 function tcGradeOf(cp){ const c=cp.c; const mn=Math.min(...c), av=c.reduce((a,b)=>a+b,0)/4; const s=0.5*mn+0.5*av+withRng(mkRng(cp.id*7919+(cp.gt||0)*104729+11),()=>gauss()*1.7); return s>=97.5?10: s>=94?9: s>=89?8: s>=83?7: s>=76?6: s>=68?5: s>=58?4: s>=46?3: s>=32?2:1; }
@@ -7973,7 +7996,7 @@ UI.tsp=0; UI.tcl=UI.tcl||{ty:'bin'};
 function tcMarketLine(key){ const l=G.lst.filter(x=>x.it==='t'&&x.sel!==0&&G.tc[x.ref]&&G.tc[x.ref].k===key); return l; }
 function tcSetSheet(n){
   const def=tcSetDef(n), up=def.rel>G.day, cards=tcSetCards(n), rev=tcRevealed(n); const owned=new Set(myTc().map(c=>c.k));
-  const f=UI.tcf; const list=cards.filter(c=> f==='all'||c.rar===f||(f==='prem'&&tcIsPrem(c))||(f==='trainer'&&c.kind!=='creature'&&c.kind!=='essence'&&!tcIsPrem(c))||(f==='pending'&&tcArtState(c).state!=='final'&&tcArtState(c).state!=='vector'));
+  const f=UI.tcf; const list=cards.filter(c=> f==='all'||c.rar===f||(f==='prem'&&tcIsPrem(c))||(f==='trainer'&&c.kind!=='creature'&&c.kind!=='essence'&&!tcIsPrem(c))||(f==='pending'&&tcArtState(c).state!=='final'&&tcArtState(c).state!=='vector')||(f==='miss'&&c.kind!=='essence'&&!tcVariants(c).some(v=>owned.has(tcKey(n,c.no,v))))||(f==='want'&&tcVariants(c).some(v=>(G.tcg.want||[]).includes(tcKey(n,c.no,v)))));
   const per=16, pages=Math.max(1,Math.ceil(list.length/per)), pg=Math.min(UI.tsp,pages-1); const chip=(k,t)=>`<button class="chip ${f===k?'on':''}" data-act="tcf" data-a="${k}">${t}</button>`;
   const cell=c=>{ const vs=tcVariants(c), key=tcKey(n,c.no,vs[0]); const hid=up&&!rev.includes(c.no); const have=vs.some(v=>owned.has(tcKey(n,c.no,v)));
     if (hid) return `<div class="gcell"><div class="mini" style="display:flex;align-items:center;justify-content:center;font-size:30px;color:#888;aspect-ratio:250/350;background:#222;border-radius:8px">?</div><div class="cap"><b>Not revealed</b><span>#${String(c.no).padStart(3,'0')}</span></div></div>`;
@@ -8019,7 +8042,7 @@ function tcCopySheet(id){
   const o=TC(id); if (!o) return null; const d=tcD(o.k); const g=o.g>0?o.g:0; const mine=o.o===0; const val=tcCopyValue(o);
   const face=d.sealed? tcPackSVG(d.set,d.v) : o.g>0? tcSlab(o) : tcFace(o);
   const sell=!mine||o.l||o.g<0? (o.l?`<div class="panel"><h3>Listed</h3><p class="small">This is on the marketplace. Manage it under Market, Selling.</p></div>`: o.g<0?`<div class="panel"><h3>At the grader</h3><p class="small">It will come back with a grade.</p></div>`:'') :
-   `<div class="panel"><h3>Sell it</h3><div class="chips"><button class="chip ${UI.tcl.ty==='bin'?'on':''}" data-act="tcltype" data-a="bin">Buy now</button><button class="chip ${UI.tcl.ty==='auc'?'on':''}" data-act="tcltype" data-a="auc">Auction</button></div><div class="formrow"><input class="inp money-in" type="number" min="0.05" step="0.05" id="tcprice" value="${Math.max(0.05,Math.round(val*(UI.tcl.ty==='bin'?1.15:0.7)*100)/100)}" aria-label="Price"><label class="small"><input type="checkbox" id="tcoff" checked> Accept offers</label></div><div class="small muted" style="margin:6px 0">If it sells at ${money(val,true)} you receive ${money(val*(1-FEE),true)} after the 10% fee.</div><div class="formrow"><button class="btn pri" data-act="tclist" data-a="${o.id}">List it</button></div></div>`;
+   `<div class="panel"><h3>Sell it</h3><div class="chips"><button class="chip ${UI.tcl.ty==='bin'?'on':''}" data-act="tcltype" data-a="bin">Buy now</button><button class="chip ${UI.tcl.ty==='auc'?'on':''}" data-act="tcltype" data-a="auc">Auction</button></div><div class="formrow"><label class="small" for="tcprice" style="align-self:center">${UI.tcl.ty==='bin'?'Price':'Starting bid'}</label><input class="inp money-in" type="number" min="0.05" step="0.05" id="tcprice" data-inp="${UI.tcl.ty==='bin'?'lfp':'tcaucp'}" value="${tcAsk(val)}" aria-label="${UI.tcl.ty==='bin'?'Price':'Starting bid'}">${UI.tcl.ty==='bin'?'<label class="small"><input type="checkbox" id="tcoff" checked> Accept offers</label>':''}</div><div class="small muted" id="lnet" data-v="${val}" style="margin:6px 0">${UI.tcl.ty==='bin'? payoutTxt(tcAsk(val)) : tcAucTxt(tcAsk(val), val)}</div><div class="formrow"><button class="btn pri" data-act="tclist" data-a="${o.id}">List it</button></div></div>`;
   const grade= mine&&!d.sealed&&o.g===0&&!o.l? `<div class="panel"><h3>Grading</h3><p class="small muted" style="margin:0 0 8px">A GCS slab locks in a grade. A 10 can multiply value; a low grade usually costs more than it gains. Commons are rarely worth slabbing.</p><div class="formrow">${GRADE_TIERS.map(t=>`<button class="btn sm" data-act="tcgrade" data-a="${o.id}|${t.id}" ${G.player.cash<t.fee?'disabled':''}>${t.n}: ${money(t.fee)}, ${t.days} days</button>`).join('')}</div></div>` : '';
   const open= mine&&d.sealed&&!o.l? `<div class="panel"><h3>Open it</h3><p class="small muted" style="margin:0 0 8px">Cards come out with whatever condition they were printed in. Sealed product can rise in value, especially once a set goes out of print.</p><button class="btn pri" data-act="tcopen" data-a="${o.id}" ${d.v==='B'?'data-confirm="Open all 36 packs"':''}>Open ${d.v==='B'?'the box':'the pack'}</button></div>` : '';
   const cond= d.sealed? '' : o.g>0? `<div class="panel"><h3>Grade</h3><dl class="kv"><dt>GCS ${o.g}</dt><dd>${GRADE_NAMES[o.g]}, cert ${o.cert}</dd></dl><b class="small">Population</b>${tcPopHTML(o.k)}</div>` : `<div class="panel"><h3>Condition: ${TC_LABN[tcLabel(o.c)]}</h3><div class="rows">${tcCondLines(o).map(x=>`<div class="row" style="cursor:default"><div class="rt"><span>${x[0]}</span></div><div class="rv"><span style="white-space:normal;text-align:right">${esc(x[1])}</span></div></div>`).join('')}</div></div>`;
@@ -8031,6 +8054,10 @@ function tcCopySheet(id){
   return { t:d.title, h:`<div class="stack"><div class="detail"><div class="bigcard"><button class="face ${o.g>0?'slab':''}" ${d.sealed?'':`data-act="insp" data-a="t:${o.id}"`} style="background:none;border:0;padding:0;width:100%">${face}</button></div><div class="stack"><div class="title-block"><div class="yr">${esc(d.def.name)}${d.sealed?'':' · '+TC_VARN[d.v]}</div><h1>${esc(d.title)}</h1></div><dl class="kv"><dt>Estimated value</dt><dd class="est">${fmtRange(tcEst(o.k,g,o))}</dd>${o.a&&o.a[0]?`<dt>Acquired</dt><dd>${o.a[1]==='held'?'':(o.a[2]?'Paid '+money(o.a[2],true)+' · ':'')+fmtDate(o.a[0],true)}</dd>`:''}<dt>Card page</dt><dd><button class="linkbtn" data-act="tdesign" data-a="${esc(o.k)}">Play, prices and prints</button></dd></dl>${d.sealed?'':`<div class="formrow"><button class="btn sm pri" data-act="insp" data-a="t:${o.id}">Inspect</button></div>`}</div></div>${open}${cond}${others}${sell}${grade}${mine&&o.g>0&&!o.l?crackPanel('t',o):''}${mine?tcStory(o):''}${hist}</div>` };
 }
 ACT.tcopy=a=>openSheet(()=>tcCopySheet(+a));
+const tcAsk=val=>Math.max(0.05,Math.round(val*(UI.tcl.ty==='bin'?1.15:0.7)*100)/100);
+// auctions: the price is where bidding starts; what you receive depends on where it ends
+function tcAucTxt(start, val){ return `Bidding starts at ${money(start,true)}. If it ends near the estimate of ${money(val,true)}, you receive about ${money(val*(1-FEE),true)} after the 10% fee; the final price can land above or below.`; }
+ACT.tcaucp=v=>{ const el=$('#lnet'); if (el) el.textContent=tcAucTxt(parseFloat(v)||0, parseFloat(el.dataset.v)||0); };
 ACT.tcltype=a=>{ UI.tcl.ty=a; refreshSheet(); };
 ACT.tclist=a=>{ const price=parseFloat($('#tcprice').value), off=$('#tcoff')&&$('#tcoff').checked; const e=playerList('t',+a,UI.tcl.ty,price,5,off); if (e){ showToast(e); return; } showToast('Listed.', true); refreshSheet(); render(true); queueSave(); };
 ACT.tcgrade=a=>{ const [id,t]=a.split('|'); const e=tcSubmitGrade(+id,t); if (e){ showToast(e); return; } showToast('Sent to GCS. It comes back with a grade.', true); refreshSheet(); render(true); queueSave(); };
@@ -8046,13 +8073,14 @@ const tcRV=d=> TC_RARN[d.card.rar]+(TC_VARN[d.v]!==TC_RARN[d.card.rar]? ' · '+T
 // a pack glows when its best card is premium (Illustration rare or better) or worth TC_GOOD; gold at TC_BIG
 const tcGood=c=> !!c && (tcIsPrem(tcD(c.k).card) || tcCopyValue(c)>=TC_GOOD);
 const tcoTier=(v,c)=> v>=TC_BIG? 'g2' : (v>=TC_GOOD || tcGood(c))? 'g1' : '';
+const tcHints=()=>!(G.tcg.opt&&G.tcg.opt.nohint);   // pack glow before opening: on by default, a per-save choice
 function tcoGrid(st, el){
-  const res=st.res, M=st.meta, n=res.packs.length, op=st.seen.length; const g1=M.filter(m=>tcoTier(m.bv,m.best)).length, g2=M.filter(m=>m.bv>=TC_BIG).length;
+  const res=st.res, M=st.meta, n=res.packs.length, op=st.seen.length, H=tcHints(); const g1=M.filter(m=>tcoTier(m.bv,m.best)).length, g2=M.filter(m=>m.bv>=TC_BIG).length;
   const tile=(m,i)=>{ const seen=st.seen.includes(i); return seen? `<button class="tcg-tile open" data-act="tcopack" data-a="${i}" aria-label="Pack ${i+1}, opened, best ${esc(tcD(m.best.k).title)}"><div class="tcg-face">${tcFace(m.best)}</div><span>${money(m.bv,true)}</span></button>`
-    : `<button class="tcg-tile ${tcoTier(m.bv,m.best)}" data-act="tcopack" data-a="${i}" aria-label="Pack ${i+1}${m.bv>=TC_BIG?', glowing gold':tcoTier(m.bv,m.best)?', glowing':''}"><div class="tcg-pack">${tcPackSVG(res.set,'P')}</div><span>${i+1}</span></button>`; };
+    : `<button class="tcg-tile ${H?tcoTier(m.bv,m.best):''}" data-act="tcopack" data-a="${i}" aria-label="Pack ${i+1}${!H?'':m.bv>=TC_BIG?', glowing gold':tcoTier(m.bv,m.best)?', glowing':''}"><div class="tcg-pack">${tcPackSVG(res.set,'P')}</div><span>${i+1}</span></button>`; };
   const next=M.findIndex((m,i)=>!st.seen.includes(i));
   el.innerHTML=`<div class="tco-top"><span>${esc(res.title)} · ${n} packs · ${op} opened</span><button class="btn sm" data-act="tcosum">Reveal all</button><button class="btn sm" data-act="tcoclose" aria-label="Close">✕</button></div>
-    <p class="tcg-note">${g2? `<b class="gold">${g2} gold</b> pack${g2>1?'s hold':' holds'} a big hit. `:''}${g1-g2>0? `${g1-g2} glowing pack${g1-g2>1?'s hold':' holds'} a premium card or one worth ${money(TC_GOOD)} or more. `:''}${!g1?'No standout cards in this lot. ':''}Tap any pack to open it.</p>
+    <p class="tcg-note">${!H? 'Hints are off: every pack looks the same until you open it. ' : g2? `<b class="gold">${g2} gold</b> pack${g2>1?'s hold':' holds'} a big hit. `:''}${!H?'':g1-g2>0? `${g1-g2} glowing pack${g1-g2>1?'s hold':' holds'} a premium card or one worth ${money(TC_GOOD)} or more. `:''}${H&&!g1?'No standout cards in this lot. ':''}Tap any pack to open it. <button class="linkbtn" data-act="tcohint" style="color:#9fc7ff">${H?'Hide hints':'Show hints'}</button></p>
     <div class="tcg-grid">${M.map(tile).join('')}</div>
     <div class="tco-act">${next>=0?`<button class="btn pri" data-act="tcopack" data-a="${next}">Open pack ${next+1}</button>`:''}<button class="btn" data-act="tcosum">${next>=0?'Reveal all':'See everything'}</button></div>`; }
 function tcoRender(){
@@ -8075,6 +8103,7 @@ function tcoCheer(st, c){ if (!c || st.cel[c.id]) return; const v=tcCopyValue(c)
 ACT.tcopen=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const res=tcOpenSealed(+a); if (!res){ showToast('Can\'t open that.'); return; } tcoStart(res); };
 ACT.tcopenall=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const ids=myTc().filter(c=>c.k===a&&!c.l).map(c=>c.id); const res=tcOpenMany(ids); if (!res){ showToast('Nothing to open.'); return; } tcoStart(res); };
 ACT.tcopack=a=>{ const st=UI.tco; if (!st) return; st.mode='pack'; st.pi=+a; st.ci=0; st.rev=false; if (!st.seen.includes(st.pi)) st.seen.push(st.pi); tcoRender(); };
+ACT.tcohint=()=>{ const o=G.tcg.opt||(G.tcg.opt={}); o.nohint=!o.nohint; tcoRender(); queueSave(); };
 ACT.tcogrid=()=>{ const st=UI.tco; if (!st) return; st.mode='grid'; tcoRender(); };
 ACT.tcoflip=()=>{ const st=UI.tco; if (!st) return; st.rev=true; tcoRender(); tcoCheer(st, TC(st.res.packs[st.pi][st.ci])); };
 ACT.tconextcard=()=>{ const st=UI.tco; if (!st) return; st.ci++; st.rev=false; tcoRender(); };
@@ -8085,7 +8114,7 @@ ACT.tcosum=()=>{ const st=UI.tco; const res=st&&st.res; const unseen=st? st.meta
   ACT.tcoclose(); if (res){ openSheet(()=>tcOpenSummary(res)); if (big && tcCopyValue(big)>=TC_BIG) celebrate('Big hit!', tcD(big.k).title+' · '+money(tcCopyValue(big),true)); } };
 function tcOpenSummary(res){
   const all=res.packs.flat().map(TC).filter(Boolean); const val=all.reduce((s,c)=>s+tcCopyValue(c),0); const best=all.slice().sort((a,b)=>tcCopyValue(b)-tcCopyValue(a)).slice(0,10); const by={}; for (const c of all){ const d=tcD(c.k); const k=TC_RARN[d.card.rar]+(d.v==='H'?' (holo)':d.v==='R'?' (reverse holo)':''); by[k]=(by[k]||0)+1; }
-  return { t:'What came out', h:`<div class="stack"><div class="kpis"><div class="kpi"><small>Cards</small><b>${all.length}</b></div><div class="kpi"><small>Worth about</small><b>${money(val,true)}</b></div><div class="kpi"><small>You paid</small><b>${res.paid?money(res.paid,true):'–'}</b></div><div class="kpi"><small>Difference</small><b class="${val>=res.paid?'up':'down'}">${val>=res.paid?'+':'−'}${money(Math.abs(val-res.paid),true)}</b></div></div><div class="panel"><h3>Best pulls</h3><div class="rows">${best.map(c=>`<button class="row" data-act="tcopy" data-a="${c.id}">${miniT(c)}<div class="rt"><b>${esc(tcD(c.k).title)}</b><span>${TC_RARN[tcD(c.k).card.rar]} · ${TC_VARN[tcD(c.k).v]} · ${TC_LABN[tcLabel(c.c)]}</span></div><div class="rv"><b>${money(tcCopyValue(c),true)}</b></div></button>`).join('')}</div></div><div class="panel"><h3>By rarity</h3><dl class="kv">${Object.keys(by).map(k=>`<dt>${esc(k)}</dt><dd>${by[k]}</dd>`).join('')}</dl></div><p class="small muted">Everything is in Your cards, marked New. Odds are fixed per pack; a box is just 36 of them.</p></div>` };
+  return { t:'What came out', h:`<div class="stack"><div class="kpis"><div class="kpi"><small>Cards</small><b>${all.length}</b></div><div class="kpi"><small>Worth about</small><b>${money(val,true)}</b></div><div class="kpi"><small>You paid</small><b>${res.paid?money(res.paid,true):'–'}</b></div><div class="kpi"><small>Vs. what you paid</small><b class="${val>=res.paid?'up':'down'}">${val>=res.paid?'+':'−'}${money(Math.abs(val-res.paid),true)}</b></div>${res.sv?`<div class="kpi"><small>Sealed, it was worth</small><b>${money(res.sv,true)}</b></div><div class="kpi"><small>Vs. keeping it sealed</small><b class="${val>=res.sv?'up':'down'}">${val>=res.sv?'+':'−'}${money(Math.abs(val-res.sv),true)}</b></div>`:''}</div>${res.sv?'<p class="small muted" style="margin:0">Two different questions: did the pulls beat what you paid, and did opening beat keeping it sealed (its market estimate today)? All estimates; selling takes a 10% fee and buyers are not unlimited.</p>':''}<div class="panel"><h3>Best pulls</h3><div class="rows">${best.map(c=>`<button class="row" data-act="tcopy" data-a="${c.id}">${miniT(c)}<div class="rt"><b>${esc(tcD(c.k).title)}</b><span>${TC_RARN[tcD(c.k).card.rar]} · ${TC_VARN[tcD(c.k).v]} · ${TC_LABN[tcLabel(c.c)]}</span></div><div class="rv"><b>${money(tcCopyValue(c),true)}</b></div></button>`).join('')}</div></div><div class="panel"><h3>By rarity</h3><dl class="kv">${Object.keys(by).map(k=>`<dt>${esc(k)}</dt><dd>${by[k]}</dd>`).join('')}</dl></div><p class="small muted">Everything is in Your cards, marked New. Odds are fixed per pack; a box is just 36 of them.</p></div>` };
 }
 
 // ===================== TCG: THE MARKETPLACE, HOME AND CALENDAR =====================
@@ -8142,7 +8171,7 @@ function tcLgs(){ const T=G.tcg; if (!T.lgs) T.lgs={pack:0,box:0,caseWk:-1,cs:[]
 function tcKv(){ const T=G.tcg; if (!T.kv) T.kv={wk:-1,s:{}}; return T.kv; }
 const tcNewestSet=t=>{ const r=tcReleasedSets(t); return r[r.length-1]; };
 // ---------- the local game store ----------
-function tcLgsWeek(t){ const L=tcLgs(), n=tcNewestSet(t); if (!n) return; const age=t-tcSetDef(n).rel, cur=age<100;
+function tcLgsWeek(t){ const L=tcLgs(), n=tcNewestSet(t); if (!n) return; const age=t-tcSetDef(n).rel, cur=age<100; if (!tcInPrint(n,t)){ tcLgsCase(t, true); return; }   // no allocation once the print run ends
   L.pack=Math.min(72, L.pack+(cur? ri(24,48) : ri(8,16))); L.box=Math.min(8, L.box+(cur? ri(2,4) : ri(0,1))); tcLgsCase(t, true); }
 function tcLgsDay(t){ const L=tcLgs(), n=tcNewestSet(t); if (!n) return; const age=t-tcSetDef(n).rel; const hot=age<=14?3.2: age<=45?1.2:0.35;
   L.pack=Math.max(0, L.pack-poisson(hot*4)); L.box=Math.max(0, L.box-poisson(hot*0.35));
@@ -8163,7 +8192,7 @@ function tcLgsBuySealed(f, q){ const L=tcLgs(), n=tcNewestSet(G.day); const have
 // the buylist: the store pays a fixed share of market for raw cards, on the spot (the card leaves the game's market)
 function tcLgsOffer(cp){ return Math.floor(tcCopyValue(cp)*LGS_BUY*100)/100; }
 function tcLgsSellTo(id){ const cp=TC(id); if (!cp || cp.o!==0 || cp.l || cp.g!==0 || tcD(cp.k).sealed) return 'The store can\'t take that card.'; const p=tcLgsOffer(cp); if (p<0.25) return 'The store passes on that one.';
-  G.player.cash+=p; delete G.tc[id]; return null; }
+  G.player.cash+=p; G.player.sold=(G.player.sold||0)+p; G.tcg.bl=(G.tcg.bl||0)+1; delete G.tc[id]; return null; }
 // ---------- Kinvault, online singles ----------
 function tcKvStock(t){ const K=tcKv(), wk=tcWeekNo(t); if (K.wk===wk) return K.s; K.wk=wk; K.s={}; const r=mkRng(hsh('kv'+G.seed+wk));
   for (const n of tcReleasedSets(t)) for (const k of tcAllKeys(n)){ const d=tcD(k), o=TC_RAROR[d.card.rar]; let q;
@@ -8183,7 +8212,7 @@ function tcSealedPanel(){
     return `<div class="row" style="cursor:default;flex-wrap:wrap">${miniT(cs[0])}<div class="rt"><b>${esc(d.title)}${n>1?' ×'+n:''}</b><span>Worth about ${money(tcCopyValue(cs[0]),true)}${n>1?' each':''}${paid?' · paid '+money(paid,true)+(n>1?' in all':''):''}</span></div>
       <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;flex-basis:100%">${n>1?`<button class="btn sm pri" data-act="tcopenall" data-a="${esc(k)}" ${box?`data-confirm="Open ${n*36} packs"`:''}>Open all ${n}</button>`:''}<button class="btn sm ${n>1?'':'pri'}" data-act="tcopen" data-a="${cs[0].id}" ${box?'data-confirm="Open all 36 packs"':''}>Open ${n>1?'one':''}</button><button class="btn sm" data-act="tcopy" data-a="${cs[0].id}">Sell</button></div></div>`; });
   return `<div class="panel"><h3>Your sealed product</h3><div class="rows">${rows.join('')||'<div class="empty">Buy a pack to get started.</div>'}</div>${own.length>1?'<p class="small muted" style="margin:6px 0 0">Opening several at once shows every pack as a tile; the ones with a good card inside glow.</p>':''}</div>`; }
-function tcRestockPanel(){ return `<div class="panel"><h3>How restocking works</h3><p class="small" style="margin:0 0 6px">Big-box retail restocks every Monday (next: ${fmtDate(tcNextDow(1),true)}). For its first 100 days a set gets 70 to 150 packs and 4 to 9 boxes a week; after that 15 to 45 packs and 1 to 3 boxes, up to 300 packs and 20 boxes on the shelf.</p><p class="small muted" style="margin:0">Other shoppers buy every day: heavily in the first two weeks, less until about day 45, then slowly. So at launch boxes sell out within a day or two of each restock; later they pile up. The Tidepool restocks on Thursdays with a smaller allocation.</p></div>`; }
+function tcRestockPanel(){ return `<div class="panel"><h3>How restocking works</h3><p class="small" style="margin:0 0 6px">Big-box retail restocks every Monday (next: ${fmtDate(tcNextDow(1),true)}). For its first 100 days a set gets 70 to 150 packs and 4 to 9 boxes a week; after that 15 to 45 packs and 1 to 3 boxes, up to 300 packs and 20 boxes on the shelf.</p><p class="small muted" style="margin:0">Other shoppers buy every day: heavily in the first two weeks, less until about day 45, then slowly. So at launch boxes sell out within a day or two of each restock; later they pile up. The Tidepool restocks on Thursdays with a smaller allocation.</p>${tcReleasedSets(G.day).map(n=>{ const e=tcPrintEnd(n), def=tcSetDef(n); return `<p class="small" style="margin:6px 0 0"><b>${esc(def.name)}</b>: ${G.day<e? `printed until ${fmtDate(e,true)}. Restocks shrink in the last two months and stop after that; then the shelves only sell down, and sealed prices start to climb.` : `out of print since ${fmtDate(e,true)}. No more restocks anywhere; what is on shelves is the last of it.`}</p>`; }).join('')}</div>`; }
 function tcStoreTabs(){ const b=(k,t)=>`<button class="chip ${UI.tstore===k?'on':''}" data-act="tstore" data-a="${k}">${t}</button>`; return `<div class="chips" style="margin-bottom:8px">${b('retail','Big-box retail')}${b('lgs','The Tidepool (game store)')}${b('kv','Kinvault (online singles)')}</div>`; }
 function tcShopV(){ const v=UI.tstore==='lgs'? tcLgsV() : UI.tstore==='kv'? tcKvV() : tcRetailV(); return tcStoreTabs()+v; }
 ACT.tstore=a=>{ UI.tstore=a; UI.kvp=0; render(true); };
@@ -8215,6 +8244,93 @@ ACT.lgsbuy=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) r
 ACT.lgssingle=a=>tcStoreDone(tcLgsBuySingle(+a), 'Bought. It is in Your cards, marked New.');
 ACT.lgssell=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; tcStoreDone(tcLgsSellTo(+a), 'Sold to The Tidepool.'); };
 ACT.kvbuy=a=>tcStoreDone(tcKvBuy(a), 'Bought. It is in Your cards, marked New.');
+
+// ===================== TCG: COLLECTING GOALS, WANTLIST AND BINDER TOOLS =====================
+// From the owner's three-year playtest: the long game needed ways to define a collection, not just more money.
+//  - Goals: optional milestones (a premium pull, a whole evolution family, one of each affinity, the base set...), with progress.
+//  - Wantlist: star any print; Home shows where each one is cheapest right now, and the card page can buy it.
+//  - Binder tools: mark everything seen, and sell spare duplicates to The Tidepool after reviewing exactly what goes.
+//  - News says when it touches cards or sealed product you own.
+// State: G.tcg.goals {id: day completed}, G.tcg.want [print keys], G.tcg.bl (cards sold to a store). Created on first use.
+const tcWant=()=>G.tcg.want||(G.tcg.want=[]);
+function tcOwnedCopies(){ const by=new Map(); for (const c of myTc()){ const d=tcD(c.k); if (d.sealed) continue; const g=by.get(c.k); if (g) g.push(c); else by.set(c.k,[c]); } return by; }
+// which card numbers you own at least one print of, and which prints
+function tcOwnState(){ const prints=new Set(), nos=new Set(); for (const c of myTc()){ const d=tcD(c.k); if (d.sealed) continue; prints.add(c.k); nos.add(d.set+'|'+d.no); } return {prints, nos}; }
+// ---------- goals ----------
+// each: id, title, what it asks, and progress [have, need] measured on the current collection
+const TC_GOALS=[
+ {id:'prem', t:'A premium pull', d:'Own an Illustration rare or better.', p:S=>[S.prem>0?1:0,1]},
+ {id:'sale', t:'First sale', d:'Sell a Wildkin card, on the marketplace or to a store.', p:S=>[S.sold>0?1:0,1]},
+ {id:'aff', t:'Every affinity', d:'Own a Wildkin of each of the nine affinities.', p:S=>[S.aff,9]},
+ {id:'fam', t:'A whole family', d:'Own every member of one evolution family of three or more.', p:S=>[S.famBest[0],Math.max(1,S.famBest[1])]},
+ {id:'gem', t:'Gem Mint', d:'Own a GCS 10.', p:S=>[S.gem>0?1:0,1]},
+ {id:'hold', t:'Patient collector', d:'Keep a sealed booster box for a full year.', p:S=>[Math.min(365,S.held),365]},
+ {id:'base', t:'The base set', d:'Own every base card (any print, holo or not).', p:S=>[S.base[0],S.base[1]]},
+ {id:'premall', t:'Every premium card', d:'Own all the premium cards: illustration, full art, special and clasped.', p:S=>[S.premAll[0],S.premAll[1]]},
+ {id:'master', t:'Master set', d:'Own every print, including each holo and reverse holo.', p:S=>[S.master[0],S.master[1]]},
+];
+function tcGoalStats(){
+  const own=tcOwnState(), mine=myTc(); const S={prem:0, sold:G.tcg.bl||0, aff:0, famBest:[0,1], gem:0, held:0, base:[0,0], premAll:[0,0], master:[0,0]};
+  const els=new Set(), fam=new Map();
+  for (const n of tcReleasedSets(G.day)){ const cs=tcSetCards(n), base=WK_CANON.set.base;
+    for (const c of cs){ const have=own.nos.has(n+'|'+c.no);
+      if (c.no<=base && c.kind!=='essence'){ S.base[1]++; if (have) S.base[0]++; }
+      if (tcIsPrem(c)){ S.premAll[1]++; if (have){ S.premAll[0]++; S.prem++; } }
+      if (c.kind==='creature' && !tcAlt(c)){ if (have) els.add(c.el); if (c.fam){ const f=fam.get(c.fam)||[0,0]; f[1]++; if (have) f[0]++; fam.set(c.fam,f); } }
+      for (const v of tcVariants(c)){ if (c.kind==='essence') continue; S.master[1]++; if (own.prints.has(tcKey(n,c.no,v))) S.master[0]++; } } }
+  S.aff=els.size; for (const f of fam.values()) if (f[1]>2 && (f[0]/f[1]>S.famBest[0]/S.famBest[1] || (f[0]===f[1] && f[1]>S.famBest[1]))) S.famBest=f;
+  for (const c of mine){ if (c.g===10) S.gem++; const d=tcD(c.k); if (d.sealed && d.v==='B' && c.a && c.a[0]!=null) S.held=Math.max(S.held, G.day-c.a[0]); }
+  for (const id in G.tc){ const c=G.tc[id]; if (c.o!==0 && (c.h||[]).some(h=>typeof h[1]==='string' && h[1].startsWith('Sold'))) { S.sold++; break; } }
+  return S; }
+function tcGoalCheck(quiet){ if (!G.tcg || !tcReleasedSets(G.day).length) return; const done=G.tcg.goals||(G.tcg.goals={}); if (quiet!==true && TC_GOALS.every(g=>done[g.id])) return; const S=tcGoalStats(); const fresh=[];
+  for (const g of TC_GOALS){ if (done[g.id]) continue; const [h,n]=g.p(S); if (h>=n){ done[g.id]=G.day; fresh.push(g); } }
+  if (!quiet && fresh.length && G.live!==false){ const g=fresh[fresh.length-1]; if (typeof celebrate==='function') celebrate('Goal complete', g.t); for (const x of fresh) tcNews('GOAL: '+x.t.toUpperCase(), x.d+' Done on '+fmtDate(G.day,true)+'.', {}); }
+  return S; }
+function tcGoalsPanel(){ const S=tcGoalCheck(true)||tcGoalStats(); const done=G.tcg.goals||{}; const n=TC_GOALS.filter(g=>done[g.id]).length;
+  const open=TC_GOALS.filter(g=>!done[g.id]).slice(0,4), fin=TC_GOALS.filter(g=>done[g.id]);
+  const row=g=>{ const [h,need]=g.p(S); const pct=Math.round(Math.min(1,h/need)*100); return `<div class="row" style="cursor:default"><div class="rt"><b>${esc(g.t)}</b><span>${esc(g.d)}</span><div class="bar" style="margin-top:4px;max-width:240px"><i style="width:${pct}%;background:#2f9e5b"></i></div></div><div class="rv"><b>${g.id==='hold'? Math.floor(h)+' / 365 days' : h+' / '+need}</b></div></div>`; };
+  return `<div class="panel"><h3>Collection goals</h3><p class="small muted" style="margin:0 0 6px">Optional milestones. ${n} of ${TC_GOALS.length} done.</p><div class="rows">${open.map(row).join('')}</div>${fin.length?`<p class="small" style="margin:8px 0 0">Done: ${fin.map(g=>`<b>${esc(g.t)}</b> <span class="muted">(${fmtDate(done[g.id],true)})</span>`).join(', ')}</p>`:''}</div>`; }
+// ---------- wantlist ----------
+// where a print can be had right now: the cheapest of Kinvault (near mint), The Tidepool's case and marketplace listings
+function tcWhere(k){ const out=[]; const s=tcKvStock(G.day); if (s[k]>0) out.push({w:'Kinvault', p:tcKvPrice(k), act:'kvbuy', a:k, note:'near mint'});
+  const L=tcLgs(); for (const x of L.cs) if (x.k===k) out.push({w:'The Tidepool', p:tcLgsPrice(x), act:'lgssingle', a:x.id, note:TC_LABN[tcLabel(x.c)]});
+  for (const l of G.lst) if (l.it==='t' && l.sel!==0 && l.ty==='bin' && G.tc[l.ref] && G.tc[l.ref].k===k) out.push({w:'Marketplace', p:l.pr, act:'buy', a:l.id, note:G.tc[l.ref].g>0?'GCS '+G.tc[l.ref].g:TC_LABN[tcLabel(G.tc[l.ref].c)]});
+  return out.sort((a,b)=>a.p-b.p); }
+function tcWantPanel(){ const W=tcWant(); if (!W.length) return ''; const own=tcOwnState();
+  return `<div class="panel"><h3>Your wantlist</h3><div class="rows">${W.map(k=>{ const d=tcD(k), wh=tcWhere(k), b=wh[0], got=own.prints.has(k);
+    return `<div class="row" style="cursor:default"><button class="mini" style="background:none;border:0;padding:0;width:40px" data-act="tdesign" data-a="${esc(k)}">${miniTKey(k)}</button><div class="rt"><b>${esc(d.title)}</b><span>${tcRV(d)}${got?' · <span class="up">you have one</span>':''}</span><span class="muted">${b? `cheapest: ${b.w}, ${money(b.p,true)} (${b.note})` : 'nobody has one for sale right now'}</span></div>${b?`<button class="btn sm" data-act="${b.act}" data-a="${esc(String(b.a))}" ${G.player.cash<b.p?'disabled':''}>Buy</button>`:''}</div>`; }).join('')}</div></div>`; }
+ACT.twant=a=>{ const W=tcWant(); const i=W.indexOf(a); if (i>=0){ W.splice(i,1); showToast('Removed from your wantlist.'); } else { W.push(a); showToast('On your wantlist. Home shows where it is cheapest.', true); } refreshSheet(); render(true); queueSave(); };
+// the card page: want it, and every place you can buy it right now
+(function(){ const ds=tcDesignSheet; tcDesignSheet=function(key){ const r=ds(key); const d=tcD(key); if (!r || d.sealed) return r; const on=tcWant().includes(key); const wh=tcWhere(key);
+  const p=`<div class="panel"><h3>Get a copy</h3><div class="formrow" style="margin-bottom:6px"><button class="btn sm ${on?'':'pri'}" data-act="twant" data-a="${esc(key)}">${on?'★ On your wantlist':'☆ Add to wantlist'}</button></div><div class="rows">${wh.slice(0,6).map(x=>`<div class="row" style="cursor:default"><div class="rt"><b>${esc(x.w)}</b><span>${esc(x.note)}</span></div><div style="display:flex;align-items:center;gap:8px"><b>${money(x.p,true)}</b><button class="btn sm" data-act="${x.act}" data-a="${esc(String(x.a))}" ${G.player.cash<x.p?'disabled':''}>Buy</button></div></div>`).join('')||'<div class="empty">Nobody has one for sale right now. Kinvault restocks on Mondays, The Tidepool\'s case on Thursdays.</div>'}</div></div>`;
+  r.h=r.h.replace('<div class="panel"><h3>In tournaments</h3>', p+'<div class="panel"><h3>In tournaments</h3>'); return r; }; })();
+// ---------- the set checklist: missing and wanted ----------
+(function(){ const ss=tcSetSheet; tcSetSheet=function(n){ const r=ss(n); if (!r) return r; const f=UI.tcf; const own=tcOwnState(); const cs=tcSetCards(n); const miss=cs.filter(c=>c.kind!=='essence'&&!own.nos.has(n+'|'+c.no)).length;
+  const chips=`<button class="chip ${f==='miss'?'on':''}" data-act="tcf" data-a="miss">Missing (${miss})</button><button class="chip ${f==='want'?'on':''}" data-act="tcf" data-a="want">Wantlist (${tcWant().length})</button>`;
+  r.h=r.h.replace('<div class="chips">','<p class="small muted" style="margin:0">Two ways to count: '+cs.length+' different cards, or '+tcAllKeys(n).length+' prints once each holo, reverse holo and premium version counts separately. The goals on Home track both.</p><div class="chips">'+chips);
+  return r; }; })();
+// ---------- binder tools ----------
+function tcDupes(){ const out=[]; for (const [k,cs] of tcOwnedCopies()){ const raw=cs.filter(c=>c.g===0&&!c.l).sort((a,b)=>tcCopyValue(b)-tcCopyValue(a)); const keep=cs.length-raw.length>0? 0 : 1; for (const c of raw.slice(keep)){ const p=tcLgsOffer(c); if (p>=0.25) out.push({c,p}); } } return out.sort((a,b)=>b.p-a.p); }
+function tcDupesSheet(){ const D=tcDupes(); const tot=D.reduce((s,x)=>s+x.p,0);
+  return { t:'Sell duplicates', h:`<div class="stack"><div class="panel"><p class="small" style="margin:0 0 8px">For every card you own more than once, this keeps your best copy (or your slab) and offers the spares to The Tidepool's buylist at ${Math.round(LGS_BUY*100)}% of market. Cards worth less than about 45 cents stay in your binder. Listed and graded cards are never included.</p><div class="kpis"><div class="kpi"><small>Spare copies</small><b>${D.length}</b></div><div class="kpi"><small>The store pays</small><b>${money(tot,true)}</b></div></div>
+    <div class="rows">${D.slice(0,40).map(x=>`<div class="row" style="cursor:default">${miniT(x.c)}<div class="rt"><b>${esc(tcD(x.c.k).title)}</b><span>${tcRV(tcD(x.c.k))} · ${TC_LABN[tcLabel(x.c.c)]}</span></div><div class="rv"><b>${money(x.p,true)}</b></div></div>`).join('')||'<div class="empty">No spare copies worth selling.</div>'}${D.length>40?`<p class="small muted">…and ${D.length-40} more.</p>`:''}</div>
+    ${D.length?`<div class="formrow"><button class="btn pri" data-act="tdupesell" data-confirm="Sell ${D.length} for ${money(tot,true)}">Sell all ${D.length} for ${money(tot,true)}</button></div>`:''}</div></div>` }; }
+ACT.tdupes=()=>openSheet(tcDupesSheet);
+ACT.tdupesell=(a,el)=>{ if (!armed(el)) return; let n=0, cash=0; for (const x of tcDupes()){ const c0=G.player.cash; if (!tcLgsSellTo(x.c.id)){ n++; cash+=G.player.cash-c0; } } closeSheet(); showToast(`Sold ${n} spare cards to The Tidepool for ${money(cash,true)}.`, true); render(true); queueSave(); };
+ACT.tseen=()=>{ let n=0; for (const c of myTc()) if (c.nw){ delete c.nw; n++; } showToast(n? `Marked ${n} card${n>1?'s':''} as seen.` : 'Nothing new.'); render(true); queueSave(); };
+(function(){ const cv=tcCollV; tcCollV=function(){ const nNew=myTc().filter(c=>c.nw).length, nD=tcDupes().length;
+  return `<div class="formrow" style="margin-bottom:8px">${nNew?`<button class="btn sm" data-act="tseen">Mark all ${nNew} as seen</button>`:''}${nD?`<button class="btn sm" data-act="tdupes">Sell duplicates (${nD})</button>`:''}<button class="btn sm" data-act="tset" data-a="1">Set checklist</button></div>`+cv(); }; })();
+// ---------- news that touches your collection ----------
+function tcNewsMine(n){ if (!G.tcg) return ''; const bits=[];
+  if (n.tcid!=null){ const k=myTc().filter(c=>{ const d=tcD(c.k); return !d.sealed && d.card.cid===n.tcid; }).length; if (k) bits.push(`You own ${k} cop${k>1?'ies':'y'} of this card.`); }
+  if (n.ts!=null){ const s=myTc().filter(c=>{ const d=tcD(c.k); return d.sealed && d.set===n.ts && !c.l; }); if (s.length) bits.push(`You hold ${s.length} sealed ${tcSetDef(n.ts).name} item${s.length>1?'s':''}, worth about ${money(s.reduce((a,c)=>a+tcCopyValue(c),0),true)}.`); }
+  return bits.length? `<p class="small up" style="margin:2px 0 0">${bits.join(' ')}</p>` : ''; }
+// ---------- Home: goals and wantlist next to the collection ----------
+(function(){ const hp=tcHomePanels; tcHomePanels=function(){ const P=hp(); P.goals=tcGoalsPanel(); P.want=tcWantPanel(); P.coll=P.coll+P.goals+P.want;
+  P.news=`<div class="panel"><h3>Wildkin news</h3>${G.news.filter(n=>n.k==='tcg').slice(0,5).map(n=>`<div class="newsrow"><b>${esc(n.h)}</b><p>${esc(n.b)}</p>${tcNewsMine(n)}<div class="meta">${fmtDate(n.t)}</div></div>`).join('')||'<div class="empty">Quiet.</div>'}</div>`; return P; }; })();
+// goals are checked once a day and after anything that changes the collection
+(function(){ const d=tcDay; tcDay=function(t){ d(t); try { if (G.tcg && !G._tcCatch) tcGoalCheck(); } catch(e){ console.error(e); } }; })();
+(function(){ const r=render; render=function(){ const out=r.apply(this,arguments); try { if (G && G.tcg && G.player && !UI.busy) tcGoalCheck(); } catch(e){ console.error(e); } return out; }; })();
 
 // ===================== PACK OPENING =====================
 // UI.open = { phase:'box'|'pack'|'cards'|'sum', idx, flipped, back, cards:[cid] }
@@ -8363,7 +8479,7 @@ const store={
 };
 async function slotList(game){ const all=await store.all('slots'); return (all||[]).filter(r=>!game||r.game===game).sort((a,b)=>b.updated-a.updated); }
 async function slotGet(id){ return store.get('slots',id); }
-function slotMetaNow(){ const P_=G.player; const nwL=(P_.nw&&P_.nw.length)? P_.nw[P_.nw.length-1] : null; return { day:G.day, cash:Math.round(P_.cash*100)/100, nw: nwL? Math.round(nwL[1]+nwL[2]) : Math.round(P_.cash), scn:P_.scnN||'', items:(typeof myCards==='function'?myCards().length:0)+(typeof myComics==='function'&&G.cm?myComics().length:0)+(typeof myTc==='function'&&G.tcg?myTc().length:0) }; }
+function slotMetaNow(){ const P_=G.player; const nwL=(P_.nw&&P_.nw.length)? P_.nw[P_.nw.length-1] : null; return { day:G.day, cash:Math.round(P_.cash*100)/100, nw: Math.round(P_.cash+(typeof netWorthNow==='function'? netWorthNow() : 0)), scn:P_.scnN||'', items:(typeof myCards==='function'?myCards().length:0)+(typeof myComics==='function'&&G.cm?myComics().length:0)+(typeof myTc==='function'&&G.tcg?myTc().length:0) }; }
 async function slotCreate(name, scn){ const id='s'+Date.now().toString(36)+Math.floor(Math.random()*1e5).toString(36); const rec={ id, game:PACK.id, name:name||'My collection', created:Date.now(), updated:Date.now(), meta:{}, enc:'', v:1, scn:scn||'' }; await store.batch([{s:'slots',put:rec}]); return rec; }
 async function slotRename(id,name){ const r=await slotGet(id); if (!r) return; r.name=name; await store.batch([{s:'slots',put:r}]); if (SLOT.id===id) SLOT.name=name; }
 async function slotDelete(id){ await store.batch([{s:'slots',del:id},{s:'data',del:id}]); if (SLOT.id===id){ SLOT.id=null; } }
@@ -8513,7 +8629,7 @@ if (PACK.id==='tcg'){
   VIEWS.home=()=>{ const t=collectionTotals(); const n=rvQueue().length;
     const note=n?`<div class="note" style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><b style="flex:1">${n} grading return${n>1?'s':''} waiting to be opened</b><button class="btn sm pri" data-act="rvstart">Open ${n>1?'them':'it'}</button></div>`:'';
     const sm=myTcSummary(); const est=rng2(t.total);
-    return `<div class="pagetitle"><h1>Home</h1><span class="muted small">${fmtDate(G.day,true)}</span></div>${note}<div class="kpis"><div class="kpi"><small>Cash</small><b>${money(G.player.cash)}</b></div><div class="kpi"><small>Collection estimate</small><b>${est}</b></div><div class="kpi"><small>Cards owned</small><b>${sm.n+sm.g}</b></div><div class="kpi"><small>Sealed product</small><b>${sm.s}</b></div></div>${(()=>{ const P=tcHomePanels(); return `<div class="cols"><div class="stack">${upNextPanel()}${P.meta}${P.results}</div><div class="stack">${P.next}${P.ban}${P.hot}${P.news}</div></div>`; })()}`; };
+    return `<div class="pagetitle"><h1>Home</h1><span class="muted small">${fmtDate(G.day,true)}</span></div>${note}<div class="kpis"><div class="kpi"><small>Cash</small><b>${money(G.player.cash)}</b></div><div class="kpi"><small>Collection estimate</small><b>${est}</b></div><div class="kpi"><small>Cards owned</small><b>${sm.n+sm.g}</b></div><div class="kpi"><small>Sealed product</small><b>${sm.s}</b></div></div>${(()=>{ const P=tcHomePanels(); return `<div class="cols"><div class="stack">${upNextPanel()}${P.meta}${P.results}</div><div class="stack">${P.next}${P.goals||''}${P.want||''}${P.ban}${P.hot}${P.news}</div></div>`; })()}`; };
   VIEWS.coll=()=>{ const s=UI.sub.coll||'cards'; const tabs=[['cards','Cards'],['sets','Sets'],['grading','Grading'],['journal','Journal']];
     const bar=`<div class="subtabs">${tabs.map(([k,n])=>`<button class="${s===k?'on':''}" data-act="sub" data-a="coll:${k}">${n}</button>`).join('')}</div>`; let body='';
     if (s==='cards') body=tcCollV(); else if (s==='sets') body=tcSetsV(); else if (s==='journal') body=journalView();

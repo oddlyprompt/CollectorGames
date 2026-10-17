@@ -4527,7 +4527,10 @@ function listingSheet(lid){
 }
 ACT.listing = a=>openSheet(()=>listingSheet(+a));
 ACT.watch = a=>{ const id=+a; const w=G.player.watch; const i=w.indexOf(id); if (i>=0) w.splice(i,1); else w.push(id); refresh(); queueSave(); };
-ACT.buy = (a,el)=>{ if (!armed(el)) return; const err=buyListing(+a); if (err) showToast(err); refresh(); afterAction(); };
+ACT.buy = (a,el)=>{ if (!armed(el)) return; const l=G.lst.find(x=>x.id===+a); const lab=l? itemLabel(l) : '', kind=l&&l.it, ref=l&&l.ref, price=l&&l.pr; const err=buyListing(+a); if (err){ showToast(err); refresh(); afterAction(); return; }
+  // the listing is gone because we bought it: say so, with a way to the item, instead of the generic 'Gone' sheet
+  if (UI.sheets.length){ const act=kind==='t'?'tcopy':kind==='m'?'ccopy':'card'; UI.sheets[UI.sheets.length-1]={fn:()=>({t:'Bought', h:`<div class="stack"><div class="panel"><h3>It's yours</h3><p class="small" style="margin:0 0 8px">${esc(lab)}${price?' for '+money(price,true):''}.</p><div class="formrow">${kind==="s"?"":`<button class="btn pri" data-act="${act}" data-a="${ref}">See it</button>`}<button class="btn" data-act="sheetclose">Done</button></div></div></div>`})}; }
+  showToast('Bought.', true); refresh(); afterAction(); };
 ACT.acccounter = (a,el)=>{ if (!armed(el)) return; const l=L(+a); if (!l||!l.counter) return; if (G.player.cash<l.counter){ showToast('Not enough cash.'); return; } transfer(l,0,l.counter,'offer'); refresh(); afterAction(); };
 ACT.offer = a=>{ const v=parseFloat($('#offeramt').value); if (!(v>0)){ $('#offermsg').innerHTML='<div class="err">Enter an amount.</div>'; return; } const r=playerOffer(+a, Math.round(v*100)/100);
   if (r.ok){ refresh(); afterAction(); return; }
@@ -5604,7 +5607,7 @@ function upNext(){
   if (G.cm){ add(nextDow(3, G.day-1)===G.day?G.day:nextDow(3),'New comics at '+SHOP_NAME,'goto','comics:week','comics');
     const pre=new Map(); for (const p of G.cm.pre){ const s=S_(p.sid); const k=p.d; pre.set(k,(pre.get(k)||[]).concat(sTitle(s)+' #'+p.n)); }
     for (const [d,l] of pre) add(d,'Preorder arrives: '+l.slice(0,2).join(', ')+(l.length>2?' +'+(l.length-2):''),'goto','comics:week','comics'); }
-  add(dowOf(G.day)===5?G.day:nextDow(5),'Payday: +'+money(50),null,null,'cash');
+  { const pay=G.player.pay!=null?G.player.pay:50; if (pay>0) add(dowOf(G.day)===5?G.day:nextDow(5),'Payday: +'+money(pay),null,null,'cash'); }   // the scenario's real allowance (none for Deep pockets)
   const rel=G.products.filter(p=>!p.cl && p.rel>=G.day).sort((a,b)=>a.rel-b.rel)[0]; if (rel) add(rel.rel,'Release: '+prodName(rel),'product',rel.id,'cards');
   if (G.hunt){ for (const ev of G.hunt.ev.filter(ev=>ev.ann<=G.day && ev.d+ev.days>G.day && ev.ty!=='flea' && ev.ty!=='garage').sort((a,b)=>a.d-b.d).slice(0,4)) add(Math.max(ev.d,G.day), ev.n+(ev.cost>40?' ('+money(ev.cost)+' to attend)':''),'goto','hunt:events','hunt');
     const gs=G.hunt.ev.filter(ev=>ev.ty==='garage' && ev.ann<=G.day && ev.d>=G.day); if (gs.length) add(gs[0].d, gs.length>1? gs.length+' garage sales':gs[0].n,'goto','hunt:events','hunt');
@@ -6450,7 +6453,7 @@ function applyScenario(id){
 
 // ===================== YOUR YEAR IN COLLECTING =====================
 // Built from what already exists: provenance, sale history, what you looked at and passed on, grading returns, chases.
-function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); return Math.round(v*100)/100; }
+function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); if (G.tcg && typeof myTc==='function') for (const c of myTc()) v+=tcCopyValue(c); return Math.round(v*100)/100; }   // everything owned except cash (Wildkin cards and sealed product included)
 function snapNW(force){ const P_=G.player; const L=P_.nw=P_.nw||[]; if (!force && L.length && G.day-L[L.length-1][0]<7) return; L.push([G.day, Math.round(P_.cash*100)/100, netWorthNow(), Math.round(P_.bought), Math.round(P_.sold), Math.round(P_.fees), P_.packs||0, P_.paid||0]); if (L.length>420) L.shift(); }
 function noteSeen(kind, id, price, where){ const P_=G.player; const S=P_.seen=P_.seen||{}; const k=kind+':'+id; if (S[k]) return; S[k]=[G.day, Math.round(price*100)/100, where]; const ks=Object.keys(S); if (ks.length>320){ ks.sort((a,b)=>S[a][0]-S[b][0]); for (let i=0;i<40;i++) delete S[ks[i]]; } }
 function objValue(k, o){ return k==='t'? tcCopyValue(o) : k==='m'? cmCopyValue(o) : cardValue(o); }
@@ -6465,7 +6468,7 @@ function buildYear(y){
   for (const [k,arr] of kinds) for (const o of arr){
     if (o.pv && !o.sc && o.pv.d>=t0 && o.pv.d<=t1){ if (k==='c'||k==='t') nCards++; else nComics++; const paid=(o.a&&o.a[2])||0; const soldH=(o.h||[]).filter(h=>typeof h[1]==='string' && h[1].startsWith('Sold') && h[0]>=o.pv.d).pop();
       if (o.o===0){ const now=objValue(k,o); acq.push({k, o, paid, now, gain:now-paid, sold:false}); } else if (soldH){ acq.push({k, o, paid, now:soldH[2], gain:soldH[2]-paid, sold:true}); }
-      if (k==='c' && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
+      if ((k==='c'||k==='t') && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
     if (o.h) for (const h of o.h) if (h[0]>=t0 && h[0]<=t1 && typeof h[1]==='string' && h[1].startsWith('Sold') && h[2]>0 && o.o!==0){ sold.push({k, o, price:h[2], now:objValue(k,o), t:h[0]}); }
   }
   const pick1=(arr,f)=>arr.slice().sort((a,b)=>f(b)-f(a))[0];
@@ -6477,7 +6480,7 @@ function buildYear(y){
   const gl=(P_.gl||[]).filter(x=>x.t>=t0 && x.t<=t1); const bestG=gl.slice().sort((a,b)=>(b.k==='m'?b.g/10:b.g)-(a.k==='m'?a.g/10:a.g))[0];
   const ev=(P_.evlog||[]).filter(e=>e.d>=t0 && e.d<=t1); const brks=(G.brk?G.brk.hist:[]).filter(h=>h.day>=t0 && h.day<=t1 && h.mine && h.res);
   const done=chases().filter(c=>c.done && c.done>=t0 && c.done<=t1);
-  const out={ y, t0, t1, days:t1-t0+1, start:s0?Math.round(s0[1]+s0[2]):0, end:s1?Math.round(s1[1]+s1[2]):0, paid:s1&&s0? s1[7]-s0[7]:0, bought:s1&&s0? s1[3]-s0[3]:0, soldT:s1&&s0? s1[4]-s0[4]:0, fees:s1&&s0? s1[5]-s0[5]:0, packs:s1&&s0? s1[6]-s0[6]:0,
+  const out={ y, t0, t1, days:t1-t0+1, start:s0?Math.round(s0[1]+s0[2]):0, end:s1?Math.round(s1[1]+s1[2]):0, endCash:s1?Math.round(s1[1]):0, endColl:s1?Math.round(s1[2]):0, paid:s1&&s0? s1[7]-s0[7]:0, bought:s1&&s0? s1[3]-s0[3]:0, soldT:s1&&s0? s1[4]-s0[4]:0, fees:s1&&s0? s1[5]-s0[5]:0, packs:s1&&s0? s1[6]-s0[6]:0,
     pts:inP.map(s=>[s[0], Math.round(s[1]+s[2])]), nCards, nComics, best:bf&&jRef(bf.k,bf.o,{paid:bf.paid, now:bf.now, sold:bf.sold}), flip:flip&&jRef(flip.k,flip.o,{paid:flip.paid, now:flip.now}),
     regret:regret&&jRef(regret.k,regret.o,{price:regret.price, now:regret.now}), away:away.slice(0,3).map(x=>jRef(x.k,x.o,{ask:x.ask, now:x.now, where:x.where})), pull:pull&&jRef(pull.k,pull.o,{now:pull.now}),
     grade:bestG&&{k:bestG.k, id:bestG.id, g:bestG.g}, nGraded:gl.length, events:ev.length, evNames:[...new Set(ev.map(e=>e.n))].slice(0,3), breaks:brks.map(h=>({host:h.host, cards:h.res.mine.length, paid:h.res.paid, val:h.res.mineVal})), chasesDone:done.map(c=>chaseName(c)),
@@ -6487,7 +6490,7 @@ function buildYear(y){
   if (out.regret) st.push(`The one you sold too soon: ${L(out.regret)}. You took ${money(out.regret.price,true)}; it's about ${money(out.regret.now,true)} now.`);
   if (out.away.length) st.push(`You passed on ${L(out.away[0])} at ${money(out.away[0].ask,true)}. It's about ${money(out.away[0].now,true)} now.`);
   if (out.pull && out.pull.now>=15) st.push(`Best pull: ${L(out.pull)}, about ${money(out.pull.now,true)}.`);
-  if (!st.length) st.push(out.nCards+out.nComics? 'A quiet stretch of collecting. Nothing dramatic yet, and that is how most great collections begin.' : 'You barely collected. The market kept moving without you.');
+  if (!st.length) st.push(out.nCards+out.nComics? 'A quiet stretch of collecting. Nothing dramatic yet, and that is how most great collections begin.' : (out.endColl>=50? `A quiet year of buying. Your collection, worth about ${money(out.endColl)}, kept moving with the market all the same.` : 'You barely collected. The market kept moving without you.'));
   out.story=st; return out;
 }
 function yrs(){ return G.player.yr||(G.player.yr={}); }
@@ -6506,11 +6509,11 @@ function yearSheetHTML(r, live){
   const net=r.end-r.start-r.paid; const bits=[];
   return `<div class="stack"><div class="title-block"><div class="yr">${live?'So far this year':'The year in review'}</div><h1>${r.y}</h1><div class="sub">${fmtDate(r.t0,true)} to ${fmtDate(r.t1,true)}</div></div>
     <div class="panel yrstory">${r.story.map(s=>`<p>${esc(s)}</p>`).join('')}</div>
-    <div class="kpis"><div class="kpi"><small>Net worth, start</small><b>${money(r.start)}</b></div><div class="kpi"><small>Net worth, end</small><b>${money(r.end)}</b></div><div class="kpi"><small>Beyond paydays</small><b class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net))}</b></div><div class="kpi"><small>Spent / sold</small><b style="font-size:15px">${money(r.bought)} / ${money(r.soldT)}</b></div></div>
+    <p class="small muted" style="margin:0 0 6px">Net worth is cash plus the estimated value of everything you own${r.endColl!=null?`: at the end, ${money(r.endCash)} cash and about ${money(r.endColl)} in cards and sealed product`:""}. Estimates, not what a quick sale would bring.</p><div class="kpis"><div class="kpi"><small>Net worth, start</small><b>${money(r.start)}</b></div><div class="kpi"><small>Net worth, end</small><b>${money(r.end)}</b></div><div class="kpi"><small>Beyond paydays</small><b class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net))}</b></div><div class="kpi"><small>Spent / sold</small><b style="font-size:15px">${money(r.bought)} / ${money(r.soldT)}</b></div></div>
     ${r.pts.length>=3?`<div class="panel"><h3>Cash plus collection</h3>${sparkSVG(r.pts,{h:100,axis:true})}</div>`:''}
     ${r.best||r.flip||r.regret?`<div class="panel"><h3>The big moments</h3><div class="rows">${r.best?`<div class="small muted" style="padding:6px 0 2px">Best find</div>${jRow(r.best)}`:''}${r.flip&&(!r.best||r.flip.id!==r.best.id)?`<div class="small muted" style="padding:6px 0 2px">Best flip</div>${jRow(r.flip)}`:''}${r.regret?`<div class="small muted" style="padding:6px 0 2px">Sold too soon</div>${jRow(r.regret)}`:''}${r.pull&&r.pull.now>=15?`<div class="small muted" style="padding:6px 0 2px">Best pull</div>${jRow(r.pull)}`:''}</div></div>`:''}
     ${r.away.length?`<div class="panel"><h3>The ones that got away</h3><p class="small muted" style="margin:0 0 6px">You looked, you passed. Here is what they're worth now.</p><div class="rows">${r.away.map(jRow).join('')}</div></div>`:''}
-    <div class="panel"><h3>The year in numbers</h3><dl class="kv"><dt>Cards acquired</dt><dd>${r.nCards}</dd><dt>Comics acquired</dt><dd>${r.nComics}</dd><dt>Packs opened</dt><dd>${r.packs}</dd><dt>Graded</dt><dd>${r.nGraded}${r.grade?`, best: ${rvGradeTxt(r.grade.k,r.grade.g)}`:''}</dd><dt>Events attended</dt><dd>${r.events}${r.evNames.length?' ('+esc(r.evNames.join(', '))+')':''}</dd>${r.breaks.length?`<dt>Group breaks</dt><dd>${r.breaks.length}: ${money(r.breaks.reduce((s,b)=>s+b.paid,0))} in, cards worth ${money(r.breaks.reduce((s,b)=>s+b.val,0),true)}</dd>`:''}<dt>Fees paid</dt><dd>${money(r.fees)}</dd></dl></div>
+    <div class="panel"><h3>The year in numbers</h3><dl class="kv"><dt>Cards acquired</dt><dd>${r.nCards}</dd>${G.cm?`<dt>Comics acquired</dt><dd>${r.nComics}</dd>`:''}<dt>Packs opened</dt><dd>${r.packs}</dd><dt>Graded</dt><dd>${r.nGraded}${r.grade?`, best: ${rvGradeTxt(r.grade.k,r.grade.g)}`:''}</dd><dt>Events attended</dt><dd>${r.events}${r.evNames.length?' ('+esc(r.evNames.join(', '))+')':''}</dd>${r.breaks.length?`<dt>Group breaks</dt><dd>${r.breaks.length}: ${money(r.breaks.reduce((s,b)=>s+b.paid,0))} in, cards worth ${money(r.breaks.reduce((s,b)=>s+b.val,0),true)}</dd>`:''}<dt>Fees paid</dt><dd>${money(r.fees)}</dd></dl></div>
     ${r.chasesDone.length||r.chases.length||r.grails.length?`<div class="panel"><h3>Chases</h3>${r.chasesDone.length?`<p class="small up" style="margin:0 0 6px">Completed: ${esc(r.chasesDone.join(', '))}</p>`:''}${r.chases.map(c=>`<p class="small" style="margin:0 0 4px">${esc(c.name)}: ${c.have} of ${c.total}</p>`).join('')}${r.grails.map(g=>`<p class="small" style="margin:0 0 4px">★ ${esc(g.name)}: ${g.found?'found':'still hunting after '+g.months+' months'}</p>`).join('')}</div>`:''}</div>`;
 }
 function yearSheet(y){ const live = y==='now'; const r = live? buildYear(yearOf(G.day)) : yrs()[y]; if (!r) return {t:'Year', h:'<div class="empty">No review for that year.</div>'}; return { t:r.y+(live?' so far':' in review'), h:yearSheetHTML(r, live) }; }
@@ -6873,7 +6876,7 @@ const store={
 };
 async function slotList(game){ const all=await store.all('slots'); return (all||[]).filter(r=>!game||r.game===game).sort((a,b)=>b.updated-a.updated); }
 async function slotGet(id){ return store.get('slots',id); }
-function slotMetaNow(){ const P_=G.player; const nwL=(P_.nw&&P_.nw.length)? P_.nw[P_.nw.length-1] : null; return { day:G.day, cash:Math.round(P_.cash*100)/100, nw: nwL? Math.round(nwL[1]+nwL[2]) : Math.round(P_.cash), scn:P_.scnN||'', items:(typeof myCards==='function'?myCards().length:0)+(typeof myComics==='function'&&G.cm?myComics().length:0)+(typeof myTc==='function'&&G.tcg?myTc().length:0) }; }
+function slotMetaNow(){ const P_=G.player; const nwL=(P_.nw&&P_.nw.length)? P_.nw[P_.nw.length-1] : null; return { day:G.day, cash:Math.round(P_.cash*100)/100, nw: Math.round(P_.cash+(typeof netWorthNow==='function'? netWorthNow() : 0)), scn:P_.scnN||'', items:(typeof myCards==='function'?myCards().length:0)+(typeof myComics==='function'&&G.cm?myComics().length:0)+(typeof myTc==='function'&&G.tcg?myTc().length:0) }; }
 async function slotCreate(name, scn){ const id='s'+Date.now().toString(36)+Math.floor(Math.random()*1e5).toString(36); const rec={ id, game:PACK.id, name:name||'My collection', created:Date.now(), updated:Date.now(), meta:{}, enc:'', v:1, scn:scn||'' }; await store.batch([{s:'slots',put:rec}]); return rec; }
 async function slotRename(id,name){ const r=await slotGet(id); if (!r) return; r.name=name; await store.batch([{s:'slots',put:r}]); if (SLOT.id===id) SLOT.name=name; }
 async function slotDelete(id){ await store.batch([{s:'slots',del:id},{s:'data',del:id}]); if (SLOT.id===id){ SLOT.id=null; } }
@@ -7023,7 +7026,7 @@ if (PACK.id==='tcg'){
   VIEWS.home=()=>{ const t=collectionTotals(); const n=rvQueue().length;
     const note=n?`<div class="note" style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><b style="flex:1">${n} grading return${n>1?'s':''} waiting to be opened</b><button class="btn sm pri" data-act="rvstart">Open ${n>1?'them':'it'}</button></div>`:'';
     const sm=myTcSummary(); const est=rng2(t.total);
-    return `<div class="pagetitle"><h1>Home</h1><span class="muted small">${fmtDate(G.day,true)}</span></div>${note}<div class="kpis"><div class="kpi"><small>Cash</small><b>${money(G.player.cash)}</b></div><div class="kpi"><small>Collection estimate</small><b>${est}</b></div><div class="kpi"><small>Cards owned</small><b>${sm.n+sm.g}</b></div><div class="kpi"><small>Sealed product</small><b>${sm.s}</b></div></div>${(()=>{ const P=tcHomePanels(); return `<div class="cols"><div class="stack">${upNextPanel()}${P.meta}${P.results}</div><div class="stack">${P.next}${P.ban}${P.hot}${P.news}</div></div>`; })()}`; };
+    return `<div class="pagetitle"><h1>Home</h1><span class="muted small">${fmtDate(G.day,true)}</span></div>${note}<div class="kpis"><div class="kpi"><small>Cash</small><b>${money(G.player.cash)}</b></div><div class="kpi"><small>Collection estimate</small><b>${est}</b></div><div class="kpi"><small>Cards owned</small><b>${sm.n+sm.g}</b></div><div class="kpi"><small>Sealed product</small><b>${sm.s}</b></div></div>${(()=>{ const P=tcHomePanels(); return `<div class="cols"><div class="stack">${upNextPanel()}${P.meta}${P.results}</div><div class="stack">${P.next}${P.goals||''}${P.want||''}${P.ban}${P.hot}${P.news}</div></div>`; })()}`; };
   VIEWS.coll=()=>{ const s=UI.sub.coll||'cards'; const tabs=[['cards','Cards'],['sets','Sets'],['grading','Grading'],['journal','Journal']];
     const bar=`<div class="subtabs">${tabs.map(([k,n])=>`<button class="${s===k?'on':''}" data-act="sub" data-a="coll:${k}">${n}</button>`).join('')}</div>`; let body='';
     if (s==='cards') body=tcCollV(); else if (s==='sets') body=tcSetsV(); else if (s==='journal') body=journalView();

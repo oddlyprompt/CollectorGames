@@ -39,7 +39,7 @@ function tcFairRaw(key){
   const ck=key+'@'+G.day; let v=TCFV.get(ck); if (v!=null) return v;
   const d=tcD(key); if (d.sealed){ v=tcSealedFair(d); } else {
     const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=TC_RB[c.rar+'|'+d.v]||0.1;
-    const nov=Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(wk/4.33-12)/12));
+    const nov=Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(G.day-tcPrintEnd(d.set))/365));   // the out-of-print premium starts when printing stops
     const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop;
     const st=tcLegalState(c.cid), u=Math.min(1,(G.tcg.usage[c.cid]||0)/4), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.tcg.hy[c.cid]||0;
     const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(tcIsPrem(c)?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
@@ -79,8 +79,11 @@ function tcPackEV(set){
   const ev=(6-TC_REV)*avg(P.c,'N')+TC_REV*(0.62*avg(P.c,'R')+0.3*avg(P.u,'R')+0.08*avg(P.r,'R'))+2*avg(P.u,'N')+rn*avg(P.r,'N')+O.rare_holo*avg(P.r,'H')+O.ir*avg(P.ir,'I')+O.fa*avg(P.fa,'F')+O.sir*avg(P.sir,'X')+O.csr*avg(P.csr,'C')+avg(P.ess,'N'); return c[k]=ev;
 }
 function tcSealedFair(d){
-  const def=d.def; const age=(G.day-def.rel)/365; const ev=tcPackEV(d.set); const pr=tcSetPrestige(d.set); let pack;
-  if (age<=1) pack=Math.max(TC_MSRP.P*0.8, Math.min(TC_MSRP.P*2.2, ev*1.02))*(1+0.18*Math.exp(-(G.day-def.rel)/21)*(pr-0.6)); else pack=Math.max(TC_MSRP.P*0.9, ev*(1+0.45*(age-1)*pr));
+  const def=d.def, n=d.set; const days=G.day-def.rel, age=days/365; const ev=tcPackEV(n); const pr=tcSetPrestige(n); let pack;
+  if (age<=1) pack=Math.max(TC_MSRP.P*0.8, Math.min(TC_MSRP.P*2.2, ev*1.02))*(1+0.18*Math.exp(-days/21)*(pr-0.6)); else pack=Math.max(TC_MSRP.P*0.9, ev);
+  const s=(G.tcg&&G.tcg.shop[n])||{}; const shelf=d.v==='P'? (s.pack||0) : (s.box||0); const so=d.v==='P'? (s.sop==null?1:s.sop) : (s.so==null?1:s.so);
+  if (tcInPrint(n,G.day) || shelf>0){ if (days>30) pack=Math.min(pack, TC_MSRP.P*(1.15+0.6*so)); }   // on retail shelves: anchored to retail (higher while it keeps selling out)
+  else pack=Math.max(TC_MSRP.P*1.15, ev)*(1+0.3*pr*Math.max(0,(G.day-tcPrintEnd(n))/365));   // out of print and off the shelves: scarcity grows
   return d.v==='P'? pack : pack*36*(age<=1?0.93:1.02);
 }
 function tcStock(set,f){ const s=G.tcg.shop[set]; return s? (f==='P'?s.pack:s.box) : 0; }
@@ -99,11 +102,12 @@ function tcOpenSealed(id){
   const cp=TC(id); if (!cp || cp.o!==0 || cp.l) return null; const d=tcD(cp.k); if (!d.sealed) return null; const paid=(cp.a&&cp.a[2])||0; const packs=d.v==='P'?1:36; const r=mkRng(hsh('open'+cp.id+G.day)); const out=[];
   for (let i=0;i<packs;i++){ const keys=tcRollPack(d.set,r); const ei=keys.findIndex(k=>tcD(k).card.kind==='essence'); if (ei>0) keys.unshift(keys.splice(ei,1)[0]);   // reveal order: the Essence first, the rare slot last
     const ids=keys.map(k=>{ const c=tcMakeCopy(k,0,[G.day,'pulled',Math.round(paid/packs/10*100)/100,'a '+d.title],'pull',r); c.nw=1; c.h=[[G.day,'Pulled from a '+d.title,0,'']]; const rr=tcCopyValue(c); c.pv={d:G.day,v:Math.round(rr*100)/100,n:''}; return c.id; }); out.push(ids); }
-  delete G.tc[id]; G.player.packs=(G.player.packs||0)+packs; return {packs:out, set:d.set, title:d.title, paid};
+  const sv=Math.round(tcCopyValue(cp)*100)/100;   // what it was worth sealed, the moment it was opened
+  delete G.tc[id]; G.player.packs=(G.player.packs||0)+packs; return {packs:out, set:d.set, title:d.title, paid, sv};
 }
 // open several sealed items at once (every pack from 'Open all'): one result, packs in order
 function tcOpenMany(ids){ const res={packs:[], set:1, title:'', paid:0}; let n=0, t='';
-  for (const id of ids){ const r=tcOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; t=r.title; n++; }
+  for (const id of ids){ const r=tcOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; res.sv=(res.sv||0)+r.sv; t=r.title; n++; }
   if (!n) return null; res.title=n>1? n+' × '+t : t; return res; }
 // ---------- grading ----------
 function tcGradeOf(cp){ const c=cp.c; const mn=Math.min(...c), av=c.reduce((a,b)=>a+b,0)/4; const s=0.5*mn+0.5*av+withRng(mkRng(cp.id*7919+(cp.gt||0)*104729+11),()=>gauss()*1.7); return s>=97.5?10: s>=94?9: s>=89?8: s>=83?7: s>=76?6: s>=68?5: s>=58?4: s>=46?3: s>=32?2:1; }
