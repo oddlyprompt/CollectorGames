@@ -15,27 +15,30 @@ function tcLegalState(cid, t){
   const sets=[]; for (const s of tcReleasedSets(t)){ if (tcSetCards(s).some(x=>x.cid===cid&&!tcAlt(x))) sets.push(s); }
   r= sets.some(s=>legal.includes(s))? 'std':'rot'; c.m.set(cid,r); return r;
 }
-function tcLegalIdentities(t){ const out=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)){ if (tcAlt(c)||c.kind==='essence') continue; if (tcBanned(c.cid,t)) continue; if (!out.has(c.cid)) out.set(c.cid,c); } return [...out.values()]; }
-function tcEssOf(t){ const m={}; for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (c.kind==='essence' && !tcAlt(c)) m[c.el]=c; return m; }
+function tcLegalIdentities(t, all){ const out=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)){ if (tcAlt(c)||c.kind==='essence') continue; if (!all && tcBanned(c.cid,t)) continue; if (!out.has(c.cid)) out.set(c.cid,c); } return [...out.values()]; }
+function tcEssOf(t){ const m={}; for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (c.kind==='essence' && !tcAlt(c) && !m[c.el]) m[c.el]=c; return m; }
 const TCP={eta:1.1, noise:0.012, hate:0.6, dom:0.24, domWeeks:10};
 // ---------- the field: the decks that exist and their simulated matchups ----------
-// With nothing banned this is WK_META, computed by the build with the same engine. After a ban, only the decks that
-// played the banned card are rebuilt and re-tested; the result is kept in the save (G.tcg.mx).
-let TC_FIELD0=null;
+// With nothing banned this is the build's field for the sets in Standard (WK_METAS: "1" First Bond alone, "1,2" with
+// Duskfall), computed with the same engine. After a ban, only the decks that played the banned card are rebuilt and
+// re-tested; the result is kept in the save (G.tcg.mx).
+const TC_FIELD0={};
 function tcFieldKey(t){ return tcLegalSets(t).join(',')+'|'+Object.keys(G.tcg.ban).filter(cid=>tcBanned(+cid,t)).sort().join(','); }
-function tcBaseField(){
-  if (TC_FIELD0) return TC_FIELD0;
-  if (typeof WK_META!=='undefined' && WK_META && WK_META.rv===WKR.RV) return TC_FIELD0=WK_META;
-  const pool=tcSetCards(1).filter(c=>!tcAlt(c) && c.kind!=='essence'); return TC_FIELD0=WKR.buildMeta(pool, tcEssOf(G.day), {gauntlet:4, field:8, pair:8});
+// t: a day (the sets in Standard that day) or a set list such as "1,2"
+function tcBaseField(t){
+  t=t==null?G.day:t; const sk=typeof t==='string'? t : (tcLegalSets(t).join(',')||'1'); if (TC_FIELD0[sk]) return TC_FIELD0[sk];
+  const pre=typeof WK_METAS!=='undefined' && WK_METAS && WK_METAS[sk]; if (pre && pre.rv===WKR.RV) return TC_FIELD0[sk]=pre;
+  const ids=new Map(), ess={}; for (const s of sk.split(',').map(Number)) for (const c of tcSetCards(s)){ if (tcAlt(c)) continue; if (c.kind==='essence'){ ess[c.el]=ess[c.el]||c; continue; } if (!ids.has(c.cid)) ids.set(c.cid,c); }
+  return TC_FIELD0[sk]=WKR.buildMeta([...ids.values()], ess, {gauntlet:4, field:8, pair:8});
 }
 // a fingerprint of the base field: when card rules or the engine change, saved matchups are rebuilt
-function tcBaseSig(){ const b=tcBaseField(); return b._bs||(b._bs=String(hsh(b.top.map(p=>p.sig).join(';')+'|'+b.cands.length))); }
+function tcBaseSig(t){ const b=tcBaseField(t); return b._bs||(b._bs=String(hsh(b.top.map(p=>p.sig).join(';')+'|'+b.cands.length))); }
 function tcField(t){
-  const T=G.tcg, key=tcFieldKey(t); if (T.mx && T.mx.key===key && T.mx.rv===WKR.RV && T.mx.bs===tcBaseSig()) return T.mx;
-  const base=tcBaseField(); let f;
-  if (key==='1|') f=base;   // First Bond alone, nothing banned: exactly what the build computed
-  else { const pool=tcLegalIdentities(t); const byCid=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (!tcAlt(c)) byCid.set(c.cid,c); f=WKR.rebuildMeta(base, pool, tcEssOf(t), byCid); }
-  T.mx={key, rv:WKR.RV, bs:tcBaseSig(), top:f.top, M:f.M}; return T.mx;
+  const T=G.tcg, key=tcFieldKey(t); if (T.mx && T.mx.key===key && T.mx.rv===WKR.RV && T.mx.bs===tcBaseSig(t)) return T.mx;
+  const base=tcBaseField(t); let f;
+  if (key.endsWith('|')) f=base;   // nothing banned: exactly what the build computed for these sets
+  else { const pool=tcLegalIdentities(t); const byCid=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (!tcAlt(c) && !byCid.has(c.cid)) byCid.set(c.cid,c); f=WKR.rebuildMeta(base, pool, tcEssOf(t), byCid); }
+  T.mx={key, rv:WKR.RV, bs:tcBaseSig(t), top:f.top, M:f.M}; return T.mx;
 }
 function tcDeckOf(a){ const p=G.tcg.mx&&G.tcg.mx.top[a.ix]; if (!p) return null; const byCid=new Map(); for (const id of p.c.concat(p.t).map(x=>x[0]).concat([p.lead])) byCid.set(id,tcCardByCid(id)); const d=WKR.unpackDeck(p,byCid); return d? WKR.deckCards(d,tcEssOf(G.day)) : null; }
 function tcMatch(a, b){ if (a===b) return 0.5; const M=G.tcg.mx&&G.tcg.mx.M; const p=M&&M[a.ix]&&M[a.ix][b.ix]; return p==null? 0.5 : p; }
@@ -93,7 +96,7 @@ function tcBanImpact(a, cid, t){
   const pool=tcLegalIdentities(t).filter(c=>c.cid!==cid); const essOf=tcEssOf(t); const cur=G.tcg.mx.top[a.ix]; const lead=cid===a.lead? (a.partner!=null? tcCardByCid(a.partner) : null) : tcCardByCid(a.lead);
   let d=lead && WKR.buildDeck(pool, lead, cur.v); if (!d && a.partner!=null && cid!==a.partner) d=WKR.buildDeck(pool, tcCardByCid(a.partner), 0);
   const now0=G.tcg.arch.filter(b=>b!==a).slice(0,6).reduce((q,b)=>q+b.sh*tcMatch(a,b),0)/Math.max(1e-9,G.tcg.arch.filter(b=>b!==a).slice(0,6).reduce((q,b)=>q+b.sh,0));
-  if (!d) return now0-0.3; const byCid=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (!tcAlt(c)) byCid.set(c.cid,c);
+  if (!d) return now0-0.3; const byCid=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (!tcAlt(c) && !byCid.has(c.cid)) byCid.set(c.cid,c);
   const opp=G.tcg.arch.filter(b=>b!==a).slice(0,6); let now=0, after=0, w=0;
   for (const b of opp){ const od=WKR.unpackDeck(G.tcg.mx.top[b.ix],byCid); if (!od) continue; now+=b.sh*tcMatch(a,b); after+=b.sh*WKR.matchup(d,od,essOf,8); w+=b.sh; }
   return w? (now-after)/w : 0;

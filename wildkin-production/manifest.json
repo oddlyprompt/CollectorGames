@@ -8263,7 +8263,7 @@
    },
    "gameplay": {
     "status": "designed",
-    "rules": "If this creature has a Gear attached, it takes 20 less damage from attacks. (Attached Gear stays on the creature; 1 per creature.)",
+    "rules": "Attach to a creature. It takes 20 less damage from attacks. (Attached Gear stays on the creature; 1 per creature.)",
     "ops": [
      [
       "tool_reduce",

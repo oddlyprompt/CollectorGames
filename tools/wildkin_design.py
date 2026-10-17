@@ -265,7 +265,7 @@ def op_text(op):
      'cure_all':lambda:'Remove all Special Conditions from your creatures.',
      'essence_from_discard':lambda:'Attach an Essence card from your discard pile to 1 of your creatures.',
      'recover':lambda:'Put %s from your discard pile into your hand.'%('a creature' if a[0]==1 else 'up to %d creatures'%a[0]),
-     'recover_ess':lambda:'Put up to %d Essence cards from your discard pile into your hand.'%a[0],
+     'recover_ess':lambda:'Put an Essence card from your discard pile into your hand.' if a[0]==1 else 'Put up to %d Essence cards from your discard pile into your hand.'%a[0],
      'shuffle_draw':lambda:'Shuffle your hand into your deck. Draw %d cards.'%a[0],
      'look_take':lambda:'Look at the top %d cards of your deck. Put %s into your hand and shuffle the rest back.'%(a[0],'1 of them' if a[1]==1 else '%d of them'%a[1]),
      'switch':lambda:'Switch your Active creature with 1 of your Benched creatures.',
@@ -287,7 +287,7 @@ def op_text(op):
      'tool_no_weak':lambda:'Attach to a creature. It has no Weakness.',
      'tool_status_immune':lambda:'Attach to a creature. It can\'t be affected by Special Conditions.',
      'first_bond':lambda:'Search your deck for a Basic creature and an Essence card of its affinity. Put the creature onto your Bench and attach the Essence to it.',
-     'bench_basic':lambda:'Search your deck for up to %d Basic creatures and put them onto your Bench.'%a[0],
+     'bench_basic':lambda:'Search your deck for a Basic creature and put it onto your Bench.' if a[0]==1 else 'Search your deck for up to %d Basic creatures and put them onto your Bench.'%a[0],
      'revive_basic':lambda:'Put a Basic creature from your discard pile onto your Bench.',
      'rally':lambda:'During this turn, your Active creature\'s attacks do 10 more damage for each of your Benched creatures.',
      'draw_per_bench':lambda:'Draw a card for each of your Benched creatures.',
@@ -310,9 +310,11 @@ def dmg_label(dmg, ops):
 
 def prize_value(stage, nstages): return 1
 
-def creature_gameplay(no, stage, nstages, aff):
-    hp,ret,atks,ab=CREATURES[no]
-    out={'status':'designed','hp':hp,'retreat':ret,'weakness':WEAKNESS[aff],'prizes':prize_value(stage,nstages),
+def creature_gameplay(no, stage, nstages, aff): return creature_gameplay_from(CREATURES[no], aff, prize_value(stage,nstages))
+def creature_gameplay_from(design, aff, prizes=1):
+    """One creature's gameplay block from a design tuple (also used by later sets, tools/wildkin_dsk.py)."""
+    hp,ret,atks,ab=design
+    out={'status':'designed','hp':hp,'retreat':ret,'weakness':WEAKNESS[aff],'prizes':prizes,
          'attacks':[{'name':n,'cost':c,'damage':d,'damage_label':dmg_label(d,ops),'text':ops_text(ops),'ops':[list(o) for o in ops]} for n,c,d,ops in atks]}
     if ab:
         t=ops_text(ab[2])
@@ -322,8 +324,10 @@ def creature_gameplay(no, stage, nstages, aff):
 def trainer_gameplay(no, cat, biome_aff=None):
     if cat=='biome':
         return {'status':'designed','rules':'Biome. Stays in play for both players. '+BIOMES[biome_aff],'ops':[['biome',biome_aff]],'role':'biome','subtype':None}
-    ops,role,sub=TRAINERS[no]
+    ops,role,sub=TRAINERS[no]; return trainer_gameplay_from(cat, ops, role, sub)
+def trainer_gameplay_from(cat, ops, role, sub):
     pre={'ally':'Ally. You may play only 1 Ally each turn. ','tactic':'Tactic. You may play only 1 Tactic each turn. ','gear':''}[cat]
     txt=ops_text(ops).replace('Before doing damage, you may switch','Switch').replace('The Defending creature can\'t retreat during your opponent\'s next turn.','Your opponent\'s Active creature can\'t retreat during their next turn.')
-    if cat=='gear' and sub=='tool': txt=txt+' (Attached Gear stays on the creature; 1 per creature.)'
+    if cat=='gear' and sub=='tool':   # tool_reduce's text is written for abilities; on a Gear it is the attached creature
+        txt=txt.replace('If this creature has a Gear attached, it takes', 'It also takes' if txt.find('If this creature has a Gear')>0 else 'Attach to a creature. It takes')+' (Attached Gear stays on the creature; 1 per creature.)'
     return {'status':'designed','rules':(pre+txt).strip(),'ops':[list(o) for o in ops],'role':role,'subtype':sub}

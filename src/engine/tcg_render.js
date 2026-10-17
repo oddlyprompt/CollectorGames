@@ -50,7 +50,8 @@ const tcFace=cp=>{ const d=tcD(cp.k); if (d.sealed||cp.g>0) return tcFront(cp.k)
 // Until SOL delivers product renders (see wildkin-production/SOL_PRODUCT_BRIEF.md) the packaging is drawn here.
 // A set with approved product renders (product.<code>.pack-1..4, box-closed, box-open; tools/wildkin_art.py products) uses them,
 // with every word printed on the quiet pearl areas; a set without them gets the drawn packaging dressed in its own paintings.
-const TC_PACK_ART={1:{P:['ill.151-cactuft-fa','ill.173-cactuft-sir','cut.001-cactuft.standing'], B:['ill.154-koirune-fa','ill.152-aurorotl-fa','ill.144-koirune-ir']}};
+const TC_PACK_ART={1:{P:['ill.151-cactuft-fa','ill.173-cactuft-sir','cut.001-cactuft.standing'], B:['ill.154-koirune-fa','ill.152-aurorotl-fa','ill.144-koirune-ir']},
+  2:{P:['ill.dsk-173-velunox-sir','ill.dsk-159-velunox-fa'], B:['ill.dsk-177-clasped-velunox','ill.dsk-175-sel-veyra-directive-zero-sir']}};   // Duskfall has no packaging renders yet: drawn wrappers
 function tcPackArt(f, set){ const L=(TC_PACK_ART[set]||{})[f] || (tcSetCards(set).filter(c=>tcIsPrem(c)).sort((a,b)=>TC_RAROR[b.rar]-TC_RAROR[a.rar]).map(c=>c.art&&c.art.i)); for (const id of L||[]) if (id && WK_ART[id]) return WK_ART[id]; return null; }
 const tcProd=(set,n)=>{ const d=tcSetDef(set); return d && WK_ART['product.'+String(d.code).toLowerCase()+'.'+n] || null; };
 function tcPackSVG(set, f, v){

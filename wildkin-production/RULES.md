@@ -367,7 +367,7 @@ Each affinity is weak to exactly one other (double damage). No resistance.
 - **099 Medic Salve** (common): Heal 20 damage from your Active creature. Remove all Special Conditions from your Active creature.
 - **100 Echo Flute** (common): Search your deck for a creature that evolves from 1 of your creatures in play and put it into your hand.
 - **101 Tide Lure** (common): Flip a coin. If heads, switch 1 of your opponent's Benched creatures with their Active creature.
-- **102 Thermal Cloak** (common): If this creature has a Gear attached, it takes 20 less damage from attacks. (Attached Gear stays on the creature; 1 per creature.)
+- **102 Thermal Cloak** (common): Attach to a creature. It takes 20 less damage from attacks. (Attached Gear stays on the creature; 1 per creature.)
 - **103 Climbing Line** (common): Attach to a creature. It has no Retreat Cost. (Attached Gear stays on the creature; 1 per creature.)
 - **104 Field Scope** (common): Draw 2 cards. Then discard a card from your hand.
 - **105 Wildseed Treat** (common): Choose 1 of your Basic creatures that was in play at the start of your turn. Put a Stage 2 card from your hand that evolves from its Stage 1 onto it, skipping Stage 1. You can't play this card on your first turn.

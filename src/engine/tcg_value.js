@@ -32,7 +32,7 @@ function tcMakeCopy(key, owner, acq, src, rng){
 }
 const TC=id=>G.tc[id]; const myTc=()=>Object.values(G.tc).filter(c=>c.o===0);
 // ---------- value ----------
-function tcSetPrestige(n){ const d=tcSetDef(n); return d.reprint?0.8 : n===1?1.35 : n===2?1.1 : 1.0; }
+function tcSetPrestige(n){ const d=tcSetDef(n); return d.reprint?0.8 : n===1?1.35 : n===2?1.25 : 1.0; }
 const tcJit=key=>0.9+0.2*((hsh('tj'+key)%1000)/1000);
 function tcPrintCount(cid){ const c=G.tcg._pc||(G.tcg._pc={day:-1,m:{}}); if (c.day!==G.day){ c.day=G.day; c.m={}; } if (c.m[cid]) return c.m[cid]; let n=0; for (const s of tcReleasedSets(G.day)) if (tcSetCards(s).some(x=>x.cid===cid&&!tcAlt(x))) n++; return c.m[cid]=Math.max(1,n); }
 function tcFairRaw(key){

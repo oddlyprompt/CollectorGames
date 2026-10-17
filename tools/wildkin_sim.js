@@ -1,16 +1,19 @@
 // Headless balance check for the Wildkin rules engine (src/engine/tcg_rules.js) on the First Bond cards.
-//   node tools/wildkin_sim.js [games-per-pair] [--all]
-// Needs a built tcg game (python3 tools/build.py tcg): it reads WK_CANON from dist/tcg/game.js.
+//   node tools/wildkin_sim.js [games-per-pair] [--all] [--sets 1,2]
+// Needs a built tcg game (python3 tools/build.py tcg): it reads WK_SETS from dist/tcg/game.js.
 // Builds every deck the game's metagame would consider, plays them against each other and prints win rates,
 // game length, how games end, and per-card use. Exit code 1 if a basic sanity check fails.
 const fs=require('fs'), path=require('path');
 const ROOT=path.join(__dirname,'..');
 const WKR=require(path.join(ROOT,'src/engine/tcg_rules.js'));
-const js=fs.readFileSync(path.join(ROOT,'dist/tcg/game.js'),'utf8'); const m=js.match(/const WK_CANON=(\{.*?\});\n/s);
-if (!m){ console.error('WK_CANON not found: build the tcg game first'); process.exit(2); }
-const CANON=JSON.parse(m[1]);
+const js=fs.readFileSync(path.join(ROOT,'dist/tcg/game.js'),'utf8'); const m=js.match(/const WK_SETS=(\[.*?\]);\n/s);
+if (!m){ console.error('WK_SETS not found: build the tcg game first'); process.exit(2); }
+const SETS=JSON.parse(m[1]);
 const N=+(process.argv[2]||16), ALL=process.argv.includes('--all');
-const cards=WKR.setFromCanon(CANON,1).filter(c=>c.same==null);
+// --sets 1,2 plays the sets together, as Standard does once Duskfall is out (default: First Bond alone)
+const SI=process.argv.indexOf('--sets'), USE=(SI>0? process.argv[SI+1] : '1').split(',').map(Number);
+const cards=[], seenCid=new Set(); for (const n of USE) for (const c of WKR.setFromCanon(SETS[n-1],n)) if (c.same==null && !seenCid.has(c.cid)){ seenCid.add(c.cid); cards.push(c); }
+console.log('sets', USE.map(n=>SETS[n-1].set.name).join(' + '));
 const pool=cards.filter(c=>c.kind!=='essence'); const essOf={}; for (const c of cards) if (c.kind==='essence') essOf[c.el]=c;
 const errs=[];
 // 1. every card is playable by the engine

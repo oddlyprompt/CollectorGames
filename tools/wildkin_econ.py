@@ -13,7 +13,8 @@ SNAP="""(()=>{ const ks=tcAllKeys(1).filter(k=>!tcD(k).sealed); const v=ks.map(k
   const med=a=>a.slice().sort((x,y)=>x-y)[Math.floor(a.length/2)]; const t={}; for (const g of ['common','unc','rare','rare holo','ir','fa','sir','csr']) if (by[g]) t[g]=+med(by[g]).toFixed(2);
   const A=G.tcg.arch; return {date:fmtDate(G.day), ev:+tcPackEV(1).toFixed(2), pack:+tcFairRaw(tcKey(1,0,'P')).toFixed(2), box:+tcFairRaw(tcKey(1,0,'B')).toFixed(0), med:t,
     top:v.slice(0,3).map(([k,x])=>tcD(k).card.name+' '+TC_VARN[tcD(k).v]+' $'+x.toFixed(0)), g10:+tcFair(tcKey(1,173,'X'),10).toFixed(0),
-    decks:A.length, topDeck:A.length? A[0].name+' '+(A[0].sh*100).toFixed(0)+'%':'', bans:Object.keys(G.tcg.ban).length, stock:G.tcg.shop[1]}; })()"""
+    decks:A.length, topDeck:A.length? A[0].name+' '+(A[0].sh*100).toFixed(0)+'%':'', bans:Object.keys(G.tcg.ban).length, stock:G.tcg.shop[1],
+    dsk:tcReleasedSets(G.day).includes(2)? (()=>{ const w=tcAllKeys(2).filter(k=>!tcD(k).sealed).map(k=>[k,tcFairRaw(k)]).sort((a,b)=>b[1]-a[1]); return {ev:+tcPackEV(2).toFixed(2), box:+tcFairRaw(tcKey(2,0,'B')).toFixed(0), top:w.slice(0,3).map(([k,x])=>tcD(k).card.name+' '+TC_VARN[tcD(k).v]+' $'+x.toFixed(0)), share:+A.filter(a=>Object.keys(a.cnt).some(c=>+c>=2000)).reduce((s,a)=>s+a.sh,0).toFixed(2)}; })() : null}; })()"""
 async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch(); pg=await (await b.new_context()).new_page(); errs=[]

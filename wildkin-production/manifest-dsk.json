@@ -1,0 +1,8128 @@
+{
+ "schema": "wildkin-manifest/1",
+ "manifest_version": "2.0.0",
+ "generated_by": "tools/wildkin_dsk.py",
+ "sources": {
+  "checklist": "wildkin-production/sets/dsk/art_manifest.json",
+  "first_bond": "wildkin-production/manifest.json",
+  "handoff": "wildkin-production/sets/dsk/HANDOFF.md"
+ },
+ "status_legend": {
+  "roster": "the owner checklist (the handoff calls it proposed; used as delivered)",
+  "reprint": "copied from the First Bond card it reprints",
+  "designed": "card rules designed by Claude Code on 2026-10-17",
+  "decided": "reasoned choice by Claude Code on 2026-10-17, not canon"
+ },
+ "set": {
+  "id": "WK-S002",
+  "number": 2,
+  "name": "Duskfall",
+  "name_status": "roster",
+  "code": "DSK",
+  "code_status": "roster",
+  "total": 180,
+  "base": 140,
+  "premium": 40,
+  "release_date": {
+   "value": "2026-12-07",
+   "status": "decided",
+   "note": "26 weeks after First Bond (a Monday, like every release); announced 35 days ahead with preorders"
+  },
+  "pack": {
+   "cards": 10,
+   "slots": [
+    {
+     "slot": "common",
+     "count": 6,
+     "note": "one of the six can be a reverse holo of any common, uncommon or rare (provisional: 1 in 2 packs)"
+    },
+    {
+     "slot": "uncommon",
+     "count": 2
+    },
+    {
+     "slot": "rare-or-better",
+     "count": 1
+    },
+    {
+     "slot": "essence",
+     "count": 1
+    }
+   ],
+   "status": "canon (6/2/1/1)"
+  },
+  "rare_slot_odds": {
+   "status": "decided",
+   "note": "same pull rates as First Bond (decided)",
+   "rare": 0.6215,
+   "rare_holo": 0.25,
+   "ir": 0.0835,
+   "fa": 0.0334,
+   "sir": 0.0083,
+   "csr": 0.0033
+  },
+  "box": {
+   "packs": 36,
+   "status": "decided"
+  },
+  "msrp": {
+   "pack": 4.5,
+   "box": 150,
+   "status": "decided"
+  }
+ },
+ "families": [
+  {
+   "id": "FAM-101",
+   "members": [
+    "SP-101",
+    "SP-102",
+    "SP-103"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-102",
+   "members": [
+    "SP-104",
+    "SP-105",
+    "SP-106"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-103",
+   "members": [
+    "SP-107",
+    "SP-108",
+    "SP-109"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-104",
+   "members": [
+    "SP-110",
+    "SP-111"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-105",
+   "members": [
+    "SP-112",
+    "SP-113"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-106",
+   "members": [
+    "SP-114",
+    "SP-115"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-107",
+   "members": [
+    "SP-116",
+    "SP-117"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-108",
+   "members": [
+    "SP-118",
+    "SP-119"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-109",
+   "members": [
+    "SP-120",
+    "SP-121"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-110",
+   "members": [
+    "SP-122",
+    "SP-123"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-111",
+   "members": [
+    "SP-124",
+    "SP-125"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-112",
+   "members": [
+    "SP-126",
+    "SP-127"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-113",
+   "members": [
+    "SP-128",
+    "SP-129"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-114",
+   "members": [
+    "SP-130",
+    "SP-131"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-115",
+   "members": [
+    "SP-132",
+    "SP-133"
+   ],
+   "kind": "line",
+   "status": "roster"
+  },
+  {
+   "id": "FAM-116",
+   "members": [
+    "SP-134"
+   ],
+   "kind": "standalone",
+   "status": "roster"
+  }
+ ],
+ "species": [
+  {
+   "id": "SP-101",
+   "name": "Velumi",
+   "slug": "velumi",
+   "card": "WK-S002-001",
+   "family": "FAM-101",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 3,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-102",
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": "Astral",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-102",
+   "name": "Velunara",
+   "slug": "velunara",
+   "card": "WK-S002-002",
+   "family": "FAM-101",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 3,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-101",
+   "evolves_to": "SP-103",
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": "Astral",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-103",
+   "name": "Velunox",
+   "slug": "velunox",
+   "card": "WK-S002-003",
+   "family": "FAM-101",
+   "family_status": "roster",
+   "stage": 3,
+   "stages_in_family": 3,
+   "stage_label": "Stage 2",
+   "evolves_from": "SP-102",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": "Astral",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.92,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-104",
+   "name": "Cindermite",
+   "slug": "cindermite",
+   "card": "WK-S002-004",
+   "family": "FAM-102",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 3,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-105",
+   "affinity": {
+    "primary": "Iron",
+    "secondary": "Ember",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-105",
+   "name": "Forgewing",
+   "slug": "forgewing",
+   "card": "WK-S002-005",
+   "family": "FAM-102",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 3,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-104",
+   "evolves_to": "SP-106",
+   "affinity": {
+    "primary": "Iron",
+    "secondary": "Ember",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-106",
+   "name": "Crucimoth",
+   "slug": "crucimoth",
+   "card": "WK-S002-006",
+   "family": "FAM-102",
+   "family_status": "roster",
+   "stage": 3,
+   "stages_in_family": 3,
+   "stage_label": "Stage 2",
+   "evolves_from": "SP-105",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Iron",
+    "secondary": "Ember",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.7,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-107",
+   "name": "Murklet",
+   "slug": "murklet",
+   "card": "WK-S002-007",
+   "family": "FAM-103",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 3,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-108",
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.55,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-108",
+   "name": "Fenwisp",
+   "slug": "fenwisp",
+   "card": "WK-S002-008",
+   "family": "FAM-103",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 3,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-107",
+   "evolves_to": "SP-109",
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.4,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-109",
+   "name": "Mireveil",
+   "slug": "mireveil",
+   "card": "WK-S002-009",
+   "family": "FAM-103",
+   "family_status": "roster",
+   "stage": 3,
+   "stages_in_family": 3,
+   "stage_label": "Stage 2",
+   "evolves_from": "SP-108",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-110",
+   "name": "Rivetick",
+   "slug": "rivetick",
+   "card": "WK-S002-010",
+   "family": "FAM-104",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-111",
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-111",
+   "name": "Boltrix",
+   "slug": "boltrix",
+   "card": "WK-S002-011",
+   "family": "FAM-104",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-110",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-112",
+   "name": "Gloamkit",
+   "slug": "gloamkit",
+   "card": "WK-S002-012",
+   "family": "FAM-105",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-113",
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-113",
+   "name": "Noctelle",
+   "slug": "noctelle",
+   "card": "WK-S002-013",
+   "family": "FAM-105",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-112",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-114",
+   "name": "Tinibble",
+   "slug": "tinibble",
+   "card": "WK-S002-014",
+   "family": "FAM-106",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-115",
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.4,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-115",
+   "name": "Gearjaw",
+   "slug": "gearjaw",
+   "card": "WK-S002-015",
+   "family": "FAM-106",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-114",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-116",
+   "name": "Shiverfin",
+   "slug": "shiverfin",
+   "card": "WK-S002-016",
+   "family": "FAM-107",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-117",
+   "affinity": {
+    "primary": "Tide",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.3,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-117",
+   "name": "Glacurrent",
+   "slug": "glacurrent",
+   "card": "WK-S002-017",
+   "family": "FAM-107",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-116",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Tide",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.3,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-118",
+   "name": "Bristlecap",
+   "slug": "bristlecap",
+   "card": "WK-S002-018",
+   "family": "FAM-108",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-119",
+   "affinity": {
+    "primary": "Verdant",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.35,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-119",
+   "name": "Thornwarden",
+   "slug": "thornwarden",
+   "card": "WK-S002-019",
+   "family": "FAM-108",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-118",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Verdant",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-120",
+   "name": "Flickerpup",
+   "slug": "flickerpup",
+   "card": "WK-S002-020",
+   "family": "FAM-109",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-121",
+   "affinity": {
+    "primary": "Wonder",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-121",
+   "name": "Lanternox",
+   "slug": "lanternox",
+   "card": "WK-S002-021",
+   "family": "FAM-109",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-120",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Wonder",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-122",
+   "name": "Ashmole",
+   "slug": "ashmole",
+   "card": "WK-S002-022",
+   "family": "FAM-110",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-123",
+   "affinity": {
+    "primary": "Ember",
+    "secondary": "Iron",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.35,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-123",
+   "name": "Furnaceback",
+   "slug": "furnaceback",
+   "card": "WK-S002-023",
+   "family": "FAM-110",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-122",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Ember",
+    "secondary": "Iron",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-124",
+   "name": "Starlingo",
+   "slug": "starlingo",
+   "card": "WK-S002-024",
+   "family": "FAM-111",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-125",
+   "affinity": {
+    "primary": "Astral",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.35,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-125",
+   "name": "Orbitern",
+   "slug": "orbitern",
+   "card": "WK-S002-025",
+   "family": "FAM-111",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-124",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Astral",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-126",
+   "name": "Hollowisp",
+   "slug": "hollowisp",
+   "card": "WK-S002-026",
+   "family": "FAM-112",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-127",
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-127",
+   "name": "Hollowraith",
+   "slug": "hollowraith",
+   "card": "WK-S002-027",
+   "family": "FAM-112",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-126",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Dusk",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.45,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-128",
+   "name": "Copperoo",
+   "slug": "copperoo",
+   "card": "WK-S002-028",
+   "family": "FAM-113",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-129",
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.3,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-129",
+   "name": "Bronzaroo",
+   "slug": "bronzaroo",
+   "card": "WK-S002-029",
+   "family": "FAM-113",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-128",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.3,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-130",
+   "name": "Moonbun",
+   "slug": "moonbun",
+   "card": "WK-S002-030",
+   "family": "FAM-114",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-131",
+   "affinity": {
+    "primary": "Wonder",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.65,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-131",
+   "name": "Moonhare",
+   "slug": "moonhare",
+   "card": "WK-S002-031",
+   "family": "FAM-114",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-130",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Wonder",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-132",
+   "name": "Rustleech",
+   "slug": "rustleech",
+   "card": "WK-S002-032",
+   "family": "FAM-115",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 2,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": "SP-133",
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.3,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-133",
+   "name": "Corrodeon",
+   "slug": "corrodeon",
+   "card": "WK-S002-033",
+   "family": "FAM-115",
+   "family_status": "roster",
+   "stage": 2,
+   "stages_in_family": 2,
+   "stage_label": "Stage 1",
+   "evolves_from": "SP-132",
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Iron",
+    "secondary": null,
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.3,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  },
+  {
+   "id": "SP-134",
+   "name": "Duskleaf",
+   "slug": "duskleaf",
+   "card": "WK-S002-034",
+   "family": "FAM-116",
+   "family_status": "roster",
+   "stage": 1,
+   "stages_in_family": 1,
+   "stage_label": "Basic",
+   "evolves_from": null,
+   "evolves_to": null,
+   "affinity": {
+    "primary": "Verdant",
+    "secondary": "Dusk",
+    "status": "roster",
+    "note": ""
+   },
+   "mascot": false,
+   "fandom": {
+    "value": 0.55,
+    "status": "decided",
+    "note": "starting collector demand; prices still move with supply, demand and play"
+   }
+  }
+ ],
+ "cards": [
+  {
+   "id": "WK-S002-001",
+   "number": 1,
+   "category": "creature",
+   "roster_name": "Velumi",
+   "name": "Velumi",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-001-velumi.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-101",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Dim Glow",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Flip a coin. If heads, the Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Moth Brush",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-002",
+   "number": 2,
+   "category": "creature",
+   "roster_name": "Velunara",
+   "name": "Velunara",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-002-velunara.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-102",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Lunar Dust",
+      "cost": "DC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature is now Poisoned.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Night Arc",
+      "cost": "DAC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-003",
+   "number": 3,
+   "category": "creature",
+   "roster_name": "Velunox",
+   "name": "Velunox",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-003-velunox.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-103",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 160,
+    "retreat": 2,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Twilight Veil",
+      "cost": "DC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Eclipse Flare",
+      "cost": "DAC",
+      "damage": 130,
+      "damage_label": "130",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
+     }
+    ],
+    "ability": {
+     "name": "Starveil",
+     "kind": "once",
+     "text": "Once during your turn, you may draw a card.",
+     "ops": [
+      [
+       "draw",
+       1
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "WK-S002-004",
+   "number": 4,
+   "category": "creature",
+   "roster_name": "Cindermite",
+   "name": "Cindermite",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-004-cindermite.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-104",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Spark Nibble",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Hot Rivet",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Burned.",
+      "ops": [
+       [
+        "status",
+        "burned",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-005",
+   "number": 5,
+   "category": "creature",
+   "roster_name": "Forgewing",
+   "name": "Forgewing",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-005-forgewing.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-105",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 90,
+    "retreat": 1,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Bellows Gust",
+      "cost": "IC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Forge Dive",
+      "cost": "IEC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-006",
+   "number": 6,
+   "category": "creature",
+   "roster_name": "Crucimoth",
+   "name": "Crucimoth",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-006-crucimoth.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-106",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 160,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Molten Dust",
+      "cost": "IC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "The Defending creature is now Burned.",
+      "ops": [
+       [
+        "status",
+        "burned",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Crucible Wing",
+      "cost": "IIEC",
+      "damage": 170,
+      "damage_label": "170",
+      "text": "Discard 2 Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        2
+       ]
+      ]
+     }
+    ],
+    "ability": {
+     "name": "Slag Plating",
+     "kind": "passive",
+     "text": "This creature takes 10 less damage from attacks.",
+     "ops": [
+      [
+       "reduce",
+       10
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "WK-S002-007",
+   "number": 7,
+   "category": "creature",
+   "roster_name": "Murklet",
+   "name": "Murklet",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-007-murklet.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-107",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Bog Splash",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "The Defending creature is now Poisoned.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Mud Tumble",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-008",
+   "number": 8,
+   "category": "creature",
+   "roster_name": "Fenwisp",
+   "name": "Fenwisp",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-008-fenwisp.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-108",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 90,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Marsh Light",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Will-o'-Bite",
+      "cost": "DDC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-009",
+   "number": 9,
+   "category": "creature",
+   "roster_name": "Mireveil",
+   "name": "Mireveil",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-009-mireveil.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-109",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 150,
+    "retreat": 2,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Drowning Mist",
+      "cost": "DC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature is now Poisoned. The Defending creature can't retreat during your opponent's next turn.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ],
+       [
+        "no_retreat_def"
+       ]
+      ]
+     },
+     {
+      "name": "Mire Grasp",
+      "cost": "DDC",
+      "damage": 90,
+      "damage_label": "90+",
+      "text": "If the Defending creature is affected by a Special Condition, this attack does 60 more damage.",
+      "ops": [
+       [
+        "bonus_status",
+        60
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-010",
+   "number": 10,
+   "category": "creature",
+   "roster_name": "Rivetick",
+   "name": "Rivetick",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-010-rivetick.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-110",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Tick Tock",
+      "cost": "I",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Rivet Bite",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-011",
+   "number": 11,
+   "category": "creature",
+   "roster_name": "Boltrix",
+   "name": "Boltrix",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-011-boltrix.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-111",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Arc Weld",
+      "cost": "IC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Overclock",
+      "cost": "IIC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "This creature also does 20 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-012",
+   "number": 12,
+   "category": "creature",
+   "roster_name": "Gloamkit",
+   "name": "Gloamkit",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-012-gloamkit.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-112",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Shadow Pounce",
+      "cost": "D",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Night Swipe",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30+",
+      "text": "Flip a coin. If heads, this attack does 20 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-013",
+   "number": 13,
+   "category": "creature",
+   "roster_name": "Noctelle",
+   "name": "Noctelle",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-013-noctelle.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-113",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Dusk Dance",
+      "cost": "DC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Before doing damage, you may switch 1 of your opponent's Benched creatures with their Active creature.",
+      "ops": [
+       [
+        "gust"
+       ]
+      ]
+     },
+     {
+      "name": "Midnight Claw",
+      "cost": "DDC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-014",
+   "number": 14,
+   "category": "creature",
+   "roster_name": "Tinibble",
+   "name": "Tinibble",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-014-tinibble.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-114",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Tin Chew",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Scrap Bash",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "During your opponent's next turn, this creature takes 10 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-015",
+   "number": 15,
+   "category": "creature",
+   "roster_name": "Gearjaw",
+   "name": "Gearjaw",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-015-gearjaw.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-115",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Gear Grind",
+      "cost": "IC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Jaw Crank",
+      "cost": "IIC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-016",
+   "number": 16,
+   "category": "creature",
+   "roster_name": "Shiverfin",
+   "name": "Shiverfin",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-016-shiverfin.standing-three-quarter",
+    "background": "scene.tide.03"
+   },
+   "species": "SP-116",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Chill Splash",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Frost Fin",
+      "cost": "TC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-017",
+   "number": 17,
+   "category": "creature",
+   "roster_name": "Glacurrent",
+   "name": "Glacurrent",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-017-glacurrent.standing-three-quarter",
+    "background": "scene.tide.03"
+   },
+   "species": "SP-117",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Ice Current",
+      "cost": "TC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Switch this creature with 1 of your Benched creatures.",
+      "ops": [
+       [
+        "self_switch"
+       ]
+      ]
+     },
+     {
+      "name": "Glacier Rush",
+      "cost": "TTC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-018",
+   "number": 18,
+   "category": "creature",
+   "roster_name": "Bristlecap",
+   "name": "Bristlecap",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-018-bristlecap.standing-three-quarter",
+    "background": "scene.dsk-119-starlit-refuge"
+   },
+   "species": "SP-118",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Spore Puff",
+      "cost": "V",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Flip a coin. If heads, the Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Cap Bump",
+      "cost": "VC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-019",
+   "number": 19,
+   "category": "creature",
+   "roster_name": "Thornwarden",
+   "name": "Thornwarden",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-019-thornwarden.standing-three-quarter",
+    "background": "scene.dsk-119-starlit-refuge"
+   },
+   "species": "SP-119",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Thorn Wall",
+      "cost": "VC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "During your opponent's next turn, this creature takes 20 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Warden's Lash",
+      "cost": "VVC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-020",
+   "number": 20,
+   "category": "creature",
+   "roster_name": "Flickerpup",
+   "name": "Flickerpup",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-020-flickerpup.standing-three-quarter",
+    "background": "scene.dsk-113-lantern-hollow"
+   },
+   "species": "SP-120",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Glow Yip",
+      "cost": "W",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Lantern Leap",
+      "cost": "WC",
+      "damage": 30,
+      "damage_label": "30+",
+      "text": "Flip a coin. If heads, this attack does 20 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-021",
+   "number": 21,
+   "category": "creature",
+   "roster_name": "Lanternox",
+   "name": "Lanternox",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-021-lanternox.standing-three-quarter",
+    "background": "scene.dsk-113-lantern-hollow"
+   },
+   "species": "SP-121",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Lantern Sway",
+      "cost": "WC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Bright Charge",
+      "cost": "WWC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
+     }
+    ],
+    "ability": {
+     "name": "Guiding Light",
+     "kind": "once",
+     "text": "Once during your turn, you may heal 20 damage from 1 of your creatures.",
+     "ops": [
+      [
+       "heal_one",
+       20
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "WK-S002-022",
+   "number": 22,
+   "category": "creature",
+   "roster_name": "Ashmole",
+   "name": "Ashmole",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-022-ashmole.standing-three-quarter",
+    "background": "scene.dsk-117-furnace-tunnels"
+   },
+   "species": "SP-122",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Tide",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Ash Dig",
+      "cost": "E",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Cinder Burrow",
+      "cost": "EC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "During your opponent's next turn, this creature takes 10 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-023",
+   "number": 23,
+   "category": "creature",
+   "roster_name": "Furnaceback",
+   "name": "Furnaceback",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-023-furnaceback.standing-three-quarter",
+    "background": "scene.dsk-117-furnace-tunnels"
+   },
+   "species": "SP-123",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 130,
+    "retreat": 3,
+    "weakness": "Tide",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Furnace Slam",
+      "cost": "EC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Flip a coin. If heads, the Defending creature is now Burned.",
+      "ops": [
+       [
+        "status",
+        "burned",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Firebox Charge",
+      "cost": "EIC",
+      "damage": 110,
+      "damage_label": "110",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-024",
+   "number": 24,
+   "category": "creature",
+   "roster_name": "Starlingo",
+   "name": "Starlingo",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-024-starlingo.standing-three-quarter",
+    "background": "scene.dsk-115-rusted-observatory"
+   },
+   "species": "SP-124",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Star Peck",
+      "cost": "A",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Glimmer Wing",
+      "cost": "AC",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-025",
+   "number": 25,
+   "category": "creature",
+   "roster_name": "Orbitern",
+   "name": "Orbitern",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-025-orbitern.standing-three-quarter",
+    "background": "scene.dsk-115-rusted-observatory"
+   },
+   "species": "SP-125",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Orbit Dive",
+      "cost": "AC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "This attack also does 10 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "Constellation",
+      "cost": "AAC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-026",
+   "number": 26,
+   "category": "creature",
+   "roster_name": "Hollowisp",
+   "name": "Hollowisp",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-026-hollowisp.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-126",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 50,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Wisp Touch",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Fade",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Switch this creature with 1 of your Benched creatures.",
+      "ops": [
+       [
+        "self_switch"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-027",
+   "number": 27,
+   "category": "creature",
+   "roster_name": "Hollowraith",
+   "name": "Hollowraith",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-027-hollowraith.standing-three-quarter",
+    "background": "scene.dsk-111-gloamfen-crossing"
+   },
+   "species": "SP-127",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Haunt",
+      "cost": "DC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Your opponent discards a random card from their hand.",
+      "ops": [
+       [
+        "opp_discard_random",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Wraith Wail",
+      "cost": "DDC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "Flip a coin. If heads, the Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-028",
+   "number": 28,
+   "category": "creature",
+   "roster_name": "Copperoo",
+   "name": "Copperoo",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-028-copperoo.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-128",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Copper Hop",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Pouch Kick",
+      "cost": "IC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-029",
+   "number": 29,
+   "category": "creature",
+   "roster_name": "Bronzaroo",
+   "name": "Bronzaroo",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-029-bronzaroo.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-129",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Bronze Bound",
+      "cost": "IC",
+      "damage": 50,
+      "damage_label": "50+",
+      "text": "Flip a coin. If heads, this attack does 30 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        30
+       ]
+      ]
+     },
+     {
+      "name": "Tail Hammer",
+      "cost": "IIC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "This creature also does 10 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-030",
+   "number": 30,
+   "category": "creature",
+   "roster_name": "Moonbun",
+   "name": "Moonbun",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-030-moonbun.standing-three-quarter",
+    "background": "scene.dsk-114-moonfall-terrace"
+   },
+   "species": "SP-130",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Bun Bounce",
+      "cost": "W",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Moonhop",
+      "cost": "WC",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Draw a card.",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-031",
+   "number": 31,
+   "category": "creature",
+   "roster_name": "Moonhare",
+   "name": "Moonhare",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-031-moonhare.standing-three-quarter",
+    "background": "scene.dsk-114-moonfall-terrace"
+   },
+   "species": "SP-131",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Crescent Kick",
+      "cost": "WC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Lunar Leap",
+      "cost": "WWC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "Switch this creature with 1 of your Benched creatures.",
+      "ops": [
+       [
+        "self_switch"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-032",
+   "number": 32,
+   "category": "creature",
+   "roster_name": "Rustleech",
+   "name": "Rustleech",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-032-rustleech.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-132",
+   "rarity": {
+    "value": "common",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Rust Bite",
+      "cost": "I",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Latch",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "The Defending creature can't retreat during your opponent's next turn.",
+      "ops": [
+       [
+        "no_retreat_def"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-033",
+   "number": 33,
+   "category": "creature",
+   "roster_name": "Corrodeon",
+   "name": "Corrodeon",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-033-corrodeon.standing-three-quarter",
+    "background": "scene.dsk-112-old-ironworks"
+   },
+   "species": "SP-133",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Corrode",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Oxide Crush",
+      "cost": "IIC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-034",
+   "number": 34,
+   "category": "creature",
+   "roster_name": "Duskleaf",
+   "name": "Duskleaf",
+   "print_class": "new_species",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.dsk-034-duskleaf.standing-three-quarter",
+    "background": "scene.dsk-119-starlit-refuge"
+   },
+   "species": "SP-134",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 90,
+    "retreat": 1,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Twilight Leaf",
+      "cost": "V",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Heal 10 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "Gloom Bloom",
+      "cost": "VDC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "The Defending creature is now Poisoned.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-035",
+   "number": 35,
+   "category": "creature",
+   "roster_name": "Prismotl",
+   "name": "Prismotl",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.002-prismotl.standing",
+    "background": "scene.tide.03"
+   },
+   "reprint_of": "WK-S001-002",
+   "identity_note": "Reprint of WK-S001-002: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-002",
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Bubble Glint",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Prism Flicker",
+      "cost": "TC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-036",
+   "number": 36,
+   "category": "creature",
+   "roster_name": "Bashlet",
+   "name": "Bashlet",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.005-bashlet.standing",
+    "background": "scene.stone.04"
+   },
+   "reprint_of": "WK-S001-005",
+   "identity_note": "Reprint of WK-S001-005: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-005",
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Headbutt",
+      "cost": "S",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Tail Bump",
+      "cost": "SC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-037",
+   "number": 37,
+   "category": "creature",
+   "roster_name": "Koilet",
+   "name": "Koilet",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.008-koilet.standing",
+    "background": "scene.tide.03"
+   },
+   "reprint_of": "WK-S001-008",
+   "identity_note": "Reprint of WK-S001-008: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-008",
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Ripple",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Splash Leap",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-038",
+   "number": 38,
+   "category": "creature",
+   "roster_name": "Rolyte",
+   "name": "Rolyte",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.011-rolyte.standing",
+    "background": "scene.stone.06"
+   },
+   "reprint_of": "WK-S001-011",
+   "identity_note": "Reprint of WK-S001-011: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-011",
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Curl Up",
+      "cost": "S",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "During your opponent's next turn, this creature takes 20 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Roll Bash",
+      "cost": "SC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-039",
+   "number": 39,
+   "category": "creature",
+   "roster_name": "Frondolin",
+   "name": "Frondolin",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.014-frondolin.standing",
+    "background": "scene.verdant.09"
+   },
+   "reprint_of": "WK-S001-014",
+   "identity_note": "Reprint of WK-S001-014: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-014",
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Leaf Curl",
+      "cost": "V",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Scale Swipe",
+      "cost": "VC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-040",
+   "number": 40,
+   "category": "creature",
+   "roster_name": "Creskit",
+   "name": "Creskit",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.019-creskit.standing",
+    "background": "scene.astral.08"
+   },
+   "reprint_of": "WK-S001-019",
+   "identity_note": "Reprint of WK-S001-019: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-019",
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Moon Pounce",
+      "cost": "A",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Crescent Claw",
+      "cost": "AC",
+      "damage": 30,
+      "damage_label": "30+",
+      "text": "Flip a coin. If heads, this attack does 20 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        20
+       ]
+      ]
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-041",
+   "number": 41,
+   "category": "creature",
+   "roster_name": "Mistip",
+   "name": "Mistip",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.024-mistip.standing",
+    "background": "scene.storm.04"
+   },
+   "reprint_of": "WK-S001-024",
+   "identity_note": "Reprint of WK-S001-024: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-024",
+   "gameplay": {
+    "status": "designed",
+    "hp": 50,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Drizzle",
+      "cost": "L",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Static Puff",
+      "cost": "LC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-042",
+   "number": 42,
+   "category": "creature",
+   "roster_name": "Glimlet",
+   "name": "Glimlet",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.033-glimlet.standing",
+    "background": "scene.dusk.04"
+   },
+   "reprint_of": "WK-S001-033",
+   "identity_note": "Reprint of WK-S001-033: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-033",
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Glimmer Hex",
+      "cost": "D",
+      "damage": 10,
+      "damage_label": "10",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Shade Bite",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-043",
+   "number": 43,
+   "category": "creature",
+   "roster_name": "Rivbit",
+   "name": "Rivbit",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.036-rivbit.standing",
+    "background": "scene.iron.01"
+   },
+   "reprint_of": "WK-S001-036",
+   "identity_note": "Reprint of WK-S001-036: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-036",
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Rivet Ram",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Metal Nibble",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-044",
+   "number": 44,
+   "category": "creature",
+   "roster_name": "Pebblamb",
+   "name": "Pebblamb",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.039-pebblamb.standing",
+    "background": "scene.stone.02"
+   },
+   "reprint_of": "WK-S001-039",
+   "identity_note": "Reprint of WK-S001-039: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-039",
+   "gameplay": {
+    "status": "designed",
+    "hp": 70,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Pebble Toss",
+      "cost": "S",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Woolly Shove",
+      "cost": "SC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-045",
+   "number": 45,
+   "category": "creature",
+   "roster_name": "Quibbit",
+   "name": "Quibbit",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.042-quibbit.standing",
+    "background": "scene.wonder.07"
+   },
+   "reprint_of": "WK-S001-042",
+   "identity_note": "Reprint of WK-S001-042: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-042",
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Quizzical Hop",
+      "cost": "W",
+      "damage": 0,
+      "damage_label": "",
+      "text": "Draw 2 cards.",
+      "ops": [
+       [
+        "draw",
+        2
+       ]
+      ]
+     },
+     {
+      "name": "Hop Kick",
+      "cost": "WC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-046",
+   "number": 46,
+   "category": "creature",
+   "roster_name": "Mossnip",
+   "name": "Mossnip",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.045-mossnip.standing",
+    "background": "scene.verdant.01"
+   },
+   "reprint_of": "WK-S001-045",
+   "identity_note": "Reprint of WK-S001-045: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-045",
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Moss Nip",
+      "cost": "V",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Soft Graze",
+      "cost": "VC",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-047",
+   "number": 47,
+   "category": "creature",
+   "roster_name": "Reefkin",
+   "name": "Reefkin",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.047-reefkin.standing",
+    "background": "scene.tide.08"
+   },
+   "reprint_of": "WK-S001-047",
+   "identity_note": "Reprint of WK-S001-047: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-047",
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Reef Bubble",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Coral Dart",
+      "cost": "TC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-048",
+   "number": 48,
+   "category": "creature",
+   "roster_name": "Nibrock",
+   "name": "Nibrock",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.053-nibrock.standing",
+    "background": "scene.iron.04"
+   },
+   "reprint_of": "WK-S001-053",
+   "identity_note": "Reprint of WK-S001-053: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-053",
+   "gameplay": {
+    "status": "designed",
+    "hp": 60,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Iron Nibble",
+      "cost": "I",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Burrow",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "During your opponent's next turn, this creature takes 10 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        10
+       ]
+      ]
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-049",
+   "number": 49,
+   "category": "creature",
+   "roster_name": "Dewink",
+   "name": "Dewink",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.055-dewink.standing",
+    "background": "scene.tide.08"
+   },
+   "reprint_of": "WK-S001-055",
+   "identity_note": "Reprint of WK-S001-055: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-055",
+   "gameplay": {
+    "status": "designed",
+    "hp": 50,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Dew Splash",
+      "cost": "T",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Morning Drop",
+      "cost": "TC",
+      "damage": 20,
+      "damage_label": "20",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-050",
+   "number": 50,
+   "category": "creature",
+   "roster_name": "Clampup",
+   "name": "Clampup",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.064-clampup.standing",
+    "background": "scene.iron.01"
+   },
+   "reprint_of": "WK-S001-064",
+   "identity_note": "Reprint of WK-S001-064: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "species": "SP-064",
+   "gameplay": {
+    "status": "designed",
+    "hp": 80,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Clamp",
+      "cost": "IC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Bronze Bite",
+      "cost": "IIC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "",
+      "ops": []
+     }
+    ]
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-051",
+   "number": 51,
+   "category": "creature",
+   "roster_name": "Opalotl",
+   "name": "Opalotl",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.003-opalotl.standing",
+    "background": "scene.tide.08"
+   },
+   "species": "SP-003",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Night Lustre",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Flip a coin. If heads, the Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Opal Surge",
+      "cost": "TAC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-052",
+   "number": 52,
+   "category": "creature",
+   "roster_name": "Aurorotl",
+   "name": "Aurorotl",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.004-aurorotl.standing",
+    "background": "scene.tide.03"
+   },
+   "species": "SP-004",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 160,
+    "retreat": 2,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Dusk Aurora",
+      "cost": "TC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "This attack also does 20 damage to 1 of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "snipe",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Starlit Curtain",
+      "cost": "TTAC",
+      "damage": 150,
+      "damage_label": "150",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-053",
+   "number": 53,
+   "category": "creature",
+   "roster_name": "Maceback",
+   "name": "Maceback",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.006-maceback.standing",
+    "background": "scene.stone.03"
+   },
+   "species": "SP-006",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Iron Mace",
+      "cost": "SC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Spike Roll",
+      "cost": "SSC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "This creature also does 10 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-054",
+   "number": 54,
+   "category": "creature",
+   "roster_name": "Fortisaur",
+   "name": "Fortisaur",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.007-fortisaur.standing",
+    "background": "scene.stone.02"
+   },
+   "species": "SP-007",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 180,
+    "retreat": 3,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Rampart Quake",
+      "cost": "SSC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "This attack also does 10 damage to each of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "spread",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "Siege Stomp",
+      "cost": "SSSC",
+      "damage": 160,
+      "damage_label": "160",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-055",
+   "number": 55,
+   "category": "creature",
+   "roster_name": "Runakoi",
+   "name": "Runakoi",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.009-runakoi.standing",
+    "background": "scene.tide.08"
+   },
+   "species": "SP-009",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Night Current",
+      "cost": "TC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Switch this creature with 1 of your Benched creatures.",
+      "ops": [
+       [
+        "self_switch"
+       ]
+      ]
+     },
+     {
+      "name": "Rune Splash",
+      "cost": "TAC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-056",
+   "number": 56,
+   "category": "creature",
+   "roster_name": "Koirune",
+   "name": "Koirune",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.010-koirune.standing",
+    "background": "scene.tide.03"
+   },
+   "species": "SP-010",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 170,
+    "retreat": 2,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Starwake",
+      "cost": "TC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Heal 20 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Moonlit Torrent",
+      "cost": "TTAC",
+      "damage": 160,
+      "damage_label": "160",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-057",
+   "number": 57,
+   "category": "creature",
+   "roster_name": "Shelladin",
+   "name": "Shelladin",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.012-shelladin.standing",
+    "background": "scene.stone.05"
+   },
+   "species": "SP-012",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Lance Guard",
+      "cost": "SC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "During your opponent's next turn, this creature takes 20 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Paladin Charge",
+      "cost": "SIC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-058",
+   "number": 58,
+   "category": "creature",
+   "roster_name": "Aegisopod",
+   "name": "Aegisopod",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.013-aegisopod.standing",
+    "background": "scene.stone.04"
+   },
+   "species": "SP-013",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 180,
+    "retreat": 3,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Iron Bastion",
+      "cost": "SC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "During your opponent's next turn, this creature takes 30 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        30
+       ]
+      ]
+     },
+     {
+      "name": "Aegis Crash",
+      "cost": "SSIC",
+      "damage": 150,
+      "damage_label": "150",
+      "text": "",
+      "ops": []
+     }
+    ],
+    "ability": {
+     "name": "Dusk Plating",
+     "kind": "passive",
+     "text": "If this creature has a Gear attached, it takes 20 less damage from attacks.",
+     "ops": [
+      [
+       "tool_reduce",
+       20
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "WK-S002-059",
+   "number": 59,
+   "category": "creature",
+   "roster_name": "Pangrove",
+   "name": "Pangrove",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.015-pangrove.standing",
+    "background": "scene.verdant.07"
+   },
+   "species": "SP-015",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Root Snare",
+      "cost": "VC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature can't retreat during your opponent's next turn.",
+      "ops": [
+       [
+        "no_retreat_def"
+       ]
+      ]
+     },
+     {
+      "name": "Bough Swing",
+      "cost": "VVC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-060",
+   "number": 60,
+   "category": "creature",
+   "roster_name": "Canopang",
+   "name": "Canopang",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.016-canopang.standing",
+    "background": "scene.verdant.05"
+   },
+   "species": "SP-016",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 170,
+    "retreat": 3,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Canopy Shelter",
+      "cost": "VC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Heal 10 damage from each of your creatures.",
+      "ops": [
+       [
+        "heal_team",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "Grove Titan",
+      "cost": "VVVC",
+      "damage": 160,
+      "damage_label": "160",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-061",
+   "number": 61,
+   "category": "creature",
+   "roster_name": "Astrynx",
+   "name": "Astrynx",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.020-astrynx.standing",
+    "background": "scene.astral.06"
+   },
+   "species": "SP-020",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 1,
+    "weakness": "Dusk",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Comet Pounce",
+      "cost": "AC",
+      "damage": 40,
+      "damage_label": "40+",
+      "text": "Flip a coin. If heads, this attack does 30 more damage.",
+      "ops": [
+       [
+        "coin_bonus",
+        30
+       ]
+      ]
+     },
+     {
+      "name": "Night Hunter",
+      "cost": "AAC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-062",
+   "number": 62,
+   "category": "creature",
+   "roster_name": "Hushwing",
+   "name": "Hushwing",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.034-hushwing.standing",
+    "background": "scene.dusk.03"
+   },
+   "species": "SP-034",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Hush",
+      "cost": "DC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "The Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Muffled Strike",
+      "cost": "DDC",
+      "damage": 80,
+      "damage_label": "80+",
+      "text": "If the Defending creature is affected by a Special Condition, this attack does 20 more damage.",
+      "ops": [
+       [
+        "bonus_status",
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-063",
+   "number": 63,
+   "category": "creature",
+   "roster_name": "Veilmora",
+   "name": "Veilmora",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.035-veilmora.standing",
+    "background": "scene.dusk.02"
+   },
+   "species": "SP-035",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 160,
+    "retreat": 2,
+    "weakness": "Wonder",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Veil Dance",
+      "cost": "DC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Nightfall Rend",
+      "cost": "DDC",
+      "damage": 110,
+      "damage_label": "110+",
+      "text": "If the Defending creature is affected by a Special Condition, this attack does 30 more damage.",
+      "ops": [
+       [
+        "bonus_status",
+        30
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-064",
+   "number": 64,
+   "category": "creature",
+   "roster_name": "Boltusk",
+   "name": "Boltusk",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.037-boltusk.standing",
+    "background": "scene.iron.04"
+   },
+   "species": "SP-037",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Tusk Spark",
+      "cost": "IC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Flip a coin. If heads, the Defending creature is now Paralyzed.",
+      "ops": [
+       [
+        "status",
+        "paralyzed",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Forge Charge",
+      "cost": "IIC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "This creature also does 10 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-065",
+   "number": 65,
+   "category": "creature",
+   "roster_name": "Ferradon",
+   "name": "Ferradon",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.038-ferradon.standing",
+    "background": "scene.iron.03"
+   },
+   "species": "SP-038",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 180,
+    "retreat": 3,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Iron Tide",
+      "cost": "IC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
+     },
+     {
+      "name": "Ferrous Quake",
+      "cost": "IIIC",
+      "damage": 180,
+      "damage_label": "180",
+      "text": "During your next turn, this creature can't attack.",
+      "ops": [
+       [
+        "cant_attack_next"
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-066",
+   "number": 66,
+   "category": "creature",
+   "roster_name": "Cairnram",
+   "name": "Cairnram",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.040-cairnram.standing",
+    "background": "scene.stone.01"
+   },
+   "species": "SP-040",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 2,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Cairn Guard",
+      "cost": "SC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "During your opponent's next turn, this creature takes 20 less damage from attacks.",
+      "ops": [
+       [
+        "guard",
+        20
+       ]
+      ]
+     },
+     {
+      "name": "Rubble Ram",
+      "cost": "SSC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "This creature also does 10 damage to itself.",
+      "ops": [
+       [
+        "recoil",
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-067",
+   "number": 67,
+   "category": "creature",
+   "roster_name": "Monolox",
+   "name": "Monolox",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.041-monolox.standing",
+    "background": "scene.stone.09"
+   },
+   "species": "SP-041",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 190,
+    "retreat": 4,
+    "weakness": "Verdant",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Monolith Slam",
+      "cost": "SSC",
+      "damage": 100,
+      "damage_label": "100",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Gravestone",
+      "cost": "SSSC",
+      "damage": 160,
+      "damage_label": "160",
+      "text": "Heal 30 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        30
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-068",
+   "number": 68,
+   "category": "creature",
+   "roster_name": "Whimhare",
+   "name": "Whimhare",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.043-whimhare.standing",
+    "background": "scene.wonder.06"
+   },
+   "species": "SP-043",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Iron",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Midnight Trick",
+      "cost": "WC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Before doing damage, you may switch 1 of your opponent's Benched creatures with their Active creature.",
+      "ops": [
+       [
+        "gust"
+       ]
+      ]
+     },
+     {
+      "name": "Hare Hex",
+      "cost": "WWC",
+      "damage": 60,
+      "damage_label": "60",
+      "text": "The Defending creature is now Confused.",
+      "ops": [
+       [
+        "status",
+        "confused",
+        0
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-069",
+   "number": 69,
+   "category": "creature",
+   "roster_name": "Fablehorn",
+   "name": "Fablehorn",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.044-fablehorn.standing",
+    "background": "scene.wonder.05"
+   },
+   "species": "SP-044",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 150,
+    "retreat": 2,
+    "weakness": "Iron",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Bedtime Story",
+      "cost": "WC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "The Defending creature is now Asleep.",
+      "ops": [
+       [
+        "status",
+        "asleep",
+        0
+       ]
+      ]
+     },
+     {
+      "name": "Legend's End",
+      "cost": "WWC",
+      "damage": 0,
+      "damage_label": "40×",
+      "text": "Flip 4 coins. This attack does 40 damage for each heads.",
+      "ops": [
+       [
+        "multi_coin",
+        4,
+        40
+       ]
+      ]
+     }
+    ],
+    "ability": {
+     "name": "Moral of the Story",
+     "kind": "once",
+     "text": "Once during your turn, you may draw a card.",
+     "ops": [
+      [
+       "draw",
+       1
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "id": "WK-S002-070",
+   "number": 70,
+   "category": "creature",
+   "roster_name": "Bramblebuck",
+   "name": "Bramblebuck",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.046-bramblebuck.standing",
+    "background": "scene.verdant.08"
+   },
+   "species": "SP-046",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Ember",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Thicket Charge",
+      "cost": "VC",
+      "damage": 50,
+      "damage_label": "50",
+      "text": "",
+      "ops": []
+     },
+     {
+      "name": "Night Bramble",
+      "cost": "VVC",
+      "damage": 70,
+      "damage_label": "70",
+      "text": "The Defending creature is now Poisoned.",
+      "ops": [
+       [
+        "status",
+        "poisoned",
+        0
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-071",
+   "number": 71,
+   "category": "creature",
+   "roster_name": "Corallume",
+   "name": "Corallume",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.048-corallume.standing",
+    "background": "scene.tide.03"
+   },
+   "species": "SP-048",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 110,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Lantern Reef",
+      "cost": "TC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Heal 10 damage from each of your creatures.",
+      "ops": [
+       [
+        "heal_team",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "Bioluminous Jet",
+      "cost": "TTC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-072",
+   "number": 72,
+   "category": "creature",
+   "roster_name": "Drillbadger",
+   "name": "Drillbadger",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.054-drillbadger.standing",
+    "background": "scene.iron.03"
+   },
+   "species": "SP-054",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 120,
+    "retreat": 2,
+    "weakness": "Astral",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Tunnel Ambush",
+      "cost": "IC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "Before doing damage, you may switch 1 of your opponent's Benched creatures with their Active creature.",
+      "ops": [
+       [
+        "gust"
+       ]
+      ]
+     },
+     {
+      "name": "Spiral Drill",
+      "cost": "IIC",
+      "damage": 90,
+      "damage_label": "90",
+      "text": "Flip a coin. If heads, discard an Essence from the Defending creature.",
+      "ops": [
+       [
+        "strip",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-073",
+   "number": 73,
+   "category": "creature",
+   "roster_name": "Bloomble",
+   "name": "Bloomble",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.056-bloomble.standing",
+    "background": "scene.tide.03"
+   },
+   "species": "SP-056",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 100,
+    "retreat": 1,
+    "weakness": "Storm",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Night Bloom",
+      "cost": "VC",
+      "damage": 30,
+      "damage_label": "30",
+      "text": "Heal 30 damage from this creature.",
+      "ops": [
+       [
+        "heal_self",
+        30
+       ]
+      ]
+     },
+     {
+      "name": "Dew Burst",
+      "cost": "TVC",
+      "damage": 80,
+      "damage_label": "80",
+      "text": "",
+      "ops": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-074",
+   "number": 74,
+   "category": "creature",
+   "roster_name": "Nimbusail",
+   "name": "Nimbusail",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-scene",
+    "subject": "cut.026-nimbusail.standing",
+    "background": "scene.storm.03"
+   },
+   "species": "SP-026",
+   "species_note": "First Bond species: same stage, evolution and affinity; new attacks",
+   "rarity": {
+    "value": "rare",
+    "status": "decided",
+    "note": "First Bond rule by stage: Basic common, Stage 1 uncommon, Stage 2 and standalone rare"
+   },
+   "gameplay": {
+    "status": "designed",
+    "hp": 150,
+    "retreat": 1,
+    "weakness": "Stone",
+    "prizes": 1,
+    "attacks": [
+     {
+      "name": "Night Squall",
+      "cost": "LC",
+      "damage": 40,
+      "damage_label": "40",
+      "text": "This attack also does 10 damage to each of your opponent's Benched creatures.",
+      "ops": [
+       [
+        "spread",
+        10
+       ]
+      ]
+     },
+     {
+      "name": "Eye of the Storm",
+      "cost": "LLC",
+      "damage": 120,
+      "damage_label": "120",
+      "text": "Discard an Essence attached to this creature.",
+      "ops": [
+       [
+        "discard_self",
+        1
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "WK-S002-075",
+   "number": 75,
+   "category": "ally",
+   "roster_name": "June Kestrel",
+   "name": "June Kestrel",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.076-june-kestrel.portrait"
+   },
+   "reprint_of": "WK-S001-076",
+   "identity_note": "Reprint of WK-S001-076: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Search your deck for a creature and put it into your hand. Search your deck for an Essence card and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "creature"
+     ],
+     [
+      "search",
+      "essence"
+     ]
+    ],
+    "role": "search",
+    "subtype": null
+   },
+   "fandom": {
+    "value": 0.8,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
+   "character": {
+    "id": "CH-076",
+    "identity": {
+     "status": "established",
+     "text": "June Kestrel: a young entry-point Keeper (bible). Preserve the established youthful silhouette and reference images."
+    }
+   },
+   "rarity": {
+    "value": "rare",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-076",
+   "number": 76,
+   "category": "ally",
+   "roster_name": "Nessa Flint",
+   "name": "Nessa Flint",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.080-nessa-flint.portrait"
+   },
+   "reprint_of": "WK-S001-080",
+   "identity_note": "Reprint of WK-S001-080: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Attach an Essence card from your discard pile to 1 of your creatures. Draw a card.",
+    "ops": [
+     [
+      "essence_from_discard",
+      1
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "accel",
+    "subtype": null
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
+   "character": {
+    "id": "CH-080",
+    "identity": {
+     "status": "sol_designs",
+     "text": "Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference."
+    }
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-077",
+   "number": 77,
+   "category": "ally",
+   "roster_name": "Iris Shade",
+   "name": "Iris Shade",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.090-iris-shade.portrait"
+   },
+   "reprint_of": "WK-S001-090",
+   "identity_note": "Reprint of WK-S001-090: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Look at your opponent's hand. Choose a card other than an Essence; they discard it. Draw 2 cards.",
+    "ops": [
+     [
+      "opp_discard_choice"
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
+   },
+   "fandom": {
+    "value": 0.55,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   },
+   "character": {
+    "id": "CH-090",
+    "identity": {
+     "status": "sol_designs",
+     "text": "Named in Appendix A. Not drawn in this repository yet. SOL designs the character from its earlier Wildkin art and character references; the first approved sheet becomes the reference."
+    }
+   },
+   "rarity": {
+    "value": "rare",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-078",
+   "number": 78,
+   "category": "ally",
+   "roster_name": "Professor Maren Vale — Night Survey",
+   "name": "Professor Maren Vale — Night Survey",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.075-professor-maren-vale.portrait",
+    "backdrop": "scene.dsk-115-rusted-observatory"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Look at the top 6 cards of your deck. Put 3 of them into your hand and shuffle the rest back.",
+    "ops": [
+     [
+      "look_take",
+      6,
+      3
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-075",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-075; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.6,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-079",
+   "number": 79,
+   "category": "ally",
+   "roster_name": "Warden Sorrel Pike — Iron Patrol",
+   "name": "Warden Sorrel Pike — Iron Patrol",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.077-warden-sorrel-pike.portrait",
+    "backdrop": "scene.dsk-112-old-ironworks"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Heal 40 damage from your Active creature. Switch your Active creature with 1 of your Benched creatures.",
+    "ops": [
+     [
+      "heal_active",
+      40
+     ],
+     [
+      "switch"
+     ]
+    ],
+    "role": "switch",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-077",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-077; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-080",
+   "number": 80,
+   "category": "ally",
+   "roster_name": "Toma Reed — Dusk Shelter",
+   "name": "Toma Reed — Dusk Shelter",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.078-toma-reed.portrait",
+    "backdrop": "scene.dsk-119-starlit-refuge"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Heal 20 damage from each of your creatures. Remove all Special Conditions from your creatures.",
+    "ops": [
+     [
+      "heal_all",
+      20
+     ],
+     [
+      "cure_all"
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-078",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-078; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-081",
+   "number": 81,
+   "category": "ally",
+   "roster_name": "Lita Moss — Field Medic",
+   "name": "Lita Moss — Field Medic",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.079-lita-moss.portrait",
+    "backdrop": "scene.dsk-113-lantern-hollow"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Heal 50 damage from 1 of your creatures. Draw a card.",
+    "ops": [
+     [
+      "heal_one",
+      50
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-079",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-079; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-082",
+   "number": 82,
+   "category": "ally",
+   "roster_name": "Pip Rowan — After Hours",
+   "name": "Pip Rowan — After Hours",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.082-pip-rowan.portrait",
+    "backdrop": "scene.dsk-114-moonfall-terrace"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Draw 2 cards. Search your deck for an Essence card and put it into your hand.",
+    "ops": [
+     [
+      "draw",
+      2
+     ],
+     [
+      "search",
+      "essence"
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-082",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-082; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-083",
+   "number": 83,
+   "category": "ally",
+   "roster_name": "Archivist Sera Wynn — Lost Ledger",
+   "name": "Archivist Sera Wynn — Lost Ledger",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.083-archivist-sera-wynn.portrait",
+    "backdrop": "scene.dsk-115-rusted-observatory"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Put up to 2 creatures from your discard pile into your hand. Draw a card.",
+    "ops": [
+     [
+      "recover",
+      2
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "recover",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-083",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-083; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-084",
+   "number": 84,
+   "category": "ally",
+   "roster_name": "Renn Calder — Rival Challenge",
+   "name": "Renn Calder — Rival Challenge",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.084-renn-calder.portrait",
+    "backdrop": "scene.dsk-118-silent-switchyard"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. During this turn, your Active creature's attacks do 20 more damage to your opponent's Active creature. Draw 2 cards.",
+    "ops": [
+     [
+      "boost",
+      20
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "boost",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-084",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-084; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-085",
+   "number": 85,
+   "category": "ally",
+   "roster_name": "Mira Quill — Midnight Market",
+   "name": "Mira Quill — Midnight Market",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.085-mira-quill.portrait",
+    "backdrop": "scene.dsk-113-lantern-hollow"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Search your deck for an Evolution creature and put it into your hand. Search your deck for an Essence card and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "evolution"
+     ],
+     [
+      "search",
+      "essence"
+     ]
+    ],
+    "role": "search",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "rare",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-085",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-085; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.5,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-086",
+   "number": 86,
+   "category": "ally",
+   "roster_name": "Sel Veyra — Directive Zero",
+   "name": "Sel Veyra — Directive Zero",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.086-sel-veyra.portrait",
+    "backdrop": "scene.dsk-116-blackglass-marsh"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Switch 1 of your opponent's Benched creatures with their Active creature. Discard an Essence attached to your opponent's Active creature.",
+    "ops": [
+     [
+      "gust"
+     ],
+     [
+      "strip_active"
+     ]
+    ],
+    "role": "gust",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "rare",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-086",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-086; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.78,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-087",
+   "number": 87,
+   "category": "ally",
+   "roster_name": "Dr. Cyl Vane — Prototype Lab",
+   "name": "Dr. Cyl Vane — Prototype Lab",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.088-dr-cyl-vane.portrait",
+    "backdrop": "scene.dsk-117-furnace-tunnels"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Attach an Essence card from your discard pile to 1 of your creatures. Switch your Active creature with 1 of your Benched creatures.",
+    "ops": [
+     [
+      "essence_from_discard",
+      1
+     ],
+     [
+      "switch"
+     ]
+    ],
+    "role": "accel",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-088",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-088; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-088",
+   "number": 88,
+   "category": "ally",
+   "roster_name": "Marshal Rook — Containment Order",
+   "name": "Marshal Rook — Containment Order",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.089-marshal-rook.portrait",
+    "backdrop": "scene.dsk-118-silent-switchyard"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Discard an Essence attached to 1 of your opponent's creatures. Your opponent's Active creature can't retreat during their next turn.",
+    "ops": [
+     [
+      "strip_any"
+     ],
+     [
+      "no_retreat_def"
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-089",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-089; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-089",
+   "number": 89,
+   "category": "ally",
+   "roster_name": "Cass Rell — Smuggler Route",
+   "name": "Cass Rell — Smuggler Route",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.087-cass-rell.portrait",
+    "backdrop": "scene.dsk-111-gloamfen-crossing"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Search your deck for a creature and put it into your hand. Draw a card.",
+    "ops": [
+     [
+      "search",
+      "creature"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "search",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-087",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-087; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-090",
+   "number": 90,
+   "category": "ally",
+   "roster_name": "Dex Harrow — Salvage Crew",
+   "name": "Dex Harrow — Salvage Crew",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.091-dex-harrow.portrait",
+    "backdrop": "scene.dsk-112-old-ironworks"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Put up to 3 Essence cards from your discard pile into your hand. Draw 2 cards.",
+    "ops": [
+     [
+      "recover_ess",
+      3
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "recover",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-091",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-091; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-091",
+   "number": 91,
+   "category": "ally",
+   "roster_name": "Brin Hollow — Lantern Watch",
+   "name": "Brin Hollow — Lantern Watch",
+   "print_class": "new_gameplay_print",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.092-brin-hollow.portrait",
+    "backdrop": "scene.dsk-113-lantern-hollow"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Look at the top 3 cards of your deck. Put 1 of them into your hand and shuffle the rest back. Draw 2 cards.",
+    "ops": [
+     [
+      "look_take",
+      3,
+      1
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-092",
+    "identity": {
+     "status": "established",
+     "text": "Same character as First Bond WK-S001-092; new card."
+    }
+   },
+   "fandom": {
+    "value": 0.38,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-092",
+   "number": 92,
+   "category": "ally",
+   "roster_name": "Edda Voss — Iron Cartographer",
+   "name": "Edda Voss — Iron Cartographer",
+   "print_class": "new_character",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "cut.dsk-092-edda-voss-iron-cartographer.portrait",
+    "background": null,
+    "backdrop": "scene.dsk-115-rusted-observatory"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Ally. You may play only 1 Ally each turn. Search your deck for a Biome or an Essence card and put it into your hand. Draw 2 cards.",
+    "ops": [
+     [
+      "search",
+      "biome_or_essence"
+     ],
+     [
+      "draw",
+      2
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "rare",
+    "status": "decided"
+   },
+   "character": {
+    "id": "CH-292",
+    "identity": {
+     "status": "roster",
+     "text": "New character in Duskfall; the approved Duskfall portrait is the reference."
+    }
+   },
+   "fandom": {
+    "value": 0.7,
+    "status": "decided",
+    "note": "starting collector demand for the character"
+   }
+  },
+  {
+   "id": "WK-S002-093",
+   "number": 93,
+   "category": "gear",
+   "roster_name": "Bond Charm",
+   "name": "Bond Charm",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.093-bond-charm"
+   },
+   "reprint_of": "WK-S001-093",
+   "identity_note": "Reprint of WK-S001-093: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Attach to a creature. It gets +30 HP. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_hp",
+      30
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-094",
+   "number": 94,
+   "category": "gear",
+   "roster_name": "Biome Compass",
+   "name": "Biome Compass",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.096-biome-compass"
+   },
+   "reprint_of": "WK-S001-096",
+   "identity_note": "Reprint of WK-S001-096: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Search your deck for a Biome or an Essence card and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "biome_or_essence"
+     ]
+    ],
+    "role": "search",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-095",
+   "number": 95,
+   "category": "gear",
+   "roster_name": "Glow Lantern",
+   "name": "Glow Lantern",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.097-glow-lantern"
+   },
+   "reprint_of": "WK-S001-097",
+   "identity_note": "Reprint of WK-S001-097: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Look at the top 3 cards of your deck. Put 1 of them into your hand and shuffle the rest back.",
+    "ops": [
+     [
+      "look_take",
+      3,
+      1
+     ]
+    ],
+    "role": "draw",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-096",
+   "number": 96,
+   "category": "gear",
+   "roster_name": "Null Collar",
+   "name": "Null Collar",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.109-null-collar"
+   },
+   "reprint_of": "WK-S001-109",
+   "identity_note": "Reprint of WK-S001-109: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Attach to a creature. It has no Weakness. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_no_weak"
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-097",
+   "number": 97,
+   "category": "gear",
+   "roster_name": "Dusk Beacon",
+   "name": "Dusk Beacon",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-097-dusk-beacon",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Switch your Active creature with 1 of your Benched creatures.",
+    "ops": [
+     [
+      "switch"
+     ]
+    ],
+    "role": "switch",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-098",
+   "number": 98,
+   "category": "gear",
+   "roster_name": "Ironroot Anchor",
+   "name": "Ironroot Anchor",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-098-ironroot-anchor",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Attach to a creature. It gets +20 HP. It also takes 10 less damage from attacks. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_hp",
+      20
+     ],
+     [
+      "tool_reduce",
+      10
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-099",
+   "number": 99,
+   "category": "gear",
+   "roster_name": "Signal Scrambler",
+   "name": "Signal Scrambler",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-099-signal-scrambler",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Your opponent discards a random card from their hand.",
+    "ops": [
+     [
+      "opp_discard_random",
+      1
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-100",
+   "number": 100,
+   "category": "gear",
+   "roster_name": "Moonthread Net",
+   "name": "Moonthread Net",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-100-moonthread-net",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Your opponent's Active creature can't retreat during their next turn. During this turn, that creature takes 20 more damage from attacks.",
+    "ops": [
+     [
+      "no_retreat_def"
+     ],
+     [
+      "vuln",
+      20
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-101",
+   "number": 101,
+   "category": "gear",
+   "roster_name": "Portable Forge",
+   "name": "Portable Forge",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-101-portable-forge",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Attach an Essence card from your discard pile to 1 of your creatures. Then discard a card from your hand.",
+    "ops": [
+     [
+      "essence_from_discard",
+      1
+     ],
+     [
+      "discard_hand",
+      1
+     ]
+    ],
+    "role": "accel",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-102",
+   "number": 102,
+   "category": "gear",
+   "roster_name": "Hollow Lens",
+   "name": "Hollow Lens",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-102-hollow-lens",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Look at the top 5 cards of your deck. Put 1 of them into your hand and shuffle the rest back.",
+    "ops": [
+     [
+      "look_take",
+      5,
+      1
+     ]
+    ],
+    "role": "draw",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-103",
+   "number": 103,
+   "category": "gear",
+   "roster_name": "Keeper Flare",
+   "name": "Keeper Flare",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-103-keeper-flare",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Search your deck for a Basic creature and put it onto your Bench.",
+    "ops": [
+     [
+      "bench_basic",
+      1
+     ]
+    ],
+    "role": "search",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-104",
+   "number": 104,
+   "category": "gear",
+   "roster_name": "Rustproof Kit",
+   "name": "Rustproof Kit",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-104-rustproof-kit",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Attach to a creature. It can't be affected by Special Conditions. It also takes 10 less damage from attacks. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_status_immune"
+     ],
+     [
+      "tool_reduce",
+      10
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-105",
+   "number": 105,
+   "category": "gear",
+   "roster_name": "Shadow Lantern",
+   "name": "Shadow Lantern",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-105-shadow-lantern",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Attach to a creature. Its attacks do 20 more damage to the opponent's Active creature. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_dmg",
+      20
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-106",
+   "number": 106,
+   "category": "gear",
+   "roster_name": "Echo Compass",
+   "name": "Echo Compass",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-106-echo-compass",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Put a creature from your discard pile into your hand. Put an Essence card from your discard pile into your hand.",
+    "ops": [
+     [
+      "recover",
+      1
+     ],
+     [
+      "recover_ess",
+      1
+     ]
+    ],
+    "role": "recover",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-107",
+   "number": 107,
+   "category": "gear",
+   "roster_name": "Aether Coil",
+   "name": "Aether Coil",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-107-aether-coil",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Attach to a creature. It has no Retreat Cost. It also gets +10 HP. (Attached Gear stays on the creature; 1 per creature.)",
+    "ops": [
+     [
+      "tool_free_retreat"
+     ],
+     [
+      "tool_hp",
+      10
+     ]
+    ],
+    "role": "tool",
+    "subtype": "tool"
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-108",
+   "number": 108,
+   "category": "gear",
+   "roster_name": "Scrap Magnet",
+   "name": "Scrap Magnet",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-108-scrap-magnet",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Put up to 2 Essence cards from your discard pile into your hand.",
+    "ops": [
+     [
+      "recover_ess",
+      2
+     ]
+    ],
+    "role": "recover",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-109",
+   "number": 109,
+   "category": "gear",
+   "roster_name": "Sanctuary Map",
+   "name": "Sanctuary Map",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-109-sanctuary-map",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Heal 40 damage from 1 of your creatures.",
+    "ops": [
+     [
+      "heal_one",
+      40
+     ]
+    ],
+    "role": "heal",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-110",
+   "number": 110,
+   "category": "gear",
+   "roster_name": "Veyra Relay",
+   "name": "Veyra Relay",
+   "print_class": "new_card",
+   "art": {
+    "layout": "cutout-on-panel",
+    "subject": "obj.dsk-110-veyra-relay",
+    "background": null
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Discard an Essence attached to 1 of your opponent's creatures. Then discard a card from your hand.",
+    "ops": [
+     [
+      "strip_any"
+     ],
+     [
+      "discard_hand",
+      1
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": "item"
+   },
+   "rarity": {
+    "value": "common",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-111",
+   "number": 111,
+   "category": "biome",
+   "roster_name": "Gloamfen Crossing",
+   "name": "Gloamfen Crossing",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-111-gloamfen-crossing"
+   },
+   "biome_affinity": {
+    "value": "Dusk",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Dusk creatures in play have no Retreat Cost.",
+    "ops": [
+     [
+      "biome",
+      "Dusk",
+      "free_retreat",
+      0
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-112",
+   "number": 112,
+   "category": "biome",
+   "roster_name": "Old Ironworks",
+   "name": "Old Ironworks",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-112-old-ironworks"
+   },
+   "biome_affinity": {
+    "value": "Iron",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Attacks from Iron creatures do 10 more damage to the opponent's Active creature.",
+    "ops": [
+     [
+      "biome",
+      "Iron",
+      "dmg",
+      10
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-113",
+   "number": 113,
+   "category": "biome",
+   "roster_name": "Lantern Hollow",
+   "name": "Lantern Hollow",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-113-lantern-hollow"
+   },
+   "biome_affinity": {
+    "value": "Wonder",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Between turns, heal 10 damage from each Wonder creature in play.",
+    "ops": [
+     [
+      "biome",
+      "Wonder",
+      "heal",
+      10
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-114",
+   "number": 114,
+   "category": "biome",
+   "roster_name": "Moonfall Terrace",
+   "name": "Moonfall Terrace",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-114-moonfall-terrace"
+   },
+   "biome_affinity": {
+    "value": "Astral",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Astral creatures get +20 HP.",
+    "ops": [
+     [
+      "biome",
+      "Astral",
+      "hp",
+      20
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-115",
+   "number": 115,
+   "category": "biome",
+   "roster_name": "Rusted Observatory",
+   "name": "Rusted Observatory",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-115-rusted-observatory"
+   },
+   "biome_affinity": {
+    "value": "Iron",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Once during each player's turn, if that player has an Iron creature in play, they may draw a card.",
+    "ops": [
+     [
+      "biome",
+      "Iron",
+      "draw",
+      0
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-116",
+   "number": 116,
+   "category": "biome",
+   "roster_name": "Blackglass Marsh",
+   "name": "Blackglass Marsh",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-116-blackglass-marsh"
+   },
+   "biome_affinity": {
+    "value": "Dusk",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Dusk creatures take 10 less damage from attacks.",
+    "ops": [
+     [
+      "biome",
+      "Dusk",
+      "reduce",
+      10
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-117",
+   "number": 117,
+   "category": "biome",
+   "roster_name": "Furnace Tunnels",
+   "name": "Furnace Tunnels",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-117-furnace-tunnels"
+   },
+   "biome_affinity": {
+    "value": "Ember",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Once during each player's turn, that player may attach an Ember Essence from their hand to 1 of their Ember creatures, in addition to the normal attachment.",
+    "ops": [
+     [
+      "biome",
+      "Ember",
+      "extra_attach",
+      0
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-118",
+   "number": 118,
+   "category": "biome",
+   "roster_name": "Silent Switchyard",
+   "name": "Silent Switchyard",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-118-silent-switchyard"
+   },
+   "biome_affinity": {
+    "value": "Iron",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Iron creatures can evolve on the turn they come into play (not on a player's first turn).",
+    "ops": [
+     [
+      "biome",
+      "Iron",
+      "rush",
+      0
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-119",
+   "number": 119,
+   "category": "biome",
+   "roster_name": "Starlit Refuge",
+   "name": "Starlit Refuge",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "scene.dsk-119-starlit-refuge"
+   },
+   "biome_affinity": {
+    "value": "Astral",
+    "status": "decided",
+    "note": "the affinity its effect helps"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Biome. Stays in play for both players. Between turns, heal 10 damage from each Astral creature in play.",
+    "ops": [
+     [
+      "biome",
+      "Astral",
+      "heal",
+      10
+     ]
+    ],
+    "role": "biome",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-120",
+   "number": 120,
+   "category": "tactic",
+   "roster_name": "Quick Retreat",
+   "name": "Quick Retreat",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.125-quick-retreat"
+   },
+   "reprint_of": "WK-S001-125",
+   "identity_note": "Reprint of WK-S001-125: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Switch your Active creature with 1 of your Benched creatures.",
+    "ops": [
+     [
+      "switch"
+     ]
+    ],
+    "role": "switch",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-121",
+   "number": 121,
+   "category": "tactic",
+   "roster_name": "Shared Instinct",
+   "name": "Shared Instinct",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.126-shared-instinct"
+   },
+   "reprint_of": "WK-S001-126",
+   "identity_note": "Reprint of WK-S001-126: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Draw a card for each of your Benched creatures.",
+    "ops": [
+     [
+      "draw_per_bench"
+     ]
+    ],
+    "role": "draw",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-122",
+   "number": 122,
+   "category": "tactic",
+   "roster_name": "Break the Clasp",
+   "name": "Break the Clasp",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.130-break-the-clasp"
+   },
+   "reprint_of": "WK-S001-130",
+   "identity_note": "Reprint of WK-S001-130: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Heal all damage from your Active creature and remove its Special Conditions. Discard all Essence attached to it.",
+    "ops": [
+     [
+      "heal_full_discard"
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "rare",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-123",
+   "number": 123,
+   "category": "tactic",
+   "roster_name": "Stand Together",
+   "name": "Stand Together",
+   "print_class": "exact_reprint",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.131-stand-together"
+   },
+   "reprint_of": "WK-S001-131",
+   "identity_note": "Reprint of WK-S001-131: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Heal 20 damage from each of your creatures.",
+    "ops": [
+     [
+      "heal_all",
+      20
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-124",
+   "number": 124,
+   "category": "tactic",
+   "roster_name": "Into the Fog",
+   "name": "Into the Fog",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-124-into-the-fog"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Switch your Active creature with 1 of your Benched creatures. Remove all Special Conditions from your Active creature.",
+    "ops": [
+     [
+      "switch"
+     ],
+     [
+      "cure"
+     ]
+    ],
+    "role": "switch",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-125",
+   "number": 125,
+   "category": "tactic",
+   "roster_name": "Power Surge",
+   "name": "Power Surge",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-125-power-surge"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. During this turn, your Active creature's attacks do 30 more damage to your opponent's Active creature.",
+    "ops": [
+     [
+      "boost",
+      30
+     ]
+    ],
+    "role": "boost",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-126",
+   "number": 126,
+   "category": "tactic",
+   "roster_name": "Salvage Run",
+   "name": "Salvage Run",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-126-salvage-run"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Put up to 2 Essence cards from your discard pile into your hand. Draw a card.",
+    "ops": [
+     [
+      "recover_ess",
+      2
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "recover",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-127",
+   "number": 127,
+   "category": "tactic",
+   "roster_name": "False Signal",
+   "name": "False Signal",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-127-false-signal"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Flip a coin. If heads, switch 1 of your opponent's Benched creatures with their Active creature. Draw a card.",
+    "ops": [
+     [
+      "coin_gust"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ],
+    "role": "gust",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-128",
+   "number": 128,
+   "category": "tactic",
+   "roster_name": "Moonlit Ambush",
+   "name": "Moonlit Ambush",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-128-moonlit-ambush"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Discard an Essence card from your hand. If you can't, you can't play this card. Switch 1 of your opponent's Benched creatures with their Active creature. During this turn, that creature takes 10 more damage from attacks.",
+    "ops": [
+     [
+      "cost_discard_essence"
+     ],
+     [
+      "gust"
+     ],
+     [
+      "vuln",
+      10
+     ]
+    ],
+    "role": "gust",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-129",
+   "number": 129,
+   "category": "tactic",
+   "roster_name": "Keeper Convoy",
+   "name": "Keeper Convoy",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-129-keeper-convoy"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Search your deck for a Basic creature and put it into your hand. Search your deck for an Essence card and put it into your hand.",
+    "ops": [
+     [
+      "search",
+      "basic"
+     ],
+     [
+      "search",
+      "essence"
+     ]
+    ],
+    "role": "search",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-130",
+   "number": 130,
+   "category": "tactic",
+   "roster_name": "System Lockdown",
+   "name": "System Lockdown",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-130-system-lockdown"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Your opponent shuffles their hand into their deck and draws 3 cards.",
+    "ops": [
+     [
+      "opp_shuffle_draw",
+      3
+     ]
+    ],
+    "role": "disrupt",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "rare",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-131",
+   "number": 131,
+   "category": "tactic",
+   "roster_name": "After the Siren",
+   "name": "After the Siren",
+   "print_class": "new_card",
+   "art": {
+    "layout": "illustration",
+    "illustration": "ill.dsk-131-after-the-siren"
+   },
+   "gameplay": {
+    "status": "designed",
+    "rules": "Tactic. You may play only 1 Tactic each turn. Heal 30 damage from each of your creatures. Remove all Special Conditions from your creatures.",
+    "ops": [
+     [
+      "heal_all",
+      30
+     ],
+     [
+      "cure_all"
+     ]
+    ],
+    "role": "heal",
+    "subtype": null
+   },
+   "rarity": {
+    "value": "uncommon",
+    "status": "decided"
+   },
+   "fandom": {
+    "value": 0.3,
+    "status": "decided"
+   }
+  },
+  {
+   "id": "WK-S002-132",
+   "number": 132,
+   "category": "essence",
+   "roster_name": "Verdant",
+   "name": "Verdant",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-132",
+   "identity_note": "Reprint of WK-S001-132: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Verdant Essence.",
+    "ops": [
+     [
+      "essence",
+      "Verdant"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Verdant",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-133",
+   "number": 133,
+   "category": "essence",
+   "roster_name": "Tide",
+   "name": "Tide",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-133",
+   "identity_note": "Reprint of WK-S001-133: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Tide Essence.",
+    "ops": [
+     [
+      "essence",
+      "Tide"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Tide",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-134",
+   "number": 134,
+   "category": "essence",
+   "roster_name": "Stone",
+   "name": "Stone",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-134",
+   "identity_note": "Reprint of WK-S001-134: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Stone Essence.",
+    "ops": [
+     [
+      "essence",
+      "Stone"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Stone",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-135",
+   "number": 135,
+   "category": "essence",
+   "roster_name": "Iron",
+   "name": "Iron",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-135",
+   "identity_note": "Reprint of WK-S001-135: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Iron Essence.",
+    "ops": [
+     [
+      "essence",
+      "Iron"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Iron",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-136",
+   "number": 136,
+   "category": "essence",
+   "roster_name": "Ember",
+   "name": "Ember",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-136",
+   "identity_note": "Reprint of WK-S001-136: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Ember Essence.",
+    "ops": [
+     [
+      "essence",
+      "Ember"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Ember",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-137",
+   "number": 137,
+   "category": "essence",
+   "roster_name": "Storm",
+   "name": "Storm",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-137",
+   "identity_note": "Reprint of WK-S001-137: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Storm Essence.",
+    "ops": [
+     [
+      "essence",
+      "Storm"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Storm",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-138",
+   "number": 138,
+   "category": "essence",
+   "roster_name": "Astral",
+   "name": "Astral",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-138",
+   "identity_note": "Reprint of WK-S001-138: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Astral Essence.",
+    "ops": [
+     [
+      "essence",
+      "Astral"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Astral",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-139",
+   "number": 139,
+   "category": "essence",
+   "roster_name": "Dusk",
+   "name": "Dusk",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-139",
+   "identity_note": "Reprint of WK-S001-139: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Dusk Essence.",
+    "ops": [
+     [
+      "essence",
+      "Dusk"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Dusk",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-140",
+   "number": 140,
+   "category": "essence",
+   "roster_name": "Wonder",
+   "name": "Wonder",
+   "print_class": "evergreen",
+   "art": {
+    "layout": "vector-essence"
+   },
+   "reprint_of": "WK-S001-140",
+   "identity_note": "Reprint of WK-S001-140: the same card in play (same rules, counts as the same card for the 4-copy rule).",
+   "gameplay": {
+    "status": "designed",
+    "rules": "Provides 1 Wonder Essence.",
+    "ops": [
+     [
+      "essence",
+      "Wonder"
+     ]
+    ]
+   },
+   "essence_affinity": {
+    "value": "Wonder",
+    "status": "canon"
+   },
+   "rarity": {
+    "value": "essence",
+    "status": "reprint",
+    "note": "same rarity as in First Bond"
+   }
+  },
+  {
+   "id": "WK-S002-141",
+   "number": 141,
+   "category": "premium",
+   "roster_name": "Velumi IR",
+   "name": "Velumi",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-141-velumi-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-001",
+   "identity_note": "Plays as the same card as WK-S002-001 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-142",
+   "number": 142,
+   "category": "premium",
+   "roster_name": "Velunox IR",
+   "name": "Velunox",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-142-velunox-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-003",
+   "identity_note": "Plays as the same card as WK-S002-003 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-143",
+   "number": 143,
+   "category": "premium",
+   "roster_name": "Murklet IR",
+   "name": "Murklet",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-143-murklet-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-007",
+   "identity_note": "Plays as the same card as WK-S002-007 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-144",
+   "number": 144,
+   "category": "premium",
+   "roster_name": "Mireveil IR",
+   "name": "Mireveil",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-144-mireveil-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-009",
+   "identity_note": "Plays as the same card as WK-S002-009 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-145",
+   "number": 145,
+   "category": "premium",
+   "roster_name": "Gloamkit IR",
+   "name": "Gloamkit",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-145-gloamkit-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-012",
+   "identity_note": "Plays as the same card as WK-S002-012 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-146",
+   "number": 146,
+   "category": "premium",
+   "roster_name": "Noctelle IR",
+   "name": "Noctelle",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-146-noctelle-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-013",
+   "identity_note": "Plays as the same card as WK-S002-013 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-147",
+   "number": 147,
+   "category": "premium",
+   "roster_name": "Rivetick IR",
+   "name": "Rivetick",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-147-rivetick-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-010",
+   "identity_note": "Plays as the same card as WK-S002-010 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-148",
+   "number": 148,
+   "category": "premium",
+   "roster_name": "Boltrix IR",
+   "name": "Boltrix",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-148-boltrix-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-011",
+   "identity_note": "Plays as the same card as WK-S002-011 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-149",
+   "number": 149,
+   "category": "premium",
+   "roster_name": "Cindermite IR",
+   "name": "Cindermite",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-149-cindermite-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-004",
+   "identity_note": "Plays as the same card as WK-S002-004 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-150",
+   "number": 150,
+   "category": "premium",
+   "roster_name": "Crucimoth IR",
+   "name": "Crucimoth",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-150-crucimoth-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-006",
+   "identity_note": "Plays as the same card as WK-S002-006 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-151",
+   "number": 151,
+   "category": "premium",
+   "roster_name": "Hollowisp IR",
+   "name": "Hollowisp",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-151-hollowisp-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-026",
+   "identity_note": "Plays as the same card as WK-S002-026 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-152",
+   "number": 152,
+   "category": "premium",
+   "roster_name": "Moonbun IR",
+   "name": "Moonbun",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-152-moonbun-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-030",
+   "identity_note": "Plays as the same card as WK-S002-030 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-153",
+   "number": 153,
+   "category": "premium",
+   "roster_name": "Duskleaf IR",
+   "name": "Duskleaf",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-153-duskleaf-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-034",
+   "identity_note": "Plays as the same card as WK-S002-034 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-154",
+   "number": 154,
+   "category": "premium",
+   "roster_name": "Koirune IR",
+   "name": "Koirune",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-154-koirune-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-056",
+   "identity_note": "Plays as the same card as WK-S002-056 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-155",
+   "number": 155,
+   "category": "premium",
+   "roster_name": "Veilmora IR",
+   "name": "Veilmora",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-155-veilmora-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-063",
+   "identity_note": "Plays as the same card as WK-S002-063 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-156",
+   "number": 156,
+   "category": "premium",
+   "roster_name": "Ferradon IR",
+   "name": "Ferradon",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-156-ferradon-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-065",
+   "identity_note": "Plays as the same card as WK-S002-065 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-157",
+   "number": 157,
+   "category": "premium",
+   "roster_name": "Prismotl IR",
+   "name": "Prismotl",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-157-prismotl-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-035",
+   "identity_note": "Plays as the same card as WK-S002-035 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-158",
+   "number": 158,
+   "category": "premium",
+   "roster_name": "Nimbusail IR",
+   "name": "Nimbusail",
+   "print_class": "ir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-158-nimbusail-ir"
+   },
+   "premium_kind": "IR",
+   "rarity": {
+    "value": "ir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-074",
+   "identity_note": "Plays as the same card as WK-S002-074 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-159",
+   "number": 159,
+   "category": "premium",
+   "roster_name": "Velunox FA",
+   "name": "Velunox",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-159-velunox-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-003",
+   "identity_note": "Plays as the same card as WK-S002-003 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-160",
+   "number": 160,
+   "category": "premium",
+   "roster_name": "Crucimoth FA",
+   "name": "Crucimoth",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-160-crucimoth-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-006",
+   "identity_note": "Plays as the same card as WK-S002-006 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-161",
+   "number": 161,
+   "category": "premium",
+   "roster_name": "Mireveil FA",
+   "name": "Mireveil",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-161-mireveil-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-009",
+   "identity_note": "Plays as the same card as WK-S002-009 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-162",
+   "number": 162,
+   "category": "premium",
+   "roster_name": "Gearjaw FA",
+   "name": "Gearjaw",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-162-gearjaw-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-015",
+   "identity_note": "Plays as the same card as WK-S002-015 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-163",
+   "number": 163,
+   "category": "premium",
+   "roster_name": "Thornwarden FA",
+   "name": "Thornwarden",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-163-thornwarden-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-019",
+   "identity_note": "Plays as the same card as WK-S002-019 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-164",
+   "number": 164,
+   "category": "premium",
+   "roster_name": "Lanternox FA",
+   "name": "Lanternox",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-164-lanternox-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-021",
+   "identity_note": "Plays as the same card as WK-S002-021 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-165",
+   "number": 165,
+   "category": "premium",
+   "roster_name": "Furnaceback FA",
+   "name": "Furnaceback",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-165-furnaceback-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-023",
+   "identity_note": "Plays as the same card as WK-S002-023 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-166",
+   "number": 166,
+   "category": "premium",
+   "roster_name": "Orbitern FA",
+   "name": "Orbitern",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-166-orbitern-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-025",
+   "identity_note": "Plays as the same card as WK-S002-025 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-167",
+   "number": 167,
+   "category": "premium",
+   "roster_name": "Koirune FA",
+   "name": "Koirune",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-167-koirune-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-056",
+   "identity_note": "Plays as the same card as WK-S002-056 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-168",
+   "number": 168,
+   "category": "premium",
+   "roster_name": "Aegisopod FA",
+   "name": "Aegisopod",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-168-aegisopod-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-058",
+   "identity_note": "Plays as the same card as WK-S002-058 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-169",
+   "number": 169,
+   "category": "premium",
+   "roster_name": "Sel Veyra — Directive Zero FA",
+   "name": "Sel Veyra — Directive Zero",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-169-sel-veyra-directive-zero-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-086",
+   "identity_note": "Plays as the same card as WK-S002-086 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-170",
+   "number": 170,
+   "category": "premium",
+   "roster_name": "June Kestrel FA",
+   "name": "June Kestrel",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-170-june-kestrel-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-075",
+   "identity_note": "Plays as the same card as WK-S002-075 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-171",
+   "number": 171,
+   "category": "premium",
+   "roster_name": "Edda Voss — Iron Cartographer FA",
+   "name": "Edda Voss — Iron Cartographer",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-171-edda-voss-iron-cartographer-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-092",
+   "identity_note": "Plays as the same card as WK-S002-092 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-172",
+   "number": 172,
+   "category": "premium",
+   "roster_name": "Mira Quill — Midnight Market FA",
+   "name": "Mira Quill — Midnight Market",
+   "print_class": "fa",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-172-mira-quill-midnight-market-fa"
+   },
+   "premium_kind": "FA",
+   "rarity": {
+    "value": "fa",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-085",
+   "identity_note": "Plays as the same card as WK-S002-085 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-173",
+   "number": 173,
+   "category": "premium",
+   "roster_name": "Velunox SIR",
+   "name": "Velunox",
+   "print_class": "sir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-173-velunox-sir"
+   },
+   "premium_kind": "SIR",
+   "rarity": {
+    "value": "sir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-003",
+   "identity_note": "Plays as the same card as WK-S002-003 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-174",
+   "number": 174,
+   "category": "premium",
+   "roster_name": "Koirune SIR",
+   "name": "Koirune",
+   "print_class": "sir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-174-koirune-sir"
+   },
+   "premium_kind": "SIR",
+   "rarity": {
+    "value": "sir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-056",
+   "identity_note": "Plays as the same card as WK-S002-056 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-175",
+   "number": 175,
+   "category": "premium",
+   "roster_name": "Sel Veyra — Directive Zero SIR",
+   "name": "Sel Veyra — Directive Zero",
+   "print_class": "sir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-175-sel-veyra-directive-zero-sir"
+   },
+   "premium_kind": "SIR",
+   "rarity": {
+    "value": "sir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-086",
+   "identity_note": "Plays as the same card as WK-S002-086 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-176",
+   "number": 176,
+   "category": "premium",
+   "roster_name": "Edda Voss — Iron Cartographer SIR",
+   "name": "Edda Voss — Iron Cartographer",
+   "print_class": "sir",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-176-edda-voss-iron-cartographer-sir"
+   },
+   "premium_kind": "SIR",
+   "rarity": {
+    "value": "sir",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-092",
+   "identity_note": "Plays as the same card as WK-S002-092 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-177",
+   "number": 177,
+   "category": "premium",
+   "roster_name": "Clasped Velunox",
+   "name": "Velunox",
+   "print_class": "csr",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-177-clasped-velunox"
+   },
+   "premium_kind": "CSR",
+   "rarity": {
+    "value": "csr",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-003",
+   "identity_note": "Plays as the same card as WK-S002-003 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-178",
+   "number": 178,
+   "category": "premium",
+   "roster_name": "Clasped Crucimoth",
+   "name": "Crucimoth",
+   "print_class": "csr",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-178-clasped-crucimoth"
+   },
+   "premium_kind": "CSR",
+   "rarity": {
+    "value": "csr",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-006",
+   "identity_note": "Plays as the same card as WK-S002-006 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-179",
+   "number": 179,
+   "category": "premium",
+   "roster_name": "Clasped Veilmora",
+   "name": "Veilmora",
+   "print_class": "csr",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-179-clasped-veilmora"
+   },
+   "premium_kind": "CSR",
+   "rarity": {
+    "value": "csr",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-063",
+   "identity_note": "Plays as the same card as WK-S002-063 (premium prints play as their base card)."
+  },
+  {
+   "id": "WK-S002-180",
+   "number": 180,
+   "category": "premium",
+   "roster_name": "Clasped Ferradon",
+   "name": "Ferradon",
+   "print_class": "csr",
+   "art": {
+    "layout": "full-art",
+    "illustration": "ill.dsk-180-clasped-ferradon"
+   },
+   "premium_kind": "CSR",
+   "rarity": {
+    "value": "csr",
+    "status": "roster"
+   },
+   "identity_of": "WK-S002-065",
+   "identity_note": "Plays as the same card as WK-S002-065 (premium prints play as their base card)."
+  }
+ ]
+}

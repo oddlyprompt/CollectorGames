@@ -1,6 +1,7 @@
 // ===================== TCG: THE WILDKIN CATALOG (Version 1) =====================
 // The cards come from wildkin-production/manifest.json (WK_CANON, written into the build by tools/wildkin_build.py).
-// Set 001 is First Bond: 180 cards (140 base + 40 premium). Nothing here invents cards: no other set is defined yet.
+// Each set is one manifest (WK_SETS, in order): 001 First Bond, 002 Duskfall. Nothing here invents cards. A reprint
+// (Duskfall reprints 27 First Bond cards) is the same card in play: it carries the first print's identity (cid).
 // Saves only hold what changes (copies, prices, the metagame, bans); the catalog is rebuilt from the manifest on load.
 const TC_EL=WK_CANON.set.aff.map(a=>a.n);                 // Verdant Tide Stone Iron Ember Storm Astral Dusk Wonder
 const TC_CV=2;                                            // content version in saves: 2 = Version 1 cards. Saves without it are prototype saves.
@@ -12,8 +13,8 @@ const TC_PREMV={ir:'I',fa:'F',sir:'X',csr:'C'};
 function tcIsPrem(c){ return !!TC_PREMV[c.rar]; }
 const tcAlt=c=>c.same!=null;                              // a premium print of another card: same identity in play
 function tcSetDef(n){
-  if (n!==1) return null; const s=WK_CANON.set; const [y,m,d]=s.rel.split('-').map(Number);
-  return {n:1, id:s.id, name:s.name, code:s.code, rel:dateToDay(y,m,d), reprint:false, base:s.base, total:s.total};
+  const k=WK_SETS[n-1]; if (!k) return null; const s=k.set; const [y,m,d]=s.rel.split('-').map(Number);
+  return {n, id:s.id, name:s.name, code:s.code, rel:dateToDay(y,m,d), reprint:false, base:s.base, total:s.total};
 }
 const TC_STYLES=['aggro','mid','control','combo','stall'], TC_STYN={aggro:'Aggro',mid:'Midrange',control:'Control',combo:'Combo',stall:'Stall'};
 const TC_CACHE=new Map(), TCD=new Map(), TC_BYCID=new Map();
@@ -21,7 +22,7 @@ const TC_CACHE=new Map(), TCD=new Map(), TC_BYCID=new Map();
 // pw: how strong a card is in play (0..1), from the rules engine's own ratings; st: what plan it serves. Both are the
 // same in every world: the metagame (tcg_world.js) decides how much each card is actually played.
 function tcBuildSet(n){
-  const cards=WKR.setFromCanon(WK_CANON,n);
+  const cards=WKR.setFromCanon(WK_SETS[n-1],n);
   const base=cards.filter(c=>c.same==null && c.kind!=='essence'); const rate=c=>c.kind==='creature'? WKR.creatureRating(c) : WKR.trainerRating(c,{evo:true,st2:true})*10;
   const sorted=base.map(c=>[c,rate(c)]).sort((a,b)=>a[1]-b[1]); sorted.forEach(([c],i)=>{ c.pw=+(0.12+0.84*i/Math.max(1,sorted.length-1)).toFixed(3); });
   const role={draw:'combo',search:'combo',accel:'combo',heal:'stall',tool:'stall',gust:'control',disrupt:'control',switch:'control',recover:'combo',boost:'aggro',biome:'mid'};
@@ -29,7 +30,7 @@ function tcBuildSet(n){
     if (c.kind==='essence'){ c.pw=0.05; c.st='mid'; } else if (c.kind!=='creature') c.st=role[c.role]||'mid';
     else { const fx=c.atk.flatMap(a=>a.fx.map(o=>o[0])); c.st= fx.some(k=>/status|strip|gust|opp_discard|no_retreat/.test(k))? 'control' : fx.some(k=>/heal|guard/.test(k))||(c.ab&&c.ab.k==='passive')? 'stall' : fx.some(k=>/draw|accel/.test(k))? 'combo' : Math.max(...c.atk.map(a=>a.d/a.cost.length))>=40? 'aggro' : 'mid'; } }
   const byNo={}; for (const c of cards) byNo[c.no]=c; for (const c of cards) if (c.same!=null){ c.pw=byNo[c.same].pw; c.st=byNo[c.same].st; }
-  for (const c of cards) if (c.same==null) TC_BYCID.set(c.cid,c);
+  for (const c of cards) if (c.same==null && (c.set===Math.floor(c.cid/1000) || !TC_BYCID.has(c.cid))) TC_BYCID.set(c.cid,c);   // a reprint never replaces its first print
   return cards;
 }
 function tcSetCards(n){ const k=G.seed+':'+n; let c=TC_CACHE.get(k); if (c) return c; if (!tcSetDef(n)) return []; c=tcBuildSet(n); TC_CACHE.set(k,c); return c; }
@@ -46,10 +47,12 @@ function tcD(key){
 function tcAllKeys(set){ const out=[]; for (const c of tcSetCards(set)) for (const v of tcVariants(c)) out.push(tcKey(set,c.no,v)); return out; }
 function tcPrintsOf(cid){ const out=[]; for (const s of tcReleasedSets(G.day+400)) for (const c of tcSetCards(s)) if (c.cid===cid) out.push(c); return out; }
 function tcReleasedSets(t){ const out=[]; for (let n=1;n<60;n++){ const d=tcSetDef(n); if (d && d.rel<=t) out.push(n); else break; } return out; }
+// the next set the player knows about: First Bond from day one, later sets once announced (35 days ahead, tcSetLife)
+function tcAnnounced(t){ const n=tcNextSet(t); return n && (n===1 || (G.tcg && G.tcg.ann && G.tcg.ann['pv'+n]))? n : null; }
 function tcNextSet(t){ for (let n=1;n<60;n++){ const d=tcSetDef(n); if (!d) return null; if (d.rel>t) return n; } return null; }
 function tcCardKey(c){ return tcKey(c.set,c.no,tcVariants(c)[0]); }
 function tcCardLabel(key){ const d=tcD(key); if (d.sealed) return d.title; return d.card.name+' ('+d.def.code+' '+String(d.no).padStart(3,'0')+(d.v!=='N'?', '+TC_VARN[d.v].toLowerCase():'')+')'; }
-function tcNumLabel(c){ return String(c.no).padStart(3,'0')+'/'+String(WK_CANON.set.base).padStart(3,'0'); }
+function tcNumLabel(c){ const s=(WK_SETS[(c.set||1)-1]||WK_CANON).set; return String(c.no).padStart(3,'0')+'/'+String(s.base).padStart(3,'0'); }
 // ---------- art: every card names its pieces; only approved pieces are in WK_ART ----------
 function tcArtOf(card){ return card.art||{l:'none'}; }
 function tcArtUrl(id){ const a=id&&WK_ART[id]; return a? a.u : null; }

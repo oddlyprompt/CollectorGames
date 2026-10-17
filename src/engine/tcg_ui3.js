@@ -22,7 +22,7 @@ const _fl3=feedLabel; feedLabel=function(key){ if (key[0]!=='T') return _fl3(key
 const _mk3=miniKey; miniKey=function(k){ return k[0]==='T'? miniTKey(k) : _mk3(k); };
 const _ct3=collectionTotals; collectionTotals=function(){ const t=_ct3(); if (!G.tcg) return t; for (const c of myTc()){ const r=tcEst(c.k,c.g>0?c.g:0,c); t.total[0]+=r.lo; t.total[1]+=r.hi; if (c.l){ t.listed[0]+=r.lo; t.listed[1]+=r.hi; } } return t; };
 // home: one panel that points at the card game
-const _hv3=VIEWS.home; VIEWS.home=()=>{ const h=_hv3(); if (!G.tcg||!G.tcg.arch.length) return h; const T=G.tcg, nx=tcNextSet(G.day), top=T.arch[0], ev=T.ev.find(e=>e.k!=='local')||T.ev[0], sm=myTcSummary();
+const _hv3=VIEWS.home; VIEWS.home=()=>{ const h=_hv3(); if (!G.tcg||!G.tcg.arch.length) return h; const T=G.tcg, nx=tcAnnounced(G.day), top=T.arch[0], ev=T.ev.find(e=>e.k!=='local')||T.ev[0], sm=myTcSummary();
   const nm=id=>{ const a=T.arch.find(x=>x.id===id); return a?a.name:id; };
   const p=`<div class="panel"><div class="phead"><h3>Wildkin TCG</h3><button class="linkbtn" data-act="goto" data-a="shop:tcg">Open</button></div><dl class="kv"><dt>Top deck</dt><dd>${esc(top.name)}, ${(top.sh*100).toFixed(0)}% of decks</dd>${ev?`<dt>Last big win</dt><dd>${esc(nm(ev.win))}, ${fmtDate(ev.d)}</dd>`:''}${nx?`<dt>Next set</dt><dd>${esc(tcSetDef(nx).name)} in ${tcSetDef(nx).rel-G.day} days</dd>`:''}<dt>Your cards</dt><dd>${sm.n+sm.g} cards, ${sm.s} sealed, about ${money(sm.val,true)}</dd></dl></div>`;
   const i=h.indexOf('<div class="panel">'); return i<0? h+p : h.slice(0,i)+p+h.slice(i); };
@@ -30,7 +30,7 @@ const _hv3=VIEWS.home; VIEWS.home=()=>{ const h=_hv3(); if (!G.tcg||!G.tcg.arch.
 const _un3=upNext; upNext=function(){ const out=_un3(); if (!G.tcg) return out; const T=G.tcg; const add=(d,txt,a)=>{ if (d>=G.day) out.push({d,txt,act:'goto',a,kind:'tcg'}); };
   const byDay={}; for (const s of (G.player.tsubs||[])){ const cp=TC(s.cid); if (cp) (byDay[s.t1]=byDay[s.t1]||[]).push(tcD(cp.k).title); }
   for (const d in byDay){ const n=byDay[d], names=[...new Set(n)]; out.push({d:+d, txt:n.length===1? 'GCS: '+n[0]+' comes back' : 'GCS: '+n.length+' cards come back ('+names.slice(0,3).join(', ')+(names.length>3?' and more':'')+')', act:'goto', a:'coll:grading', kind:'grade'}); }
-  const nx=tcNextSet(G.day); if (nx){ const def=tcSetDef(nx); add(def.rel,'Wildkin: '+def.name+' releases','shop:tcg'); const q=T.pre.filter(p=>p.set===nx).reduce((s,p)=>s+p.q,0); if (q) add(def.rel,'Your '+def.name+' preorder arrives','shop:tcg'); }
+  const nx=tcAnnounced(G.day); if (nx){ const def=tcSetDef(nx); add(def.rel,'Wildkin: '+def.name+' releases','shop:tcg'); const q=T.pre.filter(p=>p.set===nx).reduce((s,p)=>s+p.q,0); if (q) add(def.rel,'Your '+def.name+' preorder arrives','shop:tcg'); }
   for (const cid in T.ban){ if (T.ban[cid].d>G.day){ const c=tcCardByCid(+cid); if (c) add(T.ban[cid].d, c.name+' is banned from Standard','shop:tcg'); } }
   let t=G.day; for (let i=0;i<14;i++){ t=G.day+i; if (dowOf(t)===6){ const [m,d]=mdOf(t); const k=(m===6||m===12)&&d>=8&&d<=14? 'Wildkin Championship' : d<=7? 'Wildkin Regional' : null; if (k) add(t,k,'shop:tcg'); break; } }
   out.sort((a,b)=>a.d-b.d); return out; };
