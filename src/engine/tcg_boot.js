@@ -7,7 +7,9 @@ function tcNormalize(){
   G.nextTid=G.nextTid||1; G.tpop=G.tpop||{}; const T=G.tcg; for (const k of ['usage','t8','hy','ban','dom','shop','ann','rev','rel']) T[k]=T[k]||{}; T.pre=T.pre||[]; T.arch=T.arch||[]; T.ev=T.ev||[];
   G._npcTcIds=Object.keys(G.tc).map(Number).filter(id=>G.tc[id].o>0); delete G._tcPool; delete G._cmPool; delete G._cdPool; TC_CACHE.clear(); TCD.clear(); TCFV.clear(); TC_BYCID.clear(); T.mv=WK_CANON.set.mv;
   // saves from before the rules engine (or an older engine) get a fresh field; bans, prices and history stay
-  if (T.rv!==WKR.RV || T.arch.some(a=>!a.cnt) || (T.mx && T.mx.bs!==tcBaseSig())){ T.mx=null; T.arch=[]; T.dom={}; if (tcReleasedSets(G.day).length) tcRebuildMeta(G.day); }
+  if (T.rv!==WKR.RV || T.arch.some(a=>!a.cnt) || (T.mx && T.mx.bs!==tcBaseSig(T.mx.key.split('|')[0]||'1'))){ T.mx=null; T.arch=[]; T.dom={}; if (tcReleasedSets(G.day).length) tcRebuildMeta(G.day); }
+  // a save already past the release of a set added after it was made (Duskfall): the set comes out on the day the save is opened
+  for (const n of tcReleasedSets(G.day)) if (n>1 && T.rel[n]==null){ T.ann['pv'+n]=T.ann['pv2'+n]=T.ann['pv3'+n]=1; T.rev[n]=tcSetCards(n).map(c=>c.no); tcRelease(n, G.day); }
 }
 async function tcBuildWorld(prog){
   if (prog) await prog(0.1,'Printing First Bond'); tcInit(); makeTcgNPCs(); if (prog) await prog(0.35,'Running the first tournaments'); const live=G.live; G._tcCatch=true; tcCatchUp(tcSetDef(1).rel, G.day); G._tcCatch=false; G.live=live;

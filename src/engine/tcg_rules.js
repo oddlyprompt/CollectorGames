@@ -18,13 +18,18 @@ function prep(c){
     w.atk=(c.atk||[]).map(a=>({n:a.n, cost:String(a.cost).split('').map(x=>x==='C'?'C':LET[x]), d:+a.d||0, fx:a.fx||[]}));
     w.ab=c.ab? {n:c.ab.n, k:c.ab.k, fx:c.ab.fx||[]} : null;
     w.pas={}; if (w.ab && w.ab.k==='passive') for (const o of w.ab.fx) w.pas[o[0]]=o[1]==null?true:o[1]; }
-  else { w.fx=c.fx||[]; w.role=c.role||null; w.sub=c.sub||null; if (c.kind==='biome') w.bio=(w.fx[0]||[])[1]||c.el; }
+  else { w.fx=c.fx||[]; w.role=c.role||null; w.sub=c.sub||null;
+    if (c.kind==='biome'){ const o=w.fx[0]||[]; w.bio=o[1]||c.el; const d=o[2]? [o[2],o[3]||0] : (BIO_DEF[w.bio]||['none',0]); w.be=d[0]; w.bn=d[1]; } }
   c._w=w; return w;
 }
+// biome effects: ['biome', affinity, effect, amount]. First Bond's biomes name only the affinity and use its effect below.
+const BIO_DEF={Verdant:['heal',10], Tide:['free_retreat',0], Stone:['reduce',10], Iron:['hp',20], Ember:['dmg',10], Storm:['extra_attach',0], Astral:['draw',0], Dusk:['poison',10], Wonder:['rush',0]};
+function bioOn(S, eff, x){ const b=S.bio&&S.bio.w; return !!(b && b.be===eff && (!x || x.w.el===b.bio)); }
+function bioN(S, eff, x){ return bioOn(S,eff,x)? S.bio.w.bn : 0; }
 // ---------- state helpers ----------
 let UID=1;
 function inst(card, t){ return {id:UID++, w:prep(card), card, under:[], en:[], tool:null, dmg:0, sl:0, pa:0, co:0, po:0, bu:0, t, guard:0, noRet:0, noAtk:0, vuln:0}; }
-function maxHp(S, x){ let h=x.w.hp; if (x.tool) for (const o of x.tool._w.fx) if (o[0]==='tool_hp') h+=o[1]; if (S.bio && S.bio.w.bio==='Iron' && x.w.el==='Iron') h+=20; return h; }
+function maxHp(S, x){ let h=x.w.hp; if (x.tool) for (const o of x.tool._w.fx) if (o[0]==='tool_hp') h+=o[1]; h+=bioN(S,'hp',x); return h; }
 function hpLeft(S, x){ return maxHp(S,x)-x.dmg; }
 function hasCond(x){ return x.sl||x.pa||x.co||x.po||x.bu; }
 function toolHas(x, k){ return !!(x.tool && x.tool._w.fx.some(o=>o[0]===k)); }
@@ -48,11 +53,11 @@ function missing(x, cost){
   const anyN=cost.filter(s=>s==='C').length; const free=used.filter(u=>!u).length; for (let i=free;i<anyN;i++) miss.push('C'); return miss;
 }
 function fits(e, sym, x){ return sym==='C' || e===sym || (owns(sym,x) && owns(e,x)); }
-function retreatCost(S, p, x){ if (toolHas(x,'tool_free_retreat')) return 0; if (S.bio && S.bio.w.bio==='Tide' && x.w.el==='Tide') return 0; return x.w.ret; }
+function retreatCost(S, p, x){ if (toolHas(x,'tool_free_retreat')) return 0; if (bioOn(S,'free_retreat',x)) return 0; return x.w.ret; }
 // ---------- damage ----------
-function reduceOf(S, x){ let r=0; const P=x.w.pas; if (P.reduce) r+=P.reduce; if (P.tool_reduce && x.tool) r+=P.tool_reduce; r+=toolVal(x,'tool_reduce'); if (S.bio && S.bio.w.bio==='Stone' && x.w.el==='Stone') r+=10; r+=x.guard; return r; }
+function reduceOf(S, x){ let r=0; const P=x.w.pas; if (P.reduce) r+=P.reduce; if (P.tool_reduce && x.tool) r+=P.tool_reduce; r+=toolVal(x,'tool_reduce'); r+=bioN(S,'reduce',x); r+=x.guard; return r; }
 function calcDmg(S, me, att, def, base){
-  if (base<=0) return 0; let d=base+me.boost+toolVal(att,'tool_dmg'); if (S.bio && S.bio.w.bio==='Ember' && att.w.el==='Ember') d+=10;
+  if (base<=0) return 0; let d=base+me.boost+toolVal(att,'tool_dmg'); d+=bioN(S,'dmg',att);
   if (def.w.weak===att.w.el && !toolHas(def,'tool_no_weak')) d*=2;
   d+=def.vuln; d-=reduceOf(S,def); return Math.max(0,d);
 }
@@ -76,16 +81,16 @@ function mainAttack(x){ let b=null; for (const a of x.w.atk) if (!b || a.d+a.fx.
 function setCond(S, x, k){ if (toolHas(x,'tool_status_immune')) return; if (k==='asleep'||k==='paralyzed'||k==='confused'){ x.sl=x.pa=x.co=0; } if (k==='asleep') x.sl=1; else if (k==='paralyzed') x.pa=S.t+1; else if (k==='confused') x.co=1; else if (k==='poisoned') x.po=1; else if (k==='burned') x.bu=1; }
 function checkup(S){
   for (const p of S.p){ const x=p.act; if (!x) continue;
-    if (x.po) x.dmg+=10+(S.bio && S.bio.w.bio==='Dusk'?10:0);
+    if (x.po) x.dmg+=10+bioN(S,'poison');
     if (x.bu){ x.dmg+=20; if (flip(S)) x.bu=0; }
     if (x.sl && flip(S)) x.sl=0;
     if (x.pa && S.t>=x.pa) x.pa=0; }
-  if (S.bio && S.bio.w.bio==='Verdant') for (const p of S.p) for (const x of inPlay(p)) if (x.w.el==='Verdant') x.dmg=Math.max(0,x.dmg-10);
+  if (bioOn(S,'heal')) for (const p of S.p) for (const x of inPlay(p)) if (bioOn(S,'heal',x)) x.dmg=Math.max(0,x.dmg-S.bio.w.bn);
 }
 // ---------- moving cards ----------
 function benchBasic(S, p, card){ if (p.bench.length>=BENCH) return false; const i=p.hand.indexOf(card); if (i>=0) p.hand.splice(i,1); p.bench.push(inst(card,S.t)); return true; }
 function canEvolve(S, p, x, card){ const w=prep(card); if (w.kind!=='creature' || w.from!==x.w.name) return false; if (p.first) return false;
-  if (x.t<S.t) return true; return p.rush===x.id || (S.bio && S.bio.w.bio==='Wonder' && w.el==='Wonder'); }
+  if (x.t<S.t) return true; return p.rush===x.id || (bioOn(S,'rush') && w.el===S.bio.w.bio); }
 function evolve(S, p, x, card){ p.hand.splice(p.hand.indexOf(card),1); x.under.push(x.card); x.card=card; x.w=prep(card); x.t=S.t; clearCond(x); x.evolvedOn=S.t; }
 function switchActive(S, p, x){ const a=p.act; clearCond(a); a.guard=0; p.bench.splice(p.bench.indexOf(x),1); p.bench.push(a); p.act=x; }
 function searchDeck(S, p, pred, n){ const out=[]; for (let i=p.deck.length-1;i>=0 && out.length<n;i--) if (pred(p.deck[i])){ out.push(p.deck[i]); p.deck.splice(i,1); } shuffle(S,p.deck); return out; }
@@ -108,7 +113,7 @@ function oppThreat(S, op){ const x=op.act; if (!x) return 0; let d=0; for (const
 // ---------- playing trainers ----------
 function trainerScore(S, me, op, card){
   const w=prep(card), fx=w.fx; let s=0; const hand=me.hand.length, deck=me.deck.length;
-  if (w.kind==='ally' && (me.ally || S.t===1)) return -1; if (w.kind==='tactic' && me.tac) return -1; if (w.kind==='biome'){ if (me.bio) return -1; const cur=S.bio&&S.bio.w.bio; if (cur===w.bio) return -1; const mine=inPlay(me).filter(x=>x.w.el===w.bio).length; const theirs=inPlay(op).filter(x=>x.w.el===w.bio).length; return mine>theirs? 20+mine*3 : -1; }
+  if (w.kind==='ally' && (me.ally || S.t===1)) return -1; if (w.kind==='tactic' && me.tac) return -1; if (w.kind==='biome'){ if (me.bio) return -1; const cur=S.bio&&S.bio.w; if (cur && cur.name===w.name) return -1; const mine=inPlay(me).filter(x=>x.w.el===w.bio).length; const theirs=inPlay(op).filter(x=>x.w.el===w.bio).length; return mine>theirs? 20+mine*3 : -1; }
   if (w.sub==='tool'){ const t=toolTarget(S,me,op,card); return t? 25 : -1; }
   for (const o of fx){ const k=o[0];
     if (k==='draw') s+= deck>o[1]+8? (hand<=3?14:hand<=5?9:2)*o[1]/2 : -50;
@@ -246,8 +251,8 @@ function mainPhase(S, me, op){
     // 5. attach Essence (once), plus the Storm biome's extra Storm attachment
     if (!me.ess){ const opts=me.hand.filter(c=>prep(c).kind==='essence'); let bt=null, be=null, bsc=-1e9; for (const e of opts){ const t=chooseAttachTarget(S,me,e); if (!t) continue; const sc=(t===me.act?5:0)+(missing(t,mainAttack(t).cost).some(m=>m===prep(e).el)?3:0); if (sc>bsc){ bsc=sc; bt=t; be=e; } }
       if (be){ me.hand.splice(me.hand.indexOf(be),1); bt.en.push(be); me.ess=true; continue; } if (!opts.length) me.ess=true; }
-    if (!me.xs && S.bio && S.bio.w.bio==='Storm'){ me.xs=true; const e=me.hand.find(c=>prep(c).el==='Storm' && prep(c).kind==='essence'); const t=e && inPlay(me).filter(x=>x.w.el==='Storm').find(x=>{ const a=mainAttack(x); return a && missing(x,a.cost).length; }); if (t){ me.hand.splice(me.hand.indexOf(e),1); t.en.push(e); continue; } }
-    if (!me.xa && S.bio && S.bio.w.bio==='Astral'){ me.xa=true; if (inPlay(me).some(x=>x.w.el==='Astral') && me.deck.length>5){ draw(S,me,1); continue; } }
+    if (!me.xs && bioOn(S,'extra_attach')){ me.xs=true; const ba=S.bio.w.bio; const e=me.hand.find(c=>prep(c).el===ba && prep(c).kind==='essence'); const t=e && inPlay(me).filter(x=>x.w.el===ba).find(x=>{ const a=mainAttack(x); return a && missing(x,a.cost).length; }); if (t){ me.hand.splice(me.hand.indexOf(e),1); t.en.push(e); continue; } }
+    if (!me.xa && bioOn(S,'draw')){ me.xa=true; if (inPlay(me).some(x=>bioOn(S,'draw',x)) && me.deck.length>5){ draw(S,me,1); continue; } }
     // 6. retreat if the Active cannot do anything and someone on the Bench can
     if (!me.ret && me.act && me.bench.length){ const a=me.act; const rc=retreatCost(S,me,a);
       if (!a.sl && !a.pa && a.noRet<S.t && rc<=a.en.length){ const cand=bestBench(S,me); const aReady=bestAffordable(S,me,a);
@@ -350,7 +355,7 @@ function play(deckA, deckB, seed, opt){
 // trainer slots, filled in this order until the deck has 40 cards: [kind, role, copies]
 const TR_PLAN=[['ally','draw',3],['ally','search',2],['gear','search',2],['tactic','search',2],['ally','gust',1],['tactic','switch',2],['biome','biome',1],['gear','tool',1],
   ['ally','draw',1],['gear','draw',1],['ally','gust',1],['gear','heal',1],['tactic','draw',1],['ally','disrupt',1],['gear','tool',1],['tactic','heal',1],['gear','recover',1],['ally','search',1],['biome','biome',1]];
-function lineOf(pool, c){ const by={}; for (const x of pool) if (x.kind==='creature') by[x.name]=x; const out=[c]; let cur=c; while (cur && cur.from){ cur=by[cur.from]; if (!cur) return null; out.unshift(cur); } return out; }
+function lineOf(pool, c){ const by={}; for (const x of pool) if (x.kind==='creature' && (!by[x.name] || (x.set===c.set && by[x.name].set!==c.set))) by[x.name]=x; const out=[c]; let cur=c; while (cur && cur.from){ cur=by[cur.from]; if (!cur) return null; out.unshift(cur); } return out; }
 function creatureRating(c){ const w=prep(c); let best=0; for (const a of w.atk){ let d=a.d; for (const o of a.fx){ if (o[0]==='per_essence') d+=o[1]*a.cost.length; if (o[0]==='multi_coin') d=o[1]*o[2]/2; if (o[0]==='coin_bonus'||o[0]==='bonus_status') d+=o[1]/2; if (o[0]==='snipe'||o[0]==='spread') d+=o[1]*0.8; if (o[0]==='discard_self') d-=o[1]*12; if (o[0]==='cant_attack_next') d*=0.6; }
   best=Math.max(best, d/Math.max(1.5,a.cost.length)); } return best*2+w.hp*0.25+(w.ab?12:0)-w.ret*3; }
 function trainerRating(c, ctx){ const w=prep(c); let s=0; ctx=ctx||{}; for (const o of w.fx){ const k=o[0]; s+= {draw:o[1]*1.1, discard_draw:5.5, shuffle_draw:3.6, draw_to:4, look_take:2.4, draw_per_bench:3, search:2.6, bench_basic:3.4, first_bond:3.6, revive_basic:1.6,
@@ -360,7 +365,9 @@ function trainerRating(c, ctx){ const w=prep(c); let s=0; ctx=ctx||{}; for (cons
   if (w.kind==='ally') s*=0.95;
   for (const o of w.fx){ if (o[0]==='search' && (o[1]==='evolution'||o[1]==='evolves_in_play')) s+= ctx.evo? 2.5 : -9; if (o[0]==='skip_evolve') s+= ctx.st2? 5 : -9; if (o[0]==='search' && o[1]==='creature') s+= ctx.evo? 1.5 : 0; }
   return s; }
-function buildDeck(pool, lead, variant){
+// tune (optional): how players change a list to fight the field. w: role weights (above 1 plays more of that role, below 1
+// fewer), s: a seed that reorders close trainer choices. With no tune the list is the standard one (every result so far).
+function buildDeck(pool, lead, variant, tune){
   variant=variant||0; const line=lineOf(pool, lead); if (!line) return null; const L=prep(lead); const els=new Set([L.el, L.el2].filter(Boolean));
   const counts=new Map(); const add=(c,n)=>counts.set(c,(counts.get(c)||0)+n);
   const plan=line.length===3? [4,3,3] : line.length===2? [4,3] : [4]; line.forEach((c,i)=>add(c,plan[i]));
@@ -382,10 +389,12 @@ function buildDeck(pool, lead, variant){
   const nTr=DECK-nCreat-nEss; const tr=pool.filter(c=>c.kind!=='creature' && c.kind!=='essence'); const picks=new Map();
   let have=0;
   const fitsDeck=c=>{ const w=prep(c); if (w.kind==='biome') return els.has(w.bio); if (w.fx.some(o=>o[0]==='search' && (o[1]==='evolution'||o[1]==='evolves_in_play'))) return line.length>1; if (w.fx.some(o=>o[0]==='skip_evolve')) return ctx.st2; return true; };
-  for (const [kind,role,n0] of TR_PLAN){ let n=Math.min(n0, nTr-have); if (n<=0) break; const cand=tr.filter(c=>c.kind===kind && prep(c).role===role && fitsDeck(c)).sort((a,b)=>trainerRating(b,ctx)-trainerRating(a,ctx));
+  const W=tune&&tune.w||{}, js=tune&&tune.s; const rate=c=>{ let r=trainerRating(c,ctx)*(W[prep(c).role]||1); if (js!=null) r*=0.8+0.4*((hs(js+':'+c.cid)%1000)/1000); return r; };
+  const tplan=tune? TR_PLAN.map(([k,r,n])=>[k,r,Math.max(0,n+((W[r]||1)>=1.3?1:(W[r]||1)<=0.7?-1:0))]) : TR_PLAN;
+  for (const [kind,role,n0] of tplan){ let n=Math.min(n0, nTr-have); if (n<=0) break; const cand=tr.filter(c=>c.kind===kind && prep(c).role===role && fitsDeck(c)).sort((a,b)=>rate(b)-rate(a));
     for (const c of cand){ if (n<=0) break; const k=Math.min(MAXC-(picks.get(c)||0), n, c.kind==='biome'?2:MAXC); if (k>0){ picks.set(c,(picks.get(c)||0)+k); n-=k; have+=k; } } }
-  if (have<nTr){ const rest=tr.filter(c=>c.kind!=='biome').sort((a,b)=>trainerRating(b,ctx)-trainerRating(a,ctx)); for (const c of rest){ if (have>=nTr) break; const k=Math.min(MAXC-(picks.get(c)||0), nTr-have); if (k>0){ picks.set(c,(picks.get(c)||0)+k); have+=k; } } }
-  while (have>nTr){ const worst=[...picks.keys()].sort((a,b)=>trainerRating(a,ctx)-trainerRating(b,ctx))[0]; picks.set(worst,picks.get(worst)-1); if (!picks.get(worst)) picks.delete(worst); have--; }
+  if (have<nTr){ const rest=tr.filter(c=>c.kind!=='biome').sort((a,b)=>rate(b)-rate(a)); for (const c of rest){ if (have>=nTr) break; const k=Math.min(MAXC-(picks.get(c)||0), nTr-have); if (k>0){ picks.set(c,(picks.get(c)||0)+k); have+=k; } } }
+  while (have>nTr){ const worst=[...picks.keys()].sort((a,b)=>rate(a)-rate(b))[0]; picks.set(worst,picks.get(worst)-1); if (!picks.get(worst)) picks.delete(worst); have--; }
   return {lead, partner, line, creatures:[...counts], trainers:[...picks], essence:ess};
 }
 function deckCards(deck, essOf){ const out=[]; for (const [c,n] of deck.creatures) for (let i=0;i<n;i++) out.push(c); for (const [c,n] of deck.trainers) for (let i=0;i<n;i++) out.push(c); for (const [el,n] of deck.essence) for (let i=0;i<n;i++) out.push(essOf[el]); return out; }
@@ -428,7 +437,7 @@ function rebuildMeta(base, pool, essOf, byCid, opt){ const o=Object.assign({},ME
   const prev={top:base.top, M:base.M}; return {rv:RV, cands:out.map(packDeck), field:field.map(sig), top:top.map(packDeck), M:roundRobin(top,essOf,o.pair,prev)}; }
 // the card objects the game and the harness use, from WK_CANON (one mapping for both)
 function cardFromCanon(x, set){
-  const c={set, no:x.no, id:x.id, cid:set*1000+x.no, kind:x.kind, rar:x.rar, name:x.name, art:x.art, rs:x.rs, fan:x.fan||0.3};
+  const c={set, no:x.no, id:x.id, cid:x.ident!=null? x.ident : set*1000+x.no, kind:x.kind, rar:x.rar, name:x.name, art:x.art, rs:x.rs, fan:x.fan||0.3};
   if (x.kind==='creature') Object.assign(c,{el:x.el, el2:x.el2, els:x.els, stage:x.stage, from:x.from, to:x.to, fam:x.fam, fams:x.fams, mascot:x.mascot, sp:x.sp, hp:x.hp, weak:x.weak, ret:x.ret, pz:x.pz||1,
     atk:x.atk.map(a=>({n:a[0], cost:a[1], d:a[2]||0, t:a[3], fx:a[4]||[], dl:a[5]!=null?a[5]:(a[2]?String(a[2]):'')})), ab:x.ab? {n:x.ab[0], k:x.ab[1], t:x.ab[2], fx:x.ab[3]} : null});
   else { c.rules=x.rules; c.fx=x.fx||[]; c.role=x.role||null; c.sub=x.sub||null; if (x.el) c.el=x.el; }
@@ -438,6 +447,6 @@ function cardFromCanon(x, set){
 function setFromCanon(canon, set){ const cards=canon.cards.map(x=>cardFromCanon(x,set)); const byNo={}; for (const c of cards) byNo[c.no]=c;
   for (const c of cards) if (c.same!=null){ const b=byNo[c.same]; c.cid=b.cid; for (const k of ['el','el2','els','stage','from','to','fam','fams','mascot','sp','hp','weak','ret','pz','atk','ab','rules','fx','role','sub']) if (b[k]!==undefined && c[k]===undefined) c[k]=b[k]; c.kind=b.kind; }
   return cards; }
-return {RV, META, cardFromCanon, setFromCanon, buildMeta, rebuildMeta, packDeck, unpackDeck, candidates, play, buildDeck, deckCards, deckStyle, sig, matchup, prep, lineOf, creatureRating, trainerRating, hs, payable};
+return {RV, META, cardFromCanon, setFromCanon, buildMeta, rebuildMeta, roundRobin, packDeck, unpackDeck, candidates, play, buildDeck, deckCards, deckStyle, sig, matchup, prep, lineOf, creatureRating, trainerRating, hs, payable};
 })();
 if (typeof module!=='undefined') module.exports=WKR;

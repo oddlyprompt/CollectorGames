@@ -1,0 +1,858 @@
+{
+  "approved_output_components": {
+    "scene.tide.03": {
+      "kind": "approved-first-bond",
+      "asset_id": "scene.tide.03",
+      "file": "wildkin-production/approved/assets/scene.tide.03.jpg",
+      "sha256": "69eb233e78486a8a6f34cc25a0bf5fb3c5f9c3cb2cfca2ad0412eb907bcbe8b4",
+      "used_by": [
+        "WK-S002-016",
+        "WK-S002-017",
+        "WK-S002-035",
+        "WK-S002-037",
+        "WK-S002-052",
+        "WK-S002-056",
+        "WK-S002-071",
+        "WK-S002-073"
+      ]
+    },
+    "cut.002-prismotl.standing": {
+      "asset_id": "cut.002-prismotl.standing",
+      "file": "wildkin-production/approved/assets/cut.002-prismotl.standing.webp",
+      "sha256": "1bd281caa9e0034a13f60f3c97da62a53490d8441e79927d1907ad6fae6460be",
+      "approval": "2026-10-14T01:52:05Z",
+      "used_by": [
+        "WK-S002-035"
+      ]
+    },
+    "cut.005-bashlet.standing": {
+      "asset_id": "cut.005-bashlet.standing",
+      "file": "wildkin-production/approved/assets/cut.005-bashlet.standing.webp",
+      "sha256": "b991d17f5c37fc93678d33ef26bfed68d2b0e043585468dd64be8c83a236124e",
+      "approval": "2026-10-13T04:43:15Z",
+      "used_by": [
+        "WK-S002-036"
+      ]
+    },
+    "scene.stone.04": {
+      "asset_id": "scene.stone.04",
+      "file": "wildkin-production/approved/assets/scene.stone.04.jpg",
+      "sha256": "fe00e039746acc5802084fd180d1dbdb4fb27f53f568af397e5c86dfa2796985",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-036",
+        "WK-S002-058"
+      ]
+    },
+    "cut.008-koilet.standing": {
+      "asset_id": "cut.008-koilet.standing",
+      "file": "wildkin-production/approved/assets/cut.008-koilet.standing.webp",
+      "sha256": "1ae73c46fba612ef3ebc9c7d2c92254cef278e669b8707f2a0282244163f928b",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-037"
+      ]
+    },
+    "cut.011-rolyte.standing": {
+      "asset_id": "cut.011-rolyte.standing",
+      "file": "wildkin-production/approved/assets/cut.011-rolyte.standing.webp",
+      "sha256": "1b89f04eac57b14aa57272031b477d00eca3b2de090e26bfe0a59bbc49416a0f",
+      "approval": "2026-10-13T04:43:15Z",
+      "used_by": [
+        "WK-S002-038"
+      ]
+    },
+    "scene.stone.06": {
+      "asset_id": "scene.stone.06",
+      "file": "wildkin-production/approved/assets/scene.stone.06.jpg",
+      "sha256": "aedce07b5d458dfc44f96cec38aec876da19f3b58993be1463ca80df8e7e8233",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-038"
+      ]
+    },
+    "cut.014-frondolin.standing": {
+      "asset_id": "cut.014-frondolin.standing",
+      "file": "wildkin-production/approved/assets/cut.014-frondolin.standing.webp",
+      "sha256": "b6bbf9b5d8d1c6efe443de763259e6781c555d0ef208a1f05f95d68b524397b7",
+      "approval": "2026-10-13T04:43:15Z",
+      "used_by": [
+        "WK-S002-039"
+      ]
+    },
+    "scene.verdant.09": {
+      "asset_id": "scene.verdant.09",
+      "file": "wildkin-production/approved/assets/scene.verdant.09.jpg",
+      "sha256": "959a309476ae3349ecf1940a6327c3d12101e31c2d4b1d317634771a5b14e2b5",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-039"
+      ]
+    },
+    "cut.019-creskit.standing": {
+      "asset_id": "cut.019-creskit.standing",
+      "file": "wildkin-production/approved/assets/cut.019-creskit.standing.webp",
+      "sha256": "812d606bea25b0f03673b74d26ec193ea27fc32bc0120991c54d5ae1b8c71ba9",
+      "approval": "2026-10-14T01:52:07Z",
+      "used_by": [
+        "WK-S002-040"
+      ]
+    },
+    "scene.astral.08": {
+      "asset_id": "scene.astral.08",
+      "file": "wildkin-production/approved/assets/scene.astral.08.jpg",
+      "sha256": "1c5804810eb2c9305fd522000c2e34e43169a6f7ec0ffd3cb8ebae08fb398661",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-040"
+      ]
+    },
+    "cut.024-mistip.standing": {
+      "asset_id": "cut.024-mistip.standing",
+      "file": "wildkin-production/approved/assets/cut.024-mistip.standing.webp",
+      "sha256": "e2b3c0e259cbf01d63d87f50bc3248627bb829dbd3349cbfb4767aaf08d7554f",
+      "approval": "2026-10-14T01:52:08Z",
+      "used_by": [
+        "WK-S002-041"
+      ]
+    },
+    "scene.storm.04": {
+      "asset_id": "scene.storm.04",
+      "file": "wildkin-production/approved/assets/scene.storm.04.jpg",
+      "sha256": "23ee865c43d8761445f0c828440c31f0e6db6ba16a76931390a6b0fa72ca69a3",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-041"
+      ]
+    },
+    "cut.033-glimlet.standing": {
+      "asset_id": "cut.033-glimlet.standing",
+      "file": "wildkin-production/approved/assets/cut.033-glimlet.standing.webp",
+      "sha256": "126b19eb15592344bc7c8a6f2b1e4f343493711268ca9fbc80f6fe9d19f3bc21",
+      "approval": "2026-10-14T01:52:08Z",
+      "used_by": [
+        "WK-S002-042"
+      ]
+    },
+    "scene.dusk.04": {
+      "asset_id": "scene.dusk.04",
+      "file": "wildkin-production/approved/assets/scene.dusk.04.jpg",
+      "sha256": "00ddad9fbedfecc9128ed7b758b5d8b51f761aedd9f1b4d2f659db6b663b4ffe",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-042"
+      ]
+    },
+    "cut.036-rivbit.standing": {
+      "asset_id": "cut.036-rivbit.standing",
+      "file": "wildkin-production/approved/assets/cut.036-rivbit.standing.webp",
+      "sha256": "857c51e8c81773005f4e40402828ad8ac63b8031724144b643687ca296a810de",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-043"
+      ]
+    },
+    "scene.iron.01": {
+      "asset_id": "scene.iron.01",
+      "file": "wildkin-production/approved/assets/scene.iron.01.jpg",
+      "sha256": "eb3757a2efa3a5529650939bd9d47ff3f6572d97ac00fc59d70c051ea418c704",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-043",
+        "WK-S002-050"
+      ]
+    },
+    "cut.039-pebblamb.standing": {
+      "asset_id": "cut.039-pebblamb.standing",
+      "file": "wildkin-production/approved/assets/cut.039-pebblamb.standing.webp",
+      "sha256": "0cb8200df4588a09634f2a673a2dd16d0c62e4667e3be89071d82ec47824ed8c",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-044"
+      ]
+    },
+    "scene.stone.02": {
+      "asset_id": "scene.stone.02",
+      "file": "wildkin-production/approved/assets/scene.stone.02.jpg",
+      "sha256": "bf74bd1c964151ca308e4d1df5110d5a3e7f61c87eeddf73f4472a49ad5eff40",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-044",
+        "WK-S002-054"
+      ]
+    },
+    "cut.042-quibbit.standing": {
+      "asset_id": "cut.042-quibbit.standing",
+      "file": "wildkin-production/approved/assets/cut.042-quibbit.standing.webp",
+      "sha256": "2dcf576860e1a4cd0944adf40c0e0b34b6669cd662e0235e787c8f2f157756c9",
+      "approval": "2026-10-14T01:52:09Z",
+      "used_by": [
+        "WK-S002-045"
+      ]
+    },
+    "scene.wonder.07": {
+      "asset_id": "scene.wonder.07",
+      "file": "wildkin-production/approved/assets/scene.wonder.07.jpg",
+      "sha256": "0ab6387afea8ea40ec05395fe3aa51d5e5fa2d062b557f6730ab7e0f64d547c8",
+      "approval": "2026-10-13T04:43:17Z",
+      "used_by": [
+        "WK-S002-045"
+      ]
+    },
+    "cut.045-mossnip.standing": {
+      "asset_id": "cut.045-mossnip.standing",
+      "file": "wildkin-production/approved/assets/cut.045-mossnip.standing.webp",
+      "sha256": "6fd216adea7a51bb45d26b5e4121f2fe905918bfdb5578b2a6fa5a0740eb786b",
+      "approval": "2026-10-14T01:52:09Z",
+      "used_by": [
+        "WK-S002-046"
+      ]
+    },
+    "scene.verdant.01": {
+      "asset_id": "scene.verdant.01",
+      "file": "wildkin-production/approved/assets/scene.verdant.01.jpg",
+      "sha256": "9f562aaddc6a70fc5cad99fc396922e4b9a77d7e67c851c9471ff043f14ac522",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-046"
+      ]
+    },
+    "cut.047-reefkin.standing": {
+      "asset_id": "cut.047-reefkin.standing",
+      "file": "wildkin-production/approved/assets/cut.047-reefkin.standing.webp",
+      "sha256": "67c6a0d878b43ede45d109c15fefb923876afb78f7326421121794cffb66c87e",
+      "approval": "2026-10-14T01:52:09Z",
+      "used_by": [
+        "WK-S002-047"
+      ]
+    },
+    "scene.tide.08": {
+      "asset_id": "scene.tide.08",
+      "file": "wildkin-production/approved/assets/scene.tide.08.jpg",
+      "sha256": "04d9ed15d7ee0c15c9d3f8e43b151a2b2e4cb17b6684ced1e0a222ee2c4c4360",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-047",
+        "WK-S002-049",
+        "WK-S002-051",
+        "WK-S002-055"
+      ]
+    },
+    "cut.053-nibrock.standing": {
+      "asset_id": "cut.053-nibrock.standing",
+      "file": "wildkin-production/approved/assets/cut.053-nibrock.standing.webp",
+      "sha256": "e33e4dec8dea8e21c42a4d3736c7e18ea7a84ca495680ccdf2760095c2edf758",
+      "approval": "2026-10-14T01:52:10Z",
+      "used_by": [
+        "WK-S002-048"
+      ]
+    },
+    "scene.iron.04": {
+      "asset_id": "scene.iron.04",
+      "file": "wildkin-production/approved/assets/scene.iron.04.jpg",
+      "sha256": "001746c7a9febec90369de8ac9bd5d7578c8921671e5de775f74e269995e8cf6",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-048",
+        "WK-S002-064"
+      ]
+    },
+    "cut.055-dewink.standing": {
+      "asset_id": "cut.055-dewink.standing",
+      "file": "wildkin-production/approved/assets/cut.055-dewink.standing.webp",
+      "sha256": "253da9aa5f36f28c7e8b86951352fbdd6166bf19f2e812eac76c534feb365eff",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-049"
+      ]
+    },
+    "cut.064-clampup.standing": {
+      "asset_id": "cut.064-clampup.standing",
+      "file": "wildkin-production/approved/assets/cut.064-clampup.standing.webp",
+      "sha256": "dab794fe4f3119c44180cf61f90ba2a5b8d589ed313e86e09b2bf6372da66e1c",
+      "approval": "2026-10-14T01:52:11Z",
+      "used_by": [
+        "WK-S002-050"
+      ]
+    },
+    "cut.003-opalotl.standing": {
+      "asset_id": "cut.003-opalotl.standing",
+      "file": "wildkin-production/approved/assets/cut.003-opalotl.standing.webp",
+      "sha256": "0b83e66329deac15a6cd841206f38892094c92d2a60ff9a5d033fed7553317fd",
+      "approval": "2026-10-14T01:52:05Z",
+      "used_by": [
+        "WK-S002-051"
+      ]
+    },
+    "cut.004-aurorotl.standing": {
+      "asset_id": "cut.004-aurorotl.standing",
+      "file": "wildkin-production/approved/assets/cut.004-aurorotl.standing.webp",
+      "sha256": "e5d08f376daeca5df0b2ac664f7fb75071ebcd4667059b1cab11f5ab6da38477",
+      "approval": "2026-10-14T01:52:05Z",
+      "used_by": [
+        "WK-S002-052"
+      ]
+    },
+    "cut.006-maceback.standing": {
+      "asset_id": "cut.006-maceback.standing",
+      "file": "wildkin-production/approved/assets/cut.006-maceback.standing.webp",
+      "sha256": "cfe161c6ecc53c6ccff53036ae9f207f31ca9cc1497ad1422487b415e53ad7e0",
+      "approval": "2026-10-14T01:52:06Z",
+      "used_by": [
+        "WK-S002-053"
+      ]
+    },
+    "scene.stone.03": {
+      "asset_id": "scene.stone.03",
+      "file": "wildkin-production/approved/assets/scene.stone.03.jpg",
+      "sha256": "5298f696965c26a4b4013ae7ee33efb7dfbdb09173118b134ffb3e0c921f2ad4",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-053"
+      ]
+    },
+    "cut.007-fortisaur.standing": {
+      "asset_id": "cut.007-fortisaur.standing",
+      "file": "wildkin-production/approved/assets/cut.007-fortisaur.standing.webp",
+      "sha256": "b6589ad94af50c5fb7640c0e52df7e8de5845172386c1784039554b97b9ff853",
+      "approval": "2026-10-14T01:52:06Z",
+      "used_by": [
+        "WK-S002-054"
+      ]
+    },
+    "cut.009-runakoi.standing": {
+      "asset_id": "cut.009-runakoi.standing",
+      "file": "wildkin-production/approved/assets/cut.009-runakoi.standing.webp",
+      "sha256": "7ff05034b3c2a268c8f5cd37fd50a8ee23826ff8ec4176ffdeed30a15c976f3f",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-055"
+      ]
+    },
+    "cut.010-koirune.standing": {
+      "asset_id": "cut.010-koirune.standing",
+      "file": "wildkin-production/approved/assets/cut.010-koirune.standing.webp",
+      "sha256": "f6277205f9c5226070221fc9d5138b0225b6beadf7257b177e569f6cd240e6c2",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-056"
+      ]
+    },
+    "cut.012-shelladin.standing": {
+      "asset_id": "cut.012-shelladin.standing",
+      "file": "wildkin-production/approved/assets/cut.012-shelladin.standing.webp",
+      "sha256": "46279dceb440366b8563648c39c9c62fd0913376fb0fe5d105892620ec7e5855",
+      "approval": "2026-10-14T01:52:06Z",
+      "used_by": [
+        "WK-S002-057"
+      ]
+    },
+    "scene.stone.05": {
+      "asset_id": "scene.stone.05",
+      "file": "wildkin-production/approved/assets/scene.stone.05.jpg",
+      "sha256": "f42f4bad4e239b9f93d727fdcbac529b0bc97492a7eba4a977bcaea7972b866f",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-057"
+      ]
+    },
+    "cut.013-aegisopod.standing": {
+      "asset_id": "cut.013-aegisopod.standing",
+      "file": "wildkin-production/approved/assets/cut.013-aegisopod.standing.webp",
+      "sha256": "bc7bac9af97db608ded1e79c803a1e1624ca91196f5c1f2f06c903a138c4b733",
+      "approval": "2026-10-14T01:52:06Z",
+      "used_by": [
+        "WK-S002-058"
+      ]
+    },
+    "cut.015-pangrove.standing": {
+      "asset_id": "cut.015-pangrove.standing",
+      "file": "wildkin-production/approved/assets/cut.015-pangrove.standing.webp",
+      "sha256": "bea896ea675dc7bb5cd8e4b7f46c3553e9c79be217028ec5f0a0809a4f932668",
+      "approval": "2026-10-14T01:52:07Z",
+      "used_by": [
+        "WK-S002-059"
+      ]
+    },
+    "scene.verdant.07": {
+      "asset_id": "scene.verdant.07",
+      "file": "wildkin-production/approved/assets/scene.verdant.07.jpg",
+      "sha256": "2db94267a9641e7936837c18507fe0cc4022e4a93de833b5abdf5f01aab0a80f",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-059"
+      ]
+    },
+    "cut.016-canopang.standing": {
+      "asset_id": "cut.016-canopang.standing",
+      "file": "wildkin-production/approved/assets/cut.016-canopang.standing.webp",
+      "sha256": "c98a9319f4f48fac16bf9c0cf58c26bc86ea348236ca935d8372df172ea3888e",
+      "approval": "2026-10-14T01:52:07Z",
+      "used_by": [
+        "WK-S002-060"
+      ]
+    },
+    "scene.verdant.05": {
+      "asset_id": "scene.verdant.05",
+      "file": "wildkin-production/approved/assets/scene.verdant.05.jpg",
+      "sha256": "e0e947b56692ee5b38f0231c460995a69a8daaeb677d57f7a90f832a1e54acb1",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-060"
+      ]
+    },
+    "cut.020-astrynx.standing": {
+      "asset_id": "cut.020-astrynx.standing",
+      "file": "wildkin-production/approved/assets/cut.020-astrynx.standing.webp",
+      "sha256": "ca295ffd4fbf47f953683d879667740199202fc12a4da0bd266e7c98721a8f04",
+      "approval": "2026-10-14T01:52:07Z",
+      "used_by": [
+        "WK-S002-061"
+      ]
+    },
+    "scene.astral.06": {
+      "asset_id": "scene.astral.06",
+      "file": "wildkin-production/approved/assets/scene.astral.06.jpg",
+      "sha256": "c239723f13af7d9339ce5a1bf1ca03d8e6a0ced475f21ac86a8eba43eb7611a8",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-061"
+      ]
+    },
+    "cut.034-hushwing.standing": {
+      "asset_id": "cut.034-hushwing.standing",
+      "file": "wildkin-production/approved/assets/cut.034-hushwing.standing.webp",
+      "sha256": "2361bb94084c05e43266bd8db2c59b7c60fc17b005545d694eb8b0ff1be80fe8",
+      "approval": "2026-10-14T01:52:08Z",
+      "used_by": [
+        "WK-S002-062"
+      ]
+    },
+    "scene.dusk.03": {
+      "asset_id": "scene.dusk.03",
+      "file": "wildkin-production/approved/assets/scene.dusk.03.jpg",
+      "sha256": "0eac022d95ac9b1afb9035e415c79427c76c8ec99a0d8ba439d0e13f9c5dec27",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-062"
+      ]
+    },
+    "cut.035-veilmora.standing": {
+      "asset_id": "cut.035-veilmora.standing",
+      "file": "wildkin-production/approved/assets/cut.035-veilmora.standing.webp",
+      "sha256": "93d68e5e2fc6917044f494b76d73ef288ab8f9064936fb265825c2d98eae74c1",
+      "approval": "2026-10-14T01:52:08Z",
+      "used_by": [
+        "WK-S002-063"
+      ]
+    },
+    "scene.dusk.02": {
+      "asset_id": "scene.dusk.02",
+      "file": "wildkin-production/approved/assets/scene.dusk.02.jpg",
+      "sha256": "62e8994e66cee9cf1c2005066cdfec5a6210cdaa90df315eeb5a3d07c56c7a08",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-063"
+      ]
+    },
+    "cut.037-boltusk.standing": {
+      "asset_id": "cut.037-boltusk.standing",
+      "file": "wildkin-production/approved/assets/cut.037-boltusk.standing.webp",
+      "sha256": "1db05da9374dbdd1e2bd3195980bf28e055207af9b8dad386af7407d432dad67",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-064"
+      ]
+    },
+    "cut.038-ferradon.standing": {
+      "asset_id": "cut.038-ferradon.standing",
+      "file": "wildkin-production/approved/assets/cut.038-ferradon.standing.webp",
+      "sha256": "37103044726bf7a2d4818f9fc74900eaacf36031a144cc93e41f843a28073c60",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-065"
+      ]
+    },
+    "scene.iron.03": {
+      "asset_id": "scene.iron.03",
+      "file": "wildkin-production/approved/assets/scene.iron.03.jpg",
+      "sha256": "5cbd1b0a6fa75cd3ce294ece0a97f02cce8f27fb6dc5536257d5f60bfc08ccd6",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-065",
+        "WK-S002-072"
+      ]
+    },
+    "cut.040-cairnram.standing": {
+      "asset_id": "cut.040-cairnram.standing",
+      "file": "wildkin-production/approved/assets/cut.040-cairnram.standing.webp",
+      "sha256": "366231995a69f0d4ce6837dee64b6db58d02fd9ffa6715d1d52de97c8cc99f7f",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-066"
+      ]
+    },
+    "scene.stone.01": {
+      "asset_id": "scene.stone.01",
+      "file": "wildkin-production/approved/assets/scene.stone.01.jpg",
+      "sha256": "407a699d546a7f05ce610ad16f17ebabef10d2bab326a7320c9e080dacad31f0",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-066"
+      ]
+    },
+    "cut.041-monolox.standing": {
+      "asset_id": "cut.041-monolox.standing",
+      "file": "wildkin-production/approved/assets/cut.041-monolox.standing.webp",
+      "sha256": "7d742f6e438d506de1101e174d3c19ac7040e4ea2cb8cdb5d86b52eeaedcf880",
+      "approval": "2026-10-15T05:46:25Z",
+      "used_by": [
+        "WK-S002-067"
+      ]
+    },
+    "scene.stone.09": {
+      "asset_id": "scene.stone.09",
+      "file": "wildkin-production/approved/assets/scene.stone.09.jpg",
+      "sha256": "08049c2e1538e7f6e5914bec09a8f7c76dc51d3453c5087f5be3a794c8daffaa",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-067"
+      ]
+    },
+    "cut.043-whimhare.standing": {
+      "asset_id": "cut.043-whimhare.standing",
+      "file": "wildkin-production/approved/assets/cut.043-whimhare.standing.webp",
+      "sha256": "f32a7880f149ebf2ccb885b2ec8047c97a15ec26e0ab3c4d4c08b8ed58788286",
+      "approval": "2026-10-14T01:52:09Z",
+      "used_by": [
+        "WK-S002-068"
+      ]
+    },
+    "scene.wonder.06": {
+      "asset_id": "scene.wonder.06",
+      "file": "wildkin-production/approved/assets/scene.wonder.06.jpg",
+      "sha256": "612af081a0261cfc48c9b853280a54465bc2640805156aa56f6f0ce906790abe",
+      "approval": "2026-10-13T04:43:17Z",
+      "used_by": [
+        "WK-S002-068"
+      ]
+    },
+    "cut.044-fablehorn.standing": {
+      "asset_id": "cut.044-fablehorn.standing",
+      "file": "wildkin-production/approved/assets/cut.044-fablehorn.standing.webp",
+      "sha256": "aa950ec62037f42b53f8336c1973ef67acfbb3d3675656de26076b13b1a72c71",
+      "approval": "2026-10-14T01:52:09Z",
+      "used_by": [
+        "WK-S002-069"
+      ]
+    },
+    "scene.wonder.05": {
+      "asset_id": "scene.wonder.05",
+      "file": "wildkin-production/approved/assets/scene.wonder.05.jpg",
+      "sha256": "0113766c590bb1cccf4bb1889c9e21d5b0b5deec8b8ce685493a676f4beae7cc",
+      "approval": "2026-10-13T04:43:17Z",
+      "used_by": [
+        "WK-S002-069"
+      ]
+    },
+    "cut.046-bramblebuck.standing": {
+      "asset_id": "cut.046-bramblebuck.standing",
+      "file": "wildkin-production/approved/assets/cut.046-bramblebuck.standing.webp",
+      "sha256": "20397b91032316d4f249b330008d1860d30d9f2453325cf583223314b114c184",
+      "approval": "2026-10-14T01:52:09Z",
+      "used_by": [
+        "WK-S002-070"
+      ]
+    },
+    "scene.verdant.08": {
+      "asset_id": "scene.verdant.08",
+      "file": "wildkin-production/approved/assets/scene.verdant.08.jpg",
+      "sha256": "23ef9a9080aad6eb48b98ba89281a647d4de0e41dab3f5e68bf46074ea377835",
+      "approval": "2026-10-13T04:43:16Z",
+      "used_by": [
+        "WK-S002-070"
+      ]
+    },
+    "cut.048-corallume.standing": {
+      "asset_id": "cut.048-corallume.standing",
+      "file": "wildkin-production/approved/assets/cut.048-corallume.standing.webp",
+      "sha256": "8a3f6f6d2170ad7e4fca804c5e9071946f485dd31673b4e0912552a619ab9fdb",
+      "approval": "2026-10-14T01:52:09Z",
+      "used_by": [
+        "WK-S002-071"
+      ]
+    },
+    "cut.054-drillbadger.standing": {
+      "asset_id": "cut.054-drillbadger.standing",
+      "file": "wildkin-production/approved/assets/cut.054-drillbadger.standing.webp",
+      "sha256": "965066f0a7f8791406e70f030d00a8c5af0015d2c9fd28c05da0badc9ef8fc00",
+      "approval": "2026-10-14T01:52:10Z",
+      "used_by": [
+        "WK-S002-072"
+      ]
+    },
+    "cut.056-bloomble.standing": {
+      "asset_id": "cut.056-bloomble.standing",
+      "file": "wildkin-production/approved/assets/cut.056-bloomble.standing.webp",
+      "sha256": "34773e3853e30f5be4bcd245c957febdf26629a495ffbe3039ae126986da21c5",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-073"
+      ]
+    },
+    "cut.026-nimbusail.standing": {
+      "asset_id": "cut.026-nimbusail.standing",
+      "file": "wildkin-production/approved/assets/cut.026-nimbusail.standing.webp",
+      "sha256": "85294474f1d0f7aecb09e7b987433a215be4e720aba052a772c5a3e07917552b",
+      "approval": "2026-10-14T01:52:08Z",
+      "used_by": [
+        "WK-S002-074"
+      ]
+    },
+    "scene.storm.03": {
+      "asset_id": "scene.storm.03",
+      "file": "wildkin-production/approved/assets/scene.storm.03.jpg",
+      "sha256": "3bb0048dba4c56b379d2962ea4f517af6c551226102c09ae47ac906297ea1715",
+      "approval": "2026-10-14T01:52:13Z",
+      "used_by": [
+        "WK-S002-074"
+      ]
+    },
+    "cut.076-june-kestrel.portrait": {
+      "asset_id": "cut.076-june-kestrel.portrait",
+      "file": "wildkin-production/approved/assets/cut.076-june-kestrel.portrait.webp",
+      "sha256": "6a9a730d0e0d34fa14c02aca8e4a3c1a6a785a7030e0cc09b06a5ceecf763ce4",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-075"
+      ]
+    },
+    "cut.080-nessa-flint.portrait": {
+      "asset_id": "cut.080-nessa-flint.portrait",
+      "file": "wildkin-production/approved/assets/cut.080-nessa-flint.portrait.webp",
+      "sha256": "0909fc1c20f181f432b15a53f1f2f5b846821e87d0b917328e8e4ca04902a548",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-076"
+      ]
+    },
+    "cut.090-iris-shade.portrait": {
+      "asset_id": "cut.090-iris-shade.portrait",
+      "file": "wildkin-production/approved/assets/cut.090-iris-shade.portrait.webp",
+      "sha256": "537857e455fc00342487755adafe9ea7cc42fc4a09f3dd21a5842085e41f79fa",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-077"
+      ]
+    },
+    "cut.075-professor-maren-vale.portrait": {
+      "asset_id": "cut.075-professor-maren-vale.portrait",
+      "file": "wildkin-production/approved/assets/cut.075-professor-maren-vale.portrait.webp",
+      "sha256": "0c6991e795abe927f2814b728b9d95d37f1877f82d733c3d050020a57768b92c",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-078"
+      ]
+    },
+    "cut.077-warden-sorrel-pike.portrait": {
+      "asset_id": "cut.077-warden-sorrel-pike.portrait",
+      "file": "wildkin-production/approved/assets/cut.077-warden-sorrel-pike.portrait.webp",
+      "sha256": "839df6816d96dfeea60b00ae07c8efa16b1ef6810f47f7e73917c32a14d813c2",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-079"
+      ]
+    },
+    "cut.078-toma-reed.portrait": {
+      "asset_id": "cut.078-toma-reed.portrait",
+      "file": "wildkin-production/approved/assets/cut.078-toma-reed.portrait.webp",
+      "sha256": "1f8464f8de3c4277c84af81664598a62a3c59fea8e7d8437ff9dc3fec003076c",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-080"
+      ]
+    },
+    "cut.079-lita-moss.portrait": {
+      "asset_id": "cut.079-lita-moss.portrait",
+      "file": "wildkin-production/approved/assets/cut.079-lita-moss.portrait.webp",
+      "sha256": "ed9c17b51e29d1d667ef857a728f258509aeda11065a9eecdc804d0ad1c66a04",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-081"
+      ]
+    },
+    "cut.082-pip-rowan.portrait": {
+      "asset_id": "cut.082-pip-rowan.portrait",
+      "file": "wildkin-production/approved/assets/cut.082-pip-rowan.portrait.webp",
+      "sha256": "4ecb9f65b7c7d40145a5e21254d737c8359dfba5d3b554f69d7f23efd2bc4d41",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-082"
+      ]
+    },
+    "cut.083-archivist-sera-wynn.portrait": {
+      "asset_id": "cut.083-archivist-sera-wynn.portrait",
+      "file": "wildkin-production/approved/assets/cut.083-archivist-sera-wynn.portrait.webp",
+      "sha256": "59b1234553e36bc3a165ad4033986b74d83e0b4cd95b084c89a5a4a8abc83881",
+      "approval": "2026-10-15T05:46:26Z",
+      "used_by": [
+        "WK-S002-083"
+      ]
+    },
+    "cut.084-renn-calder.portrait": {
+      "asset_id": "cut.084-renn-calder.portrait",
+      "file": "wildkin-production/approved/assets/cut.084-renn-calder.portrait.webp",
+      "sha256": "4a709e6ff6519954d9c5db05539a9a443c3db03374983400021f093225b55f38",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-084"
+      ]
+    },
+    "cut.085-mira-quill.portrait": {
+      "asset_id": "cut.085-mira-quill.portrait",
+      "file": "wildkin-production/approved/assets/cut.085-mira-quill.portrait.webp",
+      "sha256": "04d060d1619bee64bcec2533df9df8c2312ab03fb160162d8ffef16420edd95d",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-085"
+      ]
+    },
+    "cut.086-sel-veyra.portrait": {
+      "asset_id": "cut.086-sel-veyra.portrait",
+      "file": "wildkin-production/approved/assets/cut.086-sel-veyra.portrait.webp",
+      "sha256": "c7742cdf1d81b0665e7efc2d330285a2f3ed79e23d923685cddb053f23232bf7",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-086"
+      ]
+    },
+    "cut.088-dr-cyl-vane.portrait": {
+      "asset_id": "cut.088-dr-cyl-vane.portrait",
+      "file": "wildkin-production/approved/assets/cut.088-dr-cyl-vane.portrait.webp",
+      "sha256": "6d9bb90c8d099ebc2b28e4a084bd3ca6b9cefed8ea41edd3738832052043a5e3",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-087"
+      ]
+    },
+    "cut.089-marshal-rook.portrait": {
+      "asset_id": "cut.089-marshal-rook.portrait",
+      "file": "wildkin-production/approved/assets/cut.089-marshal-rook.portrait.webp",
+      "sha256": "24333c60649e6407373475448d1056e458067bca6ad20615364903b9d1951a6a",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-088"
+      ]
+    },
+    "cut.087-cass-rell.portrait": {
+      "asset_id": "cut.087-cass-rell.portrait",
+      "file": "wildkin-production/approved/assets/cut.087-cass-rell.portrait.webp",
+      "sha256": "67ce4879f1990070779801beaa207d1029732d744f088ee42f75606f55980b78",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-089"
+      ]
+    },
+    "cut.091-dex-harrow.portrait": {
+      "asset_id": "cut.091-dex-harrow.portrait",
+      "file": "wildkin-production/approved/assets/cut.091-dex-harrow.portrait.webp",
+      "sha256": "29e181fca7d4eac584efd0c016e3e0e5ffe7dbfa9d435f8689ab725ed57e2ae2",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-090"
+      ]
+    },
+    "cut.092-brin-hollow.portrait": {
+      "asset_id": "cut.092-brin-hollow.portrait",
+      "file": "wildkin-production/approved/assets/cut.092-brin-hollow.portrait.webp",
+      "sha256": "3ed809c5e07857ada608c9f2a254bf01136f5b2a69379cd7c904b205abedb56c",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-091"
+      ]
+    },
+    "obj.093-bond-charm": {
+      "asset_id": "obj.093-bond-charm",
+      "file": "wildkin-production/approved/assets/obj.093-bond-charm.webp",
+      "sha256": "03505619c5ce867ade38b9e43545d74c4065c3fe0c7ee20accbee344e902644c",
+      "approval": "2026-10-14T01:52:12Z",
+      "used_by": [
+        "WK-S002-093"
+      ]
+    },
+    "obj.096-biome-compass": {
+      "asset_id": "obj.096-biome-compass",
+      "file": "wildkin-production/approved/assets/obj.096-biome-compass.webp",
+      "sha256": "ab70480c5d1679c873c5376e71b576adbc28a94f621c1779e649edd4c36b062f",
+      "approval": "2026-10-14T01:52:12Z",
+      "used_by": [
+        "WK-S002-094"
+      ]
+    },
+    "obj.097-glow-lantern": {
+      "asset_id": "obj.097-glow-lantern",
+      "file": "wildkin-production/approved/assets/obj.097-glow-lantern.webp",
+      "sha256": "2e48d8a0f6ccf1cfbf5ec0be89c7a033ef30a8de8b4e5fdfab92a4e99b88bba3",
+      "approval": "2026-10-14T01:52:12Z",
+      "used_by": [
+        "WK-S002-095"
+      ]
+    },
+    "obj.109-null-collar": {
+      "asset_id": "obj.109-null-collar",
+      "file": "wildkin-production/approved/assets/obj.109-null-collar.webp",
+      "sha256": "542f6279e98ec54c2f8b5214af0b4a284697d986e44ae97253f255ec40a91d09",
+      "approval": "2026-10-14T01:52:12Z",
+      "used_by": [
+        "WK-S002-096"
+      ]
+    },
+    "ill.125-quick-retreat": {
+      "asset_id": "ill.125-quick-retreat",
+      "file": "wildkin-production/approved/assets/ill.125-quick-retreat.jpg",
+      "sha256": "397e8308479eba6f77e22cd085f889e7d5d6c6f398215fa85c97c7c4fcd1fa13",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-120"
+      ]
+    },
+    "ill.126-shared-instinct": {
+      "asset_id": "ill.126-shared-instinct",
+      "file": "wildkin-production/approved/assets/ill.126-shared-instinct.jpg",
+      "sha256": "c79e5d0bf62da1f0465775bdc199cfce30c326a233a23785ad7662b51fd7f184",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-121"
+      ]
+    },
+    "ill.130-break-the-clasp": {
+      "asset_id": "ill.130-break-the-clasp",
+      "file": "wildkin-production/approved/assets/ill.130-break-the-clasp.jpg",
+      "sha256": "2f83a441b895d6ef9bb09553aed171d8ea87323488034bcd819c662a27664fcb",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-122"
+      ]
+    },
+    "ill.131-stand-together": {
+      "asset_id": "ill.131-stand-together",
+      "file": "wildkin-production/approved/assets/ill.131-stand-together.jpg",
+      "sha256": "9d8fb23e54df9ef82d58b9d6d07eb731070e22f77054927ca84c9e09958237bd",
+      "approval": "2026-10-15T05:46:27Z",
+      "used_by": [
+        "WK-S002-123"
+      ]
+    }
+  },
+  "evergreen_vector_cards": [
+    "WK-S002-132",
+    "WK-S002-133",
+    "WK-S002-134",
+    "WK-S002-135",
+    "WK-S002-136",
+    "WK-S002-137",
+    "WK-S002-138",
+    "WK-S002-139",
+    "WK-S002-140"
+  ]
+}

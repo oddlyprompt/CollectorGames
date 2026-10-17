@@ -1,0 +1,33 @@
+{
+  "type": "final authoritative metadata; no image bytes changed",
+  "files": [
+    {
+      "file": "art_queue.json",
+      "sha256": "7f88d5e411376b3c60f13fe6b79dcbda4052a73b5b58e4beab5db02157651695"
+    },
+    {
+      "file": "art_manifest.json",
+      "sha256": "44988008f908f43814a8c389f8e1fb3b686047669b516d0e3e318e034dc7e7d8"
+    },
+    {
+      "file": "HANDOFF.md",
+      "sha256": "a6b77f2f270e34d6bbd0fe530ed0157597fcc4305724de53284fa4c9d12e5281"
+    },
+    {
+      "file": "PROGRESS.md",
+      "sha256": "05fc7da666bde5da542be678f99a101a2ecfa90dde07a3edbc847e6dda217241"
+    },
+    {
+      "file": "reused_first_bond.json",
+      "sha256": "9cd38794e02c28054a0c76d0bffd57ebc81de586a921d15425b7a55ded420b1e"
+    },
+    {
+      "file": "reused_first_bond_assets.json",
+      "sha256": "dd5cbfafb0026d7654ae9dabef1d1e41c5fc98a234e3b30d4ff3194a890471d3"
+    },
+    {
+      "file": "final-layout-acceptance.json",
+      "sha256": "1b2868be1211e58b102155aa8a106795e11f0954eac610bb505b098c64fca35b"
+    }
+  ]
+}

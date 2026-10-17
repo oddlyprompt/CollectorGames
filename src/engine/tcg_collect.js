@@ -18,14 +18,14 @@ const TC_GOALS=[
  {id:'fam', t:'A whole family', d:'Own every member of one evolution family of three or more.', p:S=>[S.famBest[0],Math.max(1,S.famBest[1])]},
  {id:'gem', t:'Gem Mint', d:'Own a GCS 10.', p:S=>[S.gem>0?1:0,1]},
  {id:'hold', t:'Patient collector', d:'Keep a sealed booster box for a full year.', p:S=>[Math.min(365,S.held),365]},
- {id:'base', t:'The base set', d:'Own every base card (any print, holo or not).', p:S=>[S.base[0],S.base[1]]},
- {id:'premall', t:'Every premium card', d:'Own all the premium cards: illustration, full art, special and clasped.', p:S=>[S.premAll[0],S.premAll[1]]},
- {id:'master', t:'Master set', d:'Own every print, including each holo and reverse holo.', p:S=>[S.master[0],S.master[1]]},
+ {id:'base', t:'The base set', d:'Own every base card of every set that is out (any print, holo or not).', p:S=>[S.base[0],S.base[1]]},
+ {id:'premall', t:'Every premium card', d:'Own all the premium cards of every set that is out: illustration, full art, special and clasped.', p:S=>[S.premAll[0],S.premAll[1]]},
+ {id:'master', t:'Master set', d:'Own every print of every set that is out, including each holo and reverse holo.', p:S=>[S.master[0],S.master[1]]},
 ];
 function tcGoalStats(){
   const own=tcOwnState(), mine=myTc(); const S={prem:0, sold:G.tcg.bl||0, aff:0, famBest:[0,1], gem:0, held:0, base:[0,0], premAll:[0,0], master:[0,0]};
   const els=new Set(), fam=new Map();
-  for (const n of tcReleasedSets(G.day)){ const cs=tcSetCards(n), base=WK_CANON.set.base;
+  for (const n of tcReleasedSets(G.day)){ const cs=tcSetCards(n), base=tcSetDef(n).base;
     for (const c of cs){ const have=own.nos.has(n+'|'+c.no);
       if (c.no<=base && c.kind!=='essence'){ S.base[1]++; if (have) S.base[0]++; }
       if (tcIsPrem(c)){ S.premAll[1]++; if (have){ S.premAll[0]++; S.prem++; } }
