@@ -60,6 +60,7 @@ def canon_js(out_dir):
         if base['category']=='ally' and ALLY_BACKDROP.get(x.get('name') or base.get('name')): art['bd']=ALLY_BACKDROP[x.get('name') or base.get('name')]; used.add(art['bd'])
         x['art']=art; cards.append(x)
     used.add('cut.001-cactuft.standing')   # booster wrapper art
+    used.update(k for k in reg if k.startswith('product.'))   # approved packaging renders (packs, boxes)
     os.makedirs(os.path.join(out_dir,'art'),exist_ok=True); arts={}
     for aid in sorted(used):
         r=reg.get(aid)

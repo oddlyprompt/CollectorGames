@@ -48,11 +48,34 @@ const tcFace=cp=>{ const d=tcD(cp.k); if (d.sealed||cp.g>0) return tcFront(cp.k)
 // ---------- packs and boxes ----------
 // ---------- sealed product: a foil booster pack and a three-quarter booster box, dressed in the set's own paintings ----------
 // Until SOL delivers product renders (see wildkin-production/SOL_PRODUCT_BRIEF.md) the packaging is drawn here.
-const TC_PACK_ART={P:['ill.151-cactuft-fa','ill.173-cactuft-sir','cut.001-cactuft.standing'], B:['ill.154-koirune-fa','ill.152-aurorotl-fa','ill.144-koirune-ir']};
-function tcPackArt(f){ for (const id of TC_PACK_ART[f]) if (WK_ART[id]) return WK_ART[id]; return null; }
-function tcPackSVG(set, f){
+// A set with approved product renders (product.<code>.pack-1..4, box-closed, box-open; tools/wildkin_art.py products) uses them,
+// with every word printed on the quiet pearl areas; a set without them gets the drawn packaging dressed in its own paintings.
+const TC_PACK_ART={1:{P:['ill.151-cactuft-fa','ill.173-cactuft-sir','cut.001-cactuft.standing'], B:['ill.154-koirune-fa','ill.152-aurorotl-fa','ill.144-koirune-ir']}};
+function tcPackArt(f, set){ const L=(TC_PACK_ART[set]||{})[f] || (tcSetCards(set).filter(c=>tcIsPrem(c)).sort((a,b)=>TC_RAROR[b.rar]-TC_RAROR[a.rar]).map(c=>c.art&&c.art.i)); for (const id of L||[]) if (id && WK_ART[id]) return WK_ART[id]; return null; }
+const tcProd=(set,n)=>{ const d=tcSetDef(set); return d && WK_ART['product.'+String(d.code).toLowerCase()+'.'+n] || null; };
+function tcPackSVG(set, f, v){
+  const P=f==='P'? tcProd(set,'pack-'+(1+((v||0)%4))) || tcProd(set,'pack-1') : tcProd(set, v==='open'? 'box-open' : 'box-closed');
+  return P? tcProductSVG(set,f,P,v) : tcPackDrawn(set,f);
+}
+function tcProductSVG(set, f, A, v){
+  const def=tcSetDef(set), name=def.name.toUpperCase(), F='font-family="Barlow Condensed,Arial Narrow,Helvetica Neue,Arial,sans-serif"', u='q'+set+f+(v||0);
+  const W=200, H=Math.round(W*A.h/A.w);
+  const foil=`<linearGradient id="${u}f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff2c2"/><stop offset=".3" stop-color="#d9a93c"/><stop offset=".55" stop-color="#fff6d8"/><stop offset=".8" stop-color="#b9862a"/><stop offset="1" stop-color="#f6dc93"/></linearGradient>`;
+  const txt=(x,y,sz,t,w,fill,ink)=>`<text x="${x}" y="${y}" text-anchor="middle" ${F} font-weight="800" font-size="${sz}" letter-spacing="${(sz*0.14).toFixed(1)}" fill="${fill}" stroke="${ink}" stroke-width="${(sz*0.08).toFixed(2)}" paint-order="stroke" textLength="${w}" lengthAdjust="spacingAndGlyphs">${esc(t)}</text>`;
+  const img=`<image href="${A.u}" x="0" y="0" width="${W}" height="${H}" preserveAspectRatio="none"/>`;
+  if (f==='P') return `<svg viewBox="0 -4 ${W} ${H+10}" xmlns="http://www.w3.org/2000/svg" class="packsvg" role="img" aria-label="${esc(def.name)} booster pack"><defs>${foil}</defs><ellipse cx="${W/2}" cy="${H+1}" rx="${W*0.38}" ry="4" fill="#000" opacity=".18"/>${img}
+    ${txt(W/2,H*0.157,H*0.085,'WILDKIN',W*0.66,`url(#${u}f)`,'#3a2208')}
+    ${txt(W/2,H*0.868,H*0.05,name,Math.min(W*0.62,name.length*H*0.03),'#5a3a12','#fff8e6')}
+    ${txt(W/2,H*0.905,H*0.026,'BOOSTER PACK · 10 CARDS',W*0.5,'#7a5520','#fff8e6')}</svg>`;
+  if (v==='open') return `<svg viewBox="0 -4 ${W} ${H+10}" xmlns="http://www.w3.org/2000/svg" class="packsvg" role="img" aria-label="${esc(def.name)} booster box, open"><ellipse cx="${W*0.55}" cy="${H+1}" rx="${W*0.45}" ry="5" fill="#000" opacity=".18"/>${img}<defs>${foil}</defs>${txt(W*0.74,H*0.19,H*0.06,'WILDKIN',W*0.3,`url(#${u}f)`,'#3a2208')}</svg>`;
+  return `<svg viewBox="0 -4 ${W} ${H+10}" xmlns="http://www.w3.org/2000/svg" class="packsvg" role="img" aria-label="${esc(def.name)} booster box"><defs>${foil}</defs><ellipse cx="${W*0.48}" cy="${H+1}" rx="${W*0.46}" ry="5" fill="#000" opacity=".18"/>${img}
+    ${txt(W*0.405,H*0.255,H*0.085,'WILDKIN',W*0.4,`url(#${u}f)`,'#3a2208')}
+    ${txt(W*0.405,H*0.87,H*0.05,name,Math.min(W*0.38,name.length*H*0.03),'#5a3a12','#fff8e6')}
+    ${txt(W*0.405,H*0.915,H*0.026,'36 BOOSTER PACKS',W*0.24,'#7a5520','#fff8e6')}</svg>`;
+}
+function tcPackDrawn(set, f){
   const def=tcSetDef(set); const hue=(hsh('pk'+set)%360); const c1=`hsl(${hue} 62% 46%)`, c2=`hsl(${(hue+40)%360} 70% 26%)`; const F='font-family="Barlow Condensed,Arial Narrow,Helvetica Neue,Arial,sans-serif"';
-  const u='k'+set+f; const art=tcPackArt(f); const name=def.name.toUpperCase();
+  const u='k'+set+f; const art=tcPackArt(f,set); const name=def.name.toUpperCase();
   const foil=`<linearGradient id="${u}f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7d6"/><stop offset=".25" stop-color="#e2b84a"/><stop offset=".5" stop-color="#fff2c2"/><stop offset=".75" stop-color="#c9952f"/><stop offset="1" stop-color="#ffeab0"/></linearGradient>`;
   const holo=`<linearGradient id="${u}h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7ad9" stop-opacity=".0"/><stop offset=".35" stop-color="#7af3ff" stop-opacity=".22"/><stop offset=".5" stop-color="#fff" stop-opacity=".42"/><stop offset=".65" stop-color="#ffe17a" stop-opacity=".22"/><stop offset="1" stop-color="#b47aff" stop-opacity="0"/></linearGradient>`;
   const img=(x,y,w,h)=> art? `<image href="${art.u}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c1}"/>`;

@@ -10,6 +10,10 @@
   python3 tools/wildkin_art.py legacy [--koi N]       register the owner's earlier sheets in art-source/ (already approved) under manifest asset IDs
   python3 tools/wildkin_art.py singles-check [--accept-below-spec ID ...]   check single premium paintings listed in incoming/premium-individuals/card-map.json
   python3 tools/wildkin_art.py singles-approve [--assets ID ...] [--replace] [--by NAME]   approve the checked ones that have no errors
+  python3 tools/wildkin_art.py set-delivery --code dsk --handoff DIR --art DIR [DIR ...] [--by NAME] [--replace]
+                                                     a whole new set from SOL's final handoff (art_manifest.json with measured boxes):
+                                                     cut every cell, key cutouts, register each piece, copy the handoff to sets/<code>/
+  python3 tools/wildkin_art.py products --code fbd --dir DIR [--by NAME] [--replace]   packaging renders (packs, boxes) on a chroma screen
 
 Rules it enforces
   * The only way into the game is approved/registry.json. An approved asset is never replaced because a new file exists:
@@ -340,6 +344,8 @@ def main():
     l=sub.add_parser('legacy'); l.add_argument('--koi',type=int)
     sc=sub.add_parser('singles-check'); sc.add_argument('--accept-below-spec',nargs='*',help='asset ids the owner accepts below the size minimum (recorded as an accepted warning)')
     sa=sub.add_parser('singles-approve'); sa.add_argument('--assets',nargs='*'); sa.add_argument('--replace',action='store_true'); sa.add_argument('--by',default='owner')
+    sd=sub.add_parser('set-delivery'); sd.add_argument('--code',required=True); sd.add_argument('--handoff',required=True); sd.add_argument('--art',nargs='+',required=True); sd.add_argument('--by',default='owner'); sd.add_argument('--replace',action='store_true')
+    pr=sub.add_parser('products'); pr.add_argument('--code',required=True); pr.add_argument('--dir',required=True); pr.add_argument('--by',default='owner'); pr.add_argument('--replace',action='store_true')
     x=ap.parse_args()
     if x.cmd=='status': cmd_status(x)
     elif x.cmd=='check': cmd_check(x)
@@ -351,4 +357,11 @@ def main():
     elif x.cmd=='legacy': cmd_legacy(x)
     elif x.cmd=='singles-check': cmd_singles_check(x)
     elif x.cmd=='singles-approve': cmd_singles_approve(x)
+    elif x.cmd in ('set-delivery','products'):
+        import wildkin_art_sets as WS; R=registry()
+        if x.cmd=='set-delivery': took,skipped,rep=WS.deliver_set(x.handoff,x.art,x.code,WP,ROOT,R,x.by,x.replace)
+        else: took,skipped=WS.deliver_products(x.dir,x.code,WP,ROOT,R,x.by,x.replace); rep=[]
+        jsave(os.path.join(APP,'registry.json'),R)
+        edge=[a for a,c in rep if c.get('touches_edge')]
+        print('%s: approved %d piece(s)%s%s'%(x.cmd,len(took),'' if not skipped else '; skipped %d: '%len(skipped)+'; '.join('%s %s'%s for s in skipped[:8]),'' if not edge else '; touching the cell edge: '+', '.join(edge)))
 if __name__=='__main__': main()
