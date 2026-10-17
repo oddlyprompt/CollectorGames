@@ -13,7 +13,7 @@ function upNext(){
   if (G.cm){ add(nextDow(3, G.day-1)===G.day?G.day:nextDow(3),'New comics at '+SHOP_NAME,'goto','comics:week','comics');
     const pre=new Map(); for (const p of G.cm.pre){ const s=S_(p.sid); const k=p.d; pre.set(k,(pre.get(k)||[]).concat(sTitle(s)+' #'+p.n)); }
     for (const [d,l] of pre) add(d,'Preorder arrives: '+l.slice(0,2).join(', ')+(l.length>2?' +'+(l.length-2):''),'goto','comics:week','comics'); }
-  add(dowOf(G.day)===5?G.day:nextDow(5),'Payday: +'+money(50),null,null,'cash');
+  { const pay=G.player.pay!=null?G.player.pay:50; if (pay>0) add(dowOf(G.day)===5?G.day:nextDow(5),'Payday: +'+money(pay),null,null,'cash'); }   // the scenario's real allowance (none for Deep pockets)
   const rel=G.products.filter(p=>!p.cl && p.rel>=G.day).sort((a,b)=>a.rel-b.rel)[0]; if (rel) add(rel.rel,'Release: '+prodName(rel),'product',rel.id,'cards');
   if (G.hunt){ for (const ev of G.hunt.ev.filter(ev=>ev.ann<=G.day && ev.d+ev.days>G.day && ev.ty!=='flea' && ev.ty!=='garage').sort((a,b)=>a.d-b.d).slice(0,4)) add(Math.max(ev.d,G.day), ev.n+(ev.cost>40?' ('+money(ev.cost)+' to attend)':''),'goto','hunt:events','hunt');
     const gs=G.hunt.ev.filter(ev=>ev.ty==='garage' && ev.ann<=G.day && ev.d>=G.day); if (gs.length) add(gs[0].d, gs.length>1? gs.length+' garage sales':gs[0].n,'goto','hunt:events','hunt');

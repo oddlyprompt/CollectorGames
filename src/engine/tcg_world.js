@@ -127,21 +127,37 @@ function tcRelease(n, t){
   if (typeof tcReleaseMarket==='function') tcReleaseMarket(n,t);
   if (typeof tcFulfilPreorders==='function') tcFulfilPreorders(n,t);
 }
+// ---------- the retail lifecycle ----------
+// A set is printed for about 14 months (TC_PRINT_DAYS). Until then retail restocks it every Monday; afterwards the shelves
+// only sell down. The market prices sealed product against that: near retail while it is on shelves, rising once it is gone
+// (tcSealedFair). Before this, the newest set was printed forever while its sealed price kept climbing, so buying at
+// retail and reselling was free money (found in the owner's three-year playtest).
+const TC_PRINT_DAYS=425;
+function tcPrintEnd(n){ return tcSetDef(n).rel+TC_PRINT_DAYS; }
+function tcInPrint(n,t){ return t<tcPrintEnd(n); }
 function tcShopWeek(t, only){
-  for (const n of tcRetailSets(t)){ if (only!=null && n!==only) continue; const s=G.tcg.shop[n]||(G.tcg.shop[n]={pack:0,box:0}); const age=t-tcSetDef(n).rel; const rel=tcReleasedSets(t); const cur=age<100||n===rel[rel.length-1];   // the newest set keeps being reprinted
-    s.pack=Math.min(300, s.pack+(cur? ri(70,150) : ri(15,45))); s.box=Math.min(20, s.box+(cur? ri(4,9) : ri(1,3))); }
+  const rel=tcReleasedSets(t), live=rel.filter(n=>tcInPrint(n,t));
+  for (const n of live){ if (only!=null && n!==only) continue; const s=G.tcg.shop[n]||(G.tcg.shop[n]={pack:0,box:0}); const age=t-tcSetDef(n).rel; const cur=age<100||n===live[live.length-1];   // the newest set in print keeps the big allocation
+    const wind=tcPrintEnd(n)-t<60? 0.5 : 1;   // the last two months of the print run ship less
+    s.pack=Math.min(300, s.pack+Math.round((cur? ri(70,150) : ri(15,45))*wind)); s.box=Math.min(20, s.box+Math.round((cur? ri(4,9) : ri(1,3))*wind)); }
 }
-function tcRetailSets(t){ const rel=tcReleasedSets(t); return rel.filter((n,i)=>t-tcSetDef(n).rel<=365 || i===rel.length-1); }   // the newest set stays in print until another one exists
+// what the store still sells: sets in print, plus whatever is left on the shelf of a set that is not
+function tcRetailSets(t){ return tcReleasedSets(t).filter(n=>tcInPrint(n,t) || (G.tcg && G.tcg.shop[n] && (G.tcg.shop[n].pack>0 || G.tcg.shop[n].box>0))); }
 function tcShopDay(t){
-  for (const n of tcRetailSets(t)){ const s=G.tcg.shop[n]; if (!s) continue; const age=t-tcSetDef(n).rel; const hot=age<=14?3.2: age<=45?1.2:0.35; const v=tcPackRetailPressure(n);
-    s.pack=Math.max(0, s.pack-poisson(hot*14*v)); const sb=poisson(hot*1.2*v); s.box=Math.max(0, s.box-sb); }
+  for (const n of tcRetailSets(t)){ const s=G.tcg.shop[n]; if (!s) continue; const age=t-tcSetDef(n).rel; let hot=age<=14?3.2: age<=45?1.2:0.35; const v=tcPackRetailPressure(n);
+    if (!tcInPrint(n,t)) hot=Math.max(hot,1.2);   // once the print run is over, collectors clear the shelves
+    s.pack=Math.max(0, s.pack-poisson(hot*14*v)); const sb=poisson(hot*1.2*v); s.box=Math.max(0, s.box-sb);
+    s.so=(s.so==null?1:s.so)*0.9+(s.box<1?0.1:0); s.sop=(s.sop==null?1:s.sop)*0.9+(s.pack<1?0.1:0); }   // how often the shelf has been empty lately
 }
+function tcPrintNews(t){ for (const n of tcReleasedSets(t)){ const e=tcPrintEnd(n), def=tcSetDef(n);
+  if (t===e-30) tcNews(`FINAL PRINT RUN FOR ${def.name.toUpperCase()}`, `Wildkin Games says ${def.name} retail restocks end on ${fmtDate(e,true)}. Whatever is on shelves after that is all there will be.`, {set:n});
+  if (t===e) tcNews(`${def.name.toUpperCase()} IS OUT OF PRINT`, `Stores received their last ${def.name} shipment. Sealed product now only gets scarcer.`, {set:n}); } }
 function tcPackRetailPressure(n){ return 0.7+0.9*Math.max(0, Math.min(1.6, tcSetPrestige(n)-0.7)); }
 function tcApplyBans(t){ for (const cid in G.tcg.ban){ if (G.tcg.ban[cid].d===t){ tcRebuildMeta(t); const c=tcCardByCid(+cid); if (c) tcNews(c.name.toUpperCase()+' IS NOW BANNED', `${c.name} is no longer legal in Standard. ${G.tcg.ban[cid].why} players are retooling.`, {cid:+cid}); } } }
 function tcDay(t){
   const T=G.tcg; if (!T) return; const nx=tcNextSet(t-1); if (nx && tcSetDef(nx).rel===t) tcRelease(nx,t);
   if (!T.arch.length && tcReleasedSets(t).length) tcRebuildMeta(t);
-  tcApplyBans(t);
+  tcApplyBans(t); tcPrintNews(t);
   if (dowOf(t)===1){ tcSetLife(t); if (T.arch.length){ tcMetaWeek(t); tcBanCheck(t); } tcShopWeek(t); }
   tcEventsDay(t); tcShopDay(t);
 }

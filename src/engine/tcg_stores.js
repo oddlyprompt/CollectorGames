@@ -12,7 +12,7 @@ function tcLgs(){ const T=G.tcg; if (!T.lgs) T.lgs={pack:0,box:0,caseWk:-1,cs:[]
 function tcKv(){ const T=G.tcg; if (!T.kv) T.kv={wk:-1,s:{}}; return T.kv; }
 const tcNewestSet=t=>{ const r=tcReleasedSets(t); return r[r.length-1]; };
 // ---------- the local game store ----------
-function tcLgsWeek(t){ const L=tcLgs(), n=tcNewestSet(t); if (!n) return; const age=t-tcSetDef(n).rel, cur=age<100;
+function tcLgsWeek(t){ const L=tcLgs(), n=tcNewestSet(t); if (!n) return; const age=t-tcSetDef(n).rel, cur=age<100; if (!tcInPrint(n,t)){ tcLgsCase(t, true); return; }   // no allocation once the print run ends
   L.pack=Math.min(72, L.pack+(cur? ri(24,48) : ri(8,16))); L.box=Math.min(8, L.box+(cur? ri(2,4) : ri(0,1))); tcLgsCase(t, true); }
 function tcLgsDay(t){ const L=tcLgs(), n=tcNewestSet(t); if (!n) return; const age=t-tcSetDef(n).rel; const hot=age<=14?3.2: age<=45?1.2:0.35;
   L.pack=Math.max(0, L.pack-poisson(hot*4)); L.box=Math.max(0, L.box-poisson(hot*0.35));
@@ -33,7 +33,7 @@ function tcLgsBuySealed(f, q){ const L=tcLgs(), n=tcNewestSet(G.day); const have
 // the buylist: the store pays a fixed share of market for raw cards, on the spot (the card leaves the game's market)
 function tcLgsOffer(cp){ return Math.floor(tcCopyValue(cp)*LGS_BUY*100)/100; }
 function tcLgsSellTo(id){ const cp=TC(id); if (!cp || cp.o!==0 || cp.l || cp.g!==0 || tcD(cp.k).sealed) return 'The store can\'t take that card.'; const p=tcLgsOffer(cp); if (p<0.25) return 'The store passes on that one.';
-  G.player.cash+=p; delete G.tc[id]; return null; }
+  G.player.cash+=p; G.player.sold=(G.player.sold||0)+p; G.tcg.bl=(G.tcg.bl||0)+1; delete G.tc[id]; return null; }
 // ---------- Kinvault, online singles ----------
 function tcKvStock(t){ const K=tcKv(), wk=tcWeekNo(t); if (K.wk===wk) return K.s; K.wk=wk; K.s={}; const r=mkRng(hsh('kv'+G.seed+wk));
   for (const n of tcReleasedSets(t)) for (const k of tcAllKeys(n)){ const d=tcD(k), o=TC_RAROR[d.card.rar]; let q;
@@ -53,7 +53,7 @@ function tcSealedPanel(){
     return `<div class="row" style="cursor:default;flex-wrap:wrap">${miniT(cs[0])}<div class="rt"><b>${esc(d.title)}${n>1?' ×'+n:''}</b><span>Worth about ${money(tcCopyValue(cs[0]),true)}${n>1?' each':''}${paid?' · paid '+money(paid,true)+(n>1?' in all':''):''}</span></div>
       <div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;flex-basis:100%">${n>1?`<button class="btn sm pri" data-act="tcopenall" data-a="${esc(k)}" ${box?`data-confirm="Open ${n*36} packs"`:''}>Open all ${n}</button>`:''}<button class="btn sm ${n>1?'':'pri'}" data-act="tcopen" data-a="${cs[0].id}" ${box?'data-confirm="Open all 36 packs"':''}>Open ${n>1?'one':''}</button><button class="btn sm" data-act="tcopy" data-a="${cs[0].id}">Sell</button></div></div>`; });
   return `<div class="panel"><h3>Your sealed product</h3><div class="rows">${rows.join('')||'<div class="empty">Buy a pack to get started.</div>'}</div>${own.length>1?'<p class="small muted" style="margin:6px 0 0">Opening several at once shows every pack as a tile; the ones with a good card inside glow.</p>':''}</div>`; }
-function tcRestockPanel(){ return `<div class="panel"><h3>How restocking works</h3><p class="small" style="margin:0 0 6px">Big-box retail restocks every Monday (next: ${fmtDate(tcNextDow(1),true)}). For its first 100 days a set gets 70 to 150 packs and 4 to 9 boxes a week; after that 15 to 45 packs and 1 to 3 boxes, up to 300 packs and 20 boxes on the shelf.</p><p class="small muted" style="margin:0">Other shoppers buy every day: heavily in the first two weeks, less until about day 45, then slowly. So at launch boxes sell out within a day or two of each restock; later they pile up. The Tidepool restocks on Thursdays with a smaller allocation.</p></div>`; }
+function tcRestockPanel(){ return `<div class="panel"><h3>How restocking works</h3><p class="small" style="margin:0 0 6px">Big-box retail restocks every Monday (next: ${fmtDate(tcNextDow(1),true)}). For its first 100 days a set gets 70 to 150 packs and 4 to 9 boxes a week; after that 15 to 45 packs and 1 to 3 boxes, up to 300 packs and 20 boxes on the shelf.</p><p class="small muted" style="margin:0">Other shoppers buy every day: heavily in the first two weeks, less until about day 45, then slowly. So at launch boxes sell out within a day or two of each restock; later they pile up. The Tidepool restocks on Thursdays with a smaller allocation.</p>${tcReleasedSets(G.day).map(n=>{ const e=tcPrintEnd(n), def=tcSetDef(n); return `<p class="small" style="margin:6px 0 0"><b>${esc(def.name)}</b>: ${G.day<e? `printed until ${fmtDate(e,true)}. Restocks shrink in the last two months and stop after that; then the shelves only sell down, and sealed prices start to climb.` : `out of print since ${fmtDate(e,true)}. No more restocks anywhere; what is on shelves is the last of it.`}</p>`; }).join('')}</div>`; }
 function tcStoreTabs(){ const b=(k,t)=>`<button class="chip ${UI.tstore===k?'on':''}" data-act="tstore" data-a="${k}">${t}</button>`; return `<div class="chips" style="margin-bottom:8px">${b('retail','Big-box retail')}${b('lgs','The Tidepool (game store)')}${b('kv','Kinvault (online singles)')}</div>`; }
 function tcShopV(){ const v=UI.tstore==='lgs'? tcLgsV() : UI.tstore==='kv'? tcKvV() : tcRetailV(); return tcStoreTabs()+v; }
 ACT.tstore=a=>{ UI.tstore=a; UI.kvp=0; render(true); };

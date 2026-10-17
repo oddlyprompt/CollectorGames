@@ -20,7 +20,7 @@ const store={
 };
 async function slotList(game){ const all=await store.all('slots'); return (all||[]).filter(r=>!game||r.game===game).sort((a,b)=>b.updated-a.updated); }
 async function slotGet(id){ return store.get('slots',id); }
-function slotMetaNow(){ const P_=G.player; const nwL=(P_.nw&&P_.nw.length)? P_.nw[P_.nw.length-1] : null; return { day:G.day, cash:Math.round(P_.cash*100)/100, nw: nwL? Math.round(nwL[1]+nwL[2]) : Math.round(P_.cash), scn:P_.scnN||'', items:(typeof myCards==='function'?myCards().length:0)+(typeof myComics==='function'&&G.cm?myComics().length:0)+(typeof myTc==='function'&&G.tcg?myTc().length:0) }; }
+function slotMetaNow(){ const P_=G.player; const nwL=(P_.nw&&P_.nw.length)? P_.nw[P_.nw.length-1] : null; return { day:G.day, cash:Math.round(P_.cash*100)/100, nw: Math.round(P_.cash+(typeof netWorthNow==='function'? netWorthNow() : 0)), scn:P_.scnN||'', items:(typeof myCards==='function'?myCards().length:0)+(typeof myComics==='function'&&G.cm?myComics().length:0)+(typeof myTc==='function'&&G.tcg?myTc().length:0) }; }
 async function slotCreate(name, scn){ const id='s'+Date.now().toString(36)+Math.floor(Math.random()*1e5).toString(36); const rec={ id, game:PACK.id, name:name||'My collection', created:Date.now(), updated:Date.now(), meta:{}, enc:'', v:1, scn:scn||'' }; await store.batch([{s:'slots',put:rec}]); return rec; }
 async function slotRename(id,name){ const r=await slotGet(id); if (!r) return; r.name=name; await store.batch([{s:'slots',put:r}]); if (SLOT.id===id) SLOT.name=name; }
 async function slotDelete(id){ await store.batch([{s:'slots',del:id},{s:'data',del:id}]); if (SLOT.id===id){ SLOT.id=null; } }
