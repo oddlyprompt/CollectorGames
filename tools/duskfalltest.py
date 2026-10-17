@@ -87,6 +87,16 @@ async def main():
         await pg.evaluate(ADV+"(28)")
         mt=await pg.evaluate("(()=>{ const A=G.tcg.arch; return {n:A.length, top:+A[0].sh.toFixed(3), ev:G.tcg.ev.length, dsk:A.filter(a=>Object.keys(a.cnt).some(cid=>+cid>=2000)).reduce((s,a)=>s+a.sh,0)}; })()")
         check(mt['n']>=8 and mt['top']<0.45 and mt['dsk']>0.2, 'a month later the two-set metagame is healthy and Duskfall is played', mt)
+        # ---------------- the living field: new decks are found, dead decks leave, the matchup table stays whole
+        lf=await pg.evaluate("""(()=>{ const T=G.tcg; const ok=()=>{ const n=T.mx.top.length; return T.arch.length===n && T.mx.M.length===n && T.mx.M.every(r=>r.length===n)
+            && new Set(T.arch.map(a=>a.ix)).size===n && T.arch.every(a=>a.ix>=0&&a.ix<n) && T.mx.M.every((r,i)=>r.every((p,j)=>i===j||Math.abs(p+T.mx.M[j][i]-1)<0.002)); };
+          const n0=T.arch.length; let a=null, k=0; const sv=TCM.brew, sm=TCM.maxField; TCM.brew=1; TCM.maxField=99; 
+          while (!a && k++<25) a=tcBrewWeek(G.day); TCM.brew=sv; TCM.maxField=sm; const ok1=ok(); const n1=T.arch.length;
+          const deck=a&&tcDeckOf(a); const news=G.news.slice(0,3).map(n=>n.h).filter(h=>/^NEW (DECK|TECH)/.test(h));
+          const old=T.arch[T.arch.length-1]; old.low=TCM.dropWeeks; old.sh=0.001; old.born=G.day-100; const gone=tcPruneWeek(G.day); const ok2=ok();
+          return {n0, n1, n2:T.arch.length, found:!!a, why:a&&a.why, name:a&&a.name, size:deck&&deck.length, news, ok1, ok2, gone:gone&&gone.name, mark:gone? !!T.gone[Object.keys(T.gone).pop()] : false}; })()""")
+        check(lf['found'] and lf['size']==40 and lf['ok1'] and lf['news'], 'players find a new deck: tested by the engine, 40 cards, added to the field and the news', lf)
+        check(lf['gone'] and lf['ok2'] and lf['n2']==lf['n1']-1, 'a deck nobody plays leaves the field and the matchup table stays whole', lf)
         await pg.evaluate("saveGame(true)"); await pg.wait_for_timeout(1200); n1=await pg.evaluate("myTc().filter(c=>tcD(c.k).set===2).length")
         await pg.reload(); await pg.wait_for_selector('#launch'); await pg.click('.lbtn.big[data-lact=open]'); await pg.wait_for_function("window.G && G.player && document.getElementById('boot').style.display==='none'", timeout=120000)
         n2=await pg.evaluate("myTc().filter(c=>tcD(c.k).set===2).length"); k2=await pg.evaluate("G.tcg.mx&&G.tcg.mx.key")

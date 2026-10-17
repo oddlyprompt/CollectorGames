@@ -365,7 +365,9 @@ function trainerRating(c, ctx){ const w=prep(c); let s=0; ctx=ctx||{}; for (cons
   if (w.kind==='ally') s*=0.95;
   for (const o of w.fx){ if (o[0]==='search' && (o[1]==='evolution'||o[1]==='evolves_in_play')) s+= ctx.evo? 2.5 : -9; if (o[0]==='skip_evolve') s+= ctx.st2? 5 : -9; if (o[0]==='search' && o[1]==='creature') s+= ctx.evo? 1.5 : 0; }
   return s; }
-function buildDeck(pool, lead, variant){
+// tune (optional): how players change a list to fight the field. w: role weights (above 1 plays more of that role, below 1
+// fewer), s: a seed that reorders close trainer choices. With no tune the list is the standard one (every result so far).
+function buildDeck(pool, lead, variant, tune){
   variant=variant||0; const line=lineOf(pool, lead); if (!line) return null; const L=prep(lead); const els=new Set([L.el, L.el2].filter(Boolean));
   const counts=new Map(); const add=(c,n)=>counts.set(c,(counts.get(c)||0)+n);
   const plan=line.length===3? [4,3,3] : line.length===2? [4,3] : [4]; line.forEach((c,i)=>add(c,plan[i]));
@@ -387,10 +389,12 @@ function buildDeck(pool, lead, variant){
   const nTr=DECK-nCreat-nEss; const tr=pool.filter(c=>c.kind!=='creature' && c.kind!=='essence'); const picks=new Map();
   let have=0;
   const fitsDeck=c=>{ const w=prep(c); if (w.kind==='biome') return els.has(w.bio); if (w.fx.some(o=>o[0]==='search' && (o[1]==='evolution'||o[1]==='evolves_in_play'))) return line.length>1; if (w.fx.some(o=>o[0]==='skip_evolve')) return ctx.st2; return true; };
-  for (const [kind,role,n0] of TR_PLAN){ let n=Math.min(n0, nTr-have); if (n<=0) break; const cand=tr.filter(c=>c.kind===kind && prep(c).role===role && fitsDeck(c)).sort((a,b)=>trainerRating(b,ctx)-trainerRating(a,ctx));
+  const W=tune&&tune.w||{}, js=tune&&tune.s; const rate=c=>{ let r=trainerRating(c,ctx)*(W[prep(c).role]||1); if (js!=null) r*=0.8+0.4*((hs(js+':'+c.cid)%1000)/1000); return r; };
+  const tplan=tune? TR_PLAN.map(([k,r,n])=>[k,r,Math.max(0,n+((W[r]||1)>=1.3?1:(W[r]||1)<=0.7?-1:0))]) : TR_PLAN;
+  for (const [kind,role,n0] of tplan){ let n=Math.min(n0, nTr-have); if (n<=0) break; const cand=tr.filter(c=>c.kind===kind && prep(c).role===role && fitsDeck(c)).sort((a,b)=>rate(b)-rate(a));
     for (const c of cand){ if (n<=0) break; const k=Math.min(MAXC-(picks.get(c)||0), n, c.kind==='biome'?2:MAXC); if (k>0){ picks.set(c,(picks.get(c)||0)+k); n-=k; have+=k; } } }
-  if (have<nTr){ const rest=tr.filter(c=>c.kind!=='biome').sort((a,b)=>trainerRating(b,ctx)-trainerRating(a,ctx)); for (const c of rest){ if (have>=nTr) break; const k=Math.min(MAXC-(picks.get(c)||0), nTr-have); if (k>0){ picks.set(c,(picks.get(c)||0)+k); have+=k; } } }
-  while (have>nTr){ const worst=[...picks.keys()].sort((a,b)=>trainerRating(a,ctx)-trainerRating(b,ctx))[0]; picks.set(worst,picks.get(worst)-1); if (!picks.get(worst)) picks.delete(worst); have--; }
+  if (have<nTr){ const rest=tr.filter(c=>c.kind!=='biome').sort((a,b)=>rate(b)-rate(a)); for (const c of rest){ if (have>=nTr) break; const k=Math.min(MAXC-(picks.get(c)||0), nTr-have); if (k>0){ picks.set(c,(picks.get(c)||0)+k); have+=k; } } }
+  while (have>nTr){ const worst=[...picks.keys()].sort((a,b)=>rate(a)-rate(b))[0]; picks.set(worst,picks.get(worst)-1); if (!picks.get(worst)) picks.delete(worst); have--; }
   return {lead, partner, line, creatures:[...counts], trainers:[...picks], essence:ess};
 }
 function deckCards(deck, essOf){ const out=[]; for (const [c,n] of deck.creatures) for (let i=0;i<n;i++) out.push(c); for (const [c,n] of deck.trainers) for (let i=0;i<n;i++) out.push(c); for (const [el,n] of deck.essence) for (let i=0;i<n;i++) out.push(essOf[el]); return out; }
@@ -443,6 +447,6 @@ function cardFromCanon(x, set){
 function setFromCanon(canon, set){ const cards=canon.cards.map(x=>cardFromCanon(x,set)); const byNo={}; for (const c of cards) byNo[c.no]=c;
   for (const c of cards) if (c.same!=null){ const b=byNo[c.same]; c.cid=b.cid; for (const k of ['el','el2','els','stage','from','to','fam','fams','mascot','sp','hp','weak','ret','pz','atk','ab','rules','fx','role','sub']) if (b[k]!==undefined && c[k]===undefined) c[k]=b[k]; c.kind=b.kind; }
   return cards; }
-return {RV, META, cardFromCanon, setFromCanon, buildMeta, rebuildMeta, packDeck, unpackDeck, candidates, play, buildDeck, deckCards, deckStyle, sig, matchup, prep, lineOf, creatureRating, trainerRating, hs, payable};
+return {RV, META, cardFromCanon, setFromCanon, buildMeta, rebuildMeta, roundRobin, packDeck, unpackDeck, candidates, play, buildDeck, deckCards, deckStyle, sig, matchup, prep, lineOf, creatureRating, trainerRating, hs, payable};
 })();
 if (typeof module!=='undefined') module.exports=WKR;

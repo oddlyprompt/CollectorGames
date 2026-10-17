@@ -35,20 +35,35 @@ function tcBaseField(t){
 function tcBaseSig(t){ const b=tcBaseField(t); return b._bs||(b._bs=String(hsh(b.top.map(p=>p.sig).join(';')+'|'+b.cands.length))); }
 function tcField(t){
   const T=G.tcg, key=tcFieldKey(t); if (T.mx && T.mx.key===key && T.mx.rv===WKR.RV && T.mx.bs===tcBaseSig(t)) return T.mx;
-  const base=tcBaseField(t); let f;
-  if (key.endsWith('|')) f=base;   // nothing banned: exactly what the build computed for these sets
-  else { const pool=tcLegalIdentities(t); const byCid=new Map(); for (const s of tcLegalSets(t)) for (const c of tcSetCards(s)) if (!tcAlt(c) && !byCid.has(c.cid)) byCid.set(c.cid,c); f=WKR.rebuildMeta(base, pool, tcEssOf(t), byCid); }
+  const base=tcBaseField(t); const sets=key.split('|')[0]; const same=T.mx && T.mx.rv===WKR.RV && T.mx.bs===tcBaseSig(T.mx.key.split('|')[0]||'1');
+  let f;
+  if (!same && key.endsWith('|')) f=base;   // nothing played yet (or the engine changed), nothing banned: exactly what the build computed
+  else {
+    // the decks people play now: the whole living field after a ban; after a release the new set's field plus the old decks still holding 3%
+    const now=same && T.mx.key.split('|')[0]===sets; const share={}; for (const a of T.arch) share[a.ix]=a.sh;
+    const packs= now? T.mx.top.slice() : base.top.concat(same? T.mx.top.filter((p,i)=>(share[i]||0)>=0.03) : []);
+    const pool=tcLegalIdentities(t), legal=new Set(pool.map(c=>c.cid)); const byCid=new Map(); for (const s2 of tcLegalSets(t)) for (const c of tcSetCards(s2)) if (!tcAlt(c) && !byCid.has(c.cid)) byCid.set(c.cid,c);
+    const decks=[], seen=new Set();
+    for (const p of packs){ let d=WKR.unpackDeck(p,byCid); const touched=!d || !legal.has(p.lead) || p.c.concat(p.t).some(([id])=>!legal.has(id));
+      if (touched){ if (!legal.has(p.lead)) continue; d=WKR.buildDeck(pool,byCid.get(p.lead),p.v||0); if (!d) continue; d.v=p.v||0; d.st=WKR.deckStyle(d); }
+      const k=WKR.sig(d); if (seen.has(k)) continue; seen.add(k); d.aid=p.aid; d.tn=p.tn; d.g=p.g; decks.push(d); }
+    const prev=same? {top:T.mx.top, M:T.mx.M} : {top:base.top, M:base.M};
+    f={top:decks.map(d=>Object.assign(WKR.packDeck(d),{aid:d.aid,tn:d.tn})), M:WKR.roundRobin(decks, tcEssOf(t), 8, prev)};
+  }
   T.mx={key, rv:WKR.RV, bs:tcBaseSig(t), top:f.top, M:f.M}; return T.mx;
 }
 function tcDeckOf(a){ const p=G.tcg.mx&&G.tcg.mx.top[a.ix]; if (!p) return null; const byCid=new Map(); for (const id of p.c.concat(p.t).map(x=>x[0]).concat([p.lead])) byCid.set(id,tcCardByCid(id)); const d=WKR.unpackDeck(p,byCid); return d? WKR.deckCards(d,tcEssOf(G.day)) : null; }
-function tcMatch(a, b){ if (a===b) return 0.5; const M=G.tcg.mx&&G.tcg.mx.M; const p=M&&M[a.ix]&&M[a.ix][b.ix]; return p==null? 0.5 : p; }
+function tcRaw(a, b){ const M=G.tcg.mx&&G.tcg.mx.M; const p=M&&M[a.ix]&&M[a.ix][b.ix]; return p==null? 0.5 : p; }
+const tcRough=a=>a.born==null? 0 : -TCM.rough*Math.max(0,1-(G.day-a.born)/TCM.fresh);   // an unrefined list: up to 5 points worse, gone after six weeks
+function tcMatch(a, b){ if (a===b) return 0.5; return Math.max(0.03, Math.min(0.97, tcRaw(a,b)+tcRough(a)-tcRough(b))); }
 function tcRebuildMeta(t){
   const f=tcField(t); if (!f || !f.top.length) return; const old={}; for (const a of G.tcg.arch) old[a.id]=a; const n=f.top.length;
   const list=f.top.map((p,i)=>{ const lead=tcCardByCid(p.lead), par=p.partner!=null? tcCardByCid(p.partner) : null; const str=(f.M[i].reduce((x,y)=>x+y,0)-0.5)/Math.max(1,n-1);
-    return {id:p.lead+(p.partner!=null?'+'+p.partner:''), ix:i, el:lead.el, st:p.st, name:lead.name+(par&&par.name!==lead.name?' / '+par.name:''), str:+str.toFixed(4),
+    return {id:p.aid||p.lead+(p.partner!=null?'+'+p.partner:''), ix:i, el:lead.el, st:p.st, name:lead.name+(par&&par.name!==lead.name?' / '+par.name:'')+(p.tn?' ('+p.tn+')':''), str:+str.toFixed(4),
       core:p.c.map(x=>x[0]), tr:p.t.map(x=>x[0]), cnt:Object.fromEntries(p.c.concat(p.t)), ess:p.e, line:[], lead:p.lead, partner:p.partner}; });
   const tot=list.reduce((s,a)=>s+Math.exp(6*a.str),0);
-  for (const a of list){ const o=old[a.id]; a.sh= o? o.sh : Math.exp(6*a.str)/tot*0.6; a.hist=o?o.hist:[]; a.wr=o?o.wr:a.str; a.conv=o?o.conv:1; }
+  const ids=new Set(); for (const a of list){ let k=a.id, n=2; while (ids.has(k)) k=a.id+'#'+(n++); a.id=k; ids.add(k); }
+  for (const a of list){ const o=old[a.id]; a.sh= o? o.sh : Math.exp(6*a.str)/tot*0.6; a.hist=o?o.hist:[]; a.wr=o?o.wr:a.str; a.conv=o?o.conv:1; a.born=o? o.born : (G.tcg.arch.length? t : undefined); a.low=o?o.low:0; }
   const S=list.reduce((s,a)=>s+a.sh,0); list.forEach(a=>a.sh/=S); list.sort((a,b)=>b.sh-a.sh); G.tcg.arch=list; G.tcg.rv=WKR.RV; tcUsage();
 }
 function tcUsage(){
@@ -60,9 +75,61 @@ function tcMetaWeek(t){
   const A=G.tcg.arch; if (!A.length) return;
   for (const a of A){ let w=0; for (const b of A) w+=b.sh*tcMatch(a,b); a.wr=w-TCP.hate*(a.sh-1/A.length); }
   const avg=A.reduce((s,a)=>s+a.sh*a.wr,0); const tg=A.map(a=>a.sh*Math.exp(TCP.eta*6*(a.wr-avg))); const T=tg.reduce((x,y)=>x+y,0);
-  A.forEach((a,i)=>{ a.sh=Math.max(0.004, 0.8*a.sh+0.2*tg[i]/T+(R()-0.5)*TCP.noise); }); const S=A.reduce((s,a)=>s+a.sh,0);
+  const nz=TCP.noise*(t-tcLastRelease(t)<35? 3 : 1);   // the first weeks of a new format are chaotic
+  A.forEach((a,i)=>{ a.sh=Math.max(0.004, 0.8*a.sh+0.2*tg[i]/T+(R()-0.5)*nz); }); const S=A.reduce((s,a)=>s+a.sh,0);
   A.forEach(a=>{ a.sh/=S; a.hist.push(+a.sh.toFixed(3)); if (a.hist.length>20) a.hist.shift(); }); A.sort((a,b)=>b.sh-a.sh); tcUsage();
   for (const k in G.tcg.hy){ G.tcg.hy[k]*=0.86; if (G.tcg.hy[k]<0.02) delete G.tcg.hy[k]; } for (const k in G.tcg.t8){ G.tcg.t8[k]*=0.95; if (G.tcg.t8[k]<0.05) delete G.tcg.t8[k]; }
+}
+// ---------- a living field: new decks are found, lists are re-tuned, dead decks leave ----------
+// Real formats do not cycle through a fixed list. Players brew (often to beat what is popular), established decks get
+// re-tuned with different trainer packages, new lists start rough and improve, and decks nobody plays are dropped and
+// rarely come back. Brewing is busiest after a release, when one deck has led for weeks, and late in a format.
+// Every candidate is tested with the rules engine against the decks people actually play before it can catch on.
+const TCM={brew:0.3, rel:0.55, stale:0.35, late:0.15, tries:4, games:6, row:8, enter:0.03, drop:0.008, dropWeeks:6, minField:12, maxField:22, fresh:42, rough:0.05, gone:365};
+const TC_TECH=[{k:'dis',n:'Disruption',w:{disrupt:1.6,gust:1.3,draw:0.8}}, {k:'heal',n:'Heal',w:{heal:1.6,tool:1.3,draw:0.8}}, {k:'turbo',n:'Turbo',w:{draw:1.4,search:1.4,heal:0.6,disrupt:0.6}},
+  {k:'gust',n:'Gust',w:{gust:1.6,boost:1.3,heal:0.7}}, {k:'tools',n:'Tools',w:{tool:1.6,boost:1.3,disrupt:0.7}}];
+function tcLastRelease(t){ const r=tcReleasedSets(t); return r.length? tcSetDef(r[r.length-1]).rel : -1e9; }
+function tcBrewWeek(t){
+  const T=G.tcg, A=T.arch; if (!A.length || !T.mx || A.length>=TCM.maxField) return null;
+  const sinceRel=t-tcLastRelease(t), top=A[0]; T.lead=T.lead&&T.lead.id===top.id? {id:top.id, w:T.lead.w+1} : {id:top.id, w:1};
+  const p=TCM.brew+(sinceRel<42?TCM.rel:0)+(T.lead.w>=6 && top.sh>0.17?TCM.stale:0)+(sinceRel>270?TCM.late:0); if (R()>=p) return null;
+  const pool=tcLegalIdentities(t), essOf=tcEssOf(t); const byCid=new Map(); for (const s2 of tcLegalSets(t)) for (const c of tcSetCards(s2)) if (!tcAlt(c) && !byCid.has(c.cid)) byCid.set(c.cid,c);
+  const field=T.mx.top.map(q=>WKR.unpackDeck(q,byCid)); const have=new Set(T.mx.top.map(q=>q.sig)); T.gone=T.gone||{};
+  const targets=A.slice(0,6).filter(a=>field[a.ix]); const fresh=d=>{ const k=WKR.sig(d); return !have.has(k) && !(T.gone[k] && t-T.gone[k]<TCM.gone); };
+  const finals=pool.filter(c=>c.kind==='creature' && !pool.some(d=>d.kind==='creature' && d.from===c.name));
+  const tries=[];
+  for (let i=0;i<TCM.tries;i++){ const r=R(); let d=null, tech=null, why;
+    if (r<0.35){ const base=tcBaseField(t).cands.filter(q=>!have.has(q.sig) && !(T.gone[q.sig] && t-T.gone[q.sig]<TCM.gone)); if (!base.length) continue;   // a known list nobody plays yet
+      const wsum=base.reduce((x,q)=>x+Math.exp(8*(q.g||0.5)),0); let x=R()*wsum, q=base[0]; for (const b of base){ x-=Math.exp(8*(b.g||0.5)); if (x<=0){ q=b; break; } } d=WKR.unpackDeck(q,byCid); why='brew'; }
+    else if (r<0.65){ const a=A[Math.floor(R()*Math.min(8,A.length))]; const lead=tcCardByCid(a.lead); tech=TC_TECH[Math.floor(R()*TC_TECH.length)];   // an established deck, re-tuned
+      d=lead && WKR.buildDeck(pool,lead,T.mx.top[a.ix].v||0,{w:tech.w, s:'t'+t+i}); why='tech'; }
+    else { const lead=finals[Math.floor(R()*finals.length)]; tech=R()<0.5? TC_TECH[Math.floor(R()*TC_TECH.length)] : null;   // a rogue build around another final form
+      d=lead && WKR.buildDeck(pool,lead,Math.floor(R()*4),tech? {w:tech.w, s:'r'+t+i} : null); why='rogue'; }
+    if (!d || WKR.deckCards(d,essOf).length!==40 || !fresh(d)) continue; d.st=d.st||WKR.deckStyle(d);
+    let w=0, n=0; for (const a of targets){ w+=a.sh*WKR.matchup(d,field[a.ix],essOf,TCM.games); n+=a.sh; } tries.push({d, tech, why, sc:n? w/n : 0.5}); }
+  if (!tries.length) return null; tries.sort((x,y)=>y.sc-x.sc); const b=tries[0];
+  if (b.sc<0.5-R()*0.06) return null;   // nothing tested well enough to bring (a slightly worse deck still gets a try now and then)
+  const d=b.d; d.v=d.v||0; const row=field.map(o=>o? +WKR.matchup(d,o,essOf,TCM.row).toFixed(4) : 0.5);
+  const pk=Object.assign(WKR.packDeck(d),{aid:d.lead.cid+(d.partner?'+'+d.partner.cid:'')+(b.tech?':'+b.tech.k:'')+'@'+t, tn:b.tech?b.tech.n:null});
+  T.mx.top.push(pk); T.mx.M.forEach((r,i)=>r.push(+(1-row[i]).toFixed(4))); T.mx.M.push(row.concat([0.5]));
+  const lead=d.lead, par=d.partner; const name=lead.name+(par&&par.name!==lead.name?' / '+par.name:'')+(b.tech?' ('+b.tech.n+')':'');
+  const str=(row.reduce((x,y)=>x+y,0))/Math.max(1,row.length);
+  const a={id:pk.aid, ix:T.mx.top.length-1, el:lead.el, st:pk.st, name, str:+str.toFixed(4), core:pk.c.map(x=>x[0]), tr:pk.t.map(x=>x[0]), cnt:Object.fromEntries(pk.c.concat(pk.t)), ess:pk.e, line:[], lead:pk.lead, partner:pk.partner,
+    sh:TCM.enter, hist:[], wr:b.sc, conv:1, born:t, low:0, why:b.why};
+  A.push(a); const S=A.reduce((x,y)=>x+y.sh,0); A.forEach(y=>y.sh/=S); A.sort((x,y)=>y.sh-x.sh); tcUsage();
+  const beats=targets.slice().sort((x,y)=>WKR.matchup(d,field[y.ix],essOf,2)-WKR.matchup(d,field[x.ix],essOf,2))[0];
+  const npcs=G.npcs.filter(n=>n.ty==='tpl'); const who=npcs.length? pick(npcs).h : 'A local player';
+  tcNews(b.why==='tech'? `NEW TECH: ${name.toUpperCase()}` : `NEW DECK: ${name.toUpperCase()}`, b.why==='tech'? `${who} is running a re-tuned ${lead.name} list with a ${b.tech.n.toLowerCase()} package, built to handle ${beats?beats.name:'the top decks'}. Testers are copying it.` : `${who} brought ${name} to a local event${beats?' and it held up against '+beats.name:''}. Nobody was playing it a week ago.`, {cid:lead.cid});
+  return a;
+}
+// a deck nobody plays for six weeks leaves the field (one a week, and never below twelve decks)
+function tcPruneWeek(t){
+  const T=G.tcg, A=T.arch; if (!T.mx) return; for (const a of A) a.low= a.sh<TCM.drop? (a.low||0)+1 : 0;
+  if (A.length<=TCM.minField) return; const out=A.filter(a=>a.low>=TCM.dropWeeks && (a.born==null || t-a.born>=TCM.fresh)).sort((x,y)=>x.sh-y.sh)[0]; if (!out) return;
+  const i=out.ix; T.gone=T.gone||{}; T.gone[T.mx.top[i].sig]=t; T.mx.top.splice(i,1); T.mx.M.splice(i,1); T.mx.M.forEach(r=>r.splice(i,1));
+  A.splice(A.indexOf(out),1); for (const a of A) if (a.ix>i) a.ix--; const S=A.reduce((x,y)=>x+y.sh,0); A.forEach(y=>y.sh/=S); tcUsage();
+  for (const k in T.gone) if (t-T.gone[k]>TCM.gone) delete T.gone[k];
+  return out;
 }
 // a tournament: Swiss rounds decided by the simulated matchups (plus each player's skill), a top-8 bracket, and a final that is played out card by card
 function tcRunEvent(t, kind, N){
@@ -161,7 +228,7 @@ function tcDay(t){
   const T=G.tcg; if (!T) return; const nx=tcNextSet(t-1); if (nx && tcSetDef(nx).rel===t) tcRelease(nx,t);
   if (!T.arch.length && tcReleasedSets(t).length) tcRebuildMeta(t);
   tcApplyBans(t); tcPrintNews(t);
-  if (dowOf(t)===1){ tcSetLife(t); if (T.arch.length){ tcMetaWeek(t); tcBanCheck(t); } tcShopWeek(t); }
+  if (dowOf(t)===1){ tcSetLife(t); if (T.arch.length){ tcMetaWeek(t); tcBanCheck(t); tcPruneWeek(t); tcBrewWeek(t); } tcShopWeek(t); }
   tcEventsDay(t); tcShopDay(t);
 }
 // existing saves and new worlds: play the metagame forward from the first release so it has a history
