@@ -121,7 +121,7 @@ def deliver_products(pkg, code, wp, root, registry, by, replace=False):
     m=json.load(open(os.path.join(pkg,'manifest.json'))); R=registry; took=[]; skipped=[]
     adir=os.path.join(wp,'approved','assets'); sdir=os.path.join(wp,'approved','sources','products'); os.makedirs(sdir,exist_ok=True)
     for t in m['tasks']:
-        nm=PRODUCT_NAMES.get(t['task_id']); aid='product.%s.%s'%(code,nm)
+        nm=PRODUCT_NAMES.get(re.sub(r'^[A-Z]{3}-(?=PRODUCT-)','',t['task_id'])); aid='product.%s.%s'%(code,nm)   # Duskfall names them DSK-PRODUCT-PACK-01
         if not nm: skipped.append((t['task_id'],'unknown product task')); continue
         if t.get('status')!='Packaged' or t.get('qa_status')!='Approved': skipped.append((aid,'not approved in the delivery')); continue
         if aid in R['assets'] and not replace: skipped.append((aid,'already approved')); continue

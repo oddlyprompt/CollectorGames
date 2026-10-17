@@ -41,6 +41,6 @@ Tests: `tools/duskfalltest.py` (new: catalog against the manifest, reprint ident
 
 ## Not done
 
-- No Duskfall packaging renders were delivered: the pack and box are drawn wrappers using the Velunox SIR and Clasped Velunox paintings. SOL can deliver `product.dsk.pack-1..4`, `box-closed`, `box-open` like First Bond's; the game picks them up with `tools/wildkin_art.py products --code dsk`.
+- Packaging: SOL's Duskfall pack and closed box (2026-10-17) are in, with WILDKIN, DUSKFALL and the counts printed by the game. There is no open-box render; where the game shows an open box it uses the closed one.
 - No human has played the rules; balance is by simulation only.
 - A save that is already past 7 December 2026 gets Duskfall the day it is opened (shops, market and metagame update that day; there is no announcement period).

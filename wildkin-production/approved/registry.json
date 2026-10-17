@@ -19507,6 +19507,109 @@
     ]
    },
    "warnings_accepted": []
+  },
+  "product.dsk.pack-1": {
+   "file": "wildkin-production/approved/assets/product.dsk.pack-1.webp",
+   "sha256": "ca46186c028b9a26f57528851a3776354e98f1491ef4bcf770c1ed6693805d44",
+   "task": "DSK-PRODUCT-PACK-01",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/products/DSK-PRODUCT-PACK-01.png",
+   "source_sha256": "84575a9ddb729c7951817055883eb657803f5bb9c19fdbbc4cfbed5e7ddbdf0e",
+   "approved": "2026-10-17T18:47:42Z",
+   "approved_by": "owner (Duskfall packaging delivery, accepted 2026-10-17)",
+   "provenance": {
+    "delivered_as": "art/DSK-PRODUCT-PACK-01.png",
+    "subject": null,
+    "kind": "booster_pack",
+    "metadata": {
+     "task_id": "DSK-PRODUCT-PACK-01",
+     "subject": "Duskfall foil booster pouch featuring Velunox",
+     "status": "Packaged",
+     "method": "built-in-imagegen",
+     "references": [
+      "../production/art/DSK-A-01.png"
+     ],
+     "renderer_text_overlay": true,
+     "changes_game_code": false,
+     "actual_dimensions": [
+      1060,
+      1484
+     ],
+     "sha256": "84575a9ddb729c7951817055883eb657803f5bb9c19fdbbc4cfbed5e7ddbdf0e",
+     "review": "Complete front-facing foil pillow pouch; Velunox adult identity preserved including two forehead crescents, four paws, ruff, membrane markings and cream-tipped tail. Original twilight ruin/fungi/lantern scene; quiet upper/lower lettering panels; no printed text, no clipping or floor shadow.",
+     "qa_status": "Approved",
+     "status_history": [
+      "Not started",
+      "Generated",
+      "Awaiting visual review",
+      "Approved",
+      "Packaged"
+     ]
+    }
+   },
+   "checks": {
+    "size": [
+     643,
+     900
+    ],
+    "margins_LTRB": [
+     119,
+     58,
+     118,
+     61
+    ]
+   },
+   "warnings_accepted": []
+  },
+  "product.dsk.box-closed": {
+   "file": "wildkin-production/approved/assets/product.dsk.box-closed.webp",
+   "sha256": "7f41d91618893749e958deee83f5977ad95b27463bbe0fc70647372ef54789fd",
+   "task": "DSK-PRODUCT-BOX-01",
+   "cell": 1,
+   "source": "wildkin-production/approved/sources/products/DSK-PRODUCT-BOX-01.png",
+   "source_sha256": "f50123736d489977a3658d62e04aa78a4faa1ae35a18057fc802a30eadc18f17",
+   "approved": "2026-10-17T18:47:48Z",
+   "approved_by": "owner (Duskfall packaging delivery, accepted 2026-10-17)",
+   "provenance": {
+    "delivered_as": "art/DSK-PRODUCT-BOX-01.png",
+    "subject": null,
+    "kind": "closed_booster_box",
+    "metadata": {
+     "task_id": "DSK-PRODUCT-BOX-01",
+     "status": "Packaged",
+     "method": "built-in-imagegen",
+     "prompt": "Use case: product-mockup. Asset type: Wildkin Duskfall CLOSED booster display BOX product art, DSK-PRODUCT-BOX-01. Create ONE complete closed sturdy cardboard booster box, three-quarter studio view with front panel facing slightly left, RIGHT SIDE visible and a slim area of the top lid visible. Box comfortably fills frame with10%external clearance; landscape native PNG at least1600x1400if possible. Flat chroma green background RGB40,160,60, no floor or cast shadow, no effects outside product. Match the supplied Duskfall booster pouch exactly in packaging art direction: midnight navy printed panels, oxidized-copper metallic trim, pearl-gold edge accents, cyan luminous fungi and warm amber Keeper lantern light, tactile premium stylized3D materials and softly lit studio product rendering. IMAGE1 supplied pouch is the packaging design/palette/material reference only; do not depict a separate pouch beside box. IMAGE2 is exact Velunox identity reference: ONLY bottom-row adult with navy fur, ivory face/belly and fluffy ruff, golden eyes, pink nose/paws, huge ears with teal interiors, cream-tipped bushy navy tail, scalloped navy/mint/ivory gliding membranes and EXACTLY TWO ivory crescent forehead marks. IMAGE3 is exact Crucimoth identity reference: ONLY bottom-row adult charcoal furry moth, amber eyes, two copper feather antennae, six legs, broad copper/charcoal wings with glowing amber vein patterns. An original cohesive painted scene PRINTED ON THE FRONT PANEL shows ONEVelunox gliding above mossy old Keeper ruins and ONECrucimoth perched on an oxidized machine ring, facing each other with quiet curiosity. Both exact designs, readable distinct silhouettes, charming and mysterious rather than horror. Tiny warm lantern and teal luminous fungi illuminate roots and abandoned machinery. Artwork continues onto right side/lid as woodland shadows and copper botanical-mechanical ornament, not extra creature copies. Keep TOP THIRD of front panel visually quiet blank navy for game-added WILDKIN logo, BOTTOM STRIP quiet for DUSKFALL/set text. Creature faces sit in middle/lower scene outside label zones. Lid has a quiet navy center for logo overlay. NO TEXT ANYWHERE: no letters, logos, names, numbers, badges, glyphs, watermarks, barcodes, fake print, card frames or legal copy. No packs or cards outside box, no transparent windows, no creature protruding outside carton. Original scene, not cutouts pasted onto gradient.",
+     "renderer_text_overlay": true,
+     "changes_game_code": false,
+     "actual_dimensions": [
+      1536,
+      1024
+     ],
+     "sha256": "f50123736d489977a3658d62e04aa78a4faa1ae35a18057fc802a30eadc18f17",
+     "review": "Complete closed carton with front, right side and lid visible. Matched navy/copper materials and forest-ruin scene; one adult Velunox with two forehead crescents/four limbs and one perched Crucimoth with moth wings/copper feather antennae. No unwanted text, duplicated creatures, clipping or floor shadow. Quiet logo/title panels present.",
+     "qa_status": "Approved",
+     "status_history": [
+      "Not started",
+      "Generated",
+      "Awaiting visual review",
+      "Approved",
+      "Packaged"
+     ]
+    }
+   },
+   "checks": {
+    "size": [
+     900,
+     600
+    ],
+    "margins_LTRB": [
+     117,
+     46,
+     111,
+     32
+    ]
+   },
+   "warnings_accepted": []
   }
  }
 }
