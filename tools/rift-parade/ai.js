@@ -12,9 +12,9 @@ const {def,pow,hp,chars,energy,cost,rowOf,hasKw}=E;
 
 // ------------------------------------------------------------------ state evaluation
 const PERSONA={
-  balanced:{life:1.0,foeLife:1.0,board:1.0,hand:0.8,energy:0.7,perm:0.9,spend:0.35,aggro:0.0,caution:0.0,pressure:0.6},
-  aggro:{life:0.65,foeLife:1.5,board:0.9,hand:0.55,energy:0.6,perm:0.8,spend:0.5,aggro:0.6,caution:-0.3,pressure:0.8},
-  control:{life:1.35,foeLife:0.75,board:1.1,hand:1.05,energy:0.8,perm:1.0,spend:0.2,aggro:-0.4,caution:0.5,pressure:0.4},
+  balanced:{life:1.0,foeLife:1.0,board:1.0,hand:0.8,energy:0.7,perm:0.9,spend:0.35,aggro:0.0,caution:0.0,pressure:0.6,expose:0.3},
+  aggro:{life:0.65,foeLife:1.5,board:0.9,hand:0.55,energy:0.6,perm:0.8,spend:0.5,aggro:0.6,caution:-0.3,pressure:0.8,expose:0.15},
+  control:{life:1.35,foeLife:0.75,board:1.1,hand:1.05,energy:0.8,perm:1.0,spend:0.2,aggro:-0.4,caution:0.5,pressure:0.4,expose:0.5},
 };
 const poolVal=n=>{ let v=0; for(let k=1;k<=Math.min(8,n);k++) v+= k<=3?2.4 : k<=5?1.7 : k<=7?0.9 : 0.3; return v; };
 const lifeVal=r=>r+(r<9?(9-r)*0.9:0)+(r<=4?(5-r)*2:0);
@@ -98,7 +98,7 @@ function makeSearchAgent(name,w){ w=Object.assign({},PERSONA.balanced,w||{});
     attack(g,p,avail){ const q=1-p; const subs=subsets(avail); let best=[],bs=-Infinity;
       for(const S of subs){ const h=cloneFor(g,p); const mine=S.map(c=>byU(h,c.u)); let sc;
         if(S.length){ E.declareAttack(h,p,mine); if(!h.over&&h.combat.atk.length){ const bl=E.blockersOf(h,q); const asg=heurBlocks(h,q,h.combat.atk.map(e=>e.c),bl,w); E.applyBlocks(h,q,asg,bl); E.resolveDamage(h); } h.combat=null; }
-        sc=evalG(h,p,w); sc+= S.length*w.aggro*0.6; if(S.length===0) sc-=0.0; if(sc>bs+1e-9){ bs=sc; best=S; } }
+        sc=evalG(h,p,w)-exposure(h,p,w); sc+= S.length*w.aggro*0.6; if(sc>bs+1e-9){ bs=sc; best=S; } }
       return best; },
     block(g,p,atkCards,blockers){ const opts=blockOptions(g,atkCards,blockers); let best=null,bs=-Infinity;
       for(const asg of opts){ const h=cloneFor(g,p); const bl=E.blockersOf(h,p); E.applyBlocks(h,p,asg,bl); if(!h.over) E.resolveDamage(h); const s=evalG(h,p,w)+Object.keys(asg).length*w.caution*0.4; if(s>bs+1e-9){ bs=s; best=asg; } }
@@ -110,6 +110,10 @@ function sim(g,p,a,w){ const h=cloneFor(g,p); if(a) E.applyAction(h,p,mapAct(h,p
 function subsets(a){ if(a.length<=4){ const out=[]; for(let m=0;m<(1<<a.length);m++) out.push(a.filter((_,i)=>m&(1<<i))); return out; } const out=[[]]; for(let k=1;k<=a.length;k++) out.push(a.slice(0,k)); out.push(a); return out; }
 function blockOptions(g,atk,blockers){ const res=[]; const n=atk.length; const used=new Set(); const rec=(i,asg)=>{ if(res.length>200) return; if(i===blockers.length){ res.push(Object.assign({},asg)); return; }
     const b=blockers[i]; rec(i+1,asg); for(const a of atk){ if(Object.values(asg).includes(b.u)||asg[a.u]!==undefined||!E.canBlock(g,b,a)) continue; asg[a.u]=b.u; rec(i+1,asg); delete asg[a.u]; } }; rec(0,{}); return res; }
+// the crack-back: what the opponent could do to me next turn through the blockers I still have ready (attackers I just sent are
+// exhausted and cannot block). Lethal exposure is a loss; otherwise a share of the damage counts against the attack.
+function exposure(h,me,w){ if(h.over) return 0; const q=1-me; const atk=h.P[q].stage.filter(c=>!E.hasKw(h,c,'NoAttack')&&!(E.silenced(h,c)&&false)); if(!atk.length) return 0; const bl=E.blockersOf(h,me);
+  const asg=bl.length? heurBlocks(h,me,atk,bl,w) : {}; let d=0; for(const a of atk) if(asg[a.u]===undefined) d+=E.pow(h,a); const res=h.P[me].resolve; if(d>=res) return 60; return w.expose*(lifeVal(res)-lifeVal(res-d)); }
 // how much damage the attackers that can swing this turn are likely to get through (blocks guessed with heurBlocks): lets one-ply
 // search see the point of Rush, Imbue and removal, which only pay off in the attack that follows
 function pressure(h,p,w){ if(h.over) return 0; const q=1-p; const atk=E.attackersOf(h,p); if(!atk.length) return 0; const bl=E.blockersOf(h,q); const asg=bl.length?heurBlocks(h,q,atk,bl,w):{}; let d=0; for(const a of atk) if(asg[a.u]===undefined) d+=E.pow(h,a); else { const b=bl.find(x=>x.u===asg[a.u]); if(b&&E.pow(h,a)>=E.hp(h,b)-b.dmg) d+=0.8; }

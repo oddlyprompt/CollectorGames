@@ -65,13 +65,13 @@ Reading a card: **cost** is paid in energy (ready cards in your Rift pool); **P/
 - *Purpose:* Scout: sees the opponent's hand and removes a cheap card. Information is the point.
 
 ### RP01-024 Vivi's Camera Wisp
-*C, episode 6* - cost **1**, **1/3**
+*C, episode 6* - cost **1**, **2/2**
 
 - Spotlight (while on the Stage, opposing effects that target a Character must target a Spotlight Character if able)
 - *Purpose:* Decoy: forces the opponent's targeted effects onto a cheap body. Protects your better Characters.
 
 ### RP01-028 Brax, Debt Collector
-*C, episode 7* - cost **2**, **1/4**
+*C, episode 7* - cost **2**, **1/3**
 
 - Absorb (whenever damaged, gains that much Impact, up to 5)
 - Act (free, once per turn): Release: remove all Impact from this Character and deal that much damage to target enemy Character.
@@ -157,7 +157,7 @@ Reading a card: **cost** is paid in energy (ready cards in your Rift pool); **P/
 - *Purpose:* Evasive disruptor: every hit costs the opponent a card.
 
 ### RP01-054 The Ninth Vendor
-*UC, episode 5* - cost **3**, **3/3**
+*UC, episode 5* - cost **3**, **3/4**
 
 - When this enters: Bargain: the opponent chooses one: (a) Draw a card; or (b) The opponent loses 2 Resolve.
 - *Purpose:* Bargain engine: the opponent decides whether to give you a card or Resolve.
@@ -179,7 +179,7 @@ Reading a card: **cost** is paid in energy (ready cards in your Rift pool); **P/
 ### RP01-057 Broadcast Stagehand
 *UC, episode 6* - cost **2**, **1/3**
 
-- Backstage: Characters with Spotlight you control get +1/0.
+- Backstage: Characters with Spotlight you control get +1/+1.
 - *Purpose:* Backstage support: pumps Spotlight Characters while sitting safely behind them.
 
 ### RP01-058 Toma, Pattern Sight
@@ -479,7 +479,7 @@ Reading a card: **cost** is paid in energy (ready cards in your Rift pool); **P/
 - *Purpose:* Converts Relics into damage: the Relic deck's removal.
 
 ### RP01-125 Brax, Impact Reservoir
-*SR, episode 7* - cost **6**, **4/7**
+*SR, episode 7* - cost **6**, **4/6**
 
 - Absorb (whenever damaged, gains that much Impact, up to 5)
 - Reservoir (collects Impact whenever any Character you control is damaged, up to 10)
@@ -580,8 +580,8 @@ Reading a card: **cost** is paid in energy (ready cards in your Rift pool); **P/
 ### RP01-068 Charge Transfer
 *UC, episode 3* - cost **1**
 
-- Imbue one of your Relics: it becomes a 4/3 Character that can attack, until end of turn.
-- *Purpose:* Imbue a Relic into a 4/3 attacker for one energy: a cheap burst for Relic decks.
+- Imbue one of your Relics: it becomes a 4/3 Character that can attack, until end of turn, then draw a card.
+- *Purpose:* Imbue a Relic into a 4/3 attacker and draw a card, for one energy: a cheap burst for Relic decks.
 
 ### RP01-069 Bondbreaker Stroke
 *UC, episode 4* - cost **2**
@@ -733,8 +733,8 @@ Reading a card: **cost** is paid in energy (ready cards in your Rift pool); **P/
 ### RP01-080 Emergency Stitch Kit
 *UC, episode 9* - cost **1**
 
-- Act (free, sacrifice this, once per turn): Restore 4 Resolve. (Reaction)
-- *Purpose:* Emergency life: restores 4 Resolve at any time.
+- Act (free, sacrifice this, once per turn): Restore 3 Resolve. (Reaction)
+- *Purpose:* Emergency life: restores 3 Resolve at any time.
 
 ### RP01-111 The Parcel's Heart
 *R, episode 12* - cost **2**

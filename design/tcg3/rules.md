@@ -5,6 +5,35 @@ Rift Parade is a two-player card game for the supernatural anime *Rift Parade*. 
 This document is the rule book for the playable engine in `tools/rift-parade/`. Every number in the *Parameters* table is read from `tools/rift-parade/rules.json`; `node tools/rift-parade/docs.js --check` fails if this table goes stale. The card reference is `CARDS.md`.
 
 <!-- PARAMS -->
+| Parameter | Value | Meaning |
+|---|---|---|
+| `deckSize` | 40 | Cards in a deck |
+| `copies` | 3 | Copies of one card (Secret Rares: 1) |
+| `resolve` | 20 | Starting Resolve |
+| `openingHand` | 5 | Opening hand |
+| `drawPerTurn` | 2 | Cards drawn each turn |
+| `firstPlayerFirstDraw` | 1 | Cards the first player draws on their first turn |
+| `secondPlayerFirstEnergy` | 1 | Extra energy for the second player, first turn |
+| `secondPlayerSecondEnergy` | 1 | Extra energy for the second player, second turn |
+| `secondPlayerExtraDraw` | 0 | Extra cards for the second player, first turn |
+| `slipPerTurn` | 1 | Cards slipped into the Rift pool per turn |
+| `energyCap` | 8 | Largest Rift pool |
+| `handMax` | 7 | Hand size at end of turn |
+| `stageMax` | 3 | Stage slots |
+| `backMax` | 2 | Backstage slots |
+| `relicMax` | 3 | Relic slots |
+| `riftMax` | 6 | Rift level that fires an Anomaly |
+| `riftStart` | 0 | Rift at the start |
+| `riftReset` | 2 | Rift after an Anomaly |
+| `riftPerRound` | 1 | Rift gained each round |
+| `phaseMinRift` | 3 | Lowest Rift at which Phase works |
+| `momentumCap` | 3 | Largest Momentum bonus |
+| `resonanceCap` | 2 | Largest Resonance bonus |
+| `absorbCap` | 5 | Most Impact on an Absorb Character |
+| `turnLimit` | 60 | Turns (both players) before a draw |
+| `anomalyDamage` | 1 | Gravity Fault damage |
+| `anomalyBleed` | 2 | Static Bleed Resolve loss |
+| `anomalyOverflow` | 2 | Overflow extra energy |
 <!-- /PARAMS -->
 
 ## 1. What makes it different
@@ -45,7 +74,7 @@ Counters you will see: each player's **Resolve**, the shared **Rift** gauge, **I
 1. Shuffle both decks. Decide who goes first (a coin flip, or the loser of the previous game).
 2. Each player draws 5 cards. In turn order, each player may **mulligan** once: set aside any number of cards, draw that many new cards, then shuffle the set-aside cards back into the deck.
 3. Both players start at Resolve 20. The Rift starts at 0. The first Anomaly is chosen at random and shown face up.
-4. The first player skips most of their first draw (1 card, not 2). To make up for it, the second player draws 1 extra card and has 2 extra energy on their first turn only.
+4. The first player draws only 1 card on their first turn (instead of 2). To make up for going second, the second player has **1 extra energy on each of their first two turns**.
 
 ## 5. A turn
 

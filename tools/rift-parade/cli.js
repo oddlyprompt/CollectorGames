@@ -23,7 +23,7 @@ function finish(){ if(G&&arg('--log',null)) fs.writeFileSync(arg('--log'),G.log.
 // ------------------------------------------------------------ display
 const nm=c=>E.def(c).name;
 function cstr(g,c,full){ const d=E.def(c); const ks=[...E.kwSet(g,c)]; const bits=[E.def(c).type==='Character'||c.anim? `${nm(c)} ${E.pow(g,c)}/${E.hp(g,c)-c.dmg}${c.dmg?` (dmg ${c.dmg})`:''}` : nm(c)]; if(c.exh) bits.push('exhausted'); if(c.mark) bits.push('MARKED'); if(c.sil>=g.turn) bits.push('silenced'); if(c.ctr.imp) bits.push(`Impact ${c.ctr.imp}`); if(c.ctr.seal) bits.push(`seal ${c.ctr.seal}`);
-  if(ks.length&&full!==false) bits.push('['+ks.filter(k=>!['NoAttack','NoStep','NoBlock'].includes(k)).join(',')+']'); for(const a of c.atch) bits.push('<'+nm(a)+'>'); if(c.anim) bits.push('IMBUED'); return bits.join(' '); }
+  if(ks.length&&full!==false) bits.push('['+ks.filter(k=>!['NoAttack','NoStep','NoBlock'].includes(k)&&(k!=='Phase'||E.hasKw(g,c,'Phase'))).join(',')+']'); for(const a of c.atch) bits.push('<'+nm(a)+'>'); if(c.anim) bits.push('IMBUED'); return bits.join(' '); }
 function show(g,me){ flush(); const o=1-me, P=g.P[me], Q=g.P[o]; const line='-'.repeat(72);
   console.log('\n'+line); console.log(`Turn ${g.turn} (round ${g.round}) | Rift ${g.rift}/${g.R.riftMax}  next Anomaly: ${E.ANOMALIES[g.anom].name} - ${E.ANOMALIES[g.anom].text}`);
   if(g.zone) console.log(`Zone: ${nm(g.zone)} (${g.zone.ctl===me?'yours':'theirs'})`);
@@ -49,7 +49,7 @@ function ask(g,p,prompt,items,render,opts){ opts=opts||{}; while(true){ console.
 // ------------------------------------------------------------ the human player
 function human(){ return {name:'you',
   mulligan(g,p){ show(g,p); console.log('Opening hand. Mulligan: type the card numbers to replace (e.g. "0 3"), or press Enter to keep.'); const l=readLine(); if(l==='q') finish(); return l.split(/[\s,]+/).filter(x=>/^\d+$/.test(x)).map(Number).filter(i=>i<g.P[p].hand.length); },
-  main(g,p,acts,second){ show(g,p); const list=acts.concat([{k:'pass'}]); const i=ask(g,p,second?'Second main phase - choose an action (? N for card text):':'Main phase - choose an action (? N for card text):',list,a=>describe(g,p,a),{help:a=>help(g,p,a)}); return list[i]; },
+  main(g,p,acts,second){ if(second&&acts.every(a=>a.k==='step'||a.k==='swap')) return {k:'pass'}; show(g,p); const list=acts.concat([{k:'pass'}]); const i=ask(g,p,second?'Second main phase - choose an action (? N for card text):':'Main phase - choose an action (? N for card text):',list,a=>describe(g,p,a),{help:a=>help(g,p,a)}); return list[i]; },
   attack(g,p,av){ show(g,p); console.log('Attack! Ready Characters:'); av.forEach((c,i)=>console.log(`  ${i}) ${cstr(g,c)}`)); console.log('Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:'); while(true){ const l=readLine(); if(l==='q') finish(); if(l==='l'){ console.log(g.log.slice(-14).join('\n')); continue; } if(l===''||l==='n') return []; if(l==='all') return av; const ix=l.split(/[\s,]+/).filter(x=>/^\d+$/.test(x)).map(Number); if(ix.every(i=>i<av.length)) return ix.map(i=>av[i]); console.log('??'); } },
   block(g,p,atk,bl){ show(g,p); console.log('The opponent attacks! Attackers:'); atk.forEach(c=>console.log(`  - ${cstr(g,c)}`)); const asg={}; const used=new Set();
     for(const a of atk){ const opts=bl.filter(b=>!used.has(b.u)&&E.canBlock(g,b,a)); if(!opts.length){ console.log(`  ${nm(a)} cannot be blocked by anything you have.`); continue; }

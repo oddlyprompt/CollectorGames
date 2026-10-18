@@ -40,11 +40,11 @@ ch('020',1,1,2,[],[tr('enter',[['strip',{maxCost:1}]])],'Scout: sees the opponen
 relic('021',1,[act(0,[['draw',2],['discard',1]],{sac:true})],'Cantrip Relic: converts itself into card selection (Reiya decks).');
 zone('022',2,[tr('wake',[['loot']])],'Card filtering zone: optionally discard a card at each wake to draw one.');
 cond('023',1,'foe',[rule('techCost',1,'host')],'Tempo tax against Technique decks for three of their turns.',{tick:3,ab2:[tick('wake',[])]});
-ch('024',1,1,3,['Spotlight'],[],'Decoy: forces the opponent\'s targeted effects onto a cheap body. Protects your better Characters.');
+ch('024',1,2,2,['Spotlight'],[],'Decoy: forces the opponent\'s targeted effects onto a cheap body. Protects your better Characters.');
 tq('025',1,[['step','A'],['draw',1]],'Cutaway: cheaply reposition a Character in response to something and replace itself.',{react:true,need:['A']});
 zone('026',2,[st({who:'ally',p:1,h:1,f:{kw:'Spotlight'}})],'Spotlight zone: makes the decoys real threats.');
 cond('027',2,'E',[st({who:'host',kw:['NoStep']})],'Forces a Backstage Character onto the Stage and keeps it there. Counter to Backstage engines.',{onAttach:[['hostStage']]});
-ch('028',2,1,4,['Absorb'],[act(0,[['release','E']],{if:['impact','>=',1],need:['E']})],'Damage sponge: stores Impact when hurt and releases it as damage. Better as a blocker than an attacker.');
+ch('028',2,1,3,['Absorb'],[act(0,[['release','E']],{if:['impact','>=',1],need:['E']})],'Damage sponge: stores Impact when hurt and releases it as damage. Better as a blocker than an attacker.');
 ch('029',2,2,2,[],[tr('enter',[['mark','E']])],'Marks a target: it takes one extra damage and loses Phase. Opens up removal and combat for other cards.');
 tq('030',1,[['pump','A',0,2],['impact','LAST',2]],'Defensive trick that also loads Impact on a Brax Character.',{react:true,need:['A']});
 zone('031',2,[st({who:'ally',h:1,f:{kw:'Absorb'}}),rule('noPhase',1,'foe')],'Wall zone: strengthens Absorb Characters and shuts off the opponent\'s Phase.');
@@ -72,10 +72,10 @@ ch('050',3,3,2,['Momentum','Rush'],[],'Kinetic finisher: attacks at once and gro
 ch('051',3,3,3,[],[act(1,[['animate',2,2]],{need:['RELIC_ME']})],'Turns a Relic into an attacker for a turn (Imbue). Gives Relic decks a clock.');
 ch('052',3,3,3,['Sever'],[],'Aggressive Sever body: silences what it damages.');
 ch('053',4,3,3,['Phase'],[tr('hit',[['foeDiscard',1]])],'Evasive disruptor: every hit costs the opponent a card.');
-ch('054',3,3,3,[],[tr('enter',[['bargain',[['draw',1]],[['hurt',2]]]])],'Bargain engine: the opponent decides whether to give you a card or Resolve.');
+ch('054',3,3,4,[],[tr('enter',[['bargain',[['draw',1]],[['hurt',2]]]])],'Bargain engine: the opponent decides whether to give you a card or Resolve.');
 ch('055',3,3,3,[],[act(0,[['sacRelic',[['draw',2]]]],{sacNeed:true})],'Sells Relics for cards: converts spare Relics into card advantage.');
 ch('056',3,3,4,['Spotlight'],[],'Solid Spotlight body: protects the rest of the team from targeted effects.');
-ch('057',2,1,3,[],[st({who:'ally',p:1,f:{kw:'Spotlight'},row:'back'})],'Backstage support: pumps Spotlight Characters while sitting safely behind them.');
+ch('057',2,1,3,[],[st({who:'ally',p:1,h:1,f:{kw:'Spotlight'},row:'back'})],'Backstage support: pumps Spotlight Characters while sitting safely behind them.');
 ch('058',3,3,3,[],[tr('wake',[['mark','E']])],'Marks one enemy at every wake: constant pressure that sets up removal.');
 ch('059',4,2,4,['Absorb'],[act(0,[['release','E']],{if:['impact','>=',1],need:['E']})],'Stores damage as Impact and fires it back. Strong when blocking.');
 ch('060',3,2,2,['Resonance'],[tr('enter',[['pump',{t:'ALL_A',kw:'Resonance',other:true},1,1,'perm']])],'Permanently grows the team: better the more Resonance you already have.');
@@ -86,7 +86,7 @@ ch('064',2,2,2,[],[tr('attack',[['wager','choose',[['pump','SELF',3,0]],[['dmg',
 ch('065',4,3,3,[],[tr('enter',[['setAnomaly']]),tr('wake',[['scry',1]])],'Navigator: chooses which Anomaly fires next, and smooths your draws.');
 ch('066',4,3,3,['Momentum'],[tr('hit',[['draw',1]])],'Kai as a card engine when his hits connect.');
 tq('067',3,[['reflect']],'Turns an attacker\'s damage back on its controller. Punishes alpha strikes.',{react:true,need:['COMBAT_FOE']});
-tq('068',1,[['animate',4,3]],'Imbue a Relic into a 4/3 attacker for one energy: a cheap burst for Relic decks.',{need:['RELIC_ME']});
+tq('068',1,[['animate',4,3],['draw',1]],'Imbue a Relic into a 4/3 attacker and draw a card, for one energy: a cheap burst for Relic decks.',{need:['RELIC_ME']});
 tq('069',2,[['sever','any'],['draw',1]],'Destroys any opposing Condition, Relic or Zone and replaces itself.',{need:['SEVERABLE']});
 tq('070',1,[['sacRelic',[['draw',3],['energy',1]]]],'Converts a Relic into three cards and refunds its own energy: the exit for a Relic that has done its job.',{need:['RELIC_ME']});
 tq('071',2,[['shove','ES']],'Shoves a Stage Character Backstage, removing it from attack or defense.',{react:true,need:['ES']});
@@ -98,7 +98,7 @@ tq('076',3,[['bounce',{t:'E',maxCost:4}],['rift',1]],'Detour: bounces an attacke
 relic('077',2,[tr('wake',[['bargain',[['draw',1]],[['hurt',3]]]])],'Repeating Bargain: the opponent chooses card or Resolve every turn.');
 relic('078',2,[st({who:'ally',p:1,h:1,f:{kw:'Spotlight'}})],'Spotlight support: Spotlight Characters get bigger.');
 relic('079',1,[act(0,[['pump','AS',3,0],['grantCharge','LAST']],{sac:true,need:['AS']})],'One-shot burst: +3 power and Rush for a Character.');
-relic('080',1,[act(0,[['heal',4]],{sac:true,react:true})],'Emergency life: restores 4 Resolve at any time.');
+relic('080',1,[act(0,[['heal',3]],{sac:true,react:true})],'Emergency life: restores 3 Resolve at any time.');
 zone('081',2,[tr('relicLost',[['draw',1]])],'Relic engine zone: replaces Relics that leave play.');
 zone('082',3,[rule('backBlock',1,'me')],'Backstage Characters may block: defensive zone that gives Backstage cards a role.');
 zone('083',2,[st({who:'ally',kw:['Phase'],f:{kw:'Resonance'}})],'Gives Resonance Characters Phase: a fast clock for wide teams.');
@@ -147,7 +147,7 @@ ch('121',5,2,6,[],[tr('wake',[['heal',2],['rift',-1]])],'Mend anchor: heals and 
 ch('122',5,4,4,['Haunt'],[tr('enter',[['strip',null]]),st({who:'allyOther',kw:['Haunt']})],'Gives your team Haunt and strips a card: a grindy value engine.');
 ch('123',5,4,5,[],[tr('wagerWin',[['hurt',2]]),tr('wagerLose',[['draw',1]])],'Wager payoff: every Wager now gives something.');
 ch('124',5,3,5,[],[act(0,[['dmgByRelic','E',2]],{sacNeed:true,need:['E']})],'Converts Relics into damage: the Relic deck\'s removal.');
-ch('125',6,4,7,['Absorb','Reservoir'],[act(0,[['release','foe']],{if:['impact','>=',1]}),act(0,[['release','E']],{if:['impact','>=',1],need:['E']})],'Stores Impact from the whole team and releases it as damage to a Character or the opponent. The Impact deck\'s finisher.');
+ch('125',6,4,6,['Absorb','Reservoir'],[act(0,[['release','foe']],{if:['impact','>=',1]}),act(0,[['release','E']],{if:['impact','>=',1],need:['E']})],'Stores Impact from the whole team and releases it as damage to a Character or the opponent. The Impact deck\'s finisher.');
 ch('126',6,6,5,[],[tr('enter',[['bargain',[['hurt',6]],[['foeSacrificeBest']]]])],'Brutal Bargain: six Resolve or their best Stage Character.');
 ch('127',5,4,5,['Spotlight'],[tr('enter',[['pullStage'],['draw',1]])],'Drags the opponent\'s Backstage Characters onto the Stage and draws a card.');
 ch('128',6,5,4,['Phase'],[tr('enter',[['recur',null,2]])],'Memory: returns two cards from the discard. A late-game engine for every grind deck.');

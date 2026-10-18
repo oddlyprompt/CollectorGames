@@ -767,8 +767,8 @@
    "art": "Levitation orb carrying glowing broadcast lens and tiny clapperboard.",
    "gameplay": {
     "cost": 1,
-    "power": 1,
-    "health": 3,
+    "power": 2,
+    "health": 2,
     "keywords": [
      "Spotlight"
     ],
@@ -888,7 +888,7 @@
    "gameplay": {
     "cost": 2,
     "power": 1,
-    "health": 4,
+    "health": 3,
     "keywords": [
      "Absorb"
     ],
@@ -1820,7 +1820,7 @@
    "gameplay": {
     "cost": 3,
     "power": 3,
-    "health": 3,
+    "health": 4,
     "keywords": [],
     "copiesMax": 3,
     "text": [
@@ -1933,7 +1933,7 @@
     "keywords": [],
     "copiesMax": 3,
     "text": [
-     "Backstage: Characters with Spotlight you control get +1/0."
+     "Backstage: Characters with Spotlight you control get +1/+1."
     ],
     "purpose": "Backstage support: pumps Spotlight Characters while sitting safely behind them.",
     "abilities": [
@@ -1941,6 +1941,7 @@
       "t": "st",
       "who": "ally",
       "p": 1,
+      "h": 1,
       "f": {
        "kw": "Spotlight"
       },
@@ -2368,15 +2369,19 @@
     "keywords": [],
     "copiesMax": 3,
     "text": [
-     "Imbue one of your Relics: it becomes a 4/3 Character that can attack, until end of turn."
+     "Imbue one of your Relics: it becomes a 4/3 Character that can attack, until end of turn, then draw a card."
     ],
-    "purpose": "Imbue a Relic into a 4/3 attacker for one energy: a cheap burst for Relic decks.",
+    "purpose": "Imbue a Relic into a 4/3 attacker and draw a card, for one energy: a cheap burst for Relic decks.",
     "abilities": [],
     "ops": [
      [
       "animate",
       4,
       3
+     ],
+     [
+      "draw",
+      1
      ]
     ]
    },
@@ -2777,9 +2782,9 @@
     "keywords": [],
     "copiesMax": 3,
     "text": [
-     "Act (free, sacrifice this, once per turn): Restore 4 Resolve. (Reaction)"
+     "Act (free, sacrifice this, once per turn): Restore 3 Resolve. (Reaction)"
     ],
-    "purpose": "Emergency life: restores 4 Resolve at any time.",
+    "purpose": "Emergency life: restores 3 Resolve at any time.",
     "abilities": [
      {
       "t": "act",
@@ -2787,7 +2792,7 @@
       "ops": [
        [
         "heal",
-        4
+        3
        ]
       ],
       "sac": true,
@@ -4498,7 +4503,7 @@
    "gameplay": {
     "cost": 6,
     "power": 4,
-    "health": 7,
+    "health": 6,
     "keywords": [
      "Absorb",
      "Reservoir"

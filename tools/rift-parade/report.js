@@ -8,7 +8,8 @@ function load(f){ return JSON.parse(fs.readFileSync(f,'utf8')); }
 function summarize(R){ const ids=R.meta.decks; const K=ids.length; const M=ids.map(()=>ids.map(()=>null)), G=ids.map(()=>ids.map(()=>0));
   const T={games:0,rounds:0,first:0,why:{},hist:{},anoms:0,maxRift:0}; const card={}; const slipped={}; const trig={}; const deckGames=ids.map(()=>0), deckWins=ids.map(()=>0), deckFirstG=ids.map(()=>0), deckFirstW=ids.map(()=>0), deckSecondG=ids.map(()=>0), deckSecondW=ids.map(()=>0);
   for(const r of R.pairs){ T.games+=r.games; T.rounds+=r.turns; T.first+=r.firstWins; T.anoms+=r.anoms; T.maxRift+=r.maxRift; for(const k in r.why) T.why[k]=(T.why[k]||0)+r.why[k]; for(const k in r.hist) T.hist[k]=(T.hist[k]||0)+r.hist[k];
-    if(r.i!==r.j){ M[r.i][r.j]=r.wins/r.games; M[r.j][r.i]=1-r.wins/r.games; G[r.i][r.j]=G[r.j][r.i]=r.games; deckGames[r.i]+=r.games; deckGames[r.j]+=r.games; deckWins[r.i]+=r.wins; deckWins[r.j]+=r.games-r.wins;
+    if(R.meta.asym){ M[r.i][r.j]=r.wins/r.games; G[r.i][r.j]=r.games; }
+    if(!R.meta.asym&&r.i!==r.j){ M[r.i][r.j]=r.wins/r.games; M[r.j][r.i]=1-r.wins/r.games; G[r.i][r.j]=G[r.j][r.i]=r.games; deckGames[r.i]+=r.games; deckGames[r.j]+=r.games; deckWins[r.i]+=r.wins; deckWins[r.j]+=r.games-r.wins;
       deckFirstG[r.i]+=r.asFirstGames; deckFirstW[r.i]+=r.asFirstWins; deckSecondG[r.i]+=r.games-r.asFirstGames; deckSecondW[r.i]+=r.seatWins-r.asFirstWins;
       // deck j: it is first when deck i is not
       deckFirstG[r.j]+=r.games-r.asFirstGames; deckFirstW[r.j]+=(r.games-r.asFirstGames)-(r.games-r.seatWins-(r.asFirstGames-r.asFirstWins))*0-0; }

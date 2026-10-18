@@ -1,0 +1,886 @@
+Rift Parade - you play Kinetic Rush vs Sever and Mark (balanced computer player), seed 21
+
+------------------------------------------------------------------------
+Turn 0 (round 0) | Rift 0/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Mika, Salvage Runner (Character, cost 2, 2/3)
+  [3] Paper-Mouthed Imp (Character, cost 1, 2/1)
+  [4] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Opening hand. Mulligan: type the card numbers to replace (e.g. "0 3"), or press Enter to keep.
+Player 0 goes first.
+[T1 P0] --- P0 wakes (Rift 0, Resolve 20/20) ---
+
+------------------------------------------------------------------------
+Turn 1 (round 1) | Rift 0/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 6 | deck 34 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Mika, Salvage Runner (Character, cost 2, 2/3)
+  [3] Paper-Mouthed Imp (Character, cost 1, 2/1)
+  [4] Kinetic Reversal (Technique, cost 3)
+  [5] Hard Stop (Technique, cost 2)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Slip Temporary Spark into the Rift pool (becomes energy)
+  1) Slip Coinflip Curse into the Rift pool (becomes energy)
+  2) Slip Mika, Salvage Runner into the Rift pool (becomes energy)
+  3) Slip Paper-Mouthed Imp into the Rift pool (becomes energy)
+  4) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  5) Slip Hard Stop into the Rift pool (becomes energy)
+  6) Pass / end this phase
+[T1 P0] P0 slips a card into the Rift pool (1)
+
+------------------------------------------------------------------------
+Turn 1 (round 1) | Rift 0/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 34 | Rift pool 1 (1 ready)
+  Stage: -
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Mika, Salvage Runner (Character, cost 2, 2/3)
+  [3] Paper-Mouthed Imp (Character, cost 1, 2/1)
+  [4] Kinetic Reversal (Technique, cost 3)
+Energy ready: 1
+Main phase - choose an action (? N for card text):
+  0) Play Paper-Mouthed Imp [1] -> Stage
+  1) Play Paper-Mouthed Imp [1] -> Backstage
+  2) Pass / end this phase
+[T1 P0] P0 plays Paper-Mouthed Imp [1]
+[T1 P0] P0 puts Paper-Mouthed Imp on the Stage
+
+------------------------------------------------------------------------
+Turn 1 (round 1) | Rift 0/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 4 | deck 34 | Rift pool 1 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Mika, Salvage Runner (Character, cost 2, 2/3)
+  [3] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  1) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 1 (round 1) | Rift 0/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 4 | deck 34 | Rift pool 1 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Mika, Salvage Runner (Character, cost 2, 2/3)
+  [3] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  1) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Second main phase - choose an action (? N for card text):
+  0) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  1) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T2 P1] --- P1 wakes (Rift 0, Resolve 20/20) ---
+[T2 P1] P1 slips a card into the Rift pool (1)
+[T2 P1] P1 plays Toma, Junior Analyst [2]
+[T2 P1] P1 puts Toma, Junior Analyst on the Stage
+[T2 P1] Toma, Junior Analyst triggers
+[T2 P1] Paper-Mouthed Imp is Marked
+[T3 P0] Rift 0 -> 1
+[T3 P0] --- P0 wakes (Rift 1, Resolve 20/20) ---
+
+------------------------------------------------------------------------
+Turn 3 (round 2) | Rift 1/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 33 | Rift pool 1 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 6 | deck 32 | Rift pool 1 (1 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Mika, Salvage Runner (Character, cost 2, 2/3)
+  [3] Kinetic Reversal (Technique, cost 3)
+  [4] Momentum Skip (Technique, cost 1)
+  [5] Hard Stop (Technique, cost 2)
+Energy ready: 1
+Main phase - choose an action (? N for card text):
+  0) Slip Temporary Spark into the Rift pool (becomes energy)
+  1) Slip Coinflip Curse into the Rift pool (becomes energy)
+  2) Slip Mika, Salvage Runner into the Rift pool (becomes energy)
+  3) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  4) Slip Momentum Skip into the Rift pool (becomes energy)
+  5) Slip Hard Stop into the Rift pool (becomes energy)
+  6) Play Temporary Spark [1]
+  7) Play Coinflip Curse [1]
+  8) Play Momentum Skip [1]
+  9) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  10) Pass / end this phase
+[T3 P0] P0 slips a card into the Rift pool (2)
+
+------------------------------------------------------------------------
+Turn 3 (round 2) | Rift 1/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 33 | Rift pool 1 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 32 | Rift pool 2 (2 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Mika, Salvage Runner (Character, cost 2, 2/3)
+  [3] Kinetic Reversal (Technique, cost 3)
+  [4] Hard Stop (Technique, cost 2)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Play Temporary Spark [1]
+  1) Play Coinflip Curse [1]
+  2) Play Mika, Salvage Runner [2] -> Stage
+  3) Play Mika, Salvage Runner [2] -> Backstage
+  4) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  5) Pass / end this phase
+Choose a card:
+  0) Stolen Charge Cell
+  1) Stolen Charge Cell
+[T3 P0] P0 plays Mika, Salvage Runner [2]
+[T3 P0] P0 puts Mika, Salvage Runner on the Stage
+[T3 P0] Mika, Salvage Runner triggers
+[T3 P0] P0 searches for Stolen Charge Cell
+
+------------------------------------------------------------------------
+Turn 3 (round 2) | Rift 1/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 33 | Rift pool 1 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Kinetic Reversal (Technique, cost 3)
+  [3] Hard Stop (Technique, cost 2)
+  [4] Stolen Charge Cell (Relic, cost 1)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  1) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  2) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 3 (round 2) | Rift 1/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 33 | Rift pool 1 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Kinetic Reversal (Technique, cost 3)
+  [3] Hard Stop (Technique, cost 2)
+  [4] Stolen Charge Cell (Relic, cost 1)
+Energy ready: 0
+Attack! Ready Characters:
+  0) Paper-Mouthed Imp 2/1 MARKED
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+
+------------------------------------------------------------------------
+Turn 3 (round 2) | Rift 1/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 33 | Rift pool 1 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Kinetic Reversal (Technique, cost 3)
+  [3] Hard Stop (Technique, cost 2)
+  [4] Stolen Charge Cell (Relic, cost 1)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  1) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  2) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T4 P1] --- P1 wakes (Rift 1, Resolve 20/20) ---
+[T4 P1] P1 slips a card into the Rift pool (2)
+[T4 P1] P1 plays Toma, Pattern Sight [3]
+[T4 P1] P1 puts Toma, Pattern Sight on the Stage
+[T5 P0] Rift 1 -> 2
+[T5 P0] --- P0 wakes (Rift 2, Resolve 20/20) ---
+
+------------------------------------------------------------------------
+Turn 5 (round 3) | Rift 2/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Toma, Junior Analyst 2/2 | Toma, Pattern Sight 3/3
+  Back : -
+
+YOU: Resolve 20 | hand 7 | deck 29 | Rift pool 2 (2 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Temporary Spark (Technique, cost 1)
+  [1] Coinflip Curse (Technique, cost 1)
+  [2] Kinetic Reversal (Technique, cost 3)
+  [3] Hard Stop (Technique, cost 2)
+  [4] Stolen Charge Cell (Relic, cost 1)
+  [5] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [6] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Slip Temporary Spark into the Rift pool (becomes energy)
+  1) Slip Coinflip Curse into the Rift pool (becomes energy)
+  2) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  3) Slip Hard Stop into the Rift pool (becomes energy)
+  4) Slip Stolen Charge Cell into the Rift pool (becomes energy)
+  5) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  6) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  7) Play Temporary Spark [1]
+  8) Play Coinflip Curse [1]
+  9) Play Stolen Charge Cell [1]
+  10) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  11) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  12) Pass / end this phase
+[T5 P0] P0 slips a card into the Rift pool (3)
+
+------------------------------------------------------------------------
+Turn 5 (round 3) | Rift 2/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Toma, Junior Analyst 2/2 | Toma, Pattern Sight 3/3
+  Back : -
+
+YOU: Resolve 20 | hand 6 | deck 29 | Rift pool 3 (3 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Coinflip Curse (Technique, cost 1)
+  [1] Kinetic Reversal (Technique, cost 3)
+  [2] Hard Stop (Technique, cost 2)
+  [3] Stolen Charge Cell (Relic, cost 1)
+  [4] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [5] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 3
+Main phase - choose an action (? N for card text):
+  0) Play Coinflip Curse [1]
+  1) Play Kinetic Reversal [3]
+  2) Play Stolen Charge Cell [1]
+  3) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  4) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  5) Pass / end this phase
+Call the Wager (High = revealed cost 3+, Low = cost 2 or less):
+  0) high
+  1) low
+Choose a target for dmg:
+  0) Toma, Junior Analyst 2/2
+  1) Toma, Pattern Sight 3/3
+[T5 P0] P0 plays Coinflip Curse [1]
+[T5 P0] Wager (low): reveals Copperback Gremlin - WIN
+[T5 P0] Toma, Pattern Sight takes 4
+[T5 P0] Toma, Pattern Sight is defeated
+
+------------------------------------------------------------------------
+Turn 5 (round 3) | Rift 2/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 29 | Rift pool 3 (2 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kinetic Reversal (Technique, cost 3)
+  [1] Hard Stop (Technique, cost 2)
+  [2] Stolen Charge Cell (Relic, cost 1)
+  [3] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [4] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Play Stolen Charge Cell [1]
+  1) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  2) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  3) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 5 (round 3) | Rift 2/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 29 | Rift pool 3 (2 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kinetic Reversal (Technique, cost 3)
+  [1] Hard Stop (Technique, cost 2)
+  [2] Stolen Charge Cell (Relic, cost 1)
+  [3] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [4] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 2
+Attack! Ready Characters:
+  0) Paper-Mouthed Imp 2/1 MARKED
+  1) Mika, Salvage Runner 2/3
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T5 P0] P0 attacks with Paper-Mouthed Imp (2)
+[T5 P0] P0 attacks with Mika, Salvage Runner (2)
+[T5 P0] P1 loses 2 Resolve (18) - combat
+[T5 P0] P1 loses 2 Resolve (16) - combat
+
+------------------------------------------------------------------------
+Turn 5 (round 3) | Rift 2/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 16 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Toma, Junior Analyst 2/2
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 29 | Rift pool 3 (2 ready)
+  Stage: Paper-Mouthed Imp 2/1 exhausted MARKED | Mika, Salvage Runner 2/3 exhausted
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kinetic Reversal (Technique, cost 3)
+  [1] Hard Stop (Technique, cost 2)
+  [2] Stolen Charge Cell (Relic, cost 1)
+  [3] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [4] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 2
+Second main phase - choose an action (? N for card text):
+  0) Play Stolen Charge Cell [1]
+  1) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  2) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  3) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T6 P1] --- P1 wakes (Rift 2, Resolve 16/20) ---
+[T6 P1] P1 slips a card into the Rift pool (3)
+[T6 P1] P1 plays Ayame, Suspicious Ally [3]
+[T6 P1] P1 puts Ayame, Suspicious Ally on the Stage
+[T6 P1] P1 attacks with Toma, Junior Analyst (2)
+
+REACTION WINDOW. Combat: Toma, Junior Analyst 2 unblocked. Energy ready: 2
+Play a reaction or pass:
+  0) Play Hard Stop [2]
+  1) Pass / end this phase
+[T6 P1] P0 plays Hard Stop [2]
+[T6 P1] Toma, Junior Analyst's combat damage is prevented
+[T6 P1] Toma, Junior Analyst takes 2
+[T6 P1] Toma, Junior Analyst is defeated
+[T7 P0] Rift 2 -> 3
+[T7 P0] --- P0 wakes (Rift 3, Resolve 20/16) ---
+
+------------------------------------------------------------------------
+Turn 7 (round 4) | Rift 3/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 16 | hand 5 | deck 29 | Rift pool 3 (0 ready)
+  Stage: Ayame, Suspicious Ally 3/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 6 | deck 27 | Rift pool 3 (3 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kinetic Reversal (Technique, cost 3)
+  [1] Stolen Charge Cell (Relic, cost 1)
+  [2] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [3] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [4] Kinetic Reversal (Technique, cost 3)
+  [5] Temporary Spark (Technique, cost 1)
+Energy ready: 3
+Main phase - choose an action (? N for card text):
+  0) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  1) Slip Stolen Charge Cell into the Rift pool (becomes energy)
+  2) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  3) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  4) Slip Temporary Spark into the Rift pool (becomes energy)
+  5) Play Kinetic Reversal [3]
+  6) Play Stolen Charge Cell [1]
+  7) Play Temporary Spark [1]
+  8) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  9) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  10) Pass / end this phase
+[T7 P0] P0 slips a card into the Rift pool (4)
+
+------------------------------------------------------------------------
+Turn 7 (round 4) | Rift 3/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 16 | hand 5 | deck 29 | Rift pool 3 (0 ready)
+  Stage: Ayame, Suspicious Ally 3/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 27 | Rift pool 4 (4 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kinetic Reversal (Technique, cost 3)
+  [1] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [2] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [3] Kinetic Reversal (Technique, cost 3)
+  [4] Temporary Spark (Technique, cost 1)
+Energy ready: 4
+Main phase - choose an action (? N for card text):
+  0) Play Kinetic Reversal [3]
+  1) Play Kai, Kinetic Daredevil [4] -> Stage
+  2) Play Kai, Kinetic Daredevil [4] -> Backstage
+  3) Play Temporary Spark [1]
+  4) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  5) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  6) Pass / end this phase
+Choose a target for pump:
+  0) Paper-Mouthed Imp 2/1 MARKED [Phase]
+  1) Mika, Salvage Runner 2/3
+[T7 P0] P0 plays Temporary Spark [1]
+
+------------------------------------------------------------------------
+Turn 7 (round 4) | Rift 3/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 16 | hand 5 | deck 29 | Rift pool 3 (0 ready)
+  Stage: Ayame, Suspicious Ally 3/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 4 | deck 27 | Rift pool 4 (3 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 4/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kinetic Reversal (Technique, cost 3)
+  [1] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [2] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [3] Kinetic Reversal (Technique, cost 3)
+Energy ready: 3
+Main phase - choose an action (? N for card text):
+  0) Play Kinetic Reversal [3]
+  1) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  2) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  3) Pass / end this phase
+[T7 P0] P0 plays Kinetic Reversal [3]
+[T7 P0] Ayame, Suspicious Ally takes 4
+[T7 P0] Ayame, Suspicious Ally is defeated
+
+------------------------------------------------------------------------
+Turn 7 (round 4) | Rift 3/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 16 | hand 5 | deck 29 | Rift pool 3 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 3 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 4/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  1) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  2) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 7 (round 4) | Rift 3/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 16 | hand 5 | deck 29 | Rift pool 3 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 3 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 4/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Attack! Ready Characters:
+  0) Paper-Mouthed Imp 2/1 MARKED [Phase]
+  1) Mika, Salvage Runner 4/3
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T7 P0] P0 attacks with Paper-Mouthed Imp (2)
+[T7 P0] P0 attacks with Mika, Salvage Runner (4)
+[T7 P0] P1 loses 2 Resolve (14) - combat
+[T7 P0] P1 loses 4 Resolve (10) - combat
+
+------------------------------------------------------------------------
+Turn 7 (round 4) | Rift 3/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 10 | hand 5 | deck 29 | Rift pool 3 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 3 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 exhausted MARKED [Phase] | Mika, Salvage Runner 4/3 exhausted
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  1) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  2) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T8 P1] --- P1 wakes (Rift 3, Resolve 10/20) ---
+[T8 P1] P1 slips a card into the Rift pool (4)
+[T8 P1] P1 plays Ayame, Severed Pursuit [4]
+[T8 P1] P1 puts Ayame, Severed Pursuit on the Stage
+[T9 P0] Rift 3 -> 4
+[T9 P0] --- P0 wakes (Rift 4, Resolve 20/10) ---
+
+------------------------------------------------------------------------
+Turn 9 (round 5) | Rift 4/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 10 | hand 5 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Ayame, Severed Pursuit 4/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 25 | Rift pool 4 (4 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+  [3] Kai, Bad Idea Specialist (Character, cost 3, 3/2)
+  [4] Kai, Errand Runner (Character, cost 1, 1/2)
+Energy ready: 4
+Main phase - choose an action (? N for card text):
+  0) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  1) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  2) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  3) Slip Kai, Bad Idea Specialist into the Rift pool (becomes energy)
+  4) Slip Kai, Errand Runner into the Rift pool (becomes energy)
+  5) Play Kai, Kinetic Daredevil [4] -> Stage
+  6) Play Kai, Kinetic Daredevil [4] -> Backstage
+  7) Play Kinetic Reversal [3]
+  8) Play Kai, Bad Idea Specialist [3] -> Stage
+  9) Play Kai, Bad Idea Specialist [3] -> Backstage
+  10) Play Kai, Errand Runner [1] -> Stage
+  11) Play Kai, Errand Runner [1] -> Backstage
+  12) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  13) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  14) Pass / end this phase
+[T9 P0] P0 plays Kai, Bad Idea Specialist [3]
+[T9 P0] P0 puts Kai, Bad Idea Specialist on the Stage
+
+------------------------------------------------------------------------
+Turn 9 (round 5) | Rift 4/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 10 | hand 5 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Ayame, Severed Pursuit 4/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 4 | deck 25 | Rift pool 4 (1 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 | Kai, Bad Idea Specialist 3/2 [Momentum,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+  [3] Kai, Errand Runner (Character, cost 1, 1/2)
+Energy ready: 1
+Main phase - choose an action (? N for card text):
+  0) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  1) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  2) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  3) Slip Kai, Errand Runner into the Rift pool (becomes energy)
+  4) Play Kai, Kinetic Daredevil [4 less 3, Next Episode on Kai, Bad Idea Specialist]
+  5) Play Kai, Errand Runner [1] -> Backstage
+  6) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  7) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  8) Step Kai, Bad Idea Specialist to Backstage (free, once per turn)
+  9) Pass / end this phase
+[T9 P0] P0 plays Kai, Errand Runner [1]
+[T9 P0] P0 puts Kai, Errand Runner Backstage
+
+------------------------------------------------------------------------
+Turn 9 (round 5) | Rift 4/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 10 | hand 5 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Ayame, Severed Pursuit 4/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 3 | deck 25 | Rift pool 4 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 | Kai, Bad Idea Specialist 3/2 [Momentum,Rush]
+  Back : Kai, Errand Runner 1/2 [Momentum]
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  1) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  2) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  3) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  4) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  5) Step Kai, Bad Idea Specialist to Backstage (free, once per turn)
+  6) Swap Kai, Errand Runner and Paper-Mouthed Imp (free, once per turn)
+  7) Swap Kai, Errand Runner and Mika, Salvage Runner (free, once per turn)
+  8) Swap Kai, Errand Runner and Kai, Bad Idea Specialist (free, once per turn)
+  9) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 9 (round 5) | Rift 4/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 10 | hand 5 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Ayame, Severed Pursuit 4/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 3 | deck 25 | Rift pool 4 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 | Kai, Bad Idea Specialist 3/2 [Momentum,Rush]
+  Back : Kai, Errand Runner 1/2 [Momentum]
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Attack! Ready Characters:
+  0) Paper-Mouthed Imp 2/1 MARKED [Phase]
+  1) Mika, Salvage Runner 2/3
+  2) Kai, Bad Idea Specialist 3/2 [Momentum,Rush]
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T9 P0] P0 attacks with Kai, Bad Idea Specialist (3)
+[T9 P0] P1 loses 3 Resolve (7) - combat
+
+------------------------------------------------------------------------
+Turn 9 (round 5) | Rift 4/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 7 | hand 5 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Ayame, Severed Pursuit 4/3 [Sever]
+  Back : -
+
+YOU: Resolve 20 | hand 3 | deck 25 | Rift pool 4 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 | Kai, Bad Idea Specialist 3/2 exhausted [Momentum,Rush]
+  Back : Kai, Errand Runner 1/2 [Momentum]
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  1) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  2) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  3) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  4) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  5) Step Kai, Bad Idea Specialist to Backstage (free, once per turn)
+  6) Swap Kai, Errand Runner and Paper-Mouthed Imp (free, once per turn)
+  7) Swap Kai, Errand Runner and Mika, Salvage Runner (free, once per turn)
+  8) Swap Kai, Errand Runner and Kai, Bad Idea Specialist (free, once per turn)
+  9) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T10 P1] --- P1 wakes (Rift 4, Resolve 7/20) ---
+[T10 P1] P1 slips a card into the Rift pool (5)
+[T10 P1] P1 plays Ayame, Cut What Cannot Be Cut [5]
+[T10 P1] P1 puts Ayame, Cut What Cannot Be Cut on the Stage
+[T10 P1] Ayame, Cut What Cannot Be Cut triggers
+[T10 P1] P1 attacks with Ayame, Severed Pursuit (4)
+[T10 P1] P1 attacks with Ayame, Cut What Cannot Be Cut (4)
+[T10 P1] Ayame, Severed Pursuit triggers
+[T10 P1] Mika, Salvage Runner is silenced
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 4/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 7 | hand 5 | deck 25 | Rift pool 5 (0 ready)
+  Stage: Ayame, Severed Pursuit 4/3 exhausted [Sever] | Ayame, Cut What Cannot Be Cut 4/3 exhausted [Sever,Rush]
+  Back : -
+
+YOU: Resolve 20 | hand 3 | deck 25 | Rift pool 4 (0 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 silenced | Kai, Bad Idea Specialist 3/2 exhausted [Momentum,Rush]
+  Back : Kai, Errand Runner 1/2 [Momentum]
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+Energy ready: 0
+The opponent attacks! Attackers:
+  - Ayame, Severed Pursuit 4/3 exhausted [Sever]
+  - Ayame, Cut What Cannot Be Cut 4/3 exhausted [Sever,Rush]
+Block Ayame, Severed Pursuit (4/3) with:
+  1) Paper-Mouthed Imp 2/1 MARKED [Phase]
+  2) Mika, Salvage Runner 2/3 silenced
+  (Enter or n = no block)
+Block Ayame, Cut What Cannot Be Cut (4/3) with:
+  1) Paper-Mouthed Imp 2/1 MARKED [Phase]
+  2) Mika, Salvage Runner 2/3 silenced
+  (Enter or n = no block)
+[T10 P1] P0 loses 4 Resolve (16) - combat
+[T10 P1] P0 loses 4 Resolve (12) - combat
+[T11 P0] Rift 4 -> 5
+[T11 P0] --- P0 wakes (Rift 5, Resolve 12/7) ---
+
+------------------------------------------------------------------------
+Turn 11 (round 6) | Rift 5/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 7 | hand 5 | deck 25 | Rift pool 5 (0 ready)
+  Stage: Ayame, Severed Pursuit 4/3 exhausted [Sever] | Ayame, Cut What Cannot Be Cut 4/3 exhausted [Sever,Rush]
+  Back : -
+
+YOU: Resolve 12 | hand 5 | deck 23 | Rift pool 4 (4 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 silenced | Kai, Bad Idea Specialist 3/2 [Momentum,Rush]
+  Back : Kai, Errand Runner 1/2 [Momentum]
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kinetic Reversal (Technique, cost 3)
+  [3] Kai, Bad Idea Specialist (Character, cost 3, 3/2)
+  [4] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 4
+Main phase - choose an action (? N for card text):
+  0) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  1) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  2) Slip Kinetic Reversal into the Rift pool (becomes energy)
+  3) Slip Kai, Bad Idea Specialist into the Rift pool (becomes energy)
+  4) Play Kai, No One Left Behind [5 less 3, Next Episode on Kai, Bad Idea Specialist]
+  5) Play Kai, No One Left Behind [5 less 1, Next Episode on Kai, Errand Runner]
+  6) Play Kai, Kinetic Daredevil [4] -> Backstage
+  7) Play Kai, Kinetic Daredevil [4 less 3, Next Episode on Kai, Bad Idea Specialist]
+  8) Play Kai, Kinetic Daredevil [4 less 1, Next Episode on Kai, Errand Runner]
+  9) Play Kinetic Reversal [3]
+  10) Play Kai, Bad Idea Specialist [3] -> Backstage
+  11) Play Kai, Bad Idea Specialist [3 less 1, Next Episode on Kai, Errand Runner]
+  12) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  13) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  14) Step Kai, Bad Idea Specialist to Backstage (free, once per turn)
+  15) Swap Kai, Errand Runner and Paper-Mouthed Imp (free, once per turn)
+  16) Swap Kai, Errand Runner and Mika, Salvage Runner (free, once per turn)
+  17) Swap Kai, Errand Runner and Kai, Bad Idea Specialist (free, once per turn)
+  18) Pass / end this phase
+Choose a target for dmg:
+  0) Ayame, Severed Pursuit 4/3 exhausted [Sever]
+  1) Ayame, Cut What Cannot Be Cut 4/3 exhausted [Sever,Rush]
+[T11 P0] P0 plays Kinetic Reversal [3]
+[T11 P0] Ayame, Severed Pursuit takes 4
+[T11 P0] Ayame, Severed Pursuit is defeated
+
+------------------------------------------------------------------------
+Turn 11 (round 6) | Rift 5/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 7 | hand 5 | deck 25 | Rift pool 5 (0 ready)
+  Stage: Ayame, Cut What Cannot Be Cut 4/3 exhausted [Sever,Rush]
+  Back : -
+
+YOU: Resolve 12 | hand 4 | deck 23 | Rift pool 4 (1 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 silenced | Kai, Bad Idea Specialist 4/2 [Momentum,Rush]
+  Back : Kai, Errand Runner 2/2 [Momentum]
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kai, Bad Idea Specialist (Character, cost 3, 3/2)
+  [3] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 1
+Main phase - choose an action (? N for card text):
+  0) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  1) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  2) Slip Kai, Bad Idea Specialist into the Rift pool (becomes energy)
+  3) Play Kai, Kinetic Daredevil [4 less 3, Next Episode on Kai, Bad Idea Specialist]
+  4) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  5) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  6) Step Kai, Bad Idea Specialist to Backstage (free, once per turn)
+  7) Swap Kai, Errand Runner and Paper-Mouthed Imp (free, once per turn)
+  8) Swap Kai, Errand Runner and Mika, Salvage Runner (free, once per turn)
+  9) Swap Kai, Errand Runner and Kai, Bad Idea Specialist (free, once per turn)
+  10) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Main phase - choose an action (? N for card text):
+  0) Slip Kai, No One Left Behind into the Rift pool (becomes energy)
+  1) Slip Kai, Kinetic Daredevil into the Rift pool (becomes energy)
+  2) Slip Kai, Bad Idea Specialist into the Rift pool (becomes energy)
+  3) Play Kai, Kinetic Daredevil [4 less 3, Next Episode on Kai, Bad Idea Specialist]
+  4) Step Paper-Mouthed Imp to Backstage (free, once per turn)
+  5) Step Mika, Salvage Runner to Backstage (free, once per turn)
+  6) Step Kai, Bad Idea Specialist to Backstage (free, once per turn)
+  7) Swap Kai, Errand Runner and Paper-Mouthed Imp (free, once per turn)
+  8) Swap Kai, Errand Runner and Mika, Salvage Runner (free, once per turn)
+  9) Swap Kai, Errand Runner and Kai, Bad Idea Specialist (free, once per turn)
+  10) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 11 (round 6) | Rift 5/6  next Anomaly: Static Bleed - Each player loses 2 Resolve.
+OPPONENT: Resolve 7 | hand 5 | deck 25 | Rift pool 5 (0 ready)
+  Stage: Ayame, Cut What Cannot Be Cut 4/3 exhausted [Sever,Rush]
+  Back : -
+
+YOU: Resolve 12 | hand 4 | deck 23 | Rift pool 4 (1 ready)
+  Stage: Paper-Mouthed Imp 2/1 MARKED [Phase] | Mika, Salvage Runner 2/3 silenced | Kai, Bad Idea Specialist 4/2 [Momentum,Rush]
+  Back : Kai, Errand Runner 2/2 [Momentum]
+------------------------------------------------------------------------
+Your hand:
+  [0] Kai, No One Left Behind (Character, cost 5, 4/4)
+  [1] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+  [2] Kai, Bad Idea Specialist (Character, cost 3, 3/2)
+  [3] Kai, Kinetic Daredevil (Character, cost 4, 3/3)
+Energy ready: 1
+Attack! Ready Characters:
+  0) Paper-Mouthed Imp 2/1 MARKED [Phase]
+  1) Mika, Salvage Runner 2/3 silenced
+  2) Kai, Bad Idea Specialist 4/2 [Momentum,Rush]
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T11 P0] P0 attacks with Paper-Mouthed Imp (2)
+[T11 P0] P0 attacks with Mika, Salvage Runner (2)
+[T11 P0] P0 attacks with Kai, Bad Idea Specialist (4)
+[T11 P0] P1 loses 2 Resolve (5) - combat
+[T11 P0] P1 loses 2 Resolve (3) - combat
+[T11 P0] P1 loses 4 Resolve (-1) - combat
+
+=== GAME OVER === Player 0 wins (resolve) after 6 rounds. Final Resolve: you 12, opponent -1

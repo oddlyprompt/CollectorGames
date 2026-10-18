@@ -1,5 +1,5 @@
 // Rift Parade rules engine (headless). Rules: design/tcg3/rules.md. Cards: cards.js. Parameters: rules.json.
-// The whole game state `g` is plain data (cloneable with structuredClone); agents live outside it (g.ag, non-enumerable).
+// The whole game state `g` is plain data (copied by copyGame() for look-ahead); agents live outside it (g.ag, non-enumerable).
 // Everything random comes from g.rs (mulberry32), so a game is reproducible from its seed and the two decks.
 'use strict';
 const {CARDS}=require('./cards.js');
@@ -118,7 +118,7 @@ function checkEnd(g,p){ if(g.over) return; const dead=[0,1].filter(q=>g.P[q].res
 function heal(g,p,n){ const pl=g.P[p]; n+=rules(g,p,'healBonus'); const before=pl.resolve; pl.resolve=Math.min(g.R.resolve,pl.resolve+n); if(pl.resolve!==before) L(g,`P${p} restores ${pl.resolve-before} Resolve (${pl.resolve})`); }
 function draw(g,p,n){ const pl=g.P[p]; for(let i=0;i<n;i++){ if(g.over) return; if(!pl.deck.length){ g.over=true; g.winner=1-p; g.why='deck'; L(g,`P${p} cannot draw and loses`); return; } pl.hand.push(thaw(g,pl.deck.shift())); pl.drawn++; } }
 function setRift(g,n){ const before=g.rift; g.rift=Math.max(0,Math.min(g.R.riftMax,n)); if(g.rift!==before&&!g.nolog) L(g,`Rift ${before} -> ${g.rift}`); if(g.rift>g.st.maxRift) g.st.maxRift=g.rift; if(g.rift>=g.R.riftMax) fireAnomaly(g); }
-function fireAnomaly(g){ const a=ANOMALIES[g.anom]; L(g,`ANOMALY: ${a.name} - ${a.text}`); g.rift=g.R.riftReset; g.anomalies++; a.run(g); fire(g,'anomaly',{}); g.anom=ANOM_KEYS[Math.floor(rnd(g)*ANOM_KEYS.length)]; }
+function fireAnomaly(g){ const a=ANOMALIES[g.anom]; L(g,`ANOMALY: ${a.name} - ${a.text}`); g.rift=g.R.riftReset; g.anomalies++; if(!(g.R.off&&g.R.off.includes('anomaly'))) a.run(g); fire(g,'anomaly',{}); g.anom=ANOM_KEYS[Math.floor(rnd(g)*ANOM_KEYS.length)]; }
 function moveRow(g,c,to){ const pl=g.P[c.ctl]; const from=rowOf(g,c); if(!from||from===to) return false; const dst=to==='stage'?pl.stage:pl.back, max=to==='stage'?g.R.stageMax:g.R.backMax; if(dst.length>=max) return false; (from==='stage'?pl.stage:pl.back).splice((from==='stage'?pl.stage:pl.back).indexOf(c),1); dst.push(c); return true; }
 function damage(g,c,n,src,kind){ if(n<=0) return 0; if(c.shield) { L(g,`${nm(c)}'s damage is prevented`); return 0; }
   if(c.anim){ c.dmg+=n; return n; }
@@ -191,7 +191,7 @@ const OPS={
   setAnomaly(g,ctx){ const k=choose(g,ctx.p,'anomaly',ANOM_KEYS,{ask:true}); g.anom=k; L(g,`The next Anomaly is now ${ANOMALIES[k].name}`); },
   fireAnomaly(g){ fireAnomaly(g); },
   energy(g,ctx,[_,n]){ g.P[ctx.p].temp+=n; },
-  pull(g,ctx,[_,n]){ const pl=g.P[ctx.p]; for(let i=0;i<n;i++){ if(!pl.rift.length) return; const r=choose(g,ctx.p,'pull',[null].concat(pl.rift),{ask:true}); if(!r) return; pl.rift.splice(pl.rift.indexOf(r),1); pl.hand.push(r.card); L(g,`P${ctx.p} pulls ${nm(r.card)} from the Rift pool`); } },
+  pull(g,ctx,[_,n]){ const pl=g.P[ctx.p]; for(let i=0;i<n;i++){ if(!pl.rift.length) return; const r=choose(g,ctx.p,'pull',[null].concat(pl.rift),{ask:true}); if(!r) return; cnt(g,'pulls'); pl.rift.splice(pl.rift.indexOf(r),1); pl.hand.push(r.card); L(g,`P${ctx.p} pulls ${nm(r.card)} from the Rift pool`); } },
   slip(g,ctx,[_,n]){ const pl=g.P[ctx.p]; for(let i=0;i<n;i++){ if(!pl.hand.length||pl.rift.length>=g.R.energyCap) return; const c=choose(g,ctx.p,'slip',pl.hand,{}); pl.hand.splice(pl.hand.indexOf(c),1); pl.rift.push({card:c,ready:true}); L(g,`P${ctx.p} slips a card (extra)`); fire(g,'slip',{pl:ctx.p}); } },
   mark(g,ctx,[_,T]){ for(const c of sel(g,ctx,T,'mark')){ c.mark=true; L(g,`${nm(c)} is Marked`); } },
   unmark(g,ctx,[_,T]){ for(const c of sel(g,ctx,T,'unmark')) c.mark=false; },
@@ -218,16 +218,16 @@ const OPS={
   sacRelic(g,ctx,[_,then]){ const rl=g.P[ctx.p].relics.filter(r=>r!==ctx.src); if(!rl.length) return false; const r=choose(g,ctx.p,'relic',rl,{sac:true}); L(g,`P${ctx.p} sacrifices ${nm(r)}`); ctx.sacCost=def(r).cost; destroyRelic(g,r,'sacrifice'); run(g,then,ctx); return true; },
   dmgByRelic(g,ctx,[_,T,add]){ const rl=g.P[ctx.p].relics.filter(r=>r!==ctx.src); if(!rl.length) return; const r=choose(g,ctx.p,'relic',rl,{sac:true}); const k=def(r).cost+add; L(g,`P${ctx.p} sacrifices ${nm(r)}`); destroyRelic(g,r,'sacrifice'); for(const c of sel(g,ctx,T,'dmg')) damage(g,c,k,ctx.src,'effect'); sweep(g); },
   wager(g,ctx,[_,call,win,lose]){ wager(g,ctx,call,win,lose); },
-  search(g,ctx,[_,f]){ const pl=g.P[ctx.p]; const o=pl.deck.filter(c=>matchCard(c,f)); const c=choose(g,ctx.p,'search',o,{}); if(c){ pl.deck.splice(pl.deck.indexOf(c),1); pl.hand.push(thaw(g,c)); L(g,`P${ctx.p} searches for ${nm(c)}`); } shuffle(g,pl.deck); },
-  dig(g,ctx,[_,n,f]){ const pl=g.P[ctx.p]; const top=pl.deck.splice(0,n); const o=top.filter(c=>matchCard(c,f)); const c=choose(g,ctx.p,'search',o,{}); if(c){ top.splice(top.indexOf(c),1); pl.hand.push(thaw(g,c)); L(g,`P${ctx.p} finds ${nm(c)}`); } pl.deck.push(...top); },
-  recur(g,ctx,[_,f,n]){ const pl=g.P[ctx.p]; for(let i=0;i<(n||1);i++){ const o=pl.discard.filter(c=>matchCard(c,f)); const c=choose(g,ctx.p,'recur',o,{}); if(!c) return; pl.discard.splice(pl.discard.indexOf(c),1); pl.hand.push(thaw(g,c)); L(g,`P${ctx.p} returns ${nm(c)} from the discard`); } },
+  search(g,ctx,[_,f]){ const pl=g.P[ctx.p]; const o=uniq(pl.deck.filter(c=>matchCard(c,f))); const c=choose(g,ctx.p,'search',o,{}); if(c){ pl.deck.splice(pl.deck.indexOf(c),1); pl.hand.push(thaw(g,c)); L(g,`P${ctx.p} searches for ${nm(c)}`); } shuffle(g,pl.deck); },
+  dig(g,ctx,[_,n,f]){ const pl=g.P[ctx.p]; const top=pl.deck.splice(0,n); const o=uniq(top.filter(c=>matchCard(c,f))); const c=choose(g,ctx.p,'search',o,{}); if(c){ top.splice(top.indexOf(c),1); pl.hand.push(thaw(g,c)); L(g,`P${ctx.p} finds ${nm(c)}`); } pl.deck.push(...top); },
+  recur(g,ctx,[_,f,n]){ const pl=g.P[ctx.p]; for(let i=0;i<(n||1);i++){ const o=uniq(pl.discard.filter(c=>matchCard(c,f))); const c=choose(g,ctx.p,'recur',o,{}); if(!c) return; pl.discard.splice(pl.discard.indexOf(c),1); pl.hand.push(thaw(g,c)); L(g,`P${ctx.p} returns ${nm(c)} from the discard`); } },
   revive(g,ctx,[_,f,row,heal2]){ const pl=g.P[ctx.p]; const o=pl.discard.filter(c=>matchCard(c,f)); const c=choose(g,ctx.p,'recur',o,{}); if(!c) return; const r=row==='stage'&&pl.stage.length<g.R.stageMax?'stage':(pl.back.length<g.R.backMax?'back':(pl.stage.length<g.R.stageMax?'stage':null)); if(!r) return;
     pl.discard.splice(pl.discard.indexOf(c),1); enterPlay(g,thaw(g,c),ctx.p,r,{revived:true}); if(heal2) heal(g,ctx.p,heal2); },
   scry(g,ctx,[_,n]){ const pl=g.P[ctx.p]; const top=pl.deck.splice(0,n); const keep=[], bot=[]; for(const c of top){ (choose(g,ctx.p,'scry',['top','bottom'],{card:c,ask:true})==='top'?keep:bot).push(c); } pl.deck.unshift(...keep); pl.deck.push(...bot); },
   strip(g,ctx,[_,f]){ const fh=g.P[1-ctx.p].hand; if(!fh.length) return; L(g,`P${ctx.p} looks at P${1-ctx.p}'s hand`); const o=fh.filter(c=>matchCard(c,f)); const c=choose(g,ctx.p,'strip',o,{}); if(c){ fh.splice(fh.indexOf(c),1); g.P[1-ctx.p].discard.push(c); L(g,`P${1-ctx.p} discards ${nm(c)}`); } },
   steal(g,ctx,[_,f]){ const fh=g.P[1-ctx.p].hand; const o=fh.filter(c=>matchCard(c,f)); const c=choose(g,ctx.p,'strip',o,{}); if(c){ fh.splice(fh.indexOf(c),1); g.P[ctx.p].hand.push(c); L(g,`P${ctx.p} takes ${nm(c)} from P${1-ctx.p}'s hand`); } },
   peek(g,ctx){ L(g,`P${ctx.p} looks at P${1-ctx.p}'s hand`); g.P[ctx.p].seen=g.P[1-ctx.p].hand.map(c=>c.id); },
-  bargain(g,ctx,[_,A,B]){ const pick=choose(g,1-ctx.p,'bargain',['A','B'],{A,B,ctx,ask:true}); L(g,`Bargain: P${1-ctx.p} chooses ${pick==='A'?'the first':'the second'} option`); run(g,pick==='A'?A:B,ctx); },
+  bargain(g,ctx,[_,A,B]){ cnt(g,'bargains'); const pick=choose(g,1-ctx.p,'bargain',['A','B'],{A,B,ctx,ask:true}); L(g,`Bargain: P${1-ctx.p} chooses ${pick==='A'?'the first':'the second'} option`); run(g,pick==='A'?A:B,ctx); },
   tax(g,ctx,[_,n]){ g.P[1-ctx.p].tax+=n; },
   discount(g,ctx,[_,n]){ g.P[ctx.p].disc+=n; },
   impact(g,ctx,[_,T,n]){ for(const c of sel(g,ctx,T,'impact')) c.ctr.imp=Math.min(absorbCap(g,c),(c.ctr.imp||0)+n); },
@@ -247,6 +247,7 @@ const OPS={
   loot(g,ctx){ const pl=g.P[ctx.p]; if(!pl.hand.length) return; const c=choose(g,ctx.p,'loot',[null].concat(pl.hand),{ask:true}); if(c){ pl.hand.splice(pl.hand.indexOf(c),1); pl.discard.push(c); L(g,`P${ctx.p} discards ${nm(c)} to draw`); draw(g,ctx.p,1); } },
   hostStage(g,ctx){ const h=ctx.src&&ctx.src.host; if(h&&rowOf(g,h)==='back') { if(!moveRow(g,h,'stage')) L(g,'no room on the Stage'); } },
 };
+const uniq=list=>{ const seen=new Set(); return list.filter(c=>!seen.has(c.id)&&seen.add(c.id)); };   // identical cards are one choice
 function matchCard(c,f){ if(!f) return true; const d=def(c); if(f.type&&d.type!==f.type) return false; if(f.maxCost!==undefined&&d.cost>f.maxCost) return false; if(f.minCost!==undefined&&d.cost<f.minCost) return false; if(f.char&&d.char!==f.char) return false; if(f.kw&&!(d.kw||[]).includes(f.kw)) return false; return true; }
 function animate(g,r,p,h){ const bonus=sourcesAnimBonus(g,r); r.anim={p:p,h:h}; r.dmg=0; r.exh=false; r.ent=-9; L(g,`${nm(r)} animates (${p}/${h})`); }
 function sourcesAnimBonus(){ return 0; }
@@ -255,7 +256,7 @@ function wager(g,ctx,call,win,lose){ const p=ctx.p, pl=g.P[p]; const c=call==='c
   const rev=()=>{ if(!pl.deck.length) return null; const n=rules(g,p,'wagerDouble')>0?2:1; const cs=pl.deck.splice(0,n); const hit=x=>c==='high'?def(x).cost>=3:def(x).cost<=2; const good=cs.find(hit); pl.deck.push(...cs); return {cs,won:!!good}; };
   let r=rev(); if(!r){ r={cs:[],won:false}; } L(g,`Wager (${c}): reveals ${r.cs.map(nm).join(', ')||'nothing'} - ${r.won?'WIN':'LOSE'}`);
   if(!r.won&&rules(g,p,'reroll')>0&&pl.rerolled!==g.turn){ pl.rerolled=g.turn; r=rev()||{cs:[],won:false}; L(g,`Wager rerolled: ${r.cs.map(nm).join(', ')||'nothing'} - ${r.won?'WIN':'LOSE'}`); }
-  pl.wagers.push(r.won); fire(g,r.won?'wagerWin':'wagerLose',{pl:p}); run(g,r.won?win:lose,ctx); }
+  pl.wagers.push(r.won); cnt(g,'wagers'); fire(g,r.won?'wagerWin':'wagerLose',{pl:p}); run(g,r.won?win:lose,ctx); }
 
 // ---------------------------------------------------------------- events (triggers and ticking Conditions)
 const OF_DEFAULT={enter:'self',attack:'self',block:'self',defeat:'self',damaged:'self',hit:'self',wake:'me',end:'me',tech:'me',slip:'me',anomaly:'any',wagerWin:'me',wagerLose:'me',relicLost:'me',targeted:'self'};
@@ -270,7 +271,7 @@ function ofMatch(g,s,a,ev,data){ const of=a.of||OF_DEFAULT[ev]||'self'; const wh
     case 'host': return data.pl===ctl;
     case 'any': return true;
     default: return false; } }
-function fire(g,ev,data){ if(g.over) return; const list=sources(g); if(data.card&&!list.includes(data.card)&&ev==='defeat') list.push(data.card);
+function fire(g,ev,data){ if(g.over) return; const list=sources(g).sort((x,y)=>(x.ctl===g.active?0:1)-(y.ctl===g.active?0:1));   // the active player's effects first if(data.card&&!list.includes(data.card)&&ev==='defeat') list.push(data.card);
   for(const s of list){ if(g.over) return; if(!(inPlay(g,s)||s===data.card)) continue; const abs= (s===data.card&&ev==='defeat')? (def(s).ab||[]) : abilities(g,s);
     for(const a of abs){
       if(a.t==='tr'&&a.on===ev&&ofMatch(g,s,a,ev,data)&&(!a.if||condOk(g,s,a.if))){ const ctx={p:s.ctl,src:s,data}; bump(g.st.trig,s.id); L(g,`${nm(s)} triggers`); run(g,a.ops,ctx); if(g.combat||true) sweep(g); }
@@ -288,7 +289,7 @@ function techOk(g,p,card){ const d=def(card); for(const s of d.need||[]) if(!has
 function playCard(g,p,hi,opt){ opt=opt||{}; const pl=g.P[p]; const card=pl.hand[hi]; const d=def(card); let c=cost(g,p,card);
   if(opt.upgrade){ c=Math.max(0,c-def(opt.upgrade).cost); }
   payEnergy(g,p,c); pl.hand.splice(hi,1); pl.disc=0; pl.tax=0; bump(g.st.played[p],d.id);
-  L(g,`P${p} plays ${d.name}${opt.upgrade?' (Next Episode)':''} [${c}]`);
+  L(g,`P${p} plays ${d.name}${opt.upgrade?' (Next Episode)':''} [${c}]`); if(opt.upgrade&&g.st.cnt) g.st.cnt.nextEp=(g.st.cnt.nextEp||0)+1;
   switch(d.type){
     case 'Character':{ if(opt.upgrade){ const o=opt.upgrade, row=rowOf(g,o); const arr=row==='stage'?pl.stage:pl.back; arr[arr.indexOf(o)]=card; card.ctl=p; card.ent=o.ent; card.exh=o.exh; card.dmg=o.dmg; card.ctr=o.ctr; card.buf=o.buf; card.mark=o.mark; card.atch=o.atch; for(const a of card.atch) a.host=card; card.sil=o.sil; o.atch=[]; const oo=o; resetCard(oo); pl.discard.push(oo); fire(g,'enter',{card,pl:p,info:{upgrade:true}}); sweep(g); }
       else enterPlay(g,card,p,opt.row||(pl.stage.length<g.R.stageMax?'stage':'back'),{}); break; }
@@ -301,6 +302,8 @@ function playCard(g,p,hi,opt){ opt=opt||{}; const pl=g.P[p]; const card=pl.hand[
   } }
 
 const bump=(o,k)=>{ o[k]=(o[k]||0)+1; };
+const cnt=(g,k,n)=>{ if(g.st&&g.st.cnt) g.st.cnt[k]=(g.st.cnt[k]||0)+(n===undefined?1:n); };
+const off=(g,k)=>!!(g.R.off&&g.R.off.includes(k));   // ablation switches for experiments (sim.js --off anomaly,nextEpisode,reaction,step)
 function canAttach(g,p,d){ if(d.attach==='foe'||d.attach==='me') return true; return hasTarget(g,p,d.attach); }
 
 // ---------------------------------------------------------------- actions
@@ -315,7 +318,7 @@ function actionList(g,p,window){ // window: 'main' | 'react'. Every legal action
     if(c<=en||d.type==='Character'){ }
     if(d.type==='Character'){ if(window!=='main') return;
       if(c<=en){ if(pl.stage.length<g.R.stageMax) acts.push({k:'play',i,row:'stage'}); if(pl.back.length<g.R.backMax) acts.push({k:'play',i,row:'back'}); }
-      if(d.char) for(const o of chars(g,p)) if(def(o).char===d.char&&def(o).cost<d.cost&&Math.max(0,c-def(o).cost)<=en) acts.push({k:'play',i,upgrade:o});
+      if(d.char&&!off(g,'nextEpisode')) for(const o of chars(g,p)) if(def(o).char===d.char&&def(o).cost<d.cost&&Math.max(0,c-def(o).cost)<=en) acts.push({k:'play',i,upgrade:o});
     } else if(c<=en){ if(d.type==='Technique'){ if(techOk(g,p,card)) acts.push({k:'play',i}); } else if(window==='main'){ if(d.type==='Condition'&&!canAttach(g,p,d)) return; acts.push({k:'play',i}); } } });
   // activated abilities
   for(const s of sources(g)){ if(s.ctl!==p) continue; const alive= isChar(s)? true : true; for(const a of abilities(g,s)){ if(a.t!=='act') continue; if(window==='react'&&!a.react) continue; if(window==='main'&&false) continue;
@@ -325,7 +328,7 @@ function actionList(g,p,window){ // window: 'main' | 'react'. Every legal action
       if(isChar(s)&&s.ent===g.turn&&a.cost>0&&false) continue;
       acts.push({k:'act',s,a:def(s).ab.indexOf(a)}); } }
   if(window==='main'){
-    if(!pl.stepped){ for(const c of chars(g,p)){ if(hasKw(g,c,'NoStep')) continue; const to=rowOf(g,c)==='stage'?'back':'stage'; const dst=to==='stage'?pl.stage:pl.back, max=to==='stage'?g.R.stageMax:g.R.backMax; if(dst.length<max) acts.push({k:'step',c}); else { for(const o of (to==='stage'?pl.stage:pl.back)) if(!hasKw(g,o,'NoStep')&&c.u<o.u) acts.push({k:'swap',a:c,b:o}); } } }
+    if(!pl.stepped&&!off(g,'step')){ for(const c of chars(g,p)){ if(hasKw(g,c,'NoStep')) continue; const to=rowOf(g,c)==='stage'?'back':'stage'; const dst=to==='stage'?pl.stage:pl.back, max=to==='stage'?g.R.stageMax:g.R.backMax; if(dst.length<max) acts.push({k:'step',c}); else { for(const o of (to==='stage'?pl.stage:pl.back)) if(!hasKw(g,o,'NoStep')&&c.u<o.u) acts.push({k:'swap',a:c,b:o}); } } }
     for(const co of pl.conds.concat(...chars(g,p).map(c=>c.atch))){ const rn=def(co).ransom; if(rn!==undefined&&co.ctl!==p&&rn<=en) acts.push({k:'ransom',s:co}); }
   }
   return acts; }
@@ -335,8 +338,8 @@ function applyAction(g,p,a){ const pl=g.P[p];
     case 'play': playCard(g,p,a.i,a); break;
     case 'act':{ const s=a.s, ab=def(s).ab[a.a]; payEnergy(g,p,ab.cost); s.used=g.turn; bump(g.st.used[p],s.id); L(g,`P${p} uses ${nm(s)}`); const ctx={p,src:s,data:{}};
       if(ab.sac){ L(g,`${nm(s)} is sacrificed`); const ctxs=Object.assign({},ctx); if(g.P[s.ctl].relics.includes(s)) destroyRelic(g,s,'sacrifice'); ctxs.src=s; run(g,ab.ops,ctxs); } else run(g,ab.ops,ctx); sweep(g); break; }
-    case 'step':{ const to=rowOf(g,a.c)==='stage'?'back':'stage'; moveRow(g,a.c,to); pl.stepped=true; L(g,`P${p} steps ${nm(a.c)} ${to==='stage'?'onto the Stage':'Backstage'}`); break; }
-    case 'swap':{ const ra=rowOf(g,a.a), rb=rowOf(g,a.b); const A=ra==='stage'?pl.stage:pl.back, B=rb==='stage'?pl.stage:pl.back; A[A.indexOf(a.a)]=a.b; B[B.indexOf(a.b)]=a.a; pl.stepped=true; L(g,`P${p} swaps ${nm(a.a)} and ${nm(a.b)}`); break; }
+    case 'step':{ const to=rowOf(g,a.c)==='stage'?'back':'stage'; moveRow(g,a.c,to); pl.stepped=true; cnt(g,'steps'); L(g,`P${p} steps ${nm(a.c)} ${to==='stage'?'onto the Stage':'Backstage'}`); break; }
+    case 'swap':{ cnt(g,'steps'); const ra=rowOf(g,a.a), rb=rowOf(g,a.b); const A=ra==='stage'?pl.stage:pl.back, B=rb==='stage'?pl.stage:pl.back; A[A.indexOf(a.a)]=a.b; B[B.indexOf(a.b)]=a.a; pl.stepped=true; L(g,`P${p} swaps ${nm(a.a)} and ${nm(a.b)}`); break; }
     case 'ransom':{ payEnergy(g,p,def(a.s).ransom); L(g,`P${p} pays to remove ${nm(a.s)}`); removeCond(g,a.s); break; }
   } }
 
@@ -344,12 +347,12 @@ function applyAction(g,p,a){ const pl=g.P[p];
 function attackersOf(g,p){ return g.P[p].stage.filter(c=>!c.exh&&!hasKw(g,c,'NoAttack')&&(c.ent<g.turn||hasKw(g,c,'Rush')||c.rush===g.turn)).concat(g.P[p].relics.filter(r=>r.anim&&!r.exh)); }
 function blockersOf(g,p){ const pl=g.P[p]; let l=pl.stage.slice(); if(rules(g,p,'backBlock')>0) l=l.concat(pl.back); return l.filter(c=>!c.exh&&!hasKw(g,c,'NoBlock')); }
 function canBlock(g,b,a){ if(a.anim) return true; if(hasKw(g,a,'Phase')&&!(hasKw(g,b,'Phase')||hasKw(g,b,'Sever'))) return false; return true; }
-function declareAttack(g,p,chosen){ g.combat={atk:chosen.map(c=>({c,blk:null,prevent:false,reflect:false,gone:false})),p};
+function declareAttack(g,p,chosen){ g.combat={atk:chosen.map(c=>({c,blk:null,prevent:false,reflect:false,gone:false})),p}; cnt(g,'attacks',chosen.length);
   for(const c of chosen){ c.exh=true; L(g,`P${p} attacks with ${nm(c)} (${pow(g,c)})`); } for(const c of chosen) fire(g,'attack',{card:c,pl:p});
   sweep(g); g.combat.atk=g.combat.atk.filter(e=>inPlayChar(g,e.c)||e.c.anim); }
 function applyBlocks(g,q,asg,blockers){ const used=new Set();
   for(const e of g.combat.atk){ const bu=asg[e.c.u]; if(bu===undefined||bu===null) continue; const b=blockers.find(x=>x.u===bu); if(!b||used.has(b.u)||!canBlock(g,b,e.c)) continue; used.add(b.u); e.blk=b; L(g,`P${q} blocks ${nm(e.c)} with ${nm(b)}`); }
-  for(const e of g.combat.atk) if(e.blk) fire(g,'block',{card:e.blk,attacker:e.c,pl:q}); sweep(g); }
+  for(const e of g.combat.atk) if(e.blk){ cnt(g,'blocked'); fire(g,'block',{card:e.blk,attacker:e.c,pl:q}); } sweep(g); }
 function resolveDamage(g){ const todo=[]; for(const e of g.combat.atk){ if(!(inPlayChar(g,e.c)||e.c.anim)) continue; const blk=e.blk&&inPlayChar(g,e.blk)? e.blk : null; todo.push({e,blk,dealt:e.prevent?0:pow(g,e.c),bdealt:blk? pow(g,blk):0}); }
   for(const t of todo){ if(g.over) break; const {e,blk}=t;
     if(blk){ if(t.dealt>0){ damage(g,blk,t.dealt,e.c,'combat'); if(hasKw(g,e.c,'Sever')&&inPlayChar(g,blk)){ blk.sil=(g.active===blk.ctl? g.turn+2 : g.turn+1); L(g,`${nm(blk)} is severed`); } } if(t.bdealt>0) damage(g,e.c,t.bdealt,blk,'combat'); }
@@ -360,7 +363,7 @@ function doCombat(g,p){ const q=1-p; const avail=attackersOf(g,p); if(!avail.len
   const chosen=agent(g,p).attack(g,p,avail).filter(c=>avail.includes(c)); if(!chosen.length) return;
   declareAttack(g,p,chosen); if(g.over||!g.combat.atk.length){ g.combat=null; return; }
   const blockers=blockersOf(g,q); if(blockers.length){ const asg=agent(g,q).block(g,q,g.combat.atk.map(e=>e.c),blockers)||{}; applyBlocks(g,q,asg,blockers); }
-  let passes=0, who=q, guard=0; while(passes<2&&guard++<16&&!g.over){ const acts=actionList(g,who,'react'); let choice=null; if(acts.length) choice=agent(g,who).react(g,who,acts); if(choice){ applyAction(g,who,choice); passes=0; sweep(g); } else passes++; who=1-who; }
+  let passes=0, who=q, guard=0; while(passes<2&&guard++<16&&!g.over){ const acts=off(g,'reaction')? [] : actionList(g,who,'react'); let choice=null; if(acts.length){ cnt(g,'reactWindows'); choice=agent(g,who).react(g,who,acts); } if(choice){ cnt(g,'reactions'); applyAction(g,who,choice); passes=0; sweep(g); } else passes++; who=1-who; }
   if(g.over){ g.combat=null; return; }
   resolveDamage(g); }
 
@@ -368,7 +371,9 @@ function doCombat(g,p){ const q=1-p; const avail=attackersOf(g,p); if(!avail.len
 function wake(g,p){ const pl=g.P[p]; g.active=p; g.turn++; pl.techs=0; pl.slipped=0; pl.stepped=false; pl.extraSlip=0; pl.temp=pl.nextEnergy; pl.nextEnergy=0; pl.disc=0;
   if(g.turn===4&&p!==g.first) pl.temp+=g.R.secondPlayerSecondEnergy||0; for(const r of pl.rift) r.ready=true; for(const c of chars(g,p)) c.exh=false; for(const r of pl.relics) { r.exh=false; }
   if(p===g.first){ g.round++; if(g.round>1&&g.R.riftPerRound) setRift(g,g.rift+g.R.riftPerRound); }
-  L(g,`--- P${p} wakes (Rift ${g.rift}, Resolve ${pl.resolve}/${g.P[1-p].resolve}) ---`); fire(g,'wake',{pl:p}); sweep(g); }
+  L(g,`--- P${p} wakes (Rift ${g.rift}, Resolve ${pl.resolve}/${g.P[1-p].resolve}) ---`);
+  if(g.R.strainStart&&g.round>=g.R.strainStart&&!off(g,'strain')){ cnt(g,'strain'); loseResolve(g,p,g.round-g.R.strainStart+1,'Strain'); if(g.over) return; }
+  fire(g,'wake',{pl:p}); sweep(g); }
 function endTurn(g,p){ const pl=g.P[p]; fire(g,'end',{pl:p}); sweep(g);
   for(const c of allChars(g)){ c.dmg=0; c.buf=[]; c.shield=false; } for(const q of g.P) for(const r of q.relics){ if(r.anim){ r.anim=null; r.dmg=0; } }
   for(const q of g.P){ q.techs=q.techs; } pl.temp=0;
@@ -385,7 +390,7 @@ function mainPhase(g,p,second){ let guard=0; while(guard++<60&&!g.over){ const a
 function thaw(g,c){ if(!g.isCopy) return c; const n=Object.assign({},c); n.ctr=Object.assign({},c.ctr); n.buf=c.buf.map(b=>Object.assign({},b)); n.atch=[]; n.anim=c.anim?Object.assign({},c.anim):null; return n; }
 function copyGame(g){ const map=new Map(); const cl=c=>{ if(!c) return c; let n=map.get(c); if(n) return n; n=Object.assign({},c); map.set(c,n); n.ctr=Object.assign({},c.ctr); n.buf=c.buf.map(b=>Object.assign({},b)); n.anim=c.anim?Object.assign({},c.anim):null; n.atch=c.atch.map(cl); n.host=cl(c.host); return n; };
   const h={R:g.R,rs:g.rs,uid:g.uid,turn:g.turn,round:g.round,active:g.active,first:g.first,rift:g.rift,anom:g.anom,anomalies:g.anomalies,zone:cl(g.zone),over:g.over,winner:g.winner,why:g.why,log:[],nolog:true,isCopy:true,sweeping:g.sweeping,
-    st:{played:[{},{}],slipped:[{},{}],used:[{},{}],trig:{},maxRift:0,wins:[0,0]},combat:null,P:[]};
+    st:{played:[{},{}],slipped:[{},{}],used:[{},{}],trig:{},maxRift:0,wins:[0,0],cnt:{}},combat:null,P:[]};
   for(const pl of g.P) h.P.push(Object.assign({},pl,{deck:pl.deck.slice(),discard:pl.discard.slice(),hand:pl.hand.map(cl),rift:pl.rift.map(r=>({card:cl(r.card),ready:r.ready})),stage:pl.stage.map(cl),back:pl.back.map(cl),relics:pl.relics.map(cl),conds:pl.conds.map(cl),wagers:pl.wagers.slice(),seen:pl.seen.slice()}));
   if(g.combat) h.combat={p:g.combat.p,atk:g.combat.atk.map(e=>({c:cl(e.c),blk:cl(e.blk),prevent:e.prevent,reflect:e.reflect,gone:e.gone}))};
   Object.defineProperty(h,'ag',{value:[null,null],writable:true,enumerable:false}); return h; }
@@ -394,7 +399,7 @@ function copyGame(g){ const map=new Map(); const cl=c=>{ if(!c) return c; let n=
 function validateDeck(ids){ const errs=[]; if(ids.length!==RULES.deckSize) errs.push(`deck has ${ids.length} cards, needs ${RULES.deckSize}`); const n={}; for(const id of ids){ if(!CARDS[id]) { errs.push('unknown card '+id); continue; } n[id]=(n[id]||0)+1; }
   for(const id in n){ const mx=CARDS[id].max||RULES.copies; if(n[id]>mx) errs.push(`${n[id]} copies of ${CARDS[id].name} (max ${mx})`); } return errs; }
 function newGame(deckA,deckB,seed,opts){ opts=opts||{}; const R=Object.assign({},RULES,opts.rules||{});
-  const g={R,rs:mix(seed),uid:0,turn:0,round:0,active:0,first:0,rift:R.riftStart,anom:null,anomalies:0,zone:null,over:false,winner:null,why:null,log:[],nolog:!!opts.nolog,combat:null,P:[],st:{played:[{},{}],slipped:[{},{}],used:[{},{}],trig:{},maxRift:0,wins:[0,0]}};
+  const g={R,rs:mix(seed),uid:0,turn:0,round:0,active:0,first:0,rift:R.riftStart,anom:null,anomalies:0,zone:null,over:false,winner:null,why:null,log:[],nolog:!!opts.nolog,combat:null,P:[],st:{played:[{},{}],slipped:[{},{}],used:[{},{}],trig:{},maxRift:0,wins:[0,0],cnt:{attacks:0,blocked:0,unblocked:0,reactions:0,reactWindows:0,nextEp:0,steps:0,pulls:0,wagers:0,bargains:0,sevenPlus:0}}};
   g.first = opts.first!==undefined? opts.first : (rnd(g)<0.5?0:1); g.anom=ANOM_KEYS[Math.floor(rnd(g)*ANOM_KEYS.length)];
   [deckA,deckB].forEach((d,i)=>{ g.P.push({deck:shuffle(g,d.map(id=>mk(g,id,i))),hand:[],rift:[],stage:[],back:[],relics:[],conds:[],discard:[],resolve:R.resolve,slipped:0,extraSlip:0,stepped:false,techs:0,temp:0,nextEnergy:0,disc:0,tax:0,drawn:0,wagers:[],seen:[],rerolled:-9}); });
   Object.defineProperty(g,'ag',{value:[null,null],writable:true,enumerable:false}); return g; }
