@@ -30,51 +30,68 @@
    "code": "CR",
    "name": "Crownlands",
    "allegiance": "Land",
+   "colour": "royal blue",
+   "icon": "a tower",
    "look": "Crownlands: chalk cliffs, hedged coastal farmland, pale stone castles with blue slate roofs. Palette azure, bone white, slate grey, muted gold. Wool, padded cloth, mail and plain practical steel; heraldry of a blue tower on white"
   },
   {
    "code": "TW",
    "name": "Thornwild",
    "allegiance": "Land",
+   "colour": "forest green",
+   "icon": "a tree",
    "look": "Thornwild: old-growth coastal forest, moss, ferns, bracken, mist, stone circles. Palette moss green, bark brown, rust bracken, pale fog grey. Hide, bark, woven plant fibre, antler and bone; animals drawn as real animals"
   },
   {
    "code": "IR",
    "name": "Iron Reach",
    "allegiance": "Land",
+   "colour": "rust red",
+   "icon": "a mountain",
    "look": "Iron Reach: basalt mountains, quarries, mines, foundries and sea-facing batteries. Palette charcoal, iron grey, ochre dust, ember orange. Leather aprons, iron scale, soot and grime; constructs are riveted iron and stone, heavy and mechanical"
   },
   {
    "code": "TB",
    "name": "Tideborn",
    "allegiance": "Sea",
+   "colour": "teal",
+   "icon": "waves",
    "look": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface"
   },
   {
    "code": "FF",
    "name": "Free Fleets",
    "allegiance": "Sea",
+   "colour": "gold",
+   "icon": "a ship's wheel",
    "look": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging"
   },
   {
    "code": "AC",
    "name": "Abyssal Choir",
    "allegiance": "Sea",
+   "colour": "purple",
+   "icon": "a kraken",
    "look": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory"
   },
   {
    "code": "HL",
    "name": "Harbor Leagues",
    "allegiance": "Dual",
+   "colour": "warm brown",
+   "icon": "scales",
    "look": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces"
   },
   {
    "code": "NE",
    "name": "Neutral",
    "allegiance": "Neutral",
+   "colour": "stone grey",
+   "icon": "a waystone",
    "look": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather"
   }
  ],
+ "frame": "tidemark-production/FRAME_GUIDE.md (visual reference: tidemark-production/reference/card-frame-guide-v1.png)",
  "rarities": [
   "Common",
   "Uncommon",
@@ -27717,7 +27734,7 @@
    "faction": "Neutral",
    "type": "Spell",
    "pool": "anniversary",
-   "subject": "A grand fair with tents and jugglers, ten tall poles flying banners of every faction",
+   "subject": "A grand fair with tents and jugglers under eight tall banners, one for each faction, each showing only its icon: a blue tower, a green tree, a red mountain, teal waves, a gold ship's wheel, a purple kraken, brown scales and a grey waystone",
    "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: clear crisp morning.",
    "file": "tidemark-production/art/TMI-0642-fair-of-banners.png",
    "status": "not-started",

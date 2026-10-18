@@ -743,7 +743,7 @@
      "title": "Fair of Banners",
      "faction": "Neutral",
      "type": "Spell",
-     "subject": "A grand fair with tents and jugglers, ten tall poles flying banners of every faction",
+     "subject": "A grand fair with tents and jugglers under eight tall banners, one for each faction, each showing only its icon: a blue tower, a green tree, a red mountain, teal waves, a gold ship's wheel, a purple kraken, brown scales and a grey waystone",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: clear crisp morning.",
      "file": "tidemark-production/art/TMI-0642-fair-of-banners.png"
     },

@@ -80,6 +80,9 @@ LOOK={
  'HL':'Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces',
  'NE':'Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather',
 }
+# faction colour and icon (tidemark-production/FRAME_GUIDE.md, from the owner's card frame guide, 2026-10-18)
+ICON={'CR':('royal blue','a tower'),'TW':('forest green','a tree'),'IR':('rust red','a mountain'),'TB':('teal','waves'),'FF':('gold',"a ship's wheel"),
+      'AC':('purple','a kraken'),'HL':('warm brown','scales'),'NE':('stone grey','a waystone')}
 FRAMING={
  'figures':'One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping',
  'creatures':'The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree)',
@@ -303,7 +306,8 @@ def render(D, S):
     status={'identities':'proposed','gameplay':'role only; no costs or stats (rules 0.3 are provisional)','sets':'proposed','art_plan':'proposed','by':'Claude Code, 2026-10-18, for owner approval'}
     m={'schema':'tidemark-manifest/1','version':VERSION,'generated_by':'tools/tidemark/checklist.py','status':status,
        'sources':['design/tcg2/brief.md','design/tcg2/proposals.md','design/tcg2/prototype-rules.md','design/tcg2/round3-report.md','tools/tidemark/cards.js'],
-       'card_types':[TYPES[t] for t in TORDER],'factions':[{'code':f[0],'name':f[1],'allegiance':f[2],'look':LOOK[f[0]]} for f in FACTIONS],
+       'card_types':[TYPES[t] for t in TORDER],'factions':[{'code':f[0],'name':f[1],'allegiance':f[2],'colour':ICON[f[0]][0],'icon':ICON[f[0]][1],'look':LOOK[f[0]]} for f in FACTIONS],
+       'frame':'tidemark-production/FRAME_GUIDE.md (visual reference: tidemark-production/reference/card-frame-guide-v1.png)',
        'rarities':list(RARITY.values()),'eras':[{'code':k,'name':v[0],'years':v[1]} for k,v in ERAS.items()],
        'sets':[{'code':s[0],'name':s[1],'year':s[2],'season':s[3],'era':ERAS[s[4]][0],'size':s[5],'named_cards':len(D['sets'][s[0]]['cards'])} for s in SETS]+[{'code':ANNIV[0],'name':ANNIV[1],'year':ANNIV[2],'season':ANNIV[3],'era':'Tenth Anniversary','size':ANNIV[5],'named_cards':len(D['tt']),'alternate_art_numbers':'221-230'}],
        'cards':[{'card_id':c['cid'],'title':c['title'],'type':TYPES[c['type']],'subtype':c['subtype'],'faction':c['faction'],'allegiance':c['allegiance'],'rarity':RARITY[c['rar']],
@@ -378,7 +382,9 @@ def bible_md(D):
      '- Rarity never needs its own illustration or frame. Reprints reuse their original illustration and are never requested again. The ten anniversary alternate arts are separate, listed requests.',
      '- Empty cells listed for a sheet stay empty (plain neutral grey). Never fill them with invented cards.','',
      '## Factions','']
-    for f in FACTIONS: L.append('- **%s** (%s): %s.'%(f[1],f[2],LOOK[f[0]].split(': ',1)[1]))
+    for f in FACTIONS: L.append('- **%s** (%s; frame colour %s, icon %s): %s.'%(f[1],f[2],ICON[f[0]][0],ICON[f[0]][1],LOOK[f[0]].split(': ',1)[1]))
+    L+=['','When an illustration shows faction heraldry (banners, shields, sails), use these icons and colours, never invented emblems.','',
+        '## The card frame','','The game draws every frame; SOL never paints one. The look follows the owner\'s card frame guide (`FRAME_GUIDE.md`, image in `reference/`): the illustration fills a 4:3 landscape window under the name bar, so compose for that window. The guide\'s placeholder rules text and symbols are not Tidemark\'s; `FRAME_GUIDE.md` lists the corrections.']
     L+=['','## Composition by card type','',md_table(['Type','Visual group','How to frame it'],[['Units (people)','figures',FRAMING['figures']],['Units (animals, constructs, monsters)','creatures',FRAMING['creatures']],['Spells and Enchantments','scenes',FRAMING['scenes']],['Relics','objects',FRAMING['objects']],['Vessels','ships',FRAMING['ships']],['Strongholds','architecture',FRAMING['architecture']],['Domains','landscape',FRAMING['landscape']]]),'',
         '## Register by rarity','',md_table(['Rarity','Register'],[[RARITY[k],v] for k,v in REGISTER.items()]),'',
         '## Eras','','Ten fictional years of art share one painterly style. Era shows in the content, not the brushwork: Founding-era cards (2016-2017) have the simplest gear, ships and buildings; later eras add bigger ships, deeper ruins and more elaborate fortifications.','',
