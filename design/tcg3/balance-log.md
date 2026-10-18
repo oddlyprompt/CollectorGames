@@ -25,3 +25,10 @@ Each entry: what the simulation showed, what changed, and the effect. Simulation
 * Phase now needs the Rift at 3 (was 2): the Rift deck led at 61-64%. Last-Second Detour cost 2 to 3, Nova What She Didn't Say 3/5 to 3/4.
 * Spotlight bodies buffed (Camera Wisp 2/2, On Air 3/4, Your Host Tonight 4/4, Special Broadcast 4/5, Stagehand +1/+1 Backstage). Workshop characters buffed by +1 Power (Salvage Runner, Wrench Whisperer, Makeshift Beacon, Artifact Broker, Deal Maker). Toma and Ayame bodies buffed (Junior Analyst 2/2, Pattern Sight 3/3, Found the Flaw 4/3 then 3/3, Suspicious Ally 3/3, Cut What Cannot Be Cut 4/4 then 4/3).
 * Signed Wager Slip now draws 2 on a win and costs 2 Resolve on a miss; Coinflip Curse 4 damage / 1 Resolve; Crow, Probability Hustler gains 1 energy with its draw.
+
+## Round 4: crack-back awareness, stalls, second-player compensation
+* A manual game showed the pilot sending every creature into an attack and losing to exact lethal on the swing back. Added an "exposure" term (damage it would take next turn through the blockers it still has ready). The games got slower and defensive decks gained: Impact Wall 63%, Spotlight 41% at the strongest setting, so the weight was lowered (balanced 0.3).
+* Impact Wall nerfed (Brax Debt Collector 1/3, Reservoir 4/6, Emergency Stitch Kit heals 3), Spotlight restored (Camera Wisp 2/2, Stagehand +1/+1), Ninth Vendor 3/4, Charge Transfer now draws a card.
+* Stalls: the Impact Wall mirror ended by running out of cards 68% of the time and 7-9% of all games did. Added **Strain**: from round 12 each player loses (round - 11) Resolve at their wake. Games ending by deck-out fell from about 8% to 2% (balanced pilots).
+* Second-player compensation: free energy cards were far too strong (26-37% first-player wins). One-turn bonuses are worth about 10 points per extra energy on turn 1 or 2, an extra first-turn draw about 5 points. Final: second player has 1 extra energy on each of their first two turns. Final measured first-player win rate 49.8% over 5,400 games.
+* Every one of the 130 cards is now in at least one of the eight decks; the audit and the simulations exercise each.
