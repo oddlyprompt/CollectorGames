@@ -162,7 +162,7 @@ NEUTRAL=[
  ("Wayfinder's Lodestone",'R','Tool','U','N','','Search your deck for a card','A polished lodestone on a cord spinning over a map'),
  ('Neutral Ground','E','Front','U','N','','Neither player can attack into this front next turn','A white flag planted on a beach between two camps'),
  ('Old Road Inn','H','Inn','U','N','','Neutral Stronghold','A low stone inn at a bend of an old road, smoke from the chimney'),
- ('Fair of Banners','S','','U','N','','Search your deck for a unit of each allegiance','A grand fair with tents and jugglers, ten tall poles flying banners of every faction'),
+ ('Fair of Banners','S','','U','N','','Search your deck for a unit of each allegiance','A grand fair with tents and jugglers under eight tall banners, one for each faction, each showing only its icon: a blue tower, a green tree, a red mountain, teal waves, a gold ship\'s wheel, a purple kraken, brown scales and a grey waystone'),
  ('Sellsword Queen Hesta','U','Human Mercenary','R','N','','Leader for mercenaries','A big laughing mercenary queen in a mail shirt sits on a throne of stacked shields in a camp'),
  ("The Weathermaker's Orrery",'R','Tool','R','N','','Replace a Domain each Rise','A brass orrery of sun, moons and clouds in a cluttered tower study'),
  ('The Grey Wanderer Returns','U','Human Wanderer','L','N','','Legendary: the Grey Wanderer, ten years on','The Grey Wanderer, older, walks into a village at dusk with a lantern while children watch from doorways'),

@@ -21,14 +21,20 @@ Traditional painterly high fantasy with a nautical identity: illustrative, detai
 
 ## Factions
 
-- **Crownlands** (Land): chalk cliffs, hedged coastal farmland, pale stone castles with blue slate roofs. Palette azure, bone white, slate grey, muted gold. Wool, padded cloth, mail and plain practical steel; heraldry of a blue tower on white.
-- **Thornwild** (Land): old-growth coastal forest, moss, ferns, bracken, mist, stone circles. Palette moss green, bark brown, rust bracken, pale fog grey. Hide, bark, woven plant fibre, antler and bone; animals drawn as real animals.
-- **Iron Reach** (Land): basalt mountains, quarries, mines, foundries and sea-facing batteries. Palette charcoal, iron grey, ochre dust, ember orange. Leather aprons, iron scale, soot and grime; constructs are riveted iron and stone, heavy and mechanical.
-- **Tideborn** (Sea): underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface.
-- **Free Fleets** (Sea): working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging.
-- **Abyssal Choir** (Sea): the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory.
-- **Harbor Leagues** (Dual): merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces.
-- **Neutral** (Neutral): roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather.
+- **Crownlands** (Land; frame colour royal blue, icon a tower): chalk cliffs, hedged coastal farmland, pale stone castles with blue slate roofs. Palette azure, bone white, slate grey, muted gold. Wool, padded cloth, mail and plain practical steel; heraldry of a blue tower on white.
+- **Thornwild** (Land; frame colour forest green, icon a tree): old-growth coastal forest, moss, ferns, bracken, mist, stone circles. Palette moss green, bark brown, rust bracken, pale fog grey. Hide, bark, woven plant fibre, antler and bone; animals drawn as real animals.
+- **Iron Reach** (Land; frame colour rust red, icon a mountain): basalt mountains, quarries, mines, foundries and sea-facing batteries. Palette charcoal, iron grey, ochre dust, ember orange. Leather aprons, iron scale, soot and grime; constructs are riveted iron and stone, heavy and mechanical.
+- **Tideborn** (Sea; frame colour teal, icon waves): underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface.
+- **Free Fleets** (Sea; frame colour gold, icon a ship's wheel): working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging.
+- **Abyssal Choir** (Sea; frame colour purple, icon a kraken): the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory.
+- **Harbor Leagues** (Dual; frame colour warm brown, icon scales): merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces.
+- **Neutral** (Neutral; frame colour stone grey, icon a waystone): roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather.
+
+When an illustration shows faction heraldry (banners, shields, sails), use these icons and colours, never invented emblems.
+
+## The card frame
+
+The game draws every frame; SOL never paints one. The look follows the owner's card frame guide (`FRAME_GUIDE.md`, image in `reference/`): the illustration fills a 4:3 landscape window under the name bar, so compose for that window. The guide's placeholder rules text and symbols are not Tidemark's; `FRAME_GUIDE.md` lists the corrections.
 
 ## Composition by card type
 
