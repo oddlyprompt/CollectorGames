@@ -1,0 +1,4770 @@
+{
+ "set": "Rift Parade — Wrong Side of Reality",
+ "code": "RP01",
+ "rulesVersion": "0.1",
+ "note": "Identity fields (id, name, rarity, type, episode, art) are from the production pack and must not change. Gameplay fields are Claude Code's and may be tuned. Alternate printings share the base card's gameplay.",
+ "cards": [
+  {
+   "id": "RP01-001",
+   "name": "Kai, Errand Runner",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 1,
+   "character": "Kai",
+   "art": "Kai racing through rainy Kurohama alleys with an undelivered parcel; first canonical male lead shot.",
+   "gameplay": {
+    "cost": 1,
+    "power": 1,
+    "health": 2,
+    "keywords": [
+     "Momentum"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Momentum (+1 Power for each Technique you played this turn, up to +3)",
+     "Next Episode: may be played on a Character you control named Kai that costs less, paying the difference."
+    ],
+    "purpose": "Cheap Kinetic body: gets bigger every Technique you play, so it is a real threat in Technique-heavy decks and a poor one elsewhere.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-002",
+   "name": "Late-Shift Dispatcher",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 1,
+   "character": null,
+   "art": "Sleepy adult courier dispatcher slides an anonymous job ticket through a service window.",
+   "gameplay": {
+    "cost": 2,
+    "power": 1,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Look at the top 2 cards of your deck; put any on the bottom."
+    ],
+    "purpose": "Smoothing for any deck: a sturdy blocker that fixes the next two draws.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "scry",
+        2
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-003",
+   "name": "Paper-Mouthed Imp",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 1,
+   "character": null,
+   "art": "Little toothy Rift creature chewing street maps, never a cute normal animal.",
+   "gameplay": {
+    "cost": 1,
+    "power": 2,
+    "health": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "This Character has Phase while the Rift is 3 or more."
+    ],
+    "purpose": "Fragile one-drop that becomes hard to block once the Rift is wide; rewards decks that raise the Rift and loses its edge when it is mended.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "self",
+      "kw": [
+       "Phase"
+      ],
+      "if": [
+       "rift",
+       ">=",
+       3
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-004",
+   "name": "Kurohama Backstreets",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 1,
+   "character": null,
+   "art": "Rain-slick vending machines and elevated tracks above cramped pedestrian lanes.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Characters with cost 2 or less you control get +1/0."
+    ],
+    "purpose": "Aggro zone: all your cheap Characters hit harder. Replaced or Severed when the opponent has a better reality.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "p": 1,
+      "f": {
+       "maxCost": 2
+      }
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-005",
+   "name": "Address That Isn't There",
+   "rarity": "C",
+   "type": "Relic",
+   "episode": 1,
+   "character": null,
+   "art": "Delivery slip bearing an impossible changing street number; clear legible prop.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Step target Character you control."
+    ],
+    "purpose": "Positioning engine: a second free Step each turn, to dodge removal, set up blockers or bring a Backstage ability onto the Stage.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "step",
+        "A"
+       ]
+      ],
+      "need": [
+       "A"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-006",
+   "name": "Momentum Skip",
+   "rarity": "C",
+   "type": "Technique",
+   "episode": 1,
+   "character": null,
+   "art": "Kai redirects his own falling weight to leap across an alley.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Target Character you control moves Backstage and all damage to it is prevented this turn. (Reaction)"
+    ],
+    "purpose": "Cheap protection: pulls one Character Backstage and prevents damage to it this turn (a Kinetic leap).",
+    "abilities": [],
+    "ops": [
+     [
+      "dodge",
+      "A"
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-007",
+   "name": "Nova, Passing Stranger",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 2,
+   "character": "Nova",
+   "art": "Silver-haired Nova half emerging from a magenta seam in an overpass shadow.",
+   "gameplay": {
+    "cost": 2,
+    "power": 1,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Return 1 card(s) from your Rift pool to your hand.",
+     "Next Episode: may be played on a Character you control named Nova that costs less, paying the difference."
+    ],
+    "purpose": "Navigation tempo: returns one slipped card to hand, so a late Nova lets you re-use a key card instead of keeping it as energy.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "pull",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-008",
+   "name": "Hard Stop",
+   "rarity": "C",
+   "type": "Technique",
+   "episode": 2,
+   "character": null,
+   "art": "Kai catches a flying road sign mid-impact with a red shock ring.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Prevent all combat damage dealt by one attacking enemy Character, then deal 2 damage to it. (Reaction)"
+    ],
+    "purpose": "Defensive Kinetic answer: stops one attacker's damage and punishes it. Keeps Technique decks alive against big attackers.",
+    "abilities": [],
+    "ops": [
+     [
+      "prevent",
+      "E"
+     ],
+     [
+      "dmg",
+      "LAST",
+      2
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-009",
+   "name": "Fracture Compass",
+   "rarity": "C",
+   "type": "Relic",
+   "episode": 2,
+   "character": null,
+   "art": "Battered pocket compass needle points upward toward a ceiling crack.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Look at the top 1 card of your deck; put any on the bottom, then raise or lower the Rift by 1."
+    ],
+    "purpose": "Rift dial: lets a deck steer the shared Rift gauge up or down by one each turn while smoothing its draws.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "scry",
+        1
+       ],
+       [
+        "riftPM",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-010",
+   "name": "Overpass at Dawn",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 2,
+   "character": null,
+   "art": "Empty freeway spans and thin pink fracture across cloud cover.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Characters with Phase you control get +1/0.",
+     "At your wake: Raise the Rift by 1."
+    ],
+    "purpose": "Rift deck zone: widens the Rift every turn and rewards Phase Characters; speeds up Anomalies for everyone, so it is a commitment.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "p": 1,
+      "f": {
+       "kw": "Phase"
+      }
+     },
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "rift",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-011",
+   "name": "Mika, Salvage Runner",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 3,
+   "character": "Mika",
+   "art": "Blond ponytailed adult mechanic Mika carrying a tool case through scrapyard gates.",
+   "gameplay": {
+    "cost": 2,
+    "power": 2,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Search your deck for a Relic with cost 2 or less and put it into your hand.",
+     "Next Episode: may be played on a Character you control named Mika that costs less, paying the difference."
+    ],
+    "purpose": "Workshop engine starter: finds the Relic the deck wants.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "search",
+        {
+         "type": "Relic",
+         "maxCost": 2
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-012",
+   "name": "Copperback Gremlin",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 3,
+   "character": null,
+   "art": "Broad-mouthed machinery pest made of wire, bolts and stolen brake pads.",
+   "gameplay": {
+    "cost": 2,
+    "power": 2,
+    "health": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this is defeated: Deal 1 damage to target enemy Character."
+    ],
+    "purpose": "Aggressive trader: dies for value, so blocking it or trading with it always costs something.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "defeat",
+      "ops": [
+       [
+        "dmg",
+        "E",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-013",
+   "name": "Temporary Spark",
+   "rarity": "C",
+   "type": "Technique",
+   "episode": 3,
+   "character": null,
+   "art": "Mika imbues a wrench with supernatural charge mid-repair.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Target Character you control gets +2/+0 until end of turn, then if you control 1 or more Relic: It gets +0/+1 until end of turn. (Reaction)"
+    ],
+    "purpose": "Combat trick: Imbue a Character. Better if you control a Relic. Also feeds Momentum.",
+    "abilities": [],
+    "ops": [
+     [
+      "pump",
+      "A",
+      2,
+      0
+     ],
+     [
+      "ifthen",
+      [
+       "relics",
+       ">=",
+       1
+      ],
+      [
+       [
+        "pump",
+        "LAST",
+        0,
+        1
+       ]
+      ]
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-014",
+   "name": "Secondhand Sky Yard",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 3,
+   "character": null,
+   "art": "Stacked tram cars, salvage cranes and a makeshift workshop.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Your Relics cost 1 less.",
+     "Your imbued Relics get +1/+1."
+    ],
+    "purpose": "Workshop zone: cheaper Relics, stronger animated Relics.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "relicDiscount",
+      "n": 1,
+      "scope": "me"
+     },
+     {
+      "t": "st",
+      "who": "animAlly",
+      "p": 1,
+      "h": 1
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-015",
+   "name": "Ayame, Ghost Hunter",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 4,
+   "character": "Ayame",
+   "art": "Black-haired adult swordswoman Ayame watching spectral tracks from a rooftop.",
+   "gameplay": {
+    "cost": 2,
+    "power": 2,
+    "health": 2,
+    "keywords": [
+     "Sever"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Sever (can block Phase; Characters it damages are silenced)",
+     "Next Episode: may be played on a Character you control named Ayame that costs less, paying the difference."
+    ],
+    "purpose": "Cheap answer to Phase and abilities: the only common that blocks Phase attackers.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-016",
+   "name": "Thread-Eater Specter",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 4,
+   "character": null,
+   "art": "Translucent predatory shape stitched from unspooling ghost-thread.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 2,
+    "keywords": [
+     "Phase"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Phase (can be blocked only by Phase or Sever Characters; no effect at Rift 0-2 or while Marked)"
+    ],
+    "purpose": "Evasive attacker; weak to Marking, to Sever Characters and to a quiet Rift. Counterplay is built into the set.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-017",
+   "name": "Clean Sever",
+   "rarity": "C",
+   "type": "Technique",
+   "episode": 4,
+   "character": null,
+   "art": "Single exact sword cut separates a ghostly tether from a lamp post.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Sever: destroy a Condition or the Zone, then draw a card."
+    ],
+    "purpose": "Clean answer to a Condition or the Zone, and it replaces itself.",
+    "abilities": [],
+    "ops": [
+     [
+      "sever",
+      "cz"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-018",
+   "name": "Abandoned Shrine Steps",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 4,
+   "character": null,
+   "art": "Mossy stone stairway swallowed by an abruptly modern tower block.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Characters with cost 2 or less you control have Haunt."
+    ],
+    "purpose": "Value zone: cheap Characters turn into energy when they die.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "kw": [
+       "Haunt"
+      ],
+      "f": {
+       "maxCost": 2
+      }
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-019",
+   "name": "Mistaken Accomplice",
+   "rarity": "C",
+   "type": "Condition",
+   "episode": 4,
+   "character": null,
+   "art": "Ayame's sword at Kai's collar; his raised hands show bafflement.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "attach": "ES",
+    "ransom": 2,
+    "copiesMax": 3,
+    "text": [
+     "Attach to an enemy Stage Character. The host's controller may pay 2 energy to remove it.",
+     "The host has NoAttack."
+    ],
+    "purpose": "Removes an attacker without killing it. The owner can pay to ransom it, so the cost is tempo, not a card.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "host",
+      "kw": [
+       "NoAttack"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-020",
+   "name": "Reiya's Lookout",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 5,
+   "character": null,
+   "art": "Black-market adult scout behind lacquer mask scanning arrivals.",
+   "gameplay": {
+    "cost": 1,
+    "power": 1,
+    "health": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Look at the opponent's hand. They discard a card with cost 1 or less of your choice."
+    ],
+    "purpose": "Scout: sees the opponent's hand and removes a cheap card. Information is the point.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "strip",
+        {
+         "maxCost": 1
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-021",
+   "name": "Memory Token",
+   "rarity": "C",
+   "type": "Relic",
+   "episode": 5,
+   "character": null,
+   "art": "Coin with a face that changes between reflections.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (free, sacrifice this, once per turn): Draw 2 cards, then discard a card."
+    ],
+    "purpose": "Cantrip Relic: converts itself into card selection (Reiya decks).",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "draw",
+        2
+       ],
+       [
+        "discard",
+        1
+       ]
+      ],
+      "sac": true
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-022",
+   "name": "Night Market Entrance",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 5,
+   "character": null,
+   "art": "Crowded hidden market accessible behind a laundromat.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake: You may discard a card. If you do, draw a card."
+    ],
+    "purpose": "Card filtering zone: optionally discard a card at each wake to draw one.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "loot"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-023",
+   "name": "No Refunds",
+   "rarity": "C",
+   "type": "Condition",
+   "episode": 5,
+   "character": null,
+   "art": "Cursed bargain receipt curling around someone's wrist like ribbon.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "attach": "foe",
+    "copiesMax": 3,
+    "text": [
+     "Attach to the opponent.",
+     "Your Techniques cost 1 more.",
+     "Lasts 3 of the host's wakes."
+    ],
+    "purpose": "Tempo tax against Technique decks for three of their turns.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "techCost",
+      "n": 1,
+      "scope": "host"
+     },
+     {
+      "t": "tick",
+      "on": "wake",
+      "of": "host",
+      "ops": []
+     }
+    ],
+    "tick": 3
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-024",
+   "name": "Vivi's Camera Wisp",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 6,
+   "character": null,
+   "art": "Levitation orb carrying glowing broadcast lens and tiny clapperboard.",
+   "gameplay": {
+    "cost": 1,
+    "power": 1,
+    "health": 3,
+    "keywords": [
+     "Spotlight"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Spotlight (while on the Stage, opposing effects that target a Character must target a Spotlight Character if able)"
+    ],
+    "purpose": "Decoy: forces the opponent's targeted effects onto a cheap body. Protects your better Characters.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-025",
+   "name": "Unscheduled Cutaway",
+   "rarity": "C",
+   "type": "Technique",
+   "episode": 6,
+   "character": null,
+   "art": "Reality folds into an abrupt TV-style composition on an ordinary sidewalk.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Step target Character you control, then draw a card. (Reaction)"
+    ],
+    "purpose": "Cutaway: cheaply reposition a Character in response to something and replace itself.",
+    "abilities": [],
+    "ops": [
+     [
+      "step",
+      "A"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-026",
+   "name": "Channel Zero Studio",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 6,
+   "character": null,
+   "art": "Impossible miniature broadcast set hidden inside a subway advertisement.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Characters with Spotlight you control get +1/+1."
+    ],
+    "purpose": "Spotlight zone: makes the decoys real threats.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "p": 1,
+      "h": 1,
+      "f": {
+       "kw": "Spotlight"
+      }
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-027",
+   "name": "Live on Air",
+   "rarity": "C",
+   "type": "Condition",
+   "episode": 6,
+   "character": null,
+   "art": "Aerial view of panicked street with impossible LIVE graphics in the skyline.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "attach": "E",
+    "copiesMax": 3,
+    "text": [
+     "Attach to an enemy Character.",
+     "The host has NoStep."
+    ],
+    "purpose": "Forces a Backstage Character onto the Stage and keeps it there. Counter to Backstage engines.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "host",
+      "kw": [
+       "NoStep"
+      ]
+     }
+    ],
+    "onAttach": [
+     [
+      "hostStage"
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-028",
+   "name": "Brax, Debt Collector",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 7,
+   "character": "Brax",
+   "art": "Massive intimidating adult enforcer Brax squeezing into a too-small cafe booth.",
+   "gameplay": {
+    "cost": 2,
+    "power": 1,
+    "health": 4,
+    "keywords": [
+     "Absorb"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Absorb (whenever damaged, gains that much Impact, up to 5)",
+     "Act (free, once per turn): Release: remove all Impact from this Character and deal that much damage to target enemy Character.",
+     "Next Episode: may be played on a Character you control named Brax that costs less, paying the difference."
+    ],
+    "purpose": "Damage sponge: stores Impact when hurt and releases it as damage. Better as a blocker than an attacker.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "release",
+        "E"
+       ]
+      ],
+      "if": [
+       "impact",
+       ">=",
+       1
+      ],
+      "need": [
+       "E"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-029",
+   "name": "Toma, Junior Analyst",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 7,
+   "character": "Toma",
+   "art": "Nervous adult glasses-wearing Toma with a notebook and oversized diagrams.",
+   "gameplay": {
+    "cost": 2,
+    "power": 2,
+    "health": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Mark target enemy Character.",
+     "Next Episode: may be played on a Character you control named Toma that costs less, paying the difference."
+    ],
+    "purpose": "Marks a target: it takes one extra damage and loses Phase. Opens up removal and combat for other cards.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "mark",
+        "E"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-030",
+   "name": "Load Bearing",
+   "rarity": "C",
+   "type": "Technique",
+   "episode": 7,
+   "character": null,
+   "art": "Brax absorbs a barrage of impacts into red pressure markings.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Target Character you control gets +0/+2 until end of turn, then put 2 Impact on it. (Reaction)"
+    ],
+    "purpose": "Defensive trick that also loads Impact on a Brax Character.",
+    "abilities": [],
+    "ops": [
+     [
+      "pump",
+      "A",
+      0,
+      2
+     ],
+     [
+      "impact",
+      "LAST",
+      2
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-031",
+   "name": "Freight Tunnel Seven",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 7,
+   "character": null,
+   "art": "Underground loading tunnel filled with cargo and intermittent fracture light.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Characters with Absorb you control get 0/+1.",
+     "Opposing Characters lose Phase."
+    ],
+    "purpose": "Wall zone: strengthens Absorb Characters and shuts off the opponent's Phase.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "h": 1,
+      "f": {
+       "kw": "Absorb"
+      }
+     },
+     {
+      "t": "rule",
+      "rule": "noPhase",
+      "n": 1,
+      "scope": "foe"
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-032",
+   "name": "Lulu, Lost Again",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 8,
+   "character": "Lulu",
+   "art": "Tall bubbly adult Lulu waving cheerfully in an obviously prohibited district.",
+   "gameplay": {
+    "cost": 1,
+    "power": 1,
+    "health": 2,
+    "keywords": [
+     "Resonance"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Resonance (+1 Power for each other Resonance Character you control, up to +2)",
+     "Next Episode: may be played on a Character you control named Lulu that costs less, paying the difference."
+    ],
+    "purpose": "Cheap Resonance body: team-builder for Lulu decks.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-033",
+   "name": "Momo, Alley Yokai",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 8,
+   "character": "Momo",
+   "art": "Small strange adult yokai peering upside-down from a drainpipe.",
+   "gameplay": {
+    "cost": 2,
+    "power": 2,
+    "health": 1,
+    "keywords": [
+     "Haunt"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Haunt (when defeated, goes to your Rift pool instead of the discard pile)",
+     "Next Episode: may be played on a Character you control named Momo that costs less, paying the difference."
+    ],
+    "purpose": "Cheap yokai attacker that becomes energy when it dies.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-034",
+   "name": "Hush-Moth Swarm",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 8,
+   "character": null,
+   "art": "A cluster of vellum-wing moths that blot out street lettering.",
+   "gameplay": {
+    "cost": 2,
+    "power": 1,
+    "health": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Silence target enemy Character until the end of its controller's next turn."
+    ],
+    "purpose": "Switches off one opposing Character's abilities for its next turn.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "silence",
+        "E"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-035",
+   "name": "Sealed District Gate",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 8,
+   "character": null,
+   "art": "Heavy industrial barrier overtaken by coral-like Rift growth.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Opposing Characters enter exhausted."
+    ],
+    "purpose": "Lockdown zone: the opponent's new Characters cannot block the turn they arrive. Punishes decks that rely on fresh blockers.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "foeEnterExhausted",
+      "n": 1,
+      "scope": "me"
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-036",
+   "name": "Pippi, Field Medic",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 9,
+   "character": "Pippi",
+   "art": "Petite adult medic Pippi with determined stare and overpacked emergency bag.",
+   "gameplay": {
+    "cost": 2,
+    "power": 1,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Restore 2 Resolve.",
+     "Next Episode: may be played on a Character you control named Pippi that costs less, paying the difference."
+    ],
+    "purpose": "Sustain body for the Mend decks.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "heal",
+        2
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-037",
+   "name": "Stitchglass Needle",
+   "rarity": "C",
+   "type": "Relic",
+   "episode": 9,
+   "character": null,
+   "art": "Green-white magical suture needle on sterile tray.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Lower the Rift by 1, then restore 1 Resolve."
+    ],
+    "purpose": "Rift repair: lowers the Rift each turn and restores Resolve. Slows Anomalies.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "rift",
+        -1
+       ],
+       [
+        "heal",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-038",
+   "name": "Midnight Clinic",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 9,
+   "character": null,
+   "art": "Tiny emergency room in a repurposed convenience store.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake: Restore 1 Resolve, then if the Rift is 4 or more: Lower the Rift by 1."
+    ],
+    "purpose": "Sustain zone: steady healing and a gentle Rift brake.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "heal",
+        1
+       ],
+       [
+        "ifthen",
+        [
+         "rift",
+         ">=",
+         4
+        ],
+        [
+         [
+          "rift",
+          -1
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-039",
+   "name": "Signed Wager Slip",
+   "rarity": "C",
+   "type": "Relic",
+   "episode": 10,
+   "character": null,
+   "art": "Casino-like contract on which odds rewrite themselves.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Wager (call High or Low): reveal the top card of your deck. High wins on cost 3+, Low on cost 2 or less. If you win: Draw 2 cards. If you lose: You lose 2 Resolve."
+    ],
+    "purpose": "Crow's basic wager engine: a draw most of the time, a point of Resolve when it misses.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "wager",
+        "choose",
+        [
+         [
+          "draw",
+          2
+         ]
+        ],
+        [
+         [
+          "payLife",
+          2
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-040",
+   "name": "House Advantage",
+   "rarity": "C",
+   "type": "Condition",
+   "episode": 10,
+   "character": null,
+   "art": "Falling coins all land balanced on their edges beside Kai.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "attach": "me",
+    "copiesMax": 3,
+    "text": [
+     "Attach to yourself.",
+     "Your Wagers reveal two cards; either can win."
+    ],
+    "purpose": "Wager support: your Wagers reveal two cards and use the better one. Only useful in Wager decks, by design.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "wagerDouble",
+      "n": 1,
+      "scope": "host"
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-041",
+   "name": "Reiya, Artifact Broker",
+   "rarity": "C",
+   "type": "Character",
+   "episode": 11,
+   "character": "Reiya",
+   "art": "Glamorous adult broker Reiya inspecting rare objects through tinted glass.",
+   "gameplay": {
+    "cost": 2,
+    "power": 2,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Look at the top 3 cards of your deck. You may take a Relic; the rest go to the bottom.",
+     "Next Episode: may be played on a Character you control named Reiya that costs less, paying the difference."
+    ],
+    "purpose": "Relic finder for Reiya decks that does not cost a card.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "dig",
+        3,
+        {
+         "type": "Relic"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-042",
+   "name": "The Sealed Parcel",
+   "rarity": "C",
+   "type": "Relic",
+   "episode": 11,
+   "character": null,
+   "art": "Close-up of the now-worn parcel with a faint pulse beneath its wax seal.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake: Put a Seal counter on this.",
+     "Act (free, sacrifice this, once per turn): Draw a card for each Seal counter on this (up to 3)."
+    ],
+    "purpose": "Slow fuse: the longer you wait, the more cards you draw (up to three).",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "counter",
+        1
+       ]
+      ]
+     },
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "drawSeal",
+        3
+       ]
+      ],
+      "sac": true,
+      "if": [
+       "counters",
+       ">=",
+       1
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-043",
+   "name": "Trade Offer",
+   "rarity": "C",
+   "type": "Condition",
+   "episode": 11,
+   "character": null,
+   "art": "Two outstretched hands separated by a hovering item and ominous handshake shadow.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "attach": "foe",
+    "copiesMax": 3,
+    "text": [
+     "Attach to the opponent.",
+     "After 1 of the host's wakes, this is removed and: Bargain: the opponent chooses one: (a) Draw a card; or (b) The opponent discards a card of their choice."
+    ],
+    "purpose": "One-shot Bargain: the opponent discards a card or you draw one.",
+    "abilities": [
+     {
+      "t": "tick",
+      "on": "wake",
+      "of": "host",
+      "ops": [
+       [
+        "bargain",
+        [
+         [
+          "draw",
+          1
+         ]
+        ],
+        [
+         [
+          "foeDiscard",
+          1
+         ]
+        ]
+       ]
+      ]
+     }
+    ],
+    "tick": 1
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-044",
+   "name": "Under-City Vault Door",
+   "rarity": "C",
+   "type": "Zone",
+   "episode": 12,
+   "character": null,
+   "art": "Old industrial blast door encircled by anomalous glowing script.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake, if you control 2 or more Relics: Draw a card."
+    ],
+    "purpose": "Relic payoff zone: card advantage once the Relics are out.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ],
+      "if": [
+       "relics",
+       ">=",
+       2
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-045",
+   "name": "The City Forgets",
+   "rarity": "C",
+   "type": "Condition",
+   "episode": 12,
+   "character": null,
+   "art": "Crowd continues commuting as one city block fades from photographs.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "attach": "E",
+    "ransom": 2,
+    "copiesMax": 3,
+    "text": [
+     "Attach to an enemy Character. The host's controller may pay 2 energy to remove it.",
+     "At the host's wake: The Character this is attached to gets -1/-1 permanently."
+    ],
+    "purpose": "Slow removal: the host shrinks at each of its wakes. Ransom or Sever answers it.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "pump",
+        "HOST",
+        -1,
+        -1,
+        "perm"
+       ]
+      ],
+      "of": "host"
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-046",
+   "name": "Seventeen-Year Record",
+   "rarity": "C",
+   "type": "Relic",
+   "episode": 12,
+   "character": null,
+   "art": "Burned disaster report with key redactions and a recognizable child silhouette.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Whenever an Anomaly fires: Draw 2 cards."
+    ],
+    "purpose": "Rift payoff: draws cards whenever the Rift fractures.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "anomaly",
+      "ops": [
+       [
+        "draw",
+        2
+       ]
+      ],
+      "of": "any"
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-047",
+   "name": "Pulse Echo",
+   "rarity": "C",
+   "type": "Technique",
+   "episode": 12,
+   "character": null,
+   "art": "Kai touches ancient doorway and red kinetic rings ripple backward through dust.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Each Character you control with Resonance gets +1/+1 until end of turn. (Reaction)"
+    ],
+    "purpose": "Resonance trick that scales with the number of Resonance Characters.",
+    "abilities": [],
+    "ops": [
+     [
+      "pump",
+      {
+       "t": "ALL_A",
+       "kw": "Resonance"
+      },
+      1,
+      1
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-048",
+   "name": "A Name From Beyond",
+   "rarity": "C",
+   "type": "Condition",
+   "episode": 12,
+   "character": null,
+   "art": "Black void shows only a red whispering waveform, withholding Nexus's form.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "attach": "A",
+    "copiesMax": 3,
+    "text": [
+     "Attach to a Character you control.",
+     "The host gets +1/0 and has Haunt.",
+     "The host has Phase while the Rift is 3 or more."
+    ],
+    "purpose": "Calls a name from beyond onto a Character: +1 Power, Haunt, and Phase while the Rift is wide.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "host",
+      "p": 1,
+      "kw": [
+       "Haunt"
+      ]
+     },
+     {
+      "t": "st",
+      "who": "host",
+      "kw": [
+       "Phase"
+      ],
+      "if": [
+       "rift",
+       ">=",
+       3
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-049",
+   "name": "Nova, Rift Guide",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 2,
+   "character": "Nova",
+   "art": "Nova tracing safe stepping stones across a vertical tear.",
+   "gameplay": {
+    "cost": 3,
+    "power": 2,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Raise the Rift by 1.",
+     "Act (1 energy, once per turn): Step target Character you control.",
+     "Next Episode: may be played on a Character you control named Nova that costs less, paying the difference."
+    ],
+    "purpose": "Nova as an enabler: opens the Rift and lets you reposition twice a turn.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "rift",
+        1
+       ]
+      ]
+     },
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "step",
+        "A"
+       ]
+      ],
+      "need": [
+       "A"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-050",
+   "name": "Kai, Bad Idea Specialist",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 3,
+   "character": "Kai",
+   "art": "Kai cheerfully presenting an obviously faulty salvage plan.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 2,
+    "keywords": [
+     "Momentum",
+     "Rush"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Momentum (+1 Power for each Technique you played this turn, up to +3)",
+     "Rush (can attack the turn it enters)",
+     "Next Episode: may be played on a Character you control named Kai that costs less, paying the difference."
+    ],
+    "purpose": "Kinetic finisher: attacks at once and grows with every Technique.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-051",
+   "name": "Mika, Wrench Whisperer",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 3,
+   "character": "Mika",
+   "art": "Mika improvising a supernatural engine from junk parts.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Imbue one of your Relics: it becomes a 2/2 Character that can attack, until end of turn.",
+     "Next Episode: may be played on a Character you control named Mika that costs less, paying the difference."
+    ],
+    "purpose": "Turns a Relic into an attacker for a turn (Imbue). Gives Relic decks a clock.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "animate",
+        2,
+        2
+       ]
+      ],
+      "need": [
+       "RELIC_ME"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-052",
+   "name": "Ayame, Suspicious Ally",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 4,
+   "character": "Ayame",
+   "art": "Ayame and Kai forced back-to-back by approaching specters.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 3,
+    "keywords": [
+     "Sever"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Sever (can block Phase; Characters it damages are silenced)",
+     "Next Episode: may be played on a Character you control named Ayame that costs less, paying the difference."
+    ],
+    "purpose": "Aggressive Sever body: silences what it damages.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-053",
+   "name": "Thread-Eater Matriarch",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 4,
+   "character": null,
+   "art": "Larger ghost predator towering over an empty shrine courtyard.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [
+     "Phase"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Phase (can be blocked only by Phase or Sever Characters; no effect at Rift 0-2 or while Marked)",
+     "When this deals combat damage to the opponent: The opponent discards a card of their choice."
+    ],
+    "purpose": "Evasive disruptor: every hit costs the opponent a card.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "hit",
+      "ops": [
+       [
+        "foeDiscard",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-054",
+   "name": "The Ninth Vendor",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 5,
+   "character": null,
+   "art": "Masked unknown-age trader behind a stall of bottled impossible memories.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Bargain: the opponent chooses one: (a) Draw a card; or (b) The opponent loses 2 Resolve."
+    ],
+    "purpose": "Bargain engine: the opponent decides whether to give you a card or Resolve.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "bargain",
+        [
+         [
+          "draw",
+          1
+         ]
+        ],
+        [
+         [
+          "hurt",
+          2
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-055",
+   "name": "Reiya, Deal Maker",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 5,
+   "character": "Reiya",
+   "art": "Reiya elegantly offering a cursed artifact across a brass counter.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (free, once per turn): Sacrifice another Relic you control. If you do: Draw 2 cards.",
+     "Next Episode: may be played on a Character you control named Reiya that costs less, paying the difference."
+    ],
+    "purpose": "Sells Relics for cards: converts spare Relics into card advantage.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "sacRelic",
+        [
+         [
+          "draw",
+          2
+         ]
+        ]
+       ]
+      ],
+      "sacNeed": true
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-056",
+   "name": "Vivi Vesper, On Air",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 6,
+   "character": "Vivi Vesper",
+   "art": "Purple-bob adult host holding a microphone to a seemingly empty room.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 4,
+    "keywords": [
+     "Spotlight"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Spotlight (while on the Stage, opposing effects that target a Character must target a Spotlight Character if able)",
+     "Next Episode: may be played on a Character you control named Vivi Vesper that costs less, paying the difference."
+    ],
+    "purpose": "Solid Spotlight body: protects the rest of the team from targeted effects.",
+    "abilities": []
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-057",
+   "name": "Broadcast Stagehand",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 6,
+   "character": null,
+   "art": "Featureless suited assistant repositioning a fake moon behind Vivi.",
+   "gameplay": {
+    "cost": 2,
+    "power": 1,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Backstage: Characters with Spotlight you control get +1/0."
+    ],
+    "purpose": "Backstage support: pumps Spotlight Characters while sitting safely behind them.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "p": 1,
+      "f": {
+       "kw": "Spotlight"
+      },
+      "row": "back"
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-058",
+   "name": "Toma, Pattern Sight",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 7,
+   "character": "Toma",
+   "art": "Toma's glasses reflected in a geometric map of Brax's vulnerabilities.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake: Mark target enemy Character.",
+     "Next Episode: may be played on a Character you control named Toma that costs less, paying the difference."
+    ],
+    "purpose": "Marks one enemy at every wake: constant pressure that sets up removal.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "mark",
+        "E"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-059",
+   "name": "Brax, Impact Loaded",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 7,
+   "character": "Brax",
+   "art": "Brax's fists pulsing with stored force in an alley brawl.",
+   "gameplay": {
+    "cost": 4,
+    "power": 2,
+    "health": 4,
+    "keywords": [
+     "Absorb"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Absorb (whenever damaged, gains that much Impact, up to 5)",
+     "Act (free, once per turn): Release: remove all Impact from this Character and deal that much damage to target enemy Character.",
+     "Next Episode: may be played on a Character you control named Brax that costs less, paying the difference."
+    ],
+    "purpose": "Stores damage as Impact and fires it back. Strong when blocking.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "release",
+        "E"
+       ]
+      ],
+      "if": [
+       "impact",
+       ">=",
+       1
+      ],
+      "need": [
+       "E"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-060",
+   "name": "Lulu, Resonance Bloom",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 8,
+   "character": "Lulu",
+   "art": "Lulu calming a frightened crowd with a warm floral soundwave.",
+   "gameplay": {
+    "cost": 3,
+    "power": 2,
+    "health": 2,
+    "keywords": [
+     "Resonance"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Resonance (+1 Power for each other Resonance Character you control, up to +2)",
+     "When this enters: Each Character you control with Resonance other than this one gets +1/+1 permanently.",
+     "Next Episode: may be played on a Character you control named Lulu that costs less, paying the difference."
+    ],
+    "purpose": "Permanently grows the team: better the more Resonance you already have.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "pump",
+        {
+         "t": "ALL_A",
+         "kw": "Resonance",
+         "other": true
+        },
+        1,
+        1,
+        "perm"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-061",
+   "name": "Momo, Uninvited Guest",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 8,
+   "character": "Momo",
+   "art": "Momo stealing dinner from the crew's improvised campsite.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 2,
+    "keywords": [
+     "Haunt"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Haunt (when defeated, goes to your Rift pool instead of the discard pile)",
+     "When this enters: Look at the opponent's hand. They discard a card with cost 2 or less of your choice.",
+     "Next Episode: may be played on a Character you control named Momo that costs less, paying the difference."
+    ],
+    "purpose": "Disruptive attacker that comes back as energy.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "strip",
+        {
+         "maxCost": 2
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-062",
+   "name": "Pippi, No Time to Panic",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 9,
+   "character": "Pippi",
+   "art": "Pippi organizing an emergency triage station with sharp gestures.",
+   "gameplay": {
+    "cost": 2,
+    "power": 1,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Restore 2 Resolve, then remove all Conditions and Marks from target Character you control.",
+     "Next Episode: may be played on a Character you control named Pippi that costs less, paying the difference."
+    ],
+    "purpose": "Defensive support: heals and cleans a Character each turn. Slow but sticky.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "heal",
+        2
+       ],
+       [
+        "purge",
+        "A"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-063",
+   "name": "Crow, Probability Hustler",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 10,
+   "character": "Crow",
+   "art": "Crow flipping weighted-looking coins while smiling at Kai.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Wager (call High or Low): reveal the top card of your deck. High wins on cost 3+, Low on cost 2 or less. If you win: Draw a card, then gain 1 energy this turn. If you lose: You lose 1 Resolve.",
+     "Next Episode: may be played on a Character you control named Crow that costs less, paying the difference."
+    ],
+    "purpose": "Repeatable Wager engine on a body: a hit is a free card, a miss costs a point of Resolve.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "wager",
+        "choose",
+        [
+         [
+          "draw",
+          1
+         ],
+         [
+          "energy",
+          1
+         ]
+        ],
+        [
+         [
+          "payLife",
+          1
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-064",
+   "name": "Wagerbound Phantom",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 10,
+   "character": null,
+   "art": "Spectral figure constructed from cards and probability symbols.",
+   "gameplay": {
+    "cost": 2,
+    "power": 2,
+    "health": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this attacks: Wager (call High or Low): reveal the top card of your deck. High wins on cost 3+, Low on cost 2 or less. If you win: This Character gets +3/+0 until end of turn. If you lose: Deal 1 damage to this Character."
+    ],
+    "purpose": "Risk/reward attacker: huge when the wager hits, can die when it misses.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "attack",
+      "ops": [
+       [
+        "wager",
+        "choose",
+        [
+         [
+          "pump",
+          "SELF",
+          3,
+          0
+         ]
+        ],
+        [
+         [
+          "dmg",
+          "SELF",
+          1
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-065",
+   "name": "Nova, Keeping Secrets",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 11,
+   "character": "Nova",
+   "art": "Nova alone before a sealed file, concerned expression reflected in glass.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Choose the next Anomaly.",
+     "At your wake: Look at the top 1 card of your deck; put any on the bottom.",
+     "Next Episode: may be played on a Character you control named Nova that costs less, paying the difference."
+    ],
+    "purpose": "Navigator: chooses which Anomaly fires next, and smooths your draws.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "setAnomaly"
+       ]
+      ]
+     },
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "scry",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-066",
+   "name": "Kai, Last to Know",
+   "rarity": "UC",
+   "type": "Character",
+   "episode": 11,
+   "character": "Kai",
+   "art": "Kai recognizing that the others are hiding a critical fact.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [
+     "Momentum"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Momentum (+1 Power for each Technique you played this turn, up to +3)",
+     "When this deals combat damage to the opponent: Draw a card.",
+     "Next Episode: may be played on a Character you control named Kai that costs less, paying the difference."
+    ],
+    "purpose": "Kai as a card engine when his hits connect.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "hit",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-067",
+   "name": "Redirected Blow",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 2,
+   "character": null,
+   "art": "Redirection shock wave curves around innocent pedestrians.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "One attacking enemy Character deals its combat damage to its own controller instead. (Reaction)"
+    ],
+    "purpose": "Turns an attacker's damage back on its controller. Punishes alpha strikes.",
+    "abilities": [],
+    "ops": [
+     [
+      "reflect"
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-068",
+   "name": "Charge Transfer",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 3,
+   "character": null,
+   "art": "Mika's charged cables leap between scrap devices.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Imbue one of your Relics: it becomes a 4/3 Character that can attack, until end of turn."
+    ],
+    "purpose": "Imbue a Relic into a 4/3 attacker for one energy: a cheap burst for Relic decks.",
+    "abilities": [],
+    "ops": [
+     [
+      "animate",
+      4,
+      3
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-069",
+   "name": "Bondbreaker Stroke",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 4,
+   "character": null,
+   "art": "Ayame cuts a tether connecting the ghost to a victim's shadow.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Sever: destroy an opposing Condition, Relic or Zone, then draw a card."
+    ],
+    "purpose": "Destroys any opposing Condition, Relic or Zone and replaces itself.",
+    "abilities": [],
+    "ops": [
+     [
+      "sever",
+      "any"
+     ],
+     [
+      "draw",
+      1
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-070",
+   "name": "Equivalent Exchange",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 5,
+   "character": null,
+   "art": "Ninth Vendor's hands trade a memory for a physical object.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Sacrifice another Relic you control. If you do: Draw 3 cards, then gain 1 energy this turn."
+    ],
+    "purpose": "Converts a Relic into three cards and refunds its own energy: the exit for a Relic that has done its job.",
+    "abilities": [],
+    "ops": [
+     [
+      "sacRelic",
+      [
+       [
+        "draw",
+        3
+       ],
+       [
+        "energy",
+        1
+       ]
+      ]
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-071",
+   "name": "Prime-Time Switch",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 6,
+   "character": null,
+   "art": "Vivi's show changes weather in a hard broadcast wipe.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Move target enemy Stage Character Backstage. (Reaction)"
+    ],
+    "purpose": "Shoves a Stage Character Backstage, removing it from attack or defense.",
+    "abilities": [],
+    "ops": [
+     [
+      "shove",
+      "ES"
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-072",
+   "name": "Weak-Point Diagram",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 7,
+   "character": null,
+   "art": "Toma sketches a tiny arrow to Brax's one exposed vulnerable angle.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Mark target enemy Character, then deal 2 damage to it."
+    ],
+    "purpose": "Marks and damages a Character: 3 damage in total.",
+    "abilities": [],
+    "ops": [
+     [
+      "mark",
+      "E"
+     ],
+     [
+      "dmg",
+      "LAST",
+      2
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-073",
+   "name": "Resonance Shelter",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 8,
+   "character": null,
+   "art": "Lulu's wave forms a luminous protective bubble for the crew.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Each Character you control with Resonance gets +0/+2 until end of turn, then restore 2 Resolve. (Reaction)"
+    ],
+    "purpose": "Defensive Resonance trick that also heals.",
+    "abilities": [],
+    "ops": [
+     [
+      "pump",
+      {
+       "t": "ALL_A",
+       "kw": "Resonance"
+      },
+      0,
+      2
+     ],
+     [
+      "heal",
+      2
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-074",
+   "name": "Mend Weave",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 9,
+   "character": null,
+   "art": "Pippi's precise stitching seals a vivid but non-graphic wound.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Restore 3 Resolve, then remove all Conditions and Marks from target Character you control, then remove every Condition attached to you, then lower the Rift by 1."
+    ],
+    "purpose": "Big repair: Resolve, Conditions and the Rift in one card.",
+    "abilities": [],
+    "ops": [
+     [
+      "heal",
+      3
+     ],
+     [
+      "purge",
+      "A"
+     ],
+     [
+      "purgeMe"
+     ],
+     [
+      "rift",
+      -1
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-075",
+   "name": "Coinflip Curse",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 10,
+   "character": null,
+   "art": "Crow's tossing coin controls which of two pathways collapses.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Wager (call High or Low): reveal the top card of your deck. High wins on cost 3+, Low on cost 2 or less. If you win: Deal 4 damage to target enemy Character. If you lose: You lose 1 Resolve."
+    ],
+    "purpose": "Cheap removal gamble: 3 damage if the wager hits, 2 damage to you if not.",
+    "abilities": [],
+    "ops": [
+     [
+      "wager",
+      "choose",
+      [
+       [
+        "dmg",
+        "E",
+        4
+       ]
+      ],
+      [
+       [
+        "payLife",
+        1
+       ]
+      ]
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-076",
+   "name": "Last-Second Detour",
+   "rarity": "UC",
+   "type": "Technique",
+   "episode": 12,
+   "character": null,
+   "art": "Kai redirects a falling bridge beam away from fleeing civilians.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Return target enemy Character with cost 4 or less to its owner's hand, then raise the Rift by 1. (Reaction)"
+    ],
+    "purpose": "Detour: bounces an attacker or blocker and widens the Rift.",
+    "abilities": [],
+    "ops": [
+     [
+      "bounce",
+      {
+       "t": "E",
+       "maxCost": 4
+      }
+     ],
+     [
+      "rift",
+      1
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-077",
+   "name": "The Vendor's Ledger",
+   "rarity": "UC",
+   "type": "Relic",
+   "episode": 5,
+   "character": null,
+   "art": "Leather ledger filled with crossed-out names and impossible exchange rates.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake: Bargain: the opponent chooses one: (a) Draw a card; or (b) The opponent loses 3 Resolve."
+    ],
+    "purpose": "Repeating Bargain: the opponent chooses card or Resolve every turn.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "bargain",
+        [
+         [
+          "draw",
+          1
+         ]
+        ],
+        [
+         [
+          "hurt",
+          3
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-078",
+   "name": "Stage-Light Halo",
+   "rarity": "UC",
+   "type": "Relic",
+   "episode": 6,
+   "character": null,
+   "art": "Broadcast projector casts a perfect circular stage on wet pavement.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Characters with Spotlight you control get +1/+1."
+    ],
+    "purpose": "Spotlight support: Spotlight Characters get bigger.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "p": 1,
+      "h": 1,
+      "f": {
+       "kw": "Spotlight"
+      }
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-079",
+   "name": "Stolen Charge Cell",
+   "rarity": "UC",
+   "type": "Relic",
+   "episode": 3,
+   "character": null,
+   "art": "Mika holds charged cylindrical battery wearing warning tape.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (free, sacrifice this, once per turn): Target Stage Character you control gets +3/+0 until end of turn, then it can attack this turn even if it just arrived."
+    ],
+    "purpose": "One-shot burst: +3 power and Rush for a Character.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "pump",
+        "AS",
+        3,
+        0
+       ],
+       [
+        "grantCharge",
+        "LAST"
+       ]
+      ],
+      "sac": true,
+      "need": [
+       "AS"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-080",
+   "name": "Emergency Stitch Kit",
+   "rarity": "UC",
+   "type": "Relic",
+   "episode": 9,
+   "character": null,
+   "art": "Pippi's neatly arranged healer kit under green emergency lighting.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (free, sacrifice this, once per turn): Restore 4 Resolve. (Reaction)"
+    ],
+    "purpose": "Emergency life: restores 4 Resolve at any time.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "heal",
+        4
+       ]
+      ],
+      "sac": true,
+      "react": true
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-081",
+   "name": "Market of Borrowed Names",
+   "rarity": "UC",
+   "type": "Zone",
+   "episode": 5,
+   "character": null,
+   "art": "Winding market lane of stalls with signs written in lost languages.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Whenever one of your Relics leaves play: Draw a card."
+    ],
+    "purpose": "Relic engine zone: replaces Relics that leave play.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "relicLost",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-082",
+   "name": "Backlot Reality",
+   "rarity": "UC",
+   "type": "Zone",
+   "episode": 6,
+   "character": null,
+   "art": "Fake television scenery partially overlaps a real apartment block.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Your Backstage Characters can block."
+    ],
+    "purpose": "Backstage Characters may block: defensive zone that gives Backstage cards a role.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "backBlock",
+      "n": 1,
+      "scope": "me"
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-083",
+   "name": "Unsealed Service Corridor",
+   "rarity": "UC",
+   "type": "Zone",
+   "episode": 8,
+   "character": null,
+   "art": "Rift-lit maintenance stairwell with doors leading to mismatched places.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Characters with Resonance you control have Phase."
+    ],
+    "purpose": "Gives Resonance Characters Phase: a fast clock for wide teams.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "ally",
+      "kw": [
+       "Phase"
+      ],
+      "f": {
+       "kw": "Resonance"
+      }
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-084",
+   "name": "Rift Sickness",
+   "rarity": "UC",
+   "type": "Condition",
+   "episode": 9,
+   "character": null,
+   "art": "Kai gripping a railing as red energy veins flicker around his arm.",
+   "gameplay": {
+    "cost": 1,
+    "keywords": [],
+    "attach": "foe",
+    "copiesMax": 3,
+    "text": [
+     "Attach to the opponent.",
+     "At the host's wake, if the Rift is 3 or more: The opponent loses 2 Resolve.",
+     "Lasts 4 of the host's wakes."
+    ],
+    "purpose": "Rift Sickness: the opponent loses 2 Resolve at each wake while the Rift is wide, for four turns. Counter: lower the Rift or purge.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "hurt",
+        2
+       ]
+      ],
+      "of": "host",
+      "if": [
+       "rift",
+       ">=",
+       3
+      ]
+     },
+     {
+      "t": "tick",
+      "on": "wake",
+      "of": "host",
+      "ops": []
+     }
+    ],
+    "tick": 4
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-085",
+   "name": "Kai, Kinetic Daredevil",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 2,
+   "character": "Kai",
+   "art": "Male lead bracing against a collapsing overpass as commuters run.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [
+     "Rush",
+     "Momentum"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Rush (can attack the turn it enters)",
+     "Momentum (+1 Power for each Technique you played this turn, up to +3)",
+     "Next Episode: may be played on a Character you control named Kai that costs less, paying the difference."
+    ],
+    "purpose": "Kai at full speed: attacks immediately and swings harder with Techniques.",
+    "abilities": []
+   },
+   "alternatePrintings": [
+    "RP01-085-R_ALT"
+   ]
+  },
+  {
+   "id": "RP01-086",
+   "name": "Nova, Step Between",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 2,
+   "character": "Nova",
+   "art": "Nova pulls Kai through a razor-thin dimension seam.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Move target Character to the other row.",
+     "Next Episode: may be played on a Character you control named Nova that costs less, paying the difference."
+    ],
+    "purpose": "Moves any Character on the board between rows: repositioning as a weapon.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "stepAny",
+        "X"
+       ]
+      ],
+      "need": [
+       "XS"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-086-R_ALT"
+   ]
+  },
+  {
+   "id": "RP01-087",
+   "name": "Mika, Scrapstorm",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 3,
+   "character": "Mika",
+   "art": "Mika rides a tumbling machine assembly she's temporarily animated.",
+   "gameplay": {
+    "cost": 5,
+    "power": 4,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Imbue every Relic you control: each becomes a 3/3 Character that can attack, until end of turn.",
+     "Next Episode: may be played on a Character you control named Mika that costs less, paying the difference."
+    ],
+    "purpose": "Animates every Relic you control for a turn: big swing for Relic decks.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "animateAll",
+        3,
+        3
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-088",
+   "name": "Ayame, Severed Pursuit",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 4,
+   "character": "Ayame",
+   "art": "Ayame lands after a spectacular clean ghost-slaying attack.",
+   "gameplay": {
+    "cost": 4,
+    "power": 4,
+    "health": 3,
+    "keywords": [
+     "Sever"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Sever (can block Phase; Characters it damages are silenced)",
+     "When this attacks: Silence target enemy Character until the end of its controller's next turn.",
+     "Next Episode: may be played on a Character you control named Ayame that costs less, paying the difference."
+    ],
+    "purpose": "Aggressive Sever: silences an enemy every time it attacks.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "attack",
+      "ops": [
+       [
+        "silence",
+        "E"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-089",
+   "name": "Reiya, Keeper of Prices",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 5,
+   "character": "Reiya",
+   "art": "Reiya framed by priceless cursed objects with unreadable smile.",
+   "gameplay": {
+    "cost": 4,
+    "power": 2,
+    "health": 5,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Opposing Techniques cost 1 more while you control 1 or more Relic.",
+     "Next Episode: may be played on a Character you control named Reiya that costs less, paying the difference."
+    ],
+    "purpose": "Tax: opposing Techniques cost one more while you control a Relic.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "techCost",
+      "n": 1,
+      "scope": "foe",
+      "if": [
+       "relics",
+       ">=",
+       1
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-090",
+   "name": "The Ninth Vendor, Final Offer",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 5,
+   "character": "The Ninth Vendor",
+   "art": "Trader's mask reflects a childhood scene instead of a face.",
+   "gameplay": {
+    "cost": 5,
+    "power": 5,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Bargain: the opponent chooses one: (a) Draw 3 cards; or (b) The opponent sacrifices a Character of their choice.",
+     "Next Episode: may be played on a Character you control named The Ninth Vendor that costs less, paying the difference."
+    ],
+    "purpose": "Big Bargain: the opponent loses a Character or you draw three.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "bargain",
+        [
+         [
+          "draw",
+          3
+         ]
+        ],
+        [
+         [
+          "foeSacrifice",
+          1
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-091",
+   "name": "Vivi Vesper, Your Host Tonight",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 6,
+   "character": "Vivi Vesper",
+   "art": "Vivi turns an ordinary street into a cosmic television set.",
+   "gameplay": {
+    "cost": 4,
+    "power": 4,
+    "health": 4,
+    "keywords": [
+     "Spotlight"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Spotlight (while on the Stage, opposing effects that target a Character must target a Spotlight Character if able)",
+     "When this is targeted by an opposing effect: Draw a card.",
+     "Next Episode: may be played on a Character you control named Vivi Vesper that costs less, paying the difference."
+    ],
+    "purpose": "Rewards the opponent for targeting your team: draws a card when targeted.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "targeted",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-091-R_ALT"
+   ]
+  },
+  {
+   "id": "RP01-092",
+   "name": "Toma, Found the Flaw",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 7,
+   "character": "Toma",
+   "art": "Toma points to the fatal weakness in Brax's momentum strategy.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Mark each enemy Character.",
+     "Next Episode: may be played on a Character you control named Toma that costs less, paying the difference."
+    ],
+    "purpose": "Marks the whole enemy team.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "mark",
+        "ALL_E"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-093",
+   "name": "Brax, Walking Avalanche",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 7,
+   "character": "Brax",
+   "art": "Brax crashes through stacked freight containers in controlled action.",
+   "gameplay": {
+    "cost": 5,
+    "power": 3,
+    "health": 5,
+    "keywords": [
+     "Absorb"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Absorb (whenever damaged, gains that much Impact, up to 5)",
+     "When this attacks, if Impact on this is 1 or more: Release: remove all Impact from this Character and deal that much damage to target enemy Character.",
+     "Next Episode: may be played on a Character you control named Brax that costs less, paying the difference."
+    ],
+    "purpose": "Walking wall that fires stored Impact when it attacks.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "attack",
+      "ops": [
+       [
+        "release",
+        "E"
+       ]
+      ],
+      "if": [
+       "impact",
+       ">=",
+       1
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-094",
+   "name": "Lulu, Wrong Way Hero",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 8,
+   "character": "Lulu",
+   "art": "Lulu accidentally saves everyone while confidently holding the map upside-down.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [
+     "Resonance",
+     "Rush"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Resonance (+1 Power for each other Resonance Character you control, up to +2)",
+     "Rush (can attack the turn it enters)",
+     "Next Episode: may be played on a Character you control named Lulu that costs less, paying the difference."
+    ],
+    "purpose": "Hasty Resonance attacker.",
+    "abilities": []
+   },
+   "alternatePrintings": [
+    "RP01-094-R_ALT"
+   ]
+  },
+  {
+   "id": "RP01-095",
+   "name": "Momo, Knows Too Much",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 8,
+   "character": "Momo",
+   "art": "Momo watches Kai with unnervingly intelligent expression.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 3,
+    "keywords": [
+     "Haunt"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Haunt (when defeated, goes to your Rift pool instead of the discard pile)",
+     "When this enters: Look at the opponent's hand. They discard a card of your choice.",
+     "Next Episode: may be played on a Character you control named Momo that costs less, paying the difference."
+    ],
+    "purpose": "Hand disruption on a body: look at the hand and discard any card.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "strip",
+        null
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-096",
+   "name": "Pippi, You Will Survive",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 9,
+   "character": "Pippi",
+   "art": "Petite adult Pippi keeping a terrified patient's gaze steady during healing.",
+   "gameplay": {
+    "cost": 4,
+    "power": 2,
+    "health": 5,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Return a Character with cost 3 or less from your discard pile to your Backstage and restore 3 Resolve.",
+     "Next Episode: may be played on a Character you control named Pippi that costs less, paying the difference."
+    ],
+    "purpose": "Brings back a fallen Character Backstage and restores Resolve.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "revive",
+        {
+         "type": "Character",
+         "maxCost": 3
+        },
+        "back",
+        3
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-097",
+   "name": "Crow, Loaded Coin",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 10,
+   "character": "Crow",
+   "art": "Crow catches a coin against Kurohama neon, predatory grin.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Once a turn, when you lose a Wager, you may Wager again.",
+     "Next Episode: may be played on a Character you control named Crow that costs less, paying the difference."
+    ],
+    "purpose": "Wager support: once a turn, a missed Wager may be repeated.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "reroll",
+      "n": 1,
+      "scope": "me"
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-097-R_ALT"
+   ]
+  },
+  {
+   "id": "RP01-098",
+   "name": "Kai, Losing Bet",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 10,
+   "character": "Kai",
+   "art": "Kai knocked down while Crow walks away untouched.",
+   "gameplay": {
+    "cost": 4,
+    "power": 3,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this attacks: Wager (call High or Low): reveal the top card of your deck. High wins on cost 3+, Low on cost 2 or less. If you win: Deal 3 damage to target enemy Character. If you lose: You lose 2 Resolve.",
+     "Next Episode: may be played on a Character you control named Kai that costs less, paying the difference."
+    ],
+    "purpose": "Gambling attacker: damages an enemy Character if the wager hits, hurts you if not.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "attack",
+      "ops": [
+       [
+        "wager",
+        "choose",
+        [
+         [
+          "dmg",
+          "E",
+          3
+         ]
+        ],
+        [
+         [
+          "payLife",
+          2
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-099",
+   "name": "Nova, What She Didn't Say",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 11,
+   "character": "Nova",
+   "art": "Nova with hidden record reflected in her eyes; emotionally guarded.",
+   "gameplay": {
+    "cost": 5,
+    "power": 3,
+    "health": 4,
+    "keywords": [
+     "Phase"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Phase (can be blocked only by Phase or Sever Characters; no effect at Rift 0-2 or while Marked)",
+     "When this enters: Return target enemy Character with cost 4 or less to its owner's hand.",
+     "Next Episode: may be played on a Character you control named Nova that costs less, paying the difference."
+    ],
+    "purpose": "Tempo play: returns an enemy Character on arrival.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "bounce",
+        {
+         "t": "E",
+         "maxCost": 4
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-100",
+   "name": "Reiya, Exit Clause",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 11,
+   "character": "Reiya",
+   "art": "Reiya tears up a false contract and reveals a second one underneath.",
+   "gameplay": {
+    "cost": 3,
+    "power": 2,
+    "health": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this is defeated: Search your deck for a Relic with cost 3 or less and put it into your hand.",
+     "Next Episode: may be played on a Character you control named Reiya that costs less, paying the difference."
+    ],
+    "purpose": "Replaces itself with a Relic when it dies.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "defeat",
+      "ops": [
+       [
+        "search",
+        {
+         "type": "Relic",
+         "maxCost": 3
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-101",
+   "name": "Ayame, Holding the Line",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 12,
+   "character": "Ayame",
+   "art": "Ayame protects the tunnel exit against Thread-Eater silhouettes.",
+   "gameplay": {
+    "cost": 4,
+    "power": 2,
+    "health": 5,
+    "keywords": [
+     "Sever"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Sever (can block Phase; Characters it damages are silenced)",
+     "Opposing Characters while attacking get -1/0.",
+     "Next Episode: may be played on a Character you control named Ayame that costs less, paying the difference."
+    ],
+    "purpose": "Defensive anchor: every attacker loses a point of Power.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "foe",
+      "p": -1,
+      "f": {
+       "attacking": true
+      }
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-102",
+   "name": "Mika, Makeshift Beacon",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 12,
+   "character": "Mika",
+   "art": "Mika raises a charged scrapyard lantern to illuminate the sealed door.",
+   "gameplay": {
+    "cost": 3,
+    "power": 3,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Your imbued Relics get +2/+2.",
+     "Act (1 energy, once per turn): Imbue one of your Relics: it becomes a 2/2 Character that can attack, until end of turn.",
+     "Next Episode: may be played on a Character you control named Mika that costs less, paying the difference."
+    ],
+    "purpose": "Makes animated Relics much stronger.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "animAlly",
+      "p": 2,
+      "h": 2
+     },
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "animate",
+        2,
+        2
+       ]
+      ],
+      "need": [
+       "RELIC_ME"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-103",
+   "name": "Pippi, Hands Don't Shake",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 12,
+   "character": "Pippi",
+   "art": "Pippi takes a steadying breath before a dangerous rescue.",
+   "gameplay": {
+    "cost": 3,
+    "power": 1,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At the end of your turn: Restore 2 Resolve.",
+     "Next Episode: may be played on a Character you control named Pippi that costs less, paying the difference."
+    ],
+    "purpose": "Steady Mend: restores Resolve at the end of every turn.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "end",
+      "ops": [
+       [
+        "heal",
+        2
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-103-R_ALT"
+   ]
+  },
+  {
+   "id": "RP01-104",
+   "name": "Lulu, All Together Now",
+   "rarity": "R",
+   "type": "Character",
+   "episode": 12,
+   "character": "Lulu",
+   "art": "Lulu's resonance links the scattered crew into one protective field.",
+   "gameplay": {
+    "cost": 5,
+    "power": 3,
+    "health": 3,
+    "keywords": [
+     "Resonance"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Resonance (+1 Power for each other Resonance Character you control, up to +2)",
+     "When this enters: Each Character you control with Resonance gets +1/+1 until end of turn, then each Character you control with Resonance can attack this turn even if it just arrived.",
+     "Next Episode: may be played on a Character you control named Lulu that costs less, paying the difference."
+    ],
+    "purpose": "Burst for wide Resonance teams: everything grows and can attack at once.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "pump",
+        {
+         "t": "ALL_A",
+         "kw": "Resonance"
+        },
+        1,
+        1
+       ],
+       [
+        "grantCharge",
+        {
+         "t": "ALL_A",
+         "kw": "Resonance"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-105",
+   "name": "Kinetic Reversal",
+   "rarity": "R",
+   "type": "Technique",
+   "episode": 2,
+   "character": null,
+   "art": "Kai reverses a speeding truck's momentum inches before collision.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Deal damage equal to the highest Power among your Stage Characters to target enemy Character. (Reaction)"
+    ],
+    "purpose": "Kinetic removal: transfers the force of your best Character into an enemy.",
+    "abilities": [],
+    "ops": [
+     [
+      "dmgPow",
+      "E"
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-106",
+   "name": "Ghostline Guillotine",
+   "rarity": "R",
+   "type": "Technique",
+   "episode": 4,
+   "character": null,
+   "art": "Ayame cleaves a cascading bundle of cursed spectral threads.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Defeat target enemy Character that is Marked, has a Condition, Phase or Haunt, or is silenced."
+    ],
+    "purpose": "Kills a Character that is Marked, has a Condition, Phase, Haunt, or is silenced.",
+    "abilities": [],
+    "ops": [
+     [
+      "kill",
+      {
+       "t": "E",
+       "weak": true
+      }
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-107",
+   "name": "Resonance Overflow",
+   "rarity": "R",
+   "type": "Technique",
+   "episode": 8,
+   "character": null,
+   "art": "Lulu's emotional wave drives Rift creatures back across the district.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "reaction": true,
+    "copiesMax": 3,
+    "text": [
+     "Each Character you control with Resonance gets +2/+1 until end of turn. (Reaction)"
+    ],
+    "purpose": "Large Resonance trick.",
+    "abilities": [],
+    "ops": [
+     [
+      "pump",
+      {
+       "t": "ALL_A",
+       "kw": "Resonance"
+      },
+      2,
+      1
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-108",
+   "name": "Suture the Impossible",
+   "rarity": "R",
+   "type": "Technique",
+   "episode": 9,
+   "character": null,
+   "art": "Pippi threads reality itself across an unstable fracture.",
+   "gameplay": {
+    "cost": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Return a Character with cost 4 or less from your discard pile to your Backstage, then lower the Rift by 2."
+    ],
+    "purpose": "Returns a Character from the discard and mends the Rift.",
+    "abilities": [],
+    "ops": [
+     [
+      "revive",
+      {
+       "type": "Character",
+       "maxCost": 4
+      },
+      "back",
+      0
+     ],
+     [
+      "rift",
+      -2
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-109",
+   "name": "Probability Theft",
+   "rarity": "R",
+   "type": "Technique",
+   "episode": 10,
+   "character": null,
+   "art": "Crow snatches the only favourable outcome from multiple glowing coin paths.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Wager (call High or Low): reveal the top card of your deck. High wins on cost 3+, Low on cost 2 or less. If you win: Look at the opponent's hand and take a card with cost 3 or less from it, then draw a card. If you lose: Discard a card."
+    ],
+    "purpose": "Probability theft: steals a card if the wager hits, costs a card if not.",
+    "abilities": [],
+    "ops": [
+     [
+      "wager",
+      "choose",
+      [
+       [
+        "steal",
+        {
+         "maxCost": 3
+        }
+       ],
+       [
+        "draw",
+        1
+       ]
+      ],
+      [
+       [
+        "discard",
+        1
+       ]
+      ]
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-110",
+   "name": "First Door, Last Chance",
+   "rarity": "R",
+   "type": "Technique",
+   "episode": 12,
+   "character": null,
+   "art": "Kai and Nova push toward the vault as geometry folds around them.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Fire the next Anomaly now, then draw 2 cards."
+    ],
+    "purpose": "Fires the next Anomaly immediately and draws: lets a Rift deck choose its moment.",
+    "abilities": [],
+    "ops": [
+     [
+      "fireAnomaly"
+     ],
+     [
+      "draw",
+      2
+     ]
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-111",
+   "name": "The Parcel's Heart",
+   "rarity": "R",
+   "type": "Relic",
+   "episode": 12,
+   "character": null,
+   "art": "Opened object reveals a floating rotating knot of dimensional energy.",
+   "gameplay": {
+    "cost": 2,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake: Put a Seal counter on this.",
+     "Act (free, sacrifice this, once per turn): Draw 3 cards, then restore 5 Resolve."
+    ],
+    "purpose": "Long fuse payoff: after three turns, three cards and five Resolve.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "counter",
+        1
+       ]
+      ]
+     },
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "draw",
+        3
+       ],
+       [
+        "heal",
+        5
+       ]
+      ],
+      "sac": true,
+      "if": [
+       "counters",
+       ">=",
+       3
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-112",
+   "name": "Vault Beneath Kurohama",
+   "rarity": "R",
+   "type": "Zone",
+   "episode": 12,
+   "character": null,
+   "art": "Massive subterranean door opening into a starless impossible corridor.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Your Relics cost 1 less.",
+     "At your wake, if you control 1 or more Relic: Draw a card."
+    ],
+    "purpose": "Relic deck zone: cheaper Relics and an extra card every turn you control one.",
+    "abilities": [
+     {
+      "t": "rule",
+      "rule": "relicDiscount",
+      "n": 1,
+      "scope": "me"
+     },
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ],
+      "if": [
+       "relics",
+       ">=",
+       1
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-113",
+   "name": "The Forgotten Disaster",
+   "rarity": "R",
+   "type": "Condition",
+   "episode": 12,
+   "character": null,
+   "art": "Ghostly overlay of old catastrophe across today's city map.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "attach": "foe",
+    "copiesMax": 3,
+    "text": [
+     "Attach to the opponent.",
+     "After 3 of the host's wakes, this is removed and: Deal 5 damage to each Character."
+    ],
+    "purpose": "Delayed sweep: after three of the opponent's turns every Character takes 5 damage. Plan around it; Sever answers it.",
+    "abilities": [
+     {
+      "t": "tick",
+      "on": "wake",
+      "of": "host",
+      "ops": [
+       [
+        "dmg",
+        "ALL_X",
+        5
+       ]
+      ]
+     }
+    ],
+    "tick": 3
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-114",
+   "name": "The Countdown Begins",
+   "rarity": "R",
+   "type": "Condition",
+   "episode": 12,
+   "character": null,
+   "art": "All street screens show the same ominous numbers at midnight.",
+   "gameplay": {
+    "cost": 3,
+    "keywords": [],
+    "attach": "foe",
+    "copiesMax": 3,
+    "text": [
+     "Attach to the opponent.",
+     "After 4 of the host's wakes, this is removed and: The opponent loses 7 Resolve."
+    ],
+    "purpose": "Countdown: the opponent loses 7 Resolve after four of their turns unless they remove it. A slow finisher with several answers.",
+    "abilities": [
+     {
+      "t": "tick",
+      "on": "wake",
+      "of": "host",
+      "ops": [
+       [
+        "hurt",
+        7
+       ]
+      ]
+     }
+    ],
+    "tick": 4
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-115",
+   "name": "Kai, No One Left Behind",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 12,
+   "character": "Kai",
+   "art": "Male Kai redirects catastrophic pressure away from the group; emotional hero centerpiece.",
+   "gameplay": {
+    "cost": 5,
+    "power": 4,
+    "health": 4,
+    "keywords": [
+     "Momentum"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Momentum (+1 Power for each Technique you played this turn, up to +3)",
+     "When this enters: Return a Character with cost 3 or less from your discard pile to your Backstage.",
+     "Next Episode: may be played on a Character you control named Kai that costs less, paying the difference."
+    ],
+    "purpose": "Recovers an ally on arrival: the comeback finisher of the Kinetic deck.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "revive",
+        {
+         "type": "Character",
+         "maxCost": 3
+        },
+        "back",
+        0
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-115-SR_ALT"
+   ]
+  },
+  {
+   "id": "RP01-116",
+   "name": "Nova, The Space Between Us",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 11,
+   "character": "Nova",
+   "art": "Silver-haired Nova alone amid shattered mirrors of possible worlds; beautiful and vulnerable.",
+   "gameplay": {
+    "cost": 5,
+    "power": 4,
+    "health": 4,
+    "keywords": [
+     "Phase"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Phase (can be blocked only by Phase or Sever Characters; no effect at Rift 0-2 or while Marked)",
+     "When this enters: Choose the next Anomaly, then raise the Rift by 2.",
+     "Next Episode: may be played on a Character you control named Nova that costs less, paying the difference."
+    ],
+    "purpose": "Takes control of the Rift: picks the next Anomaly and pushes the gauge.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "setAnomaly"
+       ],
+       [
+        "rift",
+        2
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-116-SR_ALT",
+    "RP01-116-EB"
+   ]
+  },
+  {
+   "id": "RP01-117",
+   "name": "Mika, Impossible Machine",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 12,
+   "character": "Mika",
+   "art": "Mika assembles salvaged devices into a towering protective beacon under live fire.",
+   "gameplay": {
+    "cost": 5,
+    "power": 3,
+    "health": 5,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (1 energy, once per turn): Imbue one of your Relics: it becomes a 4/4 Character that can attack, until end of turn.",
+     "Next Episode: may be played on a Character you control named Mika that costs less, paying the difference."
+    ],
+    "purpose": "Animates a Relic as a 4/4 every turn: the Relic deck's engine.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 1,
+      "ops": [
+       [
+        "animate",
+        4,
+        4
+       ]
+      ],
+      "need": [
+       "RELIC_ME"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-117-SR_ALT"
+   ]
+  },
+  {
+   "id": "RP01-118",
+   "name": "Ayame, Cut What Cannot Be Cut",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 12,
+   "character": "Ayame",
+   "art": "Ayame slices apart a vast supernatural bond in an elegant full-action composition.",
+   "gameplay": {
+    "cost": 5,
+    "power": 4,
+    "health": 3,
+    "keywords": [
+     "Sever",
+     "Rush"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Sever (can block Phase; Characters it damages are silenced)",
+     "Rush (can attack the turn it enters)",
+     "When this enters: Sever: destroy an opposing Condition, Relic or Zone.",
+     "Next Episode: may be played on a Character you control named Ayame that costs less, paying the difference."
+    ],
+    "purpose": "Cuts a Condition, Relic or Zone on arrival and attacks at once.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "sever",
+        "any"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-118-SR_ALT"
+   ]
+  },
+  {
+   "id": "RP01-119",
+   "name": "Toma, One Perfect Answer",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 7,
+   "character": "Toma",
+   "art": "Toma's calculation visually predicts and counters Brax's enormous attack.",
+   "gameplay": {
+    "cost": 5,
+    "power": 3,
+    "health": 4,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (3 energy, once per turn): Defeat target enemy Character that is Marked.",
+     "Next Episode: may be played on a Character you control named Toma that costs less, paying the difference."
+    ],
+    "purpose": "Kills a Marked Character for three energy each turn: expensive, but strong control.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 3,
+      "ops": [
+       [
+        "kill",
+        {
+         "t": "E",
+         "marked": true
+        }
+       ]
+      ],
+      "need": [
+       {
+        "t": "E",
+        "marked": true
+       }
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-119-SR_ALT"
+   ]
+  },
+  {
+   "id": "RP01-120",
+   "name": "Lulu, Bloom Against the Dark",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 8,
+   "character": "Lulu",
+   "art": "Lulu shelters strangers in a luminous wave of compassion.",
+   "gameplay": {
+    "cost": 5,
+    "power": 3,
+    "health": 5,
+    "keywords": [
+     "Resonance"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Resonance (+1 Power for each other Resonance Character you control, up to +2)",
+     "Other Characters with Resonance you control get +1/0.",
+     "Whenever another Character you control is defeated: Draw a card.",
+     "Next Episode: may be played on a Character you control named Lulu that costs less, paying the difference."
+    ],
+    "purpose": "Resonance lord: a bigger team and card flow when allies fall.",
+    "abilities": [
+     {
+      "t": "st",
+      "who": "allyOther",
+      "p": 1,
+      "f": {
+       "kw": "Resonance"
+      }
+     },
+     {
+      "t": "tr",
+      "on": "defeat",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ],
+      "of": "ally"
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-120-SR_ALT"
+   ]
+  },
+  {
+   "id": "RP01-121",
+   "name": "Pippi, Everybody Breathe",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 9,
+   "character": "Pippi",
+   "art": "Pippi saves multiple patients at once with glorious mint-gold healing threads.",
+   "gameplay": {
+    "cost": 5,
+    "power": 2,
+    "health": 6,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "At your wake: Restore 2 Resolve, then lower the Rift by 1.",
+     "Next Episode: may be played on a Character you control named Pippi that costs less, paying the difference."
+    ],
+    "purpose": "Mend anchor: heals and mends the Rift every turn.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wake",
+      "ops": [
+       [
+        "heal",
+        2
+       ],
+       [
+        "rift",
+        -1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-121-SR_ALT"
+   ]
+  },
+  {
+   "id": "RP01-122",
+   "name": "Momo, Something Ancient",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 8,
+   "character": "Momo",
+   "art": "Momo projects a vast terrifying yokai silhouette across sealed district walls.",
+   "gameplay": {
+    "cost": 5,
+    "power": 4,
+    "health": 4,
+    "keywords": [
+     "Haunt"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Haunt (when defeated, goes to your Rift pool instead of the discard pile)",
+     "When this enters: Look at the opponent's hand. They discard a card of your choice.",
+     "Other Characters you control have Haunt.",
+     "Next Episode: may be played on a Character you control named Momo that costs less, paying the difference."
+    ],
+    "purpose": "Gives your team Haunt and strips a card: a grindy value engine.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "strip",
+        null
+       ]
+      ]
+     },
+     {
+      "t": "st",
+      "who": "allyOther",
+      "kw": [
+       "Haunt"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-123",
+   "name": "Crow, All Odds Mine",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 10,
+   "character": "Crow",
+   "art": "Crow stands in a vortex of broken probability paths as Kai falls.",
+   "gameplay": {
+    "cost": 5,
+    "power": 4,
+    "health": 5,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Whenever you win a Wager: The opponent loses 2 Resolve.",
+     "Whenever you lose a Wager: Draw a card.",
+     "Next Episode: may be played on a Character you control named Crow that costs less, paying the difference."
+    ],
+    "purpose": "Wager payoff: every Wager now gives something.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "wagerWin",
+      "ops": [
+       [
+        "hurt",
+        2
+       ]
+      ]
+     },
+     {
+      "t": "tr",
+      "on": "wagerLose",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-124",
+   "name": "Reiya, The Price of Truth",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 11,
+   "character": "Reiya",
+   "art": "Reiya holds two futures in opposite hands while making the crew an offer.",
+   "gameplay": {
+    "cost": 5,
+    "power": 3,
+    "health": 5,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "Act (free, once per turn): Sacrifice another Relic you control. If you do, deal damage equal to its cost +2 to target enemy Character.",
+     "Next Episode: may be played on a Character you control named Reiya that costs less, paying the difference."
+    ],
+    "purpose": "Converts Relics into damage: the Relic deck's removal.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "dmgByRelic",
+        "E",
+        2
+       ]
+      ],
+      "sacNeed": true,
+      "need": [
+       "E"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-125",
+   "name": "Brax, Impact Reservoir",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 7,
+   "character": "Brax",
+   "art": "Brax's stored energy erupts into a towering red shockwave.",
+   "gameplay": {
+    "cost": 6,
+    "power": 4,
+    "health": 7,
+    "keywords": [
+     "Absorb",
+     "Reservoir"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Absorb (whenever damaged, gains that much Impact, up to 5)",
+     "Reservoir (collects Impact whenever any Character you control is damaged, up to 10)",
+     "Act (free, once per turn): Release: remove all Impact from this Character and deal that much damage to the opponent's Resolve.",
+     "Act (free, once per turn): Release: remove all Impact from this Character and deal that much damage to target enemy Character.",
+     "Next Episode: may be played on a Character you control named Brax that costs less, paying the difference."
+    ],
+    "purpose": "Stores Impact from the whole team and releases it as damage to a Character or the opponent. The Impact deck's finisher.",
+    "abilities": [
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "release",
+        "foe"
+       ]
+      ],
+      "if": [
+       "impact",
+       ">=",
+       1
+      ]
+     },
+     {
+      "t": "act",
+      "cost": 0,
+      "ops": [
+       [
+        "release",
+        "E"
+       ]
+      ],
+      "if": [
+       "impact",
+       ">=",
+       1
+      ],
+      "need": [
+       "E"
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-126",
+   "name": "The Ninth Vendor, A Life for a Name",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 5,
+   "character": "The Ninth Vendor",
+   "art": "Vendor presenting a luminous memory behind an intricate masked silhouette.",
+   "gameplay": {
+    "cost": 6,
+    "power": 6,
+    "health": 5,
+    "keywords": [],
+    "copiesMax": 3,
+    "text": [
+     "When this enters: Bargain: the opponent chooses one: (a) The opponent loses 6 Resolve; or (b) The opponent sacrifices their strongest Stage Character.",
+     "Next Episode: may be played on a Character you control named The Ninth Vendor that costs less, paying the difference."
+    ],
+    "purpose": "Brutal Bargain: six Resolve or their best Stage Character.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "bargain",
+        [
+         [
+          "hurt",
+          6
+         ]
+        ],
+        [
+         [
+          "foeSacrificeBest"
+         ]
+        ]
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-127",
+   "name": "Vivi Vesper, Special Broadcast",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 6,
+   "character": "Vivi Vesper",
+   "art": "Vivi fractures the whole illustration into stacked camera feeds.",
+   "gameplay": {
+    "cost": 5,
+    "power": 4,
+    "health": 5,
+    "keywords": [
+     "Spotlight"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Spotlight (while on the Stage, opposing effects that target a Character must target a Spotlight Character if able)",
+     "When this enters: Each opposing Backstage Character moves onto the Stage if there is room, then draw a card.",
+     "Next Episode: may be played on a Character you control named Vivi Vesper that costs less, paying the difference."
+    ],
+    "purpose": "Drags the opponent's Backstage Characters onto the Stage and draws a card.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "pullStage"
+       ],
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-127-SR_ALT"
+   ]
+  },
+  {
+   "id": "RP01-128",
+   "name": "The Door That Remembers",
+   "rarity": "SR",
+   "type": "Character",
+   "episode": 12,
+   "character": null,
+   "art": "Enormous ancient Rift door with tiny Kai facing it; scale and mystery dominate.",
+   "gameplay": {
+    "cost": 6,
+    "power": 5,
+    "health": 4,
+    "keywords": [
+     "Phase"
+    ],
+    "copiesMax": 3,
+    "text": [
+     "Phase (can be blocked only by Phase or Sever Characters; no effect at Rift 0-2 or while Marked)",
+     "When this enters: Return 2 cards from your discard pile to your hand."
+    ],
+    "purpose": "Memory: returns two cards from the discard. A late-game engine for every grind deck.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "recur",
+        null,
+        2
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": []
+  },
+  {
+   "id": "RP01-129",
+   "name": "Ayame, The Cut Between Worlds",
+   "rarity": "SEC",
+   "type": "Character",
+   "episode": 12,
+   "character": "Ayame",
+   "art": "Prestige hero composition: adult Ayame suspended mid-sword arc cleaving dimensional geometry; anatomically sound.",
+   "gameplay": {
+    "cost": 6,
+    "power": 5,
+    "health": 4,
+    "keywords": [
+     "Sever",
+     "Rush"
+    ],
+    "copiesMax": 1,
+    "text": [
+     "Sever (can block Phase; Characters it damages are silenced)",
+     "Rush (can attack the turn it enters)",
+     "When this enters: Sever: destroy an opposing Condition, Relic or Zone, then silence each enemy Character until the end of its controller's next turn.",
+     "Next Episode: may be played on a Character you control named Ayame that costs less, paying the difference."
+    ],
+    "purpose": "Cuts an opposing Condition, Relic or Zone and silences every opposing Character. A finisher with a high price.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "sever",
+        "any"
+       ],
+       [
+        "silence",
+        "ALL_E"
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-129-SEC_ALT"
+   ]
+  },
+  {
+   "id": "RP01-130",
+   "name": "Mika, Trouble Looks Good on Me",
+   "rarity": "SEC",
+   "type": "Character",
+   "episode": 12,
+   "character": "Mika",
+   "art": "Heartbreaker: playful adult Mika in grounded dynamic three-quarter standing pose, tool holster, wind-swept ponytail and gold sparks; clear anatomically correct limbs.",
+   "gameplay": {
+    "cost": 6,
+    "power": 5,
+    "health": 5,
+    "keywords": [],
+    "copiesMax": 1,
+    "text": [
+     "When this enters: Imbue every Relic you control: each becomes a 4/4 Character that can attack, until end of turn.",
+     "At the end of your turn: Draw a card.",
+     "Next Episode: may be played on a Character you control named Mika that costs less, paying the difference."
+    ],
+    "purpose": "Relic-deck finisher: animates every Relic at 4/4 and draws at end of turn.",
+    "abilities": [
+     {
+      "t": "tr",
+      "on": "enter",
+      "ops": [
+       [
+        "animateAll",
+        4,
+        4
+       ]
+      ]
+     },
+     {
+      "t": "tr",
+      "on": "end",
+      "ops": [
+       [
+        "draw",
+        1
+       ]
+      ]
+     }
+    ]
+   },
+   "alternatePrintings": [
+    "RP01-130-SEC_ALT"
+   ]
+  }
+ ]
+}

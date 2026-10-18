@@ -105,7 +105,6 @@ function pow(g,c){ let n=c.anim? c.anim.p : (def(c).p||0); n+=c.ctr.p||0; for(co
   return Math.max(0,n); }
 function hp(g,c){ let n=c.anim? c.anim.h : (def(c).h||0); n+=c.ctr.h||0; for(const b of c.buf) n+=b.h;
   for(const s of statSrc(g)) for(const a of abilities(g,s)) if(a.t==='st'&&a.h&&appliesTo(g,s,a,c)) n+=a.h;
-  if(!c.anim&&kwSet(g,c).has('Resonance')) n+=Math.min(g.R.resonanceCap,chars(g,c.ctl).filter(o=>o!==c&&hasKw(g,o,'Resonance')).length);
   return n; }
 function rules(g,p,key){ let n=0; for(const s of statSrc(g)) for(const a of abilities(g,s)) if(a.t==='rule'&&a.rule===key){
     const sc=a.scope||'me'; const hostP=s.host? s.host.ctl : s.hostP;
@@ -166,6 +165,7 @@ function hasTarget(g,p,spec){ if(typeof spec==='string'){ switch(spec){
     case 'COND_ANY': return allChars(g).some(c=>c.atch.length)||g.P[0].conds.length+g.P[1].conds.length>0;
     case 'RELIC_ME': return g.P[p].relics.length>0;
     case 'SEVERABLE': return !!g.zone&&g.zone.ctl!==p||g.P[1-p].relics.length>0||chars(g,1-p).some(c=>c.atch.length)||g.P[1-p].conds.length>0||chars(g,p).some(c=>c.atch.some(a=>a.ctl!==p))||g.P[p].conds.some(a=>a.ctl!==p)||(!!g.zone&&g.zone.ctl===1-p);
+    case 'SEVERCZ': return allChars(g).some(c=>c.atch.length)||g.P[0].conds.length+g.P[1].conds.length>0||!!g.zone;
     case 'DISCARD_CHAR': return g.P[p].discard.some(c=>isChar(c));
     case 'FOEHAND': return g.P[1-p].hand.length>0; } }
   return cand(g,p,spec).list.length>0; }
@@ -191,7 +191,7 @@ const OPS={
   setAnomaly(g,ctx){ const k=choose(g,ctx.p,'anomaly',ANOM_KEYS,{ask:true}); g.anom=k; L(g,`The next Anomaly is now ${ANOMALIES[k].name}`); },
   fireAnomaly(g){ fireAnomaly(g); },
   energy(g,ctx,[_,n]){ g.P[ctx.p].temp+=n; },
-  pull(g,ctx,[_,n]){ const pl=g.P[ctx.p]; for(let i=0;i<n;i++){ if(!pl.rift.length) return; const r=choose(g,ctx.p,'pull',pl.rift,{ask:true}); pl.rift.splice(pl.rift.indexOf(r),1); pl.hand.push(r.card); L(g,`P${ctx.p} pulls ${nm(r.card)} from the Rift pool`); } },
+  pull(g,ctx,[_,n]){ const pl=g.P[ctx.p]; for(let i=0;i<n;i++){ if(!pl.rift.length) return; const r=choose(g,ctx.p,'pull',[null].concat(pl.rift),{ask:true}); if(!r) return; pl.rift.splice(pl.rift.indexOf(r),1); pl.hand.push(r.card); L(g,`P${ctx.p} pulls ${nm(r.card)} from the Rift pool`); } },
   slip(g,ctx,[_,n]){ const pl=g.P[ctx.p]; for(let i=0;i<n;i++){ if(!pl.hand.length||pl.rift.length>=g.R.energyCap) return; const c=choose(g,ctx.p,'slip',pl.hand,{}); pl.hand.splice(pl.hand.indexOf(c),1); pl.rift.push({card:c,ready:true}); L(g,`P${ctx.p} slips a card (extra)`); fire(g,'slip',{pl:ctx.p}); } },
   mark(g,ctx,[_,T]){ for(const c of sel(g,ctx,T,'mark')){ c.mark=true; L(g,`${nm(c)} is Marked`); } },
   unmark(g,ctx,[_,T]){ for(const c of sel(g,ctx,T,'unmark')) c.mark=false; },
@@ -207,9 +207,9 @@ const OPS={
   purgeMe(g,ctx){ for(const a of g.P[ctx.p].conds.slice()) removeCond(g,a); },
   sever(g,ctx,[_,kind]){ // destroy one Condition, Relic or Zone controlled by or attached to the opponent (or any Condition)
     const opts=[]; const foe=1-ctx.p;
-    if(kind==='cond'||kind==='any'){ for(const c of chars(g,foe)) for(const a of c.atch) opts.push(a); for(const a of g.P[foe].conds) opts.push(a); for(const c of chars(g,ctx.p)) for(const a of c.atch) if(a.ctl===foe) opts.push(a); for(const a of g.P[ctx.p].conds) if(a.ctl===foe) opts.push(a); }
+    if(kind==='cond'||kind==='any'||kind==='cz'){ for(const c of chars(g,foe)) for(const a of c.atch) opts.push(a); for(const a of g.P[foe].conds) opts.push(a); for(const c of chars(g,ctx.p)) for(const a of c.atch) if(a.ctl===foe) opts.push(a); for(const a of g.P[ctx.p].conds) if(a.ctl===foe) opts.push(a); }
     if(kind==='relic'||kind==='any') for(const r of g.P[foe].relics) opts.push(r);
-    if(kind==='zone'||kind==='any') if(g.zone) opts.push(g.zone);
+    if(kind==='zone'||kind==='any'||kind==='cz') if(g.zone) opts.push(g.zone);
     const seen=[...new Set(opts)]; const t=choose(g,ctx.p,'sever',seen,{}); if(!t) return;
     L(g,`Sever: ${nm(t)}`); if(t===g.zone) destroyZone(g); else if(t.anim!==undefined&&g.P[t.ctl].relics.includes(t)) destroyRelic(g,t,'sever'); else removeCond(g,t); },
   severCond(g,ctx){ const opts=[]; for(const c of allChars(g)) for(const a of c.atch) opts.push(a); for(const pl of g.P) for(const a of pl.conds) opts.push(a); const t=choose(g,ctx.p,'sever',opts,{}); if(t){ L(g,`Sever: ${nm(t)}`); removeCond(g,t); } },
@@ -309,7 +309,8 @@ function actionList(g,p,window){ // window: 'main' | 'react'. Every legal action
   if(window==='main'){
     if(pl.slipped<g.R.slipPerTurn+pl.extraSlip && pl.rift.length<g.R.energyCap) { const seen=new Set(); pl.hand.forEach((c,i)=>{ if(!seen.has(c.id)){ seen.add(c.id); acts.push({k:'slip',i}); } }); }
   }
-  pl.hand.forEach((card,i)=>{ const d=def(card); const c=cost(g,p,card);
+  const seenPlay=new Set();
+  pl.hand.forEach((card,i)=>{ const d=def(card); const c=cost(g,p,card); if(seenPlay.has(card.id)) return; seenPlay.add(card.id);
     if(window==='react'){ if(d.type!=='Technique'||!d.react) return; }
     if(c<=en||d.type==='Character'){ }
     if(d.type==='Character'){ if(window!=='main') return;
@@ -365,7 +366,7 @@ function doCombat(g,p){ const q=1-p; const avail=attackersOf(g,p); if(!avail.len
 
 // ---------------------------------------------------------------- turn structure
 function wake(g,p){ const pl=g.P[p]; g.active=p; g.turn++; pl.techs=0; pl.slipped=0; pl.stepped=false; pl.extraSlip=0; pl.temp=pl.nextEnergy; pl.nextEnergy=0; pl.disc=0;
-  for(const r of pl.rift) r.ready=true; for(const c of chars(g,p)) c.exh=false; for(const r of pl.relics) { r.exh=false; }
+  if(g.turn===4&&p!==g.first) pl.temp+=g.R.secondPlayerSecondEnergy||0; for(const r of pl.rift) r.ready=true; for(const c of chars(g,p)) c.exh=false; for(const r of pl.relics) { r.exh=false; }
   if(p===g.first){ g.round++; if(g.round>1&&g.R.riftPerRound) setRift(g,g.rift+g.R.riftPerRound); }
   L(g,`--- P${p} wakes (Rift ${g.rift}, Resolve ${pl.resolve}/${g.P[1-p].resolve}) ---`); fire(g,'wake',{pl:p}); sweep(g); }
 function endTurn(g,p){ const pl=g.P[p]; fire(g,'end',{pl:p}); sweep(g);
@@ -400,7 +401,7 @@ function newGame(deckA,deckB,seed,opts){ opts=opts||{}; const R=Object.assign({}
 function setAgents(g,a,b){ g.ag[0]=a; g.ag[1]=b; }
 function start(g){ for(const p of [g.first,1-g.first]){ const pl=g.P[p]; draw(g,p,g.R.openingHand); }
   for(const p of [g.first,1-g.first]){ const pl=g.P[p]; const idx=agent(g,p).mulligan(g,p)||[]; if(idx.length){ const out=idx.sort((a,b)=>b-a).map(i=>pl.hand.splice(i,1)[0]); draw(g,p,out.length); pl.deck.push(...out); shuffle(g,pl.deck); L(g,`P${p} mulligans ${out.length}`); } }
-  const sp=1-g.first; for(let i=0;i<g.R.secondPlayerRift;i++){ const c=g.P[sp].deck.shift(); if(c) g.P[sp].rift.push({card:c,ready:true}); } }
+  const sp=1-g.first; g.P[sp].nextEnergy+=g.R.secondPlayerFirstEnergy||0; for(let i=0;i<g.R.secondPlayerRift;i++){ const c=g.P[sp].deck.shift(); if(c) g.P[sp].rift.push({card:c,ready:true}); } }
 function play(deckA,deckB,seed,agents,opts){ const g=newGame(deckA,deckB,seed,opts); setAgents(g,agents[0],agents[1]); start(g); let p=g.first; while(!g.over&&g.turn<g.R.turnLimit){ takeTurn(g,p); p=1-p; }
   if(!g.over){ g.over=true; g.winner=-1; g.why='turnlimit'; } return g; }
 

@@ -12,9 +12,9 @@ const {def,pow,hp,chars,energy,cost,rowOf,hasKw}=E;
 
 // ------------------------------------------------------------------ state evaluation
 const PERSONA={
-  balanced:{life:1.0,foeLife:1.0,board:1.0,hand:0.8,energy:0.7,perm:0.9,spend:0.35,aggro:0.0,caution:0.0},
-  aggro:{life:0.65,foeLife:1.5,board:0.9,hand:0.55,energy:0.6,perm:0.8,spend:0.5,aggro:0.6,caution:-0.3},
-  control:{life:1.35,foeLife:0.75,board:1.1,hand:1.05,energy:0.8,perm:1.0,spend:0.2,aggro:-0.4,caution:0.5},
+  balanced:{life:1.0,foeLife:1.0,board:1.0,hand:0.8,energy:0.7,perm:0.9,spend:0.35,aggro:0.0,caution:0.0,pressure:0.6},
+  aggro:{life:0.65,foeLife:1.5,board:0.9,hand:0.55,energy:0.6,perm:0.8,spend:0.5,aggro:0.6,caution:-0.3,pressure:0.8},
+  control:{life:1.35,foeLife:0.75,board:1.1,hand:1.05,energy:0.8,perm:1.0,spend:0.2,aggro:-0.4,caution:0.5,pressure:0.4},
 };
 const poolVal=n=>{ let v=0; for(let k=1;k<=Math.min(8,n);k++) v+= k<=3?2.4 : k<=5?1.7 : k<=7?0.9 : 0.3; return v; };
 const lifeVal=r=>r+(r<9?(9-r)*0.9:0)+(r<=4?(5-r)*2:0);
@@ -24,6 +24,7 @@ function evalG(g,me,w){ if(g.over){ return g.winner===me? 1e5 : g.winner===1-me?
   for(const c of chars(g,me)) s+=w.board*charVal(g,c,w); for(const c of chars(g,1-me)) s-=w.board*charVal(g,c,w);
   s+=w.hand*(A.hand.length*1.0+A.hand.reduce((x,c)=>x+def(c).cost*0.12,0))-w.hand*0.9*(B.hand.length*1.0+B.hand.reduce((x,c)=>x+def(c).cost*0.12,0));
   s+=w.energy*(poolVal(A.rift.length)-poolVal(B.rift.length));
+  s+=0.7*Math.min(2,A.hand.filter(c=>def(c).type==='Technique'&&def(c).react).length);   // a Reaction held in hand is worth something
   for(const r of A.relics) s+=w.perm*(def(r).cost+1.3); for(const r of B.relics) s-=w.perm*(def(r).cost+1.3);
   if(g.zone) s+=(g.zone.ctl===me?1:-1)*w.perm*(def(g.zone).cost+1.2);
   for(const c of A.conds.concat(...chars(g,me).map(x=>x.atch))) s+=(c.ctl===me?1:-1)*w.perm*0.6*(def(c).cost+0.8);
@@ -59,7 +60,7 @@ function chooseHeur(g,p,kind,opts,ctx,w){ w=w||PERSONA.balanced; const I=f=>{ le
     case 'relic': return ctx.sac? I(r=>-def(r).cost) : ctx.replace? I(r=>-def(r).cost) : I(r=>def(r).cost);
     case 'search': case 'recur': return I(c=>keep(c)+(def(c).type==='Character'?0.5:0));
     case 'strip': return I(c=>keep(c));
-    case 'pull': return I(r=>keep(r.card));
+    case 'pull':{ const pool=opts.slice(1); if(pool.length<4) return 0; let bi=0,bs=-1; pool.forEach((r,i)=>{ if(keep(r.card)>bs){ bs=keep(r.card); bi=i; } }); return bs>=4? bi+1 : 0; }
     case 'slip': return I(c=>-keep(c));
     case 'call':{ const [hi,lo]=deckOdds(g,p); return hi>=lo? 0 : 1; }
     case 'riftdir': return g.P[p].resolve>=g.P[1-p].resolve+4&&ctx.dir!==undefined? 0 : (E.chars(g,p).some(c=>hasKw(g,c,'Phase'))&&g.rift<5? 0 : 1);
@@ -91,7 +92,7 @@ function makeSearchAgent(name,w){ w=Object.assign({},PERSONA.balanced,w||{});
       const slips=acts.filter(a=>a.k==='slip');
       if(slips.length&&pl.slipDecided!==g.turn&&!second){ pl.slipDecided=g.turn;
         const opts=[null].concat(slips.slice().sort((a,b)=>keep(pl.hand[a.i])-keep(pl.hand[b.i])).slice(0,5)); let best=null,bs=-Infinity;
-        for(const o of opts){ const h=cloneFor(g,p); let hh=h; if(o) E.applyAction(h,p,mapAct(h,p,o,pl.hand)); greedy(hh,p,w); const s=evalG(hh,p,w)+(o&&pl.rift.length>=4? -0.3:0); if(s>bs){ bs=s; best=o; } }
+        for(const o of opts){ const h=cloneFor(g,p); let hh=h; if(o) E.applyAction(h,p,mapAct(h,p,o,pl.hand)); greedy(hh,p,w); const s=evalG(hh,p,w)+pressure(hh,p,w)+(o&&pl.rift.length>=4? -0.3:0); if(s>bs){ bs=s; best=o; } }
         if(best) return best; }
       const r=bestStep(g,p,acts.filter(a=>a.k!=='slip'),w); return r? r : {k:'pass'}; },
     attack(g,p,avail){ const q=1-p; const subs=subsets(avail); let best=[],bs=-Infinity;
@@ -109,9 +110,13 @@ function sim(g,p,a,w){ const h=cloneFor(g,p); if(a) E.applyAction(h,p,mapAct(h,p
 function subsets(a){ if(a.length<=4){ const out=[]; for(let m=0;m<(1<<a.length);m++) out.push(a.filter((_,i)=>m&(1<<i))); return out; } const out=[[]]; for(let k=1;k<=a.length;k++) out.push(a.slice(0,k)); out.push(a); return out; }
 function blockOptions(g,atk,blockers){ const res=[]; const n=atk.length; const used=new Set(); const rec=(i,asg)=>{ if(res.length>200) return; if(i===blockers.length){ res.push(Object.assign({},asg)); return; }
     const b=blockers[i]; rec(i+1,asg); for(const a of atk){ if(Object.values(asg).includes(b.u)||asg[a.u]!==undefined||!E.canBlock(g,b,a)) continue; asg[a.u]=b.u; rec(i+1,asg); delete asg[a.u]; } }; rec(0,{}); return res; }
+// how much damage the attackers that can swing this turn are likely to get through (blocks guessed with heurBlocks): lets one-ply
+// search see the point of Rush, Imbue and removal, which only pay off in the attack that follows
+function pressure(h,p,w){ if(h.over) return 0; const q=1-p; const atk=E.attackersOf(h,p); if(!atk.length) return 0; const bl=E.blockersOf(h,q); const asg=bl.length?heurBlocks(h,q,atk,bl,w):{}; let d=0; for(const a of atk) if(asg[a.u]===undefined) d+=E.pow(h,a); else { const b=bl.find(x=>x.u===asg[a.u]); if(b&&E.pow(h,a)>=E.hp(h,b)-b.dmg) d+=0.8; }
+  return Math.min(d,h.P[q].resolve)*w.pressure; }
 // one greedy pass: evaluates every action on a copy and takes the best until nothing improves
-function bestStep(g,p,acts,w){ if(!acts.length) return null; const base=evalG(g,p,w); let best=null,bs=base+0.05; const pl=g.P[p];
-  for(const a of acts){ const h=cloneFor(g,p); const ma=mapAct(h,p,a,pl.hand); const e0=energy(h,p); E.applyAction(h,p,ma); E.sweep(h); const spent=e0-energy(h,p); const s=evalG(h,p,w)+w.spend*spent+(a.k==='step'||a.k==='swap'?-0.1:0); if(s>bs){ bs=s; best=a; } }
+function bestStep(g,p,acts,w){ if(!acts.length) return null; const base=evalG(g,p,w)+pressure(g,p,w); let best=null,bs=base+0.05; const pl=g.P[p];
+  for(const a of acts){ const h=cloneFor(g,p); const ma=mapAct(h,p,a,pl.hand); const e0=energy(h,p); E.applyAction(h,p,ma); E.sweep(h); const spent=e0-energy(h,p); const s=evalG(h,p,w)+pressure(h,p,w)+w.spend*spent+(a.k==='step'||a.k==='swap'?-0.1:0); if(s>bs){ bs=s; best=a; } }
   return best; }
 function greedy(h,p,w){ for(let i=0;i<8&&!h.over;i++){ const acts=E.actionList(h,p,'main').filter(a=>a.k!=='slip'); if(!acts.length) break; const a=bestStep(h,p,acts,w); if(!a) break; E.applyAction(h,p,a); E.sweep(h); } }
 

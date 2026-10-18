@@ -1,0 +1,1544 @@
+Rift Parade - you play Resonance Chorus vs Impact Wall (balanced computer player), seed 7
+
+------------------------------------------------------------------------
+Turn 0 (round 0) | Rift 0/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+
+YOU: Resolve 20 | hand 5 | deck 35 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Bloom Against the Dark (Character, cost 5, 3/5)
+  [3] Pulse Echo (Technique, cost 2)
+  [4] Momo, Alley Yokai (Character, cost 2, 2/1)
+Energy ready: 0
+Opening hand. Mulligan: type the card numbers to replace (e.g. "0 3"), or press Enter to keep.
+Player 1 goes first.
+
+=== OPPONENT'S TURN ===
+[T0 P0] P0 mulligans 2
+[T1 P1] --- P1 wakes (Rift 0, Resolve 20/20) ---
+[T1 P1] P1 slips a card into the Rift pool (1)
+[T1 P1] P1 plays Stitchglass Needle [1]
+[T2 P0] --- P0 wakes (Rift 0, Resolve 20/20) ---
+
+------------------------------------------------------------------------
+Turn 2 (round 1) | Rift 0/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 34 | Rift pool 1 (0 ready)
+  Stage: -
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 7 | deck 33 | Rift pool 0 (0 ready)
+  Stage: -
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Momo, Alley Yokai (Character, cost 2, 2/1)
+  [3] Vivi Vesper, On Air (Character, cost 3, 3/4)
+  [4] Lulu, Lost Again (Character, cost 1, 1/2)
+  [5] Momo, Alley Yokai (Character, cost 2, 2/1)
+  [6] Pippi, No Time to Panic (Character, cost 2, 1/4)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Lulu, Wrong Way Hero into the Rift pool (becomes energy)
+  2) Slip Momo, Alley Yokai into the Rift pool (becomes energy)
+  3) Slip Vivi Vesper, On Air into the Rift pool (becomes energy)
+  4) Slip Lulu, Lost Again into the Rift pool (becomes energy)
+  5) Slip Pippi, No Time to Panic into the Rift pool (becomes energy)
+  6) Play Momo, Alley Yokai [2] -> Stage
+  7) Play Momo, Alley Yokai [2] -> Backstage
+  8) Play Lulu, Lost Again [1] -> Stage
+  9) Play Lulu, Lost Again [1] -> Backstage
+  10) Play Pippi, No Time to Panic [2] -> Stage
+  11) Play Pippi, No Time to Panic [2] -> Backstage
+  12) Pass / end this phase
+[T2 P0] P0 slips a card into the Rift pool (1)
+
+------------------------------------------------------------------------
+Turn 2 (round 1) | Rift 0/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 34 | Rift pool 1 (0 ready)
+  Stage: -
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 6 | deck 33 | Rift pool 1 (1 ready)
+  Stage: -
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Vivi Vesper, On Air (Character, cost 3, 3/4)
+  [3] Lulu, Lost Again (Character, cost 1, 1/2)
+  [4] Momo, Alley Yokai (Character, cost 2, 2/1)
+  [5] Pippi, No Time to Panic (Character, cost 2, 1/4)
+Energy ready: 3
+Main phase - choose an action (? N for card text):
+  0) Play Vivi Vesper, On Air [3] -> Stage
+  1) Play Vivi Vesper, On Air [3] -> Backstage
+  2) Play Lulu, Lost Again [1] -> Stage
+  3) Play Lulu, Lost Again [1] -> Backstage
+  4) Play Momo, Alley Yokai [2] -> Stage
+  5) Play Momo, Alley Yokai [2] -> Backstage
+  6) Play Pippi, No Time to Panic [2] -> Stage
+  7) Play Pippi, No Time to Panic [2] -> Backstage
+  8) Pass / end this phase
+[T2 P0] P0 plays Vivi Vesper, On Air [3]
+[T2 P0] P0 puts Vivi Vesper, On Air on the Stage
+
+------------------------------------------------------------------------
+Turn 2 (round 1) | Rift 0/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 34 | Rift pool 1 (0 ready)
+  Stage: -
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 5 | deck 33 | Rift pool 1 (0 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Momo, Alley Yokai (Character, cost 2, 2/1)
+  [4] Pippi, No Time to Panic (Character, cost 2, 1/4)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  1) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Main phase - choose an action (? N for card text):
+  0) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  1) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 2 (round 1) | Rift 0/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 34 | Rift pool 1 (0 ready)
+  Stage: -
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 5 | deck 33 | Rift pool 1 (0 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Momo, Alley Yokai (Character, cost 2, 2/1)
+  [4] Pippi, No Time to Panic (Character, cost 2, 1/4)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  1) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T3 P1] Rift 0 -> 1
+[T3 P1] --- P1 wakes (Rift 1, Resolve 20/20) ---
+[T3 P1] P1 slips a card into the Rift pool (2)
+[T3 P1] P1 plays Brax, Debt Collector [2]
+[T3 P1] P1 puts Brax, Debt Collector on the Stage
+[T4 P0] --- P0 wakes (Rift 1, Resolve 20/20) ---
+
+------------------------------------------------------------------------
+Turn 4 (round 2) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 32 | Rift pool 2 (0 ready)
+  Stage: Brax, Debt Collector 1/3 [Absorb]
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 7 | deck 31 | Rift pool 1 (1 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Momo, Alley Yokai (Character, cost 2, 2/1)
+  [4] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [5] Lulu, All Together Now (Character, cost 5, 3/3)
+  [6] Resonance Shelter (Technique, cost 2)
+Energy ready: 1
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Lulu, Wrong Way Hero into the Rift pool (becomes energy)
+  2) Slip Lulu, Lost Again into the Rift pool (becomes energy)
+  3) Slip Momo, Alley Yokai into the Rift pool (becomes energy)
+  4) Slip Pippi, No Time to Panic into the Rift pool (becomes energy)
+  5) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  6) Slip Resonance Shelter into the Rift pool (becomes energy)
+  7) Play Lulu, Lost Again [1] -> Stage
+  8) Play Lulu, Lost Again [1] -> Backstage
+  9) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  10) Pass / end this phase
+[T4 P0] P0 slips a card into the Rift pool (2)
+
+------------------------------------------------------------------------
+Turn 4 (round 2) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 32 | Rift pool 2 (0 ready)
+  Stage: Brax, Debt Collector 1/3 [Absorb]
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 6 | deck 31 | Rift pool 2 (2 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Momo, Alley Yokai (Character, cost 2, 2/1)
+  [4] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [5] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Play Lulu, Lost Again [1] -> Stage
+  1) Play Lulu, Lost Again [1] -> Backstage
+  2) Play Momo, Alley Yokai [2] -> Stage
+  3) Play Momo, Alley Yokai [2] -> Backstage
+  4) Play Pippi, No Time to Panic [2] -> Stage
+  5) Play Pippi, No Time to Panic [2] -> Backstage
+  6) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  7) Pass / end this phase
+[T4 P0] P0 plays Momo, Alley Yokai [2]
+[T4 P0] P0 puts Momo, Alley Yokai on the Stage
+
+------------------------------------------------------------------------
+Turn 4 (round 2) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 32 | Rift pool 2 (0 ready)
+  Stage: Brax, Debt Collector 1/3 [Absorb]
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight] | Momo, Alley Yokai 2/1 [Haunt]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [4] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  1) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  2) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Main phase - choose an action (? N for card text):
+  0) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  1) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  2) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 4 (round 2) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 32 | Rift pool 2 (0 ready)
+  Stage: Brax, Debt Collector 1/3 [Absorb]
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight] | Momo, Alley Yokai 2/1 [Haunt]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [4] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 0
+Attack! Ready Characters:
+  0) Vivi Vesper, On Air 3/4 [Spotlight]
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T4 P0] P0 attacks with Vivi Vesper, On Air (3)
+[T4 P0] P1 loses 3 Resolve (17) - combat
+
+------------------------------------------------------------------------
+Turn 4 (round 2) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 17 | hand 4 | deck 32 | Rift pool 2 (0 ready)
+  Stage: Brax, Debt Collector 1/3 [Absorb]
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Vivi Vesper, On Air 3/4 exhausted [Spotlight] | Momo, Alley Yokai 2/1 [Haunt]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [4] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  1) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  2) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T5 P1] Rift 1 -> 2
+[T5 P1] --- P1 wakes (Rift 2, Resolve 17/20) ---
+[T5 P1] P1 slips a card into the Rift pool (3)
+[T5 P1] P1 plays Pippi, Field Medic [2]
+[T5 P1] P1 puts Pippi, Field Medic on the Stage
+[T5 P1] Pippi, Field Medic triggers
+[T5 P1] P1 restores 2 Resolve (19)
+[T5 P1] P1 uses Stitchglass Needle
+[T5 P1] Rift 2 -> 1
+[T5 P1] P1 restores 1 Resolve (20)
+[T5 P1] P1 attacks with Brax, Debt Collector (1)
+
+------------------------------------------------------------------------
+Turn 5 (round 3) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 30 | Rift pool 3 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 5 | deck 31 | Rift pool 2 (0 ready)
+  Stage: Vivi Vesper, On Air 3/4 exhausted [Spotlight] | Momo, Alley Yokai 2/1 [Haunt]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [4] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 0
+The opponent attacks! Attackers:
+  - Brax, Debt Collector 1/3 exhausted [Absorb]
+Block Brax, Debt Collector (1/3) with:
+  1) Momo, Alley Yokai 2/1 [Haunt]
+  (Enter or n = no block)
+[T5 P1] P0 loses 1 Resolve (19) - combat
+[T6 P0] --- P0 wakes (Rift 1, Resolve 19/20) ---
+
+------------------------------------------------------------------------
+Turn 6 (round 3) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 30 | Rift pool 3 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 7 | deck 29 | Rift pool 2 (2 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight] | Momo, Alley Yokai 2/1 [Haunt]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [4] Lulu, All Together Now (Character, cost 5, 3/3)
+  [5] Unsealed Service Corridor (Zone, cost 2)
+  [6] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Lulu, Wrong Way Hero into the Rift pool (becomes energy)
+  2) Slip Lulu, Lost Again into the Rift pool (becomes energy)
+  3) Slip Pippi, No Time to Panic into the Rift pool (becomes energy)
+  4) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  5) Slip Unsealed Service Corridor into the Rift pool (becomes energy)
+  6) Slip Pippi, Hands Don't Shake into the Rift pool (becomes energy)
+  7) Play Lulu, Lost Again [1] -> Stage
+  8) Play Lulu, Lost Again [1] -> Backstage
+  9) Play Pippi, No Time to Panic [2] -> Stage
+  10) Play Pippi, No Time to Panic [2] -> Backstage
+  11) Play Unsealed Service Corridor [2]
+  12) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  13) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  14) Pass / end this phase
+[T6 P0] P0 slips a card into the Rift pool (3)
+
+------------------------------------------------------------------------
+Turn 6 (round 3) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 30 | Rift pool 3 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 6 | deck 29 | Rift pool 3 (3 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight] | Momo, Alley Yokai 2/1 [Haunt]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [4] Lulu, All Together Now (Character, cost 5, 3/3)
+  [5] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+Energy ready: 3
+Main phase - choose an action (? N for card text):
+  0) Play Lulu, Lost Again [1] -> Stage
+  1) Play Lulu, Lost Again [1] -> Backstage
+  2) Play Pippi, No Time to Panic [2] -> Stage
+  3) Play Pippi, No Time to Panic [2] -> Backstage
+  4) Play Pippi, Hands Don't Shake [3] -> Stage
+  5) Play Pippi, Hands Don't Shake [3] -> Backstage
+  6) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  7) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  8) Pass / end this phase
+[T6 P0] P0 plays Lulu, Lost Again [1]
+[T6 P0] P0 puts Lulu, Lost Again on the Stage
+
+------------------------------------------------------------------------
+Turn 6 (round 3) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 30 | Rift pool 3 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 5 | deck 29 | Rift pool 3 (2 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight] | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Lost Again 1/2 [Resonance]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Pippi, No Time to Panic (Character, cost 2, 1/4)
+  [3] Lulu, All Together Now (Character, cost 5, 3/3)
+  [4] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Play Pippi, No Time to Panic [2] -> Backstage
+  1) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  2) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  3) Step Lulu, Lost Again to Backstage (free, once per turn)
+  4) Pass / end this phase
+[T6 P0] P0 plays Pippi, No Time to Panic [2]
+[T6 P0] P0 puts Pippi, No Time to Panic Backstage
+
+------------------------------------------------------------------------
+Turn 6 (round 3) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 30 | Rift pool 3 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 4 | deck 29 | Rift pool 3 (0 ready)
+  Stage: Vivi Vesper, On Air 3/4 [Spotlight] | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Lost Again 1/2 [Resonance]
+  Back : Pippi, No Time to Panic 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, All Together Now (Character, cost 5, 3/3)
+  [3] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Step Vivi Vesper, On Air to Backstage (free, once per turn)
+  1) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  2) Step Lulu, Lost Again to Backstage (free, once per turn)
+  3) Swap Pippi, No Time to Panic and Vivi Vesper, On Air (free, once per turn)
+  4) Pass / end this phase
+[T6 P0] P0 swaps Pippi, No Time to Panic and Vivi Vesper, On Air
+
+------------------------------------------------------------------------
+Turn 6 (round 3) | Rift 1/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 4 | deck 30 | Rift pool 3 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 4 | deck 29 | Rift pool 3 (0 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Lost Again 1/2 [Resonance]
+  Back : Vivi Vesper, On Air 3/4 [Spotlight]
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, All Together Now (Character, cost 5, 3/3)
+  [3] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+Energy ready: 0
+Attack! Ready Characters:
+  0) Momo, Alley Yokai 2/1 [Haunt]
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+
+=== OPPONENT'S TURN ===
+[T7 P1] Rift 1 -> 2
+[T7 P1] --- P1 wakes (Rift 2, Resolve 20/19) ---
+[T7 P1] P1 slips a card into the Rift pool (4)
+[T7 P1] P1 plays Late-Shift Dispatcher [2]
+[T7 P1] P1 puts Late-Shift Dispatcher on the Stage
+[T7 P1] Late-Shift Dispatcher triggers
+[T7 P1] P1 plays Load Bearing [1]
+[T7 P1] P1 plays Load Bearing [1]
+[T7 P1] P1 uses Brax, Debt Collector
+[T7 P1] Brax, Debt Collector releases 4 Impact
+[T7 P1] Vivi Vesper, On Air takes 4
+[T7 P1] Vivi Vesper, On Air is defeated
+[T7 P1] P1 attacks with Brax, Debt Collector (1)
+[T7 P1] P1 attacks with Pippi, Field Medic (1)
+
+------------------------------------------------------------------------
+Turn 7 (round 4) | Rift 2/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 2 | deck 28 | Rift pool 4 (0 ready)
+  Stage: Brax, Debt Collector 1/7 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 4 | deck 29 | Rift pool 3 (0 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Lost Again 1/2 [Resonance]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, All Together Now (Character, cost 5, 3/3)
+  [3] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+Energy ready: 0
+The opponent attacks! Attackers:
+  - Brax, Debt Collector 1/7 exhausted [Absorb]
+  - Pippi, Field Medic 1/3 exhausted
+Block Brax, Debt Collector (1/7) with:
+  1) Pippi, No Time to Panic 1/4
+  2) Momo, Alley Yokai 2/1 [Haunt]
+  3) Lulu, Lost Again 1/2 [Resonance]
+  (Enter or n = no block)
+Block Pippi, Field Medic (1/3) with:
+  1) Pippi, No Time to Panic 1/4
+  2) Momo, Alley Yokai 2/1 [Haunt]
+  3) Lulu, Lost Again 1/2 [Resonance]
+  (Enter or n = no block)
+[T7 P1] P0 blocks Pippi, Field Medic with Pippi, No Time to Panic
+[T7 P1] P0 loses 1 Resolve (18) - combat
+[T7 P1] Pippi, No Time to Panic takes 1
+[T7 P1] Pippi, Field Medic takes 1
+[T8 P0] --- P0 wakes (Rift 2, Resolve 18/20) ---
+
+------------------------------------------------------------------------
+Turn 8 (round 4) | Rift 2/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 2 | deck 28 | Rift pool 4 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 6 | deck 27 | Rift pool 3 (3 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Lost Again 1/2 [Resonance]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, All Together Now (Character, cost 5, 3/3)
+  [3] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [4] Hush-Moth Swarm (Character, cost 2, 1/2)
+  [5] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 3
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Lulu, Wrong Way Hero into the Rift pool (becomes energy)
+  2) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  3) Slip Pippi, Hands Don't Shake into the Rift pool (becomes energy)
+  4) Slip Hush-Moth Swarm into the Rift pool (becomes energy)
+  5) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  6) Play Lulu, Wrong Way Hero [4 less 1, Next Episode on Lulu, Lost Again]
+  7) Play Pippi, Hands Don't Shake [3] -> Backstage
+  8) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  9) Play Hush-Moth Swarm [2] -> Backstage
+  10) Play Pippi, Field Medic [2] -> Backstage
+  11) Use Pippi, No Time to Panic: Act (1 energy, once per turn): Restore 2 Resolve, then Remove all Conditions and Marks from target Character you control.
+  12) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  13) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  14) Step Lulu, Lost Again to Backstage (free, once per turn)
+  15) Pass / end this phase
+[T8 P0] P0 slips a card into the Rift pool (4)
+
+------------------------------------------------------------------------
+Turn 8 (round 4) | Rift 2/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 2 | deck 28 | Rift pool 4 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 5 | deck 27 | Rift pool 4 (4 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Lost Again 1/2 [Resonance]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, All Together Now (Character, cost 5, 3/3)
+  [3] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [4] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 4
+Main phase - choose an action (? N for card text):
+  0) Play Lulu, Wrong Way Hero [4] -> Backstage
+  1) Play Lulu, Wrong Way Hero [4 less 1, Next Episode on Lulu, Lost Again]
+  2) Play Lulu, All Together Now [5 less 1, Next Episode on Lulu, Lost Again]
+  3) Play Pippi, Hands Don't Shake [3] -> Backstage
+  4) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  5) Play Pippi, Field Medic [2] -> Backstage
+  6) Use Pippi, No Time to Panic: Act (1 energy, once per turn): Restore 2 Resolve, then Remove all Conditions and Marks from target Character you control.
+  7) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  8) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  9) Step Lulu, Lost Again to Backstage (free, once per turn)
+  10) Pass / end this phase
+Choose a target for purge:
+  0) Pippi, No Time to Panic 1/4
+  1) Momo, Alley Yokai 2/1 [Haunt]
+  2) Lulu, Lost Again 1/2 [Resonance]
+[T8 P0] P0 uses Pippi, No Time to Panic
+[T8 P0] P0 restores 2 Resolve (20)
+
+------------------------------------------------------------------------
+Turn 8 (round 4) | Rift 2/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 2 | deck 28 | Rift pool 4 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 5 | deck 27 | Rift pool 4 (3 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Lost Again 1/2 [Resonance]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Lulu, All Together Now (Character, cost 5, 3/3)
+  [3] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [4] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 3
+Main phase - choose an action (? N for card text):
+  0) Play Lulu, Wrong Way Hero [4 less 1, Next Episode on Lulu, Lost Again]
+  1) Play Pippi, Hands Don't Shake [3] -> Backstage
+  2) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  3) Play Pippi, Field Medic [2] -> Backstage
+  4) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  5) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  6) Step Lulu, Lost Again to Backstage (free, once per turn)
+  7) Pass / end this phase
+[T8 P0] P0 plays Lulu, Wrong Way Hero (Next Episode) [3]
+
+------------------------------------------------------------------------
+Turn 8 (round 4) | Rift 2/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 2 | deck 28 | Rift pool 4 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 4 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Wrong Way Hero 3/3 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, All Together Now (Character, cost 5, 3/3)
+  [2] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [3] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  1) Step Momo, Alley Yokai to Backstage (free, once per turn)
+  2) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  3) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 8 (round 4) | Rift 2/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 20 | hand 2 | deck 28 | Rift pool 4 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 4 | deck 27 | Rift pool 4 (0 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Momo, Alley Yokai 2/1 [Haunt] | Lulu, Wrong Way Hero 3/3 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, All Together Now (Character, cost 5, 3/3)
+  [2] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [3] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 0
+Attack! Ready Characters:
+  0) Pippi, No Time to Panic 1/4
+  1) Momo, Alley Yokai 2/1 [Haunt]
+  2) Lulu, Wrong Way Hero 3/3 [Resonance,Rush]
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T8 P0] P0 attacks with Momo, Alley Yokai (2)
+[T8 P0] P0 attacks with Lulu, Wrong Way Hero (3)
+[T8 P0] P1 blocks Momo, Alley Yokai with Late-Shift Dispatcher
+[T8 P0] Late-Shift Dispatcher takes 2
+[T8 P0] Momo, Alley Yokai takes 1
+[T8 P0] P1 loses 3 Resolve (17) - combat
+[T8 P0] Momo, Alley Yokai is defeated
+[T8 P0] Momo, Alley Yokai haunts the Rift pool of P0
+
+------------------------------------------------------------------------
+Turn 8 (round 4) | Rift 2/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+OPPONENT: Resolve 17 | hand 2 | deck 28 | Rift pool 4 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/1 (dmg 2)
+  Back : -
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 4 | deck 27 | Rift pool 5 (0 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, Wrong Way Hero 3/3 exhausted [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, All Together Now (Character, cost 5, 3/3)
+  [2] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [3] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  1) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  2) Pass / end this phase
+
+=== OPPONENT'S TURN ===
+[T9 P1] Rift 2 -> 3
+[T9 P1] --- P1 wakes (Rift 3, Resolve 17/20) ---
+[T9 P1] P1 slips a card into the Rift pool (5)
+[T9 P1] P1 plays Pippi, No Time to Panic [2]
+[T9 P1] P1 puts Pippi, No Time to Panic Backstage
+[T9 P1] P1 plays Backlot Reality [3]
+[T9 P1] P1 attacks with Brax, Debt Collector (1)
+[T9 P1] P1 attacks with Pippi, Field Medic (1)
+[T9 P1] P1 attacks with Late-Shift Dispatcher (1)
+
+------------------------------------------------------------------------
+Turn 9 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 17 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 4 | deck 27 | Rift pool 5 (0 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, Wrong Way Hero 3/3 exhausted [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, All Together Now (Character, cost 5, 3/3)
+  [2] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [3] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 0
+The opponent attacks! Attackers:
+  - Brax, Debt Collector 1/3 exhausted [Absorb]
+  - Pippi, Field Medic 1/3 exhausted
+  - Late-Shift Dispatcher 1/3 exhausted
+Block Brax, Debt Collector (1/3) with:
+  1) Pippi, No Time to Panic 1/4
+  (Enter or n = no block)
+Block Pippi, Field Medic (1/3) with:
+  1) Pippi, No Time to Panic 1/4
+  (Enter or n = no block)
+  Late-Shift Dispatcher cannot be blocked by anything you have.
+[T9 P1] P0 blocks Pippi, Field Medic with Pippi, No Time to Panic
+[T9 P1] P0 loses 1 Resolve (19) - combat
+[T9 P1] Pippi, No Time to Panic takes 1
+[T9 P1] Pippi, Field Medic takes 1
+[T9 P1] P0 loses 1 Resolve (18) - combat
+[T10 P0] --- P0 wakes (Rift 3, Resolve 18/17) ---
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 17 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 6 | deck 25 | Rift pool 5 (5 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, Wrong Way Hero 3/3 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, All Together Now (Character, cost 5, 3/3)
+  [2] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [3] Pippi, Field Medic (Character, cost 2, 1/3)
+  [4] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [5] Late-Shift Dispatcher (Character, cost 2, 1/3)
+Energy ready: 5
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  2) Slip Pippi, Hands Don't Shake into the Rift pool (becomes energy)
+  3) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  4) Slip Lulu, Wrong Way Hero into the Rift pool (becomes energy)
+  5) Slip Late-Shift Dispatcher into the Rift pool (becomes energy)
+  6) Play Lulu, All Together Now [5] -> Stage
+  7) Play Lulu, All Together Now [5] -> Backstage
+  8) Play Lulu, All Together Now [5 less 4, Next Episode on Lulu, Wrong Way Hero]
+  9) Play Pippi, Hands Don't Shake [3] -> Stage
+  10) Play Pippi, Hands Don't Shake [3] -> Backstage
+  11) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  12) Play Pippi, Field Medic [2] -> Stage
+  13) Play Pippi, Field Medic [2] -> Backstage
+  14) Play Lulu, Wrong Way Hero [4] -> Stage
+  15) Play Lulu, Wrong Way Hero [4] -> Backstage
+  16) Play Late-Shift Dispatcher [2] -> Stage
+  17) Play Late-Shift Dispatcher [2] -> Backstage
+  18) Use Pippi, No Time to Panic: Act (1 energy, once per turn): Restore 2 Resolve, then Remove all Conditions and Marks from target Character you control.
+  19) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  20) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  21) Pass / end this phase
+[T10 P0] P0 plays Lulu, Wrong Way Hero [4]
+[T10 P0] P0 puts Lulu, Wrong Way Hero on the Stage
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 17 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 5 | deck 25 | Rift pool 5 (1 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, Wrong Way Hero 4/3 [Resonance,Rush] | Lulu, Wrong Way Hero 4/3 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, All Together Now (Character, cost 5, 3/3)
+  [2] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [3] Pippi, Field Medic (Character, cost 2, 1/3)
+  [4] Late-Shift Dispatcher (Character, cost 2, 1/3)
+Energy ready: 1
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  2) Slip Pippi, Hands Don't Shake into the Rift pool (becomes energy)
+  3) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  4) Slip Late-Shift Dispatcher into the Rift pool (becomes energy)
+  5) Play Lulu, All Together Now [5 less 4, Next Episode on Lulu, Wrong Way Hero]
+  6) Play Lulu, All Together Now [5 less 4, Next Episode on Lulu, Wrong Way Hero]
+  7) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  8) Use Pippi, No Time to Panic: Act (1 energy, once per turn): Restore 2 Resolve, then Remove all Conditions and Marks from target Character you control.
+  9) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  10) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  11) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  12) Pass / end this phase
+[T10 P0] P0 plays Lulu, All Together Now (Next Episode) [1]
+[T10 P0] Lulu, All Together Now triggers
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 17 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 4 | deck 25 | Rift pool 5 (0 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, All Together Now 5/4 [Resonance] | Lulu, Wrong Way Hero 5/4 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [2] Pippi, Field Medic (Character, cost 2, 1/3)
+  [3] Late-Shift Dispatcher (Character, cost 2, 1/3)
+Energy ready: 0
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Pippi, Hands Don't Shake into the Rift pool (becomes energy)
+  2) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  3) Slip Late-Shift Dispatcher into the Rift pool (becomes energy)
+  4) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  5) Step Lulu, All Together Now to Backstage (free, once per turn)
+  6) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  7) Pass / end this phase
+[T10 P0] P0 slips a card into the Rift pool (6)
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 17 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 3 | deck 25 | Rift pool 6 (1 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, All Together Now 5/4 [Resonance] | Lulu, Wrong Way Hero 5/4 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [2] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 1
+Main phase - choose an action (? N for card text):
+  0) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  1) Use Pippi, No Time to Panic: Act (1 energy, once per turn): Restore 2 Resolve, then Remove all Conditions and Marks from target Character you control.
+  2) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  3) Step Lulu, All Together Now to Backstage (free, once per turn)
+  4) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  5) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Main phase - choose an action (? N for card text):
+  0) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  1) Use Pippi, No Time to Panic: Act (1 energy, once per turn): Restore 2 Resolve, then Remove all Conditions and Marks from target Character you control.
+  2) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  3) Step Lulu, All Together Now to Backstage (free, once per turn)
+  4) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  5) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 17 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 3 | deck 25 | Rift pool 6 (1 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, All Together Now 5/4 [Resonance] | Lulu, Wrong Way Hero 5/4 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [2] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 1
+Attack! Ready Characters:
+  0) Pippi, No Time to Panic 1/4
+  1) Lulu, All Together Now 5/4 [Resonance]
+  2) Lulu, Wrong Way Hero 5/4 [Resonance,Rush]
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T10 P0] P0 attacks with Lulu, All Together Now (5)
+[T10 P0] P0 attacks with Lulu, Wrong Way Hero (5)
+[T10 P0] P1 loses 5 Resolve (12) - combat
+[T10 P0] P1 loses 5 Resolve (7) - combat
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 3 | deck 25 | Rift pool 6 (1 ready)
+  Stage: Pippi, No Time to Panic 1/4 | Lulu, All Together Now 5/4 exhausted [Resonance] | Lulu, Wrong Way Hero 5/4 exhausted [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Hands Don't Shake (Character, cost 3, 1/4)
+  [2] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 1
+Second main phase - choose an action (? N for card text):
+  0) Play Pippi, Hands Don't Shake [3 less 2, Next Episode on Pippi, No Time to Panic]
+  1) Use Pippi, No Time to Panic: Act (1 energy, once per turn): Restore 2 Resolve, then Remove all Conditions and Marks from target Character you control.
+  2) Step Pippi, No Time to Panic to Backstage (free, once per turn)
+  3) Step Lulu, All Together Now to Backstage (free, once per turn)
+  4) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  5) Pass / end this phase
+[T10 P0] P0 plays Pippi, Hands Don't Shake (Next Episode) [1]
+
+------------------------------------------------------------------------
+Turn 10 (round 5) | Rift 3/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 1 | deck 26 | Rift pool 5 (0 ready)
+  Stage: Brax, Debt Collector 1/3 exhausted [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 18 | hand 2 | deck 25 | Rift pool 6 (0 ready)
+  Stage: Pippi, Hands Don't Shake 1/4 | Lulu, All Together Now 5/4 exhausted [Resonance] | Lulu, Wrong Way Hero 5/4 exhausted [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 0
+Second main phase - choose an action (? N for card text):
+  0) Step Pippi, Hands Don't Shake to Backstage (free, once per turn)
+  1) Step Lulu, All Together Now to Backstage (free, once per turn)
+  2) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  3) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Second main phase - choose an action (? N for card text):
+  0) Step Pippi, Hands Don't Shake to Backstage (free, once per turn)
+  1) Step Lulu, All Together Now to Backstage (free, once per turn)
+  2) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  3) Pass / end this phase
+[T10 P0] Pippi, Hands Don't Shake triggers
+[T10 P0] P0 restores 2 Resolve (20)
+
+=== OPPONENT'S TURN ===
+[T11 P1] Rift 3 -> 4
+[T11 P1] --- P1 wakes (Rift 4, Resolve 7/20) ---
+[T11 P1] P1 plays Brax, Walking Avalanche [5]
+[T11 P1] P1 puts Brax, Walking Avalanche Backstage
+[T11 P1] P1 swaps Brax, Debt Collector and Brax, Walking Avalanche
+[T11 P1] P1 attacks with Pippi, Field Medic (1)
+[T11 P1] P1 attacks with Late-Shift Dispatcher (1)
+
+------------------------------------------------------------------------
+Turn 11 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Brax, Debt Collector 1/3 [Absorb]
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 2 | deck 25 | Rift pool 6 (0 ready)
+  Stage: Pippi, Hands Don't Shake 1/4 | Lulu, All Together Now 4/3 exhausted [Resonance] | Lulu, Wrong Way Hero 4/3 exhausted [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 0
+The opponent attacks! Attackers:
+  - Pippi, Field Medic 1/3 exhausted
+  - Late-Shift Dispatcher 1/3 exhausted
+Block Pippi, Field Medic (1/3) with:
+  1) Pippi, Hands Don't Shake 1/4
+  (Enter or n = no block)
+  Late-Shift Dispatcher cannot be blocked by anything you have.
+[T11 P1] P0 blocks Pippi, Field Medic with Pippi, Hands Don't Shake
+[T11 P1] Pippi, Hands Don't Shake takes 1
+[T11 P1] Pippi, Field Medic takes 1
+[T11 P1] P0 loses 1 Resolve (19) - combat
+[T12 P0] --- P0 wakes (Rift 4, Resolve 19/7) ---
+
+------------------------------------------------------------------------
+Turn 12 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Brax, Debt Collector 1/3 [Absorb]
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 4 | deck 23 | Rift pool 6 (6 ready)
+  Stage: Pippi, Hands Don't Shake 1/4 | Lulu, All Together Now 4/3 [Resonance] | Lulu, Wrong Way Hero 4/3 [Resonance,Rush]
+  Back : -
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 6
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  2) Slip Lulu, Lost Again into the Rift pool (becomes energy)
+  3) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  4) Play Pippi, Field Medic [2] -> Backstage
+  5) Play Lulu, Lost Again [1] -> Backstage
+  6) Play Lulu, All Together Now [5] -> Backstage
+  7) Play Lulu, All Together Now [5 less 4, Next Episode on Lulu, Wrong Way Hero]
+  8) Step Pippi, Hands Don't Shake to Backstage (free, once per turn)
+  9) Step Lulu, All Together Now to Backstage (free, once per turn)
+  10) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  11) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  2) Slip Lulu, Lost Again into the Rift pool (becomes energy)
+  3) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  4) Play Pippi, Field Medic [2] -> Backstage
+  5) Play Lulu, Lost Again [1] -> Backstage
+  6) Play Lulu, All Together Now [5] -> Backstage
+  7) Play Lulu, All Together Now [5 less 4, Next Episode on Lulu, Wrong Way Hero]
+  8) Step Pippi, Hands Don't Shake to Backstage (free, once per turn)
+  9) Step Lulu, All Together Now to Backstage (free, once per turn)
+  10) Step Lulu, Wrong Way Hero to Backstage (free, once per turn)
+  11) Pass / end this phase
+[T12 P0] P0 steps Pippi, Hands Don't Shake Backstage
+
+------------------------------------------------------------------------
+Turn 12 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Brax, Debt Collector 1/3 [Absorb]
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 4 | deck 23 | Rift pool 6 (6 ready)
+  Stage: Lulu, All Together Now 4/3 [Resonance] | Lulu, Wrong Way Hero 4/3 [Resonance,Rush]
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+  [2] Lulu, Lost Again (Character, cost 1, 1/2)
+  [3] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 6
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  2) Slip Lulu, Lost Again into the Rift pool (becomes energy)
+  3) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  4) Play Pippi, Field Medic [2] -> Stage
+  5) Play Pippi, Field Medic [2] -> Backstage
+  6) Play Lulu, Lost Again [1] -> Stage
+  7) Play Lulu, Lost Again [1] -> Backstage
+  8) Play Lulu, All Together Now [5] -> Stage
+  9) Play Lulu, All Together Now [5] -> Backstage
+  10) Play Lulu, All Together Now [5 less 4, Next Episode on Lulu, Wrong Way Hero]
+  11) Pass / end this phase
+[T12 P0] P0 plays Lulu, Lost Again [1]
+[T12 P0] P0 puts Lulu, Lost Again on the Stage
+
+------------------------------------------------------------------------
+Turn 12 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Brax, Debt Collector 1/3 [Absorb]
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 3 | deck 23 | Rift pool 6 (5 ready)
+  Stage: Lulu, All Together Now 5/3 [Resonance] | Lulu, Wrong Way Hero 5/3 [Resonance,Rush] | Lulu, Lost Again 3/2 [Resonance]
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+  [2] Lulu, All Together Now (Character, cost 5, 3/3)
+Energy ready: 5
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  2) Slip Lulu, All Together Now into the Rift pool (becomes energy)
+  3) Play Pippi, Field Medic [2] -> Backstage
+  4) Play Lulu, All Together Now [5] -> Backstage
+  5) Play Lulu, All Together Now [5 less 4, Next Episode on Lulu, Wrong Way Hero]
+  6) Play Lulu, All Together Now [5 less 1, Next Episode on Lulu, Lost Again]
+  7) Pass / end this phase
+[T12 P0] P0 plays Lulu, All Together Now (Next Episode) [1]
+[T12 P0] Lulu, All Together Now triggers
+
+------------------------------------------------------------------------
+Turn 12 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Brax, Debt Collector 1/3 [Absorb]
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 2 | deck 23 | Rift pool 6 (4 ready)
+  Stage: Lulu, All Together Now 6/4 [Resonance] | Lulu, All Together Now 6/4 [Resonance] | Lulu, Lost Again 4/3 [Resonance]
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 4
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  2) Play Pippi, Field Medic [2] -> Backstage
+  3) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 12 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 7 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Brax, Debt Collector 1/3 [Absorb]
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 2 | deck 23 | Rift pool 6 (4 ready)
+  Stage: Lulu, All Together Now 6/4 [Resonance] | Lulu, All Together Now 6/4 [Resonance] | Lulu, Lost Again 4/3 [Resonance]
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 4
+Attack! Ready Characters:
+  0) Lulu, All Together Now 6/4 [Resonance]
+  1) Lulu, All Together Now 6/4 [Resonance]
+  2) Lulu, Lost Again 4/3 [Resonance]
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T12 P0] P0 attacks with Lulu, All Together Now (6)
+[T12 P0] P0 attacks with Lulu, All Together Now (6)
+[T12 P0] P0 attacks with Lulu, Lost Again (4)
+[T12 P0] P1 blocks Lulu, All Together Now with Brax, Debt Collector
+[T12 P0] P1 blocks Lulu, Lost Again with Brax, Walking Avalanche
+[T12 P0] Brax, Debt Collector takes 6
+[T12 P0] Lulu, All Together Now takes 1
+[T12 P0] P1 loses 6 Resolve (1) - combat
+[T12 P0] Brax, Walking Avalanche takes 4
+[T12 P0] Lulu, Lost Again takes 3
+[T12 P0] Lulu, Lost Again is defeated
+[T12 P0] Brax, Debt Collector is defeated
+
+------------------------------------------------------------------------
+Turn 12 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/1 (dmg 4) Impact 4 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 19 | hand 2 | deck 23 | Rift pool 6 (4 ready)
+  Stage: Lulu, All Together Now 5/3 (dmg 1) exhausted [Resonance] | Lulu, All Together Now 5/4 exhausted [Resonance]
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Pippi, Field Medic (Character, cost 2, 1/3)
+Energy ready: 4
+Second main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Pippi, Field Medic into the Rift pool (becomes energy)
+  2) Play Pippi, Field Medic [2] -> Stage
+  3) Play Pippi, Field Medic [2] -> Backstage
+  4) Pass / end this phase
+[T12 P0] P0 plays Pippi, Field Medic [2]
+[T12 P0] P0 puts Pippi, Field Medic on the Stage
+[T12 P0] Pippi, Field Medic triggers
+[T12 P0] P0 restores 1 Resolve (20)
+
+------------------------------------------------------------------------
+Turn 12 (round 6) | Rift 4/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 2 | deck 24 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/1 (dmg 4) Impact 4 [Absorb] | Pippi, Field Medic 1/3 exhausted | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 1 | deck 23 | Rift pool 6 (2 ready)
+  Stage: Lulu, All Together Now 5/3 (dmg 1) exhausted [Resonance] | Lulu, All Together Now 5/4 exhausted [Resonance] | Pippi, Field Medic 1/3
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+Energy ready: 2
+Second main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Pass / end this phase
+?? type a number, ? N for help, l for the log, q to quit
+Second main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Pass / end this phase
+[T12 P0] Pippi, Hands Don't Shake triggers
+
+=== OPPONENT'S TURN ===
+[T13 P1] Rift 4 -> 5
+[T13 P1] --- P1 wakes (Rift 5, Resolve 1/20) ---
+[T13 P1] P1 plays Brax, Walking Avalanche [5]
+[T13 P1] P1 puts Brax, Walking Avalanche Backstage
+[T13 P1] P1 swaps Brax, Walking Avalanche and Pippi, Field Medic
+[T13 P1] P1 attacks with Brax, Walking Avalanche (3)
+[T13 P1] P1 attacks with Late-Shift Dispatcher (1)
+[T13 P1] Brax, Walking Avalanche triggers
+[T13 P1] Brax, Walking Avalanche releases 4 Impact
+[T13 P1] Lulu, All Together Now takes 4
+[T13 P1] Lulu, All Together Now is defeated
+
+------------------------------------------------------------------------
+Turn 13 (round 7) | Rift 5/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 3 | deck 22 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Brax, Walking Avalanche 3/5 [Absorb] | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 20 | hand 1 | deck 23 | Rift pool 6 (2 ready)
+  Stage: Lulu, All Together Now 3/3 exhausted [Resonance] | Pippi, Field Medic 1/3
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+Energy ready: 2
+The opponent attacks! Attackers:
+  - Brax, Walking Avalanche 3/5 exhausted [Absorb]
+  - Late-Shift Dispatcher 1/3 exhausted
+Block Brax, Walking Avalanche (3/5) with:
+  1) Pippi, Field Medic 1/3
+  (Enter or n = no block)
+Block Late-Shift Dispatcher (1/3) with:
+  1) Pippi, Field Medic 1/3
+  (Enter or n = no block)
+[T13 P1] P0 blocks Late-Shift Dispatcher with Pippi, Field Medic
+
+REACTION WINDOW. Combat: Brax, Walking Avalanche 3 unblocked; Late-Shift Dispatcher 1 blocked by Pippi, Field Medic. Energy ready: 2
+Play a reaction or pass:
+  0) Play Hard Stop [2]
+  1) Pass / end this phase
+[T13 P1] P0 loses 3 Resolve (17) - combat
+[T13 P1] Pippi, Field Medic takes 1
+[T13 P1] Late-Shift Dispatcher takes 1
+[T14 P0] --- P0 wakes (Rift 5, Resolve 17/1) ---
+
+------------------------------------------------------------------------
+Turn 14 (round 7) | Rift 5/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 3 | deck 22 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Brax, Walking Avalanche 3/5 [Absorb] | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 17 | hand 3 | deck 21 | Rift pool 6 (6 ready)
+  Stage: Lulu, All Together Now 3/3 [Resonance] | Pippi, Field Medic 1/3
+  Back : Pippi, Hands Don't Shake 1/4
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Late-Shift Dispatcher (Character, cost 2, 1/3)
+  [2] Resonance Overflow (Technique, cost 3)
+Energy ready: 6
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Late-Shift Dispatcher into the Rift pool (becomes energy)
+  2) Slip Resonance Overflow into the Rift pool (becomes energy)
+  3) Play Late-Shift Dispatcher [2] -> Stage
+  4) Play Late-Shift Dispatcher [2] -> Backstage
+  5) Play Resonance Overflow [3]
+  6) Step Lulu, All Together Now to Backstage (free, once per turn)
+  7) Step Pippi, Field Medic to Backstage (free, once per turn)
+  8) Step Pippi, Hands Don't Shake to the Stage (free, once per turn)
+  9) Pass / end this phase
+Top or bottom for Pippi, Hands Don't Shake?:
+  0) top
+  1) bottom
+Top or bottom for Lulu, Wrong Way Hero?:
+  0) top
+  1) bottom
+[T14 P0] P0 plays Late-Shift Dispatcher [2]
+[T14 P0] P0 puts Late-Shift Dispatcher Backstage
+[T14 P0] Late-Shift Dispatcher triggers
+
+------------------------------------------------------------------------
+Turn 14 (round 7) | Rift 5/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 3 | deck 22 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Brax, Walking Avalanche 3/5 [Absorb] | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 17 | hand 2 | deck 21 | Rift pool 6 (4 ready)
+  Stage: Lulu, All Together Now 3/3 [Resonance] | Pippi, Field Medic 1/3
+  Back : Pippi, Hands Don't Shake 1/4 | Late-Shift Dispatcher 1/3
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Resonance Overflow (Technique, cost 3)
+Energy ready: 4
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Resonance Overflow into the Rift pool (becomes energy)
+  2) Play Resonance Overflow [3]
+  3) Swap Lulu, All Together Now and Pippi, Hands Don't Shake (free, once per turn)
+  4) Swap Lulu, All Together Now and Late-Shift Dispatcher (free, once per turn)
+  5) Swap Pippi, Field Medic and Pippi, Hands Don't Shake (free, once per turn)
+  6) Swap Pippi, Field Medic and Late-Shift Dispatcher (free, once per turn)
+  7) Step Pippi, Hands Don't Shake to the Stage (free, once per turn)
+  8) Step Late-Shift Dispatcher to the Stage (free, once per turn)
+  9) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 14 (round 7) | Rift 5/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 3 | deck 22 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Brax, Walking Avalanche 3/5 [Absorb] | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 17 | hand 2 | deck 21 | Rift pool 6 (4 ready)
+  Stage: Lulu, All Together Now 3/3 [Resonance] | Pippi, Field Medic 1/3
+  Back : Pippi, Hands Don't Shake 1/4 | Late-Shift Dispatcher 1/3
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Resonance Overflow (Technique, cost 3)
+Energy ready: 4
+Attack! Ready Characters:
+  0) Lulu, All Together Now 3/3 [Resonance]
+  1) Pippi, Field Medic 1/3
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T14 P0] P0 attacks with Lulu, All Together Now (3)
+[T14 P0] P0 attacks with Pippi, Field Medic (1)
+[T14 P0] P1 blocks Lulu, All Together Now with Brax, Walking Avalanche
+[T14 P0] P1 blocks Pippi, Field Medic with Pippi, Field Medic
+
+REACTION WINDOW. Combat: Lulu, All Together Now 3 blocked by Brax, Walking Avalanche; Pippi, Field Medic 1 blocked by Pippi, Field Medic. Energy ready: 4
+Play a reaction or pass:
+  0) Play Resonance Overflow [3]
+  1) Pass / end this phase
+[T14 P0] P0 plays Resonance Overflow [3]
+[T14 P0] Brax, Walking Avalanche takes 5
+[T14 P0] Lulu, All Together Now takes 3
+[T14 P0] Pippi, Field Medic takes 1
+[T14 P0] Pippi, Field Medic takes 1
+[T14 P0] Brax, Walking Avalanche is defeated
+
+------------------------------------------------------------------------
+Turn 14 (round 7) | Rift 5/6  next Anomaly: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 3 | deck 22 | Rift pool 5 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Late-Shift Dispatcher 1/3 exhausted
+  Back : Pippi, No Time to Panic 1/4 | Pippi, Field Medic 1/2 (dmg 1)
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 17 | hand 1 | deck 21 | Rift pool 6 (1 ready)
+  Stage: Lulu, All Together Now 5/1 (dmg 3) exhausted [Resonance] | Pippi, Field Medic 1/2 (dmg 1) exhausted
+  Back : Pippi, Hands Don't Shake 1/4 | Late-Shift Dispatcher 1/3
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+Energy ready: 1
+Second main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Swap Lulu, All Together Now and Pippi, Hands Don't Shake (free, once per turn)
+  2) Swap Lulu, All Together Now and Late-Shift Dispatcher (free, once per turn)
+  3) Swap Pippi, Field Medic and Pippi, Hands Don't Shake (free, once per turn)
+  4) Swap Pippi, Field Medic and Late-Shift Dispatcher (free, once per turn)
+  5) Step Pippi, Hands Don't Shake to the Stage (free, once per turn)
+  6) Step Late-Shift Dispatcher to the Stage (free, once per turn)
+  7) Pass / end this phase
+[T14 P0] Pippi, Hands Don't Shake triggers
+[T14 P0] P0 restores 2 Resolve (19)
+
+=== OPPONENT'S TURN ===
+[T15 P1] Rift 5 -> 6
+[T15 P1] ANOMALY: Row Slip - Each player moves their highest-Power Stage Character Backstage, if there is room.
+[T15 P1] --- P1 wakes (Rift 2, Resolve 1/19) ---
+[T15 P1] P1 slips a card into the Rift pool (6)
+[T15 P1] P1 plays Kinetic Reversal [3]
+[T15 P1] Lulu, All Together Now takes 3
+[T15 P1] Lulu, All Together Now is defeated
+[T15 P1] P1 plays The Forgotten Disaster [3]
+[T15 P1] The Forgotten Disaster is attached to P0
+[T15 P1] P1 steps Pippi, No Time to Panic onto the Stage
+[T15 P1] P1 attacks with Brax, Walking Avalanche (3)
+[T15 P1] P1 attacks with Late-Shift Dispatcher (1)
+[T15 P1] P1 attacks with Pippi, No Time to Panic (1)
+[T15 P1] P0 loses 3 Resolve (16) - combat
+[T15 P1] P0 loses 1 Resolve (15) - combat
+[T15 P1] P0 loses 1 Resolve (14) - combat
+[T16 P0] --- P0 wakes (Rift 2, Resolve 14/1) ---
+[T16 P0] The Forgotten Disaster: 2 left
+
+------------------------------------------------------------------------
+Turn 16 (round 8) | Rift 2/6  next Anomaly: Blank Page - The Zone and every Condition are destroyed.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 2 | deck 20 | Rift pool 6 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Late-Shift Dispatcher 1/3 exhausted | Pippi, No Time to Panic 1/4 exhausted
+  Back : Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 14 | hand 3 | deck 19 | Rift pool 6 (6 ready)
+  Stage: Pippi, Field Medic 1/3
+  Back : Pippi, Hands Don't Shake 1/4 | Late-Shift Dispatcher 1/3
+  Conditions on player: The Forgotten Disaster
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Lulu, Wrong Way Hero (Character, cost 4, 3/3)
+  [2] Resonance Overflow (Technique, cost 3)
+Energy ready: 6
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Lulu, Wrong Way Hero into the Rift pool (becomes energy)
+  2) Slip Resonance Overflow into the Rift pool (becomes energy)
+  3) Play Lulu, Wrong Way Hero [4] -> Stage
+  4) Play Resonance Overflow [3]
+  5) Swap Pippi, Field Medic and Pippi, Hands Don't Shake (free, once per turn)
+  6) Swap Pippi, Field Medic and Late-Shift Dispatcher (free, once per turn)
+  7) Step Pippi, Hands Don't Shake to the Stage (free, once per turn)
+  8) Step Late-Shift Dispatcher to the Stage (free, once per turn)
+  9) Pass / end this phase
+[T16 P0] P0 plays Lulu, Wrong Way Hero [4]
+[T16 P0] P0 puts Lulu, Wrong Way Hero on the Stage
+
+------------------------------------------------------------------------
+Turn 16 (round 8) | Rift 2/6  next Anomaly: Blank Page - The Zone and every Condition are destroyed.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 2 | deck 20 | Rift pool 6 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Late-Shift Dispatcher 1/3 exhausted | Pippi, No Time to Panic 1/4 exhausted
+  Back : Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 14 | hand 2 | deck 19 | Rift pool 6 (2 ready)
+  Stage: Pippi, Field Medic 1/3 | Lulu, Wrong Way Hero 3/3 [Resonance,Rush]
+  Back : Pippi, Hands Don't Shake 1/4 | Late-Shift Dispatcher 1/3
+  Conditions on player: The Forgotten Disaster
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Resonance Overflow (Technique, cost 3)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Resonance Overflow into the Rift pool (becomes energy)
+  2) Swap Pippi, Field Medic and Pippi, Hands Don't Shake (free, once per turn)
+  3) Swap Pippi, Field Medic and Late-Shift Dispatcher (free, once per turn)
+  4) Swap Lulu, Wrong Way Hero and Pippi, Hands Don't Shake (free, once per turn)
+  5) Swap Lulu, Wrong Way Hero and Late-Shift Dispatcher (free, once per turn)
+  6) Step Pippi, Hands Don't Shake to the Stage (free, once per turn)
+  7) Step Late-Shift Dispatcher to the Stage (free, once per turn)
+  8) Pass / end this phase
+[T16 P0] P0 steps Pippi, Hands Don't Shake onto the Stage
+
+------------------------------------------------------------------------
+Turn 16 (round 8) | Rift 2/6  next Anomaly: Blank Page - The Zone and every Condition are destroyed.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 2 | deck 20 | Rift pool 6 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Late-Shift Dispatcher 1/3 exhausted | Pippi, No Time to Panic 1/4 exhausted
+  Back : Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 14 | hand 2 | deck 19 | Rift pool 6 (2 ready)
+  Stage: Pippi, Field Medic 1/3 | Lulu, Wrong Way Hero 3/3 [Resonance,Rush] | Pippi, Hands Don't Shake 1/4
+  Back : Late-Shift Dispatcher 1/3
+  Conditions on player: The Forgotten Disaster
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Resonance Overflow (Technique, cost 3)
+Energy ready: 2
+Main phase - choose an action (? N for card text):
+  0) Slip Hard Stop into the Rift pool (becomes energy)
+  1) Slip Resonance Overflow into the Rift pool (becomes energy)
+  2) Pass / end this phase
+
+------------------------------------------------------------------------
+Turn 16 (round 8) | Rift 2/6  next Anomaly: Blank Page - The Zone and every Condition are destroyed.
+Zone: Backlot Reality (theirs)
+OPPONENT: Resolve 1 | hand 2 | deck 20 | Rift pool 6 (0 ready)
+  Stage: Brax, Walking Avalanche 3/5 exhausted [Absorb] | Late-Shift Dispatcher 1/3 exhausted | Pippi, No Time to Panic 1/4 exhausted
+  Back : Pippi, Field Medic 1/3
+  Relics: Stitchglass Needle 0/0
+
+YOU: Resolve 14 | hand 2 | deck 19 | Rift pool 6 (2 ready)
+  Stage: Pippi, Field Medic 1/3 | Lulu, Wrong Way Hero 3/3 [Resonance,Rush] | Pippi, Hands Don't Shake 1/4
+  Back : Late-Shift Dispatcher 1/3
+  Conditions on player: The Forgotten Disaster
+------------------------------------------------------------------------
+Your hand:
+  [0] Hard Stop (Technique, cost 2)
+  [1] Resonance Overflow (Technique, cost 3)
+Energy ready: 2
+Attack! Ready Characters:
+  0) Pippi, Field Medic 1/3
+  1) Lulu, Wrong Way Hero 3/3 [Resonance,Rush]
+  2) Pippi, Hands Don't Shake 1/4
+Type the numbers of the attackers (e.g. "0 2"), "all", or Enter for no attack:
+[T16 P0] P0 attacks with Pippi, Field Medic (1)
+[T16 P0] P0 attacks with Lulu, Wrong Way Hero (3)
+[T16 P0] P0 attacks with Pippi, Hands Don't Shake (1)
+[T16 P0] P1 loses 1 Resolve (0) - combat
+
+=== GAME OVER === Player 0 wins (resolve) after 8 rounds. Final Resolve: you 14, opponent 0
