@@ -1,0 +1,18 @@
+printing_id,base_number,rarity,character,variant,brief,episode
+RP01-085-R_ALT,RP01-085,R,Kai,R_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",2
+RP01-086-R_ALT,RP01-086,R,Nova,R_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",2
+RP01-091-R_ALT,RP01-091,R,Vivi Vesper,R_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",6
+RP01-094-R_ALT,RP01-094,R,Lulu,R_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",8
+RP01-103-R_ALT,RP01-103,R,Pippi,R_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",12
+RP01-097-R_ALT,RP01-097,R,Crow,R_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",10
+RP01-115-SR_ALT,RP01-115,SR,Kai,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",12
+RP01-116-SR_ALT,RP01-116,SR,Nova,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",11
+RP01-117-SR_ALT,RP01-117,SR,Mika,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",12
+RP01-118-SR_ALT,RP01-118,SR,Ayame,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",12
+RP01-119-SR_ALT,RP01-119,SR,Toma,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",7
+RP01-120-SR_ALT,RP01-120,SR,Lulu,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",8
+RP01-121-SR_ALT,RP01-121,SR,Pippi,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",9
+RP01-127-SR_ALT,RP01-127,SR,Vivi Vesper,SR_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",6
+RP01-129-SEC_ALT,RP01-129,SEC,Ayame,SEC_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",12
+RP01-130-SEC_ALT,RP01-130,SEC,Mika,SEC_ALT,"Alternate composition, different camera/pose and scene emphasis. Preserve the same character model; no anatomy distortion.",12
+RP01-116-EB,RP01-116,EB,Nova,HIDDEN_EPISODE_BREAK,"Nova, You Knew I'd Be Here: she looks out of the card and gently peels back an illustrated card edge, revealing miniature scenes from episodes 1–12. Prismatic screen-fracture foil, elegant playful self-awareness, unmistakably same canon design. No printed checklist number; same gameplay identity as base SR.",11
