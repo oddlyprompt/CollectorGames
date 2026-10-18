@@ -30,6 +30,7 @@ This document is the rule book for the playable engine in `tools/rift-parade/`. 
 | `momentumCap` | 3 | Largest Momentum bonus |
 | `resonanceCap` | 2 | Largest Resonance bonus |
 | `absorbCap` | 5 | Most Impact on an Absorb Character |
+| `strainStart` | 12 | Round in which Strain starts (Resolve lost at wake = round - start + 1) |
 | `turnLimit` | 60 | Turns (both players) before a draw |
 | `anomalyDamage` | 1 | Gravity Fault damage |
 | `anomalyBleed` | 2 | Static Bleed Resolve loss |
@@ -78,7 +79,7 @@ Counters you will see: each player's **Resolve**, the shared **Rift** gauge, **I
 
 ## 5. A turn
 
-1. **Wake.** Ready all your Rift cards and Characters. On the first player's turn from round 2 onward the Rift rises by 1 (a *round* is one turn of each player). Then "at your wake" effects happen.
+1. **Wake.** Ready all your Rift cards and Characters. **Strain:** from round 12 on, you lose Resolve at your wake equal to the round number minus 11 (1 in round 12, 2 in round 13, and so on); this ends board stalls. On the first player's turn from round 2 onward the Rift rises by 1 (a *round* is one turn of each player). Then "at your wake" effects happen.
 2. **Draw** 2 cards.
 3. **Main phase.** Do any of these, in any order, as often as you can pay for:
    * **Slip** one card from hand into your Rift pool (once per turn, up to 8 cards in the pool).
@@ -131,7 +132,7 @@ Other things the Rift does: **Phase** has no effect at Rift 0, 1 or 2, and sever
 
 * Reduce the opponent's Resolve to 0 or less. If both players reach 0 at the same time the game is a draw.
 * A player who must draw from an empty deck loses.
-* After 30 rounds with no winner the game is a draw (stalled games are measured in testing and should be very rare).
+* Strain (section 5) makes very long games end well before this. After 30 rounds with no winner the game is a draw (stalled games are measured in testing and should be very rare).
 
 ## 10. Rules details
 
