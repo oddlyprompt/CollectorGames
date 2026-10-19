@@ -272,3 +272,13 @@ improved after the refactor; the architecture must make franchise-specific econo
 Still to approve: this updated proposal. Step 0 does not start until it is approved.
 
 The earlier question (bit-identical or statistical) is answered: bit-identical.
+
+## 8. Refactor status (2026-10-19)
+Done and validated (all 18 golden scenarios, all test suites, global-name check): step 0 golden harness, step 1 line registry, step 2 copy helpers and condition strategy,
+step 3 shared market functions (`kit/market.js`), step 4 shared store transactions (`kit/stores.js`).
+
+Measured before starting step 5 (normalising the line prefixes and diffing Wildkin's file against Tidemark's):
+- UI screens (`*_ui1/2/3`, `*_render`, `*_boot`): 60 to 100% of lines differ. They are markup and wording, not logic, and are scheduled for the visual, store and collection overhauls (roadmap 5 to 7).
+- Collection and goals (`*_collect`): about every line differs (goals, wording, set structure).
+- World (`*_world`): the lifecycle has diverged on purpose (Tidemark prints only Tenth Tide, other sets are history; different announcement, rotation and shelf rules). The weekly metagame model is the same idea but its sources differ (engine-built decks vs a precomputed library with live ban tests) and so do constants (usage cap 4 vs 3).
+Unifying these now would add parameters for almost every line, protect nothing that is not already protected, and be rewritten by economy v2 and the UI overhaul.
