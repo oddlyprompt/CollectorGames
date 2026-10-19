@@ -16,4 +16,6 @@ Written by Claude Code after filing SOL's final delivery (26 zips plus the hando
 2. **Fair of Banners (TMI-0642, sheet TM-S007): minor.** Most banners show the right faction icons (tower, tree, mountain, waves, kraken, scales), but the gold Free Fleets banner reads more like a sun than a ship's wheel, three banners repeat, and the grey Neutral waystone is missing. Accept as is, or redo the one cell.
 3. **Resolution.** Pictures are 468×351 (a few 472×354), SOL's native output with no upscaling. Fine at phone card size; soft in the 3D close-up viewer. Accept, or ask SOL whether larger renders are possible for the Rares and Legendaries.
 
-Nothing is marked approved by the owner yet: every picture's status is `delivered-awaiting-owner-review` in `../approved/registry.json`.
+## Owner decision (2026-10-19)
+
+All three accepted as is: Brass Automaton, Fair of Banners and the 468×351 resolution stay as delivered. Every one of the 657 pictures is approved (status `approved` in `../approved/registry.json`, recorded with `art_intake.py --approve`).
