@@ -1,11 +1,11 @@
-# Tidemark Collector: the game (status, decisions, gaps)
+# Trading Card Collector: the game (status, decisions, gaps)
 
 Added 2026-10-19. The owner asked for Tidemark in the collector game "like Wildkin: sets, packs, prices, market and the living metagame, using
 `tidemark-production/cards.json` and `tools/tidemark/v1`". This file says what exists, what Claude **decided** (none of it is canon until the owner
-approves it) and what is missing. The code map is in `CLAUDE.md` (section "Tidemark Collector: the fourth game").
+approves it) and what is missing. Tidemark is the second card game inside the Trading Card Collector world (one save, wallet, marketplace and collection with Wildkin). The code map is in `CLAUDE.md`.
 
 ## What you can do
-- Start a game (five scenarios: a fresh start, pocket change, a preorder of 12 Tenth Tide packs, a preorder of 2 boxes, deep pockets) on 1 June 2026.
+- Start a game on 1 June 2026 (scenarios include a preorder of 12 Tenth Tide packs and of 2 Tenth Tide boxes next to the Wildkin ones). Wildkin and Tidemark share the cash, the marketplace, grading and the collection; Home shows both.
 - **Tenth Tide** is announced on day one with its Legendaries and alternate arts shown; the rest is revealed over the following weeks; it releases on **26 June 2026**.
   Preorders (retail price, charged on the day), big-box retail (restocked Mondays), the local game store (the Lantern Room: a Thursday allocation, a weekly case of
   singles, a buylist at 55%) and Saltmarket (online singles, every printing near mint at market +15%).

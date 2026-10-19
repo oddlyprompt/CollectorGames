@@ -1,21 +1,21 @@
 // ===================== YOUR YEAR IN COLLECTING =====================
 // Built from what already exists: provenance, sale history, what you looked at and passed on, grading returns, chases.
-function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); if (G.tcg && typeof myTc==='function') for (const c of myTc()) v+=tcCopyValue(c); return Math.round(v*100)/100; }   // everything owned except cash (Wildkin cards and sealed product included)
+function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); if (G.tcg && typeof myTc==='function') for (const c of myTc()) v+=tcCopyValue(c); if (G.xtg && typeof myXt==='function') for (const c of myXt()) v+=xtCopyValue(c); return Math.round(v*100)/100; }   // everything owned except cash (Wildkin cards and sealed product included)
 function snapNW(force){ const P_=G.player; const L=P_.nw=P_.nw||[]; if (!force && L.length && G.day-L[L.length-1][0]<7) return; L.push([G.day, Math.round(P_.cash*100)/100, netWorthNow(), Math.round(P_.bought), Math.round(P_.sold), Math.round(P_.fees), P_.packs||0, P_.paid||0]); if (L.length>420) L.shift(); }
 function noteSeen(kind, id, price, where){ const P_=G.player; const S=P_.seen=P_.seen||{}; const k=kind+':'+id; if (S[k]) return; S[k]=[G.day, Math.round(price*100)/100, where]; const ks=Object.keys(S); if (ks.length>320){ ks.sort((a,b)=>S[a][0]-S[b][0]); for (let i=0;i<40;i++) delete S[ks[i]]; } }
-function objValue(k, o){ return k==='t'? tcCopyValue(o) : k==='m'? cmCopyValue(o) : cardValue(o); }
-function objLabel(k, o){ return k==='t'? tcCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':'') : k==='m'? cmItemLabel(o) : cardName(o)+' '+D(o.k).prod.yr+' '+D(o.k).title+(o.g>0?' (GCS '+o.g+')':''); }
+function objValue(k, o){ return k==='x'? xtCopyValue(o) : k==='t'? tcCopyValue(o) : k==='m'? cmCopyValue(o) : cardValue(o); }
+function objLabel(k, o){ return k==='x'? xtCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':'') : k==='t'? tcCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':'') : k==='m'? cmItemLabel(o) : cardName(o)+' '+D(o.k).prod.yr+' '+D(o.k).title+(o.g>0?' (GCS '+o.g+')':''); }
 function jPeriod(y){ const t0=Math.max(G.player.start, dateToDay(y,1,1)); const t1=y>=yearOf(G.day)? G.day : dateToDay(y,12,31); return [t0,t1]; }
 function jRef(k, o, extra){ return Object.assign({k, id:o.id, label:objLabel(k,o)}, extra||{}); }
 function buildYear(y){
   const [t0,t1]=jPeriod(y); const P_=G.player; const snaps=(P_.nw||[]).filter(s=>s[0]<=t1); const inP=snaps.filter(s=>s[0]>=t0);
   const s0 = snaps.filter(s=>s[0]<=t0).pop() || inP[0] || snaps[0]; const s1 = inP[inP.length-1] || snaps[snaps.length-1];
-  const kinds=[['c',Object.values(G.cards)], ['m', G.cm? Object.values(G.mc):[]], ['t', G.tcg? Object.values(G.tc):[]]];
+  const kinds=[['c',Object.values(G.cards)], ['m', G.cm? Object.values(G.mc):[]], ['t', G.tcg? Object.values(G.tc):[]], ['x', G.xtg? Object.values(G.xtc):[]]];
   const acq=[], sold=[], pulls=[]; let nCards=0, nComics=0;
   for (const [k,arr] of kinds) for (const o of arr){
-    if (o.pv && !o.sc && o.pv.d>=t0 && o.pv.d<=t1){ if (k==='c'||k==='t') nCards++; else nComics++; const paid=(o.a&&o.a[2])||0; const soldH=(o.h||[]).filter(h=>typeof h[1]==='string' && h[1].startsWith('Sold') && h[0]>=o.pv.d).pop();
+    if (o.pv && !o.sc && o.pv.d>=t0 && o.pv.d<=t1){ if (k==='c'||k==='t'||k==='x') nCards++; else nComics++; const paid=(o.a&&o.a[2])||0; const soldH=(o.h||[]).filter(h=>typeof h[1]==='string' && h[1].startsWith('Sold') && h[0]>=o.pv.d).pop();
       if (o.o===0){ const now=objValue(k,o); acq.push({k, o, paid, now, gain:now-paid, sold:false}); } else if (soldH){ acq.push({k, o, paid, now:soldH[2], gain:soldH[2]-paid, sold:true}); }
-      if ((k==='c'||k==='t') && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
+      if ((k==='c'||k==='t'||k==='x') && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
     if (o.h) for (const h of o.h) if (h[0]>=t0 && h[0]<=t1 && typeof h[1]==='string' && h[1].startsWith('Sold') && h[2]>0 && o.o!==0){ sold.push({k, o, price:h[2], now:objValue(k,o), t:h[0]}); }
   }
   const pick1=(arr,f)=>arr.slice().sort((a,b)=>f(b)-f(a))[0];
@@ -51,7 +51,7 @@ ACT.hitem = (function(f){ return function(a){ try { const [s,t,id]=hsplit(a); co
 ACT.cshopcopy = (function(f){ return function(a){ try { const [id,from]=a.split(':'); const cp=MC(+id); if (cp && cp.o===SHOP_ID){ const pr=from==='bin'?1:((G.cm.shop.back.find(x=>x[0]===+id)||[0,0])[1]); noteSeen('m',+id,pr,SHOP_NAME); } } catch(e){} return f(a); }; })(ACT.cshopcopy);
 enterEvent = (function(f){ return function(evId, late){ const r=f(evId, late); if (r===null){ const ev=G.hunt.ev.find(x=>x.id===evId); const L_=G.player.evlog=G.player.evlog||[]; if (ev && !L_.some(e=>e.d===G.day && e.id===evId)){ L_.push({d:G.day, id:evId, n:ev.n}); if (L_.length>200) L_.shift(); } } return r; }; })(enterEvent);
 // ---------- UI ----------
-function jRow(x){ const o=objFor(x.k,x.id); const thumb=o? (x.k==='m'?miniComic(o):x.k==='t'?miniT(o):miniCard(o)) : '<div class="mini"></div>'; const act=x.k==='m'?'ccopy':x.k==='t'?'tcopy':'card'; return `<button class="row" ${o?`data-act="${act}" data-a="${x.id}"`:'style="cursor:default"'}>${thumb}<div class="rt"><b>${esc(x.label)}</b>${x.paid!=null&&x.now!=null?`<span>Cost ${money(x.paid,true)}, ${x.sold?'sold for':'worth'} ${money(x.now,true)}</span>`:x.price!=null?`<span>You sold it for ${money(x.price,true)}; about ${money(x.now,true)} now</span>`:x.ask!=null?`<span>Seen ${x.where?'at '+esc(x.where)+' ':''}for ${money(x.ask,true)}; about ${money(x.now,true)} now</span>`:x.now!=null?`<span>About ${money(x.now,true)}</span>`:''}</div></button>`; }
+function jRow(x){ const o=objFor(x.k,x.id); const thumb=o? (x.k==='m'?miniComic(o):x.k==='x'?xMiniT(o):x.k==='t'?miniT(o):miniCard(o)) : '<div class="mini"></div>'; const act=x.k==='m'?'ccopy':x.k==='x'?'xtopy':x.k==='t'?'tcopy':'card'; return `<button class="row" ${o?`data-act="${act}" data-a="${x.id}"`:'style="cursor:default"'}>${thumb}<div class="rt"><b>${esc(x.label)}</b>${x.paid!=null&&x.now!=null?`<span>Cost ${money(x.paid,true)}, ${x.sold?'sold for':'worth'} ${money(x.now,true)}</span>`:x.price!=null?`<span>You sold it for ${money(x.price,true)}; about ${money(x.now,true)} now</span>`:x.ask!=null?`<span>Seen ${x.where?'at '+esc(x.where)+' ':''}for ${money(x.ask,true)}; about ${money(x.now,true)} now</span>`:x.now!=null?`<span>About ${money(x.now,true)}</span>`:''}</div></button>`; }
 function yearSheetHTML(r, live){
   const net=r.end-r.start-r.paid; const bits=[];
   return `<div class="stack"><div class="title-block"><div class="yr">${live?'So far this year':'The year in review'}</div><h1>${r.y}</h1><div class="sub">${fmtDate(r.t0,true)} to ${fmtDate(r.t1,true)}</div></div>

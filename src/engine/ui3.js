@@ -202,7 +202,7 @@ VIEWS.ball = ()=>{
   let body='';
   if (s==='news'){
     const fol=new Set(G.player.follow); const only=UI.newsF==='f';
-    const ns=G.news.filter(n=>n.k!=='comic' && n.k!=='tcg' && (!only || (n.p!=null && fol.has(n.p)))).slice(0,60);
+    const ns=G.news.filter(n=>n.k!=='comic' && n.k!=='tcg' && n.k!=='xtg' && (!only || (n.p!=null && fol.has(n.p)))).slice(0,60);
     body=`<div class="chips" style="margin-bottom:10px"><button class="chip ${only?'':'on'}" data-act="newsf" data-a="a">Everything</button><button class="chip ${only?'on':''}" data-act="newsf" data-a="f">Players you follow</button></div><div class="panel">${ns.map(newsRow).join('')||'<div class="empty">'+(only?'Follow players from their pages to filter news here.':'No news.')+'</div>'}</div>`;
   } else if (s==='stand'){
     const ch=G.champs[yr-1]; body=`${ch!=null?`<p class="small muted" style="margin:0 0 10px">${yr-1} champions: ${esc(teamName(ch))}.</p>`:''}<div class="cols">${standingsHTML()}</div>`;

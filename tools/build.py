@@ -8,7 +8,7 @@ ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); SRC=os.path.jo
 ENGINE='core world cards market render cm_data cm_world cm_value cm_render cm_save hunt visual visual2 cover2 ui1 ui2 ui3 cm_ui hunt_ui flow visual_ui attach attach_ui drama breaks scenario journal polish viewer3d'.split()
 TCG='tcg_frames tcg_rules tcg_data tcg_world tcg_value tcg_boot tcg_render tcg_ui1 tcg_ui2 tcg_ui3 tcg_stores tcg_collect'.split()
 TIDEMARK='tm/tm_rules tm/tm_data tm/tm_world tm/tm_value tm/tm_boot tm/tm_render tm/tm_ui1 tm/tm_ui2 tm/tm_ui3 tm/tm_stores tm/tm_collect'.split()
-GAMES={'sports':{'name':'Sports Card Collector','theme':'#c0392b','tcg':False},'comics':{'name':'Comics Collector','theme':'#d4a017','tcg':False},'tcg':{'name':'Wildkin Collector','theme':'#8e44ad','tcg':True},'tidemark':{'name':'Tidemark Collector','theme':'#1f6f8b','tcg':False,'tm':True}}
+GAMES={'sports':{'name':'Sports Card Collector','theme':'#c0392b','tcg':False},'comics':{'name':'Comics Collector','theme':'#d4a017','tcg':False},'tcg':{'name':'Trading Card Collector','theme':'#8e44ad','tcg':True,'tm':True}}
 def rd(p): return open(p,encoding='utf-8').read()
 def icon(size, color, path):
     im=Image.new('RGBA',(size,size),(0,0,0,0)); d=ImageDraw.Draw(im); r=int(size*0.22); d.rounded_rectangle((0,0,size-1,size-1),radius=r,fill=color)
@@ -23,8 +23,8 @@ def build(g):
     pre=''
     if cfg['tcg']:                                                                 # Wildkin cards and art come from wildkin-production/ (see tools/wildkin_build.py)
         import wildkin_build; pre,na,nc=wildkin_build.canon_js(out); print(f'        Wildkin: {nc} cards from the manifest, {na} approved art files copied to {g}/art/')
-    if cfg.get('tm'):                                                              # Tidemark cards, art and rules engine come from tidemark-production/ and tools/tidemark/v1 (see tools/tidemark_build.py)
-        import tidemark_build; pre,na,nc,npr=tidemark_build.build(out); pre+='\n'+rd(os.path.join(ROOT,'tools','tidemark','v1','render.js'))+'\n'; print(f'        Tidemark: {nc} cards, {npr} printings, {na} approved art files copied to {g}/art/')
+    if cfg.get('tm'):                                                              # the second card game, Tidemark: cards, art and rules engine come from tidemark-production/ and tools/tidemark/v1 (see tools/tidemark_build.py)
+        import tidemark_build; tpre,na,nc,npr=tidemark_build.build(out); pre+='\n'+tpre+'\n'+rd(os.path.join(ROOT,'tools','tidemark','v1','render.js'))+'\n'; print(f'        Tidemark: {nc} cards, {npr} printings, {na} approved art files copied to {g}/art/')
     js=pre+'\n'.join(rd(f) for f in files)+'\nshellBoot();\n'; open(out+'/game.js','w',encoding='utf-8').write(js)
     css=rd(os.path.join(SRC,'engine','style.css'))+'\n'+rd(os.path.join(SRC,'shell','shell.css')); open(out+'/style.css','w',encoding='utf-8').write(css)
     shutil.copy(os.path.join(ROOT,'vendor','three.min.js'),out+'/vendor/three.min.js')

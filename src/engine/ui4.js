@@ -117,6 +117,7 @@ async function boot(){
   migrate();
   if (!G.cm){ await bootProg(0.05,'Opening the comic shop'); await upgradeComics(async(f,m)=>bootProg(0.05+f*0.9,'Comics history: '+m.toLowerCase())); await bootProg(0.97,'Stocking the shelves'); migrate(); saveGame(true); }
   if (!G.tcg){ await bootProg(0.5,'Opening the card game shop'); await upgradeTcg(async(f,m)=>bootProg(0.5+f*0.45,m)); migrate(); saveGame(true); }
+  if (typeof upgradeXt==='function' && !G.xtg){ await bootProg(0.6,'Opening the second card game'); await upgradeXt(null); migrate(); saveGame(true); }
   if (!G.hunt){ await bootProg(0.98,'Mapping the local hobby scene'); huntInit(); saveGame(true); }
   seedTracking();
   UI.booting=false; b.style.display='none'; render();

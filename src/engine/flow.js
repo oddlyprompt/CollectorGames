@@ -59,7 +59,7 @@ function buildRecap(t0, snap0, log, stop){
   moves.sort((a,b)=>Math.abs(b.d)-Math.abs(a.d));
   const op=ownedPlayers(), os=ownedSeries(); const recent=G.news.filter(n=>n.t>t0);
   const isMine=n=> (n.p!=null && op.has(n.p)) || (n.cs!=null && os.has(n.cs));
-  const r={ t0, t1:G.day, v0, v1, moves, log, stop, mine:recent.filter(isMine), other:recent.filter(n=>!isMine(n) && (n.k==='comic'||n.k==='tcg'||n.p!=null||n.k==='hobby')) };
+  const r={ t0, t1:G.day, v0, v1, moves, log, stop, mine:recent.filter(isMine), other:recent.filter(n=>!isMine(n) && (n.k==='comic'||n.k==='tcg'||n.k==='xtg'||n.p!=null||n.k==='hobby')) };
   G.player.lastRecap={ t0, t1:G.day, n:moves.length+r.mine.length };
   return r;
 }
