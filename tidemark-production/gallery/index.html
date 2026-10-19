@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tidemark Card Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f1ec;--fg:#1d1b18;--muted:#6b665d;--panel:#fffdf8;--line:#ddd6c8;--accent:#2f5fae}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121417;--fg:#ece8df;--muted:#9a958b;--panel:#1b1e22;--line:#30343a;--accent:#8fb0e6}}
+:root[data-theme="dark"]{--bg:#121417;--fg:#ece8df;--muted:#9a958b;--panel:#1b1e22;--line:#30343a;--accent:#8fb0e6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 Georgia,'Times New Roman',serif}
+header{padding:16px;max-width:1400px;margin:0 auto}
+h1{font-family:Cinzel,Georgia,serif;letter-spacing:.12em;margin:0 0 4px;font-size:26px}
+.sub{color:var(--muted);margin:0 0 12px}
+.bar{display:flex;flex-wrap:wrap;gap:8px}
+select,input{font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--fg);min-width:0}
+input{flex:1 1 160px}
+.count{color:var(--muted);margin:10px 0 0;font-size:13px}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;padding:0 16px 40px;max-width:1400px;margin:0 auto}
+.card{aspect-ratio:63/88;border-radius:10px;cursor:zoom-in;background:#0b0b0c}
+.card canvas{width:100%;height:100%;display:block;border-radius:10px}
+#big{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;padding:16px;z-index:5;cursor:zoom-out;flex-direction:column;gap:10px}
+#big canvas{max-width:min(500px,100%);max-height:84vh;width:auto;height:auto}
+#big p{color:#ddd;max-width:500px;font-size:13px;margin:0}
+@media (max-width:480px){main{grid-template-columns:repeat(2,1fr);gap:10px;padding:0 12px 30px}header{padding:12px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>TIDEMARK</h1>
+  <p class="sub">Every card, drawn by the game's frame renderer with SOL's approved art. Numbers and abilities are designed and balanced by simulation, not final.</p>
+  <div class="bar">
+    <select id="set"></select>
+    <select id="fac"><option value="">All factions</option></select>
+    <select id="rar"><option value="">All rarities</option><option value="C">Common</option><option value="U">Uncommon</option><option value="R">Rare</option><option value="L">Legendary</option></select>
+    <select id="typ"><option value="">All types</option></select>
+    <input id="q" type="search" placeholder="Search name or text">
+  </div>
+  <p class="count" id="count"></p>
+</header>
+<main id="grid"></main>
+<div id="big"><canvas id="bigc"></canvas><p id="bign"></p></div>
+<script src="render.js"></script>
+<script>
+const FACN={CR:'Crownlands',TW:'Thornwild',IR:'Iron Reach',TB:'Tideborn',FF:'Free Fleets',AC:'Abyssal Choir',HL:'Harbor Leagues',NE:'Neutral'};
+const BASE=(window.TM_BASE||'../'); let P=[], CARDS={}; const imgs=new Map();
+const load=src=>{ if (!imgs.has(src)) imgs.set(src,new Promise(res=>{ const i=new Image(); i.onload=()=>res(i); i.onerror=()=>res(null); i.src=src; })); return imgs.get(src); };
+// art: one file per picture, or (published copies) one image per production sheet with each picture's cell given in TM_ATLAS
+async function art(p){ if (!p.art) return null; const A=window.TM_ATLAS&&window.TM_ATLAS[p.ill]; if (!A) return load(BASE+p.art);
+  const sheet=await load('atlas/'+A[0]+'.webp'); if (!sheet) return null; const c=document.createElement('canvas'); c.width=A[3]; c.height=A[4]; c.getContext('2d').drawImage(sheet,A[1],A[2],A[3],A[4],0,0,A[3],A[4]); return c; }
+async function draw(cv, p, W){ const img=await art(p); cv.width=W; cv.height=Math.round(W*88/63); TMRender.drawCard(cv.getContext('2d'), p, img, W); }
+const io=new IntersectionObserver(es=>{ for (const e of es) if (e.isIntersecting){ io.unobserve(e.target); const p=e.target._p; draw(e.target.firstChild,p,Math.min(600,Math.round(e.target.clientWidth*(window.devicePixelRatio||1)))); } },{rootMargin:'400px'});
+function render(){ const s=set.value, f=fac.value, r=rar.value, t=typ.value, q=document.getElementById('q').value.toLowerCase();
+  const L=P.filter(p=>(!s||p.set===s) && (!f||p.f===f) && (!r||p.r===r) && (!t||p.type===t) && (!q || (p.n+' '+p.kwline+' '+p.rules+' '+p.sub).toLowerCase().includes(q)));
+  const g=document.getElementById('grid'); g.innerHTML=''; for (const p of L){ const d=document.createElement('div'); d.className='card'; d._p=p; d.appendChild(document.createElement('canvas')); d.onclick=()=>zoom(p); g.appendChild(d); io.observe(d); }
+  document.getElementById('count').textContent=L.length+' cards'; try { localStorage.setItem('tmg', JSON.stringify({s,f,r,t})); } catch(e){} }
+async function zoom(p){ const b=document.getElementById('big'); b.style.display='flex'; await draw(document.getElementById('bigc'), p, 1000); const c=CARDS[p.card];
+  document.getElementById('bign').textContent=p.pid+' · '+(c&&c.note? 'Designer note: '+c.note : ''); }
+document.getElementById('big').onclick=()=>document.getElementById('big').style.display='none';
+fetch(BASE+'cards.json').then(r=>r.json()).then(d=>{ P=d.printings; for (const c of d.cards) CARDS[c.id]=c;
+  const sets=[]; for (const p of P) if (!sets.find(x=>x[0]===p.set)) sets.push([p.set,p.setName,p.year]); sets.sort((a,b)=>a[0]==='TT'?-1:b[0]==='TT'?1:a[2]-b[2]);
+  set.innerHTML='<option value="">All sets</option>'+sets.map(([c,n,y])=>`<option value="${c}">${n} (${y})</option>`).join(''); set.value='TT';
+  fac.innerHTML+=Object.entries(FACN).map(([k,v])=>`<option value="${k}">${v}</option>`).join('');
+  typ.innerHTML+=['Unit','Vessel','Spell','Relic','Stronghold','Domain','Enchantment'].map(t=>`<option>${t}</option>`).join('');
+  try { const o=JSON.parse(localStorage.getItem('tmg')||'null'); if (o){ set.value=o.s; fac.value=o.f; rar.value=o.r; typ.value=o.t; } } catch(e){}
+  for (const el of [set,fac,rar,typ]) el.onchange=render; document.getElementById('q').oninput=render; render(); });
+</script>
+</body>
+</html>
