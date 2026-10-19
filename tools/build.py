@@ -7,7 +7,8 @@ from PIL import Image, ImageDraw
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); SRC=os.path.join(ROOT,'src'); DIST=os.path.join(ROOT,'dist')
 ENGINE='core world cards market render cm_data cm_world cm_value cm_render cm_save hunt visual visual2 cover2 ui1 ui2 ui3 cm_ui hunt_ui flow visual_ui attach attach_ui drama breaks scenario journal polish viewer3d'.split()
 TCG='tcg_frames tcg_rules tcg_data tcg_world tcg_value tcg_boot tcg_render tcg_ui1 tcg_ui2 tcg_ui3 tcg_stores tcg_collect'.split()
-GAMES={'sports':{'name':'Sports Card Collector','theme':'#c0392b','tcg':False},'comics':{'name':'Comics Collector','theme':'#d4a017','tcg':False},'tcg':{'name':'Wildkin Collector','theme':'#8e44ad','tcg':True}}
+TIDEMARK='tm/tm_rules tm/tm_data tm/tm_world tm/tm_value tm/tm_boot tm/tm_render tm/tm_ui1 tm/tm_ui2 tm/tm_ui3 tm/tm_stores tm/tm_collect'.split()
+GAMES={'sports':{'name':'Sports Card Collector','theme':'#c0392b','tcg':False},'comics':{'name':'Comics Collector','theme':'#d4a017','tcg':False},'tcg':{'name':'Wildkin Collector','theme':'#8e44ad','tcg':True},'tidemark':{'name':'Tidemark Collector','theme':'#1f6f8b','tcg':False,'tm':True}}
 def rd(p): return open(p,encoding='utf-8').read()
 def icon(size, color, path):
     im=Image.new('RGBA',(size,size),(0,0,0,0)); d=ImageDraw.Draw(im); r=int(size*0.22); d.rounded_rectangle((0,0,size-1,size-1),radius=r,fill=color)
@@ -17,10 +18,13 @@ def build(g):
     cfg=GAMES[g]; out=os.path.join(DIST,g); shutil.rmtree(out,ignore_errors=True); os.makedirs(out+'/vendor'); os.makedirs(out+'/icons')
     files=[os.path.join(SRC,'packs',g+'.js')]+[os.path.join(SRC,'engine',f+'.js') for f in ENGINE]
     if cfg['tcg']: files+=[os.path.join(SRC,'engine',f+'.js') for f in TCG]
+    if cfg.get('tm'): files+=[os.path.join(SRC,'engine',f+'.js') for f in TIDEMARK]
     files+=[os.path.join(SRC,'engine','ui4.js'),os.path.join(SRC,'shell','saves.js'),os.path.join(SRC,'shell','launcher.js'),os.path.join(SRC,'shell','pack_apply.js')]
     pre=''
     if cfg['tcg']:                                                                 # Wildkin cards and art come from wildkin-production/ (see tools/wildkin_build.py)
         import wildkin_build; pre,na,nc=wildkin_build.canon_js(out); print(f'        Wildkin: {nc} cards from the manifest, {na} approved art files copied to {g}/art/')
+    if cfg.get('tm'):                                                              # Tidemark cards, art and rules engine come from tidemark-production/ and tools/tidemark/v1 (see tools/tidemark_build.py)
+        import tidemark_build; pre,na,nc,npr=tidemark_build.build(out); pre+='\n'+rd(os.path.join(ROOT,'tools','tidemark','v1','render.js'))+'\n'; print(f'        Tidemark: {nc} cards, {npr} printings, {na} approved art files copied to {g}/art/')
     js=pre+'\n'.join(rd(f) for f in files)+'\nshellBoot();\n'; open(out+'/game.js','w',encoding='utf-8').write(js)
     css=rd(os.path.join(SRC,'engine','style.css'))+'\n'+rd(os.path.join(SRC,'shell','shell.css')); open(out+'/style.css','w',encoding='utf-8').write(css)
     shutil.copy(os.path.join(ROOT,'vendor','three.min.js'),out+'/vendor/three.min.js')
@@ -31,7 +35,7 @@ def build(g):
 <title>{cfg['name']}</title><meta name="theme-color" content="{cfg['theme']}"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="{cfg['name']}">
 <link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v={ver}"></head><body><div id="app"></div><script src="game.js?v={ver}"></script>
 <script>if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(function(){{}});</script></body></html>'''
     open(out+'/index.html','w',encoding='utf-8').write(html)
