@@ -28,4 +28,4 @@ function tcApplyScenario(id){
   else if (id==='tcgbox') G.tcg.pre.push({set:1, f:'B', q:2, paid:1});
 }
 
-registerCardLine({id:'wk', name:'Wildkin', kind:'t', keyPrefix:'T', news:'tcg', openAct:'tcopy', has:()=>!!G.tcg, copies:()=>G.tc, mine:()=>myTc(), value:o=>tcCopyValue(o), label:o=>tcCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':''), mini:o=>miniT(o), submit:id=>tcSubmitGrade(id,'std'), crack:id=>crackTc(id), upgrade:p=>upgradeTcg(p), boot:{at:0.5, span:0.45, msg:'Opening the card game shop'}});
+registerCardLine({id:'wk', name:'Wildkin', economy:WK_ECON, kind:'t', keyPrefix:'T', news:'tcg', openAct:'tcopy', has:()=>!!G.tcg, copies:()=>G.tc, mine:()=>myTc(), value:o=>tcCopyValue(o), label:o=>tcCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':''), mini:o=>miniT(o), submit:id=>tcSubmitGrade(id,'std'), crack:id=>crackTc(id), upgrade:p=>upgradeTcg(p), boot:{at:0.5, span:0.45, msg:'Opening the card game shop'}});

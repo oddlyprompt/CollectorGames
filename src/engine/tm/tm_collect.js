@@ -47,8 +47,8 @@ function xtGoalsPanel(){ const S=xtGoalCheck(true)||xtGoalStats(); const done=G.
 // ---------- wantlist ----------
 // where a print can be had right now: the cheapest of Saltmarket (near mint), The Lantern Room's case and marketplace listings
 function xtWhere(k){ const out=[]; const s=xtKvStock(G.day); if (s[k]>0) out.push({w:'Saltmarket', p:xtKvPrice(k), act:'kvbuy', a:k, note:'near mint'});
-  const L=xtLgs(); for (const x of L.cs) if (x.k===k) out.push({w:'The Lantern Room', p:xtLgsPrice(x), act:'lgssingle', a:x.id, note:XT_LABN[xtLabel(x.c)]});
-  for (const l of G.lst) if (l.it==='x' && l.sel!==0 && l.ty==='bin' && G.xtc[l.ref] && G.xtc[l.ref].k===k) out.push({w:'Marketplace', p:l.pr, act:'buy', a:l.id, note:G.xtc[l.ref].g>0?'GCS '+G.xtc[l.ref].g:XT_LABN[xtLabel(G.xtc[l.ref].c)]});
+  const L=xtLgs(); for (const x of L.cs) if (x.k===k) out.push({w:'The Lantern Room', p:xtLgsPrice(x), act:'lgssingle', a:x.id, note:COND_LABN[condLabel(x.c)]});
+  for (const l of G.lst) if (l.it==='x' && l.sel!==0 && l.ty==='bin' && G.xtc[l.ref] && G.xtc[l.ref].k===k) out.push({w:'Marketplace', p:l.pr, act:'buy', a:l.id, note:G.xtc[l.ref].g>0?'GCS '+G.xtc[l.ref].g:COND_LABN[condLabel(G.xtc[l.ref].c)]});
   return out.sort((a,b)=>a.p-b.p); }
 function xtWantPanel(){ const W=xtWant(); if (!W.length) return ''; const own=xtOwnState();
   return `<div class="panel"><h3>Your wantlist</h3><div class="rows">${W.map(k=>{ const d=xtD(k), wh=xtWhere(k), b=wh[0], got=own.prints.has(k);
@@ -67,7 +67,7 @@ ACT.xtwant=a=>{ const W=xtWant(); const i=W.indexOf(a); if (i>=0){ W.splice(i,1)
 function xtDupes(){ const out=[]; for (const [k,cs] of xtOwnedCopies()){ const raw=cs.filter(c=>c.g===0&&!c.l).sort((a,b)=>xtCopyValue(b)-xtCopyValue(a)); const keep=cs.length-raw.length>0? 0 : 1; for (const c of raw.slice(keep)){ const p=xtLgsOffer(c); if (p>=0.25) out.push({c,p}); } } return out.sort((a,b)=>b.p-a.p); }
 function xtDupesSheet(){ const D=xtDupes(); const tot=D.reduce((s,x)=>s+x.p,0);
   return { t:'Sell duplicates', h:`<div class="stack"><div class="panel"><p class="small" style="margin:0 0 8px">For every card you own more than once, this keeps your best copy (or your slab) and offers the spares to The Lantern Room's buylist at ${Math.round(XLGS_BUY*100)}% of market. Cards worth less than about 45 cents stay in your binder. Listed and graded cards are never included.</p><div class="kpis"><div class="kpi"><small>Spare copies</small><b>${D.length}</b></div><div class="kpi"><small>The store pays</small><b>${money(tot,true)}</b></div></div>
-    <div class="rows">${D.slice(0,40).map(x=>`<div class="row" style="cursor:default">${xMiniT(x.c)}<div class="rt"><b>${esc(xtD(x.c.k).title)}</b><span>${xtRV(xtD(x.c.k))} · ${XT_LABN[xtLabel(x.c.c)]}</span></div><div class="rv"><b>${money(x.p,true)}</b></div></div>`).join('')||'<div class="empty">No spare copies worth selling.</div>'}${D.length>40?`<p class="small muted">…and ${D.length-40} more.</p>`:''}</div>
+    <div class="rows">${D.slice(0,40).map(x=>`<div class="row" style="cursor:default">${xMiniT(x.c)}<div class="rt"><b>${esc(xtD(x.c.k).title)}</b><span>${xtRV(xtD(x.c.k))} · ${COND_LABN[condLabel(x.c.c)]}</span></div><div class="rv"><b>${money(x.p,true)}</b></div></div>`).join('')||'<div class="empty">No spare copies worth selling.</div>'}${D.length>40?`<p class="small muted">…and ${D.length-40} more.</p>`:''}</div>
     ${D.length?`<div class="formrow"><button class="btn pri" data-act="xtdupesell" data-confirm="Sell ${D.length} for ${money(tot,true)}">Sell all ${D.length} for ${money(tot,true)}</button></div>`:''}</div></div>` }; }
 ACT.xtdupes=()=>openSheet(xtDupesSheet);
 ACT.xtdupesell=(a,el)=>{ if (!armed(el)) return; let n=0, cash=0; for (const x of xtDupes()){ const c0=G.player.cash; if (!xtLgsSellTo(x.c.id)){ n++; cash+=G.player.cash-c0; } } closeSheet(); showToast(`Sold ${n} spare cards to The Lantern Room for ${money(cash,true)}.`, true); render(true); queueSave(); };

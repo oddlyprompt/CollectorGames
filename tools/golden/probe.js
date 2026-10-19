@@ -13,7 +13,7 @@ window.GOLDEN=(function(){
       submit:id=>tcSubmitGrade(id,'std'), make:(k,src)=>tcMakeCopy(k,0,[G.day,'bought',1,'golden'],src||'shop'), list:(id,p,ty)=>playerList('t',id,ty,p,5,true), subs:()=>G.player.tsubs||[],
       lgs:()=>tcLgs(), lgsCase:()=>{ tcLgsCase(G.day,false); return tcLgs().cs; }, lgsPrice:x=>tcLgsPrice(x), lgsBuySealed:(f,q)=>tcLgsBuySealed(f,q), lgsBuySingle:id=>tcLgsBuySingle(id), lgsSell:id=>tcLgsSellTo(id), lgsOffer:cp=>tcLgsOffer(cp),
       kvStock:()=>tcKvStock(G.day), kvPrice:k=>tcKvPrice(k), kvBuy:k=>tcKvBuy(k), itemType:'t', npcPoolKey:'tcg',
-      usage:()=>G.tcg.usage, label:cp=>tcLabel(cp.c), setDef:s=>tcSetDef(s), legal:()=>tcLegalSets(G.day),
+      usage:()=>G.tcg.usage, label:cp=>condLabel(cp.c), setDef:s=>tcSetDef(s), legal:()=>tcLegalSets(G.day),
       screens:{ set:s=>tcSetSheet(s).h, design:k=>tcDesignSheet(k).h, copy:id=>tcCopySheet(id).h, meta:()=>tcMetaV(), sets:()=>tcSetsV(), coll:()=>tcCollV(), retail:()=>{ UI.tstore='retail'; return tcShopV(); }, lgs:()=>{ UI.tstore='lgs'; return tcShopV(); }, kv:()=>{ UI.tstore='kv'; return tcShopV(); }, home:()=>{ const P=tcHomePanels(); return [P.next,P.meta,P.results,P.coll,P.goals,P.want,P.ban,P.hot,P.news].join(''); } },
       first:{ P:1, B:1 } },
     xt:{ id:'xt', sets:[1,2,5,10,15,20,25,28,30,31], key:(s,n,v)=>xtKey(s,n,v), keys:s=>xtAllKeys(s), cards:s=>xtSetCards(s), D:k=>xtD(k), fair:k=>xtFairRaw(k), fairG:(k,g)=>xtFair(k,g), ev:s=>xtPackEV(s), roll:(s,r)=>xtRollPack(s,r),
@@ -21,7 +21,7 @@ window.GOLDEN=(function(){
       submit:id=>xtSubmitGrade(id,'std'), make:(k,src)=>xtMakeCopy(k,0,[G.day,'bought',1,'golden'],src||'shop'), list:(id,p,ty)=>playerList('x',id,ty,p,5,true), subs:()=>G.player.xsubs||[],
       lgs:()=>xtLgs(), lgsCase:()=>{ xtLgsCase(G.day,false); return xtLgs().cs; }, lgsPrice:x=>xtLgsPrice(x), lgsBuySealed:(f,q)=>xtLgsBuySealed(f,q), lgsBuySingle:id=>xtLgsBuySingle(id), lgsSell:id=>xtLgsSellTo(id), lgsOffer:cp=>xtLgsOffer(cp),
       kvStock:()=>xtKvStock(G.day), kvPrice:k=>xtKvPrice(k), kvBuy:k=>xtKvBuy(k), itemType:'x', npcPoolKey:'xtg',
-      usage:()=>G.xtg.usage, label:cp=>xtLabel(cp.c), setDef:s=>xtSetDef(s), legal:()=>xtLegalSets(G.day),
+      usage:()=>G.xtg.usage, label:cp=>condLabel(cp.c), setDef:s=>xtSetDef(s), legal:()=>xtLegalSets(G.day),
       screens:{ set:s=>xtSetSheet(s).h, design:k=>xtDesignSheet(k).h, copy:id=>xtCopySheet(id).h, meta:()=>xtMetaV(), sets:()=>xtSetsV(), coll:()=>xtCollV(), retail:()=>{ UI.xtstore='retail'; return xtShopV(); }, lgs:()=>{ UI.xtstore='lgs'; return xtShopV(); }, kv:()=>{ UI.xtstore='kv'; return xtShopV(); }, home:()=>{ const P=xtHomePanels(); return [P.next,P.meta,P.results,P.coll,P.goals,P.want,P.ban,P.hot,P.news].join(''); } },
       first:{ P:31, B:31 } }
   };

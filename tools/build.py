@@ -6,6 +6,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image, ImageDraw
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); SRC=os.path.join(ROOT,'src'); DIST=os.path.join(ROOT,'dist')
 ENGINE='core tcg/kit/lines world cards market render cm_data cm_world cm_value cm_render cm_save hunt visual visual2 cover2 ui1 ui2 ui3 cm_ui hunt_ui flow visual_ui attach attach_ui drama breaks scenario journal polish viewer3d'.split()
+KIT='copies economy'.split()
 TCG='tcg_frames tcg_rules tcg_data tcg_world tcg_value tcg_boot tcg_render tcg_ui1 tcg_ui2 tcg_ui3 tcg_stores tcg_collect'.split()
 TIDEMARK='tm/tm_rules tm/tm_data tm/tm_world tm/tm_value tm/tm_boot tm/tm_render tm/tm_ui1 tm/tm_ui2 tm/tm_ui3 tm/tm_stores tm/tm_collect'.split()
 GAMES={'sports':{'name':'Sports Card Collector','theme':'#c0392b','tcg':False},'comics':{'name':'Comics Collector','theme':'#d4a017','tcg':False},'tcg':{'name':'Trading Card Collector','theme':'#8e44ad','tcg':True,'tm':True}}
@@ -17,7 +18,7 @@ def icon(size, color, path):
 def build(g):
     cfg=GAMES[g]; out=os.path.join(DIST,g); shutil.rmtree(out,ignore_errors=True); os.makedirs(out+'/vendor'); os.makedirs(out+'/icons')
     files=[os.path.join(SRC,'packs',g+'.js')]+[os.path.join(SRC,f+'.js') if f.startswith('tcg/') else os.path.join(SRC,'engine',f+'.js') for f in ENGINE]
-    if cfg['tcg']: files+=[os.path.join(SRC,'engine',f+'.js') for f in TCG]
+    if cfg['tcg']: files+=[os.path.join(SRC,'tcg','kit',f+'.js') for f in KIT]+[os.path.join(SRC,'engine',f+'.js') for f in TCG]
     if cfg.get('tm'): files+=[os.path.join(SRC,'engine',f+'.js') for f in TIDEMARK]
     files+=[os.path.join(SRC,'engine','ui4.js'),os.path.join(SRC,'shell','saves.js'),os.path.join(SRC,'shell','launcher.js'),os.path.join(SRC,'shell','pack_apply.js')]
     pre=''

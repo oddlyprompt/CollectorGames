@@ -3,6 +3,7 @@
 // 31 sets, oldest first: First Tide (1, 2016) to Tenth Tide (31, 2026). Only the named cards of the 30 historical sets exist (500 cards);
 // the rest of each set is bulk that packs hand out but the game does not track. A card is one identity (cid, the checklist's TMC number)
 // printed in one or more sets; every printing has its own key and price. Saves only hold what changes (copies, prices, the field, bans).
+const XT_ECON={version:'v1', condition:CONDITION_V1};   // the line's economy strategies (kit/economy.js)
 const XT_CV=1;                                            // content version in saves
 const TM_TT=TM_SETS.length;                               // the anniversary set is the last one
 const XT_RAROR={common:0,unc:1,rare:2,leg:3,alt:4};

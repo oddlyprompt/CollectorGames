@@ -1,39 +1,20 @@
 // ===================== TCG: COPIES, VALUE AND THE MARKET =====================
-const TC_MSRP={P:4.5,B:150}, TC_COND_MULT={NM:1,LP:0.82,MP:0.6,HP:0.4,DMG:0.22};
+const TC_MSRP={P:4.5,B:150};
 const TC_RB={'common|N':0.05,'common|R':0.30,'unc|N':0.18,'unc|R':0.55,'rare|N':0.22,'rare|R':0.5,'rare|H':1.3,'ess|N':0.03,'ir|I':7,'fa|F':10,'sir|X':130,'csr|C':150};   // provisional, tuned with tools/econtest.py
 const TC_TUNE={fanPrem:4.5, fanRare:1.2};   // how hard collector fandom (manifest, provisional) bends prices: premium prints feel it most
 const TC_PB={ess:0,common:1.6,unc:2.5,rare:3.5,ir:9,fa:12,sir:14,csr:12};
-const TC_GB=[0,0.35,0.4,0.45,0.55,0.65,0.78,0.9,1.0,1.55,3.4], TC_GS={ess:0.3,common:0.55,unc:0.7,rare:1,ir:1.4,fa:1.5,sir:1.7,csr:1.8};
+const TC_GS={ess:0.3,common:0.55,unc:0.7,rare:1,ir:1.4,fa:1.5,sir:1.7,csr:1.8};
 const TCFV=new Map(), TCCV=new Map(); const TC_K=0.45;
 function tfvClear(k){ if (k){ for (const x of TCFV.keys()) if (x.startsWith(k+'@')) TCFV.delete(x); } else TCFV.clear(); }
-// ---------- condition ----------
-function tcFreshCond(r, q){
-  const g=()=>{ let u=0; while(u===0) u=r(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*r()); };
-  const c=[Math.round(Math.max(80,100-Math.abs(g())*2.6-r()*1.5)), Math.round(Math.max(85,100-Math.abs(g())*1.8-r())), Math.round(Math.max(85,100-Math.abs(g())*1.8-r())), Math.round(Math.max(85,100-Math.abs(g())*1.8-r()))];
-  if (r()>=q){ const k=r()<0.75?1:2; for (let i=0;i<k;i++){ const at=1+Math.floor(r()*3); const sev=r(); c[at]=Math.min(c[at], Math.round(sev<0.7? 84+r()*8 : sev<0.93? 70+r()*14 : 50+r()*20)); } }
-  return c;
-}
-function tcWornCond(r, age, rough){ const c=tcFreshCond(r,0.2); const w=Math.min(1,0.15+age*0.22)*(rough||1); for (let i=0;i<4;i++) if (r()<0.35+w*0.4) c[i]=Math.max(30, Math.round(c[i]-r()*(10+45*w))); return c; }
-function tcLabel(c){ const mn=Math.min(...c); return mn>=86?'NM': mn>=72?'LP': mn>=55?'MP': mn>=38?'HP':'DMG'; }
-const TC_LABN={NM:'Near mint',LP:'Lightly played',MP:'Moderately played',HP:'Heavily played',DMG:'Damaged'};
-function tcCondLines(cp){
-  const c=cp.c, L=[]; const f=(v,a,b,cc,dd,ee)=> v>=96? a : v>=90? b : v>=80? cc : v>=65? dd : ee;
-  L.push(['Centering', f(c[0],'Well centered.','Slightly off-center.','Noticeably off-center.','Badly off-center.','Cut very crooked.')]);
-  L.push(['Corners', f(c[1],'Sharp corners.','A hint of whitening on a corner.','Whitening on several corners.','Rounded, whitened corners.','Corners are bent or torn.')]);
-  L.push(['Edges', f(c[2],'Clean edges.','A few tiny edge specks.','Visible edge wear.','Heavy edge wear and chipping.','Edges are peeling or nicked through.')]);
-  L.push(['Surface', f(c[3],'Clean surface, strong gloss.','A faint print line or light scuff.','Light scratches across the surface.','Scratched and creased in places.','Creased, scuffed or stained.')]);
-  return L;
-}
 // ---------- copies ----------
 function tcMakeCopy(key, owner, acq, src, rng){
   const r=rng||R; const d=tcD(key); const cp={ id:G.nextTid++, k:key, o:owner, g:0 };
-  if (d.sealed) cp.c=[100,100,100,100]; else { const age=Math.max(0,(G.day-d.def.rel)/365); cp.c = src==='pull'? tcFreshCond(r,0.55) : src==='shop'? tcFreshCond(r,0.7) : tcWornCond(r, age, src==='deck'?1.5:1); }
+  if (d.sealed) cp.c=[100,100,100,100]; else { const age=Math.max(0,(G.day-d.def.rel)/365); cp.c = WK_ECON.condition.sample(r, src, age); }
   if (acq) cp.a=acq; G.tc[cp.id]=cp; return cp;
 }
 const TC=id=>G.tc[id]; const myTc=()=>Object.values(G.tc).filter(c=>c.o===0);
 // ---------- value ----------
 function tcSetPrestige(n){ const d=tcSetDef(n); return d.reprint?0.8 : n===1?1.35 : n===2?1.25 : 1.0; }
-const tcJit=key=>0.9+0.2*((hsh('tj'+key)%1000)/1000);
 function tcPrintCount(cid){ const c=G.tcg._pc||(G.tcg._pc={day:-1,m:{}}); if (c.day!==G.day){ c.day=G.day; c.m={}; } if (c.m[cid]) return c.m[cid]; let n=0; for (const s of tcReleasedSets(G.day)) if (tcSetCards(s).some(x=>x.cid===cid&&!tcAlt(x))) n++; return c.m[cid]=Math.max(1,n); }
 function tcFairRaw(key){
   const ck=key+'@'+G.day; let v=TCFV.get(ck); if (v!=null) return v;
@@ -43,12 +24,11 @@ function tcFairRaw(key){
     const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop;
     const st=tcLegalState(c.cid), u=Math.min(1,(G.tcg.usage[c.cid]||0)/4), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.tcg.hy[c.cid]||0;
     const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(tcIsPrem(c)?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
-    v=Math.max(0.03,(coll+play)*TC_K*tcJit(key)*(1+Math.min(0.6,G.dp[key]||0))); }
+    v=Math.max(0.03,(coll+play)*TC_K*priceJitter(key)*(1+Math.min(0.6,G.dp[key]||0))); }
   TCFV.set(ck,v); if (TCFV.size>5000) TCFV.clear(); return v;
 }
-function tcGradeMult(rar, g){ const b=TC_GB[g]; return b>1? 1+(b-1)*(TC_GS[rar]||1) : b; }
-function tcFair(key, g){ const raw=tcFairRaw(key); if (!(g>0)) return raw; const d=tcD(key); if (d.sealed) return raw; const pop=G.tpop[key]; const scarce= pop&&g===10&&pop[10]<4&&(TC_RAROR[d.rar]>=2)? 1.12 : 1; return Math.max(raw*tcGradeMult(d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); }
-function tcCopyValue(cp){ if (cp.g>0) return tcFair(cp.k, cp.g); const raw=tcFairRaw(cp.k); const d=tcD(cp.k); return d.sealed? raw : raw*TC_COND_MULT[tcLabel(cp.c)]; }
+function tcFair(key, g){ const raw=tcFairRaw(key); if (!(g>0)) return raw; const d=tcD(key); if (d.sealed) return raw; const pop=G.tpop[key]; const scarce= pop&&g===10&&pop[10]<4&&(TC_RAROR[d.rar]>=2)? 1.12 : 1; return Math.max(raw*cardGradeMult(TC_GS,d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); }
+function tcCopyValue(cp){ if (cp.g>0) return tcFair(cp.k, cp.g); const raw=tcFairRaw(cp.k); const d=tcD(cp.k); return d.sealed? raw : raw*WK_ECON.condition.price(cp.c, d.card); }
 function tcSales(key,g){ return (G.sales[key]||[]).filter(s=>(s[2]||0)===(g||0)); }
 function tcEst(key, g, cp){
   const fv= cp? tcCopyValue(cp) : tcFair(key,g||0); const same=tcSales(key, cp?(cp.g>0?cp.g:0):(g||0)).filter(s=>s[0]>G.day-120); const n=same.length;
@@ -110,8 +90,7 @@ function tcOpenMany(ids){ const res={packs:[], set:1, title:'', paid:0}; let n=0
   for (const id of ids){ const r=tcOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; res.sv=(res.sv||0)+r.sv; t=r.title; n++; }
   if (!n) return null; res.title=n>1? n+' × '+t : t; return res; }
 // ---------- grading ----------
-function tcGradeOf(cp){ const c=cp.c; const mn=Math.min(...c), av=c.reduce((a,b)=>a+b,0)/4; const s=0.5*mn+0.5*av+withRng(mkRng(cp.id*7919+(cp.gt||0)*104729+11),()=>gauss()*1.7); return s>=97.5?10: s>=94?9: s>=89?8: s>=83?7: s>=76?6: s>=68?5: s>=58?4: s>=46?3: s>=32?2:1; }
-function tcGradeCopy(cp){ const g=tcGradeOf(cp); cp.gt=(cp.gt||0)+1; cp.g=g; cp.cert=10000000+Math.floor(R()*89999999); const p=G.tpop[cp.k]||(G.tpop[cp.k]=Array(11).fill(0)); p[g]++; tfvClear(cp.k); return g; }
+function tcGradeCopy(cp){ const g=gradeOf(cp); cp.gt=(cp.gt||0)+1; cp.g=g; cp.cert=10000000+Math.floor(R()*89999999); const p=G.tpop[cp.k]||(G.tpop[cp.k]=Array(11).fill(0)); p[g]++; tfvClear(cp.k); return g; }
 function tcSubmitGrade(id, tier){ const T=GRADE_TIERS.find(x=>x.id===tier); const cp=TC(id); if (!cp||cp.o!==0||cp.g!==0||cp.l||tcD(cp.k).sealed) return 'That card can\'t be submitted right now.'; if (G.player.cash<T.fee) return 'You need '+money(T.fee)+'.'; G.player.cash-=T.fee; G.player.fees+=T.fee; cp.g=-1; (G.player.tsubs=G.player.tsubs||[]).push({id:G.nextLid++,cid:id,tier,t0:G.day,t1:G.day+T.days,fee:T.fee,raw:Math.round(tcCopyValue(cp)*100)/100}); (cp.h=cp.h||[]).push([G.day,'Sent to GCS ('+T.n+')',T.fee,'']); return null; }
 function tcGradingTick(t){ const subs=G.player.tsubs||[]; if (!subs.length) return; for (const s of subs.filter(x=>x.t1<=t)){ const cp=TC(s.cid); if (!cp) continue; const g=tcGradeCopy(cp); (G.player.rv=G.player.rv||[]).push({k:'t',id:cp.id,g,raw:s.raw||0,fee:s.fee||0,t}); (cp.h=cp.h||[]).push([t,'Graded GCS '+g+' '+GRADE_NAMES[g],0,'']); toast('Back from GCS: '+tcD(cp.k).title+' is a '+g, g>=9); } G.player.tsubs=subs.filter(x=>x.t1>t); }
 // ---------- collectors ----------

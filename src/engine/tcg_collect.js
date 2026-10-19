@@ -46,8 +46,8 @@ function tcGoalsPanel(){ const S=tcGoalCheck(true)||tcGoalStats(); const done=G.
 // ---------- wantlist ----------
 // where a print can be had right now: the cheapest of Kinvault (near mint), The Tidepool's case and marketplace listings
 function tcWhere(k){ const out=[]; const s=tcKvStock(G.day); if (s[k]>0) out.push({w:'Kinvault', p:tcKvPrice(k), act:'kvbuy', a:k, note:'near mint'});
-  const L=tcLgs(); for (const x of L.cs) if (x.k===k) out.push({w:'The Tidepool', p:tcLgsPrice(x), act:'lgssingle', a:x.id, note:TC_LABN[tcLabel(x.c)]});
-  for (const l of G.lst) if (l.it==='t' && l.sel!==0 && l.ty==='bin' && G.tc[l.ref] && G.tc[l.ref].k===k) out.push({w:'Marketplace', p:l.pr, act:'buy', a:l.id, note:G.tc[l.ref].g>0?'GCS '+G.tc[l.ref].g:TC_LABN[tcLabel(G.tc[l.ref].c)]});
+  const L=tcLgs(); for (const x of L.cs) if (x.k===k) out.push({w:'The Tidepool', p:tcLgsPrice(x), act:'lgssingle', a:x.id, note:COND_LABN[condLabel(x.c)]});
+  for (const l of G.lst) if (l.it==='t' && l.sel!==0 && l.ty==='bin' && G.tc[l.ref] && G.tc[l.ref].k===k) out.push({w:'Marketplace', p:l.pr, act:'buy', a:l.id, note:G.tc[l.ref].g>0?'GCS '+G.tc[l.ref].g:COND_LABN[condLabel(G.tc[l.ref].c)]});
   return out.sort((a,b)=>a.p-b.p); }
 function tcWantPanel(){ const W=tcWant(); if (!W.length) return ''; const own=tcOwnState();
   return `<div class="panel"><h3>Your wantlist</h3><div class="rows">${W.map(k=>{ const d=tcD(k), wh=tcWhere(k), b=wh[0], got=own.prints.has(k);
@@ -66,7 +66,7 @@ ACT.twant=a=>{ const W=tcWant(); const i=W.indexOf(a); if (i>=0){ W.splice(i,1);
 function tcDupes(){ const out=[]; for (const [k,cs] of tcOwnedCopies()){ const raw=cs.filter(c=>c.g===0&&!c.l).sort((a,b)=>tcCopyValue(b)-tcCopyValue(a)); const keep=cs.length-raw.length>0? 0 : 1; for (const c of raw.slice(keep)){ const p=tcLgsOffer(c); if (p>=0.25) out.push({c,p}); } } return out.sort((a,b)=>b.p-a.p); }
 function tcDupesSheet(){ const D=tcDupes(); const tot=D.reduce((s,x)=>s+x.p,0);
   return { t:'Sell duplicates', h:`<div class="stack"><div class="panel"><p class="small" style="margin:0 0 8px">For every card you own more than once, this keeps your best copy (or your slab) and offers the spares to The Tidepool's buylist at ${Math.round(LGS_BUY*100)}% of market. Cards worth less than about 45 cents stay in your binder. Listed and graded cards are never included.</p><div class="kpis"><div class="kpi"><small>Spare copies</small><b>${D.length}</b></div><div class="kpi"><small>The store pays</small><b>${money(tot,true)}</b></div></div>
-    <div class="rows">${D.slice(0,40).map(x=>`<div class="row" style="cursor:default">${miniT(x.c)}<div class="rt"><b>${esc(tcD(x.c.k).title)}</b><span>${tcRV(tcD(x.c.k))} · ${TC_LABN[tcLabel(x.c.c)]}</span></div><div class="rv"><b>${money(x.p,true)}</b></div></div>`).join('')||'<div class="empty">No spare copies worth selling.</div>'}${D.length>40?`<p class="small muted">…and ${D.length-40} more.</p>`:''}</div>
+    <div class="rows">${D.slice(0,40).map(x=>`<div class="row" style="cursor:default">${miniT(x.c)}<div class="rt"><b>${esc(tcD(x.c.k).title)}</b><span>${tcRV(tcD(x.c.k))} · ${COND_LABN[condLabel(x.c.c)]}</span></div><div class="rv"><b>${money(x.p,true)}</b></div></div>`).join('')||'<div class="empty">No spare copies worth selling.</div>'}${D.length>40?`<p class="small muted">…and ${D.length-40} more.</p>`:''}</div>
     ${D.length?`<div class="formrow"><button class="btn pri" data-act="tdupesell" data-confirm="Sell ${D.length} for ${money(tot,true)}">Sell all ${D.length} for ${money(tot,true)}</button></div>`:''}</div></div>` }; }
 ACT.tdupes=()=>openSheet(tcDupesSheet);
 ACT.tdupesell=(a,el)=>{ if (!armed(el)) return; let n=0, cash=0; for (const x of tcDupes()){ const c0=G.player.cash; if (!tcLgsSellTo(x.c.id)){ n++; cash+=G.player.cash-c0; } } closeSheet(); showToast(`Sold ${n} spare cards to The Tidepool for ${money(cash,true)}.`, true); render(true); queueSave(); };

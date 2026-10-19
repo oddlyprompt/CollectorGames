@@ -72,7 +72,7 @@ function xtCollGroups(){
   const rk=d=>{ if (d.sealed) return 'sealed'; const c=d.card; return d.v==='F'? 'foil' : xtIsPrem(c)? 'prem' : c.rar; };
   if (r!=='all') a=a.filter(c=>rk(xtD(c.k))===r);
   if (q) a=a.filter(c=>{ const d=xtD(c.k); return (d.title+' '+d.def.name+' '+d.def.code+' '+(d.card?(d.card.el||'')+' '+d.card.kind+' '+String(d.card.cn).padStart(3,'0'):'')).toLowerCase().includes(q); });
-  const G2=new Map(); for (const c of a){ const k=c.k+'|'+(c.g>0?'g'+c.g:c.g<0?'atgcs':xtLabel(c.c))+'|'+(c.l?'l':'')+(c.nw?'n':''); let g=G2.get(k); if (!g){ g={cs:[],k:c.k,v:0}; G2.set(k,g); } g.cs.push(c); g.v=Math.max(g.v,xtCopyValue(c)); }
+  const G2=new Map(); for (const c of a){ const k=c.k+'|'+(c.g>0?'g'+c.g:c.g<0?'atgcs':condLabel(c.c))+'|'+(c.l?'l':'')+(c.nw?'n':''); let g=G2.get(k); if (!g){ g={cs:[],k:c.k,v:0}; G2.set(k,g); } g.cs.push(c); g.v=Math.max(g.v,xtCopyValue(c)); }
   const out=[...G2.values()]; const so=UI.xtso;
   out.sort(so==='num'? (x,y)=>xtD(x.k).set-xtD(y.k).set||xtD(x.k).no-xtD(y.k).no||y.v-x.v : so==='name'? (x,y)=>xtD(x.k).title.localeCompare(xtD(y.k).title)||y.v-x.v : so==='new'? (x,y)=>Math.max(...y.cs.map(c=>c.id))-Math.max(...x.cs.map(c=>c.id)) : so==='many'? (x,y)=>y.cs.length-x.cs.length||y.v-x.v : (x,y)=>y.v-x.v);
   return {out, cnt, total:a.length};
@@ -83,7 +83,7 @@ function xtCollV(){
   const ch=(k,n)=>`<button class="chip ${f===k?'on':''}" data-act="xtc" data-a="${k}">${n} (${cnt[k]})</button>`;
   const rc=(k,n)=>`<button class="chip ${r===k?'on':''}" data-act="xtr" data-a="${k}">${n}</button>`;
   const cell=g=>{ const c=g.cs[0], d=xtD(g.k), n=g.cs.length; const tags=[c.nw?'<i class="tag new">New</i>':'', c.l?'<i class="tag">Listed</i>':c.g<0?'<i class="tag">At GCS</i>':''].join('');
-    return `<button class="gcell" data-act="xtopy" data-a="${c.id}">${n>1?`<span class="count">×${n}</span>`:''}${xMiniT(c)}<div class="cap"><b>${esc(d.title)}</b><span>${d.sealed?'Sealed':XT_VARN[d.v]+', '+(c.g>0?'GCS '+c.g:c.g<0?'at GCS':xtLabel(c.c))}${d.no?' · '+d.def.code+' '+String(d.card.cn).padStart(3,'0'):''}</span><span>${money(g.v,true)}${n>1?' each':''}${tags}</span></div></button>`; };
+    return `<button class="gcell" data-act="xtopy" data-a="${c.id}">${n>1?`<span class="count">×${n}</span>`:''}${xMiniT(c)}<div class="cap"><b>${esc(d.title)}</b><span>${d.sealed?'Sealed':XT_VARN[d.v]+', '+(c.g>0?'GCS '+c.g:c.g<0?'at GCS':condLabel(c.c))}${d.no?' · '+d.def.code+' '+String(d.card.cn).padStart(3,'0'):''}</span><span>${money(g.v,true)}${n>1?' each':''}${tags}</span></div></button>`; };
   const nav=pages>1? `<div class="pager"><button class="btn sm" data-act="xtpage" data-a="0" ${pg===0?'disabled':''}>« First</button><button class="btn sm" data-act="xtpage" data-a="${pg-1}" ${pg===0?'disabled':''}>‹ Prev</button><span class="small">Page ${pg+1} of ${pages}</span><button class="btn sm" data-act="xtpage" data-a="${pg+1}" ${pg>=pages-1?'disabled':''}>Next ›</button><button class="btn sm" data-act="xtpage" data-a="${pages-1}" ${pg>=pages-1?'disabled':''}>Last »</button></div>` : '';
   return `<div class="chips">${ch('all','All')}${ch('raw','Raw')}${ch('gr','Graded')}${ch('sl','Sealed')}${ch('ls','Listed')}</div>
   <div class="chips">${rc('all','Any rarity')}${rc('prem','Alternate art')}${rc('foil','Foil')}${rc('leg','Legendary')}${rc('rare','Rare')}${rc('unc','Uncommon')}${rc('common','Common')}${rc('sealed','Packs and boxes')}</div>

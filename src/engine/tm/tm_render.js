@@ -30,18 +30,7 @@ function xtFront(key){
   const f=xtFoilOverlay(d); if (f) s=s.slice(0,s.lastIndexOf('</svg>'))+f+'</svg>';
   if (url){ if (XTV.size>500) XTV.clear(); XTV.set(key,s); } return s;
 }
-function xtWear(svg, cp){
-  const c=cp.c; const r=mkRng(cp.id*131+7); let o='';
-  const cw=100-c[1]; if (cw>6){ const s0=2.5+(cw-6)*0.28; [[0,0,1,1],[250,0,-1,1],[0,350,1,-1],[250,350,-1,-1]].forEach(([x,y,sx,sy],i)=>{ if (r()<0.35+cw/60){ const s=s0*(0.5+r()); o+=`<path d="M${x} ${y} L${x+sx*s} ${y} L${x} ${y+sy*s} Z" fill="#fff" opacity="${(0.55+0.4*r()).toFixed(2)}"/>`; } });
-    if (cw>22) for (let i=0;i<4;i++){ const sx=r()<0.5?0:250, sy=r()<0.5?0:350; const k=sx?-1:1, m=sy?-1:1; o+=`<circle cx="${sx+k*2}" cy="${sy+m*2}" r="${3+r()*4}" fill="#e9e6df" opacity=".8"/>`; } }
-  const ew=100-c[2]; if (ew>5){ const n=Math.min(40,Math.floor(ew*1.2)); for (let i=0;i<n;i++){ const side=Math.floor(r()*4); const p=6+r()*238, q=1+r()*2.5, L=2+r()*(3+ew*0.1); o+= side<2? `<rect x="${p.toFixed(1)}" y="${side?350-q-0.3:0.3}" width="${L.toFixed(1)}" height="${q.toFixed(1)}" fill="#fff" opacity="${(0.5+r()*0.4).toFixed(2)}"/>` : `<rect x="${side===2?0.3:250-q-0.3}" y="${(6+r()*338).toFixed(1)}" width="${q.toFixed(1)}" height="${L.toFixed(1)}" fill="#fff" opacity="${(0.5+r()*0.4).toFixed(2)}"/>`; } }
-  const sw=100-c[3]; if (sw>5){ const n=Math.min(14,Math.floor(sw/2.2)); for (let i=0;i<n;i++){ const x=10+r()*220, y=40+r()*230, L=14+r()*(30+sw*1.2), a=(r()*70-35)*Math.PI/180; o+=`<path d="M${x.toFixed(1)} ${y.toFixed(1)} l${(Math.cos(a)*L).toFixed(1)} ${(Math.sin(a)*L).toFixed(1)}" stroke="#fff" stroke-width="${(0.4+r()*0.7).toFixed(2)}" opacity="${(0.25+r()*0.4).toFixed(2)}"/>`; }
-    if (sw>32){ const y=60+r()*190; o+=`<path d="M0 ${y.toFixed(1)} Q125 ${(y+(r()*30-15)).toFixed(1)} 250 ${(y+(r()*24-12)).toFixed(1)}" stroke="#fff" stroke-width="1.6" opacity=".5"/><path d="M0 ${(y+1.6).toFixed(1)} Q125 ${(y+1.6+(r()*30-15)).toFixed(1)} 250 ${(y+1.6+(r()*24-12)).toFixed(1)}" stroke="#000" stroke-width=".8" opacity=".3"/>`; } }
-  if (c[0]<90){ const sh=(90-c[0])*0.25; o+=`<rect x="${r()<0.5?0:250-sh}" y="0" width="${sh.toFixed(1)}" height="350" fill="#000" opacity=".12"/>`; }
-  return o? svg.slice(0,svg.lastIndexOf('</svg>'))+`<g>${o}</g></svg>` : svg;
-}
-
-const xtFace=cp=>{ const d=xtD(cp.k); if (d.sealed||cp.g>0) return xtFront(cp.k); const lab=xtLabel(cp.c); return lab==='NM'&&Math.min(...cp.c)>=94? xtFront(cp.k) : xtWear(xtFront(cp.k),cp); };
+const xtFace=cp=>{ const d=xtD(cp.k); if (d.sealed||cp.g>0) return xtFront(cp.k); const lab=condLabel(cp.c); return lab==='NM'&&Math.min(...cp.c)>=94? xtFront(cp.k) : wearSVG(xtFront(cp.k),cp); };
 
 // ---------- packs and boxes ----------
 // Tidemark has no packaging renders yet: the wrapper and the box are drawn here, dressed in the set's own paintings
@@ -102,7 +91,7 @@ const X_faceSVG=faceSVG; faceSVG=function(kind,o,hi){ if (kind!=='x') return X_f
 const X_finOf=finOf; finOf=function(kind,o){ if (kind!=='x') return X_finOf(kind,o); if (o.g>0) return 'slab'; const f=xtFin(xtD(o.k)); return f==='refr'||f==='super'?'refr':'gloss'; };
 const X_pcData=pcData; pcData=function(kind,o){ if (kind!=='x'){ const r=X_pcData(kind,o); return r; }
   const d=xtD(o.k), g=o.g>0?o.g:0, r=xtEst(o.k,g,o), sales=xtSales(o.k,g);
-  return { key:o.k, g, title:d.title, sub:d.sealed? d.def.name : d.def.name+' · '+String(d.card.cn).padStart(3,'0')+' · '+XT_VARN[d.v], cond: g? 'GCS '+g+' '+GRADE_NAMES[g] : d.sealed? 'Sealed' : XT_LABN[xtLabel(o.c)], r, sales, other:(G.sales[o.k]||[]).filter(x=>(x[2]||0)!==g).slice(0,3), gl:x=>x>0?'GCS '+x:'Raw',
+  return { key:o.k, g, title:d.title, sub:d.sealed? d.def.name : d.def.name+' · '+String(d.card.cn).padStart(3,'0')+' · '+XT_VARN[d.v], cond: g? 'GCS '+g+' '+GRADE_NAMES[g] : d.sealed? 'Sealed' : COND_LABN[condLabel(o.c)], r, sales, other:(G.sales[o.k]||[]).filter(x=>(x[2]||0)!==g).slice(0,3), gl:x=>x>0?'GCS '+x:'Raw',
     meta:[['Set',d.def.name],['Rarity',d.sealed?'':XT_RARN[d.card.rar]],['Print',XT_VARN[d.v]],['Legal in Standard', d.sealed?'':({std:'Yes',rot:'No, Eternal only',ban:'No, banned'})[xtLegalState(d.cid)]]] }; };
 const X_va=v3Art; v3Art=function(kind,o){ return kind==='x'? (o.g>0? xtSlab(o) : polishCard(xtFace(o),{flat:1})) : X_va(kind,o); };
 const X_vb=v3Back; v3Back=function(kind,o){ if (kind!=='x') return X_vb(kind,o); return o.g>0? X_vb('c',o) : XTF.back(); };
@@ -114,10 +103,3 @@ const X_popLine=popLine; popLine=function(k,o){ if (k!=='x') return X_popLine(k,
 const X_inspDetail=ACT.inspdetail; ACT.inspdetail=function(a,el,e){ const [k,id]=a.split(':'); if (k==='x'){ closeInspect(); return ACT.xtopy(id); } return X_inspDetail(a,el,e); };
 const X_rc2=resetCaches; resetCaches=function(){ X_rc2(); XTV.clear(); };
 
-const XT_INL=new Map();
-async function xtInlineArt(svg){
-  const urls=[...new Set((svg.match(/href="(art\/[^"]+)"/g)||[]).map(x=>x.slice(6,-1)))];
-  for (const u of urls){ if (XT_INL.has(u)) continue; try { const b=await (await fetch(u)).blob(); XT_INL.set(u, await new Promise(res=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.readAsDataURL(b); })); } catch(e){ XT_INL.set(u,''); } }
-  return svg.replace(/href="(art\/[^"]+)"/g,(m,u)=>'href="'+(XT_INL.get(u)||u)+'"');
-}
-const X_v3r=v3Raster; v3Raster=async function(svg,W){ return X_v3r(svg.indexOf('href="art/')>=0? await xtInlineArt(svg) : svg, W); };

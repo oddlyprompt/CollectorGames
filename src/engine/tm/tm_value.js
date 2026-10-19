@@ -1,41 +1,22 @@
 // ===================== XTG: COPIES, VALUE AND THE MARKET =====================
-const XT_MSRP={P:4.99,B:144}, XT_COND_MULT={NM:1,LP:0.82,MP:0.6,HP:0.4,DMG:0.22};
+const XT_MSRP={P:4.99,B:144};
 // base prices (raw, near mint) before fandom, set and play: provisional, tuned with tools/tidemark_econ.py
 const XT_RB={'common|N':0.07,'common|F':0.45,'unc|N':0.2,'unc|F':1.0,'rare|N':0.75,'rare|F':2.6,'leg|N':3.2,'leg|F':9,'alt|A':45};
 const XT_TUNE={fanLeg:1.4, fanRare:0.8};   // how hard collector fandom (decided, not canon) bends prices
 const XT_PB={common:1.2,unc:2.2,rare:3.6,leg:7,alt:9};   // what a card is worth in play at full use
-const XT_GB=[0,0.35,0.4,0.45,0.55,0.65,0.78,0.9,1.0,1.55,3.4], XT_GS={common:0.55,unc:0.7,rare:1,leg:1.4,alt:1.7};
+const XT_GS={common:0.55,unc:0.7,rare:1,leg:1.4,alt:1.7};
 const XTFV=new Map(), XTCV=new Map(); const XT_K=0.72, XT_BULK=0.02;
 function xTfvClear(k){ if (k){ for (const x of XTFV.keys()) if (x.startsWith(k+'@')) XTFV.delete(x); } else XTFV.clear(); }
-// ---------- condition ----------
-function xtFreshCond(r, q){
-  const g=()=>{ let u=0; while(u===0) u=r(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*r()); };
-  const c=[Math.round(Math.max(80,100-Math.abs(g())*2.6-r()*1.5)), Math.round(Math.max(85,100-Math.abs(g())*1.8-r())), Math.round(Math.max(85,100-Math.abs(g())*1.8-r())), Math.round(Math.max(85,100-Math.abs(g())*1.8-r()))];
-  if (r()>=q){ const k=r()<0.75?1:2; for (let i=0;i<k;i++){ const at=1+Math.floor(r()*3); const sev=r(); c[at]=Math.min(c[at], Math.round(sev<0.7? 84+r()*8 : sev<0.93? 70+r()*14 : 50+r()*20)); } }
-  return c;
-}
-function xtWornCond(r, age, rough){ const c=xtFreshCond(r,0.2); const w=Math.min(1,0.15+age*0.22)*(rough||1); for (let i=0;i<4;i++) if (r()<0.35+w*0.4) c[i]=Math.max(30, Math.round(c[i]-r()*(10+45*w))); return c; }
-function xtLabel(c){ const mn=Math.min(...c); return mn>=86?'NM': mn>=72?'LP': mn>=55?'MP': mn>=38?'HP':'DMG'; }
-const XT_LABN={NM:'Near mint',LP:'Lightly played',MP:'Moderately played',HP:'Heavily played',DMG:'Damaged'};
-function xtCondLines(cp){
-  const c=cp.c, L=[]; const f=(v,a,b,cc,dd,ee)=> v>=96? a : v>=90? b : v>=80? cc : v>=65? dd : ee;
-  L.push(['Centering', f(c[0],'Well centered.','Slightly off-center.','Noticeably off-center.','Badly off-center.','Cut very crooked.')]);
-  L.push(['Corners', f(c[1],'Sharp corners.','A hint of whitening on a corner.','Whitening on several corners.','Rounded, whitened corners.','Corners are bent or torn.')]);
-  L.push(['Edges', f(c[2],'Clean edges.','A few tiny edge specks.','Visible edge wear.','Heavy edge wear and chipping.','Edges are peeling or nicked through.')]);
-  L.push(['Surface', f(c[3],'Clean surface, strong gloss.','A faint print line or light scuff.','Light scratches across the surface.','Scratched and creased in places.','Creased, scuffed or stained.')]);
-  return L;
-}
 // ---------- copies ----------
 function xtMakeCopy(key, owner, acq, src, rng){
   const r=rng||R; const d=xtD(key); const cp={ id:G.nextXid++, k:key, o:owner, g:0 };
-  if (d.sealed) cp.c=[100,100,100,100]; else { const age=Math.max(0,(G.day-d.def.rel)/365); cp.c = src==='pull'? xtFreshCond(r,0.55) : src==='shop'? xtFreshCond(r,0.7) : xtWornCond(r, age, src==='deck'?1.5:1); }
+  if (d.sealed) cp.c=[100,100,100,100]; else { const age=Math.max(0,(G.day-d.def.rel)/365); cp.c = XT_ECON.condition.sample(r, src, age); }
   if (acq) cp.a=acq; G.xtc[cp.id]=cp; return cp;
 }
 const XT=id=>G.xtc[id]; const myXt=()=>Object.values(G.xtc).filter(c=>c.o===0);
 // ---------- value ----------
 // how much collectors care about a set: the founding sets most, the modern ones least, the anniversary set a lot while it is new
 function xtSetPrestige(n){ const d=xtSetDef(n); return n===TM_TT? 1.3 : ({Founding:1.55,Expansion:1.25,'The Deep':1.05,Modern:0.9})[d.era]||1; }
-const xtJit=key=>0.9+0.2*((hsh('tj'+key)%1000)/1000);
 function xtPrintCount(cid){ const rel=xtReleasedSets(G.day); return Math.max(1,(TM_PRINTS[cid]||[]).filter(s=>rel.includes(s)).length); }
 function xtFairRaw(key){
   const ck=key+'@'+G.day; let v=XTFV.get(ck); if (v!=null) return v;
@@ -50,12 +31,11 @@ function xtFairRaw(key){
     const st=xtLegalState(c.cid), u=Math.min(1,(G.xtg.usage[c.cid]||0)/3), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.xtg.hy[c.cid]||0;
     const eter=st==='rot'? 0.1*c.pw*c.pw : 0;   // Eternal demand, from the card's rating alone (the engine only plays the Tenth Tide format)
     const play=XT_PB[c.rar]*(Math.pow(u,0.85)*f+eter)*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(xtIsPrem(c)?0.6:1)*(d.v==='F'?1.15:1)*(1-0.1*(xtPrintCount(c.cid)-1));
-    v=Math.max(0.03,(coll+play)*XT_K*xtJit(key)*(1+Math.min(0.6,G.dp[key]||0))); }
+    v=Math.max(0.03,(coll+play)*XT_K*priceJitter(key)*(1+Math.min(0.6,G.dp[key]||0))); }
   XTFV.set(ck,v); if (XTFV.size>5000) XTFV.clear(); return v;
 }
-function xtGradeMult(rar, g){ const b=XT_GB[g]; return b>1? 1+(b-1)*(XT_GS[rar]||1) : b; }
-function xtFair(key, g){ const raw=xtFairRaw(key); if (!(g>0)) return raw; const d=xtD(key); if (d.sealed) return raw; const pop=G.xpop[key]; const scarce= pop&&g===10&&pop[10]<4&&(XT_RAROR[d.rar]>=2)? 1.12 : 1; return Math.max(raw*xtGradeMult(d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); }
-function xtCopyValue(cp){ if (cp.g>0) return xtFair(cp.k, cp.g); const raw=xtFairRaw(cp.k); const d=xtD(cp.k); return d.sealed? raw : raw*XT_COND_MULT[xtLabel(cp.c)]; }
+function xtFair(key, g){ const raw=xtFairRaw(key); if (!(g>0)) return raw; const d=xtD(key); if (d.sealed) return raw; const pop=G.xpop[key]; const scarce= pop&&g===10&&pop[10]<4&&(XT_RAROR[d.rar]>=2)? 1.12 : 1; return Math.max(raw*cardGradeMult(XT_GS,d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); }
+function xtCopyValue(cp){ if (cp.g>0) return xtFair(cp.k, cp.g); const raw=xtFairRaw(cp.k); const d=xtD(cp.k); return d.sealed? raw : raw*XT_ECON.condition.price(cp.c, d.card); }
 function xtSales(key,g){ return (G.sales[key]||[]).filter(s=>(s[2]||0)===(g||0)); }
 function xtEst(key, g, cp){
   const fv= cp? xtCopyValue(cp) : xtFair(key,g||0); const same=xtSales(key, cp?(cp.g>0?cp.g:0):(g||0)).filter(s=>s[0]>G.day-120); const n=same.length;
@@ -120,8 +100,7 @@ function xtOpenMany(ids){ const res={packs:[], set:1, title:'', paid:0, bulk:0, 
   for (const id of ids){ const r=xtOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; res.sv=(res.sv||0)+r.sv; res.bulk+=r.bulk; res.bulkValue+=r.bulkValue; t=r.title; n++; }
   if (!n) return null; res.title=n>1? n+' × '+t : t; return res; }
 // ---------- grading ----------
-function xtGradeOf(cp){ const c=cp.c; const mn=Math.min(...c), av=c.reduce((a,b)=>a+b,0)/4; const s=0.5*mn+0.5*av+withRng(mkRng(cp.id*7919+(cp.gt||0)*104729+11),()=>gauss()*1.7); return s>=97.5?10: s>=94?9: s>=89?8: s>=83?7: s>=76?6: s>=68?5: s>=58?4: s>=46?3: s>=32?2:1; }
-function xtGradeCopy(cp){ const g=xtGradeOf(cp); cp.gt=(cp.gt||0)+1; cp.g=g; cp.cert=10000000+Math.floor(R()*89999999); const p=G.xpop[cp.k]||(G.xpop[cp.k]=Array(11).fill(0)); p[g]++; xTfvClear(cp.k); return g; }
+function xtGradeCopy(cp){ const g=gradeOf(cp); cp.gt=(cp.gt||0)+1; cp.g=g; cp.cert=10000000+Math.floor(R()*89999999); const p=G.xpop[cp.k]||(G.xpop[cp.k]=Array(11).fill(0)); p[g]++; xTfvClear(cp.k); return g; }
 function xtSubmitGrade(id, tier){ const T=GRADE_TIERS.find(x=>x.id===tier); const cp=XT(id); if (!cp||cp.o!==0||cp.g!==0||cp.l||xtD(cp.k).sealed) return 'That card can\'t be submitted right now.'; if (G.player.cash<T.fee) return 'You need '+money(T.fee)+'.'; G.player.cash-=T.fee; G.player.fees+=T.fee; cp.g=-1; (G.player.xsubs=G.player.xsubs||[]).push({id:G.nextLid++,cid:id,tier,t0:G.day,t1:G.day+T.days,fee:T.fee,raw:Math.round(xtCopyValue(cp)*100)/100}); (cp.h=cp.h||[]).push([G.day,'Sent to GCS ('+T.n+')',T.fee,'']); return null; }
 function xtGradingTick(t){ const subs=G.player.xsubs||[]; if (!subs.length) return; for (const s of subs.filter(x=>x.t1<=t)){ const cp=XT(s.cid); if (!cp) continue; const g=xtGradeCopy(cp); (G.player.rv=G.player.rv||[]).push({k:'x',id:cp.id,g,raw:s.raw||0,fee:s.fee||0,t}); (cp.h=cp.h||[]).push([t,'Graded GCS '+g+' '+GRADE_NAMES[g],0,'']); toast('Back from GCS: '+xtD(cp.k).title+' is a '+g, g>=9); } G.player.xsubs=subs.filter(x=>x.t1>t); }
 // ---------- collectors ----------
