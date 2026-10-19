@@ -18,5 +18,7 @@ const D=ARCH.map(a=>build(a,'tt')); const a=E.play(D[0],D[3],4242), b=E.play(D[0
 ok(a.w===b.w && a.turns===b.turns && JSON.stringify(a.harbor)===JSON.stringify(b.harbor) && JSON.stringify(a.log.played)===JSON.stringify(b.log.played), 'same seed, same game');
 ok(D.every(d=>d.length===50 && d.every(c=>c.tt)) && D.every(d=>{ const k={}; for (const c of d) k[c.id]=(k[c.id]||0)+1; return d.every(c=>k[c.id]<=(c.r==='L'?1:3)); }), 'every archetype deck is a legal Tenth Tide deck (50 cards, 3 copies, 1 Legendary)');
 let w=0,g=0; for (let i=0;i<D.length;i++) for (let k=0;k<40;k++){ const r=E.play(D[i],D[i],100*i+k); g++; if (r.w===0) w++; } ok(Math.abs(w/g-0.5)<0.06, `mirror matches: seat A wins ${(w/g*100).toFixed(1)}% (near 50%)`);
+{ let r=null, e=null; try { r=require('./meta.js').run(10, 3, true); } catch(x){ e=x; }
+  ok(!e && r && r.S.sizes.every(n=>n>=12 && n<=22), 'living metagame runs 10 weeks (field size '+(r? Math.min(...r.S.sizes)+' to '+Math.max(...r.S.sizes) : 'n/a')+(e? '; threw '+e.message : '')+')'); }
 const ex=require('child_process').spawnSync(process.execPath,[path.join(__dirname,'export.js'),'--check'],{encoding:'utf8'}); ok(ex.status===0, 'exported files up to date ('+(ex.stdout||'').trim()+')');
 console.log(fail? `${fail} FAILED` : 'all checks passed'); process.exit(fail?1:0);
