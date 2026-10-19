@@ -47,4 +47,38 @@ function build(a, pool, opt){ opt=opt||{};
     if (pass===0 && have[s]>=want[s]) continue; const n=Math.min(k-already, 50-deck.length); for (let i=0;i<n;i++){ deck.push(c); have[s]++; if (c.t==='unit'||c.t==='vessel') units++; } }
   return deck; }
 const DECKS=pool=>ARCH.map(a=>({a, d:build(a,pool)}));
-module.exports={ARCH, build, DECKS, rate, legal};
+// ---- brewing (used by the living metagame, meta.js): what a card does in a deck (its roles), what it works with (synergy), and
+// a deck built from a faction mix, a plan, a tech package (role weights) and optionally a build-around card
+const ROLE_OPS={removal:['dmg','dmg_multi','destroy','exile','sweep','control','fight','stun','weaken','dmg_attackers'], tempo:['bounce','bounce_all','shift','noblock','unblockable','calm'],
+  draw:['draw','dig','tutor','scry','loot','regrow','reanimate'], wide:['tokens','pump_all','lord','grant','grant_static','scale','copy'], defense:['mend','fortify','fortify_all','ward','hold_ward','harbor','thorns','max_attack','strand_front'],
+  ramp:['ramp','inf','cost']};
+function roles(c){ const R=new Set(); for (const ab of c.fx) for (const [r,ops] of Object.entries(ROLE_OPS)) if (ops.includes(ab[1])) R.add(r);
+  if (c.kw.includes('swift')) R.add('tempo'); if (c.kw.includes('rampart')||c.kw.includes('tough')||c.t==='stronghold') R.add('defense');
+  if ((c.t==='unit'||c.t==='vessel') && (c.kw.includes('charge')||c.kw.includes('surge')||c.cost<=2)) R.add('aggro'); if ((c.t==='unit'||c.t==='vessel') && c.cost>=6) R.add('big');
+  if (c.t==='vessel'||c.ferry) R.add('fleet'); return R; }
+const TECH=[{k:'rem',n:'Removal',w:{removal:1.8,draw:0.8}}, {k:'tmp',n:'Tempo',w:{tempo:1.8,aggro:1.2,big:0.7}}, {k:'drw',n:'Card Draw',w:{draw:1.8,ramp:1.2,aggro:0.8}},
+  {k:'wide',n:'Go Wide',w:{wide:1.8,aggro:1.3,big:0.6}}, {k:'fort',n:'Fortress',w:{defense:1.8,big:1.2,aggro:0.6}}, {k:'ramp',n:'Ramp',w:{ramp:1.8,big:1.5,aggro:0.6}},
+  {k:'agg',n:'Aggro',w:{aggro:1.8,removal:1.1,big:0.5,draw:0.7}}, {k:'big',n:'Big Threats',w:{big:1.8,ramp:1.3,aggro:0.7}}, {k:'flt',n:'Fleet',w:{fleet:1.9,tempo:1.1}}];
+// filters a card's abilities mention (what it rewards), with the bare ones ('unit', 'own unit') left out
+const FRAG=/^(own|enemy|any|unit|other|self|foe)( (own|enemy|any|unit|other))*$/;
+const KWS=new Set(['charge','surge','rampart','leader','swift','undertow','tough','trample','ferry']);
+// ops whose filter names your own cards (what the card rewards); removal and taxes name the opponent's
+const OWN_OPS=new Set(['lord','cost','grant','grant_static','pump','pump_all','scale','tutor','dig','regrow','reanimate','nostrand','athome','ready','ready_all','copy','mend','move','unblockable']);
+function filtersOf(c){ const F=[]; for (const ab of c.fx){ const ev=ab[0].startsWith('on:')? ab[0].split(':') : null; if (ev && ev[2]) F.push(ev[2].replace(/_/g,' '));
+    if (OWN_OPS.has(ab[1])) for (const v of ab.slice(2)) if (typeof v==='string' && !v.split(' ').every(w=>KWS.has(w))) F.push(v); }
+  return F.filter(f=>specific(f)); }
+// a filter that rewards a kind of card worth building around: one of yours (not the enemy's), naming a subtype, a card type other than
+// plain units, a keyword, Legendaries or tokens
+const SPEC=/\b(vessel|relic|equipment|enchantment|aura|domain|stronghold|spell|legend|token|land|sea|dual|neutral|charge|surge|rampart|leader|swift|undertow|tough|trample|ferry|beast|spirit|bird|construct|cultist|druid|hunter|worker|archer|cleric|knight|mercenary|mercenaries|noble|official|privateer|sailor|soldier|trader|wanderer|mason|miner|smith|scout|guardian|mage|warrior|horror|leviathan|kraken|fish|eel|levy|wolf|boar|fox|badger|singer|spawn|drowned|tideborn|reachfolk|folk)\b/;
+function specific(f){ return !/\benemy\b/.test(f) && !FRAG.test(f) && SPEC.test(f); }
+let MC=null; const matchC=(c,f)=>{ if (!MC) MC=require('./engine.js').matchC; try { return MC(c,f); } catch(e){ return false; } };
+// how well card c works with the build-around card L (0 = not at all): L rewards what c is, or c rewards what L is
+function synergy(L, c){ if (c===L) return 0; let v=0; for (const f of filtersOf(L)) if (matchC(c,f)) v+=1; for (const f of filtersOf(c)) if (matchC(L,f)) v+=0.6;
+  const ls=(L.sub||'').toLowerCase().split(/\s+/), cs=(c.sub||'').toLowerCase().split(/\s+/); if (c.t==='unit' && ls.some(w=>w.length>3 && cs.includes(w) && !['human'].includes(w))) v+=0.3; return Math.min(3,v); }
+// a brewed deck: spec {id, mix, plan, tech (a TECH entry or null), lead (a card or null), seed (number: reorders close choices)}
+function brew(spec, pool){ pool=pool||'tt'; const bonus={}; const T=spec.tech&&spec.tech.w||{}; let x=(spec.seed>>>0)||1; const rnd=()=>{ x=(Math.imul(x,1103515245)+12345)>>>0; return x/4294967296; };
+  for (const c of CARDS){ if (!legal(c,pool) || !(spec.mix.includes(c.f)||c.f==='NE')) continue; let b=0; for (const r of roles(c)) b+=((T[r]||1)-1)*2.2;
+    if (spec.lead) b+=synergy(spec.lead,c)*2.5; if (spec.seed!=null) b+=(rnd()-0.5)*1.6; if (b) bonus[c.n]=b; }
+  if (spec.lead) bonus[spec.lead.n]=(bonus[spec.lead.n]||0)+30;
+  return build({id:spec.id||'brew', mix:spec.mix, plan:spec.plan||'midrange'}, pool, {fresh:true, bonus, ban:spec.ban||[]}); }
+module.exports={ARCH, build, DECKS, rate, legal, roles, synergy, brew, TECH};

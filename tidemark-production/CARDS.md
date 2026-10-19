@@ -10,10 +10,10 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
-| 1 | Captain of the Causeway (Uncommon, Crownlands) | 4 · Land 1 | Unit — Human Knight | 2/4 | **Leader, Rampart.**  |
+| 1 | Captain of the Causeway (Uncommon, Crownlands) | 4 · Land 1 | Unit — Human Knight | 2/3 | **Leader, Rampart.**  |
 | 2 | Causeway Toll-Keeper (Common, Crownlands) | 2 | Unit — Human Worker | 1/2 | Whenever an opponent's unit attacks away from home, deal 1 damage to your opponent's Harbor. |
 | 3 | Crossbow Sentry (Common, Crownlands) | 2 | Unit — Human Archer | 1/3 | When this blocks, deal 1 damage to an enemy attacking unit. |
-| 4 | Crown Sergeant (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/3 | **Leader.**  |
+| 4 | Crown Sergeant (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/2 | **Leader.**  |
 | 5 | Dowager Queen Isolde (Legendary, Crownlands) | 6 · Land 3 | Unit — Human Noble | 4/5 | **Leader.** When this enters play, search your deck for a Stronghold, put it into your hand, then shuffle. Your other Leader units get +1/+1. |
 | 6 | Field Chaplain (Common, Crownlands) | 2 | Unit — Human Cleric | 2/2 | When this enters play, another of your units gets +0/+3 until your next turn. |
 | 7 | Knight of the Seawall (Rare, Crownlands) | 4 · Land 1 | Unit — Human Knight | 3/3 | **Rampart.** This gets +1/+1 for each Stronghold you control. |
@@ -246,7 +246,7 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
 | 3 | Coastal Swordsman (Common, Crownlands) | 2 | Unit — Human Soldier | 2/3 |  |
-| 7 | Crown Sergeant (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/3 | **Leader.**  |
+| 7 | Crown Sergeant (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/2 | **Leader.**  |
 | 11 | Keep Warden (Uncommon, Crownlands) | 5 · Land 2 | Unit — Human Soldier | 4/6 | **Rampart.** When this enters play, one of your Strongholds gains 3 durability. |
 | 15 | Queen Isolde Varr (Legendary, Crownlands) | 7 · Land 3 | Unit — Human Noble | 6/7 | **Leader, Rampart.**  |
 | 20 | Royal Lancer (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Knight | 4/3 | **Charge.**  |

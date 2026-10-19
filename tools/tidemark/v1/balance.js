@@ -33,4 +33,7 @@ module.exports=[
  ['Cannon Crew', {p:3}, 'Iron Reach under curve: 3/3'],
  ['Pit Pony', {p:2}, 'Iron Reach under curve: 2/2'],
  ['Iron Crown of Varr', {x:[['static','equip',1,1,'leader']]}, 'Value +3.2 in Thornwild Rush (66% to 68%), whose Leaders stack: the Crown no longer also gives every Leader +1/+1'],
+ // round 3 (living metagame): Crown Bastion opened at 40% of the field and forced a ban by week 12; its value is in stacking cheap Leaders
+ ['Crown Sergeant', {t:2}, 'Value +4.7 in Crown Bastion (40 games a opponent), the top deck at 65%: 2/2 Leader'],
+ ['Captain of the Causeway', {t:3}, 'Value +2.2 in Crown Bastion, the second Leader it stacks: 2/3 Leader, Rampart'],
 ];

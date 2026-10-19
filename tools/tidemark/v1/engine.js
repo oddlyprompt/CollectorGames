@@ -47,7 +47,7 @@ function matchU(S, R, Q, u, f, x, dflt){ const o=PF(f); const F=o.flags; x=x||{}
 function subOk(c, s){ const w=(c.sub||'').toLowerCase(); if (s==='mercenaries') s='mercenary'; if (s==='folk') return w.includes('forest folk'); if (s==='spirit') return w.includes('spirit');
   return w.split(/\s+/).includes(s) || (c.tokName||'').toLowerCase()===s; }
 // does card c match a card filter (cost, tax, cast, tutor)?
-function matchC(c, f){ const o=PF(f); const F=o.flags; const T=c.t;
+function matchC(c, f){ const o=PF(f); const F=o.flags; const T=c.t; if (F.has('token')) return false;
   for (const k of ['unit','vessel','relic','enchantment','domain','stronghold','spell']) if (F.has(k) && !(T===k || (k==='unit' && T==='vessel'))) return false;
   if (F.has('equipment') && !(T==='relic' && c.sub==='Equipment')) return false; if (F.has('aura') && !(T==='enchantment' && c.sub==='Unit')) return false;
   if (F.has('legend') && c.r!=='L') return false;
