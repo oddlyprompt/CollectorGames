@@ -1,0 +1,739 @@
+[
+  {
+    "sheet": "TM-S001",
+    "file": "sheets/TM-S001.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "4f2564171202b4db5e12716298fc01f8063f023c6339e2e029a51d97e6de2733"
+  },
+  {
+    "sheet": "TM-S002",
+    "file": "sheets/TM-S002.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "aeebc3a58823308a4819cc590657dbebf0783af4efa538288dfbe7b3a080d780"
+  },
+  {
+    "sheet": "TM-S003",
+    "file": "sheets/TM-S003.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "95e3c7541f52cb788e5ace4bb4b779062d438341421c299a286739057b071a97"
+  },
+  {
+    "sheet": "TM-S004",
+    "file": "sheets/TM-S004.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "dbb187a05ce7bddcf864434f1c3d6dbbbd4b91ccc3a0bceb80fd2cd1ab82f9ce"
+  },
+  {
+    "sheet": "TM-S005",
+    "file": "sheets/TM-S005.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "15b0f0872fc12922e38a6bde59dd4559442473b46b65f24f29c48e0c661d2a15"
+  },
+  {
+    "sheet": "TM-S006",
+    "file": "sheets/TM-S006.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "16ee24e6e4131e82745b42716e115be15be4ac4e64d7cda10a5e7e2239b11784"
+  },
+  {
+    "sheet": "TM-S007",
+    "file": "sheets/TM-S007.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "afca871a7534abe88107964995bba08b2aa5ae687c219e1c2c4088d90beb48d3"
+  },
+  {
+    "sheet": "TM-S008",
+    "file": "sheets/TM-S008.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "9a380998a2ff9daae2cbdbdf03d3b5fc6de2792e0b25b1cddd4c9e7c2317f5a1"
+  },
+  {
+    "sheet": "TM-S009",
+    "file": "sheets/TM-S009.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "e666b0249a8bd5f7dbce62ccaeeb444a07f3d08f22747d8b03c4c7682c266cc2"
+  },
+  {
+    "sheet": "TM-S010",
+    "file": "sheets/TM-S010.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "5f1da9ffcc8efe3ab8bd01a7d18690d44343ee071812d7dcabd18012366d5f7c"
+  },
+  {
+    "sheet": "TM-S011",
+    "file": "sheets/TM-S011.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "f06da129f2d84390e63d9894f9a3e03cdb6cdb06254faa820097618a25a8fca4"
+  },
+  {
+    "sheet": "TM-S012",
+    "file": "sheets/TM-S012.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "7ba64aec2f3805da3c0551e1c26db23766d05ee5d48c872abb4f6c03c31a1821"
+  },
+  {
+    "sheet": "TM-S013",
+    "file": "sheets/TM-S013.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "7f8530456c7a3e26f17b64ac4cbe8de21c3c10ca40a8df9a6eac897eb0ad1294"
+  },
+  {
+    "sheet": "TM-S014",
+    "file": "sheets/TM-S014.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 2,
+    "unused": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "sha256": "659217981ccc54db6700d04e0cd6a02b73900eea728cf2fe6ad3887b33c25151"
+  },
+  {
+    "sheet": "TM-S015",
+    "file": "sheets/TM-S015.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "a945f446e0f031bcae17be46a80894217bb0b7fede485b74eeb1e56c5e0c3a55"
+  },
+  {
+    "sheet": "TM-S016",
+    "file": "sheets/TM-S016.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 6,
+    "unused": [
+      7,
+      8,
+      9
+    ],
+    "sha256": "2b9b973018de25660ab91bf072b88f1881424d5451b133ff762ba0501d4b3833"
+  },
+  {
+    "sheet": "TM-S017",
+    "file": "sheets/TM-S017.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "22d4ceba106406bc7b95124f40c74df89cfddab6ee26f02bb67ecc4e8297fa5f"
+  },
+  {
+    "sheet": "TM-S018",
+    "file": "sheets/TM-S018.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 4,
+    "unused": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "sha256": "170ccc51f3899a72112fd13772beefcad6907787f6c48ae4b31b492f15105511"
+  },
+  {
+    "sheet": "TM-S019",
+    "file": "sheets/TM-S019.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 5,
+    "unused": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "sha256": "00756500f78fd9003bd2499804897be3ccc174ffa9328778f0837fdcb3079cc8"
+  },
+  {
+    "sheet": "TM-S020",
+    "file": "sheets/TM-S020.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 5,
+    "unused": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "sha256": "31823579ef4210e55bef568987f1b13ded93e9eb601ba84ae73afc42341d5e5a"
+  },
+  {
+    "sheet": "TM-S021",
+    "file": "sheets/TM-S021.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "9708e7dd480edecf53c8d880ae23370b28cac3d025bb6662a53874b7fc5dff70"
+  },
+  {
+    "sheet": "TM-S022",
+    "file": "sheets/TM-S022.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "e1530d1937a32785c3c86729a4a125028d8d482dfe84d905bdb25c0225880806"
+  },
+  {
+    "sheet": "TM-S023",
+    "file": "sheets/TM-S023.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "9527facdb2df3ce2b2d49790ad58bf538368296ca36f4d80674dfd0093b5be5b"
+  },
+  {
+    "sheet": "TM-S024",
+    "file": "sheets/TM-S024.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "a9a08a0804d279137ada5f3c2441fa80006c72f5514d571fde8cd20d9f8a5a3f"
+  },
+  {
+    "sheet": "TM-S025",
+    "file": "sheets/TM-S025.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "7222434ae75e53bc36619570cb76bd4090ef176a916086e45dede12cf96a28f2"
+  },
+  {
+    "sheet": "TM-S026",
+    "file": "sheets/TM-S026.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "1dc13eb4e18f996ab1ff683e3b2d6e8a5c7bc24dce8f6256606ca5c334991014"
+  },
+  {
+    "sheet": "TM-S027",
+    "file": "sheets/TM-S027.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "8798950a55b845292f92a973235f25569e3f5802e842a6182e5c58161e1b26ee"
+  },
+  {
+    "sheet": "TM-S028",
+    "file": "sheets/TM-S028.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "856bbb5f182701fdee5c078c081f5c6dc9eb283e7c39a13bfa828650e714bc94"
+  },
+  {
+    "sheet": "TM-S029",
+    "file": "sheets/TM-S029.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "68dd9093b3b267f99e21da78bfba676e0dd014b77ed640c010cc8291c3c3f4a5"
+  },
+  {
+    "sheet": "TM-S030",
+    "file": "sheets/TM-S030.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "9601f1f741bfae87d879dd8f37c878ceb474e0bbb8d28cce5c9097f80f93601c"
+  },
+  {
+    "sheet": "TM-S031",
+    "file": "sheets/TM-S031.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "38b4e698c0e7c36d49cdb16abf4df23d4a3c2b4edc8728b492b1d5cd38f02dc7"
+  },
+  {
+    "sheet": "TM-S032",
+    "file": "sheets/TM-S032.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "7d39a07202ee94ca34d0221d3636bfb94800b59ad1783d9c5ca2db5d9d81425b"
+  },
+  {
+    "sheet": "TM-S033",
+    "file": "sheets/TM-S033.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "779504eac97bf32b49ff5bfb1de476ce0e0da67252222f4bf540219e1d1bd57c"
+  },
+  {
+    "sheet": "TM-S034",
+    "file": "sheets/TM-S034.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "f41edf0e605f98d9c8dc0313ab48dbaf4e58be65f2b0310bf92a578aa2a92275"
+  },
+  {
+    "sheet": "TM-S035",
+    "file": "sheets/TM-S035.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "ecb32472db3c85f3a3ce7986ccd299b4fd3b1963811579dd7eebcd3ed40d0f41"
+  },
+  {
+    "sheet": "TM-S036",
+    "file": "sheets/TM-S036.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "aa54b7a6135d339862e28e54f9b3dc9a66449aa0543ea3cbca2394dad09ed33f"
+  },
+  {
+    "sheet": "TM-S037",
+    "file": "sheets/TM-S037.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "7259032b0cd560eb39909a6b7b90453b0f4785ee18a8c1cb20aabd79b1071baa"
+  },
+  {
+    "sheet": "TM-S038",
+    "file": "sheets/TM-S038.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "eb25ebc378934bcd18bc9b37cacad1efc5b1714c38722a7789a407356fc9bc02"
+  },
+  {
+    "sheet": "TM-S039",
+    "file": "sheets/TM-S039.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "13f5f31d9a7a8b1e34a8225b1826f47237594715a7332b4cfb1567e7d0632202"
+  },
+  {
+    "sheet": "TM-S040",
+    "file": "sheets/TM-S040.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "f60b307d5523a12e452891fa583c2fc9457d94e4b430ba7b43b7fdc7f26a80c4"
+  },
+  {
+    "sheet": "TM-S041",
+    "file": "sheets/TM-S041.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "870375139dba94f0adab2a5a5793720a8a53872a5640ae908c906ae798f16ad9"
+  },
+  {
+    "sheet": "TM-S042",
+    "file": "sheets/TM-S042.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "db8b155ca3ecc274624997786f9e9f01e558b9d0d48fc68d3e1a52ae43a6a0e2"
+  },
+  {
+    "sheet": "TM-S043",
+    "file": "sheets/TM-S043.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "28bdae84082d420b77e87b43c34d0b79da0778cab3040008ef250ee984608b9e"
+  },
+  {
+    "sheet": "TM-S044",
+    "file": "sheets/TM-S044.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "f8bc945d47f1406746bbd668fccb5ee1fbf3f321823049ada93577e7da691a0b"
+  },
+  {
+    "sheet": "TM-S045",
+    "file": "sheets/TM-S045.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "5dbffec5c5817a61e749521ceec63dd275469dde63fdec58c0b077e623653971"
+  },
+  {
+    "sheet": "TM-S046",
+    "file": "sheets/TM-S046.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "6999d6a941c4c70445fa664c34b8290cdc9052395a89df3fb0cdf74aa70d31d1"
+  },
+  {
+    "sheet": "TM-S047",
+    "file": "sheets/TM-S047.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "33bcf4506e85e5273df28b6b1bb26e404cdba802c0eaa4b17c7370c797c4385c"
+  },
+  {
+    "sheet": "TM-S048",
+    "file": "sheets/TM-S048.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "0259cffe69344553c1cee6b40500d822507e39965fba501d976d5a782f64f770"
+  },
+  {
+    "sheet": "TM-S049",
+    "file": "sheets/TM-S049.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "e315b5de7028078a3a646b045747a0894f1658e42c8d639016116be0490ed8a6"
+  },
+  {
+    "sheet": "TM-S050",
+    "file": "sheets/TM-S050.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "c274d90c4c561aa69b30d276e425211f927b5c770bacd449e78a07d865d53249"
+  },
+  {
+    "sheet": "TM-S051",
+    "file": "sheets/TM-S051.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "58ca6e9ba6d44ed0a3c6333a1d121c5fb3f40b0b68e56baec926ff34fa53ffe7"
+  },
+  {
+    "sheet": "TM-S052",
+    "file": "sheets/TM-S052.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "f3d813e35e7528a9165d707ba519e9a37b6f52bb7499218cc748730d4a0df644"
+  },
+  {
+    "sheet": "TM-S053",
+    "file": "sheets/TM-S053.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "c7bfe562d9b6d25ba828f59b2198fe3c893395186b0ee3c1ddcc71bcb5c52f39"
+  },
+  {
+    "sheet": "TM-S054",
+    "file": "sheets/TM-S054.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "3cb938863d715b7d88ce4763f4eeb6c58b68f2e768a16d82a14862a3f44e9f49"
+  },
+  {
+    "sheet": "TM-S055",
+    "file": "sheets/TM-S055.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "4f9de2b5724153000d2530301d8c07d863dcd9e5eea4732d748cd5c03bf3f133"
+  },
+  {
+    "sheet": "TM-S056",
+    "file": "sheets/TM-S056.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "c9c89cd09ccc660cc51ad216b4ea60608f988c0201629007f4acaa8e4899aac4"
+  },
+  {
+    "sheet": "TM-S057",
+    "file": "sheets/TM-S057.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "125961ffc588d08b9299928eb767fcc042237fc879aacce18963663b1cdcbfb1"
+  },
+  {
+    "sheet": "TM-S058",
+    "file": "sheets/TM-S058.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "d2ca46a228546fc27b3a1a8f1522272736ef205f00c1a9b69af92445e5c4ec17"
+  },
+  {
+    "sheet": "TM-S059",
+    "file": "sheets/TM-S059.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "1853b7d5177ec83bea4fcb2b3400dba2ee5f275bb1996022a0303774541b7f02"
+  },
+  {
+    "sheet": "TM-S060",
+    "file": "sheets/TM-S060.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "db4de76ac7285cffb9775df84b3586326d3a7ea5289c11b7b2935b02af15e3bb"
+  },
+  {
+    "sheet": "TM-S061",
+    "file": "sheets/TM-S061.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "927daa189b66ac8015398f60d35334d31e71ccd2fe4bdec20a45f4d7e2e5dd71"
+  },
+  {
+    "sheet": "TM-S062",
+    "file": "sheets/TM-S062.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "1d9d8c20be7396576a99d5f5443dfb9ba73f261c3e878abe30bd8424350c550c"
+  },
+  {
+    "sheet": "TM-S063",
+    "file": "sheets/TM-S063.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "4267a431e268dfc837fcb25b8e2b7bb08750273eb2335ccc344ee4b0e30af2cd"
+  },
+  {
+    "sheet": "TM-S064",
+    "file": "sheets/TM-S064.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "033bfb52f30a15470e975b3375a20cd83f68830da18c5fd148470b3a9e337b09"
+  },
+  {
+    "sheet": "TM-S065",
+    "file": "sheets/TM-S065.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "a5746536289087322b743db532166ed9e2ff619434ca5785abbe4b34591ba19c"
+  },
+  {
+    "sheet": "TM-S066",
+    "file": "sheets/TM-S066.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "177556d108dd12e3708631357f21b30e16bf770246f350c206ba169a2203a895"
+  },
+  {
+    "sheet": "TM-S067",
+    "file": "sheets/TM-S067.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "7a3d67feb9b474929c91242b0fdc7f37a7260400c69777a51c5315e550145630"
+  },
+  {
+    "sheet": "TM-S068",
+    "file": "sheets/TM-S068.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "c558d48a174cb325556c1e0f1dc912f52116374cdf20047671d9484c12ea016c"
+  },
+  {
+    "sheet": "TM-S069",
+    "file": "sheets/TM-S069.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "022ce1dcdb94097e77f8b3d16b3023e2be6aad508e9118affa1f6b040fe5a4db"
+  },
+  {
+    "sheet": "TM-S070",
+    "file": "sheets/TM-S070.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "b47daad387af719df9bedaa0aa454c2250a0a77fdb100328a80dc87907b54b5e"
+  },
+  {
+    "sheet": "TM-S071",
+    "file": "sheets/TM-S071.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "8326f62630a2af7effca02b225cec9f22ad91b595f5e4252e52b771fab044309"
+  },
+  {
+    "sheet": "TM-S072",
+    "file": "sheets/TM-S072.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 5,
+    "unused": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "sha256": "78df87f886be542a79e0bd0d93922778460e02687816bfa1722e9bac9897240f"
+  },
+  {
+    "sheet": "TM-S073",
+    "file": "sheets/TM-S073.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "69fbfbe9bc16a85bc8c01c6b025f3f5bdc19f17c74e2ef06b5e73c90b9559d95"
+  },
+  {
+    "sheet": "TM-S074",
+    "file": "sheets/TM-S074.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 8,
+    "unused": [
+      9
+    ],
+    "sha256": "3aab78cf4495faa8eeb1564538d2a6423a6a746f1771c2d78a18ddbfa22ea77d"
+  },
+  {
+    "sheet": "TM-S075",
+    "file": "sheets/TM-S075.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "1c8cf86bb3922f2682d0c4b6c2534ded7f5c48f00a660d43ba07513a969620bd"
+  },
+  {
+    "sheet": "TM-S076",
+    "file": "sheets/TM-S076.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 9,
+    "unused": [],
+    "sha256": "530fd1ee73a34cba464e5ee423cdbd1327c7c864858ddac406b00a9f0ec63edc"
+  },
+  {
+    "sheet": "TM-S077",
+    "file": "sheets/TM-S077.png",
+    "width": 1448,
+    "height": 1086,
+    "illustrations": 1,
+    "unused": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "sha256": "a84cd02f3c7c07442cf966a0aff85a0dbfdb253b62fc6ce83ae328388365ceef"
+  }
+]

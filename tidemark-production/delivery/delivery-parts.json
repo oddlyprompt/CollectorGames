@@ -1,0 +1,262 @@
+[
+  {
+    "name": "tidemark-under30-S001-S003.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S001-S003.zip",
+    "start": 1,
+    "end": 3,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 19805661,
+    "sha256": "02d584506eea5c08e578fbff079963b7afdeaf671585ccfd029b8fb28ca345cb"
+  },
+  {
+    "name": "tidemark-under30-S004-S006.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S004-S006.zip",
+    "start": 4,
+    "end": 6,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 22163571,
+    "sha256": "4d0fa2bd3dccfc43560e6a14b2bdfcf2ecf428e2c7c5f5820ee51a3655e57b28"
+  },
+  {
+    "name": "tidemark-under30-S007-S009.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S007-S009.zip",
+    "start": 7,
+    "end": 9,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 19433330,
+    "sha256": "ac01bdecc1ed4ba5b162bac1e94d24b0230baa3bc7c48645a4d22a5f26607d58"
+  },
+  {
+    "name": "tidemark-under30-S010-S012.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S010-S012.zip",
+    "start": 10,
+    "end": 12,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 26369529,
+    "sha256": "784e63248ecd894262b1ac7f44204072b46aea72367c84592b865b1d662f54f5"
+  },
+  {
+    "name": "tidemark-under30-S013-S015.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S013-S015.zip",
+    "start": 13,
+    "end": 15,
+    "illustrations": 20,
+    "unused": 7,
+    "bytes": 15638838,
+    "sha256": "8877dcbda213fa82551892c205a7f25b97d521cfb9cfe4793ed86711b0f1b885"
+  },
+  {
+    "name": "tidemark-under30-S016-S018.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S016-S018.zip",
+    "start": 16,
+    "end": 18,
+    "illustrations": 19,
+    "unused": 8,
+    "bytes": 14302279,
+    "sha256": "919a9f13f9fb6e97a16480fc590781f909eaa89667ad901d08a07ff0c69c7152"
+  },
+  {
+    "name": "tidemark-under30-S019-S021.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S019-S021.zip",
+    "start": 19,
+    "end": 21,
+    "illustrations": 19,
+    "unused": 8,
+    "bytes": 14707492,
+    "sha256": "b5f4c77b6d01b2d45dfae61f62e718a081bbff1f73530562b162a900d18adaf4"
+  },
+  {
+    "name": "tidemark-under30-S022-S024.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S022-S024.zip",
+    "start": 22,
+    "end": 24,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 19951433,
+    "sha256": "53ba5125449a9264346a78c0ec3557bd4f4b2e60f4a9a83399174c94b5582dc6"
+  },
+  {
+    "name": "tidemark-under30-S025-S027.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S025-S027.zip",
+    "start": 25,
+    "end": 27,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 23275565,
+    "sha256": "1380998ae4ad420119a0e37c2cc746aa61ff52b356ec0019d021518e833a7774"
+  },
+  {
+    "name": "tidemark-under30-S028-S030.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S028-S030.zip",
+    "start": 28,
+    "end": 30,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 24075205,
+    "sha256": "5152b53b66b69bd6caecd401fcafa1ff5acab25b50ea88e839491417b41dcb77"
+  },
+  {
+    "name": "tidemark-under30-S031-S033.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S031-S033.zip",
+    "start": 31,
+    "end": 33,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 23743315,
+    "sha256": "e7a872958b189bfb9f3ec438ec404add11bced07d7e860a46f9ea4f8981be7f8"
+  },
+  {
+    "name": "tidemark-under30-S034-S036.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S034-S036.zip",
+    "start": 34,
+    "end": 36,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 20143795,
+    "sha256": "dd5b7475d9abaf1c1b3e83623b4a2b4d43331a027f4b893e93cf66c847aba019"
+  },
+  {
+    "name": "tidemark-under30-S037-S039.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S037-S039.zip",
+    "start": 37,
+    "end": 39,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 20273344,
+    "sha256": "5d24ddaf2c0bcd81a422b3b0e8a993678bb0ab3501d2235364de2e95b4bf3e96"
+  },
+  {
+    "name": "tidemark-under30-S040-S042.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S040-S042.zip",
+    "start": 40,
+    "end": 42,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 23722516,
+    "sha256": "0e0ec52e781441ade2564d9d04b2f7c43af539767b39065f122c92c04a7ca358"
+  },
+  {
+    "name": "tidemark-under30-S043-S045.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S043-S045.zip",
+    "start": 43,
+    "end": 45,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 26240879,
+    "sha256": "91c30374d0f12178f0c044333df9272eafb225a835a02ca06e229cb078bea9b2"
+  },
+  {
+    "name": "tidemark-under30-S046-S048.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S046-S048.zip",
+    "start": 46,
+    "end": 48,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 23150268,
+    "sha256": "a5594dfeeb4bee408e106cb06b7a7f9089a2e76239e5a2ccb17eaed01ab0f9ec"
+  },
+  {
+    "name": "tidemark-under30-S049-S051.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S049-S051.zip",
+    "start": 49,
+    "end": 51,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 25942002,
+    "sha256": "2357468549dc4aa7af0573be9363276909f45dc45ff6904d6744799c92b10e7f"
+  },
+  {
+    "name": "tidemark-under30-S052-S054.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S052-S054.zip",
+    "start": 52,
+    "end": 54,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 22790585,
+    "sha256": "55dfe51ec986bdc96ff5e8638ad95448438e124d1599ab6e2275b83b8024e4c5"
+  },
+  {
+    "name": "tidemark-under30-S055-S057.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S055-S057.zip",
+    "start": 55,
+    "end": 57,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 19291004,
+    "sha256": "9244a1ebb9b18014b67542b4a1904dfb5d9a41261416b1f1bd4c049fb75e0843"
+  },
+  {
+    "name": "tidemark-under30-S058-S060.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S058-S060.zip",
+    "start": 58,
+    "end": 60,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 18961769,
+    "sha256": "96220dfe93772a5629e11f3c3d2d470d975c9e8d4b8edc4bbc78db0687840f38"
+  },
+  {
+    "name": "tidemark-under30-S061-S063.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S061-S063.zip",
+    "start": 61,
+    "end": 63,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 19516338,
+    "sha256": "bbbbeb6aab1da8ad59a40b8b0acb88c91cb878611580bad69803d75c8d764c13"
+  },
+  {
+    "name": "tidemark-under30-S064-S066.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S064-S066.zip",
+    "start": 64,
+    "end": 66,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 19518576,
+    "sha256": "2b714d4883476ebed8bdf527df542365d6186aa70f1ab7a662852af122b7db49"
+  },
+  {
+    "name": "tidemark-under30-S067-S069.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S067-S069.zip",
+    "start": 67,
+    "end": 69,
+    "illustrations": 27,
+    "unused": 0,
+    "bytes": 23386448,
+    "sha256": "7d36f2468142f1847df14d353001b1ab5dfc847c794bf4de7c75889c1739dbec"
+  },
+  {
+    "name": "tidemark-under30-S070-S072.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S070-S072.zip",
+    "start": 70,
+    "end": 72,
+    "illustrations": 23,
+    "unused": 4,
+    "bytes": 22870213,
+    "sha256": "175ba9ac4028996eb84579c59d834e238e85d2f87dd930dbc03f89a333a5ebc2"
+  },
+  {
+    "name": "tidemark-under30-S073-S075.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S073-S075.zip",
+    "start": 73,
+    "end": 75,
+    "illustrations": 26,
+    "unused": 1,
+    "bytes": 26063103,
+    "sha256": "5157957380baf73d37c06c858b2dae08add3726b19d4d9a8483af6649c05e3c6"
+  },
+  {
+    "name": "tidemark-under30-S076-S077.zip",
+    "path": "/workspace/scratch/9b99b6111d48/tidemark-under30-S076-S077.zip",
+    "start": 76,
+    "end": 77,
+    "illustrations": 10,
+    "unused": 8,
+    "bytes": 16238122,
+    "sha256": "3adea9e22d0037c8dc64e99155163c0bfafff0386c9411c41932fabf635754cc"
+  }
+]
