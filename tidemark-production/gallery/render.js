@@ -57,7 +57,7 @@ function drawCard(ctx, card, img, W){ const H=Math.round(W*88/63); const s=W/500
   ctx.restore(); rr(ctx,ax,ay,aw,ah,4*s); ctx.lineWidth=3*s; ctx.strokeStyle='#1a1408'; ctx.stroke(); rr(ctx,ax-2*s,ay-2*s,aw+4*s,ah+4*s,6*s); ctx.lineWidth=1.5*s; ctx.strokeStyle='rgba(255,255,255,0.4)'; ctx.stroke();
   // type line with the faction icon
   const tx=nx, ty=ay+ah+8*s, tw=nw, th=34*s; parchment(ctx,tx,ty,tw,th,8*s);
-  const typeLine=card.type+(card.sub? ' — '+card.sub : ''); fs=18; do { ctx.font='bold '+Math.round(fs*s)+'px '+SERIF; fs--; } while (ctx.measureText(typeLine).width>tw-60*s && fs>10);
+  const typeLine=card.type+(card.sub? ' \u2014 '+card.sub : ''); fs=18; do { ctx.font='bold '+Math.round(fs*s)+'px '+SERIF; fs--; } while (ctx.measureText(typeLine).width>tw-60*s && fs>10);
   ctx.fillStyle='#1d160c'; ctx.textAlign='left'; ctx.fillText(typeLine, tx+12*s, ty+th/2+1*s);
   ctx.beginPath(); rr(ctx,tx+tw-36*s,ty+4*s,30*s,th-8*s,5*s); ctx.fillStyle=F.c; ctx.fill(); icon(ctx,F.icon,tx+tw-21*s,ty+th/2,21*s,'#fffaf0');
   // rules box: keyword line in bold, then the abilities; flavour in italics when a card has one

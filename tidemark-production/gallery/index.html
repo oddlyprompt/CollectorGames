@@ -46,7 +46,7 @@ main{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:
 <script src="render.js"></script>
 <script>
 const FACN={CR:'Crownlands',TW:'Thornwild',IR:'Iron Reach',TB:'Tideborn',FF:'Free Fleets',AC:'Abyssal Choir',HL:'Harbor Leagues',NE:'Neutral'};
-const BASE=(window.TM_BASE||'../'); let P=[], CARDS={}; const imgs=new Map();
+const BASE=(window.TM_BASE!=null? window.TM_BASE : '../'); let P=[], CARDS={}; const imgs=new Map();
 const load=src=>{ if (!imgs.has(src)) imgs.set(src,new Promise(res=>{ const i=new Image(); i.onload=()=>res(i); i.onerror=()=>res(null); i.src=src; })); return imgs.get(src); };
 // art: one file per picture, or (published copies) one image per production sheet with each picture's cell given in TM_ATLAS
 async function art(p){ if (!p.art) return null; const A=window.TM_ATLAS&&window.TM_ATLAS[p.ill]; if (!A) return load(BASE+p.art);
