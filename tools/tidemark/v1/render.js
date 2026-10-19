@@ -1,7 +1,7 @@
 // Tidemark card renderer: draws a whole card on a canvas from its data and its illustration, following the card frame guide
 // (tidemark-production/FRAME_GUIDE.md: name bar with the Influence cost and Allegiance pips, a 4:3 landscape art window, type line
 // with the faction icon, parchment rules box, one set/rarity emblem at the bottom centre, Power/Toughness for Units and Vessels,
-// collector line "TT 042/220"). The frame never changes with rarity; only the emblem's finish does. Runs in any browser (and in
+// collector line "TT 042/220"). The frame keeps its faction colour; rarity shows in the edge trim (iron, silver, gold, prismatic) and the emblem's finish. Runs in any browser (and in
 // the game later). drawCard(ctx, card, img, W): card is one printing from tidemark-production/cards.json; img an Image or null.
 (function(root){
 const FAC={CR:{c:'#2f5fae',d:'#1b3a72',l:'#8fb0e6',icon:'tower'},TW:{c:'#3d7a3a',d:'#234a22',l:'#9ccc8f',icon:'tree'},IR:{c:'#a2452c',d:'#62281a',l:'#e5a189',icon:'mountain'},
@@ -37,14 +37,21 @@ function emblem(ctx, x, y, r, rarity, mark){ ctx.save(); const R=RAR[rarity]||RA
   hex(r); let g; if (R.prism){ g=ctx.createLinearGradient(x-r,y-r,x+r,y+r); ['#ff9ad5','#ffd36e','#9cf7a8','#7ad8ff','#c3a2ff','#ff9ad5'].forEach((c,i)=>g.addColorStop(i/5,c)); } else { g=ctx.createLinearGradient(x,y-r,x,y+r); g.addColorStop(0,R.a); g.addColorStop(1,R.b); }
   ctx.fillStyle=g; ctx.fill(); ctx.lineWidth=r*0.14; ctx.strokeStyle='#0d0d0d'; ctx.stroke(); hex(r*0.78); ctx.lineWidth=r*0.06; ctx.strokeStyle=R.prism? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.35)'; ctx.stroke();
   ctx.fillStyle=R.t; ctx.font='bold '+Math.round(r*(mark.length>1?0.72:0.95))+'px '+TITLE; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(mark,x,y+r*0.06); ctx.restore(); }
+// ---- rarity trim: the frame keeps its faction colour; its edges are iron (Common), silver (Uncommon), gold (Rare) or prismatic (Legendary)
+const TRIM={C:{w:2.5,st:['#4a4d52','#1f2124','#5a5e63']},U:{w:4.5,st:['#ffffff','#a7aeb6','#eef1f4','#7f878f','#dfe3e7']},R:{w:5.5,st:['#fff3b8','#c9971d','#ffe48c','#996908','#f6d36a']},
+  L:{w:6.5,st:['#ff9ad5','#ffd36e','#9cf7a8','#7ad8ff','#c3a2ff','#ff9ad5']}};
+function trimPaint(ctx, r, x, y, w, h){ const T=TRIM[r]||TRIM.C; const g=ctx.createLinearGradient(x,y,x+w,y+h); T.st.forEach((c,i)=>g.addColorStop(i/(T.st.length-1),c)); return g; }
+function trim(ctx, r, x, y, w, h, rad, scale, k){ const T=TRIM[r]||TRIM.C; rr(ctx,x,y,w,h,rad); ctx.lineWidth=T.w*scale*(k||1); ctx.strokeStyle=trimPaint(ctx,r,x,y,w,h); ctx.stroke();
+  if (r==='L'){ rr(ctx,x,y,w,h,rad); ctx.lineWidth=Math.max(1,T.w*scale*(k||1)*0.25); ctx.strokeStyle='rgba(255,255,255,0.7)'; ctx.stroke(); } }
+function stud(ctx, r, x, y, sz){ if (r!=='R' && r!=='L') return; ctx.save(); ctx.beginPath(); ctx.moveTo(x,y-sz); ctx.lineTo(x+sz,y); ctx.lineTo(x,y+sz); ctx.lineTo(x-sz,y); ctx.closePath(); ctx.fillStyle=trimPaint(ctx,r,x-sz,y-sz,2*sz,2*sz); ctx.fill(); ctx.lineWidth=sz*0.18; ctx.strokeStyle='rgba(0,0,0,0.6)'; ctx.stroke(); ctx.restore(); }
 function wrap(ctx, text, maxW){ const out=[]; for (const para of text.split('\n')){ const w=para.split(' '); let line=''; for (const word of w){ const t=line? line+' '+word : word; if (ctx.measureText(t).width>maxW && line){ out.push(line); line=word; } else line=t; } out.push(line); } return out; }
 function drawCard(ctx, card, img, W){ const H=Math.round(W*88/63); const s=W/500; const F=FAC[card.f]||FAC.NE; ctx.save(); ctx.clearRect(0,0,W,H);
   // outer black edge and the faction frame
   rr(ctx,0,0,W,H,22*s); ctx.fillStyle='#0b0b0c'; ctx.fill();
   const fx=12*s, fy=12*s, fw=W-24*s, fh=H-58*s; const g=ctx.createLinearGradient(0,fy,0,fy+fh); g.addColorStop(0,F.l); g.addColorStop(0.18,F.c); g.addColorStop(0.82,F.c); g.addColorStop(1,F.d);
-  rr(ctx,fx,fy,fw,fh,14*s); ctx.fillStyle=g; ctx.fill(); ctx.lineWidth=2*s; ctx.strokeStyle='rgba(255,255,255,0.35)'; ctx.stroke();
+  rr(ctx,fx,fy,fw,fh,14*s); ctx.fillStyle=g; ctx.fill(); trim(ctx,card.r,fx,fy,fw,fh,14*s,s);
   // name bar with the cost
-  const nx=fx+10*s, ny=fy+10*s, nw=fw-20*s, nh=44*s; parchment(ctx,nx,ny,nw,nh,10*s);
+  const nx=fx+10*s, ny=fy+10*s, nw=fw-20*s, nh=44*s; parchment(ctx,nx,ny,nw,nh,10*s); if (card.r!=='C') trim(ctx,card.r,nx,ny,nw,nh,10*s,s,0.55); stud(ctx,card.r,nx,ny+nh/2,6*s); stud(ctx,card.r,nx+nw,ny+nh/2,6*s);
   const cr=17*s, ccx=nx+nw-cr-6*s, ccy=ny+nh/2; ctx.beginPath(); ctx.arc(ccx,ccy,cr,0,Math.PI*2); const cg=ctx.createRadialGradient(ccx-5*s,ccy-6*s,2*s,ccx,ccy,cr); cg.addColorStop(0,'#fffaf0'); cg.addColorStop(1,'#cbbd9c'); ctx.fillStyle=cg; ctx.fill(); ctx.lineWidth=2*s; ctx.strokeStyle='#2b2216'; ctx.stroke();
   ctx.fillStyle='#1d160c'; ctx.font='bold '+Math.round(23*s)+'px '+SERIF; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(String(card.cost),ccx,ccy+1*s);
   let px=ccx-cr-11*s; const pk= card.al==='L'? 'L' : card.al==='S'? 'S' : card.al==='D'? 'D' : null; if (pk) for (let i=0;i<card.req;i++){ pip(ctx,pk,px,ccy,9.5*s); px-=21*s; }
@@ -54,9 +61,9 @@ function drawCard(ctx, card, img, W){ const H=Math.round(W*88/63); const s=W/500
   const ax=fx+16*s, ay=ny+nh+8*s, aw=fw-32*s, ah=Math.round(aw*3/4); ctx.save(); rr(ctx,ax,ay,aw,ah,4*s); ctx.clip();
   if (img && img.width){ const sw=img.width, sh=img.height, r=Math.max(aw/sw, ah/sh); ctx.drawImage(img, ax+(aw-sw*r)/2, ay+(ah-sh*r)/2, sw*r, sh*r); }
   else { ctx.fillStyle='#3b3f45'; ctx.fillRect(ax,ay,aw,ah); ctx.fillStyle='#c9ccd1'; ctx.font='bold '+Math.round(16*s)+'px '+SERIF; ctx.textAlign='center'; ctx.fillText('ART PENDING',ax+aw/2,ay+ah/2); }
-  ctx.restore(); rr(ctx,ax,ay,aw,ah,4*s); ctx.lineWidth=3*s; ctx.strokeStyle='#1a1408'; ctx.stroke(); rr(ctx,ax-2*s,ay-2*s,aw+4*s,ah+4*s,6*s); ctx.lineWidth=1.5*s; ctx.strokeStyle='rgba(255,255,255,0.4)'; ctx.stroke();
+  ctx.restore(); rr(ctx,ax,ay,aw,ah,4*s); ctx.lineWidth=3*s; ctx.strokeStyle='#1a1408'; ctx.stroke(); trim(ctx,card.r,ax-3*s,ay-3*s,aw+6*s,ah+6*s,6*s,s,0.8);
   // type line with the faction icon
-  const tx=nx, ty=ay+ah+8*s, tw=nw, th=34*s; parchment(ctx,tx,ty,tw,th,8*s);
+  const tx=nx, ty=ay+ah+8*s, tw=nw, th=34*s; parchment(ctx,tx,ty,tw,th,8*s); if (card.r!=='C') trim(ctx,card.r,tx,ty,tw,th,8*s,s,0.5); stud(ctx,card.r,tx,ty+th/2,5*s); stud(ctx,card.r,tx+tw,ty+th/2,5*s);
   const typeLine=card.type+(card.sub? ' \u2014 '+card.sub : ''); fs=18; do { ctx.font='bold '+Math.round(fs*s)+'px '+SERIF; fs--; } while (ctx.measureText(typeLine).width>tw-60*s && fs>10);
   ctx.fillStyle='#1d160c'; ctx.textAlign='left'; ctx.fillText(typeLine, tx+12*s, ty+th/2+1*s);
   ctx.beginPath(); rr(ctx,tx+tw-36*s,ty+4*s,30*s,th-8*s,5*s); ctx.fillStyle=F.c; ctx.fill(); icon(ctx,F.icon,tx+tw-21*s,ty+th/2,21*s,'#fffaf0');

@@ -11,7 +11,8 @@ Reference image: [`reference/card-frame-guide-v1.png`](reference/card-frame-guid
 - A **4:3 landscape art window**, the same shape as SOL's sheet cells.
 - Type line with the faction icon at its right end.
 - A light parchment rules box (rules text, then italic flavour text).
-- **One emblem at the bottom centre** shows the set and the rarity by its finish: Common black, Uncommon silver, Rare gold, Legendary prismatic. The frame itself does not change with rarity.
+- **One emblem at the bottom centre** shows the set and the rarity by its finish: Common black, Uncommon silver, Rare gold, Legendary prismatic.
+- **Rarity trim** (owner, 2026-10-19, as in the mockup's cards): the frame keeps its faction colour, and its edges, the art window, the name bar and the type line are trimmed by rarity. Common has a dark iron edge, Uncommon silver, Rare gold with small studs at the bars' ends, Legendary prismatic with the same studs.
 - Power/Toughness box at the bottom right, **Units only**.
 - Collector line at the bottom left.
 - The faction colours of the banners (blue, green, red, teal, purple, gold, brown).
