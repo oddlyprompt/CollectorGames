@@ -1,0 +1,4 @@
+# Reviewed duplicates that exist on purpose or are scanner noise. Add a line only after reading the code.
+surface       # cm_value.js (comics) and visual2.js: the later definition is the one every game uses; comics' is only used inside the comics build path
+saveStatus    # ui3.js and shell/saves.js: the shell's version overwrites the engine's on purpose
+k             # scanner noise: a block-scoped `const k` that the scanner reads as top level (tcg_rules.js)
