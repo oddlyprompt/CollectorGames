@@ -77,6 +77,53 @@ For each: what is shared today, what is copied, and what is truly franchise-spec
 **What is already shared and good:** the shell (launcher, saves), the market core, grading, the 3D viewer, polish effects, the journal, news and calendar, drama
 (reveals, celebrate). The consolidation is about the card-game layer on top of them.
 
+## 2b. Market behaviours today: what is shared and what is different (audit requested 2026-10-19)
+
+Method: the two value, store and world files were compared function by function, and the Tidemark world was measured (a new game at day one: 5,400 Tidemark
+copies seeded across 30 sets).
+
+**Shared today (the same code and the same constants for both franchises).** These are the behaviours that make Tidemark's market feel like Wildkin's.
+
+| Behaviour | What it does now |
+|---|---|
+| Condition of a new copy | One generator for both. A pulled copy is fresh (55% clean), a shop copy is fresh (70%), anything else is "worn" by an age term that saturates (`min(1, 0.15 + 0.22 x years)`), so a 2016 card is only a little more worn than a 2025 card. Rarity, variant, how a card was handled and whether it was ever sleeved make no difference. |
+| What condition does to price | One multiplier table for everything: Near Mint 1.00, Lightly Played 0.82, Moderately Played 0.60, Heavily Played 0.40, Damaged 0.22. A $200 card and a 5-cent card lose the same share; a vintage Near Mint copy earns no extra. |
+| Grading | The same grade formula from the four condition scores, the same grade multipliers by rarity, population reports and the 1.12 low-population bonus, the same tiers and fees. |
+| Who trades | The same six NPC collector types with the same weights and cash ranges, the same interest structure, the same listing generator (pick from held copies, keep-or-sell odds, 25% auctions, markup by collector type), the same daily listing target (about 300), the same culling. |
+| Selling | The same 10% fee, sale history, price estimate (blend of fair value and recent sales), +0.035 price memory per sale. |
+| Stores | The same local-shop rules (case markup 1.3, buylist 55%, Thursday restock) and online-shop rules (market +15%, minimum 35 cents, Monday stock). Online stock is decided by rarity only, so every printing exists near mint, however old. |
+| Retail lifecycle | The same restock sizes, sell-down curve, 425-day print run, last-two-months slowdown, and "capped near retail while on the shelf". |
+| Price formula shape | Collector value plus play value times a jitter, with fandom, novelty and out-of-print terms; play value from simulated usage, tournament hype and legality. |
+
+**Already meaningfully different.**
+
+| Behaviour | Wildkin | Tidemark |
+|---|---|---|
+| Release history | 2 sets, both new; prices and supply start at release | 31 sets, 30 already ten years deep when the world starts |
+| What is printed | every set is printed for 425 days | only the newest set is printed; everything older is out of print from day one |
+| Format and legality | newest three sets are Standard | last two years, then Tenth Tide alone; everything else Eternal-only with a rating-based demand |
+| Pack | 10 cards, rarity slots, reverse holo, Essence | 12 cards, foil, alternate art, and **bulk** for unnamed slots in old sets (sold to the bulk bin) |
+| Variants and rarity | holo, reverse, premium rarities, Clasped | regular and foil of every printing, 10 alternate arts |
+| Price terms | fandom bends premium rarities hard; set prestige by set number | age premium (originals 22% a year, reprints 7%), reserve list up to 4x, era prestige, foil lines, reprint-count discount, Eternal demand |
+| Sealed pricing | cap near retail while in print, then growth by prestige | the same, plus every historical set priced from age and from the value of its named cards |
+| Day-one supply | none (nothing exists until First Bond is released) | seeded copies per card from rarity, age and a survival term; old sealed boxes and packs in small numbers |
+| Local shop case | the newest set | a mix across seven sets chosen weekly |
+| Metagame | candidates built live by the engine | precomputed library of about 250 decks; finals and bans live |
+| Ban line | 24% for ten weeks | 18% for ten weeks |
+
+**Where the current Tidemark market is not yet authentic (measured, and consistent with the owner's concern).**
+- Condition does not track age. In the seeded world, Near Mint copies are 40% of First Tide (2016) copies and 41% of Tidelines (2025) copies. Real ten-year-old
+  cards in Near Mint would be a small fraction.
+- Condition multipliers are flat, so a vintage Near Mint copy is not scarce or priced as scarce, and a heavily played old chase card is not discounted harder.
+- Online singles stock is by rarity, so any 2016 card is "in stock near mint" at +15%.
+- Supply is Poisson by rarity and a gentle survival term (about 2.5 copies per First Tide common, 0.6 per First Tide Legendary, 4 and 3 for Tidelines). There is no distinction
+  between circulating copies and collected ones, no hoards, no attrition of sealed product, and sealed condition is always perfect.
+- NPCs buy and sell the same way for a 2016 reserve-list card as for a 2025 common. Vintage sellers do not list rarely or ask premiums; nothing is auction-first.
+- Demand is static for old sets: a card's age premium rises smoothly with the years; there are no nostalgia waves, era-specific demand or "anniversary pulls up the originals" reaction.
+- The ten-year price history is not simulated: the first day of the game is the first day of the market (`G.sales` is empty).
+
+These are not refactor tasks. They are the Tidemark economy audit (milestone after consolidation), and the architecture below is designed to receive them.
+
 ## 3. Proposed architecture
 
 The goal is *shared services plus franchise modules*, not one parameterised file and not a rewrite.
@@ -86,7 +133,8 @@ src/engine/            existing core, market, grading, viewer, journal   (unchan
 src/tcg/kit/           shared card-game services, one file per concern
   lines.js             the registry: LINES, lineOfKey(key), lineOfItem(item), activeLines()
   copies.js            copy objects, condition, wear, grade, population, history
-  prices.js            price model shape (collector + play + novelty + out-of-print), grade multipliers, sealed lifecycle
+  economy.js           the five economy strategies (condition, supply, pricing, trading, history) with v1 defaults
+  prices.js            price pipeline: calls the line's pricing strategy; grade multipliers, sealed lifecycle
   market.js            registerItemKind(line): the nine market hooks, NPC collectors, listing generation
   stores.js            store engine driven by line store descriptors (retail, local shop, online singles)
   packs.js             opening overlay, tiles, glow, reveal order, summary; calls line.rollPack
@@ -101,7 +149,7 @@ src/tcg/lines/rift/    (future) the same six files
 
 **A line is a plain object implementing a contract** (data and a few functions), registered with `LINES`:
 `id`, `name`, `theme`; `sets()`, `setDef(n)`, `cards(n)`, `variants(card)`; `rollPack(set, rng)`, `packStructure`, `sealedProducts`; `face(key)`, `packArt(set, form)`;
-`priceTable`, `playValue(card)`, `collectorValue(card)`; `rules` = `{field(sets), matchup(a, b), play(a, b, seed), rebuildWithout(deck, card), deckCards(deck)}`;
+`economy` (see 3b), `priceTable`, `playValue(card)`, `collectorValue(card)`; `rules` = `{field(sets), matchup(a, b), play(a, b, seed), rebuildWithout(deck, card), deckCards(deck)}`;
 `formats(t)` (legal sets, rotation), `printPolicy(set)`, `stores` descriptors, `goals`, `filters`, `news` text templates, `scenarios`.
 
 **One instance per line, not one parameterised body.** Each kit file exports an installer, `installPrices(line)`, `installMarket(line)`, and so on, that builds
@@ -132,9 +180,38 @@ fandom weights, formats and rotation, store flavour, ban lines. The kit only eve
   and issues a weekly agenda, goals and rewards, saved in one field (`G.weekly`). It needs the world engine to expose a calendar per line.
 - *Testing and alpha (9):* the golden tests below become the permanent regression suite, plus performance budgets (below).
 
+
+## 3b. Franchise economic models (so Tidemark's economy can differ without a second market engine)
+
+The kit owns the *pipeline* (a copy is made, valued, listed, bought, graded, sold; a store stocks and sells; a tick moves time). Each line supplies an **economy
+model**: an object of five strategies. The kit ships a default for each that reproduces today's behaviour exactly ("economy v1"), so the refactor changes nothing;
+a line replaces only the strategies where its market is genuinely different.
+
+| Strategy | Question it answers | Today's default (v1) | What Tidemark can override (examples) |
+|---|---|---|---|
+| `condition` | What condition is a new or aged copy, and what does condition do to price? | the shared generator and multiplier table | distributions by age, rarity, variant and how a card was handled (commons played hard, Legendaries sleeved, foils fragile); era preservation; price curves that are steeper for old and valuable cards; a Near Mint scarcity premium for vintage |
+| `supply` | How many copies and sealed items exist, where are they, how do they leave? | Wildkin: pack simulation at release. Tidemark: Poisson copies by rarity and survival | a census per printing (print run by set size and era, attrition by year, hoarded versus circulating copies, graded share); sealed product by set with survival, condition (factory sealed, shelf-worn, resealed risk); occasional finds (estate lots, hoards) |
+| `pricing` | What is a card or sealed product worth today? | collector plus play value times jitter, with the existing terms | scarcity from the census (price rises as surviving Near Mint copies fall), vintage sealed curve, reprint effects by era, reserve list, nostalgia and anniversary demand waves |
+| `trading` | Who buys and sells, and how? | the six NPC types, today's listing generator and stores | vintage-aware sellers (list rarely, ask premiums, auction first for chase cards), collectors who specialise by era or faction, store policies for vintage (Saltmarket lists single copies by condition and graded slabs, not every printing near mint; the local shop's buylist pays by age and rarity) |
+| `history` | What does the world look like on day one? | none (the market starts empty or seeded flat) | optional ten-year back-simulation at build time (price series per card, set-by-set demand, ban and rotation history) that seeds `G.sales`, trend charts and the metagame lore |
+
+Every model carries a `version` (`'v1'` today). Saves record which version each line's world was created under (`G.lines[id].econ`, or the existing line state for
+Wildkin and Tidemark). Rules for changing an economy later:
+1. New behaviour ships as `v2` of one strategy in one line. Prices are computed live from keys, so existing worlds pick up pricing changes immediately; the golden tests for that line are
+   deliberately re-baselined in a commit that touches only that economy module and says why.
+2. Changes that alter *stored* data (condition scores on existing copies, existing seeded supply) apply to new worlds only. Player-owned copies are never rewritten. An optional
+   "re-census" may re-roll unowned NPC copies in an old save; it is a separate, reviewed migration, never automatic.
+3. Wildkin's `v1` stays frozen while Tidemark moves to `v2`; each line's golden tests are independent, so one line's economy work cannot silently change the other.
+
+This also means Rift Parade and later franchises start from the kit defaults and override only what makes them different, rather than copying a market engine.
+
+
 ## 4. Protecting existing behaviour
 
-**Must be preserved:** saves, collections (every copy, its condition, grade, history, listing state), card values, pack odds, market behaviour, the
+**What the golden tests freeze.** They freeze *economy v1*, the current behaviour of both lines, for the refactor only. They are not an approval that this behaviour is
+correct: the Tidemark market is known to be inauthentic (section 2b) and is rebuilt in step 10 under its own re-baselining rules (3b).
+
+**Must be preserved during the refactor:** saves, collections (every copy, its condition, grade, history, listing state), card values, pack odds, market behaviour, the
 metagame, and the existing tests.
 
 **Migration risks, in order of danger**
@@ -169,14 +246,15 @@ Every step is a separate commit, ships on its own, and leaves all tests green. T
 |---|---|---|---|
 | 0 | Golden harness and archived saves, duplicate-name check, seeded test hook. **No behaviour change.** | none | the safety net |
 | 1 | Line registry and dispatch: `lineOfKey`/`lineOfItem`; replace the hard-coded `'t'/'x'` branches in shared files. Both lines register. | low | one place to add a line |
-| 2 | Pure helpers into the kit: condition, wear, grade, population, slab, foil overlay, condition text, `median`-style helpers. Delete the Tidemark copies. | low | about 15 KB gone |
-| 3 | Market integration into `registerItemKind(line)`; NPC collectors and interest as data. | medium | 38 wrappers become 1 per line |
-| 4 | Stores into the store engine with descriptors. | medium | stores written once |
+| 2 | Pure helpers into the kit: condition generation and multipliers (as the `condition` strategy, v1 defaults), wear, grade, population, slab, foil overlay, condition text. Delete the Tidemark copies. | low | about 15 KB gone; first economy slot in place |
+| 3 | Market integration into `registerItemKind(line)`; NPC collectors, interest and listing generation as the `trading` strategy (v1). | medium | 38 wrappers become 1 per line |
+| 4 | Stores into the store engine with descriptors; stock and price policies as `trading`/`supply` hooks (v1). | medium | stores written once |
 | 5 | Pack opening overlay and card-handling effects into the kit. | medium | opening written once |
 | 6 | Collection index, view, goals, wantlist into the kit. | medium | basis for the collection overhaul |
 | 7 | World engine and metagame model behind the rules adapter. | **high** | the biggest duplicate, last because the golden metagame test guards it |
 | 8 | Shell: tabs, home, collection chips, scenarios and boot driven by the registry. | medium | a new line appears without editing the shell |
 | 9 | Remove the forks, the `xt` prefix and the aliases. | low | cleanup |
+| 10 | **Separate milestone, after the refactor:** audit and rebuild Tidemark's economy as `v2` strategies (section 3b), re-baselining only Tidemark's golden tests. | medium | authentic ten-year history |
 
 Rough size: steps 0 to 2 about two days of work, 3 to 6 about a week, 7 about two to three days, 8 and 9 two days. Wildkin stays the reference implementation for
 every step: the kit is extracted from it, Tidemark is moved onto it, and the diff against the golden outputs must be empty.
@@ -187,7 +265,10 @@ every step: the kit is extracted from it, Tidemark is moved onto it, and the dif
   and is cached (already true), NPC and listing counts scale per active line, and the world tick budget is measured in step 0.
 - Ban computation in the browser (about 5 s for Tidemark) should move to a worker, or its candidate count reduced, before more engine-backed lines arrive.
 
-## 7. What I need from you
-Review and decide. The one choice that changes the plan: **should the refactor aim for bit-identical results** (same prices, pulls and market for the same seed;
-my recommendation, because it makes the golden tests exact and any difference a bug) **or accept small statistical differences** (faster, but regressions are harder to see).
-Everything else in this document can be adjusted in review.
+## 7. Decisions recorded and what I need from you
+Decided by the owner (2026-10-19): bit-identical golden tests for the refactor (economy v1 frozen); existing Tidemark market behaviour is not treated as correct; Tidemark's economy is audited and
+improved after the refactor; the architecture must make franchise-specific economies possible now (section 3b).
+
+Still to approve: this updated proposal. Step 0 does not start until it is approved.
+
+The earlier question (bit-identical or statistical) is answered: bit-identical.
