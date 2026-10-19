@@ -9,13 +9,13 @@ const cp=require('child_process'), fs=require('fs'), path=require('path');
 const L=require('./lib.js'); const B=require('./builders.js'); const E=L.E; const {CARDS,ORDER}=B;
 const quick=process.argv.includes('--quick'); const arg=(k,d)=>{ const i=process.argv.indexOf(k); return i>0? process.argv[i+1] : d; };
 if(process.argv.includes('--worker')){ process.on('message',m=>{ let w=0; for(let k=0;k<m.n;k++){ const r=L.game(m.a,m.b,m.seed+k*7919,['balanced','balanced'],k%2); w+= r.winner===0?1:r.winner===1?0:0.5; } process.send({id:m.id,w,g:m.n}); }); return; }
-const WEEKS=+arg('--weeks',quick?10:52), RELEASE=Math.floor(WEEKS/2);
+const WEEKS=+arg('--weeks',quick?10:40), RELEASE=Math.floor(WEEKS/2);
 const W=4, idle=[], queue=[], pending=new Map(); let nid=1;
 for(let i=0;i<W;i++){ const c=cp.fork(__filename,['--worker']); idle.push(c); c.on('message',m=>{ const p=pending.get(m.id); pending.delete(m.id); idle.push(c); p(m); pump(); }); }
 function pump(){ while(idle.length&&queue.length){ const c=idle.pop(); const j=queue.shift(); pending.set(j.id,j.res); c.send(j.msg); } }
 const play=(a,b,n,seed)=>new Promise(res=>{ const id=nid++; queue.push({id,res,msg:{id,a:a.list,b:b.list,n,seed}}); pump(); });
 // payoff cache: key of the two lists -> accumulated games, topped up to CELL games
-const CELL=quick?6:10, cache=new Map(); const key=(a,b)=>a.key+'|'+b.key;
+const CELL=6, cache=new Map(); const key=(a,b)=>a.key+'|'+b.key;
 async function cell(a,b){ if(a===b) return 0.5; const k1=key(a,b), k2=key(b,a); if(cache.has(k1)) return cache.get(k1); if(cache.has(k2)) return 1-cache.get(k2);
   const r=await play(a,b,CELL,a.seedBase*31+b.seedBase); const v=r.w/r.g; cache.set(k1,v); return v; }
 let deckSeq=0; const REGISTRY={}; const mkDeck=(list,origin,week)=>{ const d={id:'D'+(++deckSeq),key:list.slice().sort().join(),seedBase:deckSeq*97+13,list,origin,born:week,share:0,low:0}; REGISTRY[d.id]={origin,born:week,list}; return d; };
@@ -36,7 +36,7 @@ async function run(cond,seed){ const r=B.mulberry(seed*7+cond.length*131); const
     field.forEach((d,i)=>{ const target=d.share*Math.exp(6*(win[i]-avg)); d.share=0.6*d.share+0.4*target*(1+0.06*(r()-0.5)); if(d.share<0.012) d.low++; else d.low=0; });
     normalize(field);
     // builders try new decks
-    if(cond!=='frozen'){ const topK=field.slice().sort((a,b)=>b.share-a.share).slice(0,6); const tries=quick?2:3;
+    if(cond!=='frozen'){ const topK=field.slice().sort((a,b)=>b.share-a.share).slice(0,6); const tries=2;
       for(let t=0;t<tries;t++){ let list; const pool=[...legal]; const roll=r();
         if(roll<0.6){ const base=topK[Math.floor(r()*topK.length)]; list=B.mutate(base.list,r,pool); }       // tech a popular deck
         else { const s=B.synergySeed(r,pool); list=s.list; }                                                  // a fresh theme package
@@ -44,6 +44,7 @@ async function run(cond,seed){ const r=B.mulberry(seed*7+cond.length*131); const
         const rs=await Promise.all(topK.map(o=>play(nd,o,quick?4:6,nd.seedBase+o.seedBase))); const sc=rs.reduce((s,x)=>s+x.w,0)/rs.reduce((s,x)=>s+x.g,0); const base=topK.reduce((s,o)=>s+o.share*0.5,0)/1; // field decks average about 0.5 against each other
         if(sc>=0.47){ nd.share=0.015; field.push(nd); born.push({week:w,id:nd.id,origin:nd.origin,score:+sc.toFixed(2)}); } }
       normalize(field); }
+    while(field.length>14){ field.sort((a,b)=>a.share-b.share); gone.push({week:w,id:field[0].id}); field.shift(); } normalize(field);   // the field holds at most 14 decks
     // retire decks nobody plays
     for(let i=field.length-1;i>=0;i--) if(field[i].low>=6&&field.length>6){ gone.push({week:w,id:field[i].id}); field.splice(i,1); } normalize(field);
     const sorted=field.slice().sort((a,b)=>b.share-a.share);
