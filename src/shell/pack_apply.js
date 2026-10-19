@@ -1,10 +1,10 @@
 // ===================== APPLYING A GAME: TABS, FILTERS, SCREENS =====================
 TABS.length=0; TABS.push(...PACK.tabs);
-const _mfP=marketFiltered; marketFiltered=function(){ return _mfP().filter(l=> l.it==='t'||l.it==='x'? packHas('tcg') : l.it==='m'? packHas('comics') : PACK.worlds.sports!==false); };
+const _mfP=marketFiltered; marketFiltered=function(){ return _mfP().filter(l=> cardLineOfKind(l.it)? packHas('tcg') : l.it==='m'? packHas('comics') : PACK.worlds.sports!==false); };
 const _mvP=VIEWS.market; VIEWS.market=()=>{ let h=_mvP(); if (PACK.id==='tcg' && UI.sub.market==='browse' && !/^(tc|xt)/.test(String(UI.mf.type))){ const q=_mvP(); const i=q.indexOf('<div class="chips"'); if (i>=0){ const j=q.indexOf('</div>',i)+6; const chip=(k,n)=>`<button class="chip ${UI.mf.type===k?'on':''}" data-act="mft" data-a="${k}">${n}</button>`; h=q.slice(0,i)+`<div class="chips" style="margin-bottom:10px">${chip('all','Everything')}${chip('tc','Wildkin')}${chip('xt','Tidemark')}</div>`+q.slice(j); h=h.replace('placeholder="Player, team, product, parallel..."','placeholder="Card, set, faction, rarity..."'); return h; } } if (!packHas('comics')) h=h.replace(/<button class="chip [^"]*" data-act="mft" data-a="cm">Comics<\/button>/,'');  return h; };
-function packNews(n){ if (PACK.id==='sports') return n.k!=='comic' && n.k!=='tcg'; if (n.k==='hobby') return /YOUR STORY STARTS|A NEW COLLECTOR/.test(n.h||''); return PACK.id==='comics'? n.k==='comic' : (n.k==='tcg'||n.k==='xtg'); }
+function packNews(n){ if (PACK.id==='sports') return n.k!=='comic' && n.k!=='tcg'; if (n.k==='hobby') return /YOUR STORY STARTS|A NEW COLLECTOR/.test(n.h||''); return PACK.id==='comics'? n.k==='comic' : isCardGameNews(n.k); }
 const _brP=buildRecap; buildRecap=function(){ const r=_brP.apply(this,arguments); if (r&&r.other) r.other=r.other.filter(packNews); return r; };
-const KEEP_KINDS={sports:['grade','market','cash','cards','hunt','breaks'], comics:['grade','market','comics','cash','hunt'], tcg:['grade','market','cash','tcg','xtg']};
+const KEEP_KINDS={sports:['grade','market','cash','cards','hunt','breaks'], comics:['grade','market','comics','cash','hunt'], tcg:['grade','market','cash',...CARD_LINES.map(L=>L.news)]};
 const _unP=upNext; upNext=function(){ return _unP().filter(x=>!x.kind || KEEP_KINDS[PACK.id].includes(x.kind)); };
 // collection tabs: only what this game collects
 if (PACK.id!=='tcg'){ const _cvP=VIEWS.coll; const hide= PACK.id==='sports'? ['comics','runs'] : ['cards','sealed','sets'];

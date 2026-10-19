@@ -13,9 +13,10 @@ import asyncio, sys, os, json, gzip, base64, time, datetime
 from playwright.async_api import async_playwright
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))); G=os.path.join(ROOT,'tests','golden'); BASE=os.path.join(G,'baseline'); SAVES=os.path.join(G,'saves')
 PORT=os.environ.get('GOLDEN_PORT','8770'); PROBE=os.path.join(ROOT,'tools','golden','probe.js')
-SCENARIOS=['day0','release','year1','series','flows']
+SCENARIOS=['day0','release','year1','series','flows','shared']
 def fixtures(): return sorted(f[:-len('.save.gz')] for f in os.listdir(SAVES) if f.endswith('.save.gz')) if os.path.isdir(SAVES) else []
-def all_names(): return SCENARIOS+['save:'+f for f in fixtures()]
+def all_names(): return SCENARIOS+['save:'+f for f in fixtures()]+['open:'+f for f in fixtures() if f in OPEN_FIXTURES]
+OPEN_FIXTURES=('legacy-wk-day1','legacy-wk-year','busy','ban')
 def diff(a,b,path='',out=None,limit=25):
     out=[] if out is None else out
     if len(out)>=limit: return out
@@ -44,9 +45,9 @@ async def page_for(p):
     await pg.route('**/fonts.g*/**',lambda r:r.abort()); await pg.goto(f'http://localhost:{PORT}/tcg/index.html'); await pg.wait_for_selector('#launch',timeout=60000)
     await pg.add_script_tag(path=PROBE); return b,pg,errs
 async def run(pg,name):
-    if name.startswith('save:'):
+    if name.startswith('save:') or name.startswith('open:'):
         b64=base64.b64encode(open(os.path.join(SAVES,name[5:]+'.save.gz'),'rb').read()).decode()
-        return await pg.evaluate('b=>GOLDEN.SC.save(b)',b64)
+        return await pg.evaluate('b=>GOLDEN.SC.'+('save' if name.startswith('save:') else 'open')+'(b)',b64)
     return await pg.evaluate(f'GOLDEN.SC.{name}()')
 async def main():
     cmd=sys.argv[1] if len(sys.argv)>1 else 'check'; args=[a for a in sys.argv[2:] if not a.startswith('--')]

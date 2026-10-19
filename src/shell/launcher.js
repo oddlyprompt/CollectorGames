@@ -49,8 +49,7 @@ async function shellOpen(id){
     const x=await slotRead(id); await bootProg(0.2,'Unpacking'); G=await unpackBytes(x.bytes,x.enc); R=worldRnd; if (typeof resetCaches==='function') resetCaches(); DCACHE.clear(); fvClear(); G._npcCardIds=Object.keys(G.cards).map(Number).filter(i=>G.cards[i].o>0);
     if (G.cm) cmNormalize(); huntNormalize(); migrate();
     if (packHas('comics') && !G.cm){ await bootProg(0.3,'Opening the comic shop'); await upgradeComics(async(f,m)=>bootProg(0.3+f*0.6,'Comics history: '+m.toLowerCase())); migrate(); }
-    if (packHas('tcg') && typeof upgradeTcg==='function' && !G.tcg){ await bootProg(0.5,'Opening the card game shop'); await upgradeTcg(async(f,m)=>bootProg(0.5+f*0.45,m)); migrate(); }
-    if (packHas('tcg') && typeof upgradeXt==='function' && !G.xtg){ await bootProg(0.9,'Opening the second card game'); await upgradeXt(async(f,m)=>bootProg(0.9+f*0.08,m)); migrate(); }
+    if (packHas('tcg')) for (const L of CARD_LINES) if (!L.has()){ await bootProg(L.boot.at,L.boot.msg); await L.upgrade(async(f,m)=>bootProg(L.boot.at+f*L.boot.span,m)); migrate(); }   // a save from before a line existed gets that line's world
     if (!G.hunt){ await bootProg(0.98,'Mapping the local hobby scene'); huntInit(); }
     seedTracking(); SLOT.id=id; SLOT.name=x.rec.name; UI.booting=false; UI.tab=PACK.homeTab||'home'; b.style.display='none'; render(); saveGame(true);
   } catch(e){ console.error(e); bootFail(b,String(e&&e.message||e)); }

@@ -76,6 +76,22 @@ window.GOLDEN=(function(){
       f.est=L.est(best[1].k,0,best[1]); const sellable=rb.packs.flat().map(i=>L.copies()[i]).find(c=>L.lgsOffer(c)>=0.5&&!c.l&&!c.g); f.lgsSell=sellable? L.lgsSell(sellable.id) : 'none'; const sk=Object.keys(L.kvStock()); f.kv=sk.length? L.kvBuy(sk[0]) : 'none';
       const d0=G.day; days(21); f.afterGrade={subs:L.subs().length, graded:L.mine().filter(c=>c.g>0).map(c=>[c.k,c.g,c.cert])}; days(40); f.sold=G.lst.filter(l=>l.it===L.itemType&&l.sel===0).length; f.mine=H(L.mine().map(c=>[c.id,c.k,c.g,c.l||0,c.c.join(',')])); f.nMine=L.mine().length; out[id]=f; }
     out.core=core(); return out; };
+  // shared screens and rules that every game uses: grading returns, the reveal queue, crack-and-resubmit, the journal, net worth, recap, calendar
+  const fakeEl={ classList:{contains:()=>true, add:()=>{}}, dataset:{}, textContent:'' };
+  SC.shared=async()=>{ await fresh(); const out={}; for (const id of LIDS){ days(id==='wk'? 7 : 18); const L=LINES[id]; const P=L.first.P; L.buy(P,'P',4); const ps=L.mine().filter(c=>L.D(c.k).sealed&&L.D(c.k).v==='P'); let got=[]; for (const p of ps.slice(0,4)){ const r=L.open(p.id); got=got.concat(r.packs[0].map(i=>L.copies()[i])); }
+      got.sort((a,b)=>L.val(b)-L.val(a)); for (const c of got.slice(0,4)) L.submit(c.id); L.list(got[5].id,L.val(got[5])*1.1,'bin'); out[id]={ nGot:got.length }; }
+    const snap0=holdingSnap(); const log=[]; days(25); out.rv=G.player.rv.map(r=>[r.k,r.id,r.g,r.raw,r.fee,r.t]); out.rvQueue=rvQueue().map(r=>{ const o=objFor(r.k,r.id); return [r.k,r.id,o.g,rvValue(r.k,o),rvTitle(r.k,o),popLine(r.k,o)]; });
+    out.netWorth=netWorthNow(); out.rows=null; const y=buildYear(yearOf(G.day)); const jr=x=>({k:x.k,id:x.o?x.o.id:null,paid:x.paid,now:x.now,gain:x.gain,sold:x.sold,price:x.price,t:x.t});
+    out.journal={ keys:Object.keys(y), h:H(JSON.stringify(y,(k,v)=>(v&&typeof v==='object'&&v.k!==undefined&&v.o!==undefined)? jr(v) : v)) };
+    const rec=buildRecap(G.day-60,snap0,log,false); out.recap={ keys:Object.keys(rec), other:rec.other.map(n=>n.h), mine:rec.mine.length, v0:rec.v0, v1:rec.v1, moves:H(rec.moves.map(m=>[m.id,m.label,m.d])) };
+    out.upnext=H(upNext().map(x=>[x.d,x.txt,x.kind,x.act,x.a])); out.coll=collectionTotals();
+    // crack a slab in each game: out of the slab, and out and resubmitted
+    const crack=[]; for (const r of G.player.rv.slice()){ const o=objFor(r.k,r.id); if (!o||!(o.g>0)) continue; const re=crack.length%2? '1':'0'; const before=[o.g,o.cr||0]; ACT.crack(r.k+':'+r.id+':'+re, fakeEl); crack.push([r.k,r.id,re,before,[o.g,o.pg||0,o.cr||0,o.cert||0]]); }
+    out.crack=crack; out.afterCrack={ rv:G.player.rv.length, subs:H([G.player.tsubs||[],G.player.xsubs||[]]), netWorth:netWorthNow() }; out.core=core(); return out; };
+  // opening a saved game through the launcher's own path (shellOpen): older saves get missing worlds built there
+  SC.open=async(b64)=>{ const bin=atob(b64); const u=new Uint8Array(bin.length); for (let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i); const g=await unpackBytes(u,'gz'); const rec=await slotCreate('golden-open',''); await slotWrite(rec.id,u,'gz',{day:g.day,cash:g.player.cash});
+    await shellOpen(rec.id); const t0=Date.now(); while ((UI.booting || !G || !G.player) && Date.now()-t0<60000) await new Promise(r=>setTimeout(r,50)); const o={ booted:!UI.booting, lines:[!!G.tcg,!!G.xtg], snap:snapshot({packs:0,screens:false}) }; days(10); o.after10=snapshot({packs:0,screens:false,prices:false}); await slotDelete(rec.id); return o; };
+
   // ---------------- saved games ----------------
   async function loadBytes(b64){ const bin=atob(b64); const u=new Uint8Array(bin.length); for (let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i); G=await unpackBytes(u,'gz'); R=worldRnd; if (typeof resetCaches==='function') resetCaches(); DCACHE.clear(); fvClear();
     G._npcCardIds=Object.keys(G.cards).map(Number).filter(i=>G.cards[i].o>0); migrate(); if (typeof upgradeXt==='function' && !G.xtg){ await upgradeXt(null); migrate(); } }

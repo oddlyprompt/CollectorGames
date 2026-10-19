@@ -29,3 +29,5 @@ function xtApplyScenario(id){
   if (id==='tmbinder') G.xtg.pre.push({set:TM_TT, f:'P', q:12, paid:1});
   else if (id==='tmbox') G.xtg.pre.push({set:TM_TT, f:'B', q:2, paid:1});
 }
+
+registerCardLine({id:'xt', name:'Tidemark', kind:'x', keyPrefix:'X', news:'xtg', openAct:'xtopy', has:()=>!!G.xtg, copies:()=>G.xtc, mine:()=>myXt(), value:o=>xtCopyValue(o), label:o=>xtCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':''), mini:o=>xMiniT(o), submit:id=>xtSubmitGrade(id,'std'), crack:id=>crackXt(id), upgrade:p=>upgradeXt(p), boot:{at:0.9, span:0.08, msg:'Opening the second card game'}});
