@@ -282,3 +282,13 @@ Measured before starting step 5 (normalising the line prefixes and diffing Wildk
 - Collection and goals (`*_collect`): about every line differs (goals, wording, set structure).
 - World (`*_world`): the lifecycle has diverged on purpose (Tidemark prints only Tenth Tide, other sets are history; different announcement, rotation and shelf rules). The weekly metagame model is the same idea but its sources differ (engine-built decks vs a precomputed library with live ban tests) and so do constants (usage cap 4 vs 3).
 Unifying these now would add parameters for almost every line, protect nothing that is not already protected, and be rewritten by economy v2 and the UI overhaul.
+
+### Closed 2026-10-19: owner decision
+Owner chose to stop the consolidation after step 4 (steps 5 to 9 dropped; screens, collection goals and the world/metagame code stay per franchise and are
+revisited in the UI/collection overhauls or if a real maintenance problem appears). Next: Tidemark economy v2 (`design/tidemark-economy-v2.md`).
+
+### Rift Parade compatibility check
+There is no Rift Parade specification in the repository (only a mention in `kit/lines.js`), so this checks the shared engine against what any new franchise needs, not against Rift Parade's own rules.
+- **Fits without structural change:** a new line registers with `registerCardLine`; copies, value, grading, collector listings and the nine market hooks come from `cardMarket(L)`; shop transactions come from `cardStores(S)`; condition comes from the economy strategies. The item letter `r`, print-key letter `R`, global prefix `rp`/`RP_` and the state names `G.rpc`, `G.rpg`, `G.rpop` are unused (checked by search).
+- **Still per franchise (the part steps 5 to 9 would have shared):** the value file (price table, packs, sealed price, seed and release market, collector interest), the world file (calendar, formats, metagame), stores' stocking policy and pages, the opening/collection/home screens, the boot and render files. A new franchise copies about ten files, as Tidemark did; the kit removes only the market and shop mechanics (about a quarter of the fork).
+- **Verdict:** Rift Parade can be added now without changing the kit. If it has no deck engine (for example a character or collection game), its world file can be much thinner than Tidemark's. Two things to confirm once there is a spec: whether it needs a play-strength/metagame model (the main cost), and whether its cards are single identities with printings (as Wildkin and Tidemark) or something different, such as serial-numbered or multi-part items, which the copy model does not cover today.
