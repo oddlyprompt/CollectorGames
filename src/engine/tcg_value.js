@@ -7,11 +7,6 @@ const TC_GS={ess:0.3,common:0.55,unc:0.7,rare:1,ir:1.4,fa:1.5,sir:1.7,csr:1.8};
 const TCFV=new Map(), TCCV=new Map(); const TC_K=0.45;
 function tfvClear(k){ if (k){ for (const x of TCFV.keys()) if (x.startsWith(k+'@')) TCFV.delete(x); } else TCFV.clear(); }
 // ---------- copies ----------
-function tcMakeCopy(key, owner, acq, src, rng){
-  const r=rng||R; const d=tcD(key); const cp={ id:G.nextTid++, k:key, o:owner, g:0 };
-  if (d.sealed) cp.c=[100,100,100,100]; else { const age=Math.max(0,(G.day-d.def.rel)/365); cp.c = WK_ECON.condition.sample(r, src, age); }
-  if (acq) cp.a=acq; G.tc[cp.id]=cp; return cp;
-}
 const TC=id=>G.tc[id]; const myTc=()=>Object.values(G.tc).filter(c=>c.o===0);
 // ---------- value ----------
 function tcSetPrestige(n){ const d=tcSetDef(n); return d.reprint?0.8 : n===1?1.35 : n===2?1.25 : 1.0; }
@@ -27,15 +22,6 @@ function tcFairRaw(key){
     v=Math.max(0.03,(coll+play)*TC_K*priceJitter(key)*(1+Math.min(0.6,G.dp[key]||0))); }
   TCFV.set(ck,v); if (TCFV.size>5000) TCFV.clear(); return v;
 }
-function tcFair(key, g){ const raw=tcFairRaw(key); if (!(g>0)) return raw; const d=tcD(key); if (d.sealed) return raw; const pop=G.tpop[key]; const scarce= pop&&g===10&&pop[10]<4&&(TC_RAROR[d.rar]>=2)? 1.12 : 1; return Math.max(raw*cardGradeMult(TC_GS,d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); }
-function tcCopyValue(cp){ if (cp.g>0) return tcFair(cp.k, cp.g); const raw=tcFairRaw(cp.k); const d=tcD(cp.k); return d.sealed? raw : raw*WK_ECON.condition.price(cp.c, d.card); }
-function tcSales(key,g){ return (G.sales[key]||[]).filter(s=>(s[2]||0)===(g||0)); }
-function tcEst(key, g, cp){
-  const fv= cp? tcCopyValue(cp) : tcFair(key,g||0); const same=tcSales(key, cp?(cp.g>0?cp.g:0):(g||0)).filter(s=>s[0]>G.day-120); const n=same.length;
-  const center= n? 0.45*fv+0.55*median(same.slice(0,6).map(s=>s[1])) : fv; const w=0.1+0.42/Math.sqrt(n+1);
-  const lo=nicePrice(Math.max(0.05,center*(1-w*0.75))), hi=nicePrice(Math.max(0.1,center*(1+w))); return {lo, hi:Math.max(hi,lo), n};
-}
-function tcHeat(cp){ const d=tcD(cp.k); if (d.sealed) return 0.9+0.8*Math.exp(-(G.day-d.def.rel)/45); const u=(G.tcg.usage[d.cid]||0)/4, hy=G.tcg.hy[d.cid]||0; return 0.4+1.2*u+hy+(TC_RAROR[d.rar]>=3?0.5:0)+0.7*Math.exp(-(G.day-d.def.rel)/21); }
 // ---------- packs and sealed ----------
 function tcPools(set){ const m=G.tcg._pl||(G.tcg._pl={}); if (m[set]) return m[set]; const cs=tcSetCards(set); const f=r=>cs.filter(c=>c.rar===r);
   const P={c:f('common'),u:f('unc'),r:f('rare'),ess:f('ess'),ir:f('ir'),fa:f('fa'),sir:f('sir'),csr:f('csr')}; P.rv=P.c.concat(P.u,P.r); if (!P.c.length) P.c=P.u; if (!P.u.length) P.u=P.c; if (!P.r.length) P.r=P.u; return m[set]=P; }
@@ -90,9 +76,6 @@ function tcOpenMany(ids){ const res={packs:[], set:1, title:'', paid:0}; let n=0
   for (const id of ids){ const r=tcOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; res.sv=(res.sv||0)+r.sv; t=r.title; n++; }
   if (!n) return null; res.title=n>1? n+' × '+t : t; return res; }
 // ---------- grading ----------
-function tcGradeCopy(cp){ const g=gradeOf(cp); cp.gt=(cp.gt||0)+1; cp.g=g; cp.cert=10000000+Math.floor(R()*89999999); const p=G.tpop[cp.k]||(G.tpop[cp.k]=Array(11).fill(0)); p[g]++; tfvClear(cp.k); return g; }
-function tcSubmitGrade(id, tier){ const T=GRADE_TIERS.find(x=>x.id===tier); const cp=TC(id); if (!cp||cp.o!==0||cp.g!==0||cp.l||tcD(cp.k).sealed) return 'That card can\'t be submitted right now.'; if (G.player.cash<T.fee) return 'You need '+money(T.fee)+'.'; G.player.cash-=T.fee; G.player.fees+=T.fee; cp.g=-1; (G.player.tsubs=G.player.tsubs||[]).push({id:G.nextLid++,cid:id,tier,t0:G.day,t1:G.day+T.days,fee:T.fee,raw:Math.round(tcCopyValue(cp)*100)/100}); (cp.h=cp.h||[]).push([G.day,'Sent to GCS ('+T.n+')',T.fee,'']); return null; }
-function tcGradingTick(t){ const subs=G.player.tsubs||[]; if (!subs.length) return; for (const s of subs.filter(x=>x.t1<=t)){ const cp=TC(s.cid); if (!cp) continue; const g=tcGradeCopy(cp); (G.player.rv=G.player.rv||[]).push({k:'t',id:cp.id,g,raw:s.raw||0,fee:s.fee||0,t}); (cp.h=cp.h||[]).push([t,'Graded GCS '+g+' '+GRADE_NAMES[g],0,'']); toast('Back from GCS: '+tcD(cp.k).title+' is a '+g, g>=9); } G.player.tsubs=subs.filter(x=>x.t1>t); }
 // ---------- collectors ----------
 const TC_NT={tpl:{w:16,cash:[250,3500]}, tcl:{w:10,cash:[300,5000]}, tcm:{w:6,cash:[200,2500]}, tfl:{w:6,cash:[500,6000]}, tsl:{w:5,cash:[1500,12000]}, tgr:{w:4,cash:[400,6000]}};
 const TC_HA=['Deck','Wild','Foil','Shiny','Pack','Binder','Holo','Rip','Energy','Meta','Slab','Kin','Sleeve','Top8'], TC_HB=['Doctor','Hunter','Wrangler','King','Goblin','Sage','Rat','Fiend','Ranger','Keeper','Scout','Tamer'];
@@ -111,7 +94,6 @@ function tcInterest(n, item){
   switch(n.ty){ case 'tpl': f= st==='std'&&u>0.18? 1.1+u*0.6 : st==='std'? 0.45 : 0.18; break; case 'tcl': f=(tcIsPrem(card)||d.v==='H'||d.v==='R')? 1.2+0.2*card.ap+0.4*card.fan : 0.3; break; case 'tcm': f= n.setN===d.set? 1.3 : 0.25; break; case 'tfl': f=0.84; break; case 'tsl': f=0.12; break; case 'tgr': f= c.g>0? 1.3 : 0.12; break; default: f=0.5; }
   if (n.ty!=='tgr' && c.g>0) f*=0.9; return f;
 }
-function tcGive(key, src){ const cp=tcMakeCopy(key,0,null,src||'npc'); const it={tc:cp,v:tcCopyValue(cp)}; const pool=npcPool({tcg:1}); const c=[pick(pool),pick(pool),pick(pool),pick(pool)]; cp.o=c.sort((a,b)=>tcInterest(b,it)-tcInterest(a,it))[0].id; cp.a=[G.day,'held',0,'']; (G._npcTcIds=G._npcTcIds||[]).push(cp.id); return cp; }
 function tcSeedMarket(){
   G._npcTcIds=[]; const rel=tcReleasedSets(G.day);
   for (const s of rel){ const age=(G.day-tcSetDef(s).rel)/30; const nP=Math.round(120+90*Math.min(1,age/3)); const r=mkRng(hsh('seed'+G.seed+s));
@@ -119,36 +101,15 @@ function tcSeedMarket(){
     if (G.day-tcSetDef(s).rel<=365){ const nb=ri(5,12), np=ri(20,50); for (let i=0;i<nb;i++) tcGive(tcKey(s,0,'B'),'shop'); for (let i=0;i<np;i++) tcGive(tcKey(s,0,'P'),'shop'); } }
   for (const id of G._npcTcIds){ const cp=G.tc[id]; if (tcD(cp.k).sealed) continue; const v=tcCopyValue(cp); const p=v>60?0.5: v>20?0.28: v>7?0.08: 0.005; if (R()<p) tcGradeCopy(cp); }
 }
-function npcListTc(){
-  const ids=G._npcTcIds; if (!ids||!ids.length) return; let cp=null;
-  for (let tries=0; tries<14 && !cp; tries++){ const c=G.tc[ids[Math.floor(R()*ids.length)]]; if (!c||c.o<=0||c.l||c.g<0) continue; const v=tcCopyValue(c); if (v<0.25) continue; const n=NPC(c.o); if (!n) continue; const keep=tcInterest(n,{tc:c,v})>1.1? 0.7 : 0.12; if (R()<keep) continue; cp=c; }
-  if (!cp) return; const n=NPC(cp.o); const v=tcCopyValue(cp); const sv=v*Math.exp(gauss()*n.kn);
-  if (R()<0.25 && v>1.5) createListing('t',cp.id,n.id,'auc',Math.max(0.5,nicePrice(sv*rf(0.3,0.8))),pick([3,5,5,7]),false);
-  else { const mult={tfl:rf(1.1,1.45), tgr:rf(1.05,1.3), tsl:rf(1.1,1.5)}[n.ty]||rf(0.95,1.35); createListing('t',cp.id,n.id,'bin',Math.max(0.25,nicePrice(sv*mult)),0,R()<0.6); }
-}
 // a new set lands: collectors open it, the glut hits the market
 function tcReleaseMarket(n, t){ if (G._tcCatch) return; const r=mkRng(hsh('rel'+G.seed+n)); const nP=ri(170,260); for (let i=0;i<nP;i++) for (const k of tcRollPack(n,r)) tcGive(k,'pull'); for (let i=0;i<ri(4,9);i++) tcGive(tcKey(n,0,'B'),'shop'); for (let i=0;i<ri(25,50);i++) tcGive(tcKey(n,0,'P'),'shop'); for (let i=0;i<60;i++) npcListTc(); }
-function tcMarketDay(t){
-  if (!G.tcg || !G._npcTcIds) return; const nL=G.lst.filter(l=>l.it==='t'&&l.sel>0).length; const k=clamp(Math.round((300-nL)/5)+ri(3,8),2,40); for (let i=0;i<k;i++) npcListTc();
-  tcGradingTick(t); if (t%10===0) tcCull();
-  if (R()<0.3){ for (const id of G._npcTcIds.slice(-300)){ const cp=G.tc[id]; if (!cp||cp.g||cp.l||tcD(cp.k).sealed) continue; if (tcCopyValue(cp)>25 && R()<0.1) tcGradeCopy(cp); } }
-}
-function tcCull(){ const ids=G._npcTcIds; if (!ids||ids.length<9000) return; const keep=[]; let drop=ids.length-7800; for (const id of ids){ const c=G.tc[id]; if (!c||c.o<=0){ continue; } if (drop>0 && !c.l && !c.g && c.o>0 && tcCopyValue(c)<0.6 && R()<0.7){ delete G.tc[id]; drop--; continue; } keep.push(id); } G._npcTcIds=keep; }
 // ---------- hooking into the shared market ----------
-const _interest=interest; interest=function(n,item){ if (item.tcg) return tcInterest(n,item); if (isTcgNPC(n)) return 0.03; return _interest(n,item); };
-const _itemOf=itemOf; itemOf=function(l){ if (l.it==='t'){ const cp=G.tc[l.ref]; return { tcg:true, tc:cp, key:cp.k, v:tcCopyValue(cp), heat:tcHeat(cp) }; } return _itemOf(l); };
-const _createListing=createListing; createListing=function(it,ref,seller,ty,price,dur,off){ if (it!=='t') return _createListing.apply(this,arguments);
-  const l={ id:G.nextLid++, it, ref, sel:seller, ty, pr:Math.round(price*100)/100, st:G.day, en: ty==='auc'? G.day+dur : G.day+45, off:!!off, bids:[], cur:0, hist:[], offers:[] }; if (ty==='auc') l.cur=l.pr; G.lst.push(l); G.tc[ref].l=l.id; return l; };
-const _removeListing=removeListing; removeListing=function(l){ if (l.it!=='t') return _removeListing(l); const i=G.lst.indexOf(l); if (i>=0) G.lst.splice(i,1); const c=G.tc[l.ref]; if (c) delete c.l; };
-const _itemLabel=itemLabel; itemLabel=function(l){ if (l.it!=='t') return _itemLabel(l); const c=G.tc[l.ref]; return tcCardLabel(c.k)+(c.g>0?' GCS '+c.g:''); };
-const _recordSale=recordSale; recordSale=function(key,price,g,buyer,seller){ if (key[0]!=='T') return _recordSale(key,price,g,buyer,seller);
-  const a=G.sales[key]||(G.sales[key]=[]); a.unshift([G.day,price,g]); if (a.length>24) a.length=24; G.dp[key]=(G.dp[key]||0)+0.035; tfvClear(key); if (price>=8||buyer===0||seller===0){ G.feed.unshift([G.day,key,price,g,buyer,seller]); if (G.feed.length>200) G.feed.length=200; } };
-const _transfer=transfer; transfer=function(l,buyer,price,how){ if (l.it!=='t') return _transfer(l,buyer,price,how);
-  const seller=l.sel, item=itemOf(l), gross=Math.round(price*100)/100; if (buyer===0){ G.player.cash-=gross; G.player.bought+=gross; } else NPC(buyer).cash-=gross; const net=Math.round(gross*(1-FEE)*100)/100;
-  if (seller===0){ G.player.cash+=net; G.player.sold+=gross; G.player.fees+=gross-net; } else NPC(seller).cash+=net;
-  const c=item.tc; recordSale(item.key,gross,c.g>0?c.g:0,buyer,seller); c.o=buyer;
-  if (buyer===0){ c.a=[G.day,how==='auc'?'won':'bought',gross,ownerName(seller)]; (c.h=c.h||[]).push([G.day,how==='auc'?'Won at auction':'Bought',gross,ownerName(seller)]); c.nw=1; c.pv={d:G.day,v:Math.round(item.v*100)/100,n:''}; }
-  if (seller===0) (c.h=c.h||[]).push([G.day,'Sold',gross,ownerName(buyer)]); if (buyer>0 && G._npcTcIds && seller===0) G._npcTcIds.push(c.id);
-  removeListing(l); if (seller===0||buyer===0) toast((seller===0?'Sold ':'Bought ')+itemLabel({it:'t',ref:c.id})+' for '+money(gross)+(seller===0?' (you receive '+money(net)+')':'')); };
-const _playerList=playerList; playerList=function(it,ref,ty,price,dur,off){ if (it!=='t') return _playerList(it,ref,ty,price,dur,off); if (!(price>0)) return 'Enter a price.'; const o=G.tc[ref]; if (!o||o.o!==0||o.l) return 'Not available to list.'; if (o.g<0) return 'That card is at the grader.'; createListing('t',ref,0,ty,price,dur,off); G.player.listed++; return null; };
+// ---------- the shared market functions, for this line (src/tcg/kit/market.js) ----------
+const WK_MKT={ kind:'t', keyPrefix:'T', flag:'tcg', cpf:'tc', copies:()=>G.tc, nextId:()=>G.nextTid++, pop:()=>G.tpop, world:()=>G.tcg, subs:'tsubs', ids:'_npcTcIds',
+  D:tcD, fairRaw:tcFairRaw, interest:tcInterest, label:tcCardLabel, fvClear:tfvClear, scale:TC_GS, raror:TC_RAROR, econ:WK_ECON, isNPC:isTcgNPC,
+  listMult(n){ return {tfl:rf(1.1,1.45), tgr:rf(1.05,1.3), tsl:rf(1.1,1.5)}[n.ty]||rf(0.95,1.35); } };   // what a collector asks over value, by type
+const WK_MK=cardMarket(WK_MKT);
+const tcMakeCopy=WK_MK.makeCopy, tcFair=WK_MK.fair, tcCopyValue=WK_MK.copyValue, tcSales=WK_MK.sales, tcEst=WK_MK.est, tcHeat=WK_MK.heat, tcGradeCopy=WK_MK.gradeCopy, tcSubmitGrade=WK_MK.submitGrade, tcGradingTick=WK_MK.gradingTick;
+const tcGive=WK_MK.give, npcListTc=WK_MK.npcList, tcMarketDay=WK_MK.marketDay, tcCull=WK_MK.cull;
+WK_MK.installHooks();
 npcPool=function(item){ const k=item&&item.tcg?'_tcPool': item&&item.comic?'_cmPool':'_cdPool'; if (!G[k]){ G._tcPool=G.npcs.filter(n=>isTcgNPC(n)||n.tc); G._cmPool=G.npcs.filter(n=>isComicNPC(n)||n.cm); G._cdPool=G.npcs.filter(n=>(!isComicNPC(n)&&!isTcgNPC(n)&&!(typeof isXtNPC==='function'&&isXtNPC(n)))||n.cd); } return G[k]; };
