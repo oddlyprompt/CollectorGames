@@ -1,0 +1,574 @@
+[
+  {
+    "sheet": "TM-S030",
+    "cell": 6,
+    "illustration": "TMI-0463",
+    "title": "Ravenwatcher",
+    "source": "correction1",
+    "source_cell": 6,
+    "paint_box": [
+      966,
+      362,
+      1447,
+      722
+    ],
+    "crop_box": [
+      972,
+      366,
+      1440,
+      717
+    ],
+    "old_art_sha256": "066334bdc424c092a18b917d8b05badf0f164e69955aeb88dda8458f35134442",
+    "new_art_sha256": "c3a653bd9553e04c2ffadadf61610e407e83654a32aea601caf0789921feb2bc"
+  },
+  {
+    "sheet": "TM-S048",
+    "cell": 5,
+    "illustration": "TMI-0131",
+    "title": "Bosun's Whistle",
+    "source": "correction2",
+    "source_cell": 2,
+    "paint_box": [
+      483,
+      362,
+      964,
+      722
+    ],
+    "crop_box": [
+      489,
+      366,
+      957,
+      717
+    ],
+    "old_art_sha256": "c4c38dcfa3251d8049ca44c22419c55c1318f5fc7cc190618c0441aa5eb36dfc",
+    "new_art_sha256": "0bfc961404fc8091a56255f9876bd4c253f0ae1e8715815f5809e7dea9f683ba"
+  },
+  {
+    "sheet": "TM-S052",
+    "cell": 9,
+    "illustration": "TMI-0300",
+    "title": "Drowned Harbor Watch",
+    "source": "correction2",
+    "source_cell": 5,
+    "paint_box": [
+      967,
+      725,
+      1447,
+      1085
+    ],
+    "crop_box": [
+      973,
+      729,
+      1441,
+      1080
+    ],
+    "old_art_sha256": "cace5711ec35c6e2e2815a3b691c77b63b0d4825cf69d9b945de38b68aca4841",
+    "new_art_sha256": "28e0b3d320bd316785a9a375bf44bb8e214c4b6c4e7fa61c808262236515f161"
+  },
+  {
+    "sheet": "TM-S071",
+    "cell": 4,
+    "illustration": "TMI-0285",
+    "title": "Albatross",
+    "source": "correction2",
+    "source_cell": 7,
+    "paint_box": [
+      1,
+      362,
+      482,
+      722
+    ],
+    "crop_box": [
+      7,
+      366,
+      475,
+      717
+    ],
+    "old_art_sha256": "0cf4d07c0434b63c2e349b7dde278282459d43c66505b93ea74e813fd5fc3560",
+    "new_art_sha256": "ffeb7fef94d302722900f57f5c80ce00b313cf161bd655e71cee79e965739e7a"
+  },
+  {
+    "sheet": "TM-S071",
+    "cell": 7,
+    "illustration": "TMI-0105",
+    "title": "Lagoon Turtle",
+    "source": "correction2",
+    "source_cell": 8,
+    "paint_box": [
+      1,
+      724,
+      482,
+      1085
+    ],
+    "crop_box": [
+      7,
+      729,
+      475,
+      1080
+    ],
+    "old_art_sha256": "137586e93eb42b3e5e3fc17163dbd14d18bd09daffe035db995d3b4354657616",
+    "new_art_sha256": "619de75c8239b65635b8930864bf34ce8fc0ba0a3f5fd1bc86effb11d59d9219"
+  },
+  {
+    "sheet": "TM-S072",
+    "cell": 1,
+    "illustration": "TMI-0227",
+    "title": "Dolphin Messenger",
+    "source": "correction2",
+    "source_cell": 9,
+    "paint_box": [
+      1,
+      1,
+      481,
+      360
+    ],
+    "crop_box": [
+      7,
+      5,
+      475,
+      356
+    ],
+    "old_art_sha256": "9249387321534f414689663e7164fa0cdf0637e938520588fc5c7665d2805135",
+    "new_art_sha256": "08ebff408e001f3dc8b5d8ce13c21f97c9543e14600bb0be53886dc839fbc647"
+  },
+  {
+    "sheet": "TM-S074",
+    "cell": 5,
+    "illustration": "TMI-0466",
+    "title": "Rising Waters",
+    "source": "correction3",
+    "source_cell": 2,
+    "paint_box": [
+      484,
+      362,
+      964,
+      722
+    ],
+    "crop_box": [
+      490,
+      366,
+      958,
+      717
+    ],
+    "old_art_sha256": "07faed01fe1cab4a4ce5b9c47ebc38989b4c50968fe43050862065f4d176f566",
+    "new_art_sha256": "ce08b3d71ff23f42656e12405b2613d0defd9c804a1a953246c0266ceb57a423"
+  },
+  {
+    "sheet": "TM-S075",
+    "cell": 5,
+    "illustration": "TMI-0496",
+    "title": "Sword of the Grey Wanderer",
+    "source": "correction3",
+    "source_cell": 4,
+    "paint_box": [
+      483,
+      362,
+      964,
+      722
+    ],
+    "crop_box": [
+      489,
+      366,
+      957,
+      717
+    ],
+    "old_art_sha256": "674d0af27ce014995d77b0592a4304a8556a56cc4240eaa5353605e89a1e6e6c",
+    "new_art_sha256": "f353faad7cbd1f93fe896d30d8f6dbe65cb6b334aa6dea1b2c232d4628c041fe"
+  },
+  {
+    "sheet": "TM-S076",
+    "cell": 4,
+    "illustration": "TMI-0455",
+    "title": "Coral Lance",
+    "source": "lance-final",
+    "source_cell": 1,
+    "paint_box": [
+      1,
+      362,
+      481,
+      722
+    ],
+    "crop_box": [
+      7,
+      366,
+      475,
+      717
+    ],
+    "old_art_sha256": "bc98b359d75ccd04b91528ac3c7d2ca3c3e9a0c4d67f0a75e71aa85660eba312",
+    "new_art_sha256": "4d3b51635a282dccbc2a5e74726df5f4edb447faff31143c7f880888af0c7115"
+  },
+  {
+    "sheet": "TM-S076",
+    "cell": 7,
+    "illustration": "TMI-0409",
+    "title": "Courier Ketch",
+    "source": "correction3",
+    "source_cell": 7,
+    "paint_box": [
+      1,
+      724,
+      481,
+      1085
+    ],
+    "crop_box": [
+      7,
+      729,
+      475,
+      1080
+    ],
+    "old_art_sha256": "d80902a990f1ac13f777a7b3dc5674b30adfd01bf3e3423e146318287a945d9c",
+    "new_art_sha256": "b0c070ccdf38bd4a74485649459daca80428c97e7d8d80f5080cef731165ada4"
+  },
+  {
+    "sheet": "TM-S005",
+    "cell": 7,
+    "illustration": "TMI-0613",
+    "title": "Hymn of the Tenth Tide",
+    "source": "remediation1",
+    "source_cell": 1,
+    "paint_box": [
+      1,
+      724,
+      481,
+      1085
+    ],
+    "crop_box": [
+      7,
+      729,
+      475,
+      1080
+    ],
+    "old_art_sha256": "d4dc4d0b2eb3fafb49dbb11050ecce4f7c11213540b4ec27d2ac6dcf5e1187b5",
+    "new_art_sha256": "95a99bdf06f32f2b1c97424c72d8bd9950b9e92c1197e7f47fee90f9cb9d0a99"
+  },
+  {
+    "sheet": "TM-S010",
+    "cell": 6,
+    "illustration": "TMI-0539",
+    "title": "Bolt Thrower Crew",
+    "source": "remediation1",
+    "source_cell": 2,
+    "paint_box": [
+      966,
+      363,
+      1447,
+      722
+    ],
+    "crop_box": [
+      972,
+      367,
+      1440,
+      718
+    ],
+    "old_art_sha256": "ee4f9a3ff007313d95290bc053adb9896aef579dc021e9fc901d0685646fdf0d",
+    "new_art_sha256": "666f2aaf3d585bfdc07b93d261ea51392f49f4309e29549412f3a915ef29c97e"
+  },
+  {
+    "sheet": "TM-S012",
+    "cell": 1,
+    "illustration": "TMI-0574",
+    "title": "Riptide Channel",
+    "source": "remediation1",
+    "source_cell": 3,
+    "paint_box": [
+      1,
+      1,
+      481,
+      359
+    ],
+    "crop_box": [
+      7,
+      4,
+      475,
+      355
+    ],
+    "old_art_sha256": "22cadcd5d0816e3e1c58ccb3f75a21b65c69dc5c25c8a5c17cb3f3ebd7e4971c",
+    "new_art_sha256": "1229284ee26b783ed92ca3f5f8cb12655d14aa4bfe8cc71a6786aaa92e347d07"
+  },
+  {
+    "sheet": "TM-S012",
+    "cell": 9,
+    "illustration": "TMI-0591",
+    "title": "Kestrel's Daughter",
+    "source": "remediation1",
+    "source_cell": 4,
+    "paint_box": [
+      967,
+      724,
+      1447,
+      1085
+    ],
+    "crop_box": [
+      973,
+      729,
+      1441,
+      1080
+    ],
+    "old_art_sha256": "6703baf2675ae27249da55accfa25c7befc023e95277d3f17f0ad9f6a4fa0bc5",
+    "new_art_sha256": "8780fa5fff413c280fdea897a97af83b570913b5df3a699067153de779c5e5ed"
+  },
+  {
+    "sheet": "TM-S025",
+    "cell": 5,
+    "illustration": "TMI-0218",
+    "title": "Hold the Line",
+    "source": "remediation1",
+    "source_cell": 5,
+    "paint_box": [
+      483,
+      362,
+      964,
+      722
+    ],
+    "crop_box": [
+      489,
+      366,
+      957,
+      717
+    ],
+    "old_art_sha256": "f59f4ca9efccc49f62e505146b7615cee9a3d81ca78afa839270fb6b14c26eb6",
+    "new_art_sha256": "7467cd7f6b3167ce04b2a454b7d7d95853cd5cab9b1a2f979c006b5e0699529c"
+  },
+  {
+    "sheet": "TM-S032",
+    "cell": 2,
+    "illustration": "TMI-0017",
+    "title": "Granite Colossus",
+    "source": "remediation1",
+    "source_cell": 6,
+    "paint_box": [
+      484,
+      1,
+      964,
+      360
+    ],
+    "crop_box": [
+      490,
+      5,
+      958,
+      356
+    ],
+    "old_art_sha256": "92d9148013d2148d5913c2b38f33e0b4b79b922063df4c05e967bf07caff4f03",
+    "new_art_sha256": "e3d4d33bc632816b612383a95b62845859667b40c9029f1921a8ffa373066aba"
+  },
+  {
+    "sheet": "TM-S040",
+    "cell": 8,
+    "illustration": "TMI-0449",
+    "title": "Queen Ama the Wavecrowned",
+    "source": "remediation1",
+    "source_cell": 7,
+    "paint_box": [
+      483,
+      724,
+      964,
+      1085
+    ],
+    "crop_box": [
+      489,
+      729,
+      957,
+      1080
+    ],
+    "old_art_sha256": "b40127b1c0880481809b9bab700d01782ef90e7e8eed03104e5250e6a950fe87",
+    "new_art_sha256": "5bdfd8058cf7f1a43c9f82886836e00a4521c7284b17e9a9937092b5dd904897"
+  },
+  {
+    "sheet": "TM-S044",
+    "cell": 9,
+    "illustration": "TMI-0129",
+    "title": "Merchant Trader",
+    "source": "remediation1",
+    "source_cell": 8,
+    "paint_box": [
+      966,
+      724,
+      1447,
+      1085
+    ],
+    "crop_box": [
+      972,
+      729,
+      1440,
+      1080
+    ],
+    "old_art_sha256": "7235326a465b04f72e69b09a22bd38d204d59d5171419e8726676ad331a78317",
+    "new_art_sha256": "0c11543d4dc36378601526dabd7f385a860f2bd0b4a1d13acd20a28daad8795d"
+  },
+  {
+    "sheet": "TM-S045",
+    "cell": 1,
+    "illustration": "TMI-0130",
+    "title": "Weathered Quartermaster",
+    "source": "remediation1",
+    "source_cell": 9,
+    "paint_box": [
+      1,
+      1,
+      481,
+      360
+    ],
+    "crop_box": [
+      7,
+      5,
+      475,
+      356
+    ],
+    "old_art_sha256": "5181d7a16396b289bddaa79b44196ba98aa3706d1eb075d64cc08525454c3ee2",
+    "new_art_sha256": "9362e172bda1cf1e86303ce3488abbd1c7048b605cbe5a07afb1f22ee63513eb"
+  },
+  {
+    "sheet": "TM-S049",
+    "cell": 3,
+    "illustration": "TMI-0037",
+    "title": "Gull Cutter",
+    "source": "remediation2",
+    "source_cell": 1,
+    "paint_box": [
+      966,
+      1,
+      1447,
+      360
+    ],
+    "crop_box": [
+      972,
+      5,
+      1440,
+      356
+    ],
+    "old_art_sha256": "8bb2a93466e3087edf28e0b0cc1be0412fec8ce06b4e2c564e652a0ad6e38fc2",
+    "new_art_sha256": "572907d0a81a8839b64be6e09dba1c9e04115d1509fc617eb3b258046a4be5f3"
+  },
+  {
+    "sheet": "TM-S051",
+    "cell": 6,
+    "illustration": "TMI-0343",
+    "title": "Deepwater Lamprey",
+    "source": "remediation2",
+    "source_cell": 2,
+    "paint_box": [
+      966,
+      361,
+      1447,
+      723
+    ],
+    "crop_box": [
+      972,
+      366,
+      1440,
+      717
+    ],
+    "old_art_sha256": "bed5a29adb64b291cb09169e3e3c267795b1ccabaf5dc249e836ec198246afc0",
+    "new_art_sha256": "e07d006a0adcc7860133b0103d7641d20d38e49c4dc4018b228394e83f52bfb7"
+  },
+  {
+    "sheet": "TM-S067",
+    "cell": 7,
+    "illustration": "TMI-0417",
+    "title": "League Cutter",
+    "source": "remediation2",
+    "source_cell": 3,
+    "paint_box": [
+      1,
+      724,
+      481,
+      1085
+    ],
+    "crop_box": [
+      7,
+      729,
+      475,
+      1080
+    ],
+    "old_art_sha256": "699cf8873783cf8a56fbcd36b1674e4e0a22c28775153e6c51277d14a881981b",
+    "new_art_sha256": "fe39a19b441fbe3f921a2ac4209bb033ea545e9b81201e52aabb138bca85b0fb"
+  },
+  {
+    "sheet": "TM-S072",
+    "cell": 3,
+    "illustration": "TMI-0257",
+    "title": "Narwhal Charger",
+    "source": "cleanup",
+    "source_cell": 4,
+    "paint_box": [
+      966,
+      1,
+      1447,
+      360
+    ],
+    "crop_box": [
+      972,
+      5,
+      1440,
+      356
+    ],
+    "old_art_sha256": "8fddeb1e3d50d0d5e45e5e30c4f83160f770a631e2cf5fb7ad6178d8d2b55b6c",
+    "new_art_sha256": "b982a2572162012c8ab8aae4cba1b343cc44787cb5a87fa67b8fb2583862b2c2"
+  },
+  {
+    "sheet": "TM-S075",
+    "cell": 1,
+    "illustration": "TMI-0191",
+    "title": "Ancient Coin",
+    "source": "cleanup",
+    "source_cell": 5,
+    "paint_box": [
+      1,
+      1,
+      481,
+      360
+    ],
+    "crop_box": [
+      7,
+      5,
+      475,
+      356
+    ],
+    "old_art_sha256": "96865ab1479c15cda110862145a48815700b7765b87c6742c628e22868586af4",
+    "new_art_sha256": "12de1fb822520e46cfe96441cc7c7cb2819ab667883d50dd28ad11713558ea3a"
+  },
+  {
+    "sheet": "TM-S076",
+    "cell": 6,
+    "illustration": "TMI-0408",
+    "title": "Blackwake",
+    "source": "remediation2",
+    "source_cell": 6,
+    "paint_box": [
+      966,
+      362,
+      1447,
+      722
+    ],
+    "crop_box": [
+      972,
+      366,
+      1440,
+      717
+    ],
+    "old_art_sha256": "d5df2f918d4cce6d10f6b35d1299cb0b2a2738bc76652dc39d70248b1db1a03a",
+    "new_art_sha256": "674fc0fd0ba13eacc34e49ca4b38fd162315093e1a1e26cad0906e073c129866"
+  },
+  {
+    "sheet": "TM-S077",
+    "cell": 1,
+    "illustration": "TMI-0346",
+    "title": "The Hymnal",
+    "source": "remediation2",
+    "source_cell": 7,
+    "paint_box": [
+      1,
+      1,
+      482,
+      361
+    ],
+    "crop_box": [
+      7,
+      5,
+      475,
+      356
+    ],
+    "old_art_sha256": "f9e5d9774508fa161a8c617de41ee9ead19e8c13fee7259283db8f53f6696c76",
+    "new_art_sha256": "0eabcbf96b4b20b0ebf53dc89eafae964a9c4c2336ab340da01ec71d32bbe48e"
+  }
+]
