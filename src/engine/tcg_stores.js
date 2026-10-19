@@ -22,26 +22,16 @@ function tcLgsCase(t, force){ const L=tcLgs(), wk=weekNo(t); if (!force && L.cas
   const w=k=>{ const d=tcD(k), o=TC_RAROR[d.card.rar]; return d.v==='R'? 0.5 : o<=0? 0.5 : o===1? 0.8 : o===2? 2.2 : o<=4? 1.4 : 0.35; }; const tot=keys.reduce((s,k)=>s+w(k),0);
   L.cs=[]; for (let i=0;i<LGS_CASE;i++){ let x=r()*tot, k=keys[0]; for (const kk of keys){ x-=w(kk); if (x<=0){ k=kk; break; } }
     const c=r()<0.7? condFresh(r,0.6) : condWorn(r, Math.max(0,(t-tcSetDef(n).rel)/365), 1); L.cs.push({id:L.nid++, k, c}); } }
-function tcLgsPrice(x){ const v=tcFairRaw(x.k)*WK_ECON.condition.price(x.c,tcD(x.k).card)*LGS_MARKUP; return Math.max(0.5, Math.ceil(v*4)/4-0.01); }
-function tcLgsBuySingle(id){ const L=tcLgs(); const x=L.cs.find(y=>y.id===id); if (!x) return 'Someone else bought that one.'; const p=tcLgsPrice(x); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
-  G.player.cash-=p; G.player.bought+=p; const cp=tcMakeCopy(x.k,0,[G.day,'bought',p,'The Tidepool'],'shop'); cp.c=x.c.slice(); cp.nw=1; cp.h=[[G.day,'Bought from the case at The Tidepool',p,'']]; cp.pv={d:G.day,v:Math.round(tcCopyValue(cp)*100)/100,n:''};
-  L.cs=L.cs.filter(y=>y.id!==id); return null; }
-function tcLgsBuySealed(f, q){ const L=tcLgs(), n=tcNewestSet(G.day); const have=f==='P'?L.pack:L.box, p=LGS_PRICE[f]; if (!n || have<q) return 'Not enough in stock.'; if (G.player.cash<p*q) return 'You need '+money(p*q,true)+'.';
-  G.player.cash-=p*q; G.player.bought+=p*q; if (f==='P') L.pack-=q; else L.box-=q; const key=tcKey(n,0,f);
-  for (let i=0;i<q;i++){ const cp=tcMakeCopy(key,0,[G.day,'bought',p,'The Tidepool'],'shop'); cp.nw=1; cp.pv={d:G.day,v:Math.round(tcFairRaw(key)*100)/100,n:''}; } return null; }
-// the buylist: the store pays a fixed share of market for raw cards, on the spot (the card leaves the game's market)
-function tcLgsOffer(cp){ return Math.floor(tcCopyValue(cp)*LGS_BUY*100)/100; }
-function tcLgsSellTo(id){ const cp=TC(id); if (!cp || cp.o!==0 || cp.l || cp.g!==0 || tcD(cp.k).sealed) return 'The store can\'t take that card.'; const p=tcLgsOffer(cp); if (p<0.25) return 'The store passes on that one.';
-  G.player.cash+=p; G.player.sold=(G.player.sold||0)+p; G.tcg.bl=(G.tcg.bl||0)+1; delete G.tc[id]; return null; }
 // ---------- Kinvault, online singles ----------
 function tcKvStock(t){ const K=tcKv(), wk=weekNo(t); if (K.wk===wk) return K.s; K.wk=wk; K.s={}; const r=mkRng(hsh('kv'+G.seed+wk));
   for (const n of tcReleasedSets(t)) for (const k of tcAllKeys(n)){ const d=tcD(k), o=TC_RAROR[d.card.rar]; let q;
     if (d.v==='R') q=ri2(r,1,4); else if (o<=0) q=ri2(r,4,12); else if (o===1) q=ri2(r,3,8); else if (o===2) q=d.v==='H'? ri2(r,1,3) : ri2(r,2,5); else q= r()<(tcFairRaw(k)>100? 0.3 : 0.65)? 1 : 0;
     if (q) K.s[k]=q; } return K.s; }
 const ri2=(r,a,b)=>a+Math.floor(r()*(b-a+1));
-function tcKvPrice(k){ return Math.max(KV_MIN, Math.ceil(tcFairRaw(k)*KV_MARKUP*100)/100); }
-function tcKvBuy(k){ const s=tcKvStock(G.day); if (!s[k]) return 'Out of stock.'; const p=tcKvPrice(k); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
-  G.player.cash-=p; G.player.bought+=p; s[k]--; const cp=tcMakeCopy(k,0,[G.day,'bought',p,'Kinvault'],'shop'); cp.c=cp.c.map(v=>Math.max(v,90)); cp.nw=1; cp.h=[[G.day,'Bought near mint from Kinvault',p,'']]; cp.pv={d:G.day,v:Math.round(tcCopyValue(cp)*100)/100,n:''}; return null; }
+// ---------- buying and selling (src/tcg/kit/stores.js) ----------
+const WK_STORE=cardStores({ lgsName:'The Tidepool', kvName:'Kinvault', world:()=>G.tcg, copies:()=>G.tc, newestSet:tcNewestSet, key:tcKey, lgs:tcLgs, kv:tcKv, kvStock:tcKvStock,
+  listPrice:LGS_PRICE, markup:LGS_MARKUP, buy:LGS_BUY, kvMarkup:KV_MARKUP, kvMin:KV_MIN, D:tcD, fairRaw:tcFairRaw, makeCopy:(...a)=>tcMakeCopy(...a), copyValue:cp=>tcCopyValue(cp), econ:WK_ECON });
+const tcLgsPrice=WK_STORE.lgsPrice, tcLgsBuySingle=WK_STORE.lgsBuySingle, tcLgsBuySealed=WK_STORE.lgsBuySealed, tcLgsOffer=WK_STORE.lgsOffer, tcLgsSellTo=WK_STORE.lgsSellTo, tcKvPrice=WK_STORE.kvPrice, tcKvBuy=WK_STORE.kvBuy;
 // ---------- daily and weekly ticks ----------
 (function(){ const d=tcDay; tcDay=function(t){ d(t); const T=G.tcg; if (!T || !tcReleasedSets(t).length) return; try { if (dowOf(t)===4 || !T.lgs) tcLgsWeek(t); else tcLgsDay(t); } catch(e){ console.error(e); } }; })();
 // ---------- views ----------

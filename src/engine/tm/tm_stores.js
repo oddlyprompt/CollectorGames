@@ -23,26 +23,16 @@ function xtLgsCase(t, force){ const L=xtLgs(), wk=weekNo(t); if (!force && L.cas
   const w=k=>{ const d=xtD(k), o=XT_RAROR[d.card.rar]; return (d.v==='F'? 0.6 : 1)*(o<=0? 0.5 : o===1? 0.8 : o===2? 2.2 : o===3? 1.6 : 0.8)*(d.set===TM_TT? 2 : 1); }; const tot=keys.reduce((s,k)=>s+w(k),0);
   L.cs=[]; for (let i=0;i<XLGS_CASE;i++){ let x=r()*tot, k=keys[0]; for (const kk of keys){ x-=w(kk); if (x<=0){ k=kk; break; } }
     const c=r()<0.7? condFresh(r,0.6) : condWorn(r, Math.max(0,(t-xtSetDef(xtD(k).set).rel)/365), 1); L.cs.push({id:L.nid++, k, c}); } }
-function xtLgsPrice(x){ const v=xtFairRaw(x.k)*XT_ECON.condition.price(x.c,xtD(x.k).card)*XLGS_MARKUP; return Math.max(0.5, Math.ceil(v*4)/4-0.01); }
-function xtLgsBuySingle(id){ const L=xtLgs(); const x=L.cs.find(y=>y.id===id); if (!x) return 'Someone else bought that one.'; const p=xtLgsPrice(x); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
-  G.player.cash-=p; G.player.bought+=p; const cp=xtMakeCopy(x.k,0,[G.day,'bought',p,'The Lantern Room'],'shop'); cp.c=x.c.slice(); cp.nw=1; cp.h=[[G.day,'Bought from the case at The Lantern Room',p,'']]; cp.pv={d:G.day,v:Math.round(xtCopyValue(cp)*100)/100,n:''};
-  L.cs=L.cs.filter(y=>y.id!==id); return null; }
-function xtLgsBuySealed(f, q){ const L=xtLgs(), n=xtNewestSet(G.day); const have=f==='P'?L.pack:L.box, p=XLGS_PRICE[f]; if (!n || have<q) return 'Not enough in stock.'; if (G.player.cash<p*q) return 'You need '+money(p*q,true)+'.';
-  G.player.cash-=p*q; G.player.bought+=p*q; if (f==='P') L.pack-=q; else L.box-=q; const key=xtKey(n,0,f);
-  for (let i=0;i<q;i++){ const cp=xtMakeCopy(key,0,[G.day,'bought',p,'The Lantern Room'],'shop'); cp.nw=1; cp.pv={d:G.day,v:Math.round(xtFairRaw(key)*100)/100,n:''}; } return null; }
-// the buylist: the store pays a fixed share of market for raw cards, on the spot (the card leaves the game's market)
-function xtLgsOffer(cp){ return Math.floor(xtCopyValue(cp)*XLGS_BUY*100)/100; }
-function xtLgsSellTo(id){ const cp=XT(id); if (!cp || cp.o!==0 || cp.l || cp.g!==0 || xtD(cp.k).sealed) return 'The store can\'t take that card.'; const p=xtLgsOffer(cp); if (p<0.25) return 'The store passes on that one.';
-  G.player.cash+=p; G.player.sold=(G.player.sold||0)+p; G.xtg.bl=(G.xtg.bl||0)+1; delete G.xtc[id]; return null; }
 // ---------- Saltmarket, online singles ----------
 function xtKvStock(t){ const K=xtKv(), wk=weekNo(t); if (K.wk===wk) return K.s; K.wk=wk; K.s={}; const r=mkRng(hsh('kv'+G.seed+wk));
   for (const n of xtReleasedSets(t)) for (const k of xtAllKeys(n)){ const d=xtD(k), o=XT_RAROR[d.card.rar]; let q;
     if (o<=0) q= d.v==='F'? xRi2(r,1,3) : xRi2(r,4,12); else if (o===1) q= d.v==='F'? xRi2(r,1,3) : xRi2(r,3,8); else if (o===2) q=d.v==='F'? xRi2(r,0,2) : xRi2(r,2,5); else q= r()<(xtFairRaw(k)>100? 0.3 : 0.65)? 1 : 0;
     if (q) K.s[k]=q; } return K.s; }
 const xRi2=(r,a,b)=>a+Math.floor(r()*(b-a+1));
-function xtKvPrice(k){ return Math.max(XKV_MIN, Math.ceil(xtFairRaw(k)*XKV_MARKUP*100)/100); }
-function xtKvBuy(k){ const s=xtKvStock(G.day); if (!s[k]) return 'Out of stock.'; const p=xtKvPrice(k); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
-  G.player.cash-=p; G.player.bought+=p; s[k]--; const cp=xtMakeCopy(k,0,[G.day,'bought',p,'Saltmarket'],'shop'); cp.c=cp.c.map(v=>Math.max(v,90)); cp.nw=1; cp.h=[[G.day,'Bought near mint from Saltmarket',p,'']]; cp.pv={d:G.day,v:Math.round(xtCopyValue(cp)*100)/100,n:''}; return null; }
+// ---------- buying and selling (src/tcg/kit/stores.js) ----------
+const XT_STORE=cardStores({ lgsName:'The Lantern Room', kvName:'Saltmarket', world:()=>G.xtg, copies:()=>G.xtc, newestSet:xtNewestSet, key:xtKey, lgs:xtLgs, kv:xtKv, kvStock:xtKvStock,
+  listPrice:XLGS_PRICE, markup:XLGS_MARKUP, buy:XLGS_BUY, kvMarkup:XKV_MARKUP, kvMin:XKV_MIN, D:xtD, fairRaw:xtFairRaw, makeCopy:(...a)=>xtMakeCopy(...a), copyValue:cp=>xtCopyValue(cp), econ:XT_ECON });
+const xtLgsPrice=XT_STORE.lgsPrice, xtLgsBuySingle=XT_STORE.lgsBuySingle, xtLgsBuySealed=XT_STORE.lgsBuySealed, xtLgsOffer=XT_STORE.lgsOffer, xtLgsSellTo=XT_STORE.lgsSellTo, xtKvPrice=XT_STORE.kvPrice, xtKvBuy=XT_STORE.kvBuy;
 // ---------- daily and weekly ticks ----------
 (function(){ const d=xtDay; xtDay=function(t){ d(t); const T=G.xtg; if (!T || !xtReleasedSets(t).length) return; try { if (dowOf(t)===4 || !T.lgs || t===xtSetDef(TM_TT).rel) xtLgsWeek(t); else xtLgsDay(t); } catch(e){ console.error(e); } }; })();
 // ---------- views ----------
