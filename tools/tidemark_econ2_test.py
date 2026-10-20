@@ -80,7 +80,7 @@ AVAIL="""async(seed)=>{ await T2.fresh(seed); const seen={}; const synth=new Set
   for (const k of synth){ const d=xtD(k); if (d.sealed||d.v!=='N'||d.set===31) continue; const g=grpOf(d.set)+'|'+rkOf(d.rar); const o=out[g]||(out[g]={any:0,nm:0,pa:new Set(),pn:new Set()}); o.pa.add(k); o.pn.add(k); }
   const res={}; for (const k in prints){ const o=out[k]||{any:0,nm:0,pa:new Set(),pn:new Set()}; res[k]={prints:prints[k], any:o.any/prints[k], nm:o.nm/prints[k], shareAny:o.pa.size/prints[k], shareNM:o.pn.size/prints[k], nmTotal:o.nm}; } return res; }"""
 async def t_availability(pg):
-    n=SEEDS or 3; acc={}
+    n=max(SEEDS or 3, 3); acc={}
     for sd in range(n):
         r=await pg.evaluate(AVAIL, 300+sd)
         for k,v in r.items():
@@ -112,7 +112,7 @@ CONSEQ="""async(trial)=>{ await T2.fresh(700+trial); T2.days(30); const out={};
     out.c={removed:before-after, gone:!G.xtc[sealed.id], cards:r? r.packs[0].length : -1, grew:n1-n0, mineNew:r? r.packs[0].every(id=>G.xtc[id]&&G.xtc[id].o===0) : false}; }
   return out; }"""
 async def t_consequences(pg):
-    n=SEEDS or 8; A=[]; B=[]; C=[]
+    n=max(SEEDS or 8, 6); A=[]; B=[]; C=[]
     for t in range(n):
         r=await pg.evaluate(CONSEQ, t)
         if 'a' in r: A.append(r['a'])
@@ -156,7 +156,7 @@ COMPLETE="""async(seed, months)=>{ await T2.fresh(seed); G.player.cash=1e9;
   let spent=0; const bySet={}; for (const c of Object.values(G.xtc)) if (c.o===0&&c.a&&!xtD(c.k).sealed){ const S=idx[c.k]; if (S){ bySet[S.s]=(bySet[S.s]||0)+(c.a[2]||0); } }
   return {rec, bySet, news:G.news.filter(n=>/ESTATE|WAREHOUSE|COLLECTION/.test(n.h)).length}; }"""
 async def t_completion(pg):
-    n=SEEDS or 3; months=24; agg={}
+    n=max(SEEDS or 3, 3); months=24; agg={}
     for sd in range(n):
         r=await pg.evaluate(COMPLETE, [400+sd, months]) if False else await pg.evaluate("([a,b])=>("+COMPLETE+")(a,b)", [400+sd, months])
         for mo,sets in r['rec'].items():

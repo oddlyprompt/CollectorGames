@@ -212,6 +212,8 @@ ACT.xtrebuild=(a,el)=>{ if (!armed(el)) return; xtRebuildWithBackup().then(e=>{ 
 // do collectors let go of a copy? (base is the first economy's answer; v2 adds who collects what)
 function xtKeep(n,c,v,base){
   const d=xtD(c.k); const prem=!d.sealed&&(d.card.rar==='leg'||d.card.res||d.v==='F'||d.rar==='alt');
+  // ordinary cards (commons and uncommons) are what collectors trade and release: they do not sit in binders for good
+  if (!d.sealed && d.v==='N' && (d.rar==='common'||d.rar==='unc')) return n.ty==='xtm'&&n.setN===d.set? 0.72 : n.ty==='xfl'? 0.05 : Math.min(base,0.45);
   switch(n.ty){
     case 'xtm': return d.sealed? 0.5 : n.setN===d.set? 0.95 : 0.4;
     case 'xsl': return d.sealed? 0.96 : 0.6;
