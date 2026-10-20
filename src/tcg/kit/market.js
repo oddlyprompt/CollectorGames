@@ -6,6 +6,7 @@
 //   L.kind/L.keyPrefix  item letter and print-key letter     L.flag/L.cpf  the item's marker field and its copy field ('tcg'/'tc', 'xtg'/'xt')
 //   L.copies() nextId() pop() world()  the copy table, a new id, the grading population, the line's world state (null before it exists)
 //   L.subs L.ids  G.player key of the grading queue, G key of the collectors' copies    L.D(key) L.fairRaw(key) L.interest(n,item) L.label(key)
+//   optional: L.cullSkip(copy) true for copies the clean-up must keep (scarce history)   L.culled(copy) called for each copy it removes
 //   optional: L.gradeScarce(key,g,pop,print) the premium for a scarce grade     L.keep(n,copy,value) the chance a collector keeps a copy instead of listing it
 //   L.fvClear(key) L.scale (grade multiplier by rarity) L.raror (rarity order) L.econ (economy strategies) L.isNPC(n) L.npcFlag
 function cardMarket(L){
@@ -42,7 +43,7 @@ function cardMarket(L){
     M.gradingTick(t); if (t%10===0) M.cull();
     if (R()<0.3){ for (const id of G[L.ids].slice(-300)){ const cp=L.copies()[id]; if (!cp||cp.g||cp.l||L.D(cp.k).sealed) continue; if (M.copyValue(cp)>25 && R()<0.1) M.gradeCopy(cp); } }
   };
-  M.cull=function(){ const ids=G[L.ids]; if (!ids||ids.length<9000) return; const keep=[]; let drop=ids.length-7800; const T=L.copies(); for (const id of ids){ const c=T[id]; if (!c||c.o<=0){ continue; } if (drop>0 && !c.l && !c.g && c.o>0 && M.copyValue(c)<0.6 && R()<0.7){ delete T[id]; drop--; continue; } keep.push(id); } G[L.ids]=keep; };
+  M.cull=function(){ const ids=G[L.ids]; if (!ids||ids.length<9000) return; const keep=[]; let drop=ids.length-7800; const T=L.copies(); for (const id of ids){ const c=T[id]; if (!c||c.o<=0){ continue; } if (drop>0 && !c.l && !c.g && c.o>0 && !(L.cullSkip&&L.cullSkip(c)) && M.copyValue(c)<0.6 && R()<0.7){ delete T[id]; drop--; if (L.culled) L.culled(c); continue; } keep.push(id); } G[L.ids]=keep; };
   // ---------- hooking into the shared market ----------
   M.installHooks=function(){
     const _interest=interest; interest=function(n,item){ if (item[L.flag]) return L.interest(n,item); if (L.isNPC(n)) return 0.03; return _interest(n,item); };

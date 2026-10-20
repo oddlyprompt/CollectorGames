@@ -122,6 +122,7 @@ function xtReleaseMarket(n, t){ if (G._xtCatch) return; const r=mkRng(hsh('rel'+
 const XT_MKT={ kind:'x', keyPrefix:'X', flag:'xtg', cpf:'xt', copies:()=>G.xtc, nextId:()=>G.nextXid++, pop:()=>G.xpop, world:()=>G.xtg, subs:'xsubs', ids:'_npcXtIds',
   D:xtD, fairRaw:xtFairRaw, interest:xtInterest, label:xtCardLabel, fvClear:xTfvClear, scale:XT_GS, raror:XT_RAROR, econ:XT_ECON, isNPC:isXtNPC,
   gradeScarce:(key,g,pop,d)=>xtV2()? xtV2GradeScarce(key,g,pop,d) : (pop&&g===10&&pop[10]<4&&(XT_RAROR[d.rar]>=2)? 1.12 : 1),
+  cullSkip:c=>xtV2()&&xtVintage(xtD(c.k)), culled:c=>{ const L=G.xtg.led; if (L) L.cull=(L.cull||0)+1; },
   keep(n,c,v){ const base=xtInterest(n,{xt:c,v})>1.1? 0.7 : 0.12; return xtV2()? xtKeep(n,c,v,base) : base; },
   listMult(n){ return {xfl:rf(1.1,1.45), xgr:rf(1.05,1.3), xsl:rf(1.1,1.5)}[n.ty]||rf(0.95,1.35); } };   // what a collector asks over value, by type
 const XT_MK=cardMarket(XT_MKT);

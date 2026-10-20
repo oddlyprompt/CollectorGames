@@ -10,5 +10,6 @@ run wildkintest python3 tools/wildkintest.py
 run duskfalltest python3 tools/duskfalltest.py
 run tidemarktest python3 tools/tidemarktest.py
 run test_art_pipeline python3 tools/test_art_pipeline.py
-[ "$1" = "--golden" ] && run golden python3 tools/golden/golden.py check
+[ "$1" = "--golden" ] || [ "$2" = "--golden" ] && run golden python3 tools/golden/golden.py check
+[ "$1" = "--econ2" ] || [ "$2" = "--econ2" ] && run tidemark_econ2_test python3 tools/tidemark_econ2_test.py --seeds=2   # about 20 minutes
 exit $fail

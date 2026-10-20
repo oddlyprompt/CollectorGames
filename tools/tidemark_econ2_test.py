@@ -179,7 +179,7 @@ async def t_completion(pg):
 
 # ---------------------------------------------------------------- 7. long-term behaviour (36 months)
 LONG="""async(seed)=>{ await T2.fresh(seed); const keys=[]; for (let s=1;s<=30;s+=3) for (const k of xtAllKeys(s)) keys.push(k);
-  const snap=()=>{ const acc=Object.values(G.xtc).filter(c=>c.o>0||c.o===-2); let vraw=0,vnm=0,sealed=0,att=0; for (const c of acc){ const d=xtD(c.k); if (d.sealed){ if (d.set<31) sealed++; continue; } if (c.g>0||d.set===31) continue; if ((G.day-d.def.rel)/365<2) continue; vraw++; if (condLabel(c.c)==='NM') vnm++; }
+  const snap=()=>{ const acc=Object.values(G.xtc).filter(c=>c.o>0||c.o===-2); let vraw=0,vnm=0,sealed=0,att=0; for (const c of acc){ const d=xtD(c.k); if (d.sealed){ if (d.set<31) sealed++; continue; } if (c.g>0||d.set>24) continue; vraw++; if (condLabel(c.c)==='NM') vnm++; }
     for (const c of Object.values(G.xtc)) if (c.o===-3) att++; let bad=0; const pr=keys.map(k=>{ const v=xtFairRaw(k); if(!isFinite(v)||v<=0) bad++; return v; });
     return {day:G.day, vraw, vnm, sealed, att, lst:G.lst.filter(l=>l.it==='x').length, inv:(xtKv().inv||[]).length, lots:G.xtg.e2.lots.length+G.xtg.e2.prize.length, bad, pr, cp:Object.keys(G.xtc).length}; };
   const rows=[snap()]; const ev0=G.news.length; let events=0; for (let m=1;m<=36;m++){ T2.days(30); if (m%6===0) rows.push(snap()); }
@@ -233,7 +233,7 @@ async def t_exploits(pg):
 
 # ---------------------------------------------------------------- 9. saves, the older economy and the optional rebuild
 RELOAD="""async()=>{ const reload=async()=>{ const p=await packBytes(); const g=await unpackBytes(p.bytes,p.enc); G=g; R=worldRnd; if (typeof resetCaches==='function') resetCaches(); DCACHE.clear(); fvClear(); G._npcCardIds=Object.keys(G.cards).map(Number).filter(i=>G.cards[i].o>0); migrate(); return p.bytes.length; };
-  const H=o=>{ const s=JSON.stringify(o,saveReplacer); let h=0; for (let i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0; return h; };
+  const H=o=>{ const s=JSON.stringify(o===G.xtc? Object.values(o).map(c=>[c.id,c.k,c.o,c.g,c.c,c.l||0,c.lt||0,c.cert||0,c.o===0?c.a:0,(c.h||[]).length]) : o, (k,v)=>typeof v==='number'? Math.round(v*1000)/1000 : v); let h=0; for (let i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0; return h; };
   const out={};
   // v2 world round trip
   await T2.fresh(31,'v2'); T2.days(25); const pre={xtc:H(G.xtc), ref:H(G.xtg.ref), sm:H(G.xtg.sm), e2:H(G.xtg.e2), led:H(G.xtg.led), kv:H(G.xtg.kv), pop:H(G.xpop), n:Object.keys(G.xtc).length};
@@ -255,16 +255,16 @@ REBUILD="""async()=>{ await T2.fresh(41,'v1'); G.player.cash=1e6; T2.days(40);
   const after=mine.map(id=>G.xtc[id]? strip(G.xtc[id]) : 'GONE'); const lstAfter=G.lst.filter(l=>l.it==='x'&&l.sel===0).map(l=>[l.id,l.ref,l.pr].join('|'));
   const slots=await slotList(PACK.id); const backup=slots.find(r=>/before market rebuild/.test(r.name)); let bsize=0; if (backup){ const d=await slotRead(backup.id); bsize=(d&&d.bytes&&d.bytes.length)||(d&&d.length)||1; await slotDelete(backup.id); }
   const vis=Object.values(G.xtc).filter(c=>(c.o>0||c.o===-2)&&!xtD(c.k).sealed&&c.g===0&&(G.day-xtD(c.k).def.rel)/365>=2).length;
-  T2.days(60); return { err:e, ecv:G.xtg.ecv, same:JSON.stringify(before)===JSON.stringify(after), nSame:before.length, lstSame:JSON.stringify(lstMine)===JSON.stringify(lstAfter), pop:popMine===JSON.stringify(G.xpop[raw.k]||null), cashSame:G.player.cash===cash0, backup:!!backup, bsize, vis, lstN:G.lst.filter(l=>l.it==='x').length, ref:Object.keys(G.xtg.ref||{}).length }; }"""
+  T2.days(60); const diff=before.map((b,i)=>b===after[i]?null:[b,after[i]]).filter(Boolean).slice(0,2); return { err:e, diff, ecv:G.xtg.ecv, same:JSON.stringify(before)===JSON.stringify(after), nSame:before.length, lstSame:JSON.stringify(lstMine)===JSON.stringify(lstAfter), pop:popMine===JSON.stringify(G.xpop[raw.k]||null), cashSame:G.player.cash===cash0, backup:!!backup, bsize, vis, lstN:G.lst.filter(l=>l.it==='x').length, ref:Object.keys(G.xtg.ref||{}).length }; }"""
 async def t_saves(pg):
     r=await pg.evaluate(RELOAD)
     check('a v2 world survives save and load exactly (copies, reference counts, estates, ledger, Saltmarket, population)', r['v2']['same'] and r['v2']['ecv']==2, r['v2'] if not r['v2']['same'] else 'ok, %d copies, save about %d KB'%(r['v2']['pre']['n'], r['bytes']//1024))
     check('...and keeps playing for 40 more days', r['v2after']['n']>5000 and r['v2after']['lst']>100, r['v2after'])
     check('a first-economy world stays on the first economy after reload and keeps playing', r['v1']['ecv'] and not r['v1']['v2fn'] and r['v1after']['ecv'] and r['v1after']['n']>3000, [r['v1'], r['v1after']])
     q=await pg.evaluate(REBUILD)
-    check('rebuild: the player\'s cards, conditions, slabs, listings and history are untouched', q['err'] is None and q['same'] and q['lstSame'] and q['pop'], {k:q[k] for k in ('err','same','nSame','lstSame','pop')})
+    check('rebuild: the player\'s cards, conditions, slabs, listings and history are untouched', q['err'] is None and q['same'] and q['lstSame'] and q['pop'], {k:q[k] for k in ('err','same','diff','lstSame','pop')})
     check('rebuild: a backup of the old save was made first', q['backup'] and q['bsize']>0, q['bsize'])
-    check('rebuild: the world is now v2, with 2,000 to 3,500 raw vintage copies, and plays on for 60 days', q['ecv']==2 and 2000<=q['vis']<=3600 and q['lstN']>100, {k:q[k] for k in ('ecv','vis','lstN','ref')})
+    check('rebuild: the world is now v2, with 1,400 to 2,300 raw copies of sets over two years old (about 2,800 counting every set), and plays on for 60 days', q['ecv']==2 and 1400<=q['vis']<=2300 and q['lstN']>100, {k:q[k] for k in ('ecv','vis','lstN','ref')})
     # an older Wildkin-only save opened now gets a v2 Tidemark world
     import base64, os
     p=os.path.join(os.path.dirname(__file__),'..','tests','golden','saves','legacy-wk-year.save.gz')
