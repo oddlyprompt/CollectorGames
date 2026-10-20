@@ -4514,7 +4514,7 @@ function listingSheet(lid){
       <dl class="kv"><dt>Seller</dt><dd>${esc(ownerName(l.sel))}</dd><dt>Market estimate</dt><dd class="est">${fmtRange(estRange(k))}</dd><dt>At retail</dt><dd>${inRetail(prod)?'Yes, '+money(B(prod).formats[s.f].price)+(prod.stock[s.f]<=0?' (sold out)':''):'No longer'}</dd></dl>
       <button class="linkbtn" data-act="product" data-a="${prod.id}">Product details and odds</button>`;
     extra=salesPanel(k,null,'Recent sealed sales');
-  } else if (l.it==='m'||l.it==='t'){ title=''; head=''; }
+  } else if (l.it==='m'||isCardGameKind(l.it)){ title=''; head=''; }
   else {
     const c=C(l.ref), d=D(c.k), p=P(d.pid); title=pname(p);
     head=bigCardHTML(c);
@@ -6246,7 +6246,7 @@ function rvFinish(){
   rvClose(); if (seen.length>1) openSheet(()=>rvSummary(seen)); else if (seen.length===1 && seen[0].g>=(seen[0].k==='m'?98:10)) showToast('A '+rvGradeTxt(seen[0].k,seen[0].g)+'. Something to brag about.', true);
 }
 function rvSummary(list){
-  let raw=0, now=0, fees=0; const rows=list.map(r=>{ const o=objFor(r.k,r.id); if (!o) return ''; const v=rvValue(r.k,o); raw+=r.raw||0; now+=v; fees+=r.fee||0; return `<button class="row" data-act="${copyAct(r.k)}" data-a="${r.id}">${r.k==='m'?miniComic(o):r.k==='t'?miniT(o):miniCard(o)}<div class="rt"><b>${esc(rvTitle(r.k,o))}</b><span>${esc(popLine(r.k,o))}</span></div><div class="rv"><b>${rvGradeTxt(r.k,r.g)}</b><span class="${v>=(r.raw||0)?'up':'down'}">${money(r.raw||0,true)} → ${money(v,true)}</span></div></button>`; }).join('');
+  let raw=0, now=0, fees=0; const rows=list.map(r=>{ const o=objFor(r.k,r.id); if (!o) return ''; const v=rvValue(r.k,o); raw+=r.raw||0; now+=v; fees+=r.fee||0; return `<button class="row" data-act="${copyAct(r.k)}" data-a="${r.id}">${r.k==='m'?miniComic(o):(cardLineOfKind(r.k)? cardLineOfKind(r.k).mini(o) : miniCard(o))}<div class="rt"><b>${esc(rvTitle(r.k,o))}</b><span>${esc(popLine(r.k,o))}</span></div><div class="rv"><b>${rvGradeTxt(r.k,r.g)}</b><span class="${v>=(r.raw||0)?'up':'down'}">${money(r.raw||0,true)} → ${money(v,true)}</span></div></button>`; }).join('');
   const net=now-raw-fees;
   return { t:'Grading results', h:`<div class="stack"><div class="kpis"><div class="kpi"><small>Returned</small><b>${list.length}</b></div><div class="kpi"><small>Raw estimate</small><b>${money(raw,true)}</b></div><div class="kpi"><small>Slabs now</small><b>${money(now,true)}</b></div><div class="kpi"><small>After fees</small><b class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net),true)}</b></div></div><div class="panel"><div class="rows">${rows}</div></div></div>` };
 }
@@ -6521,7 +6521,7 @@ function makeYearReview(y){ const r=buildYear(y); yrs()[y]=r; G.player.yrNew=y; 
 advanceDay = (function(f){ return function(){ f.apply(this, arguments); try { const t=G.day; if (G.player && G.player.start){ { const GL=G.player.gl=G.player.gl||[]; for (const r of (G.player.rv||[])) if (!GL.some(x=>x.k===r.k&&x.id===r.id&&x.t===r.t)) GL.push({k:r.k,id:r.id,g:r.g,t:r.t}); if (GL.length>120) GL.splice(0,GL.length-120); }
   if (dowOf(t)===1 || !(G.player.nw&&G.player.nw.length)) snapNW(); if (dowOf(t)===1) for (const c of chases()){ if (!c.done && c.k!=='grail'){ const p=chaseProgress(c); if (p.total && p.have>=p.total){ c.done=t; toast('Chase complete: '+chaseName(c), true); } } }
   const md=mdOf(t); if (md[0]===1 && md[1]===1 && t-G.player.start>=45){ const y=yearOf(t)-1; if (!yrs()[y]) makeYearReview(y); } } } catch(e){ console.error(e); } }; })(advanceDay);
-ACT.listing = (function(f){ return function(a){ try { const l=L(+a); if (l && l.sel!==0 && (l.it==='c'||l.it==='m'||l.it==='t')) noteSeen(l.it, l.ref, l.ty==='auc'?l.cur:l.pr, 'the marketplace'); } catch(e){} return f(a); }; })(ACT.listing);
+ACT.listing = (function(f){ return function(a){ try { const l=L(+a); if (l && l.sel!==0 && (l.it==='c'||l.it==='m'||isCardGameKind(l.it))) noteSeen(l.it, l.ref, l.ty==='auc'?l.cur:l.pr, 'the marketplace'); } catch(e){} return f(a); }; })(ACT.listing);
 ACT.hitem = (function(f){ return function(a){ try { const [s,t,id]=hsplit(a); const e=entryById(s,t,id); if (e && t!=='s') noteSeen(t,id,e.p,whereName(s)); } catch(e){} return f(a); }; })(ACT.hitem);
 ACT.cshopcopy = (function(f){ return function(a){ try { const [id,from]=a.split(':'); const cp=MC(+id); if (cp && cp.o===SHOP_ID){ const pr=from==='bin'?1:((G.cm.shop.back.find(x=>x[0]===+id)||[0,0])[1]); noteSeen('m',+id,pr,SHOP_NAME); } } catch(e){} return f(a); }; })(ACT.cshopcopy);
 enterEvent = (function(f){ return function(evId, late){ const r=f(evId, late); if (r===null){ const ev=G.hunt.ev.find(x=>x.id===evId); const L_=G.player.evlog=G.player.evlog||[]; if (ev && !L_.some(e=>e.d===G.day && e.id===evId)){ L_.push({d:G.day, id:evId, n:ev.n}); if (L_.length>200) L_.shift(); } } return r; }; })(enterEvent);
