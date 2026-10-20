@@ -48,3 +48,6 @@ the lists rebuilt after a ban. Numbers: see the `META` line printed by `tools/ti
 - Eternal is not played by the engine; the 430 historical cards Tenth Tide does not reprint get their play value from a rating.
 - Card rules are designed and balanced by simulation; nobody has played them (see `BALANCE.md`).
 - A ban takes about five seconds to decide in the browser, and about the same to rebuild the field when it takes effect. Never tested on a real phone.
+
+## Economy v2 (2026-10-20)
+New worlds use the ten-year market described in `design/tidemark-economy-v2.md` and CLAUDE.md (vintage condition scarcity, a census-style replay of each set's history, daily aging, finite seller-backed Saltmarket stock, estate sales and collection sales). Older saves keep the first economy and can rebuild from the Tidemark shop. Decided by Claude, not canon.

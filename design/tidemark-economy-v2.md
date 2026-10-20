@@ -1,6 +1,6 @@
 # Tidemark economy v2: proposal (for review, nothing implemented)
 
-Status: proposal, 2026-10-19. Owner brief: make the ten-year history authentic through vintage condition scarcity, real availability, historical market evolution,
+Status: implemented 2026-10-20 (owner decisions: older saves keep v1 with an optional rebuild and backup; 2,500 to 3,500 raw copies as a test target; finite seller-backed Saltmarket). The implementation notes and measured results are in CLAUDE.md; differences from this proposal: the economy flag is `G.xtg.ecv`, the sealed 0.8-1.4 'opening ratio' became 'no arbitrage above 1.4x and not beyond 33x contents' because sealed vintage trades at a collector premium, 'metagame and Wildkin bit-identical' became 'Wildkin and v1 worlds bit-identical (golden suites); a v2 world\'s metagame is checked statistically (the economy code uses its own random streams but the shared market still draws from the world\'s)'. Original proposal 2026-10-19. Owner brief: make the ten-year history authentic through vintage condition scarcity, real availability, historical market evolution,
 collecting behaviour, sealed-product scarcity and appropriate pricing. Two requirements from the owner: (1) the simulated history must change real supply and availability, not only
 price graphs; (2) vintage Near Mint (NM) needs authentic rarity, designed and tested rather than set as arbitrary percentages, so a well-preserved 2016 card is a meaningful find.
 Everything below is **decided/designed by Claude, not canon**, until you approve it. Wildkin is not touched.
