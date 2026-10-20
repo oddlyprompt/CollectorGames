@@ -54,6 +54,7 @@ REPLAY="""([ns])=>{ const tab={}; const AGE=y=>y<1?'<1':y<4?'1-4':y<7?'4-7':y<9?
   return {tab, vis, ftbox:boxes, attic, cover, ms:lots}; }"""
 async def t_condition(pg):
     n=SEEDS or 20
+    await pg.evaluate('async()=>T2.fresh(5)')   # the replay measures a world on day one
     r=await pg.evaluate(REPLAY, [n])
     print('replay ms per world: %.0f'%st.mean(r['ms']))
     check('boot: replaying ten years takes under 400 ms per world', max(r['ms'])<400, '%.0f max'%max(r['ms']))
