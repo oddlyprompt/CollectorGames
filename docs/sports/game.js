@@ -58,6 +58,26 @@ const LAST = ['Bannon','Gomez','Reyes','Hollis','Varga','Okafor','Castellano','W
 const HANDLES_A = ['diamond','slab','rookie','wax','chrome','cardboard','gem','hobby','pack','sealed','prospect','vintage','pc','hitter','bullpen','dugout','mint','centering','refractor','ace','grand','clubhouse','bleacher','ink','foil','dealer','flip','binder','set','sweetspot'];
 const HANDLES_B = ['hunter','king','vault','kid','shack','dad','collects','breaks','guy','cards','stash','depot','den','hoarder','junkie','lab','club','queen','flips','trader','haus','nerd','co','pulls','box','files'];
 
+// ===================== CARD-GAME LINES: THE REGISTRY =====================
+// A "line" is one trading card franchise in the card-game world (Wildkin, Tidemark, later Rift Parade). Shared code (the journal, the grading reveal,
+// the news filters, the boot upgrade) asks this registry which line an item, key or news item belongs to instead of hard-coding letters.
+// Lines register themselves at the end of their own boot file. In the sports and comics builds the registry stays empty.
+//   kind       the item letter used by objFor, grading returns and the journal ('t' Wildkin, 'x' Tidemark; 'c' cards and 'm' comics are not lines)
+//   keyPrefix  first character of a print key ('T|1|5|N')
+//   news       the kind of this line's news items
+//   openAct    the ACT that opens one of its copies
+//   has()      does this save contain the line's world yet
+//   copies()   all copy objects, mine() the player's, value(copy), label(copy), mini(copy), submit(id), crack(id)
+//   upgrade(progress), boot {at, span, msg}   builds the world when an older save is opened
+const CARD_LINES=[];
+function registerCardLine(L){ CARD_LINES.push(L); return L; }
+const cardLineOfKind=k=>CARD_LINES.find(l=>l.kind===k)||null;
+const cardLineOfKey=key=>CARD_LINES.find(l=>l.keyPrefix===key[0])||null;
+const isCardGameKind=k=>!!cardLineOfKind(k);
+const isCardGameNews=k=>CARD_LINES.some(l=>l.news===k);
+// the ACT that opens a copy of this kind: a line's own, comics, or a baseball card
+function copyAct(k){ const L=cardLineOfKind(k); return L? L.openAct : k==='m'? 'ccopy' : 'card'; }
+
 // ===================== BASEBALL WORLD =====================
 const TEAMS_DEF = [
  ['Port Calder','Anchors','PCA','#1d3b5c','#c9a227'],['Ironvale','Forgemen','IRV','#3a3a3a','#d0632a'],
@@ -4529,7 +4549,7 @@ ACT.listing = a=>openSheet(()=>listingSheet(+a));
 ACT.watch = a=>{ const id=+a; const w=G.player.watch; const i=w.indexOf(id); if (i>=0) w.splice(i,1); else w.push(id); refresh(); queueSave(); };
 ACT.buy = (a,el)=>{ if (!armed(el)) return; const l=G.lst.find(x=>x.id===+a); const lab=l? itemLabel(l) : '', kind=l&&l.it, ref=l&&l.ref, price=l&&l.pr; const err=buyListing(+a); if (err){ showToast(err); refresh(); afterAction(); return; }
   // the listing is gone because we bought it: say so, with a way to the item, instead of the generic 'Gone' sheet
-  if (UI.sheets.length){ const act=kind==='x'?'xtopy':kind==='t'?'tcopy':kind==='m'?'ccopy':'card'; UI.sheets[UI.sheets.length-1]={fn:()=>({t:'Bought', h:`<div class="stack"><div class="panel"><h3>It's yours</h3><p class="small" style="margin:0 0 8px">${esc(lab)}${price?' for '+money(price,true):''}.</p><div class="formrow">${kind==="s"?"":`<button class="btn pri" data-act="${act}" data-a="${ref}">See it</button>`}<button class="btn" data-act="sheetclose">Done</button></div></div></div>`})}; }
+  if (UI.sheets.length){ const act=copyAct(kind); UI.sheets[UI.sheets.length-1]={fn:()=>({t:'Bought', h:`<div class="stack"><div class="panel"><h3>It's yours</h3><p class="small" style="margin:0 0 8px">${esc(lab)}${price?' for '+money(price,true):''}.</p><div class="formrow">${kind==="s"?"":`<button class="btn pri" data-act="${act}" data-a="${ref}">See it</button>`}<button class="btn" data-act="sheetclose">Done</button></div></div></div>`})}; }
   showToast('Bought.', true); refresh(); afterAction(); };
 ACT.acccounter = (a,el)=>{ if (!armed(el)) return; const l=L(+a); if (!l||!l.counter) return; if (G.player.cash<l.counter){ showToast('Not enough cash.'); return; } transfer(l,0,l.counter,'offer'); refresh(); afterAction(); };
 ACT.offer = a=>{ const v=parseFloat($('#offeramt').value); if (!(v>0)){ $('#offermsg').innerHTML='<div class="err">Enter an amount.</div>'; return; } const r=playerOffer(+a, Math.round(v*100)/100);
@@ -4763,7 +4783,7 @@ VIEWS.ball = ()=>{
   let body='';
   if (s==='news'){
     const fol=new Set(G.player.follow); const only=UI.newsF==='f';
-    const ns=G.news.filter(n=>n.k!=='comic' && n.k!=='tcg' && n.k!=='xtg' && (!only || (n.p!=null && fol.has(n.p)))).slice(0,60);
+    const ns=G.news.filter(n=>n.k!=='comic' && !isCardGameNews(n.k) && (!only || (n.p!=null && fol.has(n.p)))).slice(0,60);
     body=`<div class="chips" style="margin-bottom:10px"><button class="chip ${only?'':'on'}" data-act="newsf" data-a="a">Everything</button><button class="chip ${only?'on':''}" data-act="newsf" data-a="f">Players you follow</button></div><div class="panel">${ns.map(newsRow).join('')||'<div class="empty">'+(only?'Follow players from their pages to filter news here.':'No news.')+'</div>'}</div>`;
   } else if (s==='stand'){
     const ch=G.champs[yr-1]; body=`${ch!=null?`<p class="small muted" style="margin:0 0 10px">${yr-1} champions: ${esc(teamName(ch))}.</p>`:''}<div class="cols">${standingsHTML()}</div>`;
@@ -5653,7 +5673,7 @@ function buildRecap(t0, snap0, log, stop){
   moves.sort((a,b)=>Math.abs(b.d)-Math.abs(a.d));
   const op=ownedPlayers(), os=ownedSeries(); const recent=G.news.filter(n=>n.t>t0);
   const isMine=n=> (n.p!=null && op.has(n.p)) || (n.cs!=null && os.has(n.cs));
-  const r={ t0, t1:G.day, v0, v1, moves, log, stop, mine:recent.filter(isMine), other:recent.filter(n=>!isMine(n) && (n.k==='comic'||n.k==='tcg'||n.k==='xtg'||n.p!=null||n.k==='hobby')) };
+  const r={ t0, t1:G.day, v0, v1, moves, log, stop, mine:recent.filter(isMine), other:recent.filter(n=>!isMine(n) && (n.k==='comic'||isCardGameNews(n.k)||n.p!=null||n.k==='hobby')) };
   G.player.lastRecap={ t0, t1:G.day, n:moves.length+r.mine.length };
   return r;
 }
@@ -6226,7 +6246,7 @@ function rvFinish(){
   rvClose(); if (seen.length>1) openSheet(()=>rvSummary(seen)); else if (seen.length===1 && seen[0].g>=(seen[0].k==='m'?98:10)) showToast('A '+rvGradeTxt(seen[0].k,seen[0].g)+'. Something to brag about.', true);
 }
 function rvSummary(list){
-  let raw=0, now=0, fees=0; const rows=list.map(r=>{ const o=objFor(r.k,r.id); if (!o) return ''; const v=rvValue(r.k,o); raw+=r.raw||0; now+=v; fees+=r.fee||0; return `<button class="row" data-act="${r.k==='m'?'ccopy':r.k==='t'?'tcopy':r.k==='x'?'xtopy':'card'}" data-a="${r.id}">${r.k==='m'?miniComic(o):r.k==='t'?miniT(o):miniCard(o)}<div class="rt"><b>${esc(rvTitle(r.k,o))}</b><span>${esc(popLine(r.k,o))}</span></div><div class="rv"><b>${rvGradeTxt(r.k,r.g)}</b><span class="${v>=(r.raw||0)?'up':'down'}">${money(r.raw||0,true)} → ${money(v,true)}</span></div></button>`; }).join('');
+  let raw=0, now=0, fees=0; const rows=list.map(r=>{ const o=objFor(r.k,r.id); if (!o) return ''; const v=rvValue(r.k,o); raw+=r.raw||0; now+=v; fees+=r.fee||0; return `<button class="row" data-act="${copyAct(r.k)}" data-a="${r.id}">${r.k==='m'?miniComic(o):r.k==='t'?miniT(o):miniCard(o)}<div class="rt"><b>${esc(rvTitle(r.k,o))}</b><span>${esc(popLine(r.k,o))}</span></div><div class="rv"><b>${rvGradeTxt(r.k,r.g)}</b><span class="${v>=(r.raw||0)?'up':'down'}">${money(r.raw||0,true)} → ${money(v,true)}</span></div></button>`; }).join('');
   const net=now-raw-fees;
   return { t:'Grading results', h:`<div class="stack"><div class="kpis"><div class="kpi"><small>Returned</small><b>${list.length}</b></div><div class="kpi"><small>Raw estimate</small><b>${money(raw,true)}</b></div><div class="kpi"><small>Slabs now</small><b>${money(now,true)}</b></div><div class="kpi"><small>After fees</small><b class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net),true)}</b></div></div><div class="panel"><div class="rows">${rows}</div></div></div>` };
 }
@@ -6234,7 +6254,7 @@ ACT.rvopen = ()=>{ const st=UI.rvl; if (!st || st.stage!==0) return; st.stage=1;
 ACT.rvnext = ()=>{ const st=UI.rvl; if (!st) return; st.i++; st.stage=0; rvRender(); };
 ACT.rvclose = ()=>rvClose();
 ACT.rvsummary = ()=>{ const st=UI.rvl; if (!st) return; const q=rvQueue(); for (const r of q) if (!st.done.includes(r.k+':'+r.id)) st.done.push(r.k+':'+r.id); st.i=q.length; rvRender(); };
-ACT.rvdetail = a=>{ const [k,id]=a.split(':'); const st=UI.rvl; rvClose(); if (k==='m') ACT.ccopy(id); else if (k==='t') ACT.tcopy(id); else if (k==='x') ACT.xtopy(id); else ACT.card(id); };
+ACT.rvdetail = a=>{ const [k,id]=a.split(':'); const st=UI.rvl; rvClose(); ACT[copyAct(k)](id); };
 ACT.rvstart = ()=>startReveal();
 // after time passes, open the reveal on top of the recap
 (function(){ const adv=ACT.adv; ACT.adv=async a=>{ await adv(a); try { if (!UI.busy && rvQueue().length && !UI.rvl && !UI.open) setTimeout(startReveal, 350); } catch(e){ console.error(e); } }; })();
@@ -6247,8 +6267,8 @@ function crackPanel(k, o){
   const T=(k==='m'?CGRADE_TIERS:GRADE_TIERS).find(t=>t.id==='std'); const cracks=o.cr||0;
   return `<div class="panel"><h3>Crack it out?</h3><p class="small muted" style="margin:0 0 8px">Another grader on another day can see the same book differently: it might come back higher, the same, or lower, by a grade or so. The old grade stays in the population report either way${o.gr?', and restoration, once found, stays on the record':''}. ${cracks?`You've done this ${cracks} time${cracks>1?'s':''} before. `:''}A regrade costs ${money(T.fee)} and takes ${T.days} days.</p><div class="formrow"><button class="btn sm" data-act="crack" data-a="${k}:${o.id}:0" data-confirm="Crack it out">Crack it out</button><button class="btn sm pri" data-act="crack" data-a="${k}:${o.id}:1" data-confirm="Crack and resubmit, ${money(T.fee)}" ${G.player.cash<T.fee?'disabled':''}>Crack and resubmit</button></div></div>`;
 }
-ACT.crack = (a,el)=>{ if (!armed(el)) return; const [k,id,re]=a.split(':'); const e = k==='m'? crackComic(+id) : k==='t'? crackTc(+id) : k==='x'? crackXt(+id) : crackCard(+id); if (e){ showToast(e); return; }
-  if (re==='1'){ const e2 = k==='m'? cmSubmitGrade(+id,'std',false) : k==='t'? tcSubmitGrade(+id,'std') : k==='x'? xtSubmitGrade(+id,'std') : submitGrading(+id,'std'); if (e2){ showToast(e2); } else showToast('Cracked out and resubmitted. Fingers crossed.', true); } else showToast('Out of the slab. It\'s a raw '+(k==='m'?'comic':'card')+' again.', true);
+ACT.crack = (a,el)=>{ if (!armed(el)) return; const [k,id,re]=a.split(':'); const e = k==='m'? crackComic(+id) : cardLineOfKind(k)? cardLineOfKind(k).crack(+id) : crackCard(+id); if (e){ showToast(e); return; }
+  if (re==='1'){ const e2 = k==='m'? cmSubmitGrade(+id,'std',false) : cardLineOfKind(k)? cardLineOfKind(k).submit(+id) : submitGrading(+id,'std'); if (e2){ showToast(e2); } else showToast('Cracked out and resubmitted. Fingers crossed.', true); } else showToast('Out of the slab. It\'s a raw '+(k==='m'?'comic':'card')+' again.', true);
   closeSheet(); render(true); queueSave(); };
 cardSheet = (function(f){ return function(id){ const r=f(id); const c=C(id); if (!r || !c || c.o!==0) return r; const p=crackPanel('c',c); if (p){ const i=r.h.lastIndexOf('<div class="panel"><h3>History'); r.h = i>=0? r.h.slice(0,i)+p+r.h.slice(i) : r.h+p; } if (c.pg && c.g===0){ r.h=r.h.replace('<dl class="kv">','<p class="small muted" style="margin:0">Cracked from a GCS '+c.pg+' slab.</p><dl class="kv">'); } return r; }; })(cardSheet);
 cmCopySheet = (function(f){ return function(id){ const r=f(id); const c=MC(id); if (!r || !c || c.o!==0) return r; const p=crackPanel('m',c); if (p){ const i=r.h.lastIndexOf('<div class="panel"><h3>History'); r.h = i>=0? r.h.slice(0,i)+p+r.h.slice(i) : r.h+p; } return r; }; })(cmCopySheet);
@@ -6455,22 +6475,22 @@ function applyScenario(id){
 
 // ===================== YOUR YEAR IN COLLECTING =====================
 // Built from what already exists: provenance, sale history, what you looked at and passed on, grading returns, chases.
-function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); if (G.tcg && typeof myTc==='function') for (const c of myTc()) v+=tcCopyValue(c); if (G.xtg && typeof myXt==='function') for (const c of myXt()) v+=xtCopyValue(c); return Math.round(v*100)/100; }   // everything owned except cash (Wildkin cards and sealed product included)
+function netWorthNow(){ let v=0; for (const c of myCards()) v+=cardValue(c); if (G.cm) for (const c of myComics()) v+=cmCopyValue(c); for (const s of mySealed()) v+=sealedFair(G.products[s.p],s.f); for (const L of CARD_LINES) if (L.has()) for (const c of L.mine()) v+=L.value(c); return Math.round(v*100)/100; }   // everything owned except cash (Wildkin cards and sealed product included)
 function snapNW(force){ const P_=G.player; const L=P_.nw=P_.nw||[]; if (!force && L.length && G.day-L[L.length-1][0]<7) return; L.push([G.day, Math.round(P_.cash*100)/100, netWorthNow(), Math.round(P_.bought), Math.round(P_.sold), Math.round(P_.fees), P_.packs||0, P_.paid||0]); if (L.length>420) L.shift(); }
 function noteSeen(kind, id, price, where){ const P_=G.player; const S=P_.seen=P_.seen||{}; const k=kind+':'+id; if (S[k]) return; S[k]=[G.day, Math.round(price*100)/100, where]; const ks=Object.keys(S); if (ks.length>320){ ks.sort((a,b)=>S[a][0]-S[b][0]); for (let i=0;i<40;i++) delete S[ks[i]]; } }
-function objValue(k, o){ return k==='x'? xtCopyValue(o) : k==='t'? tcCopyValue(o) : k==='m'? cmCopyValue(o) : cardValue(o); }
-function objLabel(k, o){ return k==='x'? xtCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':'') : k==='t'? tcCardLabel(o.k)+(o.g>0?' (GCS '+o.g+')':'') : k==='m'? cmItemLabel(o) : cardName(o)+' '+D(o.k).prod.yr+' '+D(o.k).title+(o.g>0?' (GCS '+o.g+')':''); }
+function objValue(k, o){ return cardLineOfKind(k)? cardLineOfKind(k).value(o) : k==='m'? cmCopyValue(o) : cardValue(o); }
+function objLabel(k, o){ return cardLineOfKind(k)? cardLineOfKind(k).label(o) : k==='m'? cmItemLabel(o) : cardName(o)+' '+D(o.k).prod.yr+' '+D(o.k).title+(o.g>0?' (GCS '+o.g+')':''); }
 function jPeriod(y){ const t0=Math.max(G.player.start, dateToDay(y,1,1)); const t1=y>=yearOf(G.day)? G.day : dateToDay(y,12,31); return [t0,t1]; }
 function jRef(k, o, extra){ return Object.assign({k, id:o.id, label:objLabel(k,o)}, extra||{}); }
 function buildYear(y){
   const [t0,t1]=jPeriod(y); const P_=G.player; const snaps=(P_.nw||[]).filter(s=>s[0]<=t1); const inP=snaps.filter(s=>s[0]>=t0);
   const s0 = snaps.filter(s=>s[0]<=t0).pop() || inP[0] || snaps[0]; const s1 = inP[inP.length-1] || snaps[snaps.length-1];
-  const kinds=[['c',Object.values(G.cards)], ['m', G.cm? Object.values(G.mc):[]], ['t', G.tcg? Object.values(G.tc):[]], ['x', G.xtg? Object.values(G.xtc):[]]];
+  const kinds=[['c',Object.values(G.cards)], ['m', G.cm? Object.values(G.mc):[]], ...CARD_LINES.map(L=>[L.kind, L.has()? Object.values(L.copies()):[]])];
   const acq=[], sold=[], pulls=[]; let nCards=0, nComics=0;
   for (const [k,arr] of kinds) for (const o of arr){
-    if (o.pv && !o.sc && o.pv.d>=t0 && o.pv.d<=t1){ if (k==='c'||k==='t'||k==='x') nCards++; else nComics++; const paid=(o.a&&o.a[2])||0; const soldH=(o.h||[]).filter(h=>typeof h[1]==='string' && h[1].startsWith('Sold') && h[0]>=o.pv.d).pop();
+    if (o.pv && !o.sc && o.pv.d>=t0 && o.pv.d<=t1){ if (k==='c'||isCardGameKind(k)) nCards++; else nComics++; const paid=(o.a&&o.a[2])||0; const soldH=(o.h||[]).filter(h=>typeof h[1]==='string' && h[1].startsWith('Sold') && h[0]>=o.pv.d).pop();
       if (o.o===0){ const now=objValue(k,o); acq.push({k, o, paid, now, gain:now-paid, sold:false}); } else if (soldH){ acq.push({k, o, paid, now:soldH[2], gain:soldH[2]-paid, sold:true}); }
-      if ((k==='c'||k==='t'||k==='x') && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
+      if ((k==='c'||isCardGameKind(k)) && o.a && o.a[1]==='pulled') pulls.push({k, o, now:objValue(k,o)}); }
     if (o.h) for (const h of o.h) if (h[0]>=t0 && h[0]<=t1 && typeof h[1]==='string' && h[1].startsWith('Sold') && h[2]>0 && o.o!==0){ sold.push({k, o, price:h[2], now:objValue(k,o), t:h[0]}); }
   }
   const pick1=(arr,f)=>arr.slice().sort((a,b)=>f(b)-f(a))[0];
@@ -6506,7 +6526,7 @@ ACT.hitem = (function(f){ return function(a){ try { const [s,t,id]=hsplit(a); co
 ACT.cshopcopy = (function(f){ return function(a){ try { const [id,from]=a.split(':'); const cp=MC(+id); if (cp && cp.o===SHOP_ID){ const pr=from==='bin'?1:((G.cm.shop.back.find(x=>x[0]===+id)||[0,0])[1]); noteSeen('m',+id,pr,SHOP_NAME); } } catch(e){} return f(a); }; })(ACT.cshopcopy);
 enterEvent = (function(f){ return function(evId, late){ const r=f(evId, late); if (r===null){ const ev=G.hunt.ev.find(x=>x.id===evId); const L_=G.player.evlog=G.player.evlog||[]; if (ev && !L_.some(e=>e.d===G.day && e.id===evId)){ L_.push({d:G.day, id:evId, n:ev.n}); if (L_.length>200) L_.shift(); } } return r; }; })(enterEvent);
 // ---------- UI ----------
-function jRow(x){ const o=objFor(x.k,x.id); const thumb=o? (x.k==='m'?miniComic(o):x.k==='x'?xMiniT(o):x.k==='t'?miniT(o):miniCard(o)) : '<div class="mini"></div>'; const act=x.k==='m'?'ccopy':x.k==='x'?'xtopy':x.k==='t'?'tcopy':'card'; return `<button class="row" ${o?`data-act="${act}" data-a="${x.id}"`:'style="cursor:default"'}>${thumb}<div class="rt"><b>${esc(x.label)}</b>${x.paid!=null&&x.now!=null?`<span>Cost ${money(x.paid,true)}, ${x.sold?'sold for':'worth'} ${money(x.now,true)}</span>`:x.price!=null?`<span>You sold it for ${money(x.price,true)}; about ${money(x.now,true)} now</span>`:x.ask!=null?`<span>Seen ${x.where?'at '+esc(x.where)+' ':''}for ${money(x.ask,true)}; about ${money(x.now,true)} now</span>`:x.now!=null?`<span>About ${money(x.now,true)}</span>`:''}</div></button>`; }
+function jRow(x){ const o=objFor(x.k,x.id); const thumb=o? (x.k==='m'?miniComic(o):cardLineOfKind(x.k)?cardLineOfKind(x.k).mini(o):miniCard(o)) : '<div class="mini"></div>'; const act=copyAct(x.k); return `<button class="row" ${o?`data-act="${act}" data-a="${x.id}"`:'style="cursor:default"'}>${thumb}<div class="rt"><b>${esc(x.label)}</b>${x.paid!=null&&x.now!=null?`<span>Cost ${money(x.paid,true)}, ${x.sold?'sold for':'worth'} ${money(x.now,true)}</span>`:x.price!=null?`<span>You sold it for ${money(x.price,true)}; about ${money(x.now,true)} now</span>`:x.ask!=null?`<span>Seen ${x.where?'at '+esc(x.where)+' ':''}for ${money(x.ask,true)}; about ${money(x.now,true)} now</span>`:x.now!=null?`<span>About ${money(x.now,true)}</span>`:''}</div></button>`; }
 function yearSheetHTML(r, live){
   const net=r.end-r.start-r.paid; const bits=[];
   return `<div class="stack"><div class="title-block"><div class="yr">${live?'So far this year':'The year in review'}</div><h1>${r.y}</h1><div class="sub">${fmtDate(r.t0,true)} to ${fmtDate(r.t1,true)}</div></div>
@@ -6849,8 +6869,7 @@ async function boot(){
   if (!ok){ await startNew(); return; }
   migrate();
   if (!G.cm){ await bootProg(0.05,'Opening the comic shop'); await upgradeComics(async(f,m)=>bootProg(0.05+f*0.9,'Comics history: '+m.toLowerCase())); await bootProg(0.97,'Stocking the shelves'); migrate(); saveGame(true); }
-  if (!G.tcg){ await bootProg(0.5,'Opening the card game shop'); await upgradeTcg(async(f,m)=>bootProg(0.5+f*0.45,m)); migrate(); saveGame(true); }
-  if (typeof upgradeXt==='function' && !G.xtg){ await bootProg(0.6,'Opening the second card game'); await upgradeXt(null); migrate(); saveGame(true); }
+  for (const L of CARD_LINES) if (!L.has()){ await bootProg(L.boot.at,L.boot.msg); await L.upgrade(async(f,m)=>bootProg(L.boot.at+f*L.boot.span,m)); migrate(); saveGame(true); }
   if (!G.hunt){ await bootProg(0.98,'Mapping the local hobby scene'); huntInit(); saveGame(true); }
   seedTracking();
   UI.booting=false; b.style.display='none'; render();
@@ -6978,8 +6997,7 @@ async function shellOpen(id){
     const x=await slotRead(id); await bootProg(0.2,'Unpacking'); G=await unpackBytes(x.bytes,x.enc); R=worldRnd; if (typeof resetCaches==='function') resetCaches(); DCACHE.clear(); fvClear(); G._npcCardIds=Object.keys(G.cards).map(Number).filter(i=>G.cards[i].o>0);
     if (G.cm) cmNormalize(); huntNormalize(); migrate();
     if (packHas('comics') && !G.cm){ await bootProg(0.3,'Opening the comic shop'); await upgradeComics(async(f,m)=>bootProg(0.3+f*0.6,'Comics history: '+m.toLowerCase())); migrate(); }
-    if (packHas('tcg') && typeof upgradeTcg==='function' && !G.tcg){ await bootProg(0.5,'Opening the card game shop'); await upgradeTcg(async(f,m)=>bootProg(0.5+f*0.45,m)); migrate(); }
-    if (packHas('tcg') && typeof upgradeXt==='function' && !G.xtg){ await bootProg(0.9,'Opening the second card game'); await upgradeXt(async(f,m)=>bootProg(0.9+f*0.08,m)); migrate(); }
+    if (packHas('tcg')) for (const L of CARD_LINES) if (!L.has()){ await bootProg(L.boot.at,L.boot.msg); await L.upgrade(async(f,m)=>bootProg(L.boot.at+f*L.boot.span,m)); migrate(); }   // a save from before a line existed gets that line's world
     if (!G.hunt){ await bootProg(0.98,'Mapping the local hobby scene'); huntInit(); }
     seedTracking(); SLOT.id=id; SLOT.name=x.rec.name; UI.booting=false; UI.tab=PACK.homeTab||'home'; b.style.display='none'; render(); saveGame(true);
   } catch(e){ console.error(e); bootFail(b,String(e&&e.message||e)); }
@@ -7001,11 +7019,11 @@ ACT.newgame=ACT.slots; ACT.importsave=async()=>{};
 
 // ===================== APPLYING A GAME: TABS, FILTERS, SCREENS =====================
 TABS.length=0; TABS.push(...PACK.tabs);
-const _mfP=marketFiltered; marketFiltered=function(){ return _mfP().filter(l=> l.it==='t'||l.it==='x'? packHas('tcg') : l.it==='m'? packHas('comics') : PACK.worlds.sports!==false); };
+const _mfP=marketFiltered; marketFiltered=function(){ return _mfP().filter(l=> cardLineOfKind(l.it)? packHas('tcg') : l.it==='m'? packHas('comics') : PACK.worlds.sports!==false); };
 const _mvP=VIEWS.market; VIEWS.market=()=>{ let h=_mvP(); if (PACK.id==='tcg' && UI.sub.market==='browse' && !/^(tc|xt)/.test(String(UI.mf.type))){ const q=_mvP(); const i=q.indexOf('<div class="chips"'); if (i>=0){ const j=q.indexOf('</div>',i)+6; const chip=(k,n)=>`<button class="chip ${UI.mf.type===k?'on':''}" data-act="mft" data-a="${k}">${n}</button>`; h=q.slice(0,i)+`<div class="chips" style="margin-bottom:10px">${chip('all','Everything')}${chip('tc','Wildkin')}${chip('xt','Tidemark')}</div>`+q.slice(j); h=h.replace('placeholder="Player, team, product, parallel..."','placeholder="Card, set, faction, rarity..."'); return h; } } if (!packHas('comics')) h=h.replace(/<button class="chip [^"]*" data-act="mft" data-a="cm">Comics<\/button>/,'');  return h; };
-function packNews(n){ if (PACK.id==='sports') return n.k!=='comic' && n.k!=='tcg'; if (n.k==='hobby') return /YOUR STORY STARTS|A NEW COLLECTOR/.test(n.h||''); return PACK.id==='comics'? n.k==='comic' : (n.k==='tcg'||n.k==='xtg'); }
+function packNews(n){ if (PACK.id==='sports') return n.k!=='comic' && n.k!=='tcg'; if (n.k==='hobby') return /YOUR STORY STARTS|A NEW COLLECTOR/.test(n.h||''); return PACK.id==='comics'? n.k==='comic' : isCardGameNews(n.k); }
 const _brP=buildRecap; buildRecap=function(){ const r=_brP.apply(this,arguments); if (r&&r.other) r.other=r.other.filter(packNews); return r; };
-const KEEP_KINDS={sports:['grade','market','cash','cards','hunt','breaks'], comics:['grade','market','comics','cash','hunt'], tcg:['grade','market','cash','tcg','xtg']};
+const KEEP_KINDS={sports:['grade','market','cash','cards','hunt','breaks'], comics:['grade','market','comics','cash','hunt'], tcg:['grade','market','cash',...CARD_LINES.map(L=>L.news)]};
 const _unP=upNext; upNext=function(){ return _unP().filter(x=>!x.kind || KEEP_KINDS[PACK.id].includes(x.kind)); };
 // collection tabs: only what this game collects
 if (PACK.id!=='tcg'){ const _cvP=VIEWS.coll; const hide= PACK.id==='sports'? ['comics','runs'] : ['cards','sealed','sets'];
