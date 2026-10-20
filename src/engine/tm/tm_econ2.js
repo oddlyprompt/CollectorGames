@@ -165,9 +165,9 @@ function xtKvDay(t){
   // dealers sell: each item has a small chance of going to a collector each day, at once if it is cheap
   for (let i=inv.length-1;i>=0;i--){ const c=G.xtc[inv[i]]; if (!c){ inv.splice(i,1); continue; } if (R()<0.018){ const b=pick(G.npcs.filter(isXtNPC)); c.o=b.id; (G._npcXtIds=G._npcXtIds||[]).push(c.id); inv.splice(i,1); } }
   if (dowOf(t)!==1) return;
-  const want=20+Math.floor(R()*13), cand=G._npcXtIds||[]; let got=0;
-  for (let tries=0; tries<500 && got<want && inv.length<300 && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
-    const v=xtCopyValue(c); if (v<0.2) continue; const p=(XT_KV_BUY[n.ty]||0.15)*(n.ty==='xtm'&&n.setN===d.set?0.1:1)*((d.card.res||d.rar==='leg')&&n.ty!=='xfl'?0.5:1); if (R()>p) continue;
+  const want=24+Math.floor(R()*15), cand=G._npcXtIds||[]; let got=0;
+  for (let tries=0; tries<500 && got<want && inv.length<420 && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
+    const v=xtCopyValue(c); if (v<0.05) continue; const p=(XT_KV_BUY[n.ty]||0.15)*(n.ty==='xtm'&&n.setN===d.set?0.1:1)*((d.card.res||d.rar==='leg')&&n.ty!=='xfl'?0.5:1); if (R()>p) continue;
     n.cash+=Math.round(v*0.7*100)/100; c.o=-2; c.a=[t,'held',0,'']; inv.push(id); got++; }
 }
 function xtV2KvStock(t){   // recent sets are stocked as before; older prints are only what dealers have bought
