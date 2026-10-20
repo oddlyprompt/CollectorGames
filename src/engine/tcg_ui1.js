@@ -71,7 +71,7 @@ function tcCollGroups(){
   const rk=d=>{ if (d.sealed) return 'sealed'; const c=d.card; return tcIsPrem(c)? 'prem' : c.kind==='essence'? 'ess' : c.kind!=='creature'? 'trainer' : c.rar; };
   if (r!=='all') a=a.filter(c=>rk(tcD(c.k))===r);
   if (q) a=a.filter(c=>{ const d=tcD(c.k); return (d.title+' '+(d.card?(d.card.el||'')+' '+String(d.no).padStart(3,'0'):'')).toLowerCase().includes(q); });
-  const G2=new Map(); for (const c of a){ const k=c.k+'|'+(c.g>0?'g'+c.g:c.g<0?'atgcs':tcLabel(c.c))+'|'+(c.l?'l':'')+(c.nw?'n':''); let g=G2.get(k); if (!g){ g={cs:[],k:c.k,v:0}; G2.set(k,g); } g.cs.push(c); g.v=Math.max(g.v,tcCopyValue(c)); }
+  const G2=new Map(); for (const c of a){ const k=c.k+'|'+(c.g>0?'g'+c.g:c.g<0?'atgcs':condLabel(c.c))+'|'+(c.l?'l':'')+(c.nw?'n':''); let g=G2.get(k); if (!g){ g={cs:[],k:c.k,v:0}; G2.set(k,g); } g.cs.push(c); g.v=Math.max(g.v,tcCopyValue(c)); }
   const out=[...G2.values()]; const so=UI.tcso;
   out.sort(so==='num'? (x,y)=>tcD(x.k).no-tcD(y.k).no||y.v-x.v : so==='name'? (x,y)=>tcD(x.k).title.localeCompare(tcD(y.k).title)||y.v-x.v : so==='new'? (x,y)=>Math.max(...y.cs.map(c=>c.id))-Math.max(...x.cs.map(c=>c.id)) : so==='many'? (x,y)=>y.cs.length-x.cs.length||y.v-x.v : (x,y)=>y.v-x.v);
   return {out, cnt, total:a.length};
@@ -82,7 +82,7 @@ function tcCollV(){
   const ch=(k,n)=>`<button class="chip ${f===k?'on':''}" data-act="tcc" data-a="${k}">${n} (${cnt[k]})</button>`;
   const rc=(k,n)=>`<button class="chip ${r===k?'on':''}" data-act="tcr" data-a="${k}">${n}</button>`;
   const cell=g=>{ const c=g.cs[0], d=tcD(g.k), n=g.cs.length; const tags=[c.nw?'<i class="tag new">New</i>':'', c.l?'<i class="tag">Listed</i>':c.g<0?'<i class="tag">At GCS</i>':''].join('');
-    return `<button class="gcell" data-act="tcopy" data-a="${c.id}">${n>1?`<span class="count">×${n}</span>`:''}${miniT(c)}<div class="cap"><b>${esc(d.title)}</b><span>${d.sealed?'Sealed':TC_VARN[d.v]+', '+(c.g>0?'GCS '+c.g:c.g<0?'at GCS':tcLabel(c.c))}${d.no?' · #'+String(d.no).padStart(3,'0'):''}</span><span>${money(g.v,true)}${n>1?' each':''}${tags}</span></div></button>`; };
+    return `<button class="gcell" data-act="tcopy" data-a="${c.id}">${n>1?`<span class="count">×${n}</span>`:''}${miniT(c)}<div class="cap"><b>${esc(d.title)}</b><span>${d.sealed?'Sealed':TC_VARN[d.v]+', '+(c.g>0?'GCS '+c.g:c.g<0?'at GCS':condLabel(c.c))}${d.no?' · #'+String(d.no).padStart(3,'0'):''}</span><span>${money(g.v,true)}${n>1?' each':''}${tags}</span></div></button>`; };
   const nav=pages>1? `<div class="pager"><button class="btn sm" data-act="tcpage" data-a="0" ${pg===0?'disabled':''}>« First</button><button class="btn sm" data-act="tcpage" data-a="${pg-1}" ${pg===0?'disabled':''}>‹ Prev</button><span class="small">Page ${pg+1} of ${pages}</span><button class="btn sm" data-act="tcpage" data-a="${pg+1}" ${pg>=pages-1?'disabled':''}>Next ›</button><button class="btn sm" data-act="tcpage" data-a="${pages-1}" ${pg>=pages-1?'disabled':''}>Last »</button></div>` : '';
   return `<div class="chips">${ch('all','All')}${ch('raw','Raw')}${ch('gr','Graded')}${ch('sl','Sealed')}${ch('ls','Listed')}</div>
   <div class="chips">${rc('all','Any rarity')}${rc('prem','Premium')}${rc('rare','Rare')}${rc('unc','Uncommon')}${rc('common','Common')}${rc('trainer','Allies, gear, biomes, tactics')}${rc('ess','Essence')}${rc('sealed','Packs and boxes')}</div>

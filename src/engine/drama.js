@@ -67,7 +67,7 @@ function rvFinish(){
   rvClose(); if (seen.length>1) openSheet(()=>rvSummary(seen)); else if (seen.length===1 && seen[0].g>=(seen[0].k==='m'?98:10)) showToast('A '+rvGradeTxt(seen[0].k,seen[0].g)+'. Something to brag about.', true);
 }
 function rvSummary(list){
-  let raw=0, now=0, fees=0; const rows=list.map(r=>{ const o=objFor(r.k,r.id); if (!o) return ''; const v=rvValue(r.k,o); raw+=r.raw||0; now+=v; fees+=r.fee||0; return `<button class="row" data-act="${r.k==='m'?'ccopy':r.k==='t'?'tcopy':'card'}" data-a="${r.id}">${r.k==='m'?miniComic(o):r.k==='t'?miniT(o):miniCard(o)}<div class="rt"><b>${esc(rvTitle(r.k,o))}</b><span>${esc(popLine(r.k,o))}</span></div><div class="rv"><b>${rvGradeTxt(r.k,r.g)}</b><span class="${v>=(r.raw||0)?'up':'down'}">${money(r.raw||0,true)} → ${money(v,true)}</span></div></button>`; }).join('');
+  let raw=0, now=0, fees=0; const rows=list.map(r=>{ const o=objFor(r.k,r.id); if (!o) return ''; const v=rvValue(r.k,o); raw+=r.raw||0; now+=v; fees+=r.fee||0; return `<button class="row" data-act="${copyAct(r.k)}" data-a="${r.id}">${r.k==='m'?miniComic(o):r.k==='t'?miniT(o):miniCard(o)}<div class="rt"><b>${esc(rvTitle(r.k,o))}</b><span>${esc(popLine(r.k,o))}</span></div><div class="rv"><b>${rvGradeTxt(r.k,r.g)}</b><span class="${v>=(r.raw||0)?'up':'down'}">${money(r.raw||0,true)} → ${money(v,true)}</span></div></button>`; }).join('');
   const net=now-raw-fees;
   return { t:'Grading results', h:`<div class="stack"><div class="kpis"><div class="kpi"><small>Returned</small><b>${list.length}</b></div><div class="kpi"><small>Raw estimate</small><b>${money(raw,true)}</b></div><div class="kpi"><small>Slabs now</small><b>${money(now,true)}</b></div><div class="kpi"><small>After fees</small><b class="${net>=0?'up':'down'}">${net>=0?'+':'−'}${money(Math.abs(net),true)}</b></div></div><div class="panel"><div class="rows">${rows}</div></div></div>` };
 }
@@ -75,7 +75,7 @@ ACT.rvopen = ()=>{ const st=UI.rvl; if (!st || st.stage!==0) return; st.stage=1;
 ACT.rvnext = ()=>{ const st=UI.rvl; if (!st) return; st.i++; st.stage=0; rvRender(); };
 ACT.rvclose = ()=>rvClose();
 ACT.rvsummary = ()=>{ const st=UI.rvl; if (!st) return; const q=rvQueue(); for (const r of q) if (!st.done.includes(r.k+':'+r.id)) st.done.push(r.k+':'+r.id); st.i=q.length; rvRender(); };
-ACT.rvdetail = a=>{ const [k,id]=a.split(':'); const st=UI.rvl; rvClose(); if (k==='m') ACT.ccopy(id); else if (k==='t') ACT.tcopy(id); else ACT.card(id); };
+ACT.rvdetail = a=>{ const [k,id]=a.split(':'); const st=UI.rvl; rvClose(); ACT[copyAct(k)](id); };
 ACT.rvstart = ()=>startReveal();
 // after time passes, open the reveal on top of the recap
 (function(){ const adv=ACT.adv; ACT.adv=async a=>{ await adv(a); try { if (!UI.busy && rvQueue().length && !UI.rvl && !UI.open) setTimeout(startReveal, 350); } catch(e){ console.error(e); } }; })();
@@ -88,8 +88,8 @@ function crackPanel(k, o){
   const T=(k==='m'?CGRADE_TIERS:GRADE_TIERS).find(t=>t.id==='std'); const cracks=o.cr||0;
   return `<div class="panel"><h3>Crack it out?</h3><p class="small muted" style="margin:0 0 8px">Another grader on another day can see the same book differently: it might come back higher, the same, or lower, by a grade or so. The old grade stays in the population report either way${o.gr?', and restoration, once found, stays on the record':''}. ${cracks?`You've done this ${cracks} time${cracks>1?'s':''} before. `:''}A regrade costs ${money(T.fee)} and takes ${T.days} days.</p><div class="formrow"><button class="btn sm" data-act="crack" data-a="${k}:${o.id}:0" data-confirm="Crack it out">Crack it out</button><button class="btn sm pri" data-act="crack" data-a="${k}:${o.id}:1" data-confirm="Crack and resubmit, ${money(T.fee)}" ${G.player.cash<T.fee?'disabled':''}>Crack and resubmit</button></div></div>`;
 }
-ACT.crack = (a,el)=>{ if (!armed(el)) return; const [k,id,re]=a.split(':'); const e = k==='m'? crackComic(+id) : k==='t'? crackTc(+id) : crackCard(+id); if (e){ showToast(e); return; }
-  if (re==='1'){ const e2 = k==='m'? cmSubmitGrade(+id,'std',false) : k==='t'? tcSubmitGrade(+id,'std') : submitGrading(+id,'std'); if (e2){ showToast(e2); } else showToast('Cracked out and resubmitted. Fingers crossed.', true); } else showToast('Out of the slab. It\'s a raw '+(k==='m'?'comic':'card')+' again.', true);
+ACT.crack = (a,el)=>{ if (!armed(el)) return; const [k,id,re]=a.split(':'); const e = k==='m'? crackComic(+id) : cardLineOfKind(k)? cardLineOfKind(k).crack(+id) : crackCard(+id); if (e){ showToast(e); return; }
+  if (re==='1'){ const e2 = k==='m'? cmSubmitGrade(+id,'std',false) : cardLineOfKind(k)? cardLineOfKind(k).submit(+id) : submitGrading(+id,'std'); if (e2){ showToast(e2); } else showToast('Cracked out and resubmitted. Fingers crossed.', true); } else showToast('Out of the slab. It\'s a raw '+(k==='m'?'comic':'card')+' again.', true);
   closeSheet(); render(true); queueSave(); };
 cardSheet = (function(f){ return function(id){ const r=f(id); const c=C(id); if (!r || !c || c.o!==0) return r; const p=crackPanel('c',c); if (p){ const i=r.h.lastIndexOf('<div class="panel"><h3>History'); r.h = i>=0? r.h.slice(0,i)+p+r.h.slice(i) : r.h+p; } if (c.pg && c.g===0){ r.h=r.h.replace('<dl class="kv">','<p class="small muted" style="margin:0">Cracked from a GCS '+c.pg+' slab.</p><dl class="kv">'); } return r; }; })(cardSheet);
 cmCopySheet = (function(f){ return function(id){ const r=f(id); const c=MC(id); if (!r || !c || c.o!==0) return r; const p=crackPanel('m',c); if (p){ const i=r.h.lastIndexOf('<div class="panel"><h3>History'); r.h = i>=0? r.h.slice(0,i)+p+r.h.slice(i) : r.h+p; } return r; }; })(cmCopySheet);

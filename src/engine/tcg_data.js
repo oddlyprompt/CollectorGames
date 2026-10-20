@@ -4,6 +4,7 @@
 // (Duskfall reprints 27 First Bond cards) is the same card in play: it carries the first print's identity (cid).
 // Saves only hold what changes (copies, prices, the metagame, bans); the catalog is rebuilt from the manifest on load.
 const TC_EL=WK_CANON.set.aff.map(a=>a.n);                 // Verdant Tide Stone Iron Ember Storm Astral Dusk Wonder
+const WK_ECON={version:'v1', condition:CONDITION_V1};   // the line's economy strategies (kit/economy.js)
 const TC_CV=2;                                            // content version in saves: 2 = Version 1 cards. Saves without it are prototype saves.
 const TC_RAROR={ess:-1,common:0,unc:1,rare:2,ir:3,fa:4,sir:5,csr:6};
 const TC_RARN={ess:'Essence',common:'Common',unc:'Uncommon',rare:'Rare',ir:'Illustration rare',fa:'Full art',sir:'Special illustration rare',csr:'Clasped secret rare'};

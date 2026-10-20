@@ -1,6 +1,6 @@
 {
- "name": "Wildkin Collector",
- "short_name": "Wildkin",
+ "name": "Trading Card Collector",
+ "short_name": "Trading",
  "start_url": "./",
  "display": "standalone",
  "background_color": "#0c0e12",

@@ -7,8 +7,10 @@ const SCENARIOS = [
   {id:'storage', n:'The storage unit', d:'A semi-retired dealer\'s leftover stock, $1,200, and no allowance. Sell to eat.', cash:1200, pay:0},
   {id:'fan', n:'Diehard fan', d:'A shoebox of one team\'s cards from childhood, $200, and $40 a week. You already know who your guys are.', cash:200, pay:40},
   {id:'reader', n:'Pull-list reader', d:'You have read one series since issue #1, and you have every issue. $200 and $40 a week.', cash:200, pay:40},
-  {id:'tcgbinder', n:'Launch day preorder', d:'Twelve First Bond packs, already paid for, arriving on launch day next week. $100 and $40 a week.', cash:100, pay:40},
-  {id:'tcgbox', n:'A box to open', d:'Two First Bond boxes, already paid for, arriving on launch day next week, and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
+  {id:'tcgbinder', n:'First Bond preorder', d:'Twelve First Bond packs, already paid for, arriving on launch day next week. $100 and $40 a week.', cash:100, pay:40},
+  {id:'tcgbox', n:'A First Bond box', d:'Two First Bond boxes, already paid for, arriving on launch day next week, and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
+  {id:'tmbinder', n:'Tenth Tide preorder', d:'Twelve Tenth Tide packs, already paid for, arriving on release day in a few weeks. $100 and $40 a week.', cash:100, pay:40},
+  {id:'tmbox', n:'A Tenth Tide box', d:'Two Tenth Tide boxes, already paid for, arriving on release day in a few weeks, and $50. Open them, or hold them and see what happens. $40 a week.', cash:50, pay:40},
   {id:'windfall', n:'Deep pockets', d:'$10,000 and no allowance. Nothing forces you. See how the market treats a whale.', cash:10000, pay:0}
 ];
 function pickScenario(){

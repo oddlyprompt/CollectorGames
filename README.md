@@ -6,7 +6,7 @@ Three fictional collecting games built from one engine. Everything in them is ma
 |---|---|---|
 | Sports Card Collector | `docs/sports` | baseball cards, packs, grading, shows |
 | Comics Collector | `docs/comics` | a century of comics, preorders, variants, grading |
-| Wildkin Collector | `docs/tcg` | a creature trading card game with sets, tournaments, bans and rotations |
+| Trading Card Collector | `docs/tcg` | two card games in one world: Wildkin (creatures) and Tidemark (land and sea), with sets, tournaments, bans, rotations and one shared market |
 
 Each game saves to named slots in the browser, so you can run several games at once. Settings has **Download a backup**, which gives you a `.ccsave` file you can restore on another device.
 
