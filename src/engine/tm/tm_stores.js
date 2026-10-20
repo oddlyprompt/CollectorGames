@@ -17,20 +17,21 @@ function xtLgsDay(t){ const L=xtLgs(), n=xtNewestSet(t); const age=n? t-xtSetDef
   if (n){ L.pack=Math.max(0, L.pack-poisson(hot*4)); L.box=Math.max(0, L.box-poisson(hot*0.35)); }
   for (const x of L.cs) if (!x.sold && R()<0.04*Math.max(hot,0.5)) x.sold=1; L.cs=L.cs.filter(x=>!x.sold); }
 // the glass case: a mix that leans toward the cards people come in for, priced at the store's markup over market
-function xtLgsCase(t, force){ const L=xtLgs(), wk=weekNo(t); if (!force && L.caseWk===wk) return; const rel=xtReleasedSets(t); if (!rel.length) return; L.caseWk=wk;
+function xtLgsCase(t, force){ const L=xtLgs(), wk=weekNo(t); if (!force && L.caseWk===wk) return; const rel=xtReleasedSets(t).filter(n=>!xtV2()||n===TM_TT||(t-xtSetDef(n).rel)/365<XT_E2.vintageYears); if (!rel.length) return; L.caseWk=wk;
   const r=mkRng(hsh('lgs'+G.seed+wk)); const sets=new Set(); if (rel.includes(TM_TT)) sets.add(TM_TT); while (sets.size<Math.min(rel.length,7)) sets.add(rel[Math.floor(r()*rel.length)]);
   const keys=[...sets].flatMap(xtAllKeys);
   const w=k=>{ const d=xtD(k), o=XT_RAROR[d.card.rar]; return (d.v==='F'? 0.6 : 1)*(o<=0? 0.5 : o===1? 0.8 : o===2? 2.2 : o===3? 1.6 : 0.8)*(d.set===TM_TT? 2 : 1); }; const tot=keys.reduce((s,k)=>s+w(k),0);
   L.cs=[]; for (let i=0;i<XLGS_CASE;i++){ let x=r()*tot, k=keys[0]; for (const kk of keys){ x-=w(kk); if (x<=0){ k=kk; break; } }
     const c=r()<0.7? condFresh(r,0.6) : condWorn(r, Math.max(0,(t-xtSetDef(xtD(k).set).rel)/365), 1); L.cs.push({id:L.nid++, k, c}); } }
 // ---------- Saltmarket, online singles ----------
-function xtKvStock(t){ const K=xtKv(), wk=weekNo(t); if (K.wk===wk) return K.s; K.wk=wk; K.s={}; const r=mkRng(hsh('kv'+G.seed+wk));
+function xtKvStock(t){ if (xtV2()) return xtV2KvStock(t);
+  const K=xtKv(), wk=weekNo(t); if (K.wk===wk) return K.s; K.wk=wk; K.s={}; const r=mkRng(hsh('kv'+G.seed+wk));
   for (const n of xtReleasedSets(t)) for (const k of xtAllKeys(n)){ const d=xtD(k), o=XT_RAROR[d.card.rar]; let q;
     if (o<=0) q= d.v==='F'? xRi2(r,1,3) : xRi2(r,4,12); else if (o===1) q= d.v==='F'? xRi2(r,1,3) : xRi2(r,3,8); else if (o===2) q=d.v==='F'? xRi2(r,0,2) : xRi2(r,2,5); else q= r()<(xtFairRaw(k)>100? 0.3 : 0.65)? 1 : 0;
     if (q) K.s[k]=q; } return K.s; }
 const xRi2=(r,a,b)=>a+Math.floor(r()*(b-a+1));
 // ---------- buying and selling (src/tcg/kit/stores.js) ----------
-const XT_STORE=cardStores({ lgsName:'The Lantern Room', kvName:'Saltmarket', world:()=>G.xtg, copies:()=>G.xtc, newestSet:xtNewestSet, key:xtKey, lgs:xtLgs, kv:xtKv, kvStock:xtKvStock,
+const XT_STORE=cardStores({ lgsName:'The Lantern Room', kvName:'Saltmarket', world:()=>G.xtg, copies:()=>G.xtc, newestSet:xtNewestSet, key:xtKey, lgs:xtLgs, kv:xtKv, kvStock:xtKvStock, kvPriceReal:k=>xtKvPriceReal(k), kvBuyReal:k=>xtKvBuyReal(k),
   listPrice:XLGS_PRICE, markup:XLGS_MARKUP, buy:XLGS_BUY, kvMarkup:XKV_MARKUP, kvMin:XKV_MIN, D:xtD, fairRaw:xtFairRaw, makeCopy:(...a)=>xtMakeCopy(...a), copyValue:cp=>xtCopyValue(cp), econ:XT_ECON });
 const xtLgsPrice=XT_STORE.lgsPrice, xtLgsBuySingle=XT_STORE.lgsBuySingle, xtLgsBuySealed=XT_STORE.lgsBuySealed, xtLgsOffer=XT_STORE.lgsOffer, xtLgsSellTo=XT_STORE.lgsSellTo, xtKvPrice=XT_STORE.kvPrice, xtKvBuy=XT_STORE.kvBuy;
 // ---------- daily and weekly ticks ----------
@@ -62,8 +63,8 @@ function xtKvV(){
   const s=xtKvStock(G.day); const f=UI.xkvf; const chip=(k,t)=>`<button class="chip ${f===k?'on':''}" data-act="xkvf" data-a="${k}">${t}</button>`;
   const keys=sets.flatMap(xtAllKeys).filter(k=>{ const d=xtD(k), o=XT_RAROR[d.card.rar]; return f==='hits'? o>=3 : f==='rare'? o===2 : f==='unc'? o===1 : f==='common'? o<=0 : f==='stock'? s[k]>0 : true; }).sort((a,b)=>xtKvPrice(b)-xtKvPrice(a));
   const per=20, pages=Math.max(1,Math.ceil(keys.length/per)), pg=Math.min(UI.xkvp,pages-1);
-  const row=k=>{ const d=xtD(k), q=s[k]||0, p=xtKvPrice(k); return `<div class="row" style="cursor:default"><button class="mini" style="background:none;border:0;padding:0;width:40px" data-act="xtdesign" data-a="${esc(k)}">${xMiniTKey(k)}</button><div class="rt"><b>${esc(d.title)}</b><span>${xtRV(d)} · near mint</span><span class="${q?'muted':'down'}">${q? q+' in stock' : 'out of stock'}</span></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><b>${money(p,true)}</b><button class="btn sm" data-act="xkvbuy" data-a="${esc(k)}" ${!q||G.player.cash<p?'disabled':''}>Buy</button></div></div>`; };
-  return `<div class="cols"><div class="stack"><div class="panel"><h3>Saltmarket</h3><p class="small muted" style="margin:0 0 8px">An online singles shop with every printed card, always near mint, at about ${Math.round((XKV_MARKUP-1)*100)}% over market (shipping included). Stock is refreshed every Monday (next: ${fmtDate(cardNextDow(1),true)}); the biggest chase cards are often out.</p>
+  const row=k=>{ const d=xtD(k), q=s[k]||0, p=xtKvPrice(k); return `<div class="row" style="cursor:default"><button class="mini" style="background:none;border:0;padding:0;width:40px" data-act="xtdesign" data-a="${esc(k)}">${xMiniTKey(k)}</button><div class="rt"><b>${esc(d.title)}</b><span>${xtRV(d)} · ${xtKvCondText(k)}</span><span class="${q?'muted':'down'}">${q? q+' in stock' : 'out of stock'}</span></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><b>${money(p,true)}</b><button class="btn sm" data-act="xkvbuy" data-a="${esc(k)}" ${!q||G.player.cash<p?'disabled':''}>Buy</button></div></div>`; };
+  return `<div class="cols"><div class="stack"><div class="panel"><h3>Saltmarket</h3><p class="small muted" style="margin:0 0 8px">${xtV2()? 'An online singles shop. Recent sets are always stocked near mint; older cards are only what its dealers have bought from collectors, in the condition they came, at about '+Math.round((XKV_MARKUP-1)*100)+'% over market. When a card is gone it is gone until someone sells another (next dealer buying day: '+fmtDate(cardNextDow(1),true)+').' : 'An online singles shop with every printed card, always near mint, at about '+Math.round((XKV_MARKUP-1)*100)+'% over market (shipping included). Stock is refreshed every Monday (next: '+fmtDate(cardNextDow(1),true)+'); the biggest chase cards are often out.'}</p>
     <div class="chips">${chip('hits','Legendary and alt art')}${chip('rare','Rares')}${chip('unc','Uncommons')}${chip('common','Commons')}${chip('stock','In stock')}${chip('all','Everything')}</div>
     <div class="rows">${keys.slice(pg*per,pg*per+per).map(row).join('')||'<div class="empty">Nothing here.</div>'}</div>${pages>1?`<div class="chips">${Array.from({length:pages},(_,i)=>`<button class="chip ${i===pg?'on':''}" data-act="xkvpage" data-a="${i}">${i+1}</button>`).join('')}</div>`:''}</div></div>
     <div class="stack">${xtSealedPanel()}</div></div>`; }
@@ -74,3 +75,5 @@ ACT.xlgsbuy=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) 
 ACT.xlgssingle=a=>xtStoreDone(xtLgsBuySingle(+a), 'Bought. It is in Your cards, marked New.');
 ACT.xlgssell=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; xtStoreDone(xtLgsSellTo(+a), 'Sold to The Lantern Room.'); };
 ACT.xkvbuy=a=>xtStoreDone(xtKvBuy(a), 'Bought. It is in Your cards, marked New.');
+
+function xtKvCondText(k){ if (xtV2()){ const c=xtKvBest(k); if (c) return COND_LABN[condLabel(c.c)].toLowerCase(); } return 'near mint'; }

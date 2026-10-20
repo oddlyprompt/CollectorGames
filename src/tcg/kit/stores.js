@@ -3,6 +3,7 @@
 // copy with its history. How a store stocks itself (allocation, the glass case, the catalogue) and how its pages look stay in the line's own file.
 //   S.lgsName S.kvName  the two shops' names     S.world() the line's world state     S.copies() the copy table    S.newestSet(t)  S.key(set,0,f)
 //   S.lgs() S.kv() S.kvStock(t)  the shops' state    S.listPrice {P,B} S.markup S.buy (share of market the buylist pays) S.kvMarkup S.kvMin
+//   optional: S.kvPriceReal(k) the price of the real copy a shop would sell for k (null when it has none)   S.kvBuyReal(k) buys a real copy from a shop's inventory (returns undefined when the key is not stocked that way)
 //   S.D S.fairRaw S.makeCopy S.copyValue S.econ  the line's own functions and economy
 function cardStores(S){
   const M={};
@@ -17,8 +18,8 @@ function cardStores(S){
   M.lgsOffer=function(cp){ return Math.floor(S.copyValue(cp)*S.buy*100)/100; };
   M.lgsSellTo=function(id){ const cp=S.copies()[id]; if (!cp || cp.o!==0 || cp.l || cp.g!==0 || S.D(cp.k).sealed) return 'The store can\'t take that card.'; const p=M.lgsOffer(cp); if (p<0.25) return 'The store passes on that one.';
     G.player.cash+=p; G.player.sold=(G.player.sold||0)+p; S.world().bl=(S.world().bl||0)+1; delete S.copies()[id]; return null; };
-  M.kvPrice=function(k){ return Math.max(S.kvMin, Math.ceil(S.fairRaw(k)*S.kvMarkup*100)/100); };
-  M.kvBuy=function(k){ const s=S.kvStock(G.day); if (!s[k]) return 'Out of stock.'; const p=M.kvPrice(k); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
+  M.kvPrice=function(k){ if (S.kvPriceReal){ const q=S.kvPriceReal(k); if (q!=null) return q; } return Math.max(S.kvMin, Math.ceil(S.fairRaw(k)*S.kvMarkup*100)/100); };
+  M.kvBuy=function(k){ if (S.kvBuyReal){ const e=S.kvBuyReal(k); if (e!==undefined) return e; } const s=S.kvStock(G.day); if (!s[k]) return 'Out of stock.'; const p=M.kvPrice(k); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
     G.player.cash-=p; G.player.bought+=p; s[k]--; const cp=S.makeCopy(k,0,[G.day,'bought',p,S.kvName],'shop'); cp.c=cp.c.map(v=>Math.max(v,90)); cp.nw=1; cp.h=[[G.day,'Bought near mint from '+S.kvName,p,'']]; cp.pv={d:G.day,v:Math.round(S.copyValue(cp)*100)/100,n:''}; return null; };
   return M;
 }

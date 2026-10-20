@@ -6,6 +6,7 @@
 //   L.kind/L.keyPrefix  item letter and print-key letter     L.flag/L.cpf  the item's marker field and its copy field ('tcg'/'tc', 'xtg'/'xt')
 //   L.copies() nextId() pop() world()  the copy table, a new id, the grading population, the line's world state (null before it exists)
 //   L.subs L.ids  G.player key of the grading queue, G key of the collectors' copies    L.D(key) L.fairRaw(key) L.interest(n,item) L.label(key)
+//   optional: L.gradeScarce(key,g,pop,print) the premium for a scarce grade     L.keep(n,copy,value) the chance a collector keeps a copy instead of listing it
 //   L.fvClear(key) L.scale (grade multiplier by rarity) L.raror (rarity order) L.econ (economy strategies) L.isNPC(n) L.npcFlag
 function cardMarket(L){
   const M={};
@@ -14,8 +15,8 @@ function cardMarket(L){
     if (d.sealed) cp.c=[100,100,100,100]; else { const age=Math.max(0,(G.day-d.def.rel)/365); cp.c = L.econ.condition.sample(r, src, age); }
     if (acq) cp.a=acq; L.copies()[cp.id]=cp; return cp;
   };
-  M.fair=function(key, g){ const raw=L.fairRaw(key); if (!(g>0)) return raw; const d=L.D(key); if (d.sealed) return raw; const pop=L.pop()[key]; const scarce= pop&&g===10&&pop[10]<4&&(L.raror[d.rar]>=2)? 1.12 : 1; return Math.max(raw*cardGradeMult(L.scale,d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); };
-  M.copyValue=function(cp){ if (cp.g>0) return M.fair(cp.k, cp.g); const raw=L.fairRaw(cp.k); const d=L.D(cp.k); return d.sealed? raw : raw*L.econ.condition.price(cp.c, d.card); };
+  M.fair=function(key, g){ const raw=L.fairRaw(key); if (!(g>0)) return raw; const d=L.D(key); if (d.sealed) return raw; const pop=L.pop()[key]; const scarce= L.gradeScarce? L.gradeScarce(key,g,pop,d) : pop&&g===10&&pop[10]<4&&(L.raror[d.rar]>=2)? 1.12 : 1; return Math.max(raw*cardGradeMult(L.scale,d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); };
+  M.copyValue=function(cp){ if (cp.g>0) return M.fair(cp.k, cp.g); const raw=L.fairRaw(cp.k); const d=L.D(cp.k); return d.sealed? raw : raw*L.econ.condition.price(cp.c, d.card, d); };
   M.sales=function(key,g){ return (G.sales[key]||[]).filter(s=>(s[2]||0)===(g||0)); };
   M.est=function(key, g, cp){
     const fv= cp? M.copyValue(cp) : M.fair(key,g||0); const same=M.sales(key, cp?(cp.g>0?cp.g:0):(g||0)).filter(s=>s[0]>G.day-120); const n=same.length;
@@ -31,7 +32,7 @@ function cardMarket(L){
   M.give=function(key, src){ const cp=M.makeCopy(key,0,null,src||'npc'); const it={[L.cpf]:cp,v:M.copyValue(cp)}; const pool=npcPool({[L.flag]:1}); const c=[pick(pool),pick(pool),pick(pool),pick(pool)]; cp.o=c.sort((a,b)=>L.interest(b,it)-L.interest(a,it))[0].id; cp.a=[G.day,'held',0,'']; (G[L.ids]=G[L.ids]||[]).push(cp.id); return cp; };
   M.npcList=function(){
     const ids=G[L.ids]; if (!ids||!ids.length) return; let cp=null; const T=L.copies();
-    for (let tries=0; tries<14 && !cp; tries++){ const c=T[ids[Math.floor(R()*ids.length)]]; if (!c||c.o<=0||c.l||c.g<0) continue; const v=M.copyValue(c); if (v<0.25) continue; const n=NPC(c.o); if (!n) continue; const keep=L.interest(n,{[L.cpf]:c,v})>1.1? 0.7 : 0.12; if (R()<keep) continue; cp=c; }
+    for (let tries=0; tries<14 && !cp; tries++){ const c=T[ids[Math.floor(R()*ids.length)]]; if (!c||c.o<=0||c.l||c.g<0) continue; const v=M.copyValue(c); if (v<0.25) continue; const n=NPC(c.o); if (!n) continue; const keep= L.keep? L.keep(n,c,v) : L.interest(n,{[L.cpf]:c,v})>1.1? 0.7 : 0.12; if (R()<keep) continue; cp=c; }
     if (!cp) return; const n=NPC(cp.o); const v=M.copyValue(cp); const sv=v*Math.exp(gauss()*n.kn);
     if (R()<0.25 && v>1.5) createListing(L.kind,cp.id,n.id,'auc',Math.max(0.5,nicePrice(sv*rf(0.3,0.8))),pick([3,5,5,7]),false);
     else { const mult=L.listMult(n); createListing(L.kind,cp.id,n.id,'bin',Math.max(0.25,nicePrice(sv*mult)),0,R()<0.6); }

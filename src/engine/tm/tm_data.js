@@ -3,7 +3,10 @@
 // 31 sets, oldest first: First Tide (1, 2016) to Tenth Tide (31, 2026). Only the named cards of the 30 historical sets exist (500 cards);
 // the rest of each set is bulk that packs hand out but the game does not track. A card is one identity (cid, the checklist's TMC number)
 // printed in one or more sets; every printing has its own key and price. Saves only hold what changes (copies, prices, the field, bans).
-const XT_ECON={version:'v1', condition:CONDITION_V1};   // the line's economy strategies (kit/economy.js)
+// the line's economy strategies (kit/economy.js). v1 is the first economy; a world made with economy v2 (G.xtg.ecv===2, tm_econ2.js) prices wear by the card's age
+const xtV2=()=>!!(typeof G!=='undefined' && G.xtg && G.xtg.ecv===2);
+const XT_ECON={version:'v1', condition:{ version:'v1', mult:CONDITION_V1.mult, sample:CONDITION_V1.sample,
+  price(c, card, d){ const lab=condLabel(c); if (!d || lab==='NM' || !xtV2()) return this.mult[lab]; const yrs=(G.day-d.def.rel)/365; if (yrs<2) return this.mult[lab]; return Math.pow(this.mult[lab], 1+0.1*Math.min(8,yrs-2)); } }};
 const XT_CV=1;                                            // content version in saves
 const TM_TT=TM_SETS.length;                               // the anniversary set is the last one
 const XT_RAROR={common:0,unc:1,rare:2,leg:3,alt:4};

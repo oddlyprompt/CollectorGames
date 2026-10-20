@@ -15,7 +15,7 @@ function xtSetPrestige(n){ const d=xtSetDef(n); return n===TM_TT? 1.3 : ({Foundi
 function xtPrintCount(cid){ const rel=xtReleasedSets(G.day); return Math.max(1,(TM_PRINTS[cid]||[]).filter(s=>rel.includes(s)).length); }
 function xtFairRaw(key){
   const ck=key+'@'+G.day; let v=XTFV.get(ck); if (v!=null) return v;
-  const d=xtD(key); if (d.sealed){ v=xtSealedFair(d); } else {
+  const d=xtD(key); if (d.sealed){ v=xtSealedFair(d); if (G.xtg.ecv===2) v*=xtV2Mult(d,key); } else {
     const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=XT_RB[c.rar+'|'+d.v]||0.1;
     // the anniversary set is hyped while new and, once out of print, rises; older sets keep a collector premium that grows with the years
     // (originals more than reprints) and the reserve list (cards never reprinted) most of all
@@ -26,7 +26,7 @@ function xtFairRaw(key){
     const st=xtLegalState(c.cid), u=Math.min(1,(G.xtg.usage[c.cid]||0)/3), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.xtg.hy[c.cid]||0;
     const eter=st==='rot'? 0.1*c.pw*c.pw : 0;   // Eternal demand, from the card's rating alone (the engine only plays the Tenth Tide format)
     const play=XT_PB[c.rar]*(Math.pow(u,0.85)*f+eter)*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(xtIsPrem(c)?0.6:1)*(d.v==='F'?1.15:1)*(1-0.1*(xtPrintCount(c.cid)-1));
-    v=Math.max(0.03,(coll+play)*XT_K*priceJitter(key)*(1+Math.min(0.6,G.dp[key]||0))); }
+    v=Math.max(0.03,(coll+play)*XT_K*priceJitter(key)*(1+Math.min(0.6,G.dp[key]||0))); if (G.xtg.ecv===2) v*=xtV2Mult(d,key); }
   XTFV.set(ck,v); if (XTFV.size>5000) XTFV.clear(); return v;
 }
 // ---------- packs and sealed ----------
@@ -107,6 +107,7 @@ function xtInterest(n, item){
 // the world on day one: ten years of collectors. Copies of every named card exist in proportion to its rarity and age (older prints survive in
 // smaller numbers, the reserve list in fewer still); historical sealed product is rare and old.
 function xtSeedMarket(){
+  if (xtV2()) return xtV2Replay();
   G._npcXtIds=[]; const rel=xtReleasedSets(G.day); const r=mkRng(hsh('seed'+G.seed));
   for (const s of rel){ const def=xtSetDef(s), yrs=(G.day-def.rel)/365; const surv=Math.max(0.35,1-0.07*yrs);
     for (const c of xtSetCards(s)){ if (c.pk==='alt') continue; const base={common:5,unc:4,rare:3.2,leg:2.2}[c.rar]*(c.res?0.6:1)*surv; const share=Math.min(1,def.named/60)*0.5+0.5;
@@ -120,6 +121,8 @@ function xtReleaseMarket(n, t){ if (G._xtCatch) return; const r=mkRng(hsh('rel'+
 // ---------- the shared market functions, for this line (src/tcg/kit/market.js) ----------
 const XT_MKT={ kind:'x', keyPrefix:'X', flag:'xtg', cpf:'xt', copies:()=>G.xtc, nextId:()=>G.nextXid++, pop:()=>G.xpop, world:()=>G.xtg, subs:'xsubs', ids:'_npcXtIds',
   D:xtD, fairRaw:xtFairRaw, interest:xtInterest, label:xtCardLabel, fvClear:xTfvClear, scale:XT_GS, raror:XT_RAROR, econ:XT_ECON, isNPC:isXtNPC,
+  gradeScarce:(key,g,pop,d)=>xtV2()? xtV2GradeScarce(key,g,pop,d) : (pop&&g===10&&pop[10]<4&&(XT_RAROR[d.rar]>=2)? 1.12 : 1),
+  keep(n,c,v){ const base=xtInterest(n,{xt:c,v})>1.1? 0.7 : 0.12; return xtV2()? xtKeep(n,c,v,base) : base; },
   listMult(n){ return {xfl:rf(1.1,1.45), xgr:rf(1.05,1.3), xsl:rf(1.1,1.5)}[n.ty]||rf(0.95,1.35); } };   // what a collector asks over value, by type
 const XT_MK=cardMarket(XT_MKT);
 const xtMakeCopy=XT_MK.makeCopy, xtFair=XT_MK.fair, xtCopyValue=XT_MK.copyValue, xtSales=XT_MK.sales, xtEst=XT_MK.est, xtHeat=XT_MK.heat, xtGradeCopy=XT_MK.gradeCopy, xtSubmitGrade=XT_MK.submitGrade, xtGradingTick=XT_MK.gradingTick;

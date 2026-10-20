@@ -8,7 +8,7 @@ ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__))); SRC=os.path.jo
 ENGINE='core tcg/kit/lines world cards market render cm_data cm_world cm_value cm_render cm_save hunt visual visual2 cover2 ui1 ui2 ui3 cm_ui hunt_ui flow visual_ui attach attach_ui drama breaks scenario journal polish viewer3d'.split()
 KIT='copies economy market stores'.split()
 TCG='tcg_frames tcg_rules tcg_data tcg_world tcg_value tcg_boot tcg_render tcg_ui1 tcg_ui2 tcg_ui3 tcg_stores tcg_collect'.split()
-TIDEMARK='tm/tm_rules tm/tm_data tm/tm_world tm/tm_value tm/tm_boot tm/tm_render tm/tm_ui1 tm/tm_ui2 tm/tm_ui3 tm/tm_stores tm/tm_collect'.split()
+TIDEMARK='tm/tm_rules tm/tm_data tm/tm_world tm/tm_value tm/tm_boot tm/tm_render tm/tm_ui1 tm/tm_ui2 tm/tm_ui3 tm/tm_stores tm/tm_econ2 tm/tm_collect'.split()
 GAMES={'sports':{'name':'Sports Card Collector','theme':'#c0392b','tcg':False},'comics':{'name':'Comics Collector','theme':'#d4a017','tcg':False},'tcg':{'name':'Trading Card Collector','theme':'#8e44ad','tcg':True,'tm':True}}
 def rd(p): return open(p,encoding='utf-8').read()
 def icon(size, color, path):

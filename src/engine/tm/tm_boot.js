@@ -15,7 +15,7 @@ async function xtBuildWorld(prog){
   if (prog) await prog(0.5,'Filling the collectors\' binders'); xtSeedMarket(); if (prog) await prog(0.8,'Stocking the card shop'); for (let i=0;i<300;i++) xNpcListTc(); if (prog) await prog(1,'Done');
 }
 const X_mig=migrate; migrate=function(){ X_mig.apply(this,arguments); xtNormalize(); };
-const X_adv=advanceDay; advanceDay=function(){ X_adv.apply(this,arguments); if (G.xtg){ try { xtDay(G.day); xtMarketDay(G.day); G.xtg.last=G.day; } catch(e){ console.error(e); } } };
+const X_adv=advanceDay; advanceDay=function(){ X_adv.apply(this,arguments); if (G.xtg){ try { xtDay(G.day); xtMarketDay(G.day); xtEconDay(G.day); G.xtg.last=G.day; } catch(e){ console.error(e); } } };
 const X_ng=newGame; newGame=async function(seed, prog){ const g=await X_ng(seed, prog); await xtBuildWorld(null); try { xtApplyScenario(G._scnId); } catch(e){ console.error(e); } return g; };
 const X_rc=resetCaches; resetCaches=function(){ X_rc(); XT_CACHE.clear(); XTD.clear(); XTFV.clear(); XT_BYCID.clear(); };
 // an existing Wildkin save gets the Tidemark world when it is opened: the history, the market, and if Tenth Tide is already out, its release and the weeks since

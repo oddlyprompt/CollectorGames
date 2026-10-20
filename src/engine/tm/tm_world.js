@@ -3,7 +3,7 @@
 // they match up were played at build time (TM_LIB, tools/tidemark/v1/library.js) and the results decide what the simulated players bring,
 // who wins events, what gets banned, and through usage and hype, what cards are worth. Finals, ban tests and the lists rebuilt after
 // a ban are played live. The format is Tenth Tide: its 220 cards (150 new, 70 reprints); every older card is Eternal-only.
-function xtInit(){ G.xtc=G.xtc||{}; G.xpop=G.xpop||{}; G.nextXid=G.nextXid||1; G.xtg={v:1, cv:XT_CV, mv:1, rv:TMR.RV, usage:{}, t8:{}, hy:{}, ban:{}, arch:[], ev:[], dom:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, lastBan:0, mx:null}; tmLegacyUsage(); }
+function xtInit(){ G.xtc=G.xtc||{}; G.xpop=G.xpop||{}; G.nextXid=G.nextXid||1; G.xtg={v:1, cv:XT_CV, mv:1, rv:TMR.RV, usage:{}, t8:{}, hy:{}, ban:{}, arch:[], ev:[], dom:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, lastBan:0, mx:null}; if (xtEconPin()===2) G.xtg.ecv=2; tmLegacyUsage(); }
 function xtNews(h, b, ref){ if (!G.live || !G.xtg) return; const n={t:G.day,h,b,p:null,k:'xtg'}; if (ref){ if (ref.set!=null) n.ts=ref.set; if (ref.cid!=null) n.xtid=ref.cid; } G.news.unshift(n); if (G.news.length>320) G.news.length=320; }
 function xtCardByCid(cid){ return xtCardByCidX(cid); }
 // Standard before Tenth Tide is the last two years of sets; Tenth Tide alone once it is out (rotation, as announced in the news)

@@ -25,7 +25,7 @@ async def boot(pg, scn=None):
     await pg.wait_for_function("window.G && G.player && G.player.start>0 && document.getElementById('boot').style.display==='none'", timeout=280000)
 async def main():
     async with async_playwright() as p:
-        b=await p.chromium.launch(); ctx=await b.new_context(viewport={'width':430,'height':900}); pg=await ctx.new_page(); errs=[]
+        b=await p.chromium.launch(); ctx=await b.new_context(viewport={'width':430,'height':900}); await ctx.add_init_script("window.__xtEcon='v1'"); pg=await ctx.new_page(); errs=[]
         pg.on('pageerror', lambda e: errs.append('PAGE '+str(e)[:300]))
         pg.on('console', lambda m: errs.append('CON '+m.text[:300]) if m.type=='error' and 'fonts.g' not in m.text and 'ERR_' not in m.text else None)
         await pg.route('**/fonts.g*/**', lambda r: r.abort())
