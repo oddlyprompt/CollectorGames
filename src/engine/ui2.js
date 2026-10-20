@@ -234,7 +234,7 @@ function listingSheet(lid){
       <dl class="kv"><dt>Seller</dt><dd>${esc(ownerName(l.sel))}</dd><dt>Market estimate</dt><dd class="est">${fmtRange(estRange(k))}</dd><dt>At retail</dt><dd>${inRetail(prod)?'Yes, '+money(B(prod).formats[s.f].price)+(prod.stock[s.f]<=0?' (sold out)':''):'No longer'}</dd></dl>
       <button class="linkbtn" data-act="product" data-a="${prod.id}">Product details and odds</button>`;
     extra=salesPanel(k,null,'Recent sealed sales');
-  } else if (l.it==='m'||l.it==='t'){ title=''; head=''; }
+  } else if (l.it==='m'||isCardGameKind(l.it)){ title=''; head=''; }
   else {
     const c=C(l.ref), d=D(c.k), p=P(d.pid); title=pname(p);
     head=bigCardHTML(c);
