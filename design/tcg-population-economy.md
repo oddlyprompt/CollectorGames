@@ -1,116 +1,201 @@
-# One population, one store network, one engine per game (proposal, 2026-10-21)
+# Tidemark product integrity, one shopping world, one population (revised plan, 2026-10-21)
 
-Status: proposal for the owner's review. Nothing here is implemented. Everything marked "decided" is Claude's call until approved.
+Status: **proposal for the owner's approval. No code, no set-list changes and no new art until this is approved.** Everything marked "recommended" is Claude's recommendation, not a decision.
 
-## 0. What the owner asked for (2026-10-21)
-- All card games, current and future, **share the market and the stores**. The engine that drives collectors, market prices and the metagame is **separate per game**.
-- Engines should be **deep**: prices come from the intent of the people who play and collect, not from fixed formulas.
-  - Tidemark: condition, metagame, rarity, synergies.
-  - Wildkin: beloved Wildkin, amazing art, rarity, metagame, condition.
-  - Rift Parade (later): fan favorites, fan service, chase cards, rarity, character design.
-- **Sealed product** is exceedingly rare for the oldest set and grows toward the current day (Tidemark first).
-- **Stores differ by game popularity.** Wildkin is the most popular, so stores carry the most of it. Tidemark and Rift Parade are less known: big-box may carry some Tidemark, may carry no Rift Parade, and Rift Parade has to be found at a local game store. About five local game stores take turns hosting regionals and go deeper on the niche games.
-- **Existing saves can be wiped.** No compatibility with old worlds is needed.
+## 0. Why this plan exists, and the new order
+The owner's testing found real defects, not a need for a fancier simulation:
+1. **Historical Tidemark products are broken.** Sets with 10 to 21 named cards are sold as 36-pack boosters. Packs fail, hold one card or none, and boxes repeat the same cards. Sealed prices are disconnected from what is inside.
+2. **The shopping world is fragmented.** Wildkin and Tidemark have separate stores.
+3. **Markets do not behave convincingly.** Prices move through formulas and modifiers, not because collectors act.
 
-## 1. What wiping saves lets us delete
-This removes most of the cost of the earlier work: there is no first economy to keep alive.
-- Delete the first economy paths (the `xtV2()` switch, `ecv`, `window.__xtEcon`, the rebuild button and backup, v1 condition prices, v1 sealed formula) and Wildkin's fixed price formulas as they are replaced.
-- Bump the save version; an older save opens to a clear "this save is from an older version and cannot be loaded" message (the launcher already labels prototype saves).
-- Re-baseline every golden snapshot once, on purpose, after each phase; the test suites are rewritten around the new model instead of pinning old behaviour.
+Revised priorities (owner, 2026-10-21): 1 resolve Tidemark product integrity; 2 the shared shopping world; 3 the persistent procedural collector population; 4 market behaviour from real supply, demand and transactions; 5 Rift Parade into the ecosystem; 6 storefront, UI and collection overhauls; 7 public alpha preparation. **The Hunt is lower priority and not required for the alpha.** Existing saves may be wiped.
 
-## 2. The population: people with their own brains (revised 2026-10-21 after the owner's notes)
-The population is **procedurally generated and grows**. It is not a fixed list of collector types. Each person is an **agent** with a compact brain, so there can be hundreds of fully simulated people (named regulars you can recognise on the market) plus a statistical crowd of casual people that shapes aggregate demand without being simulated one by one (a performance choice: a few hundred brains ticked weekly is cheap, tens of thousands is not).
+The earlier population, appeal-engine and store ideas are kept (sections 3 to 6), but they come after the product fixes, because a smarter market on top of broken products would only hide the defects.
 
-**Who they are**
-- **Role mix:** player, collector, completionist, investor, flipper, holder, dealer, grader, casual. A person can drift between roles over time (a player who quits keeps their cards and becomes a holder).
-- **Where and how much:** home region, which stores they frequent, income and budget cycles, patience.
-- **Which games:** an affinity per game that moves with exposure (a Wildkin player sees a Tidemark tournament win and tries it).
+---
 
-**What they want: their personal collection (PC)**
-Each person keeps a short list of **PC goals**, formed the way real collectors form them:
-- a **character** (a Wildkin and its evolution line), a **deck** (build and keep a specific list), a **spec** (a speculative bet on a card or set), a **set**, an **art style** or an **artist**, a **grade and condition target**, a **sealed collection** (keeps product sealed) or none of these (opens everything).
-- **Product preference:** rips packs, buys boxes, buys singles, holds sealed, or flips.
-- Goals are chosen from what the person has been exposed to and what their taste favours, and they change: a goal is completed, abandoned when the person gets bored, or replaced after a news event.
-These goals are what produce real market behaviour: concentrated demand on a few prints, a sudden run on a deck's cards, completionists clearing a set, flippers chasing the same cards the holders just stopped selling.
+## 1. Tidemark Product Integrity Plan (first workstream)
 
-**Art is a subjective opinion each person forms, not a score we hand them**
-- At build time each illustration gets a set of **visual descriptors** computed from the real image and the checklist (palette and warmth, brightness and contrast, busyness, subject: creature, character, scene, vessel, and for Wildkin the species and scene tags).
-- Each person has an **art taste** over those descriptors plus personal quirks, and forms an opinion of a print when they see it (opening packs, browsing the market, a friend's showcase).
-- **Taste spreads socially:** a print many aligned people like gets "buzz" (news lines, a favourite on a popular collector's page), which draws in others. So a card can become an art darling for reasons nobody coded, and different worlds crown different favourites from the same cards.
-- The game only suggests (a print's descriptors and tier, optionally an editable `art_hints.json`); the people decide.
+### 1.1 The audit
+Method (`tools/tidemark_product_audit.py`, read-only, reproducible): for every set, the card pool by rarity from `cards.json`; the standard product configuration the game sells (a 15-card booster: 10 commons, 3 uncommons, 1 rare or Legendary, 1 basic or foil; a 36-pack box); then **600 simulated box openings per set** (300 for Tenth Tide, 21,600 boxes and about 780,000 packs in all), counting tracked cards per pack, duplicates, how much of the pool a box shows, and the value of the contents. "Tracked" means a card that exists in the checklist; the game today fills every other slot with an unnamed **bulk** card worth two cents.
 
-**The population grows, with spikes**
-- People **arrive and leave** all the time, at a base rate that depends on each game's popularity.
-- **Spikes** around releases, preorders, major tournaments, reprint news and random news events (a streamer promotes a game, a ban shakes a deck, a famous collection sells); **churn spikes** after a bad ban or a price crash.
-- New arrivals are generated from the world seed and the event that brought them, so a new set brings in players, and a championship brings in spectators who become players.
+Where the thin sets came from: the checklist names only the notable cards of each historical set (`named_cards` in the manifest) but advertises the full size (250 for First Tide, 200 for the other 28, collector numbers like "FT 003/250"). Only 59 First Tide cards were named, because the prototype's 57 plain founding cards live there; the other 29 sets have 10 to 21. See `outstanding_assets.md` decision 7.
 
-**Cost and scale (stated up front)**
-Each detailed brain is about 40 numbers and ticks weekly with small rules; boot under 1 second for 300 brains, a month of play under 2 seconds. The crowd is aggregated per game and region.
+**Per set** (current build; "box price before" is the first economy's sealed price, "box price now" is the current one; contents are the mean value of 600 simulated boxes, all cards near mint):
 
-## 3. Each game supplies its own appeal engine
-The shared code asks a game one thing: **"for this print, how strong is each taste dimension?"** (0 to 1). The game computes it from its own data; the shared code never knows what a "beloved Wildkin" or a "synergy" is.
+| # | Set | Named | Pool C / U / R / L | Pack config fits the pool? | Packs with 0 / at most 1 tracked card | Tracked cards per box (of 540) | Distinct cards per box | Duplicate share | Copies of the top card per box | Mean box contents | Box price before | Box price now |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | FT | 59 | 25 / 20 / 9 / 5 | valid | 3% / 15% | 113 | 47.9 | 57% | 6.5 | $634 | $1799 | $1629 |
+| 2 | SB | 10 | 7 / 3 / 3 / 0 | C 7<10 | 39% / 77% | 33 | 10.1 | 68% | 6.1 | $50 | $1187 | $98 |
+| 3 | LH | 16 | 12 / 3 / 3 / 1 | valid | 22% / 58% | 51 | 15.6 | 69% | 6.9 | $103 | $1161 | $213 |
+| 4 | IC | 10 | 5 / 3 / 1 / 1 | C 5<10 | 49% / 85% | 25 | 8.8 | 64% | 5.8 | $135 | $1112 | $333 |
+| 5 | RW | 15 | 9 / 4 / 1 / 1 | C 9<10 | 30% / 68% | 42 | 13.9 | 66% | 6.5 | $110 | $1088 | $274 |
+| 6 | CW | 10 | 4 / 4 / 2 / 2 | C 4<10 | 50% / 85% | 25 | 9.2 | 62% | 5.6 | $67 | $1063 | $152 |
+| 7 | OW | 14 | 5 / 7 / 1 / 1 | C 5<10 | 39% / 77% | 33 | 12.3 | 61% | 5.9 | $46 | $859 | $92 |
+| 8 | BS | 14 | 7 / 4 / 3 / 3 | C 7<10 | 35% / 73% | 37 | 13.0 | 64% | 6.2 | $37 | $839 | $117 |
+| 9 | TF | 18 | 8 / 6 / 3 / 1 | C 8<10 | 28% / 65% | 44 | 16.0 | 63% | 6.4 | $52 | $819 | $117 |
+| 10 | MT | 15 | 7 / 4 / 3 / 1 | C 7<10 | 34% / 73% | 37 | 13.2 | 64% | 6.2 | $43 | $780 | $117 |
+| 11 | BC | 14 | 4 / 9 / 1 / 1 | C 4<10 | 38% / 77% | 33 | 12.9 | 60% | 5.7 | $28 | $760 | $117 |
+| 12 | DF | 15 | 5 / 6 / 3 / 1 | C 5<10 | 38% / 77% | 33 | 12.9 | 60% | 5.8 | $43 | $741 | $117 |
+| 13 | SL | 15 | 5 / 7 / 2 / 1 | C 5<10 | 37% / 76% | 34 | 13.0 | 61% | 5.9 | $38 | $701 | $92 |
+| 14 | GW | 14 | 6 / 4 / 3 / 1 | C 6<10 | 38% / 76% | 33 | 12.2 | 63% | 6.1 | $39 | $682 | $117 |
+| 15 | HM | 14 | 5 / 4 / 4 / 1 | C 5<10 | 42% / 80% | 30 | 11.8 | 60% | 5.9 | $41 | $662 | $117 |
+| 16 | FD | 13 | 5 / 5 / 3 / 3 | C 5<10 | 41% / 78% | 31 | 11.8 | 61% | 5.9 | $26 | $557 | $92 |
+| 17 | DH | 14 | 3 / 5 / 5 / 1 | C 3<10 | 47% / 84% | 26 | 11.4 | 56% | 5.4 | $35 | $540 | $117 |
+| 18 | SV | 13 | 5 / 4 / 3 / 1 | C 5<10 | 43% / 81% | 29 | 11.1 | 61% | 5.8 | $26 | $524 | $92 |
+| 19 | LR | 14 | 4 / 7 / 2 / 1 | C 4<10 | 41% / 80% | 30 | 12.0 | 59% | 5.7 | $30 | $490 | $117 |
+| 20 | CB | 13 | 4 / 4 / 2 / 3 | C 4<10 | 48% / 84% | 25 | 10.2 | 59% | 5.5 | $33 | $474 | $92 |
+| 21 | WT | 14 | 6 / 3 / 4 / 1 | C 6<10 | 40% / 78% | 32 | 11.9 | 62% | 5.9 | $29 | $456 | $92 |
+| 22 | BT | 13 | 4 / 2 / 6 / 1 | C 4<10, U 2<3 | 48% / 85% | 25 | 10.4 | 58% | 5.5 | $29 | $423 | $92 |
+| 23 | ET | 14 | 5 / 4 / 4 / 1 | C 5<10 | 42% / 80% | 30 | 11.7 | 60% | 5.8 | $26 | $406 | $92 |
+| 24 | ST | 15 | 4 / 7 / 3 / 1 | C 4<10 | 40% / 79% | 31 | 12.6 | 59% | 5.7 | $23 | $390 | $92 |
+| 25 | NR | 21 | 9 / 7 / 4 / 1 | C 9<10 | 23% / 59% | 50 | 18.7 | 62% | 6.4 | $24 | $336 | $92 |
+| 26 | FL | 20 | 11 / 5 / 3 / 1 | valid | 21% / 56% | 53 | 18.1 | 65% | 6.6 | $28 | $322 | $92 |
+| 27 | KH | 21 | 8 / 5 / 6 / 2 | C 8<10 | 26% / 63% | 46 | 17.5 | 61% | 6.3 | $27 | $308 | $92 |
+| 28 | CS | 21 | 9 / 6 / 5 / 1 | C 9<10 | 23% / 58% | 50 | 18.5 | 63% | 6.5 | $28 | $279 | $92 |
+| 29 | RT | 20 | 7 / 7 / 4 / 2 | C 7<10 | 28% / 65% | 44 | 16.9 | 61% | 6.2 | $29 | $242 | $92 |
+| 30 | TL | 21 | 10 / 6 / 4 / 1 | valid | 21% / 56% | 52 | 18.7 | 64% | 6.6 | $22 | $229 | $92 |
+| 31 | TT | 220 | 103 / 63 / 39 / 15 | valid | 0% / 0% | 513 | 187.5 | 63% | 8.6 | $217 | $230 | $221 |
 
-| Dimension | Tidemark | Wildkin | Rift Parade (needs a spec) |
+(Per-set rows: Valid = the pool has at least 10 distinct commons, 3 uncommons and 1 rare or Legendary, the minimum for a pack with no duplicate card. Contents of Tenth Tide are 100% tracked except the basic.)
+
+### 1.2 Findings
+1. **26 of the 30 historical sets cannot fill the advertised pack.** Their pool has fewer than 10 commons (24 sets), and one set (Salt and Banner) has no rare or Legendary at all, so its rare slot is filled from an uncommon. Only First Tide (25 commons), Free Lanes (11), Tidelines (10) and Tenth Tide meet the bare minimum.
+2. **Packs are almost empty of real cards.** In the 29 historical sets other than First Tide, on average **74% of packs hold at most one tracked card**, and 20% to 49% hold none. The rest of each pack is bulk. First Tide: 3% empty, 12% one card, 56% hold three to five.
+3. **Boxes repeat the same few cards.** Each thin-set box shows 9 to 19 distinct cards and 33 to 53 tracked cards in 540; 56% to 69% of the tracked cards in a box are duplicates; the commonest card appears 5.4 to 6.9 times. Tenth Tide, for comparison, shows 187 of 220 cards with 63% duplicates and its commonest card 8.6 times per box. The ratio is similar to Tenth Tide's, but the pool is 10 to 21 cards instead of 220, so opening a box is not an experience.
+4. **Sealed price is not tied to contents.** Under the first economy a thin-set box cost **$390 to $1,187 for contents worth $21 to $73** (16x to 30x), and First Tide **$1,799 for $304** (5.9x). Under the current build the multiple is 2.0x to 4.2x ($92 to $333 for thin sets, $1,629 for First Tide at 2.6x). That is the right order of magnitude, but the premium comes from a formula (a premium that grows with age, a floor of half retail, a scarcity factor), not from demand.
+5. **I could not reproduce "a First Tide box with $7 to $8 of cards".** In 600 simulated First Tide boxes none was below $163 at the 10th percentile and none below $100. The disconnect you saw is real for the thin sets (16x to 30x); if the box was First Tide, a very unlucky box is possible but very rare, or the box was a thin-set box. A sealed product that can be worth $1,100 while holding about $40 is the defect, whichever set it was.
+6. **The pack-opening screen could not show an empty pack** (fixed in the pull request awaiting merge, but the root cause below remains).
+
+### 1.3 Root causes
+- A single product design (booster of 15 cards, box of 36) was applied to every set regardless of how many cards exist.
+- Sets are modelled as their named cards plus invisible bulk, so most of every pack is a fiction the player cannot see or use.
+- No validator ties a product's configuration to its card pool.
+- Sealed price was a formula of age and a floor, not a result of demand and supply.
+
+### 1.4 Recommendations (decisions for the owner)
+**A. Stop modelling thin sets as booster sets. Recommended:** classify every set by what it really is.
+- **Major sets:** Tenth Tide (220) and **First Tide, the foundational expansion** (needs expanding, see D). These sell booster packs and boxes.
+- **Mini-sets (the other 29, 10 to 21 named cards):** they sell **fixed-contents and small products**, not 36-pack boosters:
+  1. **Boxed set:** one of every card in the set, sealed (the only product whose contents are always exactly known). The collectible sealed value lives here.
+  2. **Mini-booster:** 6 cards (4 commons, 1 uncommon, 1 rare or Legendary, or the best rarity the set has), **no duplicate within a pack**, drawn only from the set's tracked cards, no bulk. A **mini-box is 12 packs** (72 cards, about 5 copies of each card for a 15-card set).
+  3. A **starter deck** (fixed 50-card list built from the set's cards) only where the set has at least 17 cards (3 copies each); otherwise none.
+  Which of these a set actually sells follows its size, listed in a small data table (`product catalogue`).
+- **Why not just expand every set?** It would need about **1,700 new cards and about 190 art sheets** (see section 1.7), nearly three times everything Tidemark has today. That is a content decision for the owner, not something to hide inside a simulation.
+
+**B. Remove the bulk mechanic.** A pack contains only cards that exist. The only untracked card is the **basic** in the 15th slot of a major-set booster (like a Magic basic: never collectible). Collector numbers on printed cards then read "003/059" style out of the cards that exist (this edits how each historical card's collector line is drawn, but no name, art or number of a named card changes). **Needs approval** because it changes the printed collector line.
+
+**C. Sealed value.** Every sealed product shows two numbers: **expected contents** (with a spread: the 10th, 50th and 90th percentile of simulated openings) and **market value sealed**. The sealed collector premium over contents must be explained by demand and scarcity: how many collectors want it (people with a sealed-collecting goal) against how many exist (the census). Until the population exists the premium is a bounded placeholder, and every product page says "collector premium" next to the number.
+
+**D. First Tide as the foundational set.** First Tide has 25 commons, 20 uncommons, 9 rares and 5 Legendaries (59). In a 36-pack box its commons appear 14 times each. Recommended targets (a box with no card more than about 8 times for commons, 6 for uncommons, 3 for rares):
+- **Minimum (recommended): +25 cards** (about +20 commons, +5 rares): 84 cards, **about 3 art sheets**, designs and balance for 25 cards.
+- **Fuller: +66 cards** (125 cards, close to a real draftable set): about 8 sheets.
+Until the expansion exists, First Tide sells as a mini-set (boxed set and mini-boosters) so nothing broken is on sale.
+
+**E. New content and art are proposals only.** I will list the new First Tide cards as a **design proposal** (names, roles, rarity, reasoning) for approval, and nothing is drawn or added to the checklist until you approve it.
+
+### 1.5 Pack and box collation rules (valid-by-construction)
+1. **Slots come from a recipe** per product (counts per rarity). A recipe that the pool cannot satisfy **fails the build** (the validator below).
+2. **No card appears twice in one pack.** If a slot has no unused card in its rarity, it takes the next rarity down (a fixed, documented order), never a duplicate and never an empty or unnamed card.
+3. **Rarity-pool shuffle:** commons and uncommons are dealt from a shuffled bag per box so a box is as even as its pool allows (the same card never appears more than `ceil(slots / pool) + 1` times), the way real collation works; the rare slot is dealt from its own bag with the Legendary rate.
+4. **Invariants that must hold for every pack and box generated** (checked in tests, over millions of packs): the right number of cards; every card belongs to the set; no duplicate in a pack; slot rarities as the recipe says; a box has the right number of packs.
+5. **Build-time Product Integrity Validator** (`tools/`): runs on every build; fails with the set and the reason when a product's recipe does not fit its pool, a set advertises a product it cannot fill, or a set has no rare for a rare slot. A product that fails is not shown in any store.
+
+### 1.6 Sealed collector value against opened contents
+- **Opened contents value** = the expected value of the cards in the product, with spread. It is computed from the product recipe and current card prices.
+- **Sealed value** = what a collector pays for the unopened product. It starts at contents and adds a **collector premium**, which in the new market comes from (a) how scarce the product is (the sealed census by set age), (b) how many people want sealed product, (c) condition and age.
+- The two are always shown separately, and the tests state the allowed ratio per class of product (see 1.8).
+
+### 1.7 Content and art estimates (only if the owner chooses expansion)
+Production today: 657 illustrations in 77 sheets of nine (about 8.5 per sheet).
+
+| Option | New cards | New art sheets | What it fixes |
 |---|---|---|---|
-| character love | faction and Legendary fandom (decided weights) | beloved Wildkin: mascot flag, evolution family popularity, manifest fandom weights | fan favorites |
-| art | descriptors of each illustration; each person forms their own opinion (section 2) | the same, with species and scene tags | character design |
-| rarity and chase | rarity, reserve list, alternate art | rarity tiers, SIR and Clasped chase | chase cards |
-| metagame and play | usage in the live field, win-rate share | same, from Wildkin's field | same |
-| condition | by band, scarcer with age | by band | by band |
-| synergy | how many top decks and lists the card combines with (`synergy()` already exists in `decks.js`) | family and partner pairings | per game |
-| nostalgia | age of the set, original printings | age of the set | age |
-| fan service and hype | hype around releases and events | same | fan service |
+| Recommended: First Tide +25, mini-sets use mini products | 25 | about 3 | First Tide becomes a valid major set; the 29 mini-sets get honest products |
+| First Tide +66 | 66 | about 8 | a full draftable foundational set |
+| Every set to 45 commons, 18 uncommons, 12 rares and Legendaries (75 cards) | about 1,700 | about 190 | every set becomes a normal booster set |
+| Merge thin sets into "blocks" of about 45 cards (changes the set list) | 0 | 0 | not recommended: it rewrites release history |
 
-Each game declares **which dimensions matter and how much** (its taste map). Tidemark leans on condition, metagame, rarity and synergy; Wildkin on beloved characters and art; neither ignores the rest.
+Each new card also needs rules design and balance, as every Tidemark card has had.
 
-## 4. How prices form (shared kit, per-game parameters)
-1. Each person's **interest** in a print = taste vector dot appeal vector, scaled by their affinity for that game, their budget and their role (a player wants the cards in the live field; a completionist wants every card of one set; an investor wants scarce and rising cards).
-2. **Demand** for a print = the sum of interest over people who could buy it. **Supply** = copies a buyer can reach (the census and ledger already built for Tidemark economy v2) plus store stock.
-3. **Price** moves toward `base x (demand / supply)^e`, damped over weeks and bounded, with grades priced from the population report and condition priced from how scarce each band is. This is the v2 scarcity mechanism with a real demand side.
-4. **Anchors for calibration, not hard-coded prices:** pack and box value against retail, chase cards near where they are now, vintage scarcity as in the economy v2 tests.
-5. **Listings and sales** are made by people according to their role (a dealer lists fast, a completionist holds their set, an investor holds scarce cards), the same kind of rules the Tidemark `keep` hook uses now.
+### 1.8 Tests for product integrity (before anything ships)
+- **Validator coverage:** every product of every set passes the build-time validator; a deliberately broken recipe fails it (the validator is tested).
+- **Invariants:** at least 10 million packs and 300,000 boxes generated per product class with zero violations (size, membership, rarity slots, no duplicate in a pack).
+- **Collation:** in 10,000 boxes of each major product no commons appear more than `ceil(slots / pool) + 1` times; no mini-box has a card more than twice the average.
+- **Pull odds:** per product, the measured Legendary-slot rate, foil rate and per-card pull probability match the recipe within sampling error; every card in a set appears in at least 99% of 100-box samples.
+- **Duplicates:** the distribution of duplicates per box (mean, 90th percentile, maximum) is printed for every product and bounded: no box where one card is more than 25% of the tracked cards for a major set; for mini-boxes at most 40%.
+- **Contents value:** for every product the 1st, 10th, 50th, 90th and 99th percentile of contents value are printed and compared with the product's price: no product's 10th percentile contents below 20% of the retail price of its class.
+- **Sealed vs contents:** the premium of sealed over contents is within the allowed band per class and **moves with scarcity** (an older set with less sealed supply has a higher premium; adding supply lowers it).
+- **Screens:** every product opens card by card on the real opening screen in a test that drives the UI (the Tidemark screen test is extended).
 
-## 5. Sealed product: a curve from rare to common
-Every game gets a print-run curve by set age (decided numbers, tuned by simulation):
-- **Oldest set:** almost none survive; on average well under one box in a world, a few packs.
-- **Growing with each set** (about x1.5 per set at first, flattening), because more was printed, more was kept and less has been opened yet.
-- **Current set:** plenty, and on shelves.
-- Opening depletes supply for good (the ledger already enforces this). Price follows contents plus a premium for age and scarcity, so a box is never wildly more than what is in it.
-- Wildkin has two sets today and gets the same curve as it grows.
+---
 
-## 6. One store network
-A **directory of stores**; each store declares, per game, how much it carries.
-- **Big-box chains (2):** the most popular game gets full allocation and weekly restocks. A less known game gets a small allocation, in some stores, some weeks, and only the newest set. A game that is too niche may get none. This depends on each game's **popularity score** (its share of the population's attention), so it moves over time: if Tidemark grows, big-box carries more.
-- **Local game stores (5, each named, each in a region):** each has a specialty depth (for example Wildkin-heavy, Tidemark-deep, Rift-deep, general), its own allocation per game, singles case breadth, buylist percentage and a sealed shelf. Niche games are found here first.
-- **Regionals:** the local stores take turns hosting a weekly or monthly regional per game (a rotation that favours stores deep in that game). Hosting a regional brings people to the store, spikes demand for the cards in the winning decks, and fills that store's stock for a week.
-- **Online singles shops (Kinvault, Saltmarket):** become entries in the same directory with game coverage and a stock rule (real seller-backed stock for old cards, as in v2).
-- **Player-facing:** the Shop tab lists every store, what it carries, when it restocks and what event it hosts.
+## 2. One shared shopping world (priority 2)
+One persistent set of retailers carrying several games. Each store declares, per game, how much it carries, driven by the game's **popularity score** (its share of the population's attention), regional interest, the store's specialty and real supply.
+- **Big-box chains (2):** Wildkin full allocation and weekly restocks. Tidemark a small allocation in some stores, some weeks, newest products only. A niche game may get none.
+- **Local game stores (about 5, named, one per region):** each with a specialty depth (for example Wildkin-heavy, Tidemark-deep, general), its own allocation per game, singles case, sealed shelf and buylist. They take turns hosting regionals, favouring stores deep in the game being played.
+- **Online singles shops** join the same directory, each with the games it covers and real seller-backed stock.
+- **Persistence:** store state, stock, orders and events are saved with the world.
+- The Shop tab lists every store, what it carries, when it restocks and what event it hosts.
+Depends on: product integrity (a store can only stock valid products).
 
-## 7. Engine boundaries in code (shared vs per game)
-- `src/tcg/kit/population.js` (people, roles, interest, demand), `kit/stores.js` (the directory, allocation by popularity, regional rotation), `kit/market.js` (what exists now), `kit/economy.js` (price formation).
-- `src/tcg/lines/<game>/` holds only what is that game's own: card data, appeal (section 3), supply history (print runs, sealed curve), rules and metagame, packs and set structure. Wildkin and Tidemark code are reorganised into this shape as part of the work, because the old forks are no longer needed to keep old saves working.
-- Rift Parade is a new folder plus one registry entry plus its appeal engine.
+## 3. Persistent procedural collector population (priority 3)
+About a few hundred fully simulated **people** (agents, each with a small brain) plus a crowd of casual people shaping aggregate demand. They are saved with the world and keep identity and history across months.
+- **Roles:** player, collector, completionist, investor, flipper, holder, dealer, grader, casual; roles drift.
+- **Preferences and budgets:** which games, which stores (region), income and spending cycles, patience.
+- **Personal collection (PC) goals:** a character, a deck, a spec, a set, an art style, a grade and condition target, or a sealed collection; chosen from exposure and taste; completed, dropped or replaced.
+- **Opinions, including art:** each person forms their own opinion of an illustration from descriptors computed from the image plus personal taste; opinions spread socially (buzz).
+- **Actions that create market activity:** buying and selling, acquisitions, liquidations when a collector quits or needs cash, speculation on a card or set, trading, grading, holding sealed, chasing a deck after a tournament.
+- **Growth and shocks:** arrivals and departures at a base rate, spikes at releases, preorders, major tournaments, reprint news and random news events; churn after a bad ban or a crash.
+Depends on: the store directory (people shop at stores in their region) and product integrity.
 
-## 8. How it is tested (quantitative, before it ships)
-- **Anchors:** pack and box value against retail for every set; chase card prices within bands that I list before running.
-- **Demand responds to what the game says it should:**
-  - a deck that rises in the field raises its cards' prices within weeks, and falls with them;
-  - at equal rarity, the most beloved Wildkin cost more than the least beloved, by a stated factor;
-  - a high-art print costs more than a plain print of the same rarity;
-  - a scarce condition costs more, and old copies are worn.
-- **Stores:** over a year, Wildkin is available at 90%+ of big-box visits, Tidemark at about 30% to 60%, Rift Parade at 0% before its release and under 10% after; every game is available at one or more local stores; regionals rotate so no store hosts twice running for the same game.
-- **Sealed:** expected sealed items alive by set age follow the curve; no box priced above a stated multiple of its contents.
-- **Exploits:** auction sniping, buying a store out and reselling, buylist arbitrage, corner attempts, regionals as a money machine.
-- **Performance:** boot under 1 second, 30 days under 2 seconds, save size under 250 KB compressed.
-- **Playtests:** scripted collectors and players (the completion and discovery agents from the economy v2 suite), and screens driven like a player's (the new Tidemark screen test) for every store and event page.
+## 4. Market behaviour from supply, demand and transactions (priority 4)
+- **No artificial movement:** remove the fixed per-sale price bumps, random jitter and hand-written modifiers. A price is set by what people are willing to pay for the copies that exist, using actual transactions, asks, bids and store shelf prices.
+- **Price cause log:** every price change records its cause (a demand shift from named goals, a supply change, a sale, an event). A test requires that at least 95% of movement over a year is explained by logged causes and that no price changes without one.
+- **Supply:** the census and ledger from economy v2 (copies lost, worn, graded, opened) stay, and sealed supply follows a curve: exceedingly rare for the oldest set, growing toward the current set, depleting when opened.
+Depends on: the population.
 
-## 9. Decisions and open items for the owner
-1. **Art opinions.** Decided: people form their own opinions from computed image descriptors plus social spread; the game only suggests. An optional `art_hints.json` can nudge a print if you want to seed a favourite.
-2. **Number of local game stores:** proposed 5, each in one of 5 regions, named by me (invented names like the existing Tidepool and Lantern Room).
-3. **Rift Parade:** needs its card data and rules before its appeal engine can be written; the structure above is ready for it. I found a `feature/rift-parade` branch on the remote but have not looked at it.
-4. **Order:** proposed phases, each testable on its own:
-   1. the store directory and who carries what, with regionals (mostly visible, low risk);
-   2. the shared population (agents with brains, PC goals, growth and spikes) and Tidemark's appeal engine, with the old formulas removed;
-   3. Wildkin's appeal engine (beloved characters, art);
-   4. the sealed curves and print runs for both games;
-   5. Rift Parade when its data exists.
+## 5. A separate appeal engine per game
+The shared code asks a game "how strong is each taste dimension for this print?" and the game answers from its own data; the shared code never knows what a "beloved Wildkin" is.
+- **Tidemark:** condition, metagame, rarity, synergies (and faction fandom).
+- **Wildkin:** beloved Wildkin (mascots, evolution lines, fandom), art, rarity, metagame, condition.
+- **Rift Parade (needs its data):** fan favourites, fan service, chase cards, rarity, character design.
+
+## 6. Phases and dependencies
+| Phase | Deliverable | Depends on | The owner can check |
+|---|---|---|---|
+| 0 | Approve this plan and the decisions in section 9 | none | this document |
+| 1 | Product Integrity: validator, collation rules, product catalogue (boxed sets, mini-boosters, major boosters), no bulk, sealed shown as contents plus premium, the 15-card booster for major sets; First Tide interim as a mini-set; large-scale opening tests | owner decisions A to D | open products of every set and see real cards |
+| 1b | First Tide expansion design proposal (names, roles) for approval, then production | art for about 25 cards | the proposal, then the new set |
+| 2 | Shared shopping world: store directory, popularity-driven carrying, five local game stores, regionals | 1 | one Shop tab with all stores |
+| 3 | Population: agents, roles, budgets, PC goals, growth and spikes; old collector types removed | 1, 2 | named collectors with goals; market listings from them |
+| 4 | Market from transactions: price discovery, cause log, sealed premium from demand, per-game appeal engines (Tidemark first, then Wildkin) | 3 | price changes you can trace to people |
+| 5 | Rift Parade into the ecosystem | its card data and rules; phases 2 to 4 | a third game in the same stores and market |
+| 6 | Storefront, UI and collection overhauls | 2 to 4 | new screens |
+| 7 | Public alpha preparation | all | extended testing |
+Every phase ends with the full test run and a pull request for your review; saves are wiped between phases without special handling.
+
+## 7. Test criteria across the plan (what shows it actually works)
+- **Packs and boxes:** section 1.8 (millions of packs, collation, pull odds, duplicate distributions, contents value, sealed against contents, the validator itself).
+- **Stores:** over a year of simulated play, Wildkin is available at 90% or more of big-box visits, Tidemark 30% to 60%, Rift Parade 0% before release and under 10% after; every game is at one or more local stores; regionals rotate so a store does not host the same game twice in a row; stock is conserved (a store cannot sell what it does not have); store state survives a save and load.
+- **Population:** distributions of roles, budgets and goals are printed and bounded; population size follows releases and tournaments (a measurable spike) and falls after a crash; every person's holdings and money are conserved (no money or copy appears from nowhere).
+- **Market behaviour:** shock tests: 30 people given a goal on a card raise its price within weeks and it falls when they stop; a liquidation lowers prices of what is sold; a deck rising in the field raises its cards; the price cause log explains 95% of movement; no card or product price leaves a stated band without a logged cause.
+- **Exploits:** auction sniping, buying a store out and reselling, buylist arbitrage, cornering a card, regionals as a money machine.
+- **Screens:** tapping every listing, store page, product page, opening screen and event page with no error.
+- **Performance:** boot under 1 second, a day under 60 ms on average and a month under 2 seconds with 300 simulated people, save under 250 KB compressed.
+
+## 8. Scope and performance risks
+- **Scope:** five large pieces (products, stores, population, market, Rift Parade) plus UI work. The order above lets each ship and be tested alone; phase 1 is deliberately small and first.
+- **Content risk:** First Tide expansion needs designs and art; expanding every set is 190 sheets and is not proposed. Printed collector numbers change if bulk is removed.
+- **Performance:** a few hundred weekly-ticked agents is cheap; thousands would not be. The crowd is aggregated, not simulated one by one.
+- **Emergent-economy risk:** prices driven by people can drift, spiral or collapse. Safeguards: bounded price bands with logged breaches, budget and money conservation, shock tests, and calibration against the same anchors (pack value against retail, chase prices).
+- **Test churn:** golden snapshots are re-baselined on purpose at each phase; wiped saves remove compatibility work.
+- **No human playtest yet:** every phase should be played by the owner before the next starts.
+
+## 9. Decisions needed from the owner
+1. **Mini-sets (29 sets with 10 to 21 named cards):** boxed set plus mini-boosters (recommended) or another product mix? (If you want them as full boosters, that is the 190-sheet option.)
+2. **First Tide:** +25 cards (recommended) or +66, and may I write the design proposal for the new cards?
+3. **Bulk and numbering:** remove bulk and renumber collector lines as "003/059" (recommended)?
+4. **Class of products shown in stores before the population exists:** show the contents value next to every sealed price (recommended).
+5. **Local game stores:** about five named stores in five regions, names invented by me.
+6. **Rift Parade:** needs its data and rules before phase 5; I have not looked at the `feature/rift-parade` branch.
