@@ -9725,17 +9725,18 @@ function xtFairRaw(key){
   XTFV.set(ck,v); if (XTFV.size>5000) XTFV.clear(); return v;
 }
 // ---------- packs and sealed ----------
-// Pack (12 cards): 8 commons, 3 uncommons, 1 rare slot (a Legendary about 1 pack in 8; an anniversary alternate art about 1 in 60 in Tenth Tide).
-// About 1 pack in 6 swaps one common for a foil of any rarity. A historical set is 200 cards but only its named cards (the checklist's) are tracked:
-// a slot that lands on an unnamed card is bulk, counted in the pack and worth about two cents (xtRollPack().bulk).
-const TM_ODDS={legR:0.125, alt:1/60, foil:1/6, fr:{C:0.6,U:0.28,R:0.1,L:0.02}};
+// Pack (15 cards, a classic booster): 10 commons, 3 uncommons, 1 rare slot (a Legendary about 1 pack in 8; an anniversary alternate art about 1 in 60 in Tenth Tide),
+// and a 15th card that is a basic (never tracked, counted as bulk) or, about 1 pack in 4, a foil of any rarity. A box is 36 packs. A historical set is 200 cards but
+// only its named cards (the checklist's) are tracked: a slot that lands on an unnamed card is bulk, counted in the pack and worth about two cents (xtRollPack().bulk).
+const TM_ODDS={legR:0.125, alt:1/60, foil:1/4, fr:{C:0.6,U:0.28,R:0.1,L:0.02}};
+const XT_PACK=15, XT_BOX=36;   // cards in a pack, packs in a box
 function xtPools(set){ const m=G.xtg._pl||(G.xtg._pl={}); if (m[set]) return m[set]; const cs=xtSetCards(set); const def=xtSetDef(set); const f=r=>cs.filter(c=>c.rar===r);
   const P={c:f('common'),u:f('unc'),r:f('rare'),l:f('leg'),alt:f('alt')}; P.q={C:Math.min(1,P.c.length/def.tot.C), U:Math.min(1,P.u.length/def.tot.U), R:Math.min(1,P.r.length/def.tot.R), L:Math.min(1,P.l.length/def.tot.L)};
   if (!P.l.length){ P.l=P.r; P.q.L=P.q.R; } if (!P.r.length){ P.r=P.u; P.q.R=P.q.U; } if (!P.u.length){ P.u=P.c; P.q.U=P.q.C; } if (!P.c.length){ P.c=P.u; P.q.C=P.q.U; } return m[set]=P; }
 function xtRollPack(set, r){
   const P=xtPools(set), keys=[], taken=new Set(); keys.bulk=0; const pick=(a,q,v)=>{ if (r()>=q){ keys.bulk++; return; } let c; for (let i=0;i<6;i++){ c=a[Math.floor(r()*a.length)]; if (!taken.has(c.no)){ taken.add(c.no); break; } } keys.push(xtKey(set,c.no,v)); };
-  const foil=r()<TM_ODDS.foil;
-  for (let i=0;i<8;i++){ if (foil && i===7){ const x=r(), F=TM_ODDS.fr; const [a,q]= x<F.C? [P.c,P.q.C] : x<F.C+F.U? [P.u,P.q.U] : x<F.C+F.U+F.R? [P.r,P.q.R] : [P.l,P.q.L]; pick(a,q,'F'); } else pick(P.c,P.q.C,'N'); }
+  for (let i=0;i<10;i++) pick(P.c,P.q.C,'N');
+  if (r()<TM_ODDS.foil){ const x=r(), F=TM_ODDS.fr; const [a,q]= x<F.C? [P.c,P.q.C] : x<F.C+F.U? [P.u,P.q.U] : x<F.C+F.U+F.R? [P.r,P.q.R] : [P.l,P.q.L]; pick(a,q,'F'); } else keys.bulk++;   // the basic slot, or a foil
   for (let i=0;i<3;i++) pick(P.u,P.q.U,'N');
   const x=r(); if (P.alt.length && x<TM_ODDS.alt){ const c=P.alt[Math.floor(r()*P.alt.length)]; keys.push(xtKey(set,c.no,'A')); } else if (r()<TM_ODDS.legR) pick(P.l,P.q.L,'N'); else pick(P.r,P.q.R,'N');
   return keys;
@@ -9746,9 +9747,12 @@ function xtPackEV(set){
   const Vc=val(P.c,'N',P.q.C), Vu=val(P.u,'N',P.q.U), Vr=val(P.r,'N',P.q.R), Vl=val(P.l,'N',P.q.L), Va=P.alt.length? P.alt.reduce((s,x)=>s+xtFairRaw(xtKey(set,x.no,'A')),0)/P.alt.length : 0;
   const Vf=O.fr.C*val(P.c,'F',P.q.C)+O.fr.U*val(P.u,'F',P.q.U)+O.fr.R*val(P.r,'F',P.q.R)+O.fr.L*val(P.l,'F',P.q.L);
   const alt=P.alt.length? O.alt : 0; const slot=alt*Va+(1-alt)*(O.legR*Vl+(1-O.legR)*Vr);
-  return c[k]=(8-O.foil)*Vc+O.foil*Vf+3*Vu+slot;
+  return c[k]=10*Vc+3*Vu+slot+O.foil*Vf+(1-O.foil)*XT_BULK;
 }
 function xtSealedFair(d){
+  // a world with the ten-year market (economy v2): an old pack is worth what is in it plus a collector premium that grows with the years it has been out of print
+  // (and a floor of half the retail price), never a number detached from its contents
+  if (xtV2() && d.set!==TM_TT){ const yrs=Math.max(0,(G.day-xtPrintEnd(d.set))/365); const pack=Math.max(xtPackEV(d.set)*(1+0.06*xtSetPrestige(d.set)*Math.min(12,yrs)), XT_MSRP.P*0.5); return d.v==='P'? pack : pack*XT_BOX*1.02; }
   const def=d.def, n=d.set; const days=G.day-def.rel, age=days/365; const ev=xtPackEV(n); const pr=xtSetPrestige(n); let pack;
   if (n===TM_TT && age<=1) pack=Math.max(XT_MSRP.P*0.8, Math.min(XT_MSRP.P*2.2, ev*1.02))*(1+0.18*Math.exp(-days/21)*(pr-0.6)); else pack=Math.max(XT_MSRP.P*0.9, ev);
   const s=(G.xtg&&G.xtg.shop[n])||{}; const shelf=d.v==='P'? (s.pack||0) : (s.box||0); const so=d.v==='P'? (s.sop==null?1:s.sop) : (s.so==null?1:s.so);
@@ -9769,16 +9773,16 @@ function xtFulfilPreorders(set, t){ const T=G.xtg; const mine=T.pre.filter(p=>p.
 }
 // opening: returns the cards, never charges anything (the sealed copy is what you paid for)
 function xtOpenSealed(id){
-  const cp=XT(id); if (!cp || cp.o!==0 || cp.l) return null; const d=xtD(cp.k); if (!d.sealed) return null; const paid=(cp.a&&cp.a[2])||0; const packs=d.v==='P'?1:36; const r=mkRng(hsh('open'+cp.id+G.day)); const out=[]; let bulk=0;
-  for (let i=0;i<packs;i++){ const keys=xtRollPack(d.set,r); bulk+=keys.bulk;
-    const ids=keys.map(k=>{ const c=xtMakeCopy(k,0,[G.day,'pulled',Math.round(paid/packs/12*100)/100,'a '+d.title],'pull',r); c.nw=1; c.h=[[G.day,'Pulled from a '+d.title,0,'']]; const rr=xtCopyValue(c); c.pv={d:G.day,v:Math.round(rr*100)/100,n:''}; return c.id; }); out.push(ids); }
+  const cp=XT(id); if (!cp || cp.o!==0 || cp.l) return null; const d=xtD(cp.k); if (!d.sealed) return null; const paid=(cp.a&&cp.a[2])||0; const packs=d.v==='P'?1:XT_BOX; const r=mkRng(hsh('open'+cp.id+G.day)); const out=[]; const bulkPer=[]; let bulk=0;
+  for (let i=0;i<packs;i++){ const keys=xtRollPack(d.set,r); bulk+=keys.bulk; bulkPer.push(keys.bulk);
+    const ids=keys.map(k=>{ const c=xtMakeCopy(k,0,[G.day,'pulled',Math.round(paid/packs/XT_PACK*100)/100,'a '+d.title],'pull',r); c.nw=1; c.h=[[G.day,'Pulled from a '+d.title,0,'']]; const rr=xtCopyValue(c); c.pv={d:G.day,v:Math.round(rr*100)/100,n:''}; return c.id; }); out.push(ids); }
   const sv=Math.round(xtCopyValue(cp)*100)/100;   // what it was worth sealed, the moment it was opened
   const bv=Math.round(bulk*XT_BULK*100)/100; if (bv>0){ G.player.cash+=bv; G.player.sold=(G.player.sold||0)+bv; }   // the bulk goes to the store's bulk bin at once
-  delete G.xtc[id]; G.player.packs=(G.player.packs||0)+packs; return {packs:out, set:d.set, title:d.title, paid, sv, bulk, bulkValue:bv};
+  delete G.xtc[id]; G.player.packs=(G.player.packs||0)+packs; return {packs:out, set:d.set, title:d.title, paid, sv, bulk, bulkPer, bulkValue:bv};
 }
 // open several sealed items at once (every pack from 'Open all'): one result, packs in order
-function xtOpenMany(ids){ const res={packs:[], set:1, title:'', paid:0, bulk:0, bulkValue:0}; let n=0, t='';
-  for (const id of ids){ const r=xtOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.set=r.set; res.paid+=r.paid; res.sv=(res.sv||0)+r.sv; res.bulk+=r.bulk; res.bulkValue+=r.bulkValue; t=r.title; n++; }
+function xtOpenMany(ids){ const res={packs:[], bulkPer:[], set:1, title:'', paid:0, bulk:0, bulkValue:0}; let n=0, t='';
+  for (const id of ids){ const r=xtOpenSealed(id); if (!r) continue; res.packs.push(...r.packs); res.bulkPer.push(...r.bulkPer); res.set=r.set; res.paid+=r.paid; res.sv=(res.sv||0)+r.sv; res.bulk+=r.bulk; res.bulkValue+=r.bulkValue; t=r.title; n++; }
   if (!n) return null; res.title=n>1? n+' × '+t : t; return res; }
 // ---------- grading ----------
 // ---------- collectors ----------
@@ -9919,7 +9923,7 @@ function xtPackDrawn(set, f){
       ${crimp(6,18)}${crimp(256,18)}
       ${logo(100,62,30,150)}
       <rect x="40" y="196" width="120" height="26" rx="4" fill="#0b0f1a" opacity=".72" stroke="url(#${u}f)" stroke-width="1.2"/><text x="100" y="215" text-anchor="middle" ${F} font-weight="800" font-size="17" fill="#fff" letter-spacing="1.5" textLength="${Math.min(108,name.length*10)}" lengthAdjust="spacingAndGlyphs">${esc(name)}</text>
-      <text x="100" y="240" text-anchor="middle" ${F} font-weight="700" font-size="9" fill="#fff" letter-spacing="2" textLength="120" lengthAdjust="spacingAndGlyphs">BOOSTER PACK · 12 CARDS</text>
+      <text x="100" y="240" text-anchor="middle" ${F} font-weight="700" font-size="9" fill="#fff" letter-spacing="2" textLength="120" lengthAdjust="spacingAndGlyphs">BOOSTER PACK · 15 CARDS</text>
       <g transform="translate(160 86)"><circle r="13" fill="#0b0f1a" opacity=".7" stroke="url(#${u}f)" stroke-width="1.2"/><text y="4" text-anchor="middle" ${F} font-weight="800" font-size="10" fill="#fff">${esc(def.code)}</text></g></svg>`;
   }
   // a booster box at three-quarter view: painted front, darker side, lid with the wordmark
@@ -10094,7 +10098,7 @@ function xtDecksWith(cid){ return G.xtg.arch.filter(a=>a.cnt&&a.cnt[cid]).sort((
 function xtDesignSheet(key){
   const d=xtD(key); const own=myXt().filter(c=>c.k===key); const lst=xtMarketLine(key);
   if (d.sealed){ const T=G.xtg.shop[d.set]; const inP=T&&xtInPrint(d.set,G.day);
-    return { t:d.title, h:`<div class="stack"><div class="detail"><div class="bigcard" style="max-width:200px">${xtPackSVG(d.set,d.v)}</div><div class="stack"><div class="title-block"><div class="yr">${esc(d.def.name)}</div><h1>${esc(d.title)}</h1></div><dl class="kv"><dt>Retail</dt><dd>${money(XT_MSRP[d.v],true)}${inP?' · '+(d.v==='P'?T.pack:T.box)+' in stock':' · no longer in print'}</dd><dt>Market estimate</dt><dd class="est">${fmtRange(xtEst(key,0))}</dd><dt>Contents</dt><dd>${d.v==='P'?'12 cards: 8 common, 3 uncommon, 1 rare or Legendary; about 1 pack in 6 has a foil'+(d.set===TM_TT?', about 1 in 60 an alternate-art card':'. Most cards in an old set are bulk'):'36 packs'}</dd></dl></div></div>${xtSalesPanel(key,0)}<div class="panel"><h3>For sale now</h3><div class="rows">${lst.map(listingRow).join('')||'<div class="empty">None listed right now.</div>'}</div></div></div>` }; }
+    return { t:d.title, h:`<div class="stack"><div class="detail"><div class="bigcard" style="max-width:200px">${xtPackSVG(d.set,d.v)}</div><div class="stack"><div class="title-block"><div class="yr">${esc(d.def.name)}</div><h1>${esc(d.title)}</h1></div><dl class="kv"><dt>Retail</dt><dd>${money(XT_MSRP[d.v],true)}${inP?' · '+(d.v==='P'?T.pack:T.box)+' in stock':' · no longer in print'}</dd><dt>Market estimate</dt><dd class="est">${fmtRange(xtEst(key,0))}</dd><dt>Contents</dt><dd>${d.v==='P'?'15 cards: 10 common, 3 uncommon, 1 rare or Legendary and a basic (a foil of any rarity about 1 pack in 4)'+(d.set===TM_TT?', about 1 in 60 an alternate-art card':'. Most cards in an old set are bulk'):'36 packs'}</dd></dl></div></div>${xtSalesPanel(key,0)}<div class="panel"><h3>For sale now</h3><div class="rows">${lst.map(listingRow).join('')||'<div class="empty">None listed right now.</div>'}</div></div></div>` }; }
   const c=d.card, st=xtLegalState(c.cid), share=xtDeckShare(c.cid); const trend=xtCardTrend(c.cid); const recent=G.xtg.ev.slice(0,8).filter(e=>e.top.some(id=>{ const a=G.xtg.arch.find(x=>x.id===id); return a&&(a.core.includes(c.cid)||a.tr.includes(c.cid)); })).length;
   const prints=xtPrintsOf(c.cid); const vars=xtVariants(c).map(v=>xtKey(d.set,c.no,v));
   const others=prints.filter(x=>!(x.set===d.set&&x.no===c.no)).flatMap(x=>xtVariants(x).map(v=>xtKey(x.set,x.no,v)));
@@ -10140,7 +10144,7 @@ ACT.xtgrade=a=>{ const [id,t]=a.split('|'); const e=xtSubmitGrade(+id,t); if (e)
 // top-loaded; a big hit gets a short celebration. 'Reveal all' goes straight to the summary.
 const XT_GOOD=4, XT_BIG=40;   // dollars: a card worth sleeving, and a big hit worth a celebration
 function xtoOverlay(){ let el=$('#tco'); if (!el){ el=document.createElement('div'); el.id='tco'; el.className='tco'; el.setAttribute('role','dialog'); el.setAttribute('aria-label','Opening packs'); document.body.appendChild(el); document.body.classList.add('noscroll'); } return el; }
-function xtoMeta(res){ return res.packs.map(p=>{ const cs=p.map(XT).filter(Boolean); let best=cs[0], bv=0, tot=0; for (const c of cs){ const v=xtCopyValue(c); tot+=v; if (v>bv){ bv=v; best=c; } } return {best, bv, tot}; }); }
+function xtoMeta(res){ return res.packs.map(p=>{ const cs=p.map(XT).filter(Boolean); let best=cs[0]||null, bv=0, tot=0; for (const c of cs){ const v=xtCopyValue(c); tot+=v; if (v>bv){ bv=v; best=c; } } return {best, bv, tot}; }); }
 // rarity and print in one line, without saying 'Full art · Full art'
 const xtRV=d=> XT_RARN[d.card.rar]+(XT_VARN[d.v]!==XT_RARN[d.card.rar]? ' · '+XT_VARN[d.v] : '');
 // a pack glows when its best card is premium (Illustration rare or better) or worth XT_GOOD; gold at XT_BIG
@@ -10148,9 +10152,9 @@ const xtGood=c=> !!c && (xtIsPrem(xtD(c.k).card) || xtCopyValue(c)>=XT_GOOD);
 const xtoTier=(v,c)=> v>=XT_BIG? 'g2' : (v>=XT_GOOD || xtGood(c))? 'g1' : '';
 const xtHints=()=>!(G.xtg.opt&&G.xtg.opt.nohint);   // pack glow before opening: on by default, a per-save choice
 function xtoGrid(st, el){
-  const res=st.res, M=st.meta, n=res.packs.length, op=st.seen.length, H=xtHints(); const g1=M.filter(m=>xtoTier(m.bv,m.best)).length, g2=M.filter(m=>m.bv>=XT_BIG).length;
-  const tile=(m,i)=>{ const seen=st.seen.includes(i); return seen? `<button class="tcg-tile open" data-act="xtopack" data-a="${i}" aria-label="Pack ${i+1}, opened, best ${esc(xtD(m.best.k).title)}"><div class="tcg-face">${xtFace(m.best)}</div><span>${money(m.bv,true)}</span></button>`
-    : `<button class="tcg-tile ${H?xtoTier(m.bv,m.best):''}" data-act="xtopack" data-a="${i}" aria-label="Pack ${i+1}${!H?'':m.bv>=XT_BIG?', glowing gold':xtoTier(m.bv,m.best)?', glowing':''}"><div class="tcg-pack">${xtPackSVG(res.set,'P',i)}</div><span>${i+1}</span></button>`; };
+  const res=st.res, M=st.meta, n=res.packs.length, op=st.seen.length, H=xtHints(); const g1=M.filter(m=>m.best&&xtoTier(m.bv,m.best)).length, g2=M.filter(m=>m.bv>=XT_BIG).length;
+  const tile=(m,i)=>{ const seen=st.seen.includes(i); if (seen && !m.best) return `<button class="tcg-tile open" data-act="xtopack" data-a="${i}" aria-label="Pack ${i+1}, opened, all bulk"><div class="tcg-face"><div class="empty small">All bulk</div></div><span>${money(m.bv,true)}</span></button>`; return seen? `<button class="tcg-tile open" data-act="xtopack" data-a="${i}" aria-label="Pack ${i+1}, opened, best ${esc(xtD(m.best.k).title)}"><div class="tcg-face">${xtFace(m.best)}</div><span>${money(m.bv,true)}</span></button>`
+    : `<button class="tcg-tile ${H&&m.best?xtoTier(m.bv,m.best):''}" data-act="xtopack" data-a="${i}" aria-label="Pack ${i+1}${!H?'':m.bv>=XT_BIG?', glowing gold':xtoTier(m.bv,m.best)?', glowing':''}"><div class="tcg-pack">${xtPackSVG(res.set,'P',i)}</div><span>${i+1}</span></button>`; };
   const next=M.findIndex((m,i)=>!st.seen.includes(i));
   el.innerHTML=`<div class="tco-top"><span>${esc(res.title)} · ${n} packs · ${op} opened</span><button class="btn sm" data-act="xtosum">Reveal all</button><button class="btn sm" data-act="xtoclose" aria-label="Close">✕</button></div>
     <p class="tcg-note">${!H? 'Hints are off: every pack looks the same until you open it. ' : g2? `<b class="gold">${g2} gold</b> pack${g2>1?'s hold':' holds'} a big hit. `:''}${!H?'':g1-g2>0? `${g1-g2} glowing pack${g1-g2>1?'s hold':' holds'} a premium card or one worth ${money(XT_GOOD)} or more. `:''}${H&&!g1?'No standout cards in this lot. ':''}Tap any pack to open it. <button class="linkbtn" data-act="xtohint" style="color:#9fc7ff">${H?'Hide hints':'Show hints'}</button></p>
@@ -10162,7 +10166,7 @@ function xtoRender(){
   const pack=res.packs[st.pi]; const ids=pack; const done=st.ci>=ids.length;
   const top=`<div class="tco-top"><span>${esc(res.title)}${multi?' · pack '+(st.pi+1)+' of '+res.packs.length:''}</span>${multi?'<button class="btn sm" data-act="xtogrid">All packs</button>':''}<button class="btn sm" data-act="xtoclose" aria-label="Close">✕</button></div>`;
   if (done){ const cs=ids.map(XT).filter(Boolean); const best=cs.slice().sort((a,b)=>xtCopyValue(b)-xtCopyValue(a)); const v=cs.reduce((s,c)=>s+xtCopyValue(c),0); const nx=multi? st.meta.findIndex((m,i)=>!st.seen.includes(i)) : -1;
-    el.innerHTML=`${top}<div class="tco-sum"><h2>Pack ${st.pi+1}</h2><p>${cs.length} cards, worth about ${money(v,true)}</p><div class="tco-strip">${cs.map(c=>`<div class="tco-mini ${XT_RAROR[xtD(c.k).card.rar]>=2||xtD(c.k).v==='F'?'hit':''}">${xtFace(c)}</div>`).join('')}</div><p class="small">Best: ${esc(xtCardLabel(best[0].k))}, ${money(xtCopyValue(best[0]),true)}</p>
+    el.innerHTML=`${top}<div class="tco-sum"><h2>Pack ${st.pi+1}</h2><p>${cs.length} named card${cs.length===1?'':'s'}${res.bulkPer&&res.bulkPer[st.pi]? ' and '+res.bulkPer[st.pi]+' bulk (basic and unnamed)':''}, worth about ${money(v,true)}</p><div class="tco-strip">${cs.map(c=>`<div class="tco-mini ${XT_RAROR[xtD(c.k).card.rar]>=2||xtD(c.k).v==='F'?'hit':''}">${xtFace(c)}</div>`).join('')}</div>${best.length? `<p class="small">Best: ${esc(xtCardLabel(best[0].k))}, ${money(xtCopyValue(best[0]),true)}</p>` : '<p class="small">Nothing in this pack is a tracked card: it was all bulk.</p>'}
       <div class="tco-act">${multi?`<button class="btn" data-act="xtogrid">All packs</button>${nx>=0?`<button class="btn pri" data-act="xtopack" data-a="${nx}">Open pack ${nx+1}</button>`:'<button class="btn pri" data-act="xtosum">See everything</button>'}`:'<button class="btn pri" data-act="xtoclose">Done</button>'}</div></div>`; return; }
   const c=XT(ids[st.ci]); const d=xtD(c.k); const val=xtCopyValue(c); const flash=xtIsPrem(d.card)||d.v==='F'?'ultra': (d.card.rar==='rare'||d.card.rar==='leg')?'rare':''; const last=st.ci===ids.length-1;
   const prot= st.rev && xtGood(c);   // a good card goes into a penny sleeve, then a top loader
@@ -10182,7 +10186,7 @@ ACT.xtonextcard=()=>{ const st=UI.xto; if (!st) return; st.ci++; st.rev=false; x
 ACT.xtoall=()=>{ const st=UI.xto; if (!st) return; const rest=st.res.packs[st.pi].slice(st.rev? st.ci+1 : st.ci).map(XT).filter(Boolean); st.ci=st.res.packs[st.pi].length; xtoRender(); xtoCheer(st, rest.sort((x,y)=>xtCopyValue(y)-xtCopyValue(x))[0]); };
 ACT.xtonext=()=>{ const st=UI.xto; if (!st) return; ACT.xtopack(String(st.pi+1)); };
 ACT.xtoclose=()=>{ const el=$('#tco'); if (el) el.remove(); document.body.classList.remove('noscroll'); UI.xto=null; render(true); queueSave(); };
-ACT.xtosum=()=>{ const st=UI.xto; const res=st&&st.res; const unseen=st? st.meta.map((m,i)=>i).filter(i=>!st.seen.includes(i)) : []; const big=st? unseen.map(i=>st.meta[i].best).filter(c=>!st.cel[c.id]).sort((x,y)=>xtCopyValue(y)-xtCopyValue(x))[0] : null;
+ACT.xtosum=()=>{ const st=UI.xto; const res=st&&st.res; const unseen=st? st.meta.map((m,i)=>i).filter(i=>!st.seen.includes(i)) : []; const big=st? unseen.map(i=>st.meta[i].best).filter(c=>c&&!st.cel[c.id]).sort((x,y)=>xtCopyValue(y)-xtCopyValue(x))[0] : null;
   ACT.xtoclose(); if (res){ openSheet(()=>xtOpenSummary(res)); if (big && xtCopyValue(big)>=XT_BIG) celebrate('Big hit!', xtD(big.k).title+' · '+money(xtCopyValue(big),true)); } };
 function xtOpenSummary(res){
   const all=res.packs.flat().map(XT).filter(Boolean); const val=all.reduce((s,c)=>s+xtCopyValue(c),0); const best=all.slice().sort((a,b)=>xtCopyValue(b)-xtCopyValue(a)).slice(0,10); const by={}; for (const c of all){ const d=xtD(c.k); const k=XT_RARN[d.card.rar]+(d.v==='F'?' (foil)':''); by[k]=(by[k]||0)+1; } if (res.bulk) by['Bulk (to the bulk bin for '+money(res.bulkValue,true)+')']=res.bulk;
@@ -10325,14 +10329,14 @@ function xtKvCondText(k){ if (xtV2()){ const c=xtKvBest(k); if (c) return COND_L
 // (withRng), never the world's, so it cannot move the metagame. Decided by Claude, not canon.
 const XT_E2={
   // cards opened in a set's first year (the game world is a sample of the market), growing as the game grew; sealed product kept by hoarders
-  q0:150, q1:0.3, q2:1.7, sealedMul:1.6, boxFrac:0.8,
+  q0:150, q1:0.3, q2:1.7, sealedMul:0.45, boxFrac:0.8,
   // who holds a card: collector (sleeved, binder), player (decks, travels), casual (loose). Share of cards by release year, lost and worn per year
   hold:{ collector:{lost:0.008, wear:0.06}, player:{lost:0.06, wear:0.28}, casual:{lost:0.14, wear:0.34} },
   mix(year){ const t=Math.min(1,Math.max(0,(year-2016)/9)); return { collector:0.12+0.23*t, player:0.38+0.02*t, casual:0.50-0.25*t }; },
   rarLost:{common:1.6, unc:1.2, rare:0.8, leg:0.4}, rarWear:{common:1, unc:0.92, rare:0.8, leg:0.65},
   grade:{rare:0.02, leg:0.08},                          // yearly chance that a raw NM or LP copy is sent to be graded, by rarity
   sealedOpen:{box:0.005, pack:0.025}, sealedLost:{box:0.015, pack:0.02},   // yearly: opened, lost
-  attic:0.07, atticSealed:0.35,                         // share of surviving cards and sealed product kept off the market until an estate sale
+  attic:0.07, atticSealed:0.6,                         // share of surviving cards and sealed product kept off the market until an estate sale
   vintageYears:2,                                       // sets older than this get the census, scarcity pricing and seller-backed shops
   elast:0.35, cap:[0.5,3], smooth:45                    // price answers to (copies at the start / copies now)^elast, bounded, over a 45-day average
 };
@@ -10401,7 +10405,7 @@ function xtV2Replay(){
         const holder=toAttic? null : own(c.cls,s); const cp=mk(c.k, toAttic?-3:holder.id, c.c.slice());
         if (c.g){ cp.gt=1; cp.g=gradeOf(cp); cp.cert=10000000+Math.floor(R()*89999999); const p=G.xpop[cp.k]||(G.xpop[cp.k]=Array(11).fill(0)); p[cp.g]++; led.graded++; }
         led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
-      for (const [f,n] of [['P',P],['B',B]]) for (let i=0;i<n;i++){ const toAttic=R()<XT_E2.atticSealed; const holder=toAttic? null : pickTy(['xsl','xsl','xfl','xtl']); const cp=mk(xtKey(s,0,f), toAttic?-3:holder.id, [100,100,100,100]); led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
+      for (const [f,n] of [['P',P],['B',B]]) for (let i=0;i<n;i++){ const toAttic=R()<XT_E2.atticSealed; const holder=toAttic? null : pickTy(['xsl','xsl','xsl','xtl']); const cp=mk(xtKey(s,0,f), toAttic?-3:holder.id, [100,100,100,100]); led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
     }
     // every named card has at least one surviving copy somewhere: a card that was printed in number does not vanish (the last copy sits in an attic)
     const have=new Set(); for (const id in G.xtc) have.add(G.xtc[id].k);
@@ -10451,8 +10455,8 @@ function xtNpcOpen(c,n,d,t){   // a collector cracks a sealed pack or box: the c
 // ---------- estate sales, warehouse finds and collection sales: finite inventory that was already in the world ----------
 function xtEstateTick(t){
   const E=G.xtg.e2; if (!E) return;
-  if (t>=E.next){ E.next=t+25+Math.floor(R()*35); xtEstate(t,false); }
-  if (t>=E.nextP){ E.nextP=t+70+Math.floor(R()*60); xtEstate(t,true); }
+  if (t>=E.next){ E.next=t+20+Math.floor(R()*25); xtEstate(t,false); }
+  if (t>=E.nextP){ E.nextP=t+45+Math.floor(R()*45); xtEstate(t,true); }
   if (t>=E.nextL){ E.nextL=t+60+Math.floor(R()*100); xtLiquidation(t); }
 }
 const XT_SELLERS=['xtl','xtm','xfl','xsl'];
@@ -10484,8 +10488,8 @@ function xtKvDay(t){
   // dealers sell: each item has a small chance of going to a collector each day, at once if it is cheap
   for (let i=inv.length-1;i>=0;i--){ const c=G.xtc[inv[i]]; if (!c){ inv.splice(i,1); continue; } if (R()<0.018){ const b=pick(G.npcs.filter(isXtNPC)); c.o=b.id; (G._npcXtIds=G._npcXtIds||[]).push(c.id); inv.splice(i,1); } }
   if (dowOf(t)!==1) return;
-  const want=24+Math.floor(R()*15), cand=G._npcXtIds||[]; let got=0;
-  for (let tries=0; tries<500 && got<want && inv.length<420 && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
+  const want=32+Math.floor(R()*17), cand=G._npcXtIds||[]; let got=0;
+  for (let tries=0; tries<500 && got<want && inv.length<520 && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
     const v=xtCopyValue(c); if (v<0.05) continue; const p=(XT_KV_BUY[n.ty]||0.15)*(n.ty==='xtm'&&n.setN===d.set?0.1:1)*((d.card.res||d.rar==='leg')&&n.ty!=='xfl'?0.5:1); if (R()>p) continue;
     n.cash+=Math.round(v*0.7*100)/100; c.o=-2; c.a=[t,'held',0,'']; inv.push(id); got++; }
 }
@@ -10534,12 +10538,12 @@ function xtKeep(n,c,v,base){
   // ordinary cards (commons and uncommons) are what collectors trade and release: they do not sit in binders for good
   if (!d.sealed && d.v==='N' && (d.rar==='common'||d.rar==='unc')) return n.ty==='xtm'&&n.setN===d.set? 0.72 : n.ty==='xfl'? 0.05 : Math.min(base,0.45);
   switch(n.ty){
-    case 'xtm': return d.sealed? 0.5 : n.setN===d.set? 0.95 : 0.4;
-    case 'xsl': return d.sealed? 0.96 : 0.6;
-    case 'xtl': return d.sealed? 0.6 : prem? (d.card.res? 0.985 : 0.93) : base;
-    case 'xfl': return d.sealed? 0.15 : 0.05;
-    case 'xgr': return d.sealed? 0.4 : 0.3;
-    default: return base;
+    case 'xtm': return d.sealed? 0.9 : n.setN===d.set? 0.95 : 0.4;
+    case 'xsl': return d.sealed? 0.985 : 0.6;
+    case 'xtl': return d.sealed? 0.9 : prem? (d.card.res? 0.985 : 0.93) : base;
+    case 'xfl': return d.sealed? 0.5 : 0.05;
+    case 'xgr': return d.sealed? 0.8 : 0.3;
+    default: return d.sealed? Math.max(base,0.85) : base;
   }
 }
 
