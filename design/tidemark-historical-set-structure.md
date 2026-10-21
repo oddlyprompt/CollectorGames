@@ -33,7 +33,7 @@ Only if something supplies the missing cards.
 
 ## 4. First Tide at 125 cards and its advertised 250
 - **Fit:** First Tide's 250 numbers stay as printed. 125 of them are catalogued (59 now, plus 66 in gaps between the existing numbers, about one of every three gaps) and 125 stay "not yet catalogued". Nothing is renumbered; the checklist can show "125 of 250 catalogued" and later waves can fill more gaps. Packs contain only catalogued cards, so the invisible bulk disappears without touching any collector number. Whether the printed card shows "/250" or a smaller number is the numbering decision you asked me to defer.
-- **Recommended composition of the 125** (today 25 C, 20 U, 9 R, 5 L): **55 commons (+30), 38 uncommons (+18), 24 rares (+15), 8 Legendaries (+3).** In a 36-pack box that is 6.5 copies of an average common (84 is the previous plan's 14), 2.8 of an uncommon and 1.3 of a rare, and any given Legendary is in about 4 boxes of 10. The 19 reserve-list cards stay as they are; new Legendaries are not on the reserve list unless you say so.
+- **Recommended composition of the 125** (today 25 C, 20 U, 9 R, 5 L): **55 commons (+30), 38 uncommons (+18), 24 rares (+15), 8 Legendaries (+3).** In a 36-pack box that is 6.5 copies of an average common (today's 59 cards give 14, the 84-card plan about 8), 2.8 of an uncommon and 1.3 of a rare, and any given Legendary is in about 4 boxes of 10. The 19 reserve-list cards stay as they are; new Legendaries are not on the reserve list unless you say so.
 - **Cost:** 66 designs and about 8 sheets. 125 is clearly better than 84: with 84 an average common appears 8 times per box.
 
 ## 5. The product rule, and the mini-booster rarity discrepancy
