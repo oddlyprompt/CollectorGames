@@ -73,6 +73,8 @@ Where the thin sets came from: the checklist names only the notable cards of eac
 - No validator ties a product's configuration to its card pool.
 - Sealed price was a formula of age and a floor, not a result of demand and supply.
 
+> **Update (2026-10-21):** the owner asked for alternatives to the mini-set recommendation below. `tidemark-historical-set-structure.md` replaces 1.4 A to 1.4 D and 1.7 with a focused recommendation (a hybrid with one flagship set a year, First Tide to 125 cards, gap-filling without renumbering).
+
 ### 1.4 Recommendations (decisions for the owner)
 **A. Stop modelling thin sets as booster sets. Recommended:** classify every set by what it really is.
 - **Major sets:** Tenth Tide (220) and **First Tide, the foundational expansion** (needs expanding, see D). These sell booster packs and boxes.
