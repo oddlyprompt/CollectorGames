@@ -132,8 +132,8 @@ function xtNpcOpen(c,n,d,t){   // a collector cracks a sealed pack or box: the c
 // ---------- estate sales, warehouse finds and collection sales: finite inventory that was already in the world ----------
 function xtEstateTick(t){
   const E=G.xtg.e2; if (!E) return;
-  if (t>=E.next){ E.next=t+25+Math.floor(R()*35); xtEstate(t,false); }
-  if (t>=E.nextP){ E.nextP=t+70+Math.floor(R()*60); xtEstate(t,true); }
+  if (t>=E.next){ E.next=t+20+Math.floor(R()*25); xtEstate(t,false); }
+  if (t>=E.nextP){ E.nextP=t+45+Math.floor(R()*45); xtEstate(t,true); }
   if (t>=E.nextL){ E.nextL=t+60+Math.floor(R()*100); xtLiquidation(t); }
 }
 const XT_SELLERS=['xtl','xtm','xfl','xsl'];
