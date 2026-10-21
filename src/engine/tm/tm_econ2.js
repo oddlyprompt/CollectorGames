@@ -6,14 +6,14 @@
 // (withRng), never the world's, so it cannot move the metagame. Decided by Claude, not canon.
 const XT_E2={
   // cards opened in a set's first year (the game world is a sample of the market), growing as the game grew; sealed product kept by hoarders
-  q0:150, q1:0.3, q2:1.7, sealedMul:1.6, boxFrac:0.8,
+  q0:150, q1:0.3, q2:1.7, sealedMul:0.45, boxFrac:0.8,
   // who holds a card: collector (sleeved, binder), player (decks, travels), casual (loose). Share of cards by release year, lost and worn per year
   hold:{ collector:{lost:0.008, wear:0.06}, player:{lost:0.06, wear:0.28}, casual:{lost:0.14, wear:0.34} },
   mix(year){ const t=Math.min(1,Math.max(0,(year-2016)/9)); return { collector:0.12+0.23*t, player:0.38+0.02*t, casual:0.50-0.25*t }; },
   rarLost:{common:1.6, unc:1.2, rare:0.8, leg:0.4}, rarWear:{common:1, unc:0.92, rare:0.8, leg:0.65},
   grade:{rare:0.02, leg:0.08},                          // yearly chance that a raw NM or LP copy is sent to be graded, by rarity
   sealedOpen:{box:0.005, pack:0.025}, sealedLost:{box:0.015, pack:0.02},   // yearly: opened, lost
-  attic:0.07, atticSealed:0.35,                         // share of surviving cards and sealed product kept off the market until an estate sale
+  attic:0.07, atticSealed:0.6,                         // share of surviving cards and sealed product kept off the market until an estate sale
   vintageYears:2,                                       // sets older than this get the census, scarcity pricing and seller-backed shops
   elast:0.35, cap:[0.5,3], smooth:45                    // price answers to (copies at the start / copies now)^elast, bounded, over a 45-day average
 };
@@ -82,7 +82,7 @@ function xtV2Replay(){
         const holder=toAttic? null : own(c.cls,s); const cp=mk(c.k, toAttic?-3:holder.id, c.c.slice());
         if (c.g){ cp.gt=1; cp.g=gradeOf(cp); cp.cert=10000000+Math.floor(R()*89999999); const p=G.xpop[cp.k]||(G.xpop[cp.k]=Array(11).fill(0)); p[cp.g]++; led.graded++; }
         led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
-      for (const [f,n] of [['P',P],['B',B]]) for (let i=0;i<n;i++){ const toAttic=R()<XT_E2.atticSealed; const holder=toAttic? null : pickTy(['xsl','xsl','xfl','xtl']); const cp=mk(xtKey(s,0,f), toAttic?-3:holder.id, [100,100,100,100]); led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
+      for (const [f,n] of [['P',P],['B',B]]) for (let i=0;i<n;i++){ const toAttic=R()<XT_E2.atticSealed; const holder=toAttic? null : pickTy(['xsl','xsl','xsl','xtl']); const cp=mk(xtKey(s,0,f), toAttic?-3:holder.id, [100,100,100,100]); led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
     }
     // every named card has at least one surviving copy somewhere: a card that was printed in number does not vanish (the last copy sits in an attic)
     const have=new Set(); for (const id in G.xtc) have.add(G.xtc[id].k);
@@ -215,11 +215,11 @@ function xtKeep(n,c,v,base){
   // ordinary cards (commons and uncommons) are what collectors trade and release: they do not sit in binders for good
   if (!d.sealed && d.v==='N' && (d.rar==='common'||d.rar==='unc')) return n.ty==='xtm'&&n.setN===d.set? 0.72 : n.ty==='xfl'? 0.05 : Math.min(base,0.45);
   switch(n.ty){
-    case 'xtm': return d.sealed? 0.5 : n.setN===d.set? 0.95 : 0.4;
-    case 'xsl': return d.sealed? 0.96 : 0.6;
-    case 'xtl': return d.sealed? 0.6 : prem? (d.card.res? 0.985 : 0.93) : base;
-    case 'xfl': return d.sealed? 0.15 : 0.05;
-    case 'xgr': return d.sealed? 0.4 : 0.3;
-    default: return base;
+    case 'xtm': return d.sealed? 0.9 : n.setN===d.set? 0.95 : 0.4;
+    case 'xsl': return d.sealed? 0.985 : 0.6;
+    case 'xtl': return d.sealed? 0.9 : prem? (d.card.res? 0.985 : 0.93) : base;
+    case 'xfl': return d.sealed? 0.5 : 0.05;
+    case 'xgr': return d.sealed? 0.8 : 0.3;
+    default: return d.sealed? Math.max(base,0.85) : base;
   }
 }

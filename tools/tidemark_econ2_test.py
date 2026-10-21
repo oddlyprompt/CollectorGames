@@ -72,17 +72,18 @@ async def t_condition(pg):
 
 
 # ---------------------------------------------------------------- 3. availability: what a buyer sees in a year
-AVAIL="""async(seed)=>{ await T2.fresh(seed); const seen={}; const synth=new Set(); const sweep=()=>{ xtKvStock(G.day); for (const c of T2.visible()) if (!(c.id in seen)) seen[c.id]=[c.k, T2.band(c)]; for (const k in ((G.xtg.kv&&G.xtg.kv.syn)||{})) synth.add(k); };
+AVAIL="""async(seed)=>{ await T2.fresh(seed); const seen={}; const synth=new Set(); let sealedSeen=0, listSeen=0; const sweep=()=>{ const xl=G.lst.filter(l=>l.it==='x'&&l.sel!==0); listSeen+=xl.length; for (const l of xl){ const d=xtD(G.xtc[l.ref].k); if (d.sealed&&d.set!==31) sealedSeen++; } xtKvStock(G.day); for (const c of T2.visible()) if (!(c.id in seen)) seen[c.id]=[c.k, T2.band(c)]; for (const k in ((G.xtg.kv&&G.xtg.kv.syn)||{})) synth.add(k); };
   sweep(); for (let d=0; d<365; d+=2){ T2.days(2); sweep(); }
   const grpOf=s=>s<=6?'old':s<=18?'mid':s<=25?'late':'new', rkOf=r=>r==='common'||r==='unc'?'cu':r; const out={}, prints={};
   for (let s=1;s<31;s++) for (const c of xtSetCards(s)){ if (c.pk==='alt') continue; const k=grpOf(s)+'|'+rkOf(c.rar); prints[k]=(prints[k]||0)+1; }
   for (const id in seen){ const [k,b]=seen[id]; const d=xtD(k); if (d.sealed||d.v!=='N'||d.set===31) continue; const g=grpOf(d.set)+'|'+rkOf(d.rar); const o=out[g]||(out[g]={any:0,nm:0,pa:new Set(),pn:new Set()}); o.any++; o.pa.add(k); if (b==='NM'){ o.nm++; o.pn.add(k); } }
   for (const k of synth){ const d=xtD(k); if (d.sealed||d.v!=='N'||d.set===31) continue; const g=grpOf(d.set)+'|'+rkOf(d.rar); const o=out[g]||(out[g]={any:0,nm:0,pa:new Set(),pn:new Set()}); o.pa.add(k); o.pn.add(k); }
-  const res={}; for (const k in prints){ const o=out[k]||{any:0,nm:0,pa:new Set(),pn:new Set()}; res[k]={prints:prints[k], any:o.any/prints[k], nm:o.nm/prints[k], shareAny:o.pa.size/prints[k], shareNM:o.pn.size/prints[k], nmTotal:o.nm}; } return res; }"""
+  const res={__sealed:sealedSeen/Math.max(1,listSeen)}; for (const k in prints){ const o=out[k]||{any:0,nm:0,pa:new Set(),pn:new Set()}; res[k]={prints:prints[k], any:o.any/prints[k], nm:o.nm/prints[k], shareAny:o.pa.size/prints[k], shareNM:o.pn.size/prints[k], nmTotal:o.nm}; } return res; }"""
 async def t_availability(pg):
-    n=max(SEEDS or 3, 3); acc={}
+    n=max(SEEDS or 3, 3); acc={}; seal=[]
     for sd in range(n):
         r=await pg.evaluate(AVAIL, 300+sd)
+        seal.append(r.pop('__sealed'))
         for k,v in r.items():
             a=acc.setdefault(k,{'prints':v['prints'],'any':[],'nm':[],'shareAny':[],'shareNM':[],'nmTotal':[]})
             for f in ('any','nm','shareAny','shareNM','nmTotal'): a[f].append(v[f])
@@ -90,6 +91,7 @@ async def t_availability(pg):
     print('  group         prints  appearances/print/yr (any, NM)   share of prints seen (any, NM)   NM appearances per world-year')
     for k in sorted(acc): print('  %-12s %5d     %5.2f  %5.3f                    %4.0f%%  %4.0f%%                 %5.1f'%(k,acc[k]['prints'],m(k,'any'),m(k,'nm'),100*m(k,'shareAny'),100*m(k,'shareNM'),m(k,'nmTotal')))
     check('ordinary vintage is discoverable: over a year, 60% of 2016-2018 commons/uncommons show up for sale', m('old|cu','shareAny')>=0.6, '%.0f%%'%(100*m('old|cu','shareAny')))
+    check('old sealed product is not everywhere: under 5%% of the Tidemark listings in a year are old packs or boxes', st.mean(seal)<0.05, '%.1f%%'%(100*st.mean(seal)))
     check('commons and uncommons of the latest sets are almost always available over a year (90%+)', m('new|cu','shareAny')>=0.9, '%.0f%%'%(100*m('new|cu','shareAny')))
     check('NM 2016-2018 Legendaries are exceptional: fewer than 0.4 NM sightings per print per year', m('old|leg','nm')<0.4, '%.3f'%m('old|leg','nm'))
     check('NM 2016-2018 rares are scarce: fewer than 0.6 NM sightings per print per year', m('old|rare','nm')<0.6, '%.3f'%m('old|rare','nm'))
@@ -127,10 +129,10 @@ async def t_consequences(pg):
 # ---------------------------------------------------------------- 5. prices against the first economy
 PRICES="""async()=>{ const R={}; for (const ver of ['v1','v2']){ await T2.fresh(55, ver); const o={}; for (let s=1;s<=31;s++) for (const k of xtAllKeys(s).concat([xtKey(s,0,'P'),xtKey(s,0,'B')])) o[k]=xtFairRaw(k);
     if (ver==='v2'){ o.__ev={}; for (let s=1;s<=30;s++){ o.__ev[s]=[xtPackEV(s), xtFairRaw(xtKey(s,0,'P')), xtFairRaw(xtKey(s,0,'B'))]; } } R[ver]=o; }
-  const rat={}; let ttSame=true, minr=9, maxr=0, outl=[]; for (const k in R.v1){ const d=xtD(k); const r=R.v2[k]/R.v1[k]; if (d.set===31){ if (Math.abs(r-1)>1e-9) ttSame=false; continue; } const g=(d.sealed?'sealed':d.rar)+'|'+(d.set<=6?'old':d.set<=18?'mid':'late'); (rat[g]=rat[g]||[]).push(r); if (r<minr) minr=r; if (r>maxr) maxr=r; if (r<0.5||r>3.0001) outl.push([k,r]); }
+  const rat={}; let ttSame=true, minr=9, maxr=0, outl=[]; for (const k in R.v1){ const d=xtD(k); const r=R.v2[k]/R.v1[k]; if (d.set===31){ if (Math.abs(r-1)>1e-9) ttSame=false; continue; } if (d.sealed) continue; const g=d.rar+'|'+(d.set<=6?'old':d.set<=18?'mid':'late'); (rat[g]=rat[g]||[]).push(r); if (r<minr) minr=r; if (r>maxr) maxr=r; if (r<0.5||r>3.0001) outl.push([k,r]); }
   const med=a=>{ a=a.slice().sort((x,y)=>x-y); return a[Math.floor(a.length/2)]; }; const sum={}; for (const g in rat) sum[g]=[+med(rat[g]).toFixed(2), +Math.min(...rat[g]).toFixed(2), +Math.max(...rat[g]).toFixed(2), rat[g].length];
-  const ev=R.v2.__ev; const open={}; for (let s=1;s<=30;s++){ open[s]=[ev[s][0]/ev[s][1], ev[s][0]*36/ev[s][2]]; }
-  return {ttSame, minr, maxr, outl:outl.slice(0,5), sum, open}; }"""
+  const ev=R.v2.__ev; const open={}; for (let s=1;s<=30;s++){ open[s]=[ev[s][0]/ev[s][1], ev[s][0]*36/ev[s][2]]; } const mult={}; for (let s=1;s<=30;s++) mult[s]=[ev[s][1]/ev[s][0], ev[s][2]/(ev[s][0]*36)];
+  return {ttSame, minr, maxr, outl:outl.slice(0,5), sum, open, mult}; }"""
 async def t_prices(pg):
     r=await pg.evaluate(PRICES)
     for g in sorted(r['sum']): print('  v2/v1 %-12s median %.2f  min %.2f  max %.2f  (n=%d)'%((g,)+tuple(r['sum'][g])))
@@ -138,10 +140,10 @@ async def t_prices(pg):
     check('every v2 price is within 0.5x to 3x of the first economy\'s for the same card', r['minr']>=0.5 and r['maxr']<=3.0001, 'min %.2f max %.2f outliers %s'%(r['minr'],r['maxr'],r['outl']))
     check('2016-2018 NM rares cost more than in the first economy (the vintage NM premium)', r['sum']['rare|old'][0]>1.3, r['sum']['rare|old'])
     check('2016-2018 commons stay cheap (median under 1.5x the first economy)', r['sum']['common|old'][0]<1.5, r['sum']['common|old'])
-    ob=[(int(s),v[0],v[1]) for s,v in r['open'].items()]
-    print('  contents/price of a vintage pack (EV/price) and box:', ' '.join('%s:%.2f/%.2f'%(s,a,b) for s,a,b in ob[::4]))
-    check('no sealed arbitrage: opening any historical pack or box is worth at most 1.4x its price', max(max(a,b) for s,a,b in ob)<=1.4, 'max %.2f'%max(max(a,b) for s,a,b in ob))
-    check('sealed vintage trades at a collector premium over its contents (as First Tide always did) but not beyond 33x: contents are at least 0.03x of the price', min(min(a,b) for s,a,b in ob)>=0.03, 'min %.2f'%min(min(a,b) for s,a,b in ob))
+    ob=[(int(s),v[0],v[1]) for s,v in r['open'].items()]; mb=[(int(s),v[0],v[1]) for s,v in r['mult'].items()]
+    print('  price over contents (pack, box) for sets 1,5,9,...:', ' '.join('%d:%.1fx/%.1fx'%(s,a,b) for s,a,b in mb[::4]))
+    check('no sealed arbitrage: opening any historical pack or box is worth at most 1.0x its price', max(max(a,b) for s,a,b in ob)<=1.0, 'max %.2f'%max(max(a,b) for s,a,b in ob))
+    check('sealed is priced from what is inside: every historical pack and box costs at most 7x the expected value of its contents (3.3x is the half-retail floor of a nearly empty set, up to 2.4x the age premium and up to 3x scarcity on the first set)', max(max(a,b) for s,a,b in mb)<=7.0, 'max %.1fx'%max(max(a,b) for s,a,b in mb))
 
 # ---------------------------------------------------------------- 6. set completion: what a determined collector can actually finish
 COMPLETE="""async(seed, months)=>{ await T2.fresh(seed); G.player.cash=1e9;
