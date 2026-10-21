@@ -17,7 +17,7 @@ The earlier population, appeal-engine and store ideas are kept (sections 3 to 6)
 ## 1. Tidemark Product Integrity Plan (first workstream)
 
 ### 1.1 The audit
-Method (`tools/tidemark_product_audit.py`, read-only, reproducible): for every set, the card pool by rarity from `cards.json`; the standard product configuration the game sells (a 15-card booster: 10 commons, 3 uncommons, 1 rare or Legendary, 1 basic or foil; a 36-pack box); then **600 simulated box openings per set** (300 for Tenth Tide, 21,600 boxes and about 780,000 packs in all), counting tracked cards per pack, duplicates, how much of the pool a box shows, and the value of the contents. "Tracked" means a card that exists in the checklist; the game today fills every other slot with an unnamed **bulk** card worth two cents.
+Method (`tools/tidemark_product_audit.py`, read-only, reproducible): for every set, the card pool by rarity from `cards.json`; the standard product configuration the game sells (a 15-card booster: 10 commons, 3 uncommons, 1 rare or Legendary, 1 basic or foil; a 36-pack box); then **600 simulated box openings per set** (300 for Tenth Tide: 18,300 boxes and about 659,000 packs per sealed-price formula), counting tracked cards per pack, duplicates, how much of the pool a box shows, and the value of the contents. "Tracked" means a card that exists in the checklist; the game today fills every other slot with an unnamed **bulk** card worth two cents.
 
 Where the thin sets came from: the checklist names only the notable cards of each historical set (`named_cards` in the manifest) but advertises the full size (250 for First Tide, 200 for the other 28, collector numbers like "FT 003/250"). Only 59 First Tide cards were named, because the prototype's 57 plain founding cards live there; the other 29 sets have 10 to 21. See `outstanding_assets.md` decision 7.
 
@@ -60,11 +60,11 @@ Where the thin sets came from: the checklist names only the notable cards of eac
 (Per-set rows: Valid = the pool has at least 10 distinct commons, 3 uncommons and 1 rare or Legendary, the minimum for a pack with no duplicate card. Contents of Tenth Tide are 100% tracked except the basic.)
 
 ### 1.2 Findings
-1. **26 of the 30 historical sets cannot fill the advertised pack.** Their pool has fewer than 10 commons (24 sets), and one set (Salt and Banner) has no rare or Legendary at all, so its rare slot is filled from an uncommon. Only First Tide (25 commons), Free Lanes (11), Tidelines (10) and Tenth Tide meet the bare minimum.
-2. **Packs are almost empty of real cards.** In the 29 historical sets other than First Tide, on average **74% of packs hold at most one tracked card**, and 20% to 49% hold none. The rest of each pack is bulk. First Tide: 3% empty, 12% one card, 56% hold three to five.
-3. **Boxes repeat the same few cards.** Each thin-set box shows 9 to 19 distinct cards and 33 to 53 tracked cards in 540; 56% to 69% of the tracked cards in a box are duplicates; the commonest card appears 5.4 to 6.9 times. Tenth Tide, for comparison, shows 187 of 220 cards with 63% duplicates and its commonest card 8.6 times per box. The ratio is similar to Tenth Tide's, but the pool is 10 to 21 cards instead of 220, so opening a box is not an experience.
-4. **Sealed price is not tied to contents.** Under the first economy a thin-set box cost **$390 to $1,187 for contents worth $21 to $73** (16x to 30x), and First Tide **$1,799 for $304** (5.9x). Under the current build the multiple is 2.0x to 4.2x ($92 to $333 for thin sets, $1,629 for First Tide at 2.6x). That is the right order of magnitude, but the premium comes from a formula (a premium that grows with age, a floor of half retail, a scarcity factor), not from demand.
-5. **I could not reproduce "a First Tide box with $7 to $8 of cards".** In 600 simulated First Tide boxes none was below $163 at the 10th percentile and none below $100. The disconnect you saw is real for the thin sets (16x to 30x); if the box was First Tide, a very unlucky box is possible but very rare, or the box was a thin-set box. A sealed product that can be worth $1,100 while holding about $40 is the defect, whichever set it was.
+1. **26 of the 30 historical sets cannot fill the advertised pack.** Their pool has fewer than 10 distinct commons; Salt and Banner also has no rare or Legendary (its rare slot is filled from an uncommon) and Black Tide has only 2 uncommons. Only First Tide (25 commons), Lanterns of the Harbor (12), Free Lanes (11) and Tidelines (10) meet the bare minimum, plus Tenth Tide.
+2. **Packs are almost empty of real cards.** In the 29 historical sets other than First Tide, on average **74% of packs hold at most one tracked card**, and 21% to 50% hold none. The rest of each pack is bulk. First Tide: 3% empty, 12% one card, 56% hold three to five.
+3. **Boxes repeat the same few cards.** Each thin-set box shows 9 to 19 distinct cards and 25 to 53 tracked cards in 540; 56% to 69% of the tracked cards in a box are duplicates; the commonest card appears 5.4 to 6.9 times. Tenth Tide, for comparison, shows 187 of 220 cards with 63% duplicates and its commonest card 8.6 times per box. The ratio is similar to Tenth Tide's, but the pool is 10 to 21 cards instead of 220, so opening a box is not an experience.
+4. **Sealed price is not tied to contents.** Under the first economy a thin-set box cost **$229 to $1,187 for contents worth $21 to $73** (about 11x to 30x), and First Tide **$1,799 for $304** (5.9x). Under the current build the multiple is 2.0x to 4.2x ($92 to $333 for thin sets, $1,629 for First Tide at 2.6x). That is the right order of magnitude, but the premium comes from a formula (a premium that grows with age, a floor of half retail, a scarcity factor), not from demand.
+5. **I could not reproduce "a First Tide box with $7 to $8 of cards".** In 600 simulated First Tide boxes the 10th percentile of contents was $163 under the first economy's prices and $288 under the current ones. The disconnect you saw is real for the thin sets (about 11x to 30x); if the box was First Tide, a very unlucky box is possible but very rare, or the box was a thin-set box. A sealed product that can be worth $1,100 while holding about $40 is the defect, whichever set it was.
 6. **The pack-opening screen could not show an empty pack** (fixed in the pull request awaiting merge, but the root cause below remains).
 
 ### 1.3 Root causes
@@ -81,7 +81,7 @@ Where the thin sets came from: the checklist names only the notable cards of eac
   2. **Mini-booster:** 6 cards (4 commons, 1 uncommon, 1 rare or Legendary, or the best rarity the set has), **no duplicate within a pack**, drawn only from the set's tracked cards, no bulk. A **mini-box is 12 packs** (72 cards, about 5 copies of each card for a 15-card set).
   3. A **starter deck** (fixed 50-card list built from the set's cards) only where the set has at least 17 cards (3 copies each); otherwise none.
   Which of these a set actually sells follows its size, listed in a small data table (`product catalogue`).
-- **Why not just expand every set?** It would need about **1,700 new cards and about 190 art sheets** (see section 1.7), nearly three times everything Tidemark has today. That is a content decision for the owner, not something to hide inside a simulation.
+- **Why not just expand every set?** It would need about **1,700 new cards and about 200 art sheets** (see section 1.7), nearly three times everything Tidemark has today. That is a content decision for the owner, not something to hide inside a simulation.
 
 **B. Remove the bulk mechanic.** A pack contains only cards that exist. The only untracked card is the **basic** in the 15th slot of a major-set booster (like a Magic basic: never collectible). Collector numbers on printed cards then read "003/059" style out of the cards that exist (this edits how each historical card's collector line is drawn, but no name, art or number of a named card changes). **Needs approval** because it changes the printed collector line.
 
@@ -113,7 +113,7 @@ Production today: 657 illustrations in 77 sheets of nine (about 8.5 per sheet).
 |---|---|---|---|
 | Recommended: First Tide +25, mini-sets use mini products | 25 | about 3 | First Tide becomes a valid major set; the 29 mini-sets get honest products |
 | First Tide +66 | 66 | about 8 | a full draftable foundational set |
-| Every set to 45 commons, 18 uncommons, 12 rares and Legendaries (75 cards) | about 1,700 | about 190 | every set becomes a normal booster set |
+| Every set to 45 commons, 18 uncommons, 12 rares and Legendaries (75 cards) | about 1,700 | about 200 | every set becomes a normal booster set |
 | Merge thin sets into "blocks" of about 45 cards (changes the set list) | 0 | 0 | not recommended: it rewrites release history |
 
 Each new card also needs rules design and balance, as every Tidemark card has had.
@@ -186,14 +186,14 @@ Every phase ends with the full test run and a pull request for your review; save
 
 ## 8. Scope and performance risks
 - **Scope:** five large pieces (products, stores, population, market, Rift Parade) plus UI work. The order above lets each ship and be tested alone; phase 1 is deliberately small and first.
-- **Content risk:** First Tide expansion needs designs and art; expanding every set is 190 sheets and is not proposed. Printed collector numbers change if bulk is removed.
+- **Content risk:** First Tide expansion needs designs and art; expanding every set is about 200 sheets and is not proposed. Printed collector numbers change if bulk is removed.
 - **Performance:** a few hundred weekly-ticked agents is cheap; thousands would not be. The crowd is aggregated, not simulated one by one.
 - **Emergent-economy risk:** prices driven by people can drift, spiral or collapse. Safeguards: bounded price bands with logged breaches, budget and money conservation, shock tests, and calibration against the same anchors (pack value against retail, chase prices).
 - **Test churn:** golden snapshots are re-baselined on purpose at each phase; wiped saves remove compatibility work.
 - **No human playtest yet:** every phase should be played by the owner before the next starts.
 
 ## 9. Decisions needed from the owner
-1. **Mini-sets (29 sets with 10 to 21 named cards):** boxed set plus mini-boosters (recommended) or another product mix? (If you want them as full boosters, that is the 190-sheet option.)
+1. **Mini-sets (29 sets with 10 to 21 named cards):** boxed set plus mini-boosters (recommended) or another product mix? (If you want them as full boosters, that is the 200-sheet option.)
 2. **First Tide:** +25 cards (recommended) or +66, and may I write the design proposal for the new cards?
 3. **Bulk and numbering:** remove bulk and renumber collector lines as "003/059" (recommended)?
 4. **Class of products shown in stores before the population exists:** show the contents value next to every sealed price (recommended).
