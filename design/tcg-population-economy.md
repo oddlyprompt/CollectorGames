@@ -18,15 +18,34 @@ This removes most of the cost of the earlier work: there is no first economy to 
 - Bump the save version; an older save opens to a clear "this save is from an older version and cannot be loaded" message (the launcher already labels prototype saves).
 - Re-baseline every golden snapshot once, on purpose, after each phase; the test suites are rewritten around the new model instead of pinning old behaviour.
 
-## 2. The population
-A shared pool of about 150 **people** (today: 47 Wildkin collectors and 47 Tidemark collectors that only collect their own game). Each person has:
-- **role:** player, collector, completionist, investor, dealer, grader, flipper, casual;
-- **home region** (one of about five), income and budget, how patient they are;
-- **tastes**, a vector over a small shared set of dimensions: character love, art, rarity and chase, metagame and play, condition, synergy, nostalgia, fan service and hype;
-- **affinity per game** (0 to 1): a Wildkin person who has never heard of Tidemark has affinity 0.1 for it;
-- **memory:** what they hold, what they want, what they paid.
+## 2. The population: people with their own brains (revised 2026-10-21 after the owner's notes)
+The population is **procedurally generated and grows**. It is not a fixed list of collector types. Each person is an **agent** with a compact brain, so there can be hundreds of fully simulated people (named regulars you can recognise on the market) plus a statistical crowd of casual people that shapes aggregate demand without being simulated one by one (a performance choice: a few hundred brains ticked weekly is cheap, tens of thousands is not).
 
-Tastes drift slowly (nostalgia grows with age, hype spikes after a release or a big win, a new deck makes its cards wanted) and are shocked by events. The population is created from the world seed and saved with the world.
+**Who they are**
+- **Role mix:** player, collector, completionist, investor, flipper, holder, dealer, grader, casual. A person can drift between roles over time (a player who quits keeps their cards and becomes a holder).
+- **Where and how much:** home region, which stores they frequent, income and budget cycles, patience.
+- **Which games:** an affinity per game that moves with exposure (a Wildkin player sees a Tidemark tournament win and tries it).
+
+**What they want: their personal collection (PC)**
+Each person keeps a short list of **PC goals**, formed the way real collectors form them:
+- a **character** (a Wildkin and its evolution line), a **deck** (build and keep a specific list), a **spec** (a speculative bet on a card or set), a **set**, an **art style** or an **artist**, a **grade and condition target**, a **sealed collection** (keeps product sealed) or none of these (opens everything).
+- **Product preference:** rips packs, buys boxes, buys singles, holds sealed, or flips.
+- Goals are chosen from what the person has been exposed to and what their taste favours, and they change: a goal is completed, abandoned when the person gets bored, or replaced after a news event.
+These goals are what produce real market behaviour: concentrated demand on a few prints, a sudden run on a deck's cards, completionists clearing a set, flippers chasing the same cards the holders just stopped selling.
+
+**Art is a subjective opinion each person forms, not a score we hand them**
+- At build time each illustration gets a set of **visual descriptors** computed from the real image and the checklist (palette and warmth, brightness and contrast, busyness, subject: creature, character, scene, vessel, and for Wildkin the species and scene tags).
+- Each person has an **art taste** over those descriptors plus personal quirks, and forms an opinion of a print when they see it (opening packs, browsing the market, a friend's showcase).
+- **Taste spreads socially:** a print many aligned people like gets "buzz" (news lines, a favourite on a popular collector's page), which draws in others. So a card can become an art darling for reasons nobody coded, and different worlds crown different favourites from the same cards.
+- The game only suggests (a print's descriptors and tier, optionally an editable `art_hints.json`); the people decide.
+
+**The population grows, with spikes**
+- People **arrive and leave** all the time, at a base rate that depends on each game's popularity.
+- **Spikes** around releases, preorders, major tournaments, reprint news and random news events (a streamer promotes a game, a ban shakes a deck, a famous collection sells); **churn spikes** after a bad ban or a price crash.
+- New arrivals are generated from the world seed and the event that brought them, so a new set brings in players, and a championship brings in spectators who become players.
+
+**Cost and scale (stated up front)**
+Each detailed brain is about 40 numbers and ticks weekly with small rules; boot under 1 second for 300 brains, a month of play under 2 seconds. The crowd is aggregated per game and region.
 
 ## 3. Each game supplies its own appeal engine
 The shared code asks a game one thing: **"for this print, how strong is each taste dimension?"** (0 to 1). The game computes it from its own data; the shared code never knows what a "beloved Wildkin" or a "synergy" is.
@@ -34,7 +53,7 @@ The shared code asks a game one thing: **"for this print, how strong is each tas
 | Dimension | Tidemark | Wildkin | Rift Parade (needs a spec) |
 |---|---|---|---|
 | character love | faction and Legendary fandom (decided weights) | beloved Wildkin: mascot flag, evolution family popularity, manifest fandom weights | fan favorites |
-| art | illustration tier (alternate art, full art) | amazing art: illustration tier (IR, FA, SIR) plus a curated art score (see section 9) | character design |
+| art | descriptors of each illustration; each person forms their own opinion (section 2) | the same, with species and scene tags | character design |
 | rarity and chase | rarity, reserve list, alternate art | rarity tiers, SIR and Clasped chase | chase cards |
 | metagame and play | usage in the live field, win-rate share | same, from Wildkin's field | same |
 | condition | by band, scarcer with age | by band | by band |
@@ -86,12 +105,12 @@ A **directory of stores**; each store declares, per game, how much it carries.
 - **Playtests:** scripted collectors and players (the completion and discovery agents from the economy v2 suite), and screens driven like a player's (the new Tidemark screen test) for every store and event page.
 
 ## 9. Decisions and open items for the owner
-1. **Art appeal data.** Today a print's "appeal" is derived from fandom and a deterministic jitter, not from real art quality. Proposal: appeal comes from illustration tier plus an optional file `art_scores.json` you can edit (a number from 0 to 1 per illustration), defaulting to a tier-based score so nothing blocks on it.
+1. **Art opinions.** Decided: people form their own opinions from computed image descriptors plus social spread; the game only suggests. An optional `art_hints.json` can nudge a print if you want to seed a favourite.
 2. **Number of local game stores:** proposed 5, each in one of 5 regions, named by me (invented names like the existing Tidepool and Lantern Room).
 3. **Rift Parade:** needs its card data and rules before its appeal engine can be written; the structure above is ready for it. I found a `feature/rift-parade` branch on the remote but have not looked at it.
 4. **Order:** proposed phases, each testable on its own:
    1. the store directory and who carries what, with regionals (mostly visible, low risk);
-   2. the shared population and Tidemark's appeal engine, with the old formulas removed;
+   2. the shared population (agents with brains, PC goals, growth and spikes) and Tidemark's appeal engine, with the old formulas removed;
    3. Wildkin's appeal engine (beloved characters, art);
    4. the sealed curves and print runs for both games;
    5. Rift Parade when its data exists.
