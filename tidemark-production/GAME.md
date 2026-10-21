@@ -23,7 +23,7 @@ approves it) and what is missing. Tidemark is the second card game inside the Tr
 | Start date and release | The game starts 1 June 2026. Tenth Tide releases Friday 26 June 2026 (the checklist says only "spring 2026"; the brief says "a few weeks in"). |
 | Historical release dates | Third Friday of April, July and October of each set's year (the checklist gives year and season only). |
 | Prices | Pack $4.99, box (36 packs) $144; the Lantern Room $5.49 / $159.99. |
-| Pack | 12 cards: 8 common, 3 uncommon, 1 rare slot; Legendary instead of the rare 1 pack in 8; a foil replaces a common 1 pack in 6 (rarity 60/28/10/2% C/U/R/L); an alternate art replaces the rare slot 1 pack in 60 (Tenth Tide only). |
+| Pack | 15 cards (classic booster, changed 2026-10-21): 10 common, 3 uncommon, 1 rare slot; Legendary instead of the rare 1 pack in 8; the 15th card is a basic (bulk) or, 1 pack in 4, a foil (rarity 60/28/10/2% C/U/R/L); an alternate art replaces the rare slot 1 pack in 60 (Tenth Tide only). Box 36 packs. |
 | Bulk | A historical set is 200 or 250 cards but only its named cards exist. An unnamed slot is bulk, worth 2 cents, sold to the bulk bin when a pack is opened. |
 | Print policy | Only Tenth Tide is printed (425 days, restocked Mondays, then out of print). Every older set is out of print at the start. |
 | Formats | Standard before Tenth Tide = sets of the last two years (5 sets on day one; play value from card ratings only). When Tenth Tide releases, Standard = its 220 cards alone (announced as a rotation); every other card is Eternal-only. The engine does not simulate Eternal; its demand comes from card rating alone. |
