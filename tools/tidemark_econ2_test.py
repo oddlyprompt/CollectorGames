@@ -124,7 +124,7 @@ async def t_consequences(pg):
     check('buying a print\'s only NM copy: it is the player\'s and no NM copy of that print returns within 8 weeks (at least 70% of trials)', len(A)>=3 and sum(1 for a in A if a['err'] is None and a['mine'])==len(A) and sum(1 for a in A if not a['back'])>=0.7*len(A), '%d of %d stayed gone'%(sum(1 for a in A if not a['back']),len(A)))
     check('...and the next day its price has barely moved (no instant squeeze), but after 8 weeks it is not lower', all(abs(a['pNext']-1)<=0.06 for a in A) and st.median([a['p56'] for a in A])>=0.98, 'next day %s, 8 weeks median %.3f'%([round(a['pNext'],3) for a in A][:5], st.median([a['p56'] for a in A])))
     check('grading moves a copy into the population report (exactly +1)', len(B)>=3 and all(b['err'] is None and b['graded'] and b['popDelta']==1 for b in B), B[:2])
-    check('opening a sealed vintage pack: product leaves the census, its cards belong to the player', len(C)>=3 and all(c['removed']==1 and c['gone'] and c['cards']>0 and c['mineNew'] for c in C), C[:2])
+    check('opening a sealed vintage pack: product leaves the census, every tracked card belongs to the player (a pack with no tracked card is valid: it was all bulk)', len(C)>=3 and all(c['removed']==1 and c['gone'] and c['cards']>=0 and c['grew']==c['cards']-1 and c['mineNew'] for c in C), C[:3])
 
 # ---------------------------------------------------------------- 5. prices against the first economy
 PRICES="""async()=>{ const R={}; for (const ver of ['v1','v2']){ await T2.fresh(55, ver); const o={}; for (let s=1;s<=31;s++) for (const k of xtAllKeys(s).concat([xtKey(s,0,'P'),xtKey(s,0,'B')])) o[k]=xtFairRaw(k);
@@ -247,8 +247,8 @@ RELOAD="""async()=>{ const reload=async()=>{ const p=await packBytes(); const g=
   return out; }"""
 REBUILD="""async()=>{ await T2.fresh(41,'v1'); G.player.cash=1e6; T2.days(40);
   // the player owns raw cards, a slab, a listed card and sealed product from the first economy
-  const mine=[]; for (const c of Object.values(G.xtc)){ if (c.o>0 && !xtD(c.k).sealed && mine.length<12) { c.o=0; mine.push(c.id); } }
-  const sealed=Object.values(G.xtc).find(c=>c.o>0&&xtD(c.k).sealed); if (sealed){ sealed.o=0; mine.push(sealed.id); }
+  const mine=[]; for (const c of Object.values(G.xtc)){ if (c.o>0 && !c.l && !xtD(c.k).sealed && mine.length<12) { c.o=0; mine.push(c.id); } }
+  const sealed=Object.values(G.xtc).find(c=>c.o>0&&!c.l&&xtD(c.k).sealed); if (sealed){ sealed.o=0; mine.push(sealed.id); }
   const raw=G.xtc[mine[0]]; xtSubmitGrade(raw.id, GRADE_TIERS[0].id); T2.days(GRADE_TIERS[0].days+1);
   const lc=G.xtc[mine[1]]; playerList('x', lc.id, 'bin', 99, 0, false);
   const strip=c=>JSON.stringify([c.id,c.k,c.o,c.g,c.c,c.l||0,c.a&&c.a.join('|'),(c.h||[]).length,c.cert||0]); const before=mine.map(id=>strip(G.xtc[id])); const popMine=JSON.stringify(G.xpop[raw.k]||null);
