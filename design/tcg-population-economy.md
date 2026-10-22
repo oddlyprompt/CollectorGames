@@ -163,18 +163,21 @@ The shared code asks a game "how strong is each taste dimension for this print?"
 - **Wildkin:** beloved Wildkin (mascots, evolution lines, fandom), art, rarity, metagame, condition.
 - **Rift Parade (needs its data):** fan favourites, fan service, chase cards, rarity, character design.
 
-## 6. Phases and dependencies
+## 6. Phases and dependencies (revised 2026-10-22 after the owner's decisions)
+Order set by the owner: product integrity foundation, then First Tide's expansion complete and validated, then the shared shopping world, then the procedural collector population (one of the highest priorities, ahead of The Hunt). Other historical flagships arrive incrementally and never block these.
 | Phase | Deliverable | Depends on | The owner can check |
 |---|---|---|---|
-| 0 | Approve this plan and the decisions in section 9 | none | this document |
-| 1 | Product Integrity: validator, collation rules, product catalogue (boxed sets, mini-boosters, major boosters), no bulk, sealed shown as contents plus premium, the 15-card booster for major sets; First Tide interim as a mini-set; large-scale opening tests | owner decisions A to D | open products of every set and see real cards |
-| 1b | First Tide expansion design proposal (names, roles) for approval, then production | art for about 25 cards | the proposal, then the new set |
-| 2 | Shared shopping world: store directory, popularity-driven carrying, five local game stores, regionals | 1 | one Shop tab with all stores |
-| 3 | Population: agents, roles, budgets, PC goals, growth and spikes; old collector types removed | 1, 2 | named collectors with goals; market listings from them |
-| 4 | Market from transactions: price discovery, cause log, sealed premium from demand, per-game appeal engines (Tidemark first, then Wildkin) | 3 | price changes you can trace to people |
-| 5 | Rift Parade into the ecosystem | its card data and rules; phases 2 to 4 | a third game in the same stores and market |
+| 0 | Approve this plan, the First Tide proposal (`design/first-tide-expansion-proposal.md`) and the flagship list (`design/tidemark-historical-set-structure.md` 9.2) | none | the documents |
+| 1 | **Product integrity foundation:** build-time catalogue validator; the product tier rule (boxed set, collector bundle, themed deck, mini-booster, full booster); collation rules; only real tracked cards in packs; invisible bulk removed; advertised size shown ("catalogued 59 of 250"); contents value and sealed collector value shown separately; the 15th slot a real card; large-scale opening tests; the same validator applied to Wildkin | owner approval of phase 0 | open products of every set and see real cards, never an empty or repeating pack |
+| 1b | **First Tide expansion:** approved cards added as data (placeholder art until SOL's sheets, see C12), rules validated by simulation, product becomes a full booster, census and prices recalibrated, audit rerun | phase 1 (the validator needs it) and the approved proposal | First Tide packs and box with 125 cards; audit table before and after |
+| 2 | Shared shopping world: store directory, popularity-driven carrying, two big-box chains, about five local game stores with specialty depth, online shops, regionals | 1b | one Shop tab with all stores |
+| 3 | Population: persistent agents, roles, budgets, PC goals, tastes, growth and spikes; the six NPC collector types removed | 2 | named collectors with goals; market listings from them |
+| 4 | Market from transactions: price discovery, cause log, sealed premium from demand, per-game appeal engines (Tidemark first, then Wildkin); the interim modifiers of the earlier economies deleted (C8) | 3 | price changes you can trace to people |
+| 5 | Rift Parade into the ecosystem | its card data and rules; 2 to 4 | a third game in the same stores and market |
 | 6 | Storefront, UI and collection overhauls | 2 to 4 | new screens |
 | 7 | Public alpha preparation | all | extended testing |
+| ongoing | Flagship waves (Thornfall, Deepforge …): each starts with a design proposal for approval, then art, then the intake check; when a wave reaches the product thresholds its set gains boosters | phase 1 | per wave |
+| later | The Hunt for cards | after phase 4 | |
 Every phase ends with the full test run and a pull request for your review; saves are wiped between phases without special handling.
 
 ## 7. Test criteria across the plan (what shows it actually works)
@@ -201,3 +204,32 @@ Every phase ends with the full test run and a pull request for your review; save
 4. **Class of products shown in stores before the population exists:** show the contents value next to every sealed price (recommended).
 5. **Local game stores:** about five named stores in five regions, names invented by me.
 6. **Rift Parade:** needs its data and rules before phase 5; I have not looked at the `feature/rift-parade` branch.
+
+## 10. Technical contradictions found before moving forward (2026-10-22)
+Each is a place where two of the approved decisions, or a decision and the code, disagree. Resolutions are my proposal; only C4, C5, C12 and C13 need an owner answer.
+
+| # | Contradiction | Resolution |
+|---|---|---|
+| C1 | "Remove invisible bulk" against "keep original numbering and the advertised size". The 191 unnamed slots of First Tide exist as numbers but not as cards. | Numbers stay; products never contain an uncatalogued slot; every set page and card line says "catalogued X of N". |
+| C2 | "Real tracked cards only in packs" against thin pools (10 to 21 named). A booster cannot honestly be built from them. | The tier rule: those sets sell boxed sets and bundles; this means that, until waves land, **28 historical sets lose their boosters**. Only First Tide (after 1b) and Tenth Tide have boosters at first. |
+| C3 | Economy v2 simulates hoarded sealed *packs* and *boxes* for all historical sets (the replay, attics, Saltmarket stock, ledger). | Sealed history must be re-expressed as boxed sets for supplements and boosters only for First Tide and Tenth Tide. The replay, `tidemark_econ2_test.py` (sealed counts and scarcity checks) and golden baselines change. About two days of work and a re-baseline with logged reasons. |
+| C4 | Adding 66 First Tide cards changes the census: existing First Tide cards become rarer in every pack, so their prices would jump. | Rerun the replay and recalibrate; the intended effect is part of the story ("the foundation set was bigger than we remembered") but a price change on the oldest cards needs the owner's eye. **Owner decision:** accept the repricing of existing First Tide cards, or keep their copy counts by scaling the replay. |
+| C5 | "Compare formats with and without a core" against a game that simulates only Tenth Tide's format. | Answered with a proxy study (history doc 9.3); the game has no historical-format metagame to test in, so the decision is a design judgment, not an in-game measurement. Adding historical formats is not planned. **Owner decision:** accept the proxy as the basis. |
+| C6 | "Contents value and sealed collector value separate" against the market being driven by NPC decisions (phase 4). Before the population exists, the sealed premium has to come from a formula. | The current prestige x years formula stays as an *interim*, labelled in code and UI as "collector premium (estimated)". Phase 4 replaces it. |
+| C7 | The validator is Tidemark's idea but Wildkin has packs too (and Rift Parade will). | Put the validator and tier rule in the shared kit (`src/tcg/kit`) and run it for every registered card line; Wildkin's sets pass today (180 cards each). |
+| C8 | "Markets from NPC decisions, no artificial random modifiers" against code that has them: launch premium (`nov`), `tcRough`, fandom tuning (`TC_TUNE`), `xtV2Mult`, random warehouse finds and estates. | Keep until phase 4 (removing them earlier would break the measured economies); list them in a table in phase 4 with what replaces each. |
+| C9 | A fixed-contents product has no meaningful rarity roll, but sealed pricing and the audit use rarity odds. | Fixed products are priced as the sum of the contents' values plus premium; rarity affects only boosters. |
+| C10 | The booster's 15th slot is a "basic land", which does not exist as a card. | Make it a foil chance or an extra common (a real tracked card). Owner confirmation welcome. |
+| C11 | First Tide's 26 Tenth Tide reprints share identities. New First Tide cards add identities, no reprints. | No conflict; new identities get their own ids (after the highest TMC number) and are not in any library deck. Library regeneration is not required unless a Tenth Tide card changes. |
+| C12 | "First Tide complete and validated before the shopping world" against art: 66 new cards need about 8 sheets, made by SOL, outside my control. | Complete = data, rules, balance, product and economy validated with the game's labelled placeholder ("ART PENDING"), exactly as Wildkin did; the art lands when it lands and replaces the placeholders through the existing intake. **Owner decision:** is placeholder art acceptable for the milestone? |
+| C13 | Display of the original checklist size: the printed line `FT 003/250` already does this today; but an opening screen that says "3 of 250" would be misleading when a pack can hold only catalogued cards. | Show "catalogued 125 of 250" on set and checklist screens; keep the printed `/250` on the card face itself because that is the printed card. |
+| C14 | The standing instruction "do not add cards or commission art until you review the proposal" against phase 1, which needs the 125-card pool for the First Tide booster. | Phase 1 builds against today's 59 cards (First Tide sells as a boxed set meanwhile); the booster switches on at 1b after approval. |
+
+## 11. Decisions now needed from the owner (replaces section 9 where they overlap)
+1. Approve the flagship list in `tidemark-historical-set-structure.md` 9.2, or swap names.
+2. Approve (or edit) the 66 First Tide cards in `first-tide-expansion-proposal.md`, including where the three new Legendaries go.
+3. Accept the format study as the basis for not making First Tide a permanent core (C5).
+4. Accept repricing of existing First Tide cards when 66 are added (C4).
+5. Is placeholder art acceptable for the First Tide milestone (C12)?
+6. The 15th booster slot as a foil chance or an extra common (C10).
+Items 3 to 6 of the old section 9 stand as answered by your message, except local store names (I invent them) and the Rift Parade branch, which I still have not read.

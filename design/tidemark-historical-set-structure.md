@@ -1,4 +1,4 @@
-# Tidemark historical set structure: a focused recommendation (2026-10-21)
+# Tidemark historical set structure: a focused recommendation (2026-10-21; owner decisions and update in section 9, 2026-10-22)
 
 Status: recommendation for the owner. **No set list, collector number or set identity changes in this document or in any code until you decide.** Read together with section 1 of `tcg-population-economy.md`; where they differ, this document replaces its mini-set recommendation (1.4 A).
 
@@ -52,7 +52,7 @@ Only if something supplies the missing cards.
 ## 6. Recommendation
 1. **Adopt option 2 (hybrid), staged.** One flagship per year. Default rule: the year's set with the most named cards (ties: more rares and Legendaries): **First Tide (2016), Reefward (2017), Thornfall (2018), Merchant Tides (2019), Siege of Lanthorn (2020), Drowned Hymns (2021), The Wild Tithe (2022), Stormglass (2023), Keepers of the Light (2024), Crown and Shoal (2025).** You may swap any of them; the names suggest a few better candidates than a count does (for example Siege of Lanthorn and Black Tide sound like flagships and Salt and Banner does not).
 2. **Fill gaps, never renumber.** First Tide to 125 first (66 cards), then the other flagships to about 80, one wave at a time; each wave begins with a design proposal for your approval, then art, then the existing intake check.
-3. **Treat First Tide as the core set**: it stays legal in Standard permanently. It makes historical windows credible and costs no content. (Decision for you.)
+3. ~~Treat First Tide as the core set~~ (superseded 2026-10-22: see section 9.3, the owner declined an automatic permanent core and the study does not support one once windows are full-size).
 4. **Build the engineering now, independent of content:** the validator, the product rule above, collation, boxed sets, no invisible bulk, and the contents-versus-sealed-value display. Until a wave lands, a set sells exactly what its current pool honestly supports; First Tide sells as a supplement until its 66 cards exist.
 5. **Do not do option 1** unless you want a very long art production; it can still be approached wave by wave later, because the same mechanism unlocks products as sets grow, and no work in options 2 or 3 is wasted.
 
@@ -68,3 +68,64 @@ Only if something supplies the missing cards.
 - **Design drift:** new historical cards must fit their year's identity and the reserve-list and reprint rules; every wave is reviewed before art.
 - **Price and census changes:** more cards per set change supply and demand in the world; the economy tests are rerun after each wave.
 - **Performance** is only a concern under option 1 (about 12,000 keys).
+
+
+---
+
+## 9. Update 2026-10-22: owner decisions applied, flagship choice, format study, product variety
+
+### 9.1 Decisions now settled
+Hybrid structure approved in principle: one flagship expansion per year plus smaller supplemental releases. Every historical set keeps its identity and collector numbers; new cards fill numbering gaps; each set shows its **advertised** size next to what is catalogued ("catalogued 59 of 250"). First Tide goes from 59 to 125 (proposal: `design/first-tide-expansion-proposal.md`, nothing added). First Tide is **not** made permanently Standard-legal (9.3). Product variety is honest to the card pool (9.4). Build order is in `design/tcg-population-economy.md`, section 6.
+
+### 9.2 Flagships chosen by significance, theme and competitive relevance
+Not by which set has the most named cards. The evidence I have is: how many of the set's cards were important enough to be reprinted in Tenth Tide (the strongest proxy for lasting competitive relevance), Legendary and rare counts (how much of the set's story it carries), the set's name (theme), and its place in the ten-year story. I have no lore document beyond the names, so the theme column is a reading of titles; correct me where it is wrong.
+
+| Year | Recommended flagship | Why | Alternate |
+|---|---|---|---|
+| 2016 | **First Tide** | the foundation; 26 cards reprinted in Tenth Tide; 5 Legendaries | none |
+| 2017 | **Reefward** | the only 2017 set with a Legendary and a rare and Tenth Tide reprints (2); Sea's first push | The Crownwar (a war title, but 10 cards, no Legendary) |
+| 2018 | **Thornfall** | 18 named, 3 rares, 1 Legendary, 5 Tenth Tide reprints (the most of its year) | Open Water, Bastions of Stone |
+| 2019 | **Deepforge** | 5 reprints (most of its year), 3 rares, 1 Legendary | Merchant Tides (4 reprints, trade theme) |
+| 2020 | **Siege of Lanthorn** | a war title; 4 reprints, 1 Legendary | Harbor Moon (4 rares, 4 reprints) |
+| 2021 | **Drowned Hymns** | 5 rares, 1 Legendary; Abyssal Choir's showcase | Fathoms Deep |
+| 2022 | **Coral Bastion** | 3 Legendaries (the most of any set before 2024), 2 rares | The Wild Tithe (4 rares, 1 reprint) |
+| 2023 | **Black Tide** | 6 rares (the most of any set), 1 Legendary, a dark title | Stormglass |
+| 2024 | **Keepers of the Light** | 21 named, 2 Legendaries, 6 rares | New Reaches |
+| 2025 | **Return of the Tide** | 2 Legendaries, 20 named, and its title leads into the anniversary | Crown and Shoal (21 named, 5 rares) |
+
+This replaces the default list in section 6. It is a recommendation for the owner to confirm or swap. Waves are done one at a time, each with its own design proposal first.
+
+### 9.3 Standard legality: with and without a permanent First Tide core (study run 2026-10-22)
+Method (`tools/tidemark/v1/format_study.js`, a proxy, not the game's own metagame): for each year from 2018 to 2025 take the sets of that year and the year before (the window Standard would use) and build 34 decks with the game's deck builder (the 10 archetypes plus random two-faction brews with tech packages), play a round robin with the real rules engine (6 games per pair), then let a replicator (share update by win rate) settle the field. Four variants per year:
+- **A** the real window as it exists today (about 80 to 125 cards, 14 to 21 named per set);
+- **B** A plus the 59 First Tide cards as a permanent core;
+- **C** a *hypothetical* window of 215 cards (what the window would be once flagships have around 80 cards), no core;
+- **D** C with First Tide's 59 cards inside it as a core.
+Measures: effective archetypes (inverse concentration of the settled field, higher is more diverse), the share of the top archetype, and how much of the top-5 decks' cards come from the core compared with the core's share of the pool.
+
+| Variant | Years | Effective archetypes | Top archetype share | Core cards in top-5 decks, against core share of pool |
+|---|---|---|---|---|
+| A: real thin window, no core | 8 | 2.5 to 11 (median about 7) | 16% to 61% (median about 27%) | n/a |
+| B: thin window plus core | 8 | 7.5 to 13.4 (median about 11) | 15% to 27% (median about 21%) | 52% to 64% against 32% to 42% |
+| C: full window, no core | 8 | 10 to 14 (mean 11.9) | 12% to 19% (mean 17%) | n/a |
+| D: full window plus core | 8 | 7.7 to 16 (mean 11.9) | 11% to 23% (mean 18%) | 39% to 54% against 27% |
+
+What it says (with its limits stated below):
+1. **A thin window is not believable without help.** With only today's 14 to 21 named cards per set, the settled field has 2.5 to 11 effective archetypes, and in 2018, 2021 and 2022 a single archetype takes 61%, 35% and 44% of the field. A permanent core fixes this (B), roughly doubling effective archetypes in the worst years.
+2. **Once the window is full-size, the core adds nothing** to diversity (mean 11.9 against 11.9 effective archetypes; top archetype share 17% against 18%). The diversity comes from having enough cards, not from the core.
+3. **The core is over-used where it exists.** In D the 59 core cards are 27% of the pool but 39% to 54% of the cards in the top-5 decks (about 1.4 to 2 times their share); in B 52% to 64% against 32% to 42%. That is the "foundational cards dominate a decade" risk the owner raised, and it is visible here. Part of it is that First Tide cards were balanced early in the design and are plain and efficient; it is a limit of the proxy, not proof about future cards.
+4. **Recommendation:** do *not* make First Tide permanent. Instead (a) keep Standard as a rolling two-year window of flagships and supplements, (b) grow flagships so windows reach about 150 to 215 cards (the content strategy already does this), and (c) while a window is still thin, offer the early-years historical formats as Eternal-style or "classic" only, not as the main game. First Tide stays a foundational *collectible* set (its price, its age and its 26 Tenth Tide reprints do not depend on legality). If a core is still wanted later, a *small* rotating "evergreen" slot is the safer form than a permanent set.
+Limits: the proxy builds decks from the current card designs, the "hypothetical" full windows add random existing historical identities that are not real cards, 6 games per pair is thin, the replicator is not the game's weekly model, and the game itself only simulates Tenth Tide's format today, so no in-game test is possible yet. This is evidence for a design decision, not a measurement of the finished game.
+
+### 9.4 Honest supplement products
+Rule (unchanged): a product exists only if the pool supports it. Applied to the 28 historical supplements (10 to 21 named cards, plus First Tide until it reaches 125):
+
+| Pool | Products |
+|---|---|
+| under 17 named | Boxed set: every named card once, fixed contents shown, no rarity roll. Optional **collector bundle**: the boxed set plus a numbered alternate foil of its Legendary or best rare (only where the set has one). |
+| 17 to 29 named | Boxed set, collector bundle, and a **themed deck** (a fixed 40-card deck built from the set with at most 3 copies of each card; a deck of 50 cards needs 17 distinct cards and so only the six 2024 and 2025 sets qualify today). |
+| 30 to 74 named | Mini-booster (8 cards, 24-pack box) *only if* the pool yields at least 1,000 distinct packs by the audit; otherwise as above. |
+| 75 or more named, 40 C / 15 U / 10 R+L | Full 15-card booster, 36-pack box. |
+
+Mini-boosters are therefore not offered for any supplement today. Until the waves land only First Tide (after its expansion) and Tenth Tide have boosters; flagships get their boosters when their wave reaches the thresholds, not before.
+Two contradictions this resolves: **rarity in fixed products** (a boxed set has each card once, so rarity does not change what you get; rarity affects only boosters), and the **15th-card basic** (a booster for a set with no basic land card should not carry an invisible basic: the 15th slot becomes a foil chance or an extra common from the set, a real tracked card).
