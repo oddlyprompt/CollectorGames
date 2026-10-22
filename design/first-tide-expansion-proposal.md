@@ -1,5 +1,7 @@
 # First Tide expansion: design proposal for 66 new cards (59 → 125)
 
+> **PAUSED 2026-10-22 by the owner pending the reuse-first audit (`tidemark-reuse-audit.md`): do not approve or use. The audit finds First Tide needs 0 new cards for honest products and 16 for a full booster.**
+
 Status: **proposal only** (2026-10-22). No card has been added to `cards.json`, no collector number is used, no art is commissioned. Everything below is **designed by Claude, not canon**, and waits for the owner's review. Numbers are a first draft from the Version 1 design guide (`tools/tidemark/v1/DESIGN_GUIDE.md`); the real numbers come from the validator and simulation after approval.
 
 ## 1. What is being proposed
