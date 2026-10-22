@@ -76,7 +76,7 @@ Side effect to accept or avoid: a historical reprint adds copies of that **ident
 - **2016 sets (Salt and Banner, Lanterns):** no reuse possible; 20 and 14 new cards to reach 30, or stay as boxed sets (10 and 16 cards).
 - **2017 to 2023 supplements:** reuse lifts each from 10 to 15 originals to 14 to 26 printings; they remain boxed sets, collector bundles and themed decks unless you want a further 4 to 11 new cards each to reach the mini-booster floor.
 - **2024 and 2025 sets (6 sets):** reach 29 to 31 with reuse alone (21 originals + 8 to 10 reprints); NR, KH, CS and TL clear 30, FL and RT are one card short.
-- **Flagships (ten, recommended list unchanged):** 44 to 61 new cards each at the 1/3 cap (33 to 55 at the half cap) for a 75-card set, 16 for First Tide.
+- **Flagships (ten, recommended list unchanged):** 44 to 56 new cards each at the 1/3 cap (33 to 49 at the half cap) for a 75-card set, 16 for First Tide.
 
 ## Genuinely necessary new content (recommendation)
 1. **Nothing new now.** Product integrity (the validator, honest products) needs no new card; mini-boosters can be offered for First Tide and, after reuse, for the four 2024 and 2025 sets.
