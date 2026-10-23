@@ -35,8 +35,8 @@ async def newpage(p, pin=None):
 # ---------------------------------------------------------------- 1. ledger
 async def t_ledger(pg):
     for seed in (11, 12):
-        r=await pg.evaluate("""async(seed)=>{ await T2.fresh(seed); const S0=T2.snap(), L0=Object.assign({},G.xtg.led); T2.days(365); const S1=T2.snap(); let removed=0,created=0,createdOld=0;
-          for (const id in S0) if (!(id in S1)) removed++; for (const id in S1) if (!(id in S0)){ created++; if (xtD(S1[id]).set!==31) createdOld++; } const L1=G.xtg.led;
+        r=await pg.evaluate("""async(seed)=>{ await T2.fresh(seed); const S0=T2.snap(), L0=Object.assign({},G.xtg.led); const seen=new Set(Object.keys(S0)); for (let i=0;i<365;i++){ advanceDay(); for (const id in G.xtc) seen.add(id); } const S1=T2.snap(); let removed=0,created=0,createdOld=0;
+          for (const id of seen) if (!(id in S1)) removed++;   // every copy that existed on any day and is gone at the end, including copies made and culled inside the year for (const id in S1) if (!(id in S0)){ created++; if (xtD(S1[id]).set!==31) createdOld++; } const L1=G.xtg.led;
           const own={attic:0,shop:0,player:0,npc:0}; for (const c of Object.values(G.xtc)){ if (c.o===-3) own.attic++; else if (c.o===-2) own.shop++; else if (c.o===0) own.player++; else if (c.o>0) own.npc++; else own.other=(own.other||0)+1; }
           return {removed,created,createdOld, dLost:L1.lost-L0.lost, dOpened:L1.opened-L0.opened, dMade:L1.made-L0.made, dCull:(L1.cull||0)-(L0.cull||0), total:Object.keys(G.xtc).length, own}; }""", seed)
         check('ledger seed %d: every removed copy is accounted for'%seed, r['removed']==r['dLost']+r['dOpened']+r['dCull'], r)
@@ -66,7 +66,7 @@ async def t_condition(pg):
     check('2016-era rares and Legendaries: NM is rarer than for commons (3% to 25%)', 3<=nmc('9+|rare+')<=25 and nmc('9+|rare+')<nmc('9+|common')+4, round(nmc('9+|rare+'),1))
     check('modern cards stay mostly NM (under one year: 55% to 80%)', 55<=nmc('<1|common')<=80, round(nmc('<1|common'),1))
     check('old copies are worn: 2016-era DMG+HP at least 20% of commons', pct('9+|common','HP')+pct('9+|common','DMG')>=20, round(pct('9+|common','HP')+pct('9+|common','DMG'),1))
-    mv=st.mean(r['vis']); check('visible raw copies in the world at start: 2,500 to 3,500 (test target, not permanent)', 2500<=mv<=3500, '%.0f (min %d max %d)'%(mv,min(r['vis']),max(r['vis'])))
+    mv=st.mean(r['vis']); check('visible raw copies in the world at start: 2,500 to 4,000 (test target, not permanent; raised from 3,500 on 2026-10-23 because First Tide and Reefward gained 126 catalogued cards)', 2500<=mv<=4000, '%.0f (min %d max %d)'%(mv,min(r['vis']),max(r['vis'])))
     check('every named card has at least one copy that a collector holds, in at least 85% of worlds on average', st.mean(r['cover'])>=0.85, '%.1f%%'%(100*st.mean(r['cover'])))
     check('a First Tide box exists on the market in some worlds but not all', 0<sum(1 for x in r['ftbox'] if x>0)<n, '%d of %d worlds'%(sum(1 for x in r['ftbox'] if x>0),n))
 
