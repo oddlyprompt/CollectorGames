@@ -17,7 +17,7 @@ const FAC=['CR','TW','IR','TB','FF','AC','HL'], SIDE={CR:'L',TW:'L',IR:'L',TB:'S
 const FN={CR:'Crownlands',TW:'Thornwild',IR:'Iron Reach',TB:'Tideborn',FF:'Free Fleets',AC:'Abyssal Choir',HL:'Harbor Leagues'};
 const PLANS=['aggro','midrange','control'];
 const byId=new Map(CARDS.map(c=>[c.id,c])), byName=new Map(CARDS.map(c=>[c.n,c]));
-const fingerprint=()=>crypto.createHash('sha256').update(JSON.stringify(CARDS.map(c=>[c.id,c.cost,c.req,c.pow,c.tgh,c.fort,c.kw,c.fx]))+fs.readFileSync(path.join(__dirname,'engine.js'),'utf8')+fs.readFileSync(path.join(__dirname,'decks.js'),'utf8')+fs.readFileSync(__filename,'utf8')).digest('hex').slice(0,16);
+const fingerprint=()=>crypto.createHash('sha256').update(JSON.stringify(CARDS.filter(c=>c.tt).map(c=>[c.id,c.cost,c.req,c.pow,c.tgh,c.fort,c.kw,c.fx]))+fs.readFileSync(path.join(__dirname,'engine.js'),'utf8')+fs.readFileSync(path.join(__dirname,'decks.js'),'utf8')+fs.readFileSync(__filename,'utf8')).digest('hex').slice(0,16);
 function rng(seed){ let h=(seed>>>0)^0x9e3779b9||1; return ()=>{ h^=h<<13; h>>>=0; h^=h>>>17; h^=h<<5; h>>>=0; return h/4294967296; }; }
 const sigOf=d=>{ const k={}; for (const c of d) k[c.id]=(k[c.id]||0)+1; return Object.keys(k).sort().map(id=>id+'x'+k[id]).join(','); };
 const cntOf=d=>{ const k={}; for (const c of d) k[c.id]=(k[c.id]||0)+1; return k; };

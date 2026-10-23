@@ -36,12 +36,19 @@ function xtFairRaw(key){
 const TM_ODDS={legR:0.125, alt:1/60, foil:1/4, fr:{C:0.6,U:0.28,R:0.1,L:0.02}};
 const XT_PACK=15, XT_BOX=36;   // cards in a pack, packs in a box
 function xtPools(set){ const m=G.xtg._pl||(G.xtg._pl={}); if (m[set]) return m[set]; const cs=xtSetCards(set); const def=xtSetDef(set); const f=r=>cs.filter(c=>c.rar===r);
-  const P={c:f('common'),u:f('unc'),r:f('rare'),l:f('leg'),alt:f('alt')}; P.q={C:Math.min(1,P.c.length/def.tot.C), U:Math.min(1,P.u.length/def.tot.U), R:Math.min(1,P.r.length/def.tot.R), L:Math.min(1,P.l.length/def.tot.L)};
+  const P={c:f('common'),u:f('unc'),r:f('rare'),l:f('leg'),alt:f('alt')}; P.q={C:1,U:1,R:1,L:1};   // every slot is a real catalogued card: no bulk, no invisible filler
   if (!P.l.length){ P.l=P.r; P.q.L=P.q.R; } if (!P.r.length){ P.r=P.u; P.q.R=P.q.U; } if (!P.u.length){ P.u=P.c; P.q.U=P.q.C; } if (!P.c.length){ P.c=P.u; P.q.C=P.q.U; } return m[set]=P; }
+// Honest products: a booster exists only for a set whose catalogue can fill one without repeating itself (at least 40 Commons, 15 Uncommons and 10 Rares
+// or Legendaries). Tenth Tide and First Tide qualify; every other historical set is singles-only until its catalogue grows (design/tidemark-reuse-audit.md).
+// Its cards still exist in the world: xtRollUnit gives one copy of each of its cards (a "boxed set", the way they entered the world) instead of a pack.
+const XT_BOOSTER_MIN={C:40,U:15,RL:10};
+function xtBoosterSet(set){ const m=G.xtg._bs||(G.xtg._bs={}); if (m[set]!=null) return m[set]; const cs=xtSetCards(set).filter(c=>c.pk!=='alt'); const n=r=>cs.filter(c=>c.rar===r).length;
+  return m[set]= set===TM_TT || (n('common')>=XT_BOOSTER_MIN.C && n('unc')>=XT_BOOSTER_MIN.U && n('rare')+n('leg')>=XT_BOOSTER_MIN.RL); }
+function xtRollUnit(set, r){ if (xtBoosterSet(set)) return xtRollPack(set,r); const keys=[]; keys.bulk=0; for (const c of xtSetCards(set)) if (c.pk!=='alt') keys.push(xtKey(set,c.no,'N')); return keys; }
 function xtRollPack(set, r){
   const P=xtPools(set), keys=[], taken=new Set(); keys.bulk=0; const pick=(a,q,v)=>{ if (r()>=q){ keys.bulk++; return; } let c; for (let i=0;i<6;i++){ c=a[Math.floor(r()*a.length)]; if (!taken.has(c.no)){ taken.add(c.no); break; } } keys.push(xtKey(set,c.no,v)); };
   for (let i=0;i<10;i++) pick(P.c,P.q.C,'N');
-  if (r()<TM_ODDS.foil){ const x=r(), F=TM_ODDS.fr; const [a,q]= x<F.C? [P.c,P.q.C] : x<F.C+F.U? [P.u,P.q.U] : x<F.C+F.U+F.R? [P.r,P.q.R] : [P.l,P.q.L]; pick(a,q,'F'); } else keys.bulk++;   // the basic slot, or a foil
+  if (r()<TM_ODDS.foil){ const x=r(), F=TM_ODDS.fr; const [a,q]= x<F.C? [P.c,P.q.C] : x<F.C+F.U? [P.u,P.q.U] : x<F.C+F.U+F.R? [P.r,P.q.R] : [P.l,P.q.L]; pick(a,q,'F'); } else pick(P.c,1,'N');   // the 15th slot: a foil of any rarity, or one more common (a real card)
   for (let i=0;i<3;i++) pick(P.u,P.q.U,'N');
   const x=r(); if (P.alt.length && x<TM_ODDS.alt){ const c=P.alt[Math.floor(r()*P.alt.length)]; keys.push(xtKey(set,c.no,'A')); } else if (r()<TM_ODDS.legR) pick(P.l,P.q.L,'N'); else pick(P.r,P.q.R,'N');
   return keys;
@@ -52,7 +59,7 @@ function xtPackEV(set){
   const Vc=val(P.c,'N',P.q.C), Vu=val(P.u,'N',P.q.U), Vr=val(P.r,'N',P.q.R), Vl=val(P.l,'N',P.q.L), Va=P.alt.length? P.alt.reduce((s,x)=>s+xtFairRaw(xtKey(set,x.no,'A')),0)/P.alt.length : 0;
   const Vf=O.fr.C*val(P.c,'F',P.q.C)+O.fr.U*val(P.u,'F',P.q.U)+O.fr.R*val(P.r,'F',P.q.R)+O.fr.L*val(P.l,'F',P.q.L);
   const alt=P.alt.length? O.alt : 0; const slot=alt*Va+(1-alt)*(O.legR*Vl+(1-O.legR)*Vr);
-  return c[k]=10*Vc+3*Vu+slot+O.foil*Vf+(1-O.foil)*XT_BULK;
+  return c[k]=10*Vc+3*Vu+slot+O.foil*Vf+(1-O.foil)*Vc;
 }
 function xtSealedFair(d){
   // a world with the ten-year market (economy v2): an old pack is worth what is in it plus a collector premium that grows with the years it has been out of print
@@ -79,7 +86,7 @@ function xtFulfilPreorders(set, t){ const T=G.xtg; const mine=T.pre.filter(p=>p.
 // opening: returns the cards, never charges anything (the sealed copy is what you paid for)
 function xtOpenSealed(id){
   const cp=XT(id); if (!cp || cp.o!==0 || cp.l) return null; const d=xtD(cp.k); if (!d.sealed) return null; const paid=(cp.a&&cp.a[2])||0; const packs=d.v==='P'?1:XT_BOX; const r=mkRng(hsh('open'+cp.id+G.day)); const out=[]; const bulkPer=[]; let bulk=0;
-  for (let i=0;i<packs;i++){ const keys=xtRollPack(d.set,r); bulk+=keys.bulk; bulkPer.push(keys.bulk);
+  for (let i=0;i<packs;i++){ const keys=xtRollUnit(d.set,r); bulk+=keys.bulk; bulkPer.push(keys.bulk);
     const ids=keys.map(k=>{ const c=xtMakeCopy(k,0,[G.day,'pulled',Math.round(paid/packs/XT_PACK*100)/100,'a '+d.title],'pull',r); c.nw=1; c.h=[[G.day,'Pulled from a '+d.title,0,'']]; const rr=xtCopyValue(c); c.pv={d:G.day,v:Math.round(rr*100)/100,n:''}; return c.id; }); out.push(ids); }
   const sv=Math.round(xtCopyValue(cp)*100)/100;   // what it was worth sealed, the moment it was opened
   const bv=Math.round(bulk*XT_BULK*100)/100; if (bv>0){ G.player.cash+=bv; G.player.sold=(G.player.sold||0)+bv; }   // the bulk goes to the store's bulk bin at once
@@ -116,11 +123,11 @@ function xtSeedMarket(){
   for (const s of rel){ const def=xtSetDef(s), yrs=(G.day-def.rel)/365; const surv=Math.max(0.35,1-0.07*yrs);
     for (const c of xtSetCards(s)){ if (c.pk==='alt') continue; const base={common:5,unc:4,rare:3.2,leg:2.2}[c.rar]*(c.res?0.6:1)*surv; const share=Math.min(1,def.named/60)*0.5+0.5;
       for (const v of ['N','F']){ const lam=base*share*(v==='F'?0.22:1); const n=poisson(lam); for (let i=0;i<n;i++) xtGive(xtKey(s,c.no,v), r()<0.5?'deck':'pull'); } }
-    const nb=Math.max(0,Math.round(4-yrs*0.35+gauss()*1.2)), np=Math.max(1,Math.round(26-yrs*2+gauss()*4)); for (let i=0;i<nb;i++) xtGive(xtKey(s,0,'B'),'shop'); for (let i=0;i<np;i++) xtGive(xtKey(s,0,'P'),'shop'); }
+    const nb=Math.max(0,Math.round(4-yrs*0.35+gauss()*1.2)), np=Math.max(1,Math.round(26-yrs*2+gauss()*4)); if (xtBoosterSet(s)){ for (let i=0;i<nb;i++) xtGive(xtKey(s,0,'B'),'shop'); for (let i=0;i<np;i++) xtGive(xtKey(s,0,'P'),'shop'); } }
   for (const id of G._npcXtIds){ const cp=G.xtc[id]; if (xtD(cp.k).sealed) continue; const v=xtCopyValue(cp); const p=v>60?0.5: v>20?0.28: v>7?0.08: 0.005; if (R()<p) xtGradeCopy(cp); }
 }
 // a new set lands: collectors open it, the glut hits the market
-function xtReleaseMarket(n, t){ if (G._xtCatch) return; const r=mkRng(hsh('rel'+G.seed+n)); const nP=ri(210,330); for (let i=0;i<nP;i++) for (const k of xtRollPack(n,r)) xtGive(k,'pull'); for (let i=0;i<ri(4,9);i++) xtGive(xtKey(n,0,'B'),'shop'); for (let i=0;i<ri(25,50);i++) xtGive(xtKey(n,0,'P'),'shop'); for (let i=0;i<60;i++) xNpcListTc(); }
+function xtReleaseMarket(n, t){ if (G._xtCatch) return; const r=mkRng(hsh('rel'+G.seed+n)); const nP=ri(210,330); for (let i=0;i<nP;i++) for (const k of xtRollUnit(n,r)) xtGive(k,'pull'); if (xtBoosterSet(n)){ for (let i=0;i<ri(4,9);i++) xtGive(xtKey(n,0,'B'),'shop'); for (let i=0;i<ri(25,50);i++) xtGive(xtKey(n,0,'P'),'shop'); } for (let i=0;i<60;i++) xNpcListTc(); }
 // ---------- hooking into the shared market ----------
 // ---------- the shared market functions, for this line (src/tcg/kit/market.js) ----------
 const XT_MKT={ kind:'x', keyPrefix:'X', flag:'xtg', cpf:'xt', copies:()=>G.xtc, nextId:()=>G.nextXid++, pop:()=>G.xpop, world:()=>G.xtg, subs:'xsubs', ids:'_npcXtIds',
