@@ -44,7 +44,8 @@ function xtPools(set){ const m=G.xtg._pl||(G.xtg._pl={}); if (m[set]) return m[s
 const XT_BOOSTER_MIN={C:40,U:15,RL:10};
 function xtBoosterSet(set){ const m=G.xtg._bs||(G.xtg._bs={}); if (m[set]!=null) return m[set]; const cs=xtSetCards(set).filter(c=>c.pk!=='alt'); const n=r=>cs.filter(c=>c.rar===r).length;
   return m[set]= set===TM_TT || (n('common')>=XT_BOOSTER_MIN.C && n('unc')>=XT_BOOSTER_MIN.U && n('rare')+n('leg')>=XT_BOOSTER_MIN.RL); }
-function xtRollUnit(set, r){ if (xtBoosterSet(set)) return xtRollPack(set,r); const keys=[]; keys.bulk=0; for (const c of xtSetCards(set)) if (c.pk!=='alt') keys.push(xtKey(set,c.no,'N')); return keys; }
+function xtRollUnit(set, r){ if (xtBoosterSet(set)) return xtRollPack(set,r); const keys=[]; keys.bulk=0; const inc={common:1,unc:0.5,rare:0.3,leg:0.1};   // a rarer card entered the world in fewer copies, as it would have in a pack
+  for (const c of xtSetCards(set)) if (c.pk!=='alt' && (inc[c.rar]>=1 || r()<inc[c.rar])) keys.push(xtKey(set,c.no,'N')); return keys; }
 function xtRollPack(set, r){
   const P=xtPools(set), keys=[], taken=new Set(); keys.bulk=0; const pick=(a,q,v)=>{ if (r()>=q){ keys.bulk++; return; } let c; for (let i=0;i<6;i++){ c=a[Math.floor(r()*a.length)]; if (!taken.has(c.no)){ taken.add(c.no); break; } } keys.push(xtKey(set,c.no,v)); };
   for (let i=0;i<10;i++) pick(P.c,P.q.C,'N');

@@ -268,7 +268,7 @@ async def t_saves(pg):
     q=await pg.evaluate(REBUILD)
     check('rebuild: the player\'s cards, conditions, slabs, listings and history are untouched', q['err'] is None and q['same'] and q['lstSame'] and q['pop'], {k:q[k] for k in ('err','same','diff','lstSame','pop')})
     check('rebuild: a backup of the old save was made first', q['backup'] and q['bsize']>0, q['bsize'])
-    check('rebuild: the world is now v2, with 1,400 to 2,300 raw copies of sets over two years old (about 2,800 counting every set), and plays on for 60 days', q['ecv']==2 and 1400<=q['vis']<=2300 and q['lstN']>100, {k:q[k] for k in ('ecv','vis','lstN','ref')})
+    check('rebuild: the world is now v2, with 1,400 to 2,600 raw copies of sets over two years old (about 3,500 counting every set; raised 2026-10-23 for the 126 new catalogued cards), and plays on for 60 days', q['ecv']==2 and 1400<=q['vis']<=2600 and q['lstN']>100, {k:q[k] for k in ('ecv','vis','lstN','ref')})
     # an older Wildkin-only save opened now gets a v2 Tidemark world
     import base64, os
     p=os.path.join(os.path.dirname(__file__),'..','tests','golden','saves','legacy-wk-year.save.gz')

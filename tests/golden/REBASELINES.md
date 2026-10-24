@@ -428,3 +428,345 @@ Changed (25+ differences), first ones:
 - /after10/wk/meta/arch/h: "f05756a7" -> "c1a09197"
 - /after10/wk/meta/ev/h: "b1a54a56" -> "e80ddb26"
 - /after10/wk/meta/hy: "7f844963" -> "6825bccc"
+
+## 2026-10-24 day0
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/lst: 300 -> 298
+- /core/nextLid: 301 -> 299
+- /core/nextXid: 1625 -> 1330
+- /core/rs: -1325715013 -> 1934958007
+- /screens/market: "c4530e44" -> "9f8454b4"
+- /screens/xt: "99d026d4" -> "7d2e774e"
+- /screens/xt:design4: "af3270b4" -> "8b54e027"
+- /screens/xt:design5: "533a0829" -> "a9710f45"
+- /screens/xt:design6: "ec7812c0" -> "0530f221"
+- /screens/xt:kv: "b4f4d9ac" -> "1090997a"
+- /screens/xt:lgs: "35520208" -> "a23f397e"
+- /screens/xt:meta: "1e6126a3" -> "b5aaacbf"
+- /screens/xt:sealed: "d2588505" -> "d298d874"
+- /screens/xt:set1: "f33e3327" -> "5bcd8a80"
+- /screens/xt:set30: "460109d2" -> "ebfe5cf7"
+
+## 2026-10-24 release
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/dp: "2f1cb3e2" -> "92e649e4"
+- /core/feed: "f3f06aa9" -> "c6874f56"
+- /core/lst: 517 -> 552
+- /core/news/h: "103ca5c1" -> "e9cc9885"
+- /core/news/n: 11 -> 10
+- /core/newsHead[1]: "NEW DECK: ACORNOX / CANOPANG (GUST)" -> "NEW TECH: CACTUFT / CANOPANG (TOOLS)"
+- /core/newsHead[2]: "NEW TECH: ASTRYNX / KOIRUNE (TURBO)" -> "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[3]: "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /core/newsHead[4]: "TENTH TIDE: MORE CARDS REVEALED" -> "FIRST BOND IS OUT TODAY"
+- /core/newsHead[5]: "FIRST BOND IS OUT TODAY" -> "ROTATION: THE OLD STANDARD ENDS"
+- /core/nextLid: 1061 -> 888
+- /core/nextTid: 1806 -> 1768
+- /core/nextXid: 5552 -> 4666
+- /core/npcs: "c0fd61c1" -> "cbc45deb"
+- /core/rs: -1090767507 -> 1875741921
+
+## 2026-10-24 year1
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/dp: "5f5561f5" -> "218f74e0"
+- /core/feed: "77f37b67" -> "3268767d"
+- /core/lst: 514 -> 531
+- /core/news/h: "11474190" -> "99457f98"
+- /core/news/n: 61 -> 53
+- /core/newsHead[0]: "NEW BUILD-AROUND: DOWAGER QUEEN ISOLDE AGGRO" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/newsHead[1]: "NEW DECK: THORNWILD / CROWNLANDS CONTROL (FLEET)" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /core/newsHead[2]: "CROWN BASTION WINS THE REGIONAL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II"
+- /core/newsHead[3]: "CORRODEON / FERRADON WINS THE REGIONAL" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /core/newsHead[4]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "BRONZAROO / AEGISOPOD WINS THE REGIONAL"
+- /core/nextLid: 7455 -> 6938
+- /core/nextTid: 3932 -> 4295
+- /core/nextXid: 5552 -> 4666
+- /core/npcs: "beb14d4e" -> "588f6e75"
+- /core/rs: -700836488 -> 8074290
+
+## 2026-10-24 series
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/dp: "7a4971a4" -> "2d41cc34"
+- /core/feed: "fea3b8dc" -> "9cd2e2b5"
+- /core/lst: 537 -> 531
+- /core/news/h: "cd4cac1a" -> "9353221d"
+- /core/news/n: 190 -> 172
+- /core/newsHead[0]: "PEARL WARD IS NOW BANNED" -> "NEW TECH: BRONZAROO / FERRADON (GUST)"
+- /core/newsHead[1]: "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL" -> "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[2]: "BAN ANNOUNCED: PEARL WARD" -> "CANOPANG / ACORNOX WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[3]: "NEW TECH: ASTRYNX / KOIRUNE (TURBO)" -> "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL"
+- /core/newsHead[4]: "BLACK TIDE LEVIATHAN CONTROL WINS THE TIDEMARK CHAMPIONSHIP" -> "VEILMORA (HEAL) WINS THE REGIONAL"
+- /core/newsHead[5]: "POMPYRE / VELUNOX WINS THE WILDKIN CHAMPIONSHIP" -> "NEW TECH: ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II"
+- /core/nextLid: 21496 -> 20598
+- /core/nextTid: 3932 -> 4295
+- /core/nextXid: 5552 -> 4666
+- /core/npcs: "d2ca990f" -> "825e72ce"
+
+## 2026-10-24 flows
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/bought: 344.53 -> 344.51
+- /core/cash: 5639.910000000001 -> 5637.510000000001
+- /core/dp: "c3065c5e" -> "eae8746f"
+- /core/feed: "a6c49db6" -> "5422e915"
+- /core/fees: 70.11000000000001 -> 70.1
+- /core/lst: 494 -> 478
+- /core/netWorth: 683.59 -> 720.68
+- /core/news/h: "b019f614" -> "a1c7720e"
+- /core/news/n: 39 -> 37
+- /core/newsHead[0]: "NEW DECK: KOIRUNE / AUROROTL (HEAL)" -> "NEW TECH: VEILMORA / MOTHMUR (HEAL)"
+- /core/newsHead[1]: "TIDEBORN TEMPO WINS THE REGIONAL" -> "IRON REACH / THORNWILD AGGRO (AGGRO) WINS THE REGIONAL"
+- /core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /core/newsHead[3]: "NEW BUILD-AROUND: LEAGUE CHARTER CONTROL II" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /core/newsHead[4]: "NEW TECH: SPIRAMEL / FABLEHORN (DISRUPTION)" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /core/newsHead[5]: "NEW TECH: VEILMORA / WINKROW (TOOLS)" -> "CACTUFT / CANOPANG WINS THE REGIONAL"
+
+## 2026-10-24 shared
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 23.04 -> 35.84
+- /afterCrack/subs: "30ab52a4" -> "5bcc9d4a"
+- /coll/total[0]: 19.550000000000008 -> 25.550000000000022
+- /coll/total[1]: 47.10000000000001 -> 63.40000000000003
+- /core/cash: 4892.770000000001 -> 4892.669999999999
+- /core/dp: "099f5696" -> "3eba7b95"
+- /core/feed: "4f725795" -> "a1820d98"
+- /core/lst: 508 -> 498
+- /core/netWorth: 23.04 -> 35.84
+- /core/news/h: "c5a4b3c4" -> "e33726f1"
+- /core/news/n: 22 -> 21
+- /core/newsHead[0]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "GOAL: FIRST SALE"
+- /core/newsHead[1]: "NEW DECK: POMPYRE / BRAMBLEBUCK (TOOLS)" -> "NEW DECK: AUROROTL / FLAPOD"
+- /core/newsHead[2]: "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /core/newsHead[3]: "GOAL: GEM MINT" -> "NEW TECH: VEILMORA / MOTHMUR (HEAL)"
+
+## 2026-10-24 save:ban
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "8f05097f" -> "b0a50b94"
+- /after30/core/feed: "1816562a" -> "feb08430"
+- /after30/core/lst: 489 -> 497
+- /after30/core/news/h: "c2762bac" -> "85d53ee3"
+- /after30/core/newsHead[1]: "TIDEBORN TEMPO WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "CORRODEON / FERRADON WINS THE REGIONAL" -> "VEILMORA / MOTHMUR WINS THE REGIONAL"
+- /after30/core/nextLid: 5104 -> 5111
+- /after30/core/npcs: "b98b33bf" -> "edafcaf3"
+- /after30/core/rs: -105841693 -> -429793181
+- /after30/core/sales: "f1fea760" -> "3fb61ae6"
+- /after30/wk/listings/h: "9777f885" -> "5b0e714d"
+- /after30/wk/listings/n: 211 -> 217
+- /after30/wk/meta/arch/h: "5519eb1d" -> "8c819912"
+- /after30/wk/meta/ev/h: "c077d37c" -> "3916ab05"
+- /after30/wk/meta/gone/1011x3,1075x3,1100x2,1114x1,2014x4,2015x3,2057x2,2058x2,2085x2,2086x1,2098x1,2124x2,2129x2,Iron6,Stone6: baseline 2581, missing now
+
+## 2026-10-24 save:busy
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "f7012032" -> "9e5f648b"
+- /after30/core/feed: "e18c8b73" -> "7da2bab9"
+- /after30/core/lst: 479 -> 462
+- /after30/core/netWorth: 249.3 -> 253.65
+- /after30/core/news/h: "33d2967b" -> "d0c53e5f"
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[1]: "CROWN BASTION WINS THE REGIONAL" -> "CANOPANG / ACORNOX WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "VEILMORA / MOTHMUR WINS THE REGIONAL" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW DECK: AUROROTL / KOIRUNE"
+- /after30/core/nextLid: 1784 -> 1744
+- /after30/core/npcs: "5f51b34c" -> "52fe8463"
+- /after30/core/nw: "9fbc655a" -> "d6496a05"
+- /after30/core/rs: -1072630985 -> -202599218
+- /after30/core/sales: "a93ec4ef" -> "d34e36bd"
+- /after30/core/salesN: 307 -> 311
+
+## 2026-10-24 save:day1
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "0b39e91c" -> "a4c9f278"
+- /after30/core/feed: "63c1407f" -> "5229a814"
+- /after30/core/lst: 498 -> 506
+- /after30/core/news/h: "083283ab" -> "22af07be"
+- /after30/core/newsHead[0]: "NEW TECH: KOIRUNE / FLAPOD (TURBO)" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+- /after30/core/newsHead[2]: "NEW TECH: VEILMORA / MOTHMUR (DISRUPTION)" -> "NEW DECK: FLAPOD / AUROROTL"
+- /after30/core/newsHead[3]: "NEW DECK: ASHHOPPER / PYRENOX (TOOLS)" -> "NEW DECK: DRILLBADGER / FERRADON"
+- /after30/core/newsHead[4]: "CANOPANG / CACTUFT WINS THE WILDKIN CHAMPIONSHIP" -> "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 1094 -> 1133
+- /after30/core/nextTid: 2068 -> 2415
+- /after30/core/nextXid: 4786 -> 6246
+- /after30/core/npcs: "65eaaa92" -> "b0c2f4ba"
+- /after30/core/rs: 1815390173 -> -1191227569
+- /after30/core/sales: "3bfe7880" -> "75ee5fe4"
+- /after30/core/salesN: 215 -> 230
+
+## 2026-10-24 save:legacy-wk-busy
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "2817dcce" -> "20b6fe33"
+- /after30/core/feed: "80c3a7f1" -> "d7267c63"
+- /after30/core/lst: 522 -> 527
+- /after30/core/netWorth: 38.49 -> 37.86
+- /after30/core/news/h: "6c889642" -> "90778ea0"
+- /after30/core/news/n: 19 -> 18
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL" -> "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)"
+- /after30/core/newsHead[3]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "CANOPANG / CACTUFT WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after30/core/newsHead[5]: "NEW DECK: SMOLDERLYNX / PYRENOX" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/nextLid: 1158 -> 1107
+- /after30/core/nextXid: 5144 -> 5667
+- /after30/core/npcs: "3273e2e5" -> "80ab443c"
+- /after30/core/nw: "3cdb8507" -> "84292ecd"
+- /after30/core/rs: -1035784093 -> -996470583
+
+## 2026-10-24 save:legacy-wk-day1
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "0b39e91c" -> "74a9ed21"
+- /after30/core/feed: "28797f1d" -> "6e77bee7"
+- /after30/core/lst: 498 -> 570
+- /after30/core/news/h: "083283ab" -> "de0da5a0"
+- /after30/core/news/n: 12 -> 13
+- /after30/core/newsHead[0]: "NEW TECH: KOIRUNE / FLAPOD (TURBO)" -> "NEW DECK: COALOO / SMOLDERLYNX"
+- /after30/core/newsHead[2]: "NEW TECH: VEILMORA / MOTHMUR (DISRUPTION)" -> "NEW TECH: CANOPANG / CACTUFT (HEAL)"
+- /after30/core/newsHead[3]: "NEW DECK: ASHHOPPER / PYRENOX (TOOLS)" -> "NEW TECH: CANOPANG / ACORNOX (GUST)"
+- /after30/core/newsHead[4]: "CANOPANG / CACTUFT WINS THE WILDKIN CHAMPIONSHIP" -> "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 1094 -> 1026
+- /after30/core/nextTid: 2068 -> 2564
+- /after30/core/nextXid: 4786 -> 5298
+- /after30/core/npcs: "d9da6064" -> "f13f27a5"
+- /after30/core/rs: 1815390173 -> -994502421
+- /after30/core/sales: "d9be3122" -> "30dd3761"
+
+## 2026-10-24 save:legacy-wk-released
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "d414f308" -> "5831ec7b"
+- /after30/core/feed: "c4f7a4ae" -> "056a870e"
+- /after30/core/lst: 517 -> 501
+- /after30/core/news/h: "f3113a99" -> "ea13ffe7"
+- /after30/core/news/n: 13 -> 17
+- /after30/core/newsHead[0]: "CROWN BASTION WINS THE REGIONAL" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after30/core/newsHead[1]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE MIDRANGE"
+- /after30/core/newsHead[2]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW DECK: DRILLBADGER / FERRADON" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+- /after30/core/newsHead[5]: "NEW DECK: TEMPESTRAL / KITECOON" -> "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL"
+- /after30/core/nextLid: 1346 -> 1266
+- /after30/core/nextXid: 2828 -> 2437
+- /after30/core/npcs: "ddfcf633" -> "18abdd2b"
+- /after30/core/rs: -39301942 -> -449923527
+
+## 2026-10-24 save:legacy-wk-year
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "bdd64060" -> "1ca4a611"
+- /after30/core/feed: "34943f5a" -> "e87de362"
+- /after30/core/lst: 520 -> 534
+- /after30/core/news/h: "f85bef96" -> "cc9c4b4d"
+- /after30/core/news/n: 23 -> 24
+- /after30/core/newsHead[0]: "THORNWILD RUSH WINS THE REGIONAL" -> "NEW BUILD-AROUND: PORT OF LANTHORN MIDRANGE II"
+- /after30/core/newsHead[1]: "VEILMORA / VELUNOX WINS THE REGIONAL" -> "BLACK SAILS WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "DUSKFALL IS OUT TODAY" -> "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[5]: "CACTUFT / CANOPANG (TOOLS) WINS THE REGIONAL" -> "DUSKFALL IS OUT TODAY"
+- /after30/core/nextLid: 3275 -> 3188
+- /after30/core/nextXid: 2492 -> 2396
+- /after30/core/npcs: "40a06c21" -> "268be2e6"
+- /after30/core/rs: -602698277 -> 1315209606
+- /after30/core/sales: "d71a465f" -> "b1891868"
+
+## 2026-10-24 save:released
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "30beafd8" -> "68488a38"
+- /after30/core/feed: "908119bb" -> "07974dc0"
+- /after30/core/lst: 462 -> 449
+- /after30/core/news/h: "bf458406" -> "5291b37e"
+- /after30/core/news/n: 20 -> 19
+- /after30/core/newsHead[0]: "IRON WILDS WINS THE REGIONAL" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+- /after30/core/newsHead[1]: "ASTRYNX / KOIRUNE (TURBO) WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "NEW DECK: COALOO / SMOLDERLYNX" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/newsHead[5]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/nextLid: 1845 -> 1855
+- /after30/core/npcs: "05423ce9" -> "1d8635a8"
+- /after30/core/rs: -59305572 -> 771015283
+- /after30/core/sales: "144268a7" -> "b3349c46"
+- /after30/core/salesN: 313 -> 317
+
+## 2026-10-24 open:ban
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "4adc93e6" -> "3a25ea2f"
+- /after10/core/feed: "e1e599d9" -> "a3c41c96"
+- /after10/core/lst: 549 -> 537
+- /after10/core/news/h: "f922d327" -> "371e1af8"
+- /after10/core/newsHead[0]: "TIDEBORN TEMPO WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "CORRODEON / FERRADON WINS THE REGIONAL" -> "VEILMORA / MOTHMUR WINS THE REGIONAL"
+- /after10/core/nextLid: 4733 -> 4753
+- /after10/core/npcs: "23002f5d" -> "8ecb032a"
+- /after10/core/rs: 2009516767 -> 654929827
+- /after10/core/sales: "f891ed86" -> "9c1d2ced"
+- /after10/core/salesN: 496 -> 499
+- /after10/wk/listings/h: "c15bcc90" -> "d9df6ea3"
+- /after10/wk/listings/n: 252 -> 248
+- /after10/wk/meta/arch/h: "cdc59dd8" -> "ba0da0ea"
+- /after10/wk/meta/ev/h: "6aa1e138" -> "96abe755"
+
+## 2026-10-24 open:busy
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "2daf8732" -> "ed29f3eb"
+- /after10/core/feed: "3ec6222b" -> "8ffaec5e"
+- /after10/core/lst: 475 -> 473
+- /after10/core/netWorth: 258.19 -> 265.55
+- /after10/core/nextLid: 1331 -> 1338
+- /after10/core/npcs: "9042f089" -> "a0833858"
+- /after10/core/nw: "24ee32dc" -> "4eccf0fd"
+- /after10/core/rs: -527585314 -> 1939146966
+- /after10/core/sales: "fef27213" -> "e0c57a94"
+- /after10/core/salesN: 255 -> 272
+- /after10/wk/listings/h: "9d960b99" -> "85703087"
+- /after10/wk/meta/arch/h: "16f60da6" -> "ba0e6d82"
+- /after10/wk/meta/ev/h: "3a4d1080" -> "00d607f2"
+- /after10/wk/meta/hy: "c23f70c9" -> "87834c12"
+- /after10/wk/meta/lead/id: "1020+1010" -> "1035+1071"
+
+## 2026-10-24 open:legacy-wk-day1
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "71cd2d46" -> "4cb754d9"
+- /after10/core/feed: "f01ea22e" -> "89cf3509"
+- /after10/core/lst: 365 -> 402
+- /after10/core/news/h: "c8e25f4f" -> "6d2f1235"
+- /after10/core/news/n: 7 -> 8
+- /after10/core/newsHead[1]: "FIRST BOND IS OUT TODAY" -> "NEW TECH: CACTUFT / BRAMBLEBUCK (DISRUPTION)"
+- /after10/core/newsHead[2]: "ROTATION: THE OLD STANDARD ENDS" -> "FIRST BOND IS OUT TODAY"
+- /after10/core/newsHead[3]: "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after10/core/newsHead[4]: "FIRST BOND: MORE CARDS REVEALED" -> "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED"
+- /after10/core/newsHead[5]: "FIRST BOND: THE FIRST WILDKIN SET IS ANNOUNCED" -> "FIRST BOND: MORE CARDS REVEALED"
+- /after10/core/nextLid: 567 -> 548
+- /after10/core/nextTid: 2068 -> 2564
+- /after10/core/nextXid: 1625 -> 1330
+- /after10/core/npcs: "1a586b6f" -> "e3d0e9fd"
+- /after10/core/rs: -770506522 -> 344313561
+
+## 2026-10-24 open:legacy-wk-year
+Reason: First Tide to 125 and Reefward to 75 catalogued cards, no bulk, boosters only for qualifying sets, rarity-weighted boxed-set entry: Tidemark world generation and pack rolls draw different numbers from the shared random stream, so seeded runs of every game shift; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "d8b412c0" -> "875e613f"
+- /after10/core/feed: "6232a2f8" -> "d3cd26f3"
+- /after10/core/lst: 506 -> 523
+- /after10/core/news/h: "f85bef96" -> "438d1897"
+- /after10/core/newsHead[0]: "THORNWILD RUSH WINS THE REGIONAL" -> "BLACK SAILS WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "VEILMORA / VELUNOX WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after10/core/nextLid: 2948 -> 2930
+- /after10/core/nextXid: 2492 -> 2396
+- /after10/core/npcs: "b2c66b75" -> "d8b74acb"
+- /after10/core/rs: -661340515 -> 1506257241
+- /after10/core/sales: "6b38ee69" -> "a3e7fd90"
+- /after10/core/salesN: 224 -> 229
+- /after10/wk/listings/h: "47ec3ac1" -> "f04ca691"
+- /after10/wk/listings/n: 218 -> 220
+- /after10/wk/meta/arch/h: "c1a09197" -> "55330bb7"

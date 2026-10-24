@@ -60,7 +60,7 @@ function xtV2Replay(){
       const def=xtSetDef(s); const T0=(G.day-def.rel)/365; if (T0<0) continue; const T1=Math.max(0.3,T0); const y0=xtYearOf(def.rel);
       const nT=Math.ceil(T1-1e-9); const Q0=Math.round(XT_E2.q0*(XT_E2.q1+(XT_E2.q2-XT_E2.q1)*(s-1)/29)); const bst=xtBoosterSet(s);
       // the same number of copies of each card as before whatever the product: a booster set opens packs, any other set enters the world as boxed sets (one of each card)
-      const Q=bst? Math.max(1,Math.round(Q0*def.named/def.total)) : Math.max(1,Math.round(Q0*XT_PACK/def.total)), Qs=bst? Math.round(Q*XT_E2.sealedMul) : 0;
+      const Q=bst? Math.max(1,Math.round(Q0*def.named/def.total)) : Math.max(1,Math.round(Q0*XT_PACK*1.5/def.total)), Qs=bst? Math.round(Q*XT_E2.sealedMul) : 0;
       const cards=[]; const addPack=(born,cls)=>{ const keys=xtRollUnit(s,R); for (const k of keys){ const d=xtD(k); cards.push({k, born, cls: cls||pickClass(born), c:condFresh(()=>R(),0.55), g:0, rar:d.rar, foil:d.v==='F', alive:true}); } };
       const pickClass=(born)=>{ const m=XT_E2.mix(y0+Math.floor(born)); const x=R(); return x<m.collector? 'collector' : x<m.collector+m.player? 'player' : 'casual'; };
       for (let i=0;i<Q;i++) addPack(0);
