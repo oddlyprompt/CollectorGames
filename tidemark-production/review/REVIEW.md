@@ -310,3 +310,63 @@ Every delivered picture, exactly as filed, one image per production sheet (gener
 
 ![TM-S077](TM-S077.jpg)
 
+## TM-S078: Harbor Leagues and Neutral: people
+
+![TM-S078](TM-S078.jpg)
+
+## TM-S079: Land factions: people
+
+![TM-S079](TM-S079.jpg)
+
+## TM-S080: Sea factions: people
+
+![TM-S080](TM-S080.jpg)
+
+## TM-S081: Sea factions: people
+
+![TM-S081](TM-S081.jpg)
+
+## TM-S082: Mixed factions and subjects
+
+![TM-S082](TM-S082.jpg)
+
+## TM-S083: Mixed factions and subjects
+
+![TM-S083](TM-S083.jpg)
+
+## TM-S084: Mixed factions and subjects
+
+![TM-S084](TM-S084.jpg)
+
+## TM-S085: Mixed factions and subjects
+
+![TM-S085](TM-S085.jpg)
+
+## TM-S086: Thornwild: creatures
+
+![TM-S086](TM-S086.jpg)
+
+## TM-S087: Thornwild: people
+
+![TM-S087](TM-S087.jpg)
+
+## TM-S088: Tideborn: people
+
+![TM-S088](TM-S088.jpg)
+
+## TM-S089: Tideborn: people
+
+![TM-S089](TM-S089.jpg)
+
+## TM-S090: Mixed factions and subjects
+
+![TM-S090](TM-S090.jpg)
+
+## TM-S091: Mixed factions and subjects
+
+![TM-S091](TM-S091.jpg)
+
+## TM-S092: Mixed factions and subjects
+
+![TM-S092](TM-S092.jpg)
+

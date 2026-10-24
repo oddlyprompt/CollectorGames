@@ -14454,6 +14454,2526 @@
    "filed_by": "SOL delivery, awaiting owner review",
    "approved": "2026-10-19",
    "approved_note": "Owner, 2026-10-19: all three intake findings accepted as is (Brass Automaton, Fair of Banners, 468x351 resolution); every delivered picture approved."
+  },
+  "TMI-0651": {
+   "file": "tidemark-production/approved/art/TMI-0651-banner-bearer.webp",
+   "sha256": "642c88a06f1db3f37ab58ae7515b16ee431169a554275fc283f61f61f2a474e0",
+   "card": "TMC-0651",
+   "title": "Banner Bearer",
+   "sheet": "TM-S079",
+   "cell": 1,
+   "delivered_as": "TMI-0651-banner-bearer.png",
+   "delivered_sha256": "311182752f79763ce131f161ae2bd60cfce10901c03cbd135aace3dd20dbffab",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0652": {
+   "file": "tidemark-production/approved/art/TMI-0652-bastion-quartermaster.webp",
+   "sha256": "331ed8878a993e91ae7bdf621d924dbd1a47c13a4d3c85e8fe1e2602d3c1fc64",
+   "card": "TMC-0652",
+   "title": "Bastion Quartermaster",
+   "sheet": "TM-S079",
+   "cell": 2,
+   "delivered_as": "TMI-0652-bastion-quartermaster.png",
+   "delivered_sha256": "cdbccdbfe364d860bd0ebd6b3198dfc4a64a6c2248b5ba6ebab4b78f1ab0010c",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0653": {
+   "file": "tidemark-production/approved/art/TMI-0653-gatehouse-pikeman.webp",
+   "sha256": "1a51ec58f2854fcd69dadcc330cc259f1d01612a58c4fb5b7970cf1aa40d8c15",
+   "card": "TMC-0653",
+   "title": "Gatehouse Pikeman",
+   "sheet": "TM-S079",
+   "cell": 3,
+   "delivered_as": "TMI-0653-gatehouse-pikeman.png",
+   "delivered_sha256": "78fd357396711f86042f3b576be7cd5680dd4f86a6b859a22e3ab75685def739",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0654": {
+   "file": "tidemark-production/approved/art/TMI-0654-lord-marshal-dorran.webp",
+   "sha256": "faed54171738fe178c3d0479fce43af6ae2c4840dce8fe8ad2e4fb91329963ba",
+   "card": "TMC-0654",
+   "title": "Lord Marshal Dorran",
+   "sheet": "TM-S079",
+   "cell": 4,
+   "delivered_as": "TMI-0654-lord-marshal-dorran.png",
+   "delivered_sha256": "814e99d2a548910a786029719842ee7c69dedf5cf5ae20521c3cbc20a4b5eaec",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0655": {
+   "file": "tidemark-production/approved/art/TMI-0655-close-ranks.webp",
+   "sha256": "4737962fce2034c0884eb9eb17e04ce5dcd24eed0d695cbdac0db40dea762d09",
+   "card": "TMC-0655",
+   "title": "Close Ranks",
+   "sheet": "TM-S079",
+   "cell": 5,
+   "delivered_as": "TMI-0655-close-ranks.png",
+   "delivered_sha256": "64dfabdd843fd1c5b1a2a93b97750e31f46c10d37217fb2311f2c8bc06cf811b",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0656": {
+   "file": "tidemark-production/approved/art/TMI-0656-beacon-tower.webp",
+   "sha256": "6b689b2abb28a396b78ef94f8895594a2843cb03fedf65bef38b0fc41a22fac5",
+   "card": "TMC-0656",
+   "title": "Beacon Tower",
+   "sheet": "TM-S084",
+   "cell": 6,
+   "delivered_as": "TMI-0656-beacon-tower.png",
+   "delivered_sha256": "4a9be6df03522a6ab73f12d83e87edfee90706020292ece90bec2a01a24eb14c",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0657": {
+   "file": "tidemark-production/approved/art/TMI-0657-citadel-of-aldermere.webp",
+   "sha256": "9b58fe4a8ce3741e184c527a362c10f0f446e3db7db4537a6ed766465923ec50",
+   "card": "TMC-0657",
+   "title": "Citadel of Aldermere",
+   "sheet": "TM-S084",
+   "cell": 7,
+   "delivered_as": "TMI-0657-citadel-of-aldermere.png",
+   "delivered_sha256": "bd9df90f4996e9ba0e66e1dee9db606df872e35fa8331ed3995b388120bd6df1",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0658": {
+   "file": "tidemark-production/approved/art/TMI-0658-marching-colors.webp",
+   "sha256": "c7746b762a415fe7334f140d449b130ad8d9fd21c2a88f46459f1c8782746f05",
+   "card": "TMC-0658",
+   "title": "Marching Colors",
+   "sheet": "TM-S079",
+   "cell": 6,
+   "delivered_as": "TMI-0658-marching-colors.png",
+   "delivered_sha256": "64a7bbf4e27ca2cf30b4c7f59023954983818eaac8287755d0f18a8ca22e45ab",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0659": {
+   "file": "tidemark-production/approved/art/TMI-0659-antlered-titan.webp",
+   "sha256": "fda87acf108989a615f7aa9c0d9908788c9653676c24012007c30fbe302f4210",
+   "card": "TMC-0659",
+   "title": "Antlered Titan",
+   "sheet": "TM-S082",
+   "cell": 1,
+   "delivered_as": "TMI-0659-antlered-titan.png",
+   "delivered_sha256": "c23f48bdfc7d563a55e774a346bf9fa30b32361f722d15f12aa8714df77ca371",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0660": {
+   "file": "tidemark-production/approved/art/TMI-0660-heartwood-druid.webp",
+   "sha256": "ec3968e7d883099d3d62fa3bbbf569ccbe6952dbf9cd4aeb59d06bafe344bd78",
+   "card": "TMC-0660",
+   "title": "Heartwood Druid",
+   "sheet": "TM-S079",
+   "cell": 7,
+   "delivered_as": "TMI-0660-heartwood-druid.png",
+   "delivered_sha256": "dc557e0c57b5f09e2d9dadb2eaf978354d110e8e484975d201ad8f7b80b34946",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0661": {
+   "file": "tidemark-production/approved/art/TMI-0661-ridge-stalker.webp",
+   "sha256": "a38dddf8f403b2d49cca896a6a32c0c49c16ebc6f178df8cbac027b98b79b9aa",
+   "card": "TMC-0661",
+   "title": "Ridge Stalker",
+   "sheet": "TM-S082",
+   "cell": 2,
+   "delivered_as": "TMI-0661-ridge-stalker.png",
+   "delivered_sha256": "1b102109ff8157a15e7bf76456e0e7000e7ddfb95b53bf8299599dbf3a3df251",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0662": {
+   "file": "tidemark-production/approved/art/TMI-0662-spirit-of-the-deep-wood.webp",
+   "sha256": "2bdeb8250290cf42e611d93b88b1007f9a7821a9e907a27df7617132655def37",
+   "card": "TMC-0662",
+   "title": "Spirit of the Deep Wood",
+   "sheet": "TM-S082",
+   "cell": 3,
+   "delivered_as": "TMI-0662-spirit-of-the-deep-wood.png",
+   "delivered_sha256": "490df35702290191cc5e4c0b86e51f2006c9457f18eb1a3a32ba706b7d9a89c3",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0663": {
+   "file": "tidemark-production/approved/art/TMI-0663-thicket-wolf.webp",
+   "sha256": "58d97d198caf36f54af1a8164113ef01ef84313ee3392e1b7a29be1829639c73",
+   "card": "TMC-0663",
+   "title": "Thicket Wolf",
+   "sheet": "TM-S082",
+   "cell": 4,
+   "delivered_as": "TMI-0663-thicket-wolf.png",
+   "delivered_sha256": "c8f9dbcdeb10bcd2e6623601e27093831f239e6f7cd97cd64ce80c4adbb6b01b",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0664": {
+   "file": "tidemark-production/approved/art/TMI-0664-thorn-hound.webp",
+   "sha256": "abc69dbd49fcf6919bb8f44db0b6b5aff147bc678baaa7432ac2b1db6b2dfbe1",
+   "card": "TMC-0664",
+   "title": "Thorn Hound",
+   "sheet": "TM-S082",
+   "cell": 5,
+   "delivered_as": "TMI-0664-thorn-hound.png",
+   "delivered_sha256": "f51fbc84811b6e760c759dcb29c4bfdea11683f4680a86b1461d71a36a39e429",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0665": {
+   "file": "tidemark-production/approved/art/TMI-0665-greatwood-rampage.webp",
+   "sha256": "4c107ac81367adf243af40b60bd204b9c0f702df7a13b1f8423159cd6f0a1c07",
+   "card": "TMC-0665",
+   "title": "Greatwood Rampage",
+   "sheet": "TM-S079",
+   "cell": 8,
+   "delivered_as": "TMI-0665-greatwood-rampage.png",
+   "delivered_sha256": "340c0785f56eac010b6cd2b2b77e4e9d0ea7edd9641812824ed8242f6ed3907a",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0666": {
+   "file": "tidemark-production/approved/art/TMI-0666-seedtime.webp",
+   "sha256": "0c73a4789ae95d6b3a8adada353eaae792b833cfe2009cb3cc34dea03483bf3a",
+   "card": "TMC-0666",
+   "title": "Seedtime",
+   "sheet": "TM-S079",
+   "cell": 9,
+   "delivered_as": "TMI-0666-seedtime.png",
+   "delivered_sha256": "8dc9310e63ca4c89ebb4d8a884313a98418cca93519ccc9ab161155444c88976",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0667": {
+   "file": "tidemark-production/approved/art/TMI-0667-fernhollow.webp",
+   "sha256": "0dab5baac02c18a4bef68d44325cd04a8685ed6812c98f2108bb6ed9ea6618de",
+   "card": "TMC-0667",
+   "title": "Fernhollow",
+   "sheet": "TM-S084",
+   "cell": 8,
+   "delivered_as": "TMI-0667-fernhollow.png",
+   "delivered_sha256": "525dc71aca61b95c39099cdd098f3846f95880d08e9fa341cc1ccee8a723ebb3",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0668": {
+   "file": "tidemark-production/approved/art/TMI-0668-boilerplate-guard.webp",
+   "sha256": "23cb8bf98e82392ca583c9e207972585ef0e8d4b3ca713b10309992611164a3b",
+   "card": "TMC-0668",
+   "title": "Boilerplate Guard",
+   "sheet": "TM-S082",
+   "cell": 6,
+   "delivered_as": "TMI-0668-boilerplate-guard.png",
+   "delivered_sha256": "cb137104eb13979985ed8d7655f55e5f041cf999aab67132bb01d1b355e50edc",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0669": {
+   "file": "tidemark-production/approved/art/TMI-0669-gun-crew.webp",
+   "sha256": "278aecdbc3e56a479811030dfc68f6f0f4c42eff7def20e26892368f30481edb",
+   "card": "TMC-0669",
+   "title": "Gun Crew",
+   "sheet": "TM-S083",
+   "cell": 6,
+   "delivered_as": "TMI-0669-gun-crew.png",
+   "delivered_sha256": "5d0bc7126a5feba95896c6dcf8051e294fd721189259aae6faae934b325e9965",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0670": {
+   "file": "tidemark-production/approved/art/TMI-0670-rivet-golem.webp",
+   "sha256": "54297d4cc7ca6e81453c44be9c7f6cb6f8bcf1b413491660f5cde70179fa8e3d",
+   "card": "TMC-0670",
+   "title": "Rivet Golem",
+   "sheet": "TM-S082",
+   "cell": 7,
+   "delivered_as": "TMI-0670-rivet-golem.png",
+   "delivered_sha256": "166c92188a687e2b556f460df7b7ec37f59e7616a15e06819f763e0290d2449e",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0671": {
+   "file": "tidemark-production/approved/art/TMI-0671-siege-engineer.webp",
+   "sha256": "a193e87d517683ce4198f50799b0eea9bffeb195ee98755551ca74ee7fa36085",
+   "card": "TMC-0671",
+   "title": "Siege Engineer",
+   "sheet": "TM-S083",
+   "cell": 7,
+   "delivered_as": "TMI-0671-siege-engineer.png",
+   "delivered_sha256": "7ba3abd4db48a3d476a3d222f311c63185685e0cecea08e2d01dbf918cdebb1e",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0672": {
+   "file": "tidemark-production/approved/art/TMI-0672-the-iron-sovereign.webp",
+   "sha256": "43fa26a1fecd8295bf247c9cbb67a50f94effa97e3b97116d087f91c5e65e704",
+   "card": "TMC-0672",
+   "title": "The Iron Sovereign",
+   "sheet": "TM-S082",
+   "cell": 8,
+   "delivered_as": "TMI-0672-the-iron-sovereign.png",
+   "delivered_sha256": "c7683a3271dec0184fb4fa72dfd76db7801493717230132c4aaf5869c68f636f",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0673": {
+   "file": "tidemark-production/approved/art/TMI-0673-anvil-strike.webp",
+   "sha256": "1750062a197be92d3ca29ad477b1c162c43dc56f2320634bc9873b53f4d4c491",
+   "card": "TMC-0673",
+   "title": "Anvil Strike",
+   "sheet": "TM-S083",
+   "cell": 8,
+   "delivered_as": "TMI-0673-anvil-strike.png",
+   "delivered_sha256": "6a79233eddf7c1eba8eb424b16fcd4d81407bbc61d4cc7d6d746f53c84e1eb46",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0674": {
+   "file": "tidemark-production/approved/art/TMI-0674-cannon-of-greywater.webp",
+   "sha256": "d831479c032728d4ec3d6d50c42fb01ca4e6a40d132264112e3600acee4516d1",
+   "card": "TMC-0674",
+   "title": "Cannon of Greywater",
+   "sheet": "TM-S084",
+   "cell": 9,
+   "delivered_as": "TMI-0674-cannon-of-greywater.png",
+   "delivered_sha256": "7c74a2f74429b3a18a8f80584fad9156d381076a2a1ca7c2f61672ceaf49fd2b",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0675": {
+   "file": "tidemark-production/approved/art/TMI-0675-iron-brace.webp",
+   "sha256": "949f40c0b04bac00487e8a00620bae9931fff1bd855b29e1cdeed4381146c59c",
+   "card": "TMC-0675",
+   "title": "Iron Brace",
+   "sheet": "TM-S085",
+   "cell": 1,
+   "delivered_as": "TMI-0675-iron-brace.png",
+   "delivered_sha256": "eb310b55e5e271dd42aa9cac41866ce607b03271c80162b8a26ceb34c6d757e6",
+   "size": [
+    480,
+    360
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0676": {
+   "file": "tidemark-production/approved/art/TMI-0676-oracle-of-the-long-ebb.webp",
+   "sha256": "ee347746b3f4876b4120e4e99bc0323c9c84b591bd8cccecdbadf6824752be65",
+   "card": "TMC-0676",
+   "title": "Oracle of the Long Ebb",
+   "sheet": "TM-S080",
+   "cell": 1,
+   "delivered_as": "TMI-0676-oracle-of-the-long-ebb.png",
+   "delivered_sha256": "dbaa5fd7cba51f7536b80ac2eb96b12759ca682122558871fab24823bfee43aa",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0677": {
+   "file": "tidemark-production/approved/art/TMI-0677-sea-mist-adept.webp",
+   "sha256": "e584cf71e1cc2d9dcd132d0046ce5ee0753852d99252c56069f452fd6e6999d2",
+   "card": "TMC-0677",
+   "title": "Sea Mist Adept",
+   "sheet": "TM-S080",
+   "cell": 2,
+   "delivered_as": "TMI-0677-sea-mist-adept.png",
+   "delivered_sha256": "8f5a711d3d4af35069c14ecff95bb8429f608825576c0625da01a54371ea4640",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0678": {
+   "file": "tidemark-production/approved/art/TMI-0678-shell-diver.webp",
+   "sha256": "aac8d0a6ab06eaeaa86943812ffe4578566107a2b69625a15db326b917b32a52",
+   "card": "TMC-0678",
+   "title": "Shell Diver",
+   "sheet": "TM-S080",
+   "cell": 3,
+   "delivered_as": "TMI-0678-shell-diver.png",
+   "delivered_sha256": "7f60d012bdc0a337b37d4cc52ab36d0af4d2391bd84f1200cf704303fb4a707a",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0679": {
+   "file": "tidemark-production/approved/art/TMI-0679-shoal-mage.webp",
+   "sha256": "c7673d327f4dc1212de656dea876f5c251a708fb1f7b5d4e34ebb7c5f9e73348",
+   "card": "TMC-0679",
+   "title": "Shoal Mage",
+   "sheet": "TM-S080",
+   "cell": 4,
+   "delivered_as": "TMI-0679-shoal-mage.png",
+   "delivered_sha256": "57e6c9b9588832e41ae63a10be65c35db75125e65b0796e58cc37adf67543b32",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0680": {
+   "file": "tidemark-production/approved/art/TMI-0680-stormglass-mage.webp",
+   "sha256": "bc00b3729fd067b3e0cc4f9f6a031735ab2bf329be16b14a5a7ae8edd04bae5b",
+   "card": "TMC-0680",
+   "title": "Stormglass Mage",
+   "sheet": "TM-S080",
+   "cell": 5,
+   "delivered_as": "TMI-0680-stormglass-mage.png",
+   "delivered_sha256": "58c5a4de07cd348acc22258494561e53c3c3a13636bf677d678940953c253060",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0681": {
+   "file": "tidemark-production/approved/art/TMI-0681-wave-skipper.webp",
+   "sha256": "9783ec4bd31a729667d74b48dc169a984ee9c2acc8046527bf34b433af711d7e",
+   "card": "TMC-0681",
+   "title": "Wave Skipper",
+   "sheet": "TM-S080",
+   "cell": 6,
+   "delivered_as": "TMI-0681-wave-skipper.png",
+   "delivered_sha256": "5318984436a0e810cac0ead6bf5ce637e8c1b4505eef422fd4acfff94fe6b8a2",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0682": {
+   "file": "tidemark-production/approved/art/TMI-0682-ebb-current.webp",
+   "sha256": "c4eda9d8ba84a72099bf3d12c1b6345a480eda47fb3ef1075d0c0c2a3a1e8d04",
+   "card": "TMC-0682",
+   "title": "Ebb Current",
+   "sheet": "TM-S080",
+   "cell": 7,
+   "delivered_as": "TMI-0682-ebb-current.png",
+   "delivered_sha256": "bf183ebb1846d89cc051012efa58b98fbb9c8a9548705e14a3e3474baf738123",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0683": {
+   "file": "tidemark-production/approved/art/TMI-0683-the-drowning-tide.webp",
+   "sha256": "baf2f959a4ec953be7eeb270ebca2e2c0398b00c9b01e2e8bcac83ac59f731be",
+   "card": "TMC-0683",
+   "title": "The Drowning Tide",
+   "sheet": "TM-S080",
+   "cell": 8,
+   "delivered_as": "TMI-0683-the-drowning-tide.png",
+   "delivered_sha256": "a593e1cb9fcd3372d2ad4927ab08da5b1aaf50a5343b3b6178fa649b3114f21b",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0684": {
+   "file": "tidemark-production/approved/art/TMI-0684-captain-sable-orwin.webp",
+   "sha256": "e89b084cff77ac2f0f6ea30be86288c4b5d53f9c66784406ec89a6e11351d0fb",
+   "card": "TMC-0684",
+   "title": "Captain Sable Orwin",
+   "sheet": "TM-S080",
+   "cell": 9,
+   "delivered_as": "TMI-0684-captain-sable-orwin.png",
+   "delivered_sha256": "0c18615e4e8bee3a961ced69db4b5ed19c813254415c7b9ac028e1959aa79fe8",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0685": {
+   "file": "tidemark-production/approved/art/TMI-0685-press-gang-sailor.webp",
+   "sha256": "3a7368f5246911f7ec9e51e0e266752f93b84006a55b1deb2bfa8b8fd4749087",
+   "card": "TMC-0685",
+   "title": "Press-Gang Sailor",
+   "sheet": "TM-S081",
+   "cell": 1,
+   "delivered_as": "TMI-0685-press-gang-sailor.png",
+   "delivered_sha256": "e79b76b0a805c72a29994f285fd0d13e42c0c6c140cf7ab2e8e289c4cf7f954f",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0686": {
+   "file": "tidemark-production/approved/art/TMI-0686-salvage-crew.webp",
+   "sha256": "e1ea8d87513b5af262c521d52b6a062c649351be6142823065eb3f158428da99",
+   "card": "TMC-0686",
+   "title": "Salvage Crew",
+   "sheet": "TM-S081",
+   "cell": 2,
+   "delivered_as": "TMI-0686-salvage-crew.png",
+   "delivered_sha256": "132b7f8dec421ed45c7c4d1d4fbbe1f88737452d463e61b7a85b579c66ee328a",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0687": {
+   "file": "tidemark-production/approved/art/TMI-0687-gunwale-volley.webp",
+   "sha256": "7886e061f4aaf418bc3e07c744a687d12a74658e85f73acdb0ff0c04246ca44a",
+   "card": "TMC-0687",
+   "title": "Gunwale Volley",
+   "sheet": "TM-S081",
+   "cell": 3,
+   "delivered_as": "TMI-0687-gunwale-volley.png",
+   "delivered_sha256": "49bb0cc93050854cce485b2be7ce11dde8024f1feb9460eb7f00f2910b2fac7b",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0688": {
+   "file": "tidemark-production/approved/art/TMI-0688-smugglers-run.webp",
+   "sha256": "09015d63f4acde3ad4e591aed44d8d267203ed3767eb0a538133861bd8846b5d",
+   "card": "TMC-0688",
+   "title": "Smuggler's Run",
+   "sheet": "TM-S081",
+   "cell": 5,
+   "delivered_as": "TMI-0688-smugglers-run.png",
+   "delivered_sha256": "861fc66a9a8e6909bce9bc42937b2fdb80ea2033ea1092d89cfa7f249856631f",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0689": {
+   "file": "tidemark-production/approved/art/TMI-0689-dreadnought-marauder.webp",
+   "sha256": "c24de00f792e4fac3d67f695fd292f3f1f334ad1eb9e6eaa2b086638029ea107",
+   "card": "TMC-0689",
+   "title": "Dreadnought Marauder",
+   "sheet": "TM-S085",
+   "cell": 2,
+   "delivered_as": "TMI-0689-dreadnought-marauder.png",
+   "delivered_sha256": "7b1bf412bbe837e0874a7146e98c82a2fde77c3a5ab20ea0e594fd2c9ba1bd6a",
+   "size": [
+    480,
+    360
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0690": {
+   "file": "tidemark-production/approved/art/TMI-0690-fishers-skiff.webp",
+   "sha256": "60a507139d29817834378733a154fba5a95ac7247c529f25e1e084021b16094f",
+   "card": "TMC-0690",
+   "title": "Fisher's Skiff",
+   "sheet": "TM-S085",
+   "cell": 3,
+   "delivered_as": "TMI-0690-fishers-skiff.png",
+   "delivered_sha256": "858ee0ea3da607c5e28ad70e81adb6e1f077bade25af48005f3613c7c41b09ab",
+   "size": [
+    480,
+    360
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0691": {
+   "file": "tidemark-production/approved/art/TMI-0691-plunderers-charter.webp",
+   "sha256": "3be1b1c9ddc2ab082847ada5bf67931d85ece948d263fdfdfe773b0b9fd5bd35",
+   "card": "TMC-0691",
+   "title": "Plunderer's Charter",
+   "sheet": "TM-S081",
+   "cell": 4,
+   "delivered_as": "TMI-0691-plunderers-charter.png",
+   "delivered_sha256": "7d453a33b3a711e30c2870432ea012b06282fa4bd6f79552bb863bbddda97652",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0692": {
+   "file": "tidemark-production/approved/art/TMI-0692-drowned-matriarch.webp",
+   "sha256": "f7ff8b681e42116fc9420d87d637a196aab278c39dd9af02f2802ab6a0ea7a19",
+   "card": "TMC-0692",
+   "title": "Drowned Matriarch",
+   "sheet": "TM-S081",
+   "cell": 6,
+   "delivered_as": "TMI-0692-drowned-matriarch.png",
+   "delivered_sha256": "eb7d758f158b33e3d362be1fab24da9841efffed1bf8bb9230f45e91f5aa05f1",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0693": {
+   "file": "tidemark-production/approved/art/TMI-0693-drowned-penitent.webp",
+   "sha256": "110c2fba81ba6fa0dcd4a7a336b9d78749fbb06f1e42722b1371896b70390bfa",
+   "card": "TMC-0693",
+   "title": "Drowned Penitent",
+   "sheet": "TM-S081",
+   "cell": 7,
+   "delivered_as": "TMI-0693-drowned-penitent.png",
+   "delivered_sha256": "9a34a1ad43ea406538ab8b9ac57962bd5468191391e8092197384cae73bdc822",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0694": {
+   "file": "tidemark-production/approved/art/TMI-0694-gloom-eel.webp",
+   "sha256": "22a2a52f32ac1d18f67f597b947811136b0e4e2097587c41a5b2bf626ccf6671",
+   "card": "TMC-0694",
+   "title": "Gloom Eel",
+   "sheet": "TM-S082",
+   "cell": 9,
+   "delivered_as": "TMI-0694-gloom-eel.png",
+   "delivered_sha256": "4c50b4028d5aacc061e03dd77ce3ee479fdf49aefe309e43a96f757e3a8d0a87",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0695": {
+   "file": "tidemark-production/approved/art/TMI-0695-the-maw-below.webp",
+   "sha256": "3a8033f2000b121140624bacac0a71670d59f9701857265081e7ad241fc23557",
+   "card": "TMC-0695",
+   "title": "The Maw Below",
+   "sheet": "TM-S083",
+   "cell": 1,
+   "delivered_as": "TMI-0695-the-maw-below.png",
+   "delivered_sha256": "84e5f1058a6bd6a87b99b729e1d816fa759d5973d736fd5f488c9f4060bc8dfa",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0696": {
+   "file": "tidemark-production/approved/art/TMI-0696-tide-bound-priest.webp",
+   "sha256": "f4a93b1f5a777e1f6c2f16fd97232ab8f235e30c98ebb06e374fcfee3ba2832f",
+   "card": "TMC-0696",
+   "title": "Tide-Bound Priest",
+   "sheet": "TM-S081",
+   "cell": 8,
+   "delivered_as": "TMI-0696-tide-bound-priest.png",
+   "delivered_sha256": "4606743fc455cd86f8b6d84036cb3b14cf08be17b945005ba5426f7265b725d4",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0697": {
+   "file": "tidemark-production/approved/art/TMI-0697-final-descent.webp",
+   "sha256": "590287ebabedeff18d512dbfb79622aa838057487ad95cfaaa70cbb2ff385c36",
+   "card": "TMC-0697",
+   "title": "Final Descent",
+   "sheet": "TM-S083",
+   "cell": 9,
+   "delivered_as": "TMI-0697-final-descent.png",
+   "delivered_sha256": "791de48c91aeb5a7e1550119d3f7f86b776d627b770161d6031cb32a0b41c4d9",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0698": {
+   "file": "tidemark-production/approved/art/TMI-0698-undertows-grasp.webp",
+   "sha256": "c9dac21be37e0c5cd66b5846dbbdd9b8c2a1fded110d22af1b6fe895167480c8",
+   "card": "TMC-0698",
+   "title": "Undertow's Grasp",
+   "sheet": "TM-S084",
+   "cell": 1,
+   "delivered_as": "TMI-0698-undertows-grasp.png",
+   "delivered_sha256": "6730313386f51ea5fb2e669d082dcc619809264dff2a9e2d4eb428734b60f0eb",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0699": {
+   "file": "tidemark-production/approved/art/TMI-0699-choir-of-silt.webp",
+   "sha256": "0d3c782b223d4a46fea9c8187b221ca2718d775dc974f85dd1d4e513ea761be3",
+   "card": "TMC-0699",
+   "title": "Choir of Silt",
+   "sheet": "TM-S081",
+   "cell": 9,
+   "delivered_as": "TMI-0699-choir-of-silt.png",
+   "delivered_sha256": "51811d56089e763a30b140bf5bf2e15a661974a5880bbc179c5d2e74910b8339",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0700": {
+   "file": "tidemark-production/approved/art/TMI-0700-guild-adjudicator.webp",
+   "sha256": "12a31fa129887c6afc488a23f0a46f5071a18830f2dea0086fae0893a6f22765",
+   "card": "TMC-0700",
+   "title": "Guild Adjudicator",
+   "sheet": "TM-S078",
+   "cell": 1,
+   "delivered_as": "TMI-0700-guild-adjudicator.png",
+   "delivered_sha256": "dca973c1c92cc010525f3f6f9ae495e8331a7a3a39530a00c498cf8914ad82f4",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0701": {
+   "file": "tidemark-production/approved/art/TMI-0701-guildmaster-verrin.webp",
+   "sha256": "54475ff88d0e036dec956a1590a3f8530e3f5a1736c6f7a44888d094f9af6e3d",
+   "card": "TMC-0701",
+   "title": "Guildmaster Verrin",
+   "sheet": "TM-S078",
+   "cell": 2,
+   "delivered_as": "TMI-0701-guildmaster-verrin.png",
+   "delivered_sha256": "7e0f6c7ffe855f9b8aa21641896e029fbd4f411931b7a7a030032612a3040ba4",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0702": {
+   "file": "tidemark-production/approved/art/TMI-0702-harbor-warden.webp",
+   "sha256": "eb46b73bbed141b6ba6dcba4b9434323275bc79bf4ea930c497bee72cc560c01",
+   "card": "TMC-0702",
+   "title": "Harbor Warden",
+   "sheet": "TM-S078",
+   "cell": 3,
+   "delivered_as": "TMI-0702-harbor-warden.png",
+   "delivered_sha256": "16d2bf356007160a0a12d4f15c12dbe2f99edf03b057d052f2e992b194bcda4b",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0703": {
+   "file": "tidemark-production/approved/art/TMI-0703-quay-inspector.webp",
+   "sha256": "8e4fbda691cf093c617d6d25df9bcffba2a7b4f343954f7a0fdb279b1769d3bc",
+   "card": "TMC-0703",
+   "title": "Quay Inspector",
+   "sheet": "TM-S078",
+   "cell": 4,
+   "delivered_as": "TMI-0703-quay-inspector.png",
+   "delivered_sha256": "9a6bb1c29eb2899369fe854276b6351f943d4499333d6a5da695334b5a150d25",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0704": {
+   "file": "tidemark-production/approved/art/TMI-0704-quayside-ferrywoman.webp",
+   "sha256": "ec65a4b70f0b99ce62da0f2d52cc8aa8eaae957eb67e8efe9c7260435d5c0f07",
+   "card": "TMC-0704",
+   "title": "Quayside Ferrywoman",
+   "sheet": "TM-S078",
+   "cell": 5,
+   "delivered_as": "TMI-0704-quayside-ferrywoman.png",
+   "delivered_sha256": "f24dfa2c74fc3152aba4b9603161f745df61cda38daee2f65a4481798a5b09da",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0705": {
+   "file": "tidemark-production/approved/art/TMI-0705-wharf-clerk.webp",
+   "sha256": "117605ddccbb79dde1da13ff70435fca1fb0439ce8026dd22a182c6db8f73893",
+   "card": "TMC-0705",
+   "title": "Wharf Clerk",
+   "sheet": "TM-S078",
+   "cell": 6,
+   "delivered_as": "TMI-0705-wharf-clerk.png",
+   "delivered_sha256": "00eef14f4ad0963adef955412dfefb36a0d9c4f1081dafefd7af9b1b6397e329",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0706": {
+   "file": "tidemark-production/approved/art/TMI-0706-trade-winds.webp",
+   "sha256": "3f54f6a3ba53ff4f7ee20e75811e65e646bd9d6b3804076d4aea9e39badaeb95",
+   "card": "TMC-0706",
+   "title": "Trade Winds",
+   "sheet": "TM-S078",
+   "cell": 7,
+   "delivered_as": "TMI-0706-trade-winds.png",
+   "delivered_sha256": "bfae747111ce49d6f2a56ffddb20226ffc551a8df3c7530d39532fa47bfd14b4",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0707": {
+   "file": "tidemark-production/approved/art/TMI-0707-admiralty-hall.webp",
+   "sha256": "93488dd46c273faed617849d1131c2df19244df2272ec675bbdeba1b45183c53",
+   "card": "TMC-0707",
+   "title": "Admiralty Hall",
+   "sheet": "TM-S084",
+   "cell": 2,
+   "delivered_as": "TMI-0707-admiralty-hall.png",
+   "delivered_sha256": "42a983c27aea2cee8dfe2f4cc00c596d7a6851f926f04c02017fa6c1f94d1369",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0708": {
+   "file": "tidemark-production/approved/art/TMI-0708-pilots-guild-hall.webp",
+   "sha256": "bf8ddf16e5b27cbbe5eaf3ba58e5f265b54b419bf493672ae70f223d73fdb19a",
+   "card": "TMC-0708",
+   "title": "Pilot's Guild Hall",
+   "sheet": "TM-S084",
+   "cell": 3,
+   "delivered_as": "TMI-0708-pilots-guild-hall.png",
+   "delivered_sha256": "77bf7030cddf981f47d5aa3ed45bb8d4d567c0acf51a15fd14f287fcba46de30",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0709": {
+   "file": "tidemark-production/approved/art/TMI-0709-border-scavenger.webp",
+   "sha256": "afc55775bab56aaf74987de3ae24c43bc7782b25fdfd62c6b474352c66b244e8",
+   "card": "TMC-0709",
+   "title": "Border Scavenger",
+   "sheet": "TM-S078",
+   "cell": 8,
+   "delivered_as": "TMI-0709-border-scavenger.png",
+   "delivered_sha256": "e4fbdc10ed296dc6157c65a0bf830b715129552803ec4f5a05cb660d99613643",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0710": {
+   "file": "tidemark-production/approved/art/TMI-0710-hedge-healer.webp",
+   "sha256": "b9200cd27d1ea4a4a6c9904ee4425bb502fd6f0c5d9ebe2595b05c81502b9bbc",
+   "card": "TMC-0710",
+   "title": "Hedge Healer",
+   "sheet": "TM-S078",
+   "cell": 9,
+   "delivered_as": "TMI-0710-hedge-healer.png",
+   "delivered_sha256": "3245b040ba4e8c86d53fb8dbe863efc6e1e333f455ef55cc314af03905261028",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0711": {
+   "file": "tidemark-production/approved/art/TMI-0711-roadside-sellsword.webp",
+   "sha256": "b695e6240f5cc7656339e1b7f9bc105eb251c9cf446861e33b46cb599961d23b",
+   "card": "TMC-0711",
+   "title": "Roadside Sellsword",
+   "sheet": "TM-S083",
+   "cell": 2,
+   "delivered_as": "TMI-0711-roadside-sellsword.png",
+   "delivered_sha256": "ba8a5835a9b7d68667d7d3c9df546e89cdaa31c413dd54215524fcc1b8a34181",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0712": {
+   "file": "tidemark-production/approved/art/TMI-0712-roving-tinker.webp",
+   "sha256": "b8d3d7976747b235a87875d7487a9c6c2bfac6638b9fd483f53e727003ca362c",
+   "card": "TMC-0712",
+   "title": "Roving Tinker",
+   "sheet": "TM-S083",
+   "cell": 3,
+   "delivered_as": "TMI-0712-roving-tinker.png",
+   "delivered_sha256": "6d0d71fafb68961f6d3739233b7b5fa28547523f81944c516cebf09b9b76cd72",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0713": {
+   "file": "tidemark-production/approved/art/TMI-0713-the-wanderer-without-name.webp",
+   "sha256": "d0b8eaeb47d2d6ca0c7e3b37d20c7d97c353fe827232dbe44e14ec6784587127",
+   "card": "TMC-0713",
+   "title": "The Wanderer Without Name",
+   "sheet": "TM-S083",
+   "cell": 4,
+   "delivered_as": "TMI-0713-the-wanderer-without-name.png",
+   "delivered_sha256": "6924dd6e3964504ba522d64a01abe38d825b3d97b4770cec599ddcbc4827d5a1",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0714": {
+   "file": "tidemark-production/approved/art/TMI-0714-waystone-keeper.webp",
+   "sha256": "82b733b7d0f92467f8bef5bc9fe337ee67a0539869901139d9601aa0eee4aad7",
+   "card": "TMC-0714",
+   "title": "Waystone Keeper",
+   "sheet": "TM-S083",
+   "cell": 5,
+   "delivered_as": "TMI-0714-waystone-keeper.png",
+   "delivered_sha256": "a9dd78256fddb98c14740f5ea68790b1128327f96fd2819b44404b2c05a496c9",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0715": {
+   "file": "tidemark-production/approved/art/TMI-0715-lamplighters-rounds.webp",
+   "sha256": "c0a2377ac4a4882bed1c362c2c4c28b4d15521d7a61319fec52df82ff55e8e3c",
+   "card": "TMC-0715",
+   "title": "Lamplighter's Rounds",
+   "sheet": "TM-S084",
+   "cell": 5,
+   "delivered_as": "TMI-0715-lamplighters-rounds.png",
+   "delivered_sha256": "ead40d6ddabe62119ce6a4e08fc6b184a606585d470a52b5651529a12e62f231",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0716": {
+   "file": "tidemark-production/approved/art/TMI-0716-pilgrims-rest.webp",
+   "sha256": "6ecd7759add5c7b6c75a1f32f83bac45e843617b293a1d0f66f5fda4f4e517b3",
+   "card": "TMC-0716",
+   "title": "Pilgrim's Rest",
+   "sheet": "TM-S084",
+   "cell": 4,
+   "delivered_as": "TMI-0716-pilgrims-rest.png",
+   "delivered_sha256": "37af279719e941bcda8f0ed76b879618013eb10be1428acd62e0cd5ef1b8b08f",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0717": {
+   "file": "tidemark-production/approved/art/TMI-0717-briar-sprite.webp",
+   "sha256": "557f51f9f03e1f839513521032ed808a2f30c27e114813e25ee613b1e368ae15",
+   "card": "TMC-0717",
+   "title": "Briar Sprite",
+   "sheet": "TM-S086",
+   "cell": 1,
+   "delivered_as": "TMI-0717-briar-sprite.png",
+   "delivered_sha256": "22cf8005c123d9191d9bfa10f1a329cb5fa1a886ed6ab004bd3b1f20eb6620e1",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0718": {
+   "file": "tidemark-production/approved/art/TMI-0718-cormorant-diver.webp",
+   "sha256": "c70c720cc6a37eed7f36b8d0d2ed495efe509506e216c43052ca4216a7d4aa08",
+   "card": "TMC-0718",
+   "title": "Cormorant Diver",
+   "sheet": "TM-S086",
+   "cell": 2,
+   "delivered_as": "TMI-0718-cormorant-diver.png",
+   "delivered_sha256": "2335a8af7d5c85b2f36874756afab3ec88b13b22df7df851d3d1987072b3ecbc",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0719": {
+   "file": "tidemark-production/approved/art/TMI-0719-driftwood-otter.webp",
+   "sha256": "3e2e2a9933328344ef825e2151db6e2e82622c48ed279e58740eada2ab889a98",
+   "card": "TMC-0719",
+   "title": "Driftwood Otter",
+   "sheet": "TM-S086",
+   "cell": 3,
+   "delivered_as": "TMI-0719-driftwood-otter.png",
+   "delivered_sha256": "3e943c4567474a3388cd697b65543b4bdcade830847040e7811cd5a7e10955e6",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0720": {
+   "file": "tidemark-production/approved/art/TMI-0720-driftwood-titan.webp",
+   "sha256": "90fa3bbb5bdb6d6636c4f00c6729e538456e9d0b9a284e24564e749ffd4fe7c0",
+   "card": "TMC-0720",
+   "title": "Driftwood Titan",
+   "sheet": "TM-S086",
+   "cell": 4,
+   "delivered_as": "TMI-0720-driftwood-titan.png",
+   "delivered_sha256": "04428fe9663a8bc7bd5759fca03ef1a0ca67ad611b226c14ce933586da8e2059",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0721": {
+   "file": "tidemark-production/approved/art/TMI-0721-ebb-hunter.webp",
+   "sha256": "1ec21939b79c4adacef8c904e3eb46f055e99ae4c0a637fddfe0e1a26f20265a",
+   "card": "TMC-0721",
+   "title": "Ebb Hunter",
+   "sheet": "TM-S087",
+   "cell": 1,
+   "delivered_as": "TMI-0721-ebb-hunter.png",
+   "delivered_sha256": "bd79c8c8670ace1eb21e8b0b0a62cea0682ec926e27d5bee87f83656d159be1e",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0722": {
+   "file": "tidemark-production/approved/art/TMI-0722-great-heron-of-the-shallows.webp",
+   "sha256": "87ee8afe64f56010a8d0bc745edab6366b7b6484b97233f824c963075e876682",
+   "card": "TMC-0722",
+   "title": "Great Heron of the Shallows",
+   "sheet": "TM-S086",
+   "cell": 5,
+   "delivered_as": "TMI-0722-great-heron-of-the-shallows.png",
+   "delivered_sha256": "e91d67052947668f4c11ada8fd290b7dc4a2d4dd1845b8ba9d26f5ec0923a918",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0723": {
+   "file": "tidemark-production/approved/art/TMI-0723-grove-warden.webp",
+   "sha256": "a9ac6eb60a08e50545c374e8d1aa5df788009f0d3ca9d4198987595c8ca2add7",
+   "card": "TMC-0723",
+   "title": "Grove Warden",
+   "sheet": "TM-S087",
+   "cell": 2,
+   "delivered_as": "TMI-0723-grove-warden.png",
+   "delivered_sha256": "15b93fa10fb4c7c044286be49982d2e1ed7b14b6270c6bd6f94e9c4c3ab60101",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0724": {
+   "file": "tidemark-production/approved/art/TMI-0724-long-walk-wolf.webp",
+   "sha256": "e39e2cc2825f941c61b359834c61bb032533d445335bd968f7862fab767aefba",
+   "card": "TMC-0724",
+   "title": "Long Walk Wolf",
+   "sheet": "TM-S086",
+   "cell": 6,
+   "delivered_as": "TMI-0724-long-walk-wolf.png",
+   "delivered_sha256": "c7ddcab1451c5d03f5e52faddfa6c91211e3dbe60fe8b7047bdfea645276aae2",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0725": {
+   "file": "tidemark-production/approved/art/TMI-0725-marsh-heron.webp",
+   "sha256": "ac20ba97e3dce50dc7d69e0cb5cc60c7285bc78cf87dd5d64c40a9772901a68b",
+   "card": "TMC-0725",
+   "title": "Marsh Heron",
+   "sheet": "TM-S086",
+   "cell": 7,
+   "delivered_as": "TMI-0725-marsh-heron.png",
+   "delivered_sha256": "45361cdbe331c645de8e0b349368724ed4747f2aa57925eae910307d000da7f6",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0726": {
+   "file": "tidemark-production/approved/art/TMI-0726-mudflat-boar.webp",
+   "sha256": "c56a95ffc2a650e46ee57a1ce76b9e2e6c4ff32434efc7678f37a623859f8572",
+   "card": "TMC-0726",
+   "title": "Mudflat Boar",
+   "sheet": "TM-S086",
+   "cell": 8,
+   "delivered_as": "TMI-0726-mudflat-boar.png",
+   "delivered_sha256": "3643835a75d1af5239fc089f3d717c846c61f5332186c5c21f001493d5e3cb35",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0727": {
+   "file": "tidemark-production/approved/art/TMI-0727-old-brineroot.webp",
+   "sha256": "e0e7879b0e92dbd0b6003bdc112accfb70f1707b36626cd6ce6ab73165012f73",
+   "card": "TMC-0727",
+   "title": "Old Brineroot",
+   "sheet": "TM-S086",
+   "cell": 9,
+   "delivered_as": "TMI-0727-old-brineroot.png",
+   "delivered_sha256": "ae337833f1fb1bf2b9ba89147f06d6bdd0dd1c1ff1b2cb479b761b0159aabe59",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0728": {
+   "file": "tidemark-production/approved/art/TMI-0728-orrin-of-the-reedlands.webp",
+   "sha256": "d50aee3bf3b5c063c85ae8a2bfe54a94019aa1c73581b0c7128106f4f7646d64",
+   "card": "TMC-0728",
+   "title": "Orrin of the Reedlands",
+   "sheet": "TM-S087",
+   "cell": 3,
+   "delivered_as": "TMI-0728-orrin-of-the-reedlands.png",
+   "delivered_sha256": "d2568e7c161b1f13fc200c270fa7e6da9f7759cda3927dcae097fe22e9501754",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0729": {
+   "file": "tidemark-production/approved/art/TMI-0729-packmaster-veyra.webp",
+   "sha256": "d9f9b40e43f1f5394cd14d7ecd51d3e5ed548d28baef2475742b9cd1b8a90ea0",
+   "card": "TMC-0729",
+   "title": "Packmaster Veyra",
+   "sheet": "TM-S087",
+   "cell": 4,
+   "delivered_as": "TMI-0729-packmaster-veyra.png",
+   "delivered_sha256": "d02eb67404783e912235b559f497dd1c466136f35d7974eb1bdec2ea6e7221a9",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0730": {
+   "file": "tidemark-production/approved/art/TMI-0730-reed-cutter.webp",
+   "sha256": "cd8b1719b7c28174a22cedf473fb0c3b794e42cead12c0de7b02c3815ed82940",
+   "card": "TMC-0730",
+   "title": "Reed Cutter",
+   "sheet": "TM-S087",
+   "cell": 5,
+   "delivered_as": "TMI-0730-reed-cutter.png",
+   "delivered_sha256": "804f091fadafcfc00d008693be8a7656f3fe80e4707dac3ab7024d406c5c30d9",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0731": {
+   "file": "tidemark-production/approved/art/TMI-0731-reedbed-ambusher.webp",
+   "sha256": "6150c595ec123375c2127c3d4f000fd7a7c377ad3d7b1acd6797417fde7bc84d",
+   "card": "TMC-0731",
+   "title": "Reedbed Ambusher",
+   "sheet": "TM-S090",
+   "cell": 1,
+   "delivered_as": "TMI-0731-reedbed-ambusher.png",
+   "delivered_sha256": "11d75a6ab45cc7e7a91f03b28ac577d4f786d3fb5acb8b60f7a72261d3f46b42",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0732": {
+   "file": "tidemark-production/approved/art/TMI-0732-reefwood-matron.webp",
+   "sha256": "29242c4daffaf114672c475ccb4fcb8646978e8a11f0945f0fa7b45f4aeda74b",
+   "card": "TMC-0732",
+   "title": "Reefwood Matron",
+   "sheet": "TM-S087",
+   "cell": 6,
+   "delivered_as": "TMI-0732-reefwood-matron.png",
+   "delivered_sha256": "8c33d2610b3cc6cfc7f00faa334a9818ea30101b671a6bb776ffa6ab0091cde7",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0733": {
+   "file": "tidemark-production/approved/art/TMI-0733-rootbound-guardian.webp",
+   "sha256": "103336e6f5b73d4710dec677ac68b9182e626b49403973319dffbfed09e43688",
+   "card": "TMC-0733",
+   "title": "Rootbound Guardian",
+   "sheet": "TM-S090",
+   "cell": 2,
+   "delivered_as": "TMI-0733-rootbound-guardian.png",
+   "delivered_sha256": "cf4fd475a2c9ce8723b9da40690a10ebf1eddafab8561cc407dc322da3921c6f",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0734": {
+   "file": "tidemark-production/approved/art/TMI-0734-salt-hare.webp",
+   "sha256": "2a0e7077b0efde2db8c8bfe9cc87d715b6fb96990c74fe1122327c1a19bfa9b9",
+   "card": "TMC-0734",
+   "title": "Salt Hare",
+   "sheet": "TM-S090",
+   "cell": 3,
+   "delivered_as": "TMI-0734-salt-hare.png",
+   "delivered_sha256": "a496a62e74da2f8372e1c6735b65fafe1e54b1aefc6a5957b5f0e2b7742fdb66",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0735": {
+   "file": "tidemark-production/approved/art/TMI-0735-shorewood-stag.webp",
+   "sha256": "d16556d90dbe542505a4d6d30ce4df3cf5ac9edb75029776cb08a5d18aeaeaf2",
+   "card": "TMC-0735",
+   "title": "Shorewood Stag",
+   "sheet": "TM-S090",
+   "cell": 4,
+   "delivered_as": "TMI-0735-shorewood-stag.png",
+   "delivered_sha256": "0790bee56a4a2b89d72a8671cd3d212626baf31e6e57bd6014251210c32137ee",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0736": {
+   "file": "tidemark-production/approved/art/TMI-0736-tide-fox.webp",
+   "sha256": "5567f61046e187a3d1991480ddc7dedddb963258418517551883281ae9164586",
+   "card": "TMC-0736",
+   "title": "Tide Fox",
+   "sheet": "TM-S090",
+   "cell": 5,
+   "delivered_as": "TMI-0736-tide-fox.png",
+   "delivered_sha256": "f25795adc026273b0183f625fd5ec64b244dd92d1fd4f37b7eb7e68c5e389785",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0737": {
+   "file": "tidemark-production/approved/art/TMI-0737-tidepool-crab.webp",
+   "sha256": "ae5e01aadbaf709e2c963cc2075c86a3e2e3e6d34143daf038a5d280856d457c",
+   "card": "TMC-0737",
+   "title": "Tidepool Crab",
+   "sheet": "TM-S090",
+   "cell": 6,
+   "delivered_as": "TMI-0737-tidepool-crab.png",
+   "delivered_sha256": "8ad668b0c7a33a79721c002c79af93df74ebe05e5bcfd65910931c5aea5279cb",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0738": {
+   "file": "tidemark-production/approved/art/TMI-0738-bramble-snare.webp",
+   "sha256": "452a2060de4dabb51da38a89efc67902fed420f66ad7b967ffc01763a2b3b4c2",
+   "card": "TMC-0738",
+   "title": "Bramble Snare",
+   "sheet": "TM-S087",
+   "cell": 8,
+   "delivered_as": "TMI-0738-bramble-snare.png",
+   "delivered_sha256": "cd1341718b295ef0a29512579243643f43ac8ef8666ffbfef27d6e31d72376e3",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0739": {
+   "file": "tidemark-production/approved/art/TMI-0739-hide-in-the-reeds.webp",
+   "sha256": "ea1609f985aa9e4cb3a2d03655849723a3c05202ff14a09c81162993904a1e8f",
+   "card": "TMC-0739",
+   "title": "Hide in the Reeds",
+   "sheet": "TM-S087",
+   "cell": 9,
+   "delivered_as": "TMI-0739-hide-in-the-reeds.png",
+   "delivered_sha256": "4d39173a4dae374556c1e216cb93e3a735b236017003e97d5c15e149211499c0",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0740": {
+   "file": "tidemark-production/approved/art/TMI-0740-stampede-path.webp",
+   "sha256": "e78f7b7d19b1ba9d2cf01d043e91f791dc41d1560c56d86d93191f3cef2996b6",
+   "card": "TMC-0740",
+   "title": "Stampede Path",
+   "sheet": "TM-S091",
+   "cell": 5,
+   "delivered_as": "TMI-0740-stampede-path.png",
+   "delivered_sha256": "bf6d719aac9b21b5b2a2085b689a99372445483b4d40d869a5ca1a9bce91d27d",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0741": {
+   "file": "tidemark-production/approved/art/TMI-0741-wild-tide-surge.webp",
+   "sha256": "0a3e95c4f061abcda8e60d1c983d16bda41a0646084eea16b0417478bb386bc9",
+   "card": "TMC-0741",
+   "title": "Wild Tide Surge",
+   "sheet": "TM-S091",
+   "cell": 6,
+   "delivered_as": "TMI-0741-wild-tide-surge.png",
+   "delivered_sha256": "598f1d591ced8169251988defb89e909ced1a0d5fcd2def2916ba9da42b3d6fb",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0742": {
+   "file": "tidemark-production/approved/art/TMI-0742-windfall-harvest.webp",
+   "sha256": "243146a53c3a13d73430757864bb5b072bc5cab7d919fc0262b1ade58ec6ae6f",
+   "card": "TMC-0742",
+   "title": "Windfall Harvest",
+   "sheet": "TM-S091",
+   "cell": 7,
+   "delivered_as": "TMI-0742-windfall-harvest.png",
+   "delivered_sha256": "3df3dc20e039195a42ecc95359b89a7e7924f312cd9a80cfa96bcf6fb05e3c28",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0743": {
+   "file": "tidemark-production/approved/art/TMI-0743-bone-charm.webp",
+   "sha256": "0c43c381592ab27bc145f8f86c62eff052fe948265d98ac82939963c88108a86",
+   "card": "TMC-0743",
+   "title": "Bone Charm",
+   "sheet": "TM-S092",
+   "cell": 2,
+   "delivered_as": "TMI-0743-bone-charm.png",
+   "delivered_sha256": "9cf391cb74fcd3e8601ad66d0fda6aead6bc71ade8533e2ddbd23ca15162181c",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0744": {
+   "file": "tidemark-production/approved/art/TMI-0744-mangrove-shallows.webp",
+   "sha256": "63471ddf524e851fcb2ffd41d812d483128c518e0294d81501f07705ef13c74b",
+   "card": "TMC-0744",
+   "title": "Mangrove Shallows",
+   "sheet": "TM-S092",
+   "cell": 1,
+   "delivered_as": "TMI-0744-mangrove-shallows.png",
+   "delivered_sha256": "45f72217d1824b73542bec17e37196630d0bba0dff774495c3b8af449f22fa72",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0745": {
+   "file": "tidemark-production/approved/art/TMI-0745-antler-council.webp",
+   "sha256": "5ce613b30febd290c6ac86b29495c3a5d0881734e43cf961684da2f5bf15c1d6",
+   "card": "TMC-0745",
+   "title": "Antler Council",
+   "sheet": "TM-S087",
+   "cell": 7,
+   "delivered_as": "TMI-0745-antler-council.png",
+   "delivered_sha256": "ce3348821d45acbf003373145a9097f88d8c8478f201837284c524f712de88f4",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0746": {
+   "file": "tidemark-production/approved/art/TMI-0746-hunters-oath.webp",
+   "sha256": "c7c5551f1d360c2b11f47f93ec38dcc3eee18b4610ceaa444c685bba02c96af5",
+   "card": "TMC-0746",
+   "title": "Hunter's Oath",
+   "sheet": "TM-S091",
+   "cell": 4,
+   "delivered_as": "TMI-0746-hunters-oath.png",
+   "delivered_sha256": "e92429aa6dd0e8ffbcada814978213a438deabead259957c4a78cb7f1953e5d0",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0747": {
+   "file": "tidemark-production/approved/art/TMI-0747-admiral-of-the-reef-court.webp",
+   "sha256": "fe69b1c8ea9aee06bfdc8ffb62860179f76063de8d0a799b749c7756f56cdd44",
+   "card": "TMC-0747",
+   "title": "Admiral of the Reef Court",
+   "sheet": "TM-S088",
+   "cell": 1,
+   "delivered_as": "TMI-0747-admiral-of-the-reef-court.png",
+   "delivered_sha256": "8016a8aaa9502e2710fc912840520e2610d2e3b7ec917fc743d66f3d47347dd2",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0748": {
+   "file": "tidemark-production/approved/art/TMI-0748-anemone-guard.webp",
+   "sha256": "d4ff2114455ba5a0770bbe6264b219f6317f67160ede28221efcf062c1eac582",
+   "card": "TMC-0748",
+   "title": "Anemone Guard",
+   "sheet": "TM-S090",
+   "cell": 7,
+   "delivered_as": "TMI-0748-anemone-guard.png",
+   "delivered_sha256": "341df1b3b052072a213140abdb64a8b718910394eb94b43900fa84baa68022c8",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0749": {
+   "file": "tidemark-production/approved/art/TMI-0749-brine-archer.webp",
+   "sha256": "d2931e14924ac4232cbe900d74ac46d1ea97929a0f0d50f6c6b68cc4beb37c9e",
+   "card": "TMC-0749",
+   "title": "Brine Archer",
+   "sheet": "TM-S088",
+   "cell": 2,
+   "delivered_as": "TMI-0749-brine-archer.png",
+   "delivered_sha256": "a0e31d5750bf0f385c3dcc4522d36bc3cd33fc4033e2077abf97ea6e9e61733e",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0750": {
+   "file": "tidemark-production/approved/art/TMI-0750-coral-hatchling.webp",
+   "sha256": "bb7668b1a9df4818d18b7f89e1f5fbd31dedcd801085b59f1a3b7930ab172335",
+   "card": "TMC-0750",
+   "title": "Coral Hatchling",
+   "sheet": "TM-S090",
+   "cell": 8,
+   "delivered_as": "TMI-0750-coral-hatchling.png",
+   "delivered_sha256": "1dcb7dcfec139cd0711c4b21fdb96eeebdbf761e2fc130e5e3fa7812e4be90a6",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0751": {
+   "file": "tidemark-production/approved/art/TMI-0751-coral-seer-of-ys.webp",
+   "sha256": "be4d43dfff6492871c3f013060e82bc09c77386ff153ba14ed9b3d9878466fdb",
+   "card": "TMC-0751",
+   "title": "Coral Seer of Ys",
+   "sheet": "TM-S088",
+   "cell": 3,
+   "delivered_as": "TMI-0751-coral-seer-of-ys.png",
+   "delivered_sha256": "69403e920bfe5e899ca0253831fcb7cfde4ea0dc48f3b81ff0cbad94babe0e8d",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0752": {
+   "file": "tidemark-production/approved/art/TMI-0752-great-moon-jelly.webp",
+   "sha256": "1a40b1b32477e084ced3c789976d17dad88c6e262a3984a657ddf1d23e558c2d",
+   "card": "TMC-0752",
+   "title": "Great Moon Jelly",
+   "sheet": "TM-S090",
+   "cell": 9,
+   "delivered_as": "TMI-0752-great-moon-jelly.png",
+   "delivered_sha256": "1917456692f064b1a5435579a6b240e0444d79e6c9f2f73dfdc54db7d1b59fbc",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0753": {
+   "file": "tidemark-production/approved/art/TMI-0753-kelp-warden.webp",
+   "sha256": "58cdc0aedc786ea476f8106b654b67b20be86d7c847218af097c8af0c63f1795",
+   "card": "TMC-0753",
+   "title": "Kelp Warden",
+   "sheet": "TM-S088",
+   "cell": 4,
+   "delivered_as": "TMI-0753-kelp-warden.png",
+   "delivered_sha256": "5d5835346587a76b63acbabe5658f7fc64dae3e6ba204912d848ae6fd97d7ddd",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0754": {
+   "file": "tidemark-production/approved/art/TMI-0754-mirrorpool-mage.webp",
+   "sha256": "ec724c880d481cc0168573446ad69e3ccd1a3fb6bb93f7549a82422682031779",
+   "card": "TMC-0754",
+   "title": "Mirrorpool Mage",
+   "sheet": "TM-S088",
+   "cell": 5,
+   "delivered_as": "TMI-0754-mirrorpool-mage.png",
+   "delivered_sha256": "954fa68716e28adfb007225e6c77196451a73ead93299f4eac03c64b932d81ac",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0755": {
+   "file": "tidemark-production/approved/art/TMI-0755-moon-jelly.webp",
+   "sha256": "df5fcac1dabc172373085121b6ed79526f93c5a5380f8c147da31b2d7919a020",
+   "card": "TMC-0755",
+   "title": "Moon Jelly",
+   "sheet": "TM-S091",
+   "cell": 1,
+   "delivered_as": "TMI-0755-moon-jelly.png",
+   "delivered_sha256": "cb769a0fe61ee8b83ee682a0bf3b3d231ff0c368bdf41222d8a8dc760bde56c1",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0756": {
+   "file": "tidemark-production/approved/art/TMI-0756-pearl-netter.webp",
+   "sha256": "6f137a6c61a16cea92183b2de21ab88a166e15144a5e2592b41319507cb4741a",
+   "card": "TMC-0756",
+   "title": "Pearl Netter",
+   "sheet": "TM-S088",
+   "cell": 6,
+   "delivered_as": "TMI-0756-pearl-netter.png",
+   "delivered_sha256": "fe612b8f2dd6e5ee0614c1044608489f4ee1af2769c8e16b8d726cda83f0e980",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0757": {
+   "file": "tidemark-production/approved/art/TMI-0757-reef-darter.webp",
+   "sha256": "45ac25faf1c3aac0f4d93a0ce076e189d33852cc8630bb575c0c17b97a558132",
+   "card": "TMC-0757",
+   "title": "Reef Darter",
+   "sheet": "TM-S091",
+   "cell": 2,
+   "delivered_as": "TMI-0757-reef-darter.png",
+   "delivered_sha256": "ba18462998ccbd0b68cafacfb8a18a6043141ad7035d568662864818c81bb419",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0758": {
+   "file": "tidemark-production/approved/art/TMI-0758-reef-sentry.webp",
+   "sha256": "fd8da952b2b05db04a3d3f4fdb03372ee6f731eb3d7e4e62ae1215c1e1a3c814",
+   "card": "TMC-0758",
+   "title": "Reef Sentry",
+   "sheet": "TM-S088",
+   "cell": 7,
+   "delivered_as": "TMI-0758-reef-sentry.png",
+   "delivered_sha256": "9556b37edd5f5267932108c7ccef53af45fb3413d34a783a65bead313cb30245",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0759": {
+   "file": "tidemark-production/approved/art/TMI-0759-riptide-rider.webp",
+   "sha256": "ef9d62eacb84dc3e1609cf010dd4085bcbc69edf9f1d25177e169512deeb57d6",
+   "card": "TMC-0759",
+   "title": "Riptide Rider",
+   "sheet": "TM-S088",
+   "cell": 8,
+   "delivered_as": "TMI-0759-riptide-rider.png",
+   "delivered_sha256": "85fff7396a38cfa7bb44c9ab72859d61a8f00f4b566fa17fc3b4044eaf5879d7",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0760": {
+   "file": "tidemark-production/approved/art/TMI-0760-sandbar-skimmer.webp",
+   "sha256": "97cd11b0ac930ffe49d499cb4f6df36e95e0c23f2f54f5bdaa2c18480150e1fe",
+   "card": "TMC-0760",
+   "title": "Sandbar Skimmer",
+   "sheet": "TM-S091",
+   "cell": 3,
+   "delivered_as": "TMI-0760-sandbar-skimmer.png",
+   "delivered_sha256": "40ec725addec1348cd02be52c05ab1fa02963f7add3954fb54e30b321cd01f60",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0761": {
+   "file": "tidemark-production/approved/art/TMI-0761-sealord-corvane.webp",
+   "sha256": "240a11de0eb02aaebb97a838d543cb3049bd862addb0c2d6e604c7bf95f3d640",
+   "card": "TMC-0761",
+   "title": "Sealord Corvane",
+   "sheet": "TM-S088",
+   "cell": 9,
+   "delivered_as": "TMI-0761-sealord-corvane.png",
+   "delivered_sha256": "9056d9ef099cc0a177d53bba2418041eaa0f0619bba6aabf8b1a8f8e63f1e70a",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0762": {
+   "file": "tidemark-production/approved/art/TMI-0762-siren-of-the-reef.webp",
+   "sha256": "93a31c6f7b23fe2d0aa9da944ccd50f9e47a28d383353217347196ddcd93866f",
+   "card": "TMC-0762",
+   "title": "Siren of the Reef",
+   "sheet": "TM-S089",
+   "cell": 1,
+   "delivered_as": "TMI-0762-siren-of-the-reef.png",
+   "delivered_sha256": "a7d800fcee7ddfae1d6d1c878f2bd1cdd46283478cbe54babbe6f49a8c26deab",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0763": {
+   "file": "tidemark-production/approved/art/TMI-0763-tidal-scout.webp",
+   "sha256": "33bba08bbb052a221d7d630367d926834fd9ebb166ae75887d924633837c179f",
+   "card": "TMC-0763",
+   "title": "Tidal Scout",
+   "sheet": "TM-S089",
+   "cell": 2,
+   "delivered_as": "TMI-0763-tidal-scout.png",
+   "delivered_sha256": "d05be69395e707d1be28d9f0517fcae7ee7f0f446265f30f81b27d4dabb2a45e",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0764": {
+   "file": "tidemark-production/approved/art/TMI-0764-tide-warden-lysa.webp",
+   "sha256": "2c74406fad6830be6d7affada2e7cce9e05b315b5796adcab8150202f4dd6b16",
+   "card": "TMC-0764",
+   "title": "Tide Warden Lysa",
+   "sheet": "TM-S089",
+   "cell": 3,
+   "delivered_as": "TMI-0764-tide-warden-lysa.png",
+   "delivered_sha256": "0b7adc8afd899b160555118ada45e577d7f91c23812118426ce74457325d6bc6",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0765": {
+   "file": "tidemark-production/approved/art/TMI-0765-wave-caller.webp",
+   "sha256": "9c2a0e7ca327eea78777dda029b8a4daf8c949361674344a2e721c5dc9d0741b",
+   "card": "TMC-0765",
+   "title": "Wave Caller",
+   "sheet": "TM-S089",
+   "cell": 4,
+   "delivered_as": "TMI-0765-wave-caller.png",
+   "delivered_sha256": "fdbb474c4111df1778bdf97fdaef25914add30ce03e5deb500a2cf3bffca9514",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0766": {
+   "file": "tidemark-production/approved/art/TMI-0766-flood-surge.webp",
+   "sha256": "77b5c9fc1a8742c719dbeeccfb4d60cf84f604bd5cf4ebc90d3ccc5a45792ce8",
+   "card": "TMC-0766",
+   "title": "Flood Surge",
+   "sheet": "TM-S089",
+   "cell": 5,
+   "delivered_as": "TMI-0766-flood-surge.png",
+   "delivered_sha256": "8bf7ba8e8c759de5b359f29876fcf8a12f4cf206c248e2d5b7741d791e2af138",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0767": {
+   "file": "tidemark-production/approved/art/TMI-0767-lagoon-mist.webp",
+   "sha256": "d338c8df7fa8a0316a3e4c8fcca415c84cac3f58267a5d60f3dbd2f489219f7d",
+   "card": "TMC-0767",
+   "title": "Lagoon Mist",
+   "sheet": "TM-S089",
+   "cell": 7,
+   "delivered_as": "TMI-0767-lagoon-mist.png",
+   "delivered_sha256": "36274af5b131361a2449378228eb5962c9b5269259d1e8725d6d02ba9529e631",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0768": {
+   "file": "tidemark-production/approved/art/TMI-0768-pearl-tempest.webp",
+   "sha256": "59f0a374e9558e1302148e44654d3b43d5a53815bff516df37cba1291cff3364",
+   "card": "TMC-0768",
+   "title": "Pearl Tempest",
+   "sheet": "TM-S089",
+   "cell": 8,
+   "delivered_as": "TMI-0768-pearl-tempest.png",
+   "delivered_sha256": "94db14a03f603babebd86f6869992cd99cf69d0a7bcefbf7edc11c0b57bd1026",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0769": {
+   "file": "tidemark-production/approved/art/TMI-0769-pearl-tithe.webp",
+   "sha256": "0f64cb6078bc8b4707eca71d9d6a216547220450f87bc2876c32845071c94032",
+   "card": "TMC-0769",
+   "title": "Pearl Tithe",
+   "sheet": "TM-S089",
+   "cell": 9,
+   "delivered_as": "TMI-0769-pearl-tithe.png",
+   "delivered_sha256": "8af4f77ccc74db9b0e06edac9c015ecd5a240d5a8721e9476954bd38c4dc3bc8",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0770": {
+   "file": "tidemark-production/approved/art/TMI-0770-slipstream.webp",
+   "sha256": "aaaa2e7a4a95147f516a8e1b0af19901f49ffe7779568acd2836c0eb21475d97",
+   "card": "TMC-0770",
+   "title": "Slipstream",
+   "sheet": "TM-S091",
+   "cell": 9,
+   "delivered_as": "TMI-0770-slipstream.png",
+   "delivered_sha256": "c083202dc4a2c86a993c461f704b1e483632aaaab68dfbe9a3b6547fb9b8dd28",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0771": {
+   "file": "tidemark-production/approved/art/TMI-0771-pearl-diadem.webp",
+   "sha256": "eeded0fb5981fc5a5f8b5b71454062372d1203c2433b60be488fc55160399c07",
+   "card": "TMC-0771",
+   "title": "Pearl Diadem",
+   "sheet": "TM-S092",
+   "cell": 6,
+   "delivered_as": "TMI-0771-pearl-diadem.png",
+   "delivered_sha256": "ee34f21504f8e56c75b71a66b803102e92ef9d3f8147bf7664ff4eaa343750a0",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0772": {
+   "file": "tidemark-production/approved/art/TMI-0772-lagoon-court.webp",
+   "sha256": "9151c20b108e71c604b51ba4ad74779f10654012093408a04fb01bef0c332ac3",
+   "card": "TMC-0772",
+   "title": "Lagoon Court",
+   "sheet": "TM-S092",
+   "cell": 3,
+   "delivered_as": "TMI-0772-lagoon-court.png",
+   "delivered_sha256": "4929ba15f8320769a270ebeb8eee113ea7d06462d46f6ca861c5698f1e9cc32e",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0773": {
+   "file": "tidemark-production/approved/art/TMI-0773-tidal-archive.webp",
+   "sha256": "ee0ef9b1143e7e197f69d41b066c708cb2bc74391f38741bb5f2dde7e1d9d5ba",
+   "card": "TMC-0773",
+   "title": "Tidal Archive",
+   "sheet": "TM-S092",
+   "cell": 4,
+   "delivered_as": "TMI-0773-tidal-archive.png",
+   "delivered_sha256": "d7bca80502fa280eb3754deed02b9dc869ed3673f2e8eb4929440d4ba841c37d",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0774": {
+   "file": "tidemark-production/approved/art/TMI-0774-tidal-flats.webp",
+   "sha256": "d43fce322de784ea0afa4d52ae5ca1c7ed7e4542efc681a541d5cef01f5fa8d1",
+   "card": "TMC-0774",
+   "title": "Tidal Flats",
+   "sheet": "TM-S092",
+   "cell": 5,
+   "delivered_as": "TMI-0774-tidal-flats.png",
+   "delivered_sha256": "e7d359c9a0d19fd5645183c8473ddc31dd4e8da34cb34a79e6b0237d2c26b555",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0775": {
+   "file": "tidemark-production/approved/art/TMI-0775-foam-cloak.webp",
+   "sha256": "a794c8b41422cc78a8dcbb76d3829e6e88ded3179096014deb12951b732ec628",
+   "card": "TMC-0775",
+   "title": "Foam Cloak",
+   "sheet": "TM-S089",
+   "cell": 6,
+   "delivered_as": "TMI-0775-foam-cloak.png",
+   "delivered_sha256": "5e41356111266be6cfe4e235840bb45f13e2c0d27a59c1e32d1a91bf979cde5d",
+   "size": [
+    472,
+    354
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
+  },
+  "TMI-0776": {
+   "file": "tidemark-production/approved/art/TMI-0776-reefsong.webp",
+   "sha256": "20d18ab168f587cfb81a247118dd15b88bb156d82d1bc98efa50e6691e2ecf29",
+   "card": "TMC-0776",
+   "title": "Reefsong",
+   "sheet": "TM-S091",
+   "cell": 8,
+   "delivered_as": "TMI-0776-reefsong.png",
+   "delivered_sha256": "f9e17e02b9021ccacd8d17f540e62ecec1942a1b55829ee93c910cdef706ed77",
+   "size": [
+    468,
+    351
+   ],
+   "sol_status": "rendered-visually-reviewed",
+   "sol_note": null,
+   "correction": null,
+   "status": "delivered-awaiting-owner-review",
+   "filed": "2026-10-24T06:38:04Z",
+   "filed_by": "SOL delivery, awaiting owner review"
   }
  }
 }

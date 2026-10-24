@@ -1112,3 +1112,80 @@ Changed (25+ differences), first ones:
 - /after10/wk/listings/n: 220 -> 216
 - /after10/wk/meta/arch/h: "55330bb7" -> "2e2f7529"
 - /after10/wk/meta/ev/h: "226faa83" -> "134dc663"
+
+## 2026-10-24 day0
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /screens/xt:design4: "8b54e027" -> "6649f85e"
+- /screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /screens/xt:set1: "54a80951" -> "bbedfdb1"
+
+## 2026-10-24 release
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /screens/xt:design4: "8b54e027" -> "6649f85e"
+- /screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /screens/xt:set1: "f9b46df3" -> "80dd9053"
+
+## 2026-10-24 year1
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /screens/xt:design4: "8b54e027" -> "6649f85e"
+- /screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /screens/xt:set1: "61c738f5" -> "6aa83cd5"
+
+## 2026-10-24 save:ban
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "5900a0ce" -> "6d05132e"
+
+## 2026-10-24 save:busy
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "f20ce13c" -> "8f9ee09c"
+
+## 2026-10-24 save:day1
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "54a80951" -> "bbedfdb1"
+
+## 2026-10-24 save:legacy-wk-busy
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "54a80951" -> "bbedfdb1"
+
+## 2026-10-24 save:legacy-wk-day1
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "54a80951" -> "bbedfdb1"
+
+## 2026-10-24 save:legacy-wk-released
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "5c819ae3" -> "d02d42c3"
+
+## 2026-10-24 save:legacy-wk-year
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "fc4950ea" -> "6a00324a"
+
+## 2026-10-24 save:released
+Reason: SOL delivered the paintings for First Tide and Reefward (126 pictures, sheets S078-S092): three Tidemark screens (set 1 page and two price pages) now show real art instead of ART PENDING; nothing else differs
+Changed (3+ differences), first ones:
+- /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
+- /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
+- /loaded/screens/xt:set1: "b4fbe717" -> "0f014e77"
