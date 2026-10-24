@@ -19,6 +19,7 @@ sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from checklist_land import CROWNLANDS, THORNWILD, IRON_REACH
 from checklist_sea import TIDEBORN, FREE_FLEETS, ABYSSAL_CHOIR
 from checklist_dual import HARBOR_LEAGUES, NEUTRAL
+from checklist_supp import SUPPLEMENTS, WAVE_DESIGNS
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT=os.path.join(ROOT,'tidemark-production')
 VERSION='0.1.0'
@@ -189,6 +190,8 @@ def assign_sets(cards):
         for i,c in enumerate(s['cards']): c['no']=1+int((i+0.5)*s['size']/n)
     return by
 
+def titles_all(cards): return {c['title'] for c in cards}
+
 def build():
     cards,errs=load()
     if errs: return None,errs
@@ -223,6 +226,36 @@ def build():
     altc=sorted([c for c in rep if 'A' in c['flags']],key=lambda c:(FORDER.index(c['fac']),TORDER.index(c['type']),c['title']))
     for k,c in enumerate(altc):
         r=ill(c,alt=True); printings.append(dict(id='TM-TT-%03d'%(221+k),card=c,set='TT',no=221+k,kind='anniversary-alternate-art',ill=r['id'],reuse=False,alt=True,orig='TM-%s-%03d'%(c['set'],c['no'])))
+    # supplements (checklist_supp.py): extra cards in an existing set, numbered into free gaps; ids and sheets come after every older one
+    nxt=len(cards)+1
+    for scode,sfac,sblocks in SUPPLEMENTS:
+        sdef=dict((x[0],x) for x in SETS)[scode]; size=sdef[5]
+        rng={}
+        for c in sets[scode]['cards']: lo,hi=rng.get(c['fac'],(999,0)); rng[c['fac']]=(min(lo,c['no']),max(hi,c['no']))
+        for fac,rows in sfac:
+            if sblocks: lo,hi=sblocks[fac]
+            else:   # the faction's block of the printed checklist: from the middle of the gap before it to the middle of the gap after it
+                if fac not in rng or len(rng)<2: lo,hi=1,size   # a set with one faction (or a new one) takes any free number
+                else:
+                    prev=[rng[f] for f in FORDER[:FORDER.index(fac)] if f in rng]; nxtf=[rng[f] for f in FORDER[FORDER.index(fac)+1:] if f in rng]
+                    lo=(prev[-1][1]+rng[fac][0])//2+1 if prev else 1; hi=(rng[fac][1]+nxtf[0][0])//2 if nxtf else size
+            used={c['no'] for c in sets[scode]['cards']}; free=[n for n in range(lo,hi+1) if n not in used]
+            add=[]
+            for r in rows:
+                title,t,sub,rar,fl,ident,subj=r
+                if title in titles_all(cards) or title in titles_all(add): return None,['duplicate title '+title]
+                add.append(dict(title=title,type=t,subtype=sub,rar=rar,era=sdef[4],flags=fl,identity=ident,subject=subj,fac=fac,faction=dict((f[0],f[1]) for f in FACTIONS)[fac],
+                                allegiance=dict((f[0],f[2]) for f in FACTIONS)[fac],order=0,set=scode))
+            add.sort(key=lambda c:(TORDER.index(c['type']),c['title']))
+            if len(free)<len(add): free=[n for n in range(1,size+1) if n not in used]   # the faction's block is too small: any free number
+            if len(free)<len(add): return None,['not enough free numbers for %s in %s'%(fac,scode)]
+            picks=[free[int((i+0.5)*len(free)/len(add))] for i in range(len(add))]
+            for c,no in zip(add,picks):
+                c['no']=no; c['cid']='TMC-%04d'%nxt; nxt+=1
+                r=ill(c); r['pool']='supplement'; byill[c['cid']]=r
+                cards.append(c); hist.append(c); sets[scode]['cards'].append(c)
+                printings.append(dict(id='TM-%s-%03d'%(scode,no),card=c,set=scode,no=no,kind='original',ill=r['id'],reuse=False,alt=False))
+        sets[scode]['cards'].sort(key=lambda c:c['no'])
     return dict(cards=cards,hist=hist,new=new,rep=rep,tt=tt,altc=altc,sets=sets,printings=printings,ills=ills),[]
 
 # ---------------------------------------------------------------- 3x3 sheets
@@ -238,8 +271,9 @@ def sheets(D):
             else: rec['unused'].append(i+1)
         out.append(rec)
     def era_key(x): return ('FEDMN'.index(x['era']),[s[0] for s in SETS].index(x['set']) if x['set']!='TT' else 99,x['title'])
-    for pool in ('anniversary','alternate','historical'):
-        todo=[x for x in D['ills'] if x['pool']==pool and x['status']=='not-started']
+    # supplements get their own sheets, one set after another, so adding a wave never changes the sheets of an earlier one
+    for pool,only in [('anniversary',None),('alternate',None),('historical',None)]+[('supplement',sc[0]) for sc in SUPPLEMENTS]:
+        todo=[x for x in D['ills'] if x['pool']==pool and x['status']=='not-started' and (only is None or x['set']==only)]
         if pool=='alternate':
             fam={}; [fam.setdefault('people' if FAMILY[x['group']]=='people' else 'creatures, places and things',[]).append(x) for x in todo]
             for k,v in fam.items(): emit(pool,v,'Anniversary alternate art: '+k)
@@ -258,7 +292,11 @@ def sheets(D):
             label={'Land':'Land factions','Sea':'Sea factions','Coast':'Harbor Leagues and Neutral'}[side]
             while len(v)>=9: emit(pool,v[:9],'%s: %s'%(label,fam)); v=v[9:]
             rest.setdefault(fam,[]).extend(v)
-        for fam in sorted(rest):   # last: the same kind of subject from any faction, then a partial sheet
+        if pool=='supplement' and rest:   # a wave is small: mix the leftovers of every kind so no sheet is nearly empty
+            v=[x for fam in sorted(rest) for x in rest[fam]]
+            while v: emit(pool,v[:9],'Mixed factions and subjects'); v=v[9:]
+        else:
+         for fam in sorted(rest):   # last: the same kind of subject from any faction, then a partial sheet
             v=rest[fam]
             while v: emit(pool,v[:9],'Mixed factions: %s'%fam); v=v[9:]
     return out
@@ -278,7 +316,7 @@ def counts(D):
     C['historical_by_type']=dict(Counter(TYPES[c['type']] for c in D['hist'])); C['historical_by_rarity']=dict(Counter(RARITY[c['rar']] for c in D['hist']))
     C['historical_by_era']=dict(Counter(ERAS[c['era']][0] for c in D['hist']))
     il=D['ills']; C['illustrations']={'unique_original':len([x for x in il if not x['alt']]),'new_for_anniversary':len([x for x in il if x['pool']=='anniversary']),
-        'historical':len([x for x in il if x['pool']=='historical']),'alternate_art':len([x for x in il if x['alt']]),
+        'historical':len([x for x in il if x['pool']=='historical']),'supplement':len([x for x in il if x['pool']=='supplement']),'alternate_art':len([x for x in il if x['alt']]),
         'reused_by_reprints':len(D['rep']),'approved_concepts_awaiting_file':len([x for x in il if x['status']=='approved-concept-file-missing']),
         'to_generate':len([x for x in il if x['status']=='not-started']),
         'delivered_awaiting_owner_review':len([x for x in il if x['status']=='delivered-awaiting-owner-review']),'approved_by_owner':len([x for x in il if x['status']=='approved'])}
@@ -322,12 +360,12 @@ def render(D, S):
        'rules':{'grid':'3x3 contact sheet, nine different card illustrations, one per cell, left to right then top to bottom','cell':CELL,
                 'forbidden':'card frames, portrait card mockups, borders, typography, rules text, labels, numbers, watermarks, logos, UI',
                 'one_record_per_illustration':True,'reprints':'reuse the original illustration; never requested again'},
-       'priority':['anniversary','alternate','historical'],
+       'priority':['anniversary','alternate','historical','supplement'],
        'sheets':S,
        'approved_concepts':[{'illustration':x['id'],'card':x['card'],'title':x['title'],'file':x['file'],'status':x['status'],'note':x['approved_note']} for x in il if x['status']=='approved-concept-file-missing'],
        'reprint_reuse':[{'printing':p['id'],'title':p['card']['title'],'reuses':p['ill'],'original_printing':p['orig']} for p in pr if p['reuse']],
        'unused_positions':[{'sheet':s['id'],'cells':s['unused']} for s in S if s['unused']],
-       'summary':{'sheets':len(S),'by_pool':{k:len([s for s in S if s['pool']==k]) for k in ('anniversary','alternate','historical')},
+       'summary':{'sheets':len(S),'by_pool':{k:len([s for s in S if s['pool']==k]) for k in ('anniversary','alternate','historical','supplement')},
                   'cells_used':sum(len(s['cells']) for s in S),'cells_unused':sum(len(s['unused']) for s in S)}}
     return {'manifest.json':json.dumps(m,indent=1,ensure_ascii=False)+'\n','art_queue.json':json.dumps(q,indent=1,ensure_ascii=False)+'\n','checklist.csv':buf.getvalue(),
             'CHECKLIST.md':checklist_md(D,rows,C),'SHEETS.md':sheets_md(S,q),'ART_BIBLE.md':bible_md(D),'outstanding_assets.md':outstanding_md(D,S,C,q)}
@@ -426,7 +464,7 @@ def validate(D,S):
     errs=[]; C=counts(D)
     if C['anniversary_total']!=220: errs.append('anniversary has %d cards'%C['anniversary_total'])
     if C['anniversary_new']!=150 or C['anniversary_reprints']!=70 or C['anniversary_alternate_art']!=10: errs.append('anniversary split %d/%d/%d'%(C['anniversary_new'],C['anniversary_reprints'],C['anniversary_alternate_art']))
-    if not 480<=C['historical_cards']<=520: errs.append('historical library has %d cards'%C['historical_cards'])
+    if not 480<=C['historical_cards']<=1200: errs.append('historical library has %d cards'%C['historical_cards'])
     seen={}
     for s in S:
         for c in s['cells']:
@@ -458,12 +496,14 @@ def main():
             if r: x['status']=r['status']; x['stored']=r['file']
     if errs: print('INVALID'); [print(' -',e) for e in errs]; sys.exit(1)
     outs=render(D,S)
+    outs['@design_waves.json']=json.dumps(WAVE_DESIGNS,indent=1,ensure_ascii=False,sort_keys=True)+'\n'
     if a.check:
-        bad=[k for k,v in outs.items() if not os.path.exists(os.path.join(OUT,k)) or open(os.path.join(OUT,k),encoding='utf-8').read()!=v]
+        pth=lambda k: os.path.join(ROOT,'tools','tidemark','v1','design_waves.json') if k[0]=='@' else os.path.join(OUT,k)
+        bad=[k for k,v in outs.items() if not os.path.exists(pth(k)) or open(pth(k),encoding='utf-8').read()!=v]
         if bad: print('OUT OF DATE (run tools/tidemark/checklist.py):',*bad); sys.exit(1)
         print('Tidemark checklist OK: files up to date, rules pass'); return
     os.makedirs(OUT,exist_ok=True)
-    for k,v in outs.items(): open(os.path.join(OUT,k),'w',encoding='utf-8').write(v)
+    for k,v in outs.items(): open(os.path.join(ROOT,'tools','tidemark','v1','design_waves.json') if k[0]=='@' else os.path.join(OUT,k),'w',encoding='utf-8').write(v)
     C=counts(D); q=json.loads(outs['art_queue.json'])['summary']
     print('wrote tidemark-production/: anniversary %d (%d new, %d reprints, %d alternate art), historical %d in %d sets'%(C['anniversary_total'],C['anniversary_new'],C['anniversary_reprints'],C['anniversary_alternate_art'],C['historical_cards'],C['historical_sets']))
     print('illustrations:',C['illustrations']); print('sheets:',q)
