@@ -11,6 +11,7 @@ const TYPE={Unit:'unit',Spell:'spell',Relic:'relic',Vessel:'vessel',Stronghold:'
 function loadDesigns(){ const D={}, from={};
   for (const f of fs.readdirSync(__dirname).filter(f=>/^design_.*\.js$/.test(f)).sort()){ const m=require(path.join(__dirname,f));
     for (const [k,v] of Object.entries(m)){ if (D[k]) throw new Error('designed twice: '+k+' ('+from[k]+', '+f+')'); D[k]=v; from[k]=f; } }
+  const wf=path.join(__dirname,'design_waves.json'); if (fs.existsSync(wf)){ const W=JSON.parse(fs.readFileSync(wf,'utf8')); for (const [k,v] of Object.entries(W)){ if (D[k]) throw new Error('designed twice: '+k+' (design_waves.json)'); D[k]=v; from[k]='design_waves.json'; } }
   return {D, from}; }
 function kwList(d){ const k=(d.k||'').trim(); return k? k.split(/\s+/) : []; }
 function textOf(c){ const kws=c.kw.filter(k=>k!=='swift'||c.t!=='spell').map(k=>KWNAME[k]); if (c.ferry) kws.push('Ferry '+c.ferry);

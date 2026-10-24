@@ -160,4 +160,41 @@ REEFWARD=[
  ]),
 ]
 
-SUPPLEMENTS=[('FT',FIRST_TIDE,FT_BLOCKS),('RW',REEFWARD,None)]
+# ---- compact waves: one line per card holds the checklist row and the design. Entry:
+#   (faction, title, type, subtype, rarity, identity, illustration subject, cost, allegiance, power|durability, toughness, keywords, abilities[, ferry])
+# Designs go to tools/tidemark/v1/design_waves.json (written by checklist.py; cards.js reads it).
+WAVE_DESIGNS={}
+def wave(entries):
+    by={}
+    for e in entries:
+        fac,title,t,sub,rar,ident,subj,c,q,p,tt,k,x=e[:13]; y=e[13] if len(e)>13 else 0
+        by.setdefault(fac,[]).append((title,t,sub,rar,'',ident,subj))
+        d={'c':c,'q':q}
+        if t in 'UV': d['p']=p; d['t']=tt
+        if t=='H': d['f']=p
+        if k: d['k']=k
+        if y: d['y']=y
+        if x: d['x']=x
+        d['n']='Wave card, designed 2026-10-23.'
+        if title in WAVE_DESIGNS: raise ValueError('designed twice: '+title)
+        WAVE_DESIGNS[title]=d
+    return [(f,by[f]) for f in ['CR','TW','IR','TB','FF','AC','HL','NE'] if f in by]
+
+from wave_tf import ENTRIES as _TF
+THORNFALL=wave(_TF)
+from wave_df import ENTRIES as _DF
+DEEPFORGE=wave(_DF)
+from wave_sl import ENTRIES as _SL
+SIEGE=wave(_SL)
+from wave_dh import ENTRIES as _DH
+HYMNS=wave(_DH)
+from wave_cb import ENTRIES as _CB
+CORAL=wave(_CB)
+from wave_bt import ENTRIES as _BT
+BLACKTIDE=wave(_BT)
+from wave_kh import ENTRIES as _KH
+KEEPERS=wave(_KH)
+from wave_rt import ENTRIES as _RT
+RETURN=wave(_RT)
+
+SUPPLEMENTS=[('FT',FIRST_TIDE,FT_BLOCKS),('RW',REEFWARD,None),('TF',THORNFALL,None),('DF',DEEPFORGE,None),('SL',SIEGE,None),('DH',HYMNS,None),('CB',CORAL,None),('BT',BLACKTIDE,None),('KH',KEEPERS,None),('RT',RETURN,None)]

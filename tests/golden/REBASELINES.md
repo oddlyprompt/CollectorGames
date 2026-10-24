@@ -770,3 +770,345 @@ Changed (25+ differences), first ones:
 - /after10/wk/listings/h: "47ec3ac1" -> "f04ca691"
 - /after10/wk/listings/n: 218 -> 220
 - /after10/wk/meta/arch/h: "c1a09197" -> "55330bb7"
+
+## 2026-10-24 day0
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/nextXid: 1330 -> 3397
+- /core/rs: 1934958007 -> -283535258
+- /screens/market: "9f8454b4" -> "6807ed4c"
+- /screens/xt: "7d2e774e" -> "09b12f31"
+- /screens/xt:design6: "0530f221" -> "fac703a8"
+- /screens/xt:kv: "1090997a" -> "25cbd021"
+- /screens/xt:lgs: "a23f397e" -> "5492fb06"
+- /screens/xt:meta: "b5aaacbf" -> "32b39b39"
+- /screens/xt:set1: "5bcd8a80" -> "54a80951"
+- /screens/xt:set30: "ebfe5cf7" -> "365b1b6c"
+- /screens/xt:sets: "35d62610" -> "33f0ae5c"
+- /xt/listings/h: "7253e7f9" -> "68269138"
+- /xt/meta/usage: "ed81487b" -> "64e4fbcb"
+- /xt/meta/usageN: 103 -> 212
+- /xt/prices/ev[0]: 19.50230424503212 -> 19.51650393994116
+
+## 2026-10-24 release
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/dp: "92e649e4" -> "81bd0916"
+- /core/feed: "c6874f56" -> "6c86f7b2"
+- /core/lst: 552 -> 575
+- /core/news/h: "e9cc9885" -> "d2c20773"
+- /core/news/n: 10 -> 11
+- /core/newsHead[1]: "NEW TECH: CACTUFT / CANOPANG (TOOLS)" -> "NEW DECK: TEMPESTRAL / KITECOON"
+- /core/newsHead[4]: "FIRST BOND IS OUT TODAY" -> "NEW DECK: POMPYRE / VEILMORA"
+- /core/newsHead[5]: "ROTATION: THE OLD STANDARD ENDS" -> "FIRST BOND IS OUT TODAY"
+- /core/nextLid: 888 -> 957
+- /core/nextTid: 1768 -> 2234
+- /core/nextXid: 4666 -> 6787
+- /core/npcs: "cbc45deb" -> "b73ba9db"
+- /core/rs: 1875741921 -> 1225732033
+- /core/sales: "14978563" -> "c9e36002"
+- /core/salesN: 198 -> 230
+
+## 2026-10-24 year1
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/dp: "218f74e0" -> "e2550c6d"
+- /core/feed: "3268767d" -> "84317d39"
+- /core/lst: 531 -> 512
+- /core/news/h: "99457f98" -> "f8a311a9"
+- /core/news/n: 53 -> 59
+- /core/newsHead[0]: "CROWN BASTION WINS THE REGIONAL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II"
+- /core/newsHead[1]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW BUILD-AROUND: IRON CROWN OF VARR AGGRO II"
+- /core/newsHead[2]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II" -> "NEW BUILD-AROUND: ANTLERBEARER SHAMAN AGGRO (FLEET)"
+- /core/newsHead[3]: "TIDEBORN TEMPO WINS THE REGIONAL" -> "NEW DECK: GLACURRENT / KOIRUNE"
+- /core/newsHead[4]: "BRONZAROO / AEGISOPOD WINS THE REGIONAL" -> "IRON WILDS WINS THE REGIONAL"
+- /core/newsHead[5]: "NEW DECK: HARBOR LEAGUES / ABYSSAL CHOIR MIDRANGE (RAMP)" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /core/nextLid: 6938 -> 7199
+- /core/nextTid: 4295 -> 4421
+- /core/nextXid: 4666 -> 6787
+- /core/npcs: "588f6e75" -> "5a714b07"
+
+## 2026-10-24 series
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/dp: "2d41cc34" -> "dcfa6685"
+- /core/feed: "9cd2e2b5" -> "0eba8aab"
+- /core/lst: 531 -> 535
+- /core/news/h: "9353221d" -> "4d15cc8f"
+- /core/news/n: 172 -> 178
+- /core/newsHead[0]: "NEW TECH: BRONZAROO / FERRADON (GUST)" -> "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[1]: "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP" -> "BRONZAROO / AEGISOPOD (TURBO) WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[2]: "CANOPANG / ACORNOX WINS THE WILDKIN CHAMPIONSHIP" -> "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE REGIONAL"
+- /core/newsHead[3]: "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL" -> "POMPYRE / VEILMORA (DISRUPTION) WINS THE REGIONAL"
+- /core/newsHead[4]: "VEILMORA (HEAL) WINS THE REGIONAL" -> "NEW DECK: FREE FLEETS / HARBOR LEAGUES CONTROL (FLEET)"
+- /core/newsHead[5]: "NEW TECH: ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE MIDRANGE IV"
+- /core/nextLid: 20598 -> 20762
+- /core/nextTid: 4295 -> 4421
+- /core/nextXid: 4666 -> 6787
+- /core/npcs: "825e72ce" -> "34be4b7e"
+
+## 2026-10-24 flows
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /core/cash: 5637.510000000001 -> 5638.900000000001
+- /core/dp: "eae8746f" -> "ac74285c"
+- /core/feed: "5422e915" -> "7d76fe00"
+- /core/fees: 70.1 -> 70.19
+- /core/lst: 478 -> 486
+- /core/netWorth: 720.68 -> 683.22
+- /core/news/h: "a1c7720e" -> "89b2a26b"
+- /core/newsHead[0]: "NEW TECH: VEILMORA / MOTHMUR (HEAL)" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /core/newsHead[1]: "IRON REACH / THORNWILD AGGRO (AGGRO) WINS THE REGIONAL" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+- /core/newsHead[2]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "FREE FLEETS / TIDEBORN AGGRO (CARD DRAW) WINS THE REGIONAL"
+- /core/newsHead[3]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "VEILMORA / MOTHMUR WINS THE REGIONAL"
+- /core/newsHead[5]: "CACTUFT / CANOPANG WINS THE REGIONAL" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /core/nextLid: 3016 -> 3126
+- /core/nextTid: 2146 -> 2612
+- /core/nextXid: 6275 -> 8572
+
+## 2026-10-24 shared
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 35.84 -> 34.75
+- /afterCrack/subs: "5bcc9d4a" -> "0bef8def"
+- /coll/listed[0]: 0 -> 0.05
+- /coll/listed[1]: 0 -> 0.15
+- /coll/total[0]: 25.550000000000022 -> 25.800000000000026
+- /coll/total[1]: 63.40000000000003 -> 63.14999999999998
+- /core/cash: 4892.669999999999 -> 4892.67
+- /core/dp: "3eba7b95" -> "62203932"
+- /core/feed: "a1820d98" -> "8503688f"
+- /core/lst: 498 -> 485
+- /core/netWorth: 35.84 -> 34.75
+- /core/news/h: "e33726f1" -> "5fb5c4b0"
+- /core/news/n: 21 -> 22
+- /core/newsHead[0]: "GOAL: FIRST SALE" -> "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)"
+- /core/newsHead[2]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+
+## 2026-10-24 save:ban
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "b0a50b94" -> "c1651369"
+- /after30/core/feed: "feb08430" -> "cebf7a42"
+- /after30/core/lst: 497 -> 499
+- /after30/core/news/h: "85d53ee3" -> "9c317c93"
+- /after30/core/news/n: 40 -> 42
+- /after30/core/newsHead[0]: "LEAGUE GALLEASS IS NOW BANNED" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[1]: "THORNWILD RUSH WINS THE REGIONAL" -> "LEAGUE GALLEASS IS NOW BANNED"
+- /after30/core/newsHead[2]: "VEILMORA / MOTHMUR WINS THE REGIONAL" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+- /after30/core/newsHead[3]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /after30/core/newsHead[5]: "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after30/core/nextLid: 5111 -> 5128
+- /after30/core/npcs: "edafcaf3" -> "10b2570f"
+- /after30/core/rs: -429793181 -> 1604503320
+- /after30/core/sales: "3fb61ae6" -> "c8036e8d"
+
+## 2026-10-24 save:busy
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "9e5f648b" -> "b5e19eff"
+- /after30/core/feed: "7da2bab9" -> "59dd9a15"
+- /after30/core/lst: 462 -> 468
+- /after30/core/netWorth: 253.65 -> 253.98
+- /after30/core/news/h: "d0c53e5f" -> "1e30bd53"
+- /after30/core/news/n: 24 -> 26
+- /after30/core/newsHead[0]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "NEW BUILD-AROUND: SQUIRREL SCOUT CONTROL"
+- /after30/core/newsHead[1]: "CANOPANG / ACORNOX WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "CANOPANG / ACORNOX WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW DECK: AUROROTL / KOIRUNE" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[4]: "GOAL: FIRST SALE" -> "NEW DECK: HARBOR LEAGUES / TIDEBORN AGGRO (GO WIDE)"
+- /after30/core/newsHead[5]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "NEW DECK: AUROROTL / KOIRUNE"
+- /after30/core/nextLid: 1744 -> 1773
+- /after30/core/npcs: "52fe8463" -> "d1e0b968"
+- /after30/core/nw: "d6496a05" -> "b84bb197"
+
+## 2026-10-24 save:day1
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "a4c9f278" -> "4b28056d"
+- /after30/core/feed: "5229a814" -> "819bd1bb"
+- /after30/core/lst: 506 -> 524
+- /after30/core/news/h: "22af07be" -> "50ebf80d"
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE" -> "NEW DECK: SPIRAMEL / FABLEHORN (HEAL)"
+- /after30/core/newsHead[2]: "NEW DECK: FLAPOD / AUROROTL" -> "NEW DECK: FABLEHORN / ODDOODLE"
+- /after30/core/newsHead[3]: "NEW DECK: DRILLBADGER / FERRADON" -> "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[4]: "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/newsHead[5]: "TENTH TIDE: MORE CARDS REVEALED" -> "NEW DECK: AUROROTL / KOIRUNE"
+- /after30/core/nextLid: 1133 -> 1094
+- /after30/core/nextTid: 2415 -> 1749
+- /after30/core/nextXid: 6246 -> 5666
+- /after30/core/npcs: "b0c2f4ba" -> "fa19dcc5"
+- /after30/core/rs: -1191227569 -> -662905258
+- /after30/core/sales: "75ee5fe4" -> "d5b3f1ad"
+
+## 2026-10-24 save:legacy-wk-busy
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (27+ differences), first ones:
+- /after30/core/dp: "20b6fe33" -> "acc6ff10"
+- /after30/core/feed: "d7267c63" -> "27a88b43"
+- /after30/core/lst: 527 -> 538
+- /after30/core/netWorth: 37.86 -> 37.72
+- /after30/core/news/h: "90778ea0" -> "1127993e"
+- /after30/core/news/n: 18 -> 17
+- /after30/core/newsHead[0]: "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)" -> "NEW BUILD-AROUND: OLD GROWTH CONTROL (REMOVAL)"
+- /after30/core/newsHead[1]: "NEW DECK: COALOO / SMOLDERLYNX" -> "ABYSSAL DEPTHS WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "CANOPANG / CACTUFT WINS THE REGIONAL" -> "NEW TECH: CANOPANG / CACTUFT (DISRUPTION)"
+- /after30/core/newsHead[4]: "NEW DECK: CLAMPUP / FERRADON" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[5]: "TENTH TIDE IS OUT TODAY" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after30/core/nextLid: 1107 -> 1066
+- /after30/core/nextXid: 5667 -> 7443
+- /after30/core/npcs: "80ab443c" -> "a45ecdcb"
+
+## 2026-10-24 save:legacy-wk-day1
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (26+ differences), first ones:
+- /after30/core/dp: "74a9ed21" -> "3850c397"
+- /after30/core/feed: "6e77bee7" -> "586609ed"
+- /after30/core/lst: 570 -> 524
+- /after30/core/news/h: "de0da5a0" -> "22727ef3"
+- /after30/core/news/n: 13 -> 12
+- /after30/core/newsHead[0]: "NEW DECK: COALOO / SMOLDERLYNX" -> "NEW DECK: DRILLBADGER / FERRADON"
+- /after30/core/newsHead[2]: "NEW TECH: CANOPANG / CACTUFT (HEAL)" -> "NEW DECK: SMOLDERLYNX / PYRENOX"
+- /after30/core/newsHead[3]: "NEW TECH: CANOPANG / ACORNOX (GUST)" -> "CANOPANG / ACORNOX WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[4]: "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/newsHead[5]: "TENTH TIDE: MORE CARDS REVEALED" -> "NEW TECH: ASTRYNX / KOIRUNE (TURBO)"
+- /after30/core/nextLid: 1026 -> 1003
+- /after30/core/nextTid: 2564 -> 1933
+- /after30/core/nextXid: 5298 -> 7363
+- /after30/core/npcs: "f13f27a5" -> "3e66007b"
+- /after30/core/rs: -994502421 -> 785650579
+
+## 2026-10-24 save:legacy-wk-released
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "5831ec7b" -> "8622162f"
+- /after30/core/feed: "056a870e" -> "23ddb9a9"
+- /after30/core/lst: 501 -> 507
+- /after30/core/news/h: "ea13ffe7" -> "48732e20"
+- /after30/core/newsHead[0]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "NEW BUILD-AROUND: NERITH UNDYING AGGRO"
+- /after30/core/newsHead[1]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE MIDRANGE" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[2]: "CROWN BASTION WINS THE REGIONAL" -> "IRON WILDS WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE MIDRANGE III"
+- /after30/core/newsHead[5]: "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/nextLid: 1266 -> 1289
+- /after30/core/nextXid: 2437 -> 4587
+- /after30/core/npcs: "18abdd2b" -> "04b590ea"
+- /after30/core/rs: -449923527 -> -894130582
+- /after30/core/sales: "4a65cb76" -> "1f872f33"
+
+## 2026-10-24 save:legacy-wk-year
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "1ca4a611" -> "e475458c"
+- /after30/core/feed: "e87de362" -> "43790e1d"
+- /after30/core/lst: 534 -> 548
+- /after30/core/news/h: "cc9c4b4d" -> "5b61d2fd"
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: PORT OF LANTHORN MIDRANGE II" -> "NEW BUILD-AROUND: LEAGUE CHARTER CONTROL II"
+- /after30/core/newsHead[1]: "BLACK SAILS WINS THE REGIONAL" -> "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL"
+- /after30/core/nextLid: 3188 -> 3238
+- /after30/core/nextXid: 2396 -> 4159
+- /after30/core/npcs: "268be2e6" -> "233f28b0"
+- /after30/core/rs: 1315209606 -> 124349023
+- /after30/core/sales: "b1891868" -> "feb903d1"
+- /after30/core/salesN: 284 -> 300
+- /after30/wk/listings/h: "73a79e9f" -> "ae9d468b"
+- /after30/wk/listings/n: 215 -> 231
+- /after30/wk/meta/arch/h: "fe11116b" -> "59c627ee"
+
+## 2026-10-24 save:released
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after30/core/dp: "68488a38" -> "3d140640"
+- /after30/core/feed: "07974dc0" -> "5c721fd8"
+- /after30/core/lst: 449 -> 455
+- /after30/core/news/h: "5291b37e" -> "42118b37"
+- /after30/core/news/n: 19 -> 20
+- /after30/core/newsHead[0]: "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)" -> "NEW DECK: AUROROTL / KOIRUNE"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)"
+- /after30/core/newsHead[5]: "CROWN BASTION WINS THE REGIONAL" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/nextLid: 1855 -> 1866
+- /after30/core/npcs: "1d8635a8" -> "ea4b9b4a"
+- /after30/core/rs: 771015283 -> 1380122053
+- /after30/core/sales: "b3349c46" -> "60fc4756"
+- /after30/core/salesN: 317 -> 330
+- /after30/wk/listings/h: "d54fba87" -> "53289e2d"
+- /after30/wk/listings/n: 178 -> 182
+
+## 2026-10-24 open:ban
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "3a25ea2f" -> "bf21f68b"
+- /after10/core/feed: "a3c41c96" -> "60969b7a"
+- /after10/core/lst: 537 -> 551
+- /after10/core/news/h: "371e1af8" -> "56e9997e"
+- /after10/core/news/n: 39 -> 40
+- /after10/core/newsHead[0]: "THORNWILD RUSH WINS THE REGIONAL" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+- /after10/core/newsHead[1]: "VEILMORA / MOTHMUR WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after10/core/newsHead[2]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /after10/core/newsHead[3]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after10/core/newsHead[4]: "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after10/core/newsHead[5]: "DUSKFALL IS OUT TODAY" -> "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP"
+- /after10/core/nextLid: 4753 -> 4761
+- /after10/core/npcs: "8ecb032a" -> "e6ff095e"
+- /after10/core/rs: 654929827 -> 756752524
+- /after10/core/sales: "9c1d2ced" -> "94e92164"
+
+## 2026-10-24 open:busy
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "ed29f3eb" -> "8a2ae706"
+- /after10/core/feed: "8ffaec5e" -> "3110edd1"
+- /after10/core/lst: 473 -> 474
+- /after10/core/netWorth: 265.55 -> 266.98
+- /after10/core/news/h: "f063f614" -> "de9290a3"
+- /after10/core/news/n: 20 -> 22
+- /after10/core/newsHead[0]: "GOAL: FIRST SALE" -> "NEW DECK: HARBOR LEAGUES / TIDEBORN AGGRO (GO WIDE)"
+- /after10/core/newsHead[1]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "NEW DECK: AUROROTL / KOIRUNE"
+- /after10/core/newsHead[2]: "NEW DECK: CLAMPUP / FERRADON" -> "GOAL: FIRST SALE"
+- /after10/core/newsHead[3]: "GOAL: GEM MINT" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after10/core/newsHead[4]: "THORNWILD RUSH WINS THE REGIONAL" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after10/core/newsHead[5]: "KOIRUNE / FLAPOD WINS THE REGIONAL" -> "GOAL: GEM MINT"
+- /after10/core/nextLid: 1338 -> 1340
+- /after10/core/npcs: "a0833858" -> "b3450c16"
+- /after10/core/nw: "4eccf0fd" -> "3558044e"
+
+## 2026-10-24 open:legacy-wk-day1
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "4cb754d9" -> "9c50ec08"
+- /after10/core/feed: "89cf3509" -> "c87b18a5"
+- /after10/core/lst: 402 -> 385
+- /after10/core/news/h: "6d2f1235" -> "2234716e"
+- /after10/core/newsHead[1]: "NEW TECH: CACTUFT / BRAMBLEBUCK (DISRUPTION)" -> "NEW TECH: ASTRYNX / KOIRUNE (TURBO)"
+- /after10/core/nextLid: 548 -> 547
+- /after10/core/nextTid: 2564 -> 1933
+- /after10/core/nextXid: 1330 -> 3397
+- /after10/core/npcs: "e3d0e9fd" -> "2f757f5f"
+- /after10/core/rs: 344313561 -> 1790522682
+- /after10/core/sales: "71643d2f" -> "1aa44888"
+- /after10/core/salesN: 122 -> 130
+- /after10/wk/listings/h: "24180313" -> "605a94ca"
+- /after10/wk/listings/n: 114 -> 102
+- /after10/wk/meta/arch/h: "ac332a49" -> "dfc2a999"
+
+## 2026-10-24 open:legacy-wk-year
+Reason: Eight more flagship content waves (Thornfall, Deepforge, Siege of Lanthorn, Drowned Hymns, Coral Bastion, Black Tide, Keepers of the Light, Return of the Tide): the Tidemark world has 1,247 card identities and many more copies, so world generation draws far more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed
+Changed (25+ differences), first ones:
+- /after10/core/dp: "875e613f" -> "b5b18de2"
+- /after10/core/feed: "d3cd26f3" -> "7adbc66f"
+- /after10/core/lst: 523 -> 515
+- /after10/core/news/h: "438d1897" -> "b7b83610"
+- /after10/core/newsHead[0]: "BLACK SAILS WINS THE REGIONAL" -> "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL"
+- /after10/core/nextLid: 2930 -> 2953
+- /after10/core/nextXid: 2396 -> 4159
+- /after10/core/npcs: "d8b74acb" -> "07785390"
+- /after10/core/rs: 1506257241 -> 1027240831
+- /after10/core/sales: "a3e7fd90" -> "8bc0f64a"
+- /after10/core/salesN: 229 -> 242
+- /after10/wk/listings/h: "f04ca691" -> "a7a204a9"
+- /after10/wk/listings/n: 220 -> 216
+- /after10/wk/meta/arch/h: "55330bb7" -> "2e2f7529"
+- /after10/wk/meta/ev/h: "226faa83" -> "134dc663"

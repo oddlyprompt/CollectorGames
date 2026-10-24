@@ -19,7 +19,7 @@ sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from checklist_land import CROWNLANDS, THORNWILD, IRON_REACH
 from checklist_sea import TIDEBORN, FREE_FLEETS, ABYSSAL_CHOIR
 from checklist_dual import HARBOR_LEAGUES, NEUTRAL
-from checklist_supp import SUPPLEMENTS
+from checklist_supp import SUPPLEMENTS, WAVE_DESIGNS
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT=os.path.join(ROOT,'tidemark-production')
 VERSION='0.1.0'
@@ -235,9 +235,10 @@ def build():
         for fac,rows in sfac:
             if sblocks: lo,hi=sblocks[fac]
             else:   # the faction's block of the printed checklist: from the middle of the gap before it to the middle of the gap after it
-                if fac not in rng: return None,['supplement faction %s has no card in %s'%(fac,scode)]
-                prev=[rng[f] for f in FORDER[:FORDER.index(fac)] if f in rng]; nxtf=[rng[f] for f in FORDER[FORDER.index(fac)+1:] if f in rng]
-                lo=(prev[-1][1]+rng[fac][0])//2+1 if prev else 1; hi=(rng[fac][1]+nxtf[0][0])//2 if nxtf else size
+                if fac not in rng or len(rng)<2: lo,hi=1,size   # a set with one faction (or a new one) takes any free number
+                else:
+                    prev=[rng[f] for f in FORDER[:FORDER.index(fac)] if f in rng]; nxtf=[rng[f] for f in FORDER[FORDER.index(fac)+1:] if f in rng]
+                    lo=(prev[-1][1]+rng[fac][0])//2+1 if prev else 1; hi=(rng[fac][1]+nxtf[0][0])//2 if nxtf else size
             used={c['no'] for c in sets[scode]['cards']}; free=[n for n in range(lo,hi+1) if n not in used]
             add=[]
             for r in rows:
@@ -246,6 +247,7 @@ def build():
                 add.append(dict(title=title,type=t,subtype=sub,rar=rar,era=sdef[4],flags=fl,identity=ident,subject=subj,fac=fac,faction=dict((f[0],f[1]) for f in FACTIONS)[fac],
                                 allegiance=dict((f[0],f[2]) for f in FACTIONS)[fac],order=0,set=scode))
             add.sort(key=lambda c:(TORDER.index(c['type']),c['title']))
+            if len(free)<len(add): free=[n for n in range(1,size+1) if n not in used]   # the faction's block is too small: any free number
             if len(free)<len(add): return None,['not enough free numbers for %s in %s'%(fac,scode)]
             picks=[free[int((i+0.5)*len(free)/len(add))] for i in range(len(add))]
             for c,no in zip(add,picks):
@@ -462,7 +464,7 @@ def validate(D,S):
     errs=[]; C=counts(D)
     if C['anniversary_total']!=220: errs.append('anniversary has %d cards'%C['anniversary_total'])
     if C['anniversary_new']!=150 or C['anniversary_reprints']!=70 or C['anniversary_alternate_art']!=10: errs.append('anniversary split %d/%d/%d'%(C['anniversary_new'],C['anniversary_reprints'],C['anniversary_alternate_art']))
-    if not 480<=C['historical_cards']<=700: errs.append('historical library has %d cards'%C['historical_cards'])
+    if not 480<=C['historical_cards']<=1200: errs.append('historical library has %d cards'%C['historical_cards'])
     seen={}
     for s in S:
         for c in s['cells']:
@@ -494,12 +496,14 @@ def main():
             if r: x['status']=r['status']; x['stored']=r['file']
     if errs: print('INVALID'); [print(' -',e) for e in errs]; sys.exit(1)
     outs=render(D,S)
+    outs['@design_waves.json']=json.dumps(WAVE_DESIGNS,indent=1,ensure_ascii=False,sort_keys=True)+'\n'
     if a.check:
-        bad=[k for k,v in outs.items() if not os.path.exists(os.path.join(OUT,k)) or open(os.path.join(OUT,k),encoding='utf-8').read()!=v]
+        pth=lambda k: os.path.join(ROOT,'tools','tidemark','v1','design_waves.json') if k[0]=='@' else os.path.join(OUT,k)
+        bad=[k for k,v in outs.items() if not os.path.exists(pth(k)) or open(pth(k),encoding='utf-8').read()!=v]
         if bad: print('OUT OF DATE (run tools/tidemark/checklist.py):',*bad); sys.exit(1)
         print('Tidemark checklist OK: files up to date, rules pass'); return
     os.makedirs(OUT,exist_ok=True)
-    for k,v in outs.items(): open(os.path.join(OUT,k),'w',encoding='utf-8').write(v)
+    for k,v in outs.items(): open(os.path.join(ROOT,'tools','tidemark','v1','design_waves.json') if k[0]=='@' else os.path.join(OUT,k),'w',encoding='utf-8').write(v)
     C=counts(D); q=json.loads(outs['art_queue.json'])['summary']
     print('wrote tidemark-production/: anniversary %d (%d new, %d reprints, %d alternate art), historical %d in %d sets'%(C['anniversary_total'],C['anniversary_new'],C['anniversary_reprints'],C['anniversary_alternate_art'],C['historical_cards'],C['historical_sets']))
     print('illustrations:',C['illustrations']); print('sheets:',q)

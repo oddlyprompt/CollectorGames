@@ -33,7 +33,7 @@ async def main():
         ok,msg=library_current(); check(ok, 'the metagame library is current for the cards and the engine (node tools/tidemark/v1/library.js)', msg)
         # ---------------- the catalog against the checklist ----------------
         cat=await pg.evaluate("""(()=>{ const out={sets:TM_SETS.length, per:[], cards:TM_CARDS.length, prs:TM_PR.length}; for (let n=1;n<=TM_SETS.length;n++){ const cs=xtSetCards(n); out.per.push([xtSetDef(n).code, cs.length, cs.filter(c=>c.rar==='alt').length, ['common','unc','rare','leg'].map(r=>cs.filter(c=>c.rar===r).length)]); } return out; })()""")
-        check(cat['sets']==31 and cat['cards']==776 and cat['prs']==856, '31 sets, 776 card identities, 856 printings (First Tide 125 and Reefward 75 catalogued cards)', (cat['sets'],cat['cards'],cat['prs']))
+        check(cat['sets']==31 and cat['cards']==1247 and cat['prs']==1327, '31 sets, 1,247 card identities, 1,327 printings (the ten flagship sets have 75 or more catalogued cards)', (cat['sets'],cat['cards'],cat['prs']))
         want={}
         for p in CJ['printings']: want[p['set']]=want.get(p['set'],0)+1
         bad=[(c,n,want[c]) for c,n,a,r in cat['per'] if want[c]!=n]
@@ -41,7 +41,7 @@ async def main():
         tt=[x for x in cat['per'] if x[0]=='TT'][0]
         check(tt[1]==230 and tt[2]==10 and tt[3]==[103,63,39,15], 'Tenth Tide: 220 cards (103 C, 63 U, 39 R, 15 L) and 10 alternate arts', tt)
         ids=await pg.evaluate("""(()=>{ const bad=[]; const seen=new Map(); for (let n=1;n<=31;n++) for (const c of xtSetCards(n)){ const a=TM_ART[c.ill]; if (!a) bad.push('no art '+c.name); const k=c.ill; if (seen.has(k) && seen.get(k)!==c.id) bad.push('art shared by two cards '+k); seen.set(k,c.id); } return bad; })()""")
-        check(len(ids)==129 and all(x in ids for x in ['no art Choir-Depth Leviathan','no art Roothorn Stag','no art Sentinel of Azure Keep']), 'every printing has approved art and no art belongs to two different cards, except the three owner-approved concept paintings and the 126 new First Tide and Reefward cards awaiting their paintings (they draw ART PENDING)', ids[:5])
+        check(len(ids)==600 and all(x in ids for x in ['no art Choir-Depth Leviathan','no art Roothorn Stag','no art Sentinel of Azure Keep']), 'every printing has approved art and no art belongs to two different cards, except the three owner-approved concept paintings and the 597 new flagship-wave cards awaiting their paintings (they draw ART PENDING)', ids[:5])
         rp=await pg.evaluate("""(()=>{ let re=0, alt=0, bad=0; for (const c of xtSetCards(31)){ if (c.pk==='r'){ re++; if (!(TM_PRINTS[c.cid]||[]).some(s=>s<31)) bad++; } if (c.pk==='alt'){ alt++; if (c.same==null) bad++; } } const first=Object.values(TM_FIRST).filter(s=>s===31).length; return {re,alt,bad,first,ids:TM_CARDS.length}; })()""")
         check(rp['re']==70 and rp['alt']==10 and rp['bad']==0 and rp['first']==150, '70 reprints share identity with an older printing, 150 new cards, 10 alternate arts point at their cards', rp)
         res=await pg.evaluate("TM_CARDS.filter(c=>c.res).length"); check(res==19, '19 reserve-list cards, none reprinted', res)
@@ -56,7 +56,7 @@ async def main():
         check(near(pk['foil']/pk['N'],1/4,0.02) and near(pk['leg']/pk['N'],0.125*(1-1/60),0.015) and near(pk['alt']/pk['N'],1/60,0.006), 'foil about 1 pack in 4, Legendary slot about 1 in 8, alternate art about 1 in 60', (round(pk['foil']/pk['N'],3),round(pk['leg']/pk['N'],3),round(pk['alt']/pk['N'],4)))
         check(pk['hist']==15 and pk['ftBulk']==0 and pk['tlBulk']==0, 'a First Tide pack is 15 catalogued cards, no bulk', (pk['hist'],pk['ftBulk'],pk['tlBulk']))
         hon=await pg.evaluate("""(()=>{ const b=[]; for (let s=1;s<=31;s++) if (xtBoosterSet(s)) b.push(xtSetDef(s).code); const u=xtRollUnit(30,mkRng(1)); const n30=xtSetCards(30).filter(c=>c.pk!=='alt').length; let sealedOld=0; for (const id in G.xtc){ const d=xtD(G.xtc[id].k); if (d.sealed && !xtBoosterSet(d.set)) sealedOld++; } return {b, unit:u.length, n30, sealedOld}; })()""")
-        check(hon['b']==['FT','RW','TT'] and 0<hon['unit']<=hon['n30'] and hon['sealedOld']==0, 'boosters exist only for sets whose catalogue supports them (First Tide, Reefward, Tenth Tide); every other set has no sealed product and enters the world as one of each card', hon)
+        check(hon['b']==['FT','RW','TF','DF','SL','DH','CB','BT','KH','RT','TT'] and 0<hon['unit']<=hon['n30'] and hon['sealedOld']==0, 'boosters exist only for sets whose catalogue supports them (the ten flagship sets and Tenth Tide); every other set has no sealed product and enters the world as one of each card', hon)
         # ---------------- the timeline ----------------
         pre=await pg.evaluate("""(()=>({day:G.day, days:xtSetDef(31).rel-G.day, released:xtReleasedSets(G.day).includes(31)?1:0, stock:(G.xtg.shop[31]&&G.xtg.shop[31].pack)||0, ann:xtAnnounced(G.day), revealed:xtRevealed(31).length, news:G.news.filter(n=>n.k==='tcg').map(n=>n.h), arch:G.xtg.arch.length,
           legal:xtLegalSets(G.day).length, legalIds:xtLegalSets(G.day).map(n=>xtSetDef(n).code).join(), pre:G.xtg.pre.map(p=>p.f+p.q).join(), listings:G.lst.length, hist:xtReleasedSets(G.day).length}))()""")
