@@ -14471,9 +14471,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0652": {
    "file": "tidemark-production/approved/art/TMI-0652-bastion-quartermaster.webp",
@@ -14491,9 +14493,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0653": {
    "file": "tidemark-production/approved/art/TMI-0653-gatehouse-pikeman.webp",
@@ -14511,9 +14515,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0654": {
    "file": "tidemark-production/approved/art/TMI-0654-lord-marshal-dorran.webp",
@@ -14531,9 +14537,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0655": {
    "file": "tidemark-production/approved/art/TMI-0655-close-ranks.webp",
@@ -14551,9 +14559,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0656": {
    "file": "tidemark-production/approved/art/TMI-0656-beacon-tower.webp",
@@ -14571,9 +14581,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0657": {
    "file": "tidemark-production/approved/art/TMI-0657-citadel-of-aldermere.webp",
@@ -14591,9 +14603,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0658": {
    "file": "tidemark-production/approved/art/TMI-0658-marching-colors.webp",
@@ -14611,9 +14625,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0659": {
    "file": "tidemark-production/approved/art/TMI-0659-antlered-titan.webp",
@@ -14631,9 +14647,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0660": {
    "file": "tidemark-production/approved/art/TMI-0660-heartwood-druid.webp",
@@ -14651,9 +14669,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0661": {
    "file": "tidemark-production/approved/art/TMI-0661-ridge-stalker.webp",
@@ -14671,9 +14691,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0662": {
    "file": "tidemark-production/approved/art/TMI-0662-spirit-of-the-deep-wood.webp",
@@ -14691,9 +14713,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0663": {
    "file": "tidemark-production/approved/art/TMI-0663-thicket-wolf.webp",
@@ -14711,9 +14735,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0664": {
    "file": "tidemark-production/approved/art/TMI-0664-thorn-hound.webp",
@@ -14731,9 +14757,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0665": {
    "file": "tidemark-production/approved/art/TMI-0665-greatwood-rampage.webp",
@@ -14751,9 +14779,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0666": {
    "file": "tidemark-production/approved/art/TMI-0666-seedtime.webp",
@@ -14771,9 +14801,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0667": {
    "file": "tidemark-production/approved/art/TMI-0667-fernhollow.webp",
@@ -14791,9 +14823,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0668": {
    "file": "tidemark-production/approved/art/TMI-0668-boilerplate-guard.webp",
@@ -14811,9 +14845,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0669": {
    "file": "tidemark-production/approved/art/TMI-0669-gun-crew.webp",
@@ -14831,9 +14867,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0670": {
    "file": "tidemark-production/approved/art/TMI-0670-rivet-golem.webp",
@@ -14851,9 +14889,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0671": {
    "file": "tidemark-production/approved/art/TMI-0671-siege-engineer.webp",
@@ -14871,9 +14911,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0672": {
    "file": "tidemark-production/approved/art/TMI-0672-the-iron-sovereign.webp",
@@ -14891,9 +14933,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0673": {
    "file": "tidemark-production/approved/art/TMI-0673-anvil-strike.webp",
@@ -14911,9 +14955,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0674": {
    "file": "tidemark-production/approved/art/TMI-0674-cannon-of-greywater.webp",
@@ -14931,9 +14977,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0675": {
    "file": "tidemark-production/approved/art/TMI-0675-iron-brace.webp",
@@ -14951,9 +14999,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0676": {
    "file": "tidemark-production/approved/art/TMI-0676-oracle-of-the-long-ebb.webp",
@@ -14971,9 +15021,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0677": {
    "file": "tidemark-production/approved/art/TMI-0677-sea-mist-adept.webp",
@@ -14991,9 +15043,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0678": {
    "file": "tidemark-production/approved/art/TMI-0678-shell-diver.webp",
@@ -15011,9 +15065,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0679": {
    "file": "tidemark-production/approved/art/TMI-0679-shoal-mage.webp",
@@ -15031,9 +15087,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0680": {
    "file": "tidemark-production/approved/art/TMI-0680-stormglass-mage.webp",
@@ -15051,9 +15109,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0681": {
    "file": "tidemark-production/approved/art/TMI-0681-wave-skipper.webp",
@@ -15071,9 +15131,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0682": {
    "file": "tidemark-production/approved/art/TMI-0682-ebb-current.webp",
@@ -15091,9 +15153,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0683": {
    "file": "tidemark-production/approved/art/TMI-0683-the-drowning-tide.webp",
@@ -15111,9 +15175,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0684": {
    "file": "tidemark-production/approved/art/TMI-0684-captain-sable-orwin.webp",
@@ -15131,9 +15197,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0685": {
    "file": "tidemark-production/approved/art/TMI-0685-press-gang-sailor.webp",
@@ -15151,9 +15219,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0686": {
    "file": "tidemark-production/approved/art/TMI-0686-salvage-crew.webp",
@@ -15171,9 +15241,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0687": {
    "file": "tidemark-production/approved/art/TMI-0687-gunwale-volley.webp",
@@ -15191,9 +15263,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0688": {
    "file": "tidemark-production/approved/art/TMI-0688-smugglers-run.webp",
@@ -15211,9 +15285,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0689": {
    "file": "tidemark-production/approved/art/TMI-0689-dreadnought-marauder.webp",
@@ -15231,9 +15307,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0690": {
    "file": "tidemark-production/approved/art/TMI-0690-fishers-skiff.webp",
@@ -15251,9 +15329,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0691": {
    "file": "tidemark-production/approved/art/TMI-0691-plunderers-charter.webp",
@@ -15271,9 +15351,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0692": {
    "file": "tidemark-production/approved/art/TMI-0692-drowned-matriarch.webp",
@@ -15291,9 +15373,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0693": {
    "file": "tidemark-production/approved/art/TMI-0693-drowned-penitent.webp",
@@ -15311,9 +15395,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0694": {
    "file": "tidemark-production/approved/art/TMI-0694-gloom-eel.webp",
@@ -15331,9 +15417,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0695": {
    "file": "tidemark-production/approved/art/TMI-0695-the-maw-below.webp",
@@ -15351,9 +15439,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0696": {
    "file": "tidemark-production/approved/art/TMI-0696-tide-bound-priest.webp",
@@ -15371,9 +15461,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0697": {
    "file": "tidemark-production/approved/art/TMI-0697-final-descent.webp",
@@ -15391,9 +15483,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0698": {
    "file": "tidemark-production/approved/art/TMI-0698-undertows-grasp.webp",
@@ -15411,9 +15505,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0699": {
    "file": "tidemark-production/approved/art/TMI-0699-choir-of-silt.webp",
@@ -15431,9 +15527,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0700": {
    "file": "tidemark-production/approved/art/TMI-0700-guild-adjudicator.webp",
@@ -15451,9 +15549,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0701": {
    "file": "tidemark-production/approved/art/TMI-0701-guildmaster-verrin.webp",
@@ -15471,9 +15571,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0702": {
    "file": "tidemark-production/approved/art/TMI-0702-harbor-warden.webp",
@@ -15491,9 +15593,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0703": {
    "file": "tidemark-production/approved/art/TMI-0703-quay-inspector.webp",
@@ -15511,9 +15615,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0704": {
    "file": "tidemark-production/approved/art/TMI-0704-quayside-ferrywoman.webp",
@@ -15531,9 +15637,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0705": {
    "file": "tidemark-production/approved/art/TMI-0705-wharf-clerk.webp",
@@ -15551,9 +15659,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0706": {
    "file": "tidemark-production/approved/art/TMI-0706-trade-winds.webp",
@@ -15571,9 +15681,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0707": {
    "file": "tidemark-production/approved/art/TMI-0707-admiralty-hall.webp",
@@ -15591,9 +15703,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0708": {
    "file": "tidemark-production/approved/art/TMI-0708-pilots-guild-hall.webp",
@@ -15611,9 +15725,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0709": {
    "file": "tidemark-production/approved/art/TMI-0709-border-scavenger.webp",
@@ -15631,9 +15747,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0710": {
    "file": "tidemark-production/approved/art/TMI-0710-hedge-healer.webp",
@@ -15651,9 +15769,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0711": {
    "file": "tidemark-production/approved/art/TMI-0711-roadside-sellsword.webp",
@@ -15671,9 +15791,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0712": {
    "file": "tidemark-production/approved/art/TMI-0712-roving-tinker.webp",
@@ -15691,9 +15813,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0713": {
    "file": "tidemark-production/approved/art/TMI-0713-the-wanderer-without-name.webp",
@@ -15711,9 +15835,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0714": {
    "file": "tidemark-production/approved/art/TMI-0714-waystone-keeper.webp",
@@ -15731,9 +15857,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0715": {
    "file": "tidemark-production/approved/art/TMI-0715-lamplighters-rounds.webp",
@@ -15751,9 +15879,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0716": {
    "file": "tidemark-production/approved/art/TMI-0716-pilgrims-rest.webp",
@@ -15771,9 +15901,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0717": {
    "file": "tidemark-production/approved/art/TMI-0717-briar-sprite.webp",
@@ -15791,9 +15923,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0718": {
    "file": "tidemark-production/approved/art/TMI-0718-cormorant-diver.webp",
@@ -15811,9 +15945,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0719": {
    "file": "tidemark-production/approved/art/TMI-0719-driftwood-otter.webp",
@@ -15831,9 +15967,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0720": {
    "file": "tidemark-production/approved/art/TMI-0720-driftwood-titan.webp",
@@ -15851,9 +15989,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0721": {
    "file": "tidemark-production/approved/art/TMI-0721-ebb-hunter.webp",
@@ -15871,9 +16011,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0722": {
    "file": "tidemark-production/approved/art/TMI-0722-great-heron-of-the-shallows.webp",
@@ -15891,9 +16033,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0723": {
    "file": "tidemark-production/approved/art/TMI-0723-grove-warden.webp",
@@ -15911,9 +16055,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0724": {
    "file": "tidemark-production/approved/art/TMI-0724-long-walk-wolf.webp",
@@ -15931,9 +16077,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0725": {
    "file": "tidemark-production/approved/art/TMI-0725-marsh-heron.webp",
@@ -15951,9 +16099,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0726": {
    "file": "tidemark-production/approved/art/TMI-0726-mudflat-boar.webp",
@@ -15971,9 +16121,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0727": {
    "file": "tidemark-production/approved/art/TMI-0727-old-brineroot.webp",
@@ -15991,9 +16143,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0728": {
    "file": "tidemark-production/approved/art/TMI-0728-orrin-of-the-reedlands.webp",
@@ -16011,9 +16165,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0729": {
    "file": "tidemark-production/approved/art/TMI-0729-packmaster-veyra.webp",
@@ -16031,9 +16187,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0730": {
    "file": "tidemark-production/approved/art/TMI-0730-reed-cutter.webp",
@@ -16051,9 +16209,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0731": {
    "file": "tidemark-production/approved/art/TMI-0731-reedbed-ambusher.webp",
@@ -16071,9 +16231,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0732": {
    "file": "tidemark-production/approved/art/TMI-0732-reefwood-matron.webp",
@@ -16091,9 +16253,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0733": {
    "file": "tidemark-production/approved/art/TMI-0733-rootbound-guardian.webp",
@@ -16111,9 +16275,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0734": {
    "file": "tidemark-production/approved/art/TMI-0734-salt-hare.webp",
@@ -16131,9 +16297,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0735": {
    "file": "tidemark-production/approved/art/TMI-0735-shorewood-stag.webp",
@@ -16151,9 +16319,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0736": {
    "file": "tidemark-production/approved/art/TMI-0736-tide-fox.webp",
@@ -16171,9 +16341,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0737": {
    "file": "tidemark-production/approved/art/TMI-0737-tidepool-crab.webp",
@@ -16191,9 +16363,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0738": {
    "file": "tidemark-production/approved/art/TMI-0738-bramble-snare.webp",
@@ -16211,9 +16385,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0739": {
    "file": "tidemark-production/approved/art/TMI-0739-hide-in-the-reeds.webp",
@@ -16231,9 +16407,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0740": {
    "file": "tidemark-production/approved/art/TMI-0740-stampede-path.webp",
@@ -16251,9 +16429,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0741": {
    "file": "tidemark-production/approved/art/TMI-0741-wild-tide-surge.webp",
@@ -16271,9 +16451,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0742": {
    "file": "tidemark-production/approved/art/TMI-0742-windfall-harvest.webp",
@@ -16291,9 +16473,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0743": {
    "file": "tidemark-production/approved/art/TMI-0743-bone-charm.webp",
@@ -16311,9 +16495,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0744": {
    "file": "tidemark-production/approved/art/TMI-0744-mangrove-shallows.webp",
@@ -16331,9 +16517,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0745": {
    "file": "tidemark-production/approved/art/TMI-0745-antler-council.webp",
@@ -16351,9 +16539,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0746": {
    "file": "tidemark-production/approved/art/TMI-0746-hunters-oath.webp",
@@ -16371,9 +16561,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0747": {
    "file": "tidemark-production/approved/art/TMI-0747-admiral-of-the-reef-court.webp",
@@ -16391,9 +16583,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0748": {
    "file": "tidemark-production/approved/art/TMI-0748-anemone-guard.webp",
@@ -16411,9 +16605,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0749": {
    "file": "tidemark-production/approved/art/TMI-0749-brine-archer.webp",
@@ -16431,9 +16627,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0750": {
    "file": "tidemark-production/approved/art/TMI-0750-coral-hatchling.webp",
@@ -16451,9 +16649,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0751": {
    "file": "tidemark-production/approved/art/TMI-0751-coral-seer-of-ys.webp",
@@ -16471,9 +16671,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0752": {
    "file": "tidemark-production/approved/art/TMI-0752-great-moon-jelly.webp",
@@ -16491,9 +16693,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0753": {
    "file": "tidemark-production/approved/art/TMI-0753-kelp-warden.webp",
@@ -16511,9 +16715,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0754": {
    "file": "tidemark-production/approved/art/TMI-0754-mirrorpool-mage.webp",
@@ -16531,9 +16737,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0755": {
    "file": "tidemark-production/approved/art/TMI-0755-moon-jelly.webp",
@@ -16551,9 +16759,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0756": {
    "file": "tidemark-production/approved/art/TMI-0756-pearl-netter.webp",
@@ -16571,9 +16781,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0757": {
    "file": "tidemark-production/approved/art/TMI-0757-reef-darter.webp",
@@ -16591,9 +16803,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0758": {
    "file": "tidemark-production/approved/art/TMI-0758-reef-sentry.webp",
@@ -16611,9 +16825,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0759": {
    "file": "tidemark-production/approved/art/TMI-0759-riptide-rider.webp",
@@ -16631,9 +16847,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0760": {
    "file": "tidemark-production/approved/art/TMI-0760-sandbar-skimmer.webp",
@@ -16651,9 +16869,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0761": {
    "file": "tidemark-production/approved/art/TMI-0761-sealord-corvane.webp",
@@ -16671,9 +16891,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0762": {
    "file": "tidemark-production/approved/art/TMI-0762-siren-of-the-reef.webp",
@@ -16691,9 +16913,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0763": {
    "file": "tidemark-production/approved/art/TMI-0763-tidal-scout.webp",
@@ -16711,9 +16935,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0764": {
    "file": "tidemark-production/approved/art/TMI-0764-tide-warden-lysa.webp",
@@ -16731,9 +16957,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0765": {
    "file": "tidemark-production/approved/art/TMI-0765-wave-caller.webp",
@@ -16751,9 +16979,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0766": {
    "file": "tidemark-production/approved/art/TMI-0766-flood-surge.webp",
@@ -16771,9 +17001,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0767": {
    "file": "tidemark-production/approved/art/TMI-0767-lagoon-mist.webp",
@@ -16791,9 +17023,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0768": {
    "file": "tidemark-production/approved/art/TMI-0768-pearl-tempest.webp",
@@ -16811,9 +17045,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0769": {
    "file": "tidemark-production/approved/art/TMI-0769-pearl-tithe.webp",
@@ -16831,9 +17067,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0770": {
    "file": "tidemark-production/approved/art/TMI-0770-slipstream.webp",
@@ -16851,9 +17089,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0771": {
    "file": "tidemark-production/approved/art/TMI-0771-pearl-diadem.webp",
@@ -16871,9 +17111,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0772": {
    "file": "tidemark-production/approved/art/TMI-0772-lagoon-court.webp",
@@ -16891,9 +17133,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0773": {
    "file": "tidemark-production/approved/art/TMI-0773-tidal-archive.webp",
@@ -16911,9 +17155,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0774": {
    "file": "tidemark-production/approved/art/TMI-0774-tidal-flats.webp",
@@ -16931,9 +17177,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0775": {
    "file": "tidemark-production/approved/art/TMI-0775-foam-cloak.webp",
@@ -16951,9 +17199,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   },
   "TMI-0776": {
    "file": "tidemark-production/approved/art/TMI-0776-reefsong.webp",
@@ -16971,9 +17221,11 @@
    "sol_status": "rendered-visually-reviewed",
    "sol_note": null,
    "correction": null,
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "filed": "2026-10-24T06:38:04Z",
-   "filed_by": "SOL delivery, awaiting owner review"
+   "filed_by": "SOL delivery, awaiting owner review",
+   "approved": "2026-10-24",
+   "approved_note": "owner checked every picture before sending the delivery (2026-10-24)"
   }
  }
 }
