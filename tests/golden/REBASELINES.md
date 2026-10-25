@@ -1251,3 +1251,68 @@ Changed (2+ differences), first ones:
 Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
 Changed (1+ differences), first ones:
 - /loaded/screens/xt:sets: "e03cfb5a" -> "4005af5b"
+
+## 2026-10-25 day0
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /screens/market: "91fa74a2" -> "ab95f3a6"
+- /screens/xt:sets: "6643b269" -> "5f8e9fb2"
+
+## 2026-10-25 release
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /screens/market: "bd32ad6f" -> "fb2c026f"
+- /screens/xt:sets: "4005af5b" -> "f529513c"
+
+## 2026-10-25 year1
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /screens/market: "d238f09c" -> "d3f7887f"
+- /screens/xt:sets: "4005af5b" -> "f529513c"
+
+## 2026-10-25 save:ban
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (1+ differences), first ones:
+- /loaded/screens/xt:sets: "4005af5b" -> "f529513c"
+
+## 2026-10-25 save:busy
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "fe43412b" -> "9726c251"
+- /loaded/screens/xt:sets: "e99fe5bb" -> "7584211c"
+
+## 2026-10-25 save:day1
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "d71c1c10" -> "63cc37bc"
+- /loaded/screens/xt:sets: "6643b269" -> "5f8e9fb2"
+
+## 2026-10-25 save:legacy-wk-busy
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "df57903d" -> "db7bddbb"
+- /loaded/screens/xt:sets: "b5fc1ea1" -> "c94c507a"
+
+## 2026-10-25 save:legacy-wk-day1
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "91fa74a2" -> "ab95f3a6"
+- /loaded/screens/xt:sets: "6643b269" -> "5f8e9fb2"
+
+## 2026-10-25 save:legacy-wk-released
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "a4cc86ad" -> "ce52de16"
+- /loaded/screens/xt:sets: "4005af5b" -> "f529513c"
+
+## 2026-10-25 save:legacy-wk-year
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "239f3f3f" -> "e386f6bd"
+- /loaded/screens/xt:sets: "4005af5b" -> "f529513c"
+
+## 2026-10-25 save:released
+Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return of the Tide): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "cf1ab4ba" -> "8a7bd864"
+- /loaded/screens/xt:sets: "4005af5b" -> "f529513c"
