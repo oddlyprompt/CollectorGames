@@ -1189,3 +1189,65 @@ Changed (3+ differences), first ones:
 - /loaded/screens/xt:design4: "8b54e027" -> "6649f85e"
 - /loaded/screens/xt:design5: "a9710f45" -> "5ce7ef7a"
 - /loaded/screens/xt:set1: "b4fbe717" -> "0f014e77"
+
+## 2026-10-25 day0
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /screens/market: "6807ed4c" -> "91fa74a2"
+- /screens/xt:sets: "33f0ae5c" -> "6643b269"
+
+## 2026-10-25 release
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (1+ differences), first ones:
+- /screens/xt:sets: "e03cfb5a" -> "4005af5b"
+
+## 2026-10-25 year1
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (1+ differences), first ones:
+- /screens/xt:sets: "e03cfb5a" -> "4005af5b"
+
+## 2026-10-25 save:ban
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (1+ differences), first ones:
+- /loaded/screens/xt:sets: "e03cfb5a" -> "4005af5b"
+
+## 2026-10-25 save:busy
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "a9eb27a8" -> "fe43412b"
+- /loaded/screens/xt:sets: "17c957ba" -> "e99fe5bb"
+
+## 2026-10-25 save:day1
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "d383f106" -> "d71c1c10"
+- /loaded/screens/xt:sets: "33f0ae5c" -> "6643b269"
+
+## 2026-10-25 save:legacy-wk-busy
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "980ac517" -> "df57903d"
+- /loaded/screens/xt:sets: "37fae594" -> "b5fc1ea1"
+
+## 2026-10-25 save:legacy-wk-day1
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "6807ed4c" -> "91fa74a2"
+- /loaded/screens/xt:sets: "33f0ae5c" -> "6643b269"
+
+## 2026-10-25 save:legacy-wk-released
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "751a5d3b" -> "a4cc86ad"
+- /loaded/screens/xt:sets: "e03cfb5a" -> "4005af5b"
+
+## 2026-10-25 save:legacy-wk-year
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "1635bc18" -> "239f3f3f"
+- /loaded/screens/xt:sets: "e03cfb5a" -> "4005af5b"
+
+## 2026-10-25 save:released
+Reason: SOL delivered 75 more paintings (Thornfall S093-S099 and Deepforge S100-S101): only Tidemark screens that show set pages and market thumbnails differ, they now draw real art instead of ART PENDING
+Changed (1+ differences), first ones:
+- /loaded/screens/xt:sets: "e03cfb5a" -> "4005af5b"
