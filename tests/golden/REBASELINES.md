@@ -1376,3 +1376,393 @@ Changed (1+ differences), first ones:
 Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
 Changed (1+ differences), first ones:
 - /loaded/screens/xt:sets: "f529513c" -> "a4be57dc"
+
+## 2026-10-25 day0
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /core/lst: 298 -> 1002
+- /core/nextLid: 299 -> 1003
+- /core/nextXid: 3397 -> 8037
+- /core/rs: -283535258 -> -753234179
+- /screens/market: "648a26ea" -> "1e7ac523"
+- /screens/xt: "09b12f31" -> "00018927"
+- /screens/xt:design5: "5ce7ef7a" -> "19bfef88"
+- /screens/xt:design6: "fac703a8" -> "0530f221"
+- /screens/xt:kv: "25cbd021" -> "bc37346b"
+- /screens/xt:lgs: "5492fb06" -> "a3cd543e"
+- /screens/xt:meta: "32b39b39" -> "e607a47e"
+- /screens/xt:set1: "bbedfdb1" -> "3cba99de"
+- /screens/xt:set30: "365b1b6c" -> "17c57f91"
+- /screens/xt:sets: "30294106" -> "08588c03"
+- /xt/listings/h: "68269138" -> "974c9cc7"
+
+## 2026-10-25 release
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /core/dp: "81bd0916" -> "9390274a"
+- /core/feed: "6c86f7b2" -> "151dcc62"
+- /core/lst: 575 -> 1224
+- /core/news/h: "d2c20773" -> "eb6d420a"
+- /core/newsHead[1]: "NEW DECK: TEMPESTRAL / KITECOON" -> "NEW DECK: THUNDROP / TEMPESTRAL"
+- /core/newsHead[2]: "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP" -> "ASTRYNX / AUROROTL WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[4]: "NEW DECK: POMPYRE / VEILMORA" -> "NEW DECK: ACORNOX / CANOPANG"
+- /core/nextLid: 957 -> 2066
+- /core/nextTid: 2234 -> 2185
+- /core/nextXid: 6787 -> 11640
+- /core/npcs: "b73ba9db" -> "5234bbd2"
+- /core/rs: 1225732033 -> 815520681
+- /core/sales: "c9e36002" -> "ad652272"
+- /core/salesN: 230 -> 513
+- /screens/home: "bf50f88b" -> "f4465759"
+
+## 2026-10-25 year1
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /core/dp: "e2550c6d" -> "ae3644f8"
+- /core/feed: "84317d39" -> "739c70d9"
+- /core/lst: 512 -> 1141
+- /core/news/h: "f8a311a9" -> "ff620b60"
+- /core/news/n: 59 -> 58
+- /core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II" -> "NEW DECK: SPIRAMEL / LANTERNOX"
+- /core/newsHead[1]: "NEW BUILD-AROUND: IRON CROWN OF VARR AGGRO II" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+- /core/newsHead[2]: "NEW BUILD-AROUND: ANTLERBEARER SHAMAN AGGRO (FLEET)" -> "NEW DECK: DRILLBADGER / AEGISOPOD"
+- /core/newsHead[3]: "NEW DECK: GLACURRENT / KOIRUNE" -> "NEW TECH: ASTRYNX / KOIRUNE (TOOLS)"
+- /core/newsHead[4]: "IRON WILDS WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /core/newsHead[5]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "BRONZAROO / AEGISOPOD WINS THE REGIONAL"
+- /core/nextLid: 7199 -> 15194
+- /core/nextTid: 4421 -> 4494
+- /core/nextXid: 6787 -> 11640
+- /core/npcs: "5a714b07" -> "d8fda347"
+
+## 2026-10-25 series
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /core/dp: "dcfa6685" -> "9bd74c63"
+- /core/feed: "0eba8aab" -> "0ff42e1d"
+- /core/lst: 535 -> 1176
+- /core/news/h: "4d15cc8f" -> "2c0116fa"
+- /core/news/n: 178 -> 187
+- /core/newsHead[0]: "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE TIDEMARK CHAMPIONSHIP" -> "NEW BUILD-AROUND: DOWAGER QUEEN ISOLDE AGGRO"
+- /core/newsHead[1]: "BRONZAROO / AEGISOPOD (TURBO) WINS THE WILDKIN CHAMPIONSHIP" -> "THORNWILD RUSH WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[2]: "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE (HEAL) WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[3]: "POMPYRE / VEILMORA (DISRUPTION) WINS THE REGIONAL" -> "NEW DECK: VELUNOX / VEILMORA"
+- /core/newsHead[4]: "NEW DECK: FREE FLEETS / HARBOR LEAGUES CONTROL (FLEET)" -> "ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP) WINS THE REGIONAL"
+- /core/newsHead[5]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE MIDRANGE IV" -> "ASTRYNX / KOIRUNE (HEAL) WINS THE REGIONAL"
+- /core/nextLid: 20762 -> 43687
+- /core/nextTid: 4421 -> 4494
+- /core/nextXid: 6787 -> 11640
+- /core/npcs: "34be4b7e" -> "720e8c71"
+
+## 2026-10-25 flows
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /core/cash: 5638.900000000001 -> 5640.31
+- /core/dp: "ac74285c" -> "582e045a"
+- /core/feed: "7d76fe00" -> "04beb10d"
+- /core/fees: 70.19 -> 70.17
+- /core/lst: 486 -> 1132
+- /core/netWorth: 683.22 -> 773.88
+- /core/news/h: "89b2a26b" -> "308a98c0"
+- /core/news/n: 37 -> 40
+- /core/newsHead[0]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "LEAGUE GALLEASS IS NOW BANNED"
+- /core/newsHead[1]: "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)" -> "NEW DECK: DRILLBADGER / AEGISOPOD"
+- /core/newsHead[2]: "FREE FLEETS / TIDEBORN AGGRO (CARD DRAW) WINS THE REGIONAL" -> "NEW DECK: AUROROTL / KOIRUNE"
+- /core/newsHead[3]: "VEILMORA / MOTHMUR WINS THE REGIONAL" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /core/newsHead[4]: "TIDEBORN TEMPO WINS THE REGIONAL" -> "NEW DECK: FABLEHORN / ODDOODLE (HEAL)"
+- /core/newsHead[5]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /core/nextLid: 3126 -> 6724
+
+## 2026-10-25 shared
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 34.75 -> 45.68
+- /afterCrack/subs: "0bef8def" -> "88d3fb89"
+- /coll/listed[0]: 0.05 -> 0.3
+- /coll/listed[1]: 0.15 -> 0.75
+- /coll/total[0]: 25.800000000000026 -> 45.35000000000001
+- /coll/total[1]: 63.14999999999998 -> 109.39999999999998
+- /core/cash: 4892.67 -> 4892.32
+- /core/dp: "62203932" -> "47ac850d"
+- /core/feed: "8503688f" -> "bdd2225a"
+- /core/fees: 420.07 -> 420.03
+- /core/lst: 485 -> 1043
+- /core/netWorth: 34.75 -> 45.68
+- /core/news/h: "5fb5c4b0" -> "b107114c"
+- /core/news/n: 22 -> 23
+- /core/newsHead[0]: "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)" -> "NEW DECK: HARBOR LEAGUES / TIDEBORN AGGRO (GO WIDE)"
+
+## 2026-10-25 save:ban
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after30/core/dp: "c1651369" -> "2f45165f"
+- /after30/core/feed: "cebf7a42" -> "8a48319d"
+- /after30/core/lst: 499 -> 1171
+- /after30/core/news/h: "9c317c93" -> "158af691"
+- /after30/core/news/n: 42 -> 40
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "LEAGUE GALLEASS IS NOW BANNED"
+- /after30/core/newsHead[1]: "LEAGUE GALLEASS IS NOW BANNED" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after30/core/newsHead[4]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after30/core/newsHead[5]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 5128 -> 6189
+- /after30/core/npcs: "10b2570f" -> "5a7ce398"
+- /after30/core/rs: 1604503320 -> -303361645
+- /after30/core/sales: "c8036e8d" -> "f569b9d3"
+
+## 2026-10-25 save:busy
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after30/core/dp: "b5e19eff" -> "8d3203e2"
+- /after30/core/feed: "59dd9a15" -> "26e25b08"
+- /after30/core/lst: 468 -> 1117
+- /after30/core/netWorth: 253.98 -> 259.34
+- /after30/core/news/h: "1e30bd53" -> "b1c34c75"
+- /after30/core/news/n: 26 -> 24
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: SQUIRREL SCOUT CONTROL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /after30/core/newsHead[1]: "CROWN BASTION WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "CANOPANG / ACORNOX WINS THE REGIONAL" -> "CACTUFT / CANOPANG WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+- /after30/core/newsHead[4]: "NEW DECK: HARBOR LEAGUES / TIDEBORN AGGRO (GO WIDE)" -> "GOAL: FIRST SALE"
+- /after30/core/newsHead[5]: "NEW DECK: AUROROTL / KOIRUNE" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after30/core/nextLid: 1773 -> 2835
+- /after30/core/npcs: "d1e0b968" -> "d098285c"
+- /after30/core/nw: "b84bb197" -> "7e4a83b1"
+
+## 2026-10-25 save:day1
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (26+ differences), first ones:
+- /after30/core/dp: "4b28056d" -> "8c1c2b1e"
+- /after30/core/feed: "819bd1bb" -> "14947115"
+- /after30/core/lst: 524 -> 1105
+- /after30/core/news/h: "50ebf80d" -> "e3fc17e1"
+- /after30/core/news/n: 12 -> 13
+- /after30/core/newsHead[0]: "NEW DECK: SPIRAMEL / FABLEHORN (HEAL)" -> "NEW DECK: PYRENOX / COALOO"
+- /after30/core/newsHead[2]: "NEW DECK: FABLEHORN / ODDOODLE" -> "NEW DECK: SPIRAMEL / PUFFLUFF"
+- /after30/core/newsHead[3]: "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP" -> "NEW TECH: SPIRAMEL / FABLEHORN (TURBO)"
+- /after30/core/newsHead[4]: "TENTH TIDE: MORE CARDS REVEALED" -> "BRAMBLEBUCK / CANOPANG WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[5]: "NEW DECK: AUROROTL / KOIRUNE" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/nextLid: 1094 -> 2384
+- /after30/core/nextTid: 1749 -> 1751
+- /after30/core/nextXid: 5666 -> 5856
+- /after30/core/npcs: "fa19dcc5" -> "c53a728b"
+- /after30/core/rs: -662905258 -> 1235327022
+
+## 2026-10-25 save:legacy-wk-busy
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after30/core/dp: "acc6ff10" -> "e371e356"
+- /after30/core/feed: "27a88b43" -> "172cce7a"
+- /after30/core/lst: 538 -> 1211
+- /after30/core/netWorth: 37.72 -> 38.45
+- /after30/core/news/h: "1127993e" -> "1b6692d9"
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: OLD GROWTH CONTROL (REMOVAL)" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/newsHead[1]: "ABYSSAL DEPTHS WINS THE REGIONAL" -> "NEW TECH: ASTRYNX / AUROROTL (DISRUPTION)"
+- /after30/core/newsHead[2]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW TECH: CANOPANG / CACTUFT (DISRUPTION)" -> "CANOPANG / CACTUFT WINS THE REGIONAL"
+- /after30/core/nextLid: 1066 -> 2142
+- /after30/core/nextXid: 7443 -> 12414
+- /after30/core/npcs: "a45ecdcb" -> "0d282ca8"
+- /after30/core/nw: "ce7386a1" -> "d7de0969"
+- /after30/core/rs: 386384020 -> -105665247
+- /after30/core/sales: "d336a2fe" -> "7a9b9c0c"
+
+## 2026-10-25 save:legacy-wk-day1
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after30/core/dp: "3850c397" -> "bd885589"
+- /after30/core/feed: "586609ed" -> "af899e6b"
+- /after30/core/lst: 524 -> 1181
+- /after30/core/news/h: "22727ef3" -> "c3d486d5"
+- /after30/core/news/n: 12 -> 13
+- /after30/core/newsHead[0]: "NEW DECK: DRILLBADGER / FERRADON" -> "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL"
+- /after30/core/newsHead[1]: "TENTH TIDE IS OUT TODAY" -> "NEW DECK: ASTRYNX / KOIRUNE (TOOLS)"
+- /after30/core/newsHead[2]: "NEW DECK: SMOLDERLYNX / PYRENOX" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[3]: "CANOPANG / ACORNOX WINS THE WILDKIN CHAMPIONSHIP" -> "NEW TECH: KOIRUNE / FLAPOD (GUST)"
+- /after30/core/newsHead[4]: "TENTH TIDE: MORE CARDS REVEALED" -> "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[5]: "NEW TECH: ASTRYNX / KOIRUNE (TURBO)" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/nextLid: 1003 -> 2140
+- /after30/core/nextTid: 1933 -> 1790
+- /after30/core/nextXid: 7363 -> 12089
+- /after30/core/npcs: "3e66007b" -> "90d8fa66"
+
+## 2026-10-25 save:legacy-wk-released
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after30/core/dp: "8622162f" -> "2674f659"
+- /after30/core/feed: "23ddb9a9" -> "e95f7f60"
+- /after30/core/lst: 507 -> 1169
+- /after30/core/news/h: "48732e20" -> "7c085f34"
+- /after30/core/news/n: 17 -> 16
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: NERITH UNDYING AGGRO" -> "NEW TECH: CACTUFT / CANOPANG (TOOLS)"
+- /after30/core/newsHead[1]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW DECK: ASHHOPPER / PYRENOX"
+- /after30/core/newsHead[2]: "IRON WILDS WINS THE REGIONAL" -> "ABYSSAL DEPTHS WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL" -> "VEILMORA / MOTHMUR WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE MIDRANGE III" -> "NEW DECK: PYRENOX / ASHHOPPER"
+- /after30/core/nextLid: 1289 -> 2369
+- /after30/core/nextXid: 4587 -> 9112
+- /after30/core/npcs: "04b590ea" -> "b85fd583"
+- /after30/core/rs: -894130582 -> 646943294
+- /after30/core/sales: "1f872f33" -> "7a3b154e"
+
+## 2026-10-25 day0
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 release
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 year1
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 series
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 flows
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 shared
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 save:ban
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 save:busy
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 save:day1
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 save:legacy-wk-busy
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 save:legacy-wk-day1
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 save:legacy-wk-released
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (0+ differences), first ones:
+
+## 2026-10-25 save:legacy-wk-year
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after30/core/dp: "e475458c" -> "1e942673"
+- /after30/core/feed: "43790e1d" -> "abb4b4e4"
+- /after30/core/lst: 548 -> 1199
+- /after30/core/news/h: "5b61d2fd" -> "5381776b"
+- /after30/core/news/n: 24 -> 27
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: LEAGUE CHARTER CONTROL II" -> "NEW DECK: FREE FLEETS / ABYSSAL CHOIR AGGRO (FLEET)"
+- /after30/core/newsHead[1]: "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL" -> "GRANITE COLOSSUS IS NOW BANNED"
+- /after30/core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after30/core/newsHead[3]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "BAN ANNOUNCED: GRANITE COLOSSUS"
+- /after30/core/newsHead[4]: "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP" -> "ABYSSAL DEPTHS WINS THE REGIONAL"
+- /after30/core/newsHead[5]: "DUSKFALL IS OUT TODAY" -> "SMOLDERLYNX / PYRENOX WINS THE REGIONAL"
+- /after30/core/nextLid: 3238 -> 4301
+- /after30/core/nextXid: 4159 -> 8404
+- /after30/core/npcs: "233f28b0" -> "0beb6c77"
+- /after30/core/rs: 124349023 -> -1937685006
+
+## 2026-10-25 save:released
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after30/core/dp: "3d140640" -> "a98b7976"
+- /after30/core/feed: "5c721fd8" -> "0eced2c3"
+- /after30/core/lst: 455 -> 1114
+- /after30/core/news/h: "42118b37" -> "2e1d7016"
+- /after30/core/news/n: 20 -> 19
+- /after30/core/newsHead[0]: "NEW DECK: AUROROTL / KOIRUNE" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after30/core/newsHead[1]: "CROWN BASTION WINS THE REGIONAL" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW TECH: KOIRUNE / FLAPOD (DISRUPTION)"
+- /after30/core/newsHead[3]: "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/newsHead[5]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/nextLid: 1866 -> 2901
+- /after30/core/npcs: "ea4b9b4a" -> "a8e95be1"
+- /after30/core/rs: 1380122053 -> 122576155
+- /after30/core/sales: "60fc4756" -> "e7ae347c"
+- /after30/core/salesN: 330 -> 414
+
+## 2026-10-25 open:ban
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after10/core/dp: "bf21f68b" -> "85b1f17b"
+- /after10/core/feed: "60969b7a" -> "116d55be"
+- /after10/core/lst: 551 -> 1079
+- /after10/core/news/h: "56e9997e" -> "c2dfef0e"
+- /after10/core/news/n: 40 -> 39
+- /after10/core/newsHead[0]: "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)" -> "CROWN BASTION WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after10/core/newsHead[2]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after10/core/newsHead[3]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after10/core/newsHead[4]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP"
+- /after10/core/newsHead[5]: "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP" -> "DUSKFALL IS OUT TODAY"
+- /after10/core/nextLid: 4761 -> 5452
+- /after10/core/npcs: "e6ff095e" -> "1c8112d3"
+- /after10/core/rs: 756752524 -> 2068815059
+- /after10/core/sales: "94e92164" -> "d4330ced"
+
+## 2026-10-25 open:busy
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after10/core/dp: "8a2ae706" -> "07b1a085"
+- /after10/core/feed: "3110edd1" -> "c8776785"
+- /after10/core/lst: 474 -> 1030
+- /after10/core/netWorth: 266.98 -> 267.61
+- /after10/core/news/h: "de9290a3" -> "f063f614"
+- /after10/core/news/n: 22 -> 20
+- /after10/core/newsHead[0]: "NEW DECK: HARBOR LEAGUES / TIDEBORN AGGRO (GO WIDE)" -> "GOAL: FIRST SALE"
+- /after10/core/newsHead[1]: "NEW DECK: AUROROTL / KOIRUNE" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after10/core/newsHead[2]: "GOAL: FIRST SALE" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after10/core/newsHead[3]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "GOAL: GEM MINT"
+- /after10/core/newsHead[4]: "NEW DECK: CLAMPUP / FERRADON" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after10/core/newsHead[5]: "GOAL: GEM MINT" -> "KOIRUNE / FLAPOD WINS THE REGIONAL"
+- /after10/core/nextLid: 1340 -> 2079
+- /after10/core/npcs: "b3450c16" -> "db8eab20"
+- /after10/core/nw: "3558044e" -> "1cbda17e"
+
+## 2026-10-25 open:legacy-wk-day1
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after10/core/dp: "9c50ec08" -> "0d6ec8fd"
+- /after10/core/feed: "c87b18a5" -> "072d90e5"
+- /after10/core/lst: 385 -> 1013
+- /after10/core/news/h: "2234716e" -> "a869a210"
+- /after10/core/newsHead[1]: "NEW TECH: ASTRYNX / KOIRUNE (TURBO)" -> "NEW TECH: VEILMORA / MOTHMUR (TURBO)"
+- /after10/core/nextLid: 547 -> 1450
+- /after10/core/nextTid: 1933 -> 1790
+- /after10/core/nextXid: 3397 -> 8037
+- /after10/core/npcs: "2f757f5f" -> "d7b1f7bb"
+- /after10/core/rs: 1790522682 -> 1901972047
+- /after10/core/sales: "1aa44888" -> "10605f46"
+- /after10/core/salesN: 130 -> 342
+- /after10/wk/listings/h: "605a94ca" -> "c20c9f1f"
+- /after10/wk/listings/n: 102 -> 105
+- /after10/wk/meta/arch/h: "dfc2a999" -> "068b604b"
+
+## 2026-10-25 open:legacy-wk-year
+Reason: Waves for the remaining twenty historical sets (1,164 cards, 2,411 identities): the Tidemark world is about twice as big and its market 3.4 times, so world generation and the daily market draw many more numbers from the shared random stream and every seeded run shifts; no rule of Wildkin, Sports or Comics changed (the shared market kit gained an optional market-size hook that Wildkin does not use)
+Changed (25+ differences), first ones:
+- /after10/core/dp: "b5b18de2" -> "c4c1241e"
+- /after10/core/feed: "7adbc66f" -> "07dbf85a"
+- /after10/core/lst: 515 -> 1155
+- /after10/core/news/h: "b7b83610" -> "09639fd9"
+- /after10/core/newsHead[0]: "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL" -> "ABYSSAL DEPTHS WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "SMOLDERLYNX / PYRENOX WINS THE REGIONAL"
+- /after10/core/nextLid: 2953 -> 3805
+- /after10/core/nextXid: 4159 -> 8404
+- /after10/core/npcs: "07785390" -> "f08ea316"
+- /after10/core/rs: 1027240831 -> -1834083424
+- /after10/core/sales: "8bc0f64a" -> "2a04204f"
+- /after10/core/salesN: 242 -> 386
+- /after10/wk/listings/h: "a7a204a9" -> "32f4419e"
+- /after10/wk/listings/n: 216 -> 220
+- /after10/wk/meta/arch/h: "2e2f7529" -> "ea4498f5"

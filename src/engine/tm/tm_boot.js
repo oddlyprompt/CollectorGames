@@ -12,7 +12,7 @@ function xtNormalize(){
 async function xtBuildWorld(prog){
   if (prog) await prog(0.1,'Printing ten years of Tidemark'); xtInit(); makeXtNPCs();
   xtSetLife(G.day);   // Tenth Tide is announced (with its Legendaries shown) on the first day
-  if (prog) await prog(0.5,'Filling the collectors\' binders'); xtSeedMarket(); if (prog) await prog(0.8,'Stocking the card shop'); for (let i=0;i<300;i++) xNpcListTc(); if (prog) await prog(1,'Done');
+  if (prog) await prog(0.5,'Filling the collectors\' binders'); xtSeedMarket(); if (prog) await prog(0.8,'Stocking the card shop'); for (let i=0;i<Math.round(300*xtMarketScale());i++) xNpcListTc(); if (prog) await prog(1,'Done');
 }
 const X_mig=migrate; migrate=function(){ X_mig.apply(this,arguments); xtNormalize(); };
 const X_adv=advanceDay; advanceDay=function(){ X_adv.apply(this,arguments); if (G.xtg){ try { xtDay(G.day); xtMarketDay(G.day); xtEconDay(G.day); G.xtg.last=G.day; } catch(e){ console.error(e); } } };

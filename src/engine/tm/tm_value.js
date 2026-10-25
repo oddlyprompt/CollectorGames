@@ -42,6 +42,8 @@ function xtPools(set){ const m=G.xtg._pl||(G.xtg._pl={}); if (m[set]) return m[s
 // or Legendaries). Tenth Tide and First Tide qualify; every other historical set is singles-only until its catalogue grows (design/tidemark-reuse-audit.md).
 // Its cards still exist in the world: xtRollUnit gives one copy of each of its cards (a "boxed set", the way they entered the world) instead of a pack.
 const XT_BOOSTER_MIN={C:40,U:15,RL:10};
+// the market grows with the catalogue: the calibration of listings, dealers and the clean-up was made with 1,077 catalogued historical cards; a market 1.6 times that size keeps old commons findable (measured) while each of the 2,261 cards stays rarer
+let XT_MS=0; function xtMarketScale(){ if (!XT_MS) XT_MS=Math.max(1, TM_PR.filter(p=>p.s!==TM_TT).length/670); return XT_MS; }
 function xtBoosterSet(set){ const m=G.xtg._bs||(G.xtg._bs={}); if (m[set]!=null) return m[set]; const cs=xtSetCards(set).filter(c=>c.pk!=='alt'); const n=r=>cs.filter(c=>c.rar===r).length;
   return m[set]= set===TM_TT || (n('common')>=XT_BOOSTER_MIN.C && n('unc')>=XT_BOOSTER_MIN.U && n('rare')+n('leg')>=XT_BOOSTER_MIN.RL); }
 function xtRollUnit(set, r){ if (xtBoosterSet(set)) return xtRollPack(set,r); const keys=[]; keys.bulk=0; const inc={common:1,unc:0.5,rare:0.3,leg:0.1};   // a rarer card entered the world in fewer copies, as it would have in a pack
@@ -134,7 +136,7 @@ function xtReleaseMarket(n, t){ if (G._xtCatch) return; const r=mkRng(hsh('rel'+
 const XT_MKT={ kind:'x', keyPrefix:'X', flag:'xtg', cpf:'xt', copies:()=>G.xtc, nextId:()=>G.nextXid++, pop:()=>G.xpop, world:()=>G.xtg, subs:'xsubs', ids:'_npcXtIds',
   D:xtD, fairRaw:xtFairRaw, interest:xtInterest, label:xtCardLabel, fvClear:xTfvClear, scale:XT_GS, raror:XT_RAROR, econ:XT_ECON, isNPC:isXtNPC,
   gradeScarce:(key,g,pop,d)=>xtV2()? xtV2GradeScarce(key,g,pop,d) : (pop&&g===10&&pop[10]<4&&(XT_RAROR[d.rar]>=2)? 1.12 : 1),
-  cullSkip:c=>xtV2()&&xtVintage(xtD(c.k)), culled:c=>{ const L=G.xtg.led; if (L) L.cull=(L.cull||0)+1; },
+  marketScale:()=>xtMarketScale(), cullSkip:c=>xtV2()&&xtVintage(xtD(c.k)), culled:c=>{ const L=G.xtg.led; if (L) L.cull=(L.cull||0)+1; },
   keep(n,c,v){ const base=xtInterest(n,{xt:c,v})>1.1? 0.7 : 0.12; return xtV2()? xtKeep(n,c,v,base) : base; },
   listMult(n){ return {xfl:rf(1.1,1.45), xgr:rf(1.05,1.3), xsl:rf(1.1,1.5)}[n.ty]||rf(0.95,1.35); } };   // what a collector asks over value, by type
 const XT_MK=cardMarket(XT_MKT);

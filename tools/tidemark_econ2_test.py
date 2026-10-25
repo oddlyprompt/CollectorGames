@@ -66,7 +66,7 @@ async def t_condition(pg):
     check('2016-era rares and Legendaries: NM is rarer than for commons (3% to 25%)', 3<=nmc('9+|rare+')<=25 and nmc('9+|rare+')<nmc('9+|common')+4, round(nmc('9+|rare+'),1))
     check('modern cards stay mostly NM (under one year: 55% to 80%)', 55<=nmc('<1|common')<=80, round(nmc('<1|common'),1))
     check('old copies are worn: 2016-era DMG+HP at least 20% of commons', pct('9+|common','HP')+pct('9+|common','DMG')>=20, round(pct('9+|common','HP')+pct('9+|common','DMG'),1))
-    mv=st.mean(r['vis']); check('visible raw copies in the world at start: 5,000 to 9,500 (test target, not permanent; raised on 2026-10-23 because the ten flagship sets grew from 15 to 75 cards and the world has 1,247 card identities instead of 650)', 5000<=mv<=9500, '%.0f (min %d max %d)'%(mv,min(r['vis']),max(r['vis'])))
+    mv=st.mean(r['vis']); check('visible raw copies in the world at start: 10,000 to 20,000 (test target, not permanent; raised on 2026-10-23 because every historical set grew to 70 to 125 cards and the world has 2,411 card identities instead of 650)', 10000<=mv<=20000, '%.0f (min %d max %d)'%(mv,min(r['vis']),max(r['vis'])))
     check('every named card has at least one copy that a collector holds, in at least 85% of worlds on average', st.mean(r['cover'])>=0.85, '%.1f%%'%(100*st.mean(r['cover'])))
     check('a First Tide box exists on the market in some worlds but not all', 0<sum(1 for x in r['ftbox'] if x>0)<n, '%d of %d worlds'%(sum(1 for x in r['ftbox'] if x>0),n))
 
@@ -90,7 +90,7 @@ async def t_availability(pg):
     m=lambda k,f: st.mean(acc[k][f])
     print('  group         prints  appearances/print/yr (any, NM)   share of prints seen (any, NM)   NM appearances per world-year')
     for k in sorted(acc): print('  %-12s %5d     %5.2f  %5.3f                    %4.0f%%  %4.0f%%                 %5.1f'%(k,acc[k]['prints'],m(k,'any'),m(k,'nm'),100*m(k,'shareAny'),100*m(k,'shareNM'),m(k,'nmTotal')))
-    # measured 55% to 64% over many runs (about 59% on average); 55% is the floor of that band, set after measuring, not before
+    # measured 55% to 64% over many runs (about 59% on average); 55% is the floor of that band, set after measuring, not before (63% with the 2,261-card history of 2026-10-23, whose market is 3.4 times bigger)
     check('ordinary vintage is discoverable: over a year, 55% of 2016-2018 commons/uncommons show up for sale', m('old|cu','shareAny')>=0.55, '%.0f%%'%(100*m('old|cu','shareAny')))
     check('old sealed product is not everywhere: under 5%% of the Tidemark listings in a year are old packs or boxes', st.mean(seal)<0.05, '%.1f%%'%(100*st.mean(seal)))
     check('commons and uncommons of the latest sets are almost always available over a year (90%+)', m('new|cu','shareAny')>=0.9, '%.0f%%'%(100*m('new|cu','shareAny')))
@@ -201,7 +201,7 @@ async def t_long(pg):
     check('vintage NM share only goes down over three years (aging), never up by more than 3 points', all(l['nmShare']<=f['nmShare']+0.03 for l,f in zip(last,first)), [(round(f['nmShare'],3),round(l['nmShare'],3)) for l,f in zip(last,first)])
     check('median vintage price after 36 months is between 0.9x and 2.4x its start (age premium, no runaway)', all(0.9<=l['price']<=2.4 for l in last), [l['price'] for l in last])
     check('no single print more than 6x its starting price in 36 months', all(l['pmax']<=6 for l in last), [l['pmax'] for l in last])
-    check('the market keeps working: 150 to 450 live Tidemark listings and Saltmarket stocked at every checkpoint', all(150<=x['lst']<=450 and x['inv']>=30 for a in allrows for x in a['rows'][1:]), [(x['lst'],x['inv']) for x in allrows[0]['rows']])
+    check('the market keeps working: 500 to 1,500 live Tidemark listings (150 to 450 before 2026-10-23; the market grew 3.4 times with the catalogue) and Saltmarket stocked at every checkpoint', all(500<=x['lst']<=1500 and x['inv']>=30 for a in allrows for x in a['rows'][1:]), [(x['lst'],x['inv']) for x in allrows[0]['rows']])
     check('old estate lots keep coming: at least 12 estate/warehouse/collection events in 36 months', all(a['events']>=12 for a in allrows), [a['events'] for a in allrows])
     check('the attic is finite: it shrinks as lots are sold', all(a['rows'][-1]['att']<a['rows'][0]['att'] for a in allrows), [(a['rows'][0]['att'],a['rows'][-1]['att']) for a in allrows])
 
@@ -268,7 +268,7 @@ async def t_saves(pg):
     q=await pg.evaluate(REBUILD)
     check('rebuild: the player\'s cards, conditions, slabs, listings and history are untouched', q['err'] is None and q['same'] and q['lstSame'] and q['pop'], {k:q[k] for k in ('err','same','diff','lstSame','pop')})
     check('rebuild: a backup of the old save was made first', q['backup'] and q['bsize']>0, q['bsize'])
-    check('rebuild: the world is now v2, with 1,400 to 6,000 raw copies of sets over two years old (about 7,700 counting every set; raised 2026-10-23 because the ten flagship sets grew to 75 cards), and plays on for 60 days', q['ecv']==2 and 1400<=q['vis']<=6000 and q['lstN']>100, {k:q[k] for k in ('ecv','vis','lstN','ref')})
+    check('rebuild: the world is now v2, with 1,400 to 14,000 raw copies of sets over two years old (about 16,000 counting every set; raised 2026-10-23 because every historical set grew to 70 or more cards), and plays on for 60 days', q['ecv']==2 and 1400<=q['vis']<=14000 and q['lstN']>100, {k:q[k] for k in ('ecv','vis','lstN','ref')})
     # an older Wildkin-only save opened now gets a v2 Tidemark world
     import base64, os
     p=os.path.join(os.path.dirname(__file__),'..','tests','golden','saves','legacy-wk-year.save.gz')

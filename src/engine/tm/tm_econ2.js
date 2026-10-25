@@ -64,7 +64,7 @@ function xtV2Replay(){
       const cards=[]; const addPack=(born,cls)=>{ const keys=xtRollUnit(s,R); for (const k of keys){ const d=xtD(k); cards.push({k, born, cls: cls||pickClass(born), c:condFresh(()=>R(),0.55), g:0, rar:d.rar, foil:d.v==='F', alive:true}); } };
       const pickClass=(born)=>{ const m=XT_E2.mix(y0+Math.floor(born)); const x=R(); return x<m.collector? 'collector' : x<m.collector+m.player? 'player' : 'casual'; };
       for (let i=0;i<Q;i++) addPack(0);
-      let B=Math.round(Qs*XT_E2.boxFrac/36+ (R()-0.5)), P=Math.round(Qs*(1-XT_E2.boxFrac)+ (R()-0.5)*4); B=Math.max(0,B); P=Math.max(0,P); if (!bst){ B=0; P=0; } else { B=Math.max(B,1); P=Math.max(P,6); }   // only booster sets have sealed product; the foundational one is always findable
+      let B=Math.round(Qs*XT_E2.boxFrac/36+ (R()-0.5)), P=Math.round(Qs*(1-XT_E2.boxFrac)+ (R()-0.5)*4); B=Math.max(0,B); P=Math.max(0,P); if (!bst){ B=0; P=0; } else if (s===1){ B=Math.max(B,1); P=Math.max(P,6); }   // only booster sets have sealed product; the foundational one is always findable
       for (let j=1;j<=nT;j++){
         const e0=j-1, dt=(j<nT)? 1 : (T1-(nT-1)); if (dt<=0) continue;
         const pOpen=(y)=>1-Math.pow(1-y,dt), pLost=(y)=>1-Math.pow(1-y,dt);
@@ -167,8 +167,8 @@ function xtKvDay(t){
   // dealers sell: each item has a small chance of going to a collector each day, at once if it is cheap
   for (let i=inv.length-1;i>=0;i--){ const c=G.xtc[inv[i]]; if (!c){ inv.splice(i,1); continue; } if (R()<0.018){ const b=pick(G.npcs.filter(isXtNPC)); c.o=b.id; (G._npcXtIds=G._npcXtIds||[]).push(c.id); inv.splice(i,1); } }
   if (dowOf(t)!==1) return;
-  const want=32+Math.floor(R()*17), cand=G._npcXtIds||[]; let got=0;
-  for (let tries=0; tries<500 && got<want && inv.length<520 && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
+  const SC=xtMarketScale(), want=Math.round((32+Math.floor(R()*17))*SC), cand=G._npcXtIds||[]; let got=0;
+  for (let tries=0; tries<500*SC && got<want && inv.length<520*SC && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
     const v=xtCopyValue(c); if (v<0.05) continue; const p=(XT_KV_BUY[n.ty]||0.15)*(n.ty==='xtm'&&n.setN===d.set?0.1:1)*((d.card.res||d.rar==='leg')&&n.ty!=='xfl'?0.5:1); if (R()>p) continue;
     n.cash+=Math.round(v*0.7*100)/100; c.o=-2; c.a=[t,'held',0,'']; inv.push(id); got++; }
 }
@@ -201,7 +201,7 @@ function xtRebuildVintage(){
   xtV2Replay();
   // released sets that are not vintage still need collectors' copies: the release market gives Tenth Tide its glut again
   if (xtReleasedSets(G.day).includes(TM_TT)) xtRelease_market_rebuild();
-  for (let i=0;i<300;i++) xNpcListTc();
+  for (let i=0;i<Math.round(300*xtMarketScale());i++) xNpcListTc();
   return null;
 }
 function xtRelease_market_rebuild(){ const live=G.live; G.live=false; const c=G._xtCatch; G._xtCatch=false; try { xtReleaseMarket(TM_TT, xtSetDef(TM_TT).rel); } finally { G.live=live; G._xtCatch=c; } }
