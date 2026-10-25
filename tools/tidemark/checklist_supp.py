@@ -198,3 +198,9 @@ from wave_rt import ENTRIES as _RT
 RETURN=wave(_RT)
 
 SUPPLEMENTS=[('FT',FIRST_TIDE,FT_BLOCKS),('RW',REEFWARD,None),('TF',THORNFALL,None),('DF',DEEPFORGE,None),('SL',SIEGE,None),('DH',HYMNS,None),('CB',CORAL,None),('BT',BLACKTIDE,None),('KH',KEEPERS,None),('RT',RETURN,None)]
+
+# ---- the supplement waves for the twenty smaller sets, in release order; a wave exists once its wave_<code>.py file does
+import importlib, os as _os
+for _code in ['SB','LH','IC','CW','OW','BS','MT','BC','GW','HM','FD','SV','LR','WT','ET','ST','NR','FL','CS','TL']:
+    if _os.path.exists(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),'wave_%s.py'%_code.lower())):
+        SUPPLEMENTS.append((_code,wave(importlib.import_module('wave_%s'%_code.lower()).ENTRIES),None))

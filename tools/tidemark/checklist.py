@@ -464,7 +464,7 @@ def validate(D,S):
     errs=[]; C=counts(D)
     if C['anniversary_total']!=220: errs.append('anniversary has %d cards'%C['anniversary_total'])
     if C['anniversary_new']!=150 or C['anniversary_reprints']!=70 or C['anniversary_alternate_art']!=10: errs.append('anniversary split %d/%d/%d'%(C['anniversary_new'],C['anniversary_reprints'],C['anniversary_alternate_art']))
-    if not 480<=C['historical_cards']<=1200: errs.append('historical library has %d cards'%C['historical_cards'])
+    if not 480<=C['historical_cards']<=3000: errs.append('historical library has %d cards'%C['historical_cards'])
     seen={}
     for s in S:
         for c in s['cells']:
