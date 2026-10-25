@@ -20442,34 +20442,34 @@
      "cell": 7,
      "illustration": "TMI-1686",
      "card": "TMC-1686",
-     "title": "Free Company Muster",
-     "faction": "Neutral",
-     "type": "Unit",
-     "subject": "A company of mercenaries marches out of a forest road",
-     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: grey windy sky.",
-     "file": "tidemark-production/art/TMI-1686-free-company-muster.png"
-    },
-    {
-     "cell": 8,
-     "illustration": "TMI-1687",
-     "card": "TMC-1687",
      "title": "Free Company Recruit",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A recruit signs a ledger at a mercenary table",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: plain daylight.",
-     "file": "tidemark-production/art/TMI-1687-free-company-recruit.png"
+     "file": "tidemark-production/art/TMI-1686-free-company-recruit.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1687",
+     "card": "TMC-1687",
+     "title": "Freed Captive",
+     "faction": "Neutral",
+     "type": "Unit",
+     "subject": "A freed captive with broken shackles at her wrists blinks in the sun",
+     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.",
+     "file": "tidemark-production/art/TMI-1687-freed-captive.png"
     },
     {
      "cell": 9,
      "illustration": "TMI-1688",
      "card": "TMC-1688",
-     "title": "Free Company Standard",
+     "title": "Gaoler's Daughter",
      "faction": "Neutral",
      "type": "Unit",
-     "subject": "A standard of a black chain planted in a camp",
-     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: plain daylight.",
-     "file": "tidemark-production/art/TMI-1688-free-company-standard.png"
+     "subject": "A gaoler's daughter with a ring of keys at a cell door",
+     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: evening light on the road.",
+     "file": "tidemark-production/art/TMI-1688-gaolers-daughter.png"
     }
    ],
    "unused": []
@@ -20484,100 +20484,100 @@
      "cell": 1,
      "illustration": "TMI-1689",
      "card": "TMC-1689",
-     "title": "Freed Captive",
-     "faction": "Neutral",
-     "type": "Unit",
-     "subject": "A freed captive with broken shackles at her wrists blinks in the sun",
-     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.",
-     "file": "tidemark-production/art/TMI-1689-freed-captive.png"
-    },
-    {
-     "cell": 2,
-     "illustration": "TMI-1690",
-     "card": "TMC-1690",
-     "title": "Gaoler's Daughter",
-     "faction": "Neutral",
-     "type": "Unit",
-     "subject": "A gaoler's daughter with a ring of keys at a cell door",
-     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: evening light on the road.",
-     "file": "tidemark-production/art/TMI-1690-gaolers-daughter.png"
-    },
-    {
-     "cell": 3,
-     "illustration": "TMI-1691",
-     "card": "TMC-1691",
      "title": "Liberator of the Chains",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A liberator on a hill with a broken chain in one hand",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: plain daylight.",
-     "file": "tidemark-production/art/TMI-1691-liberator-of-the-chains.png"
+     "file": "tidemark-production/art/TMI-1689-liberator-of-the-chains.png"
     },
     {
-     "cell": 4,
-     "illustration": "TMI-1692",
-     "card": "TMC-1692",
+     "cell": 2,
+     "illustration": "TMI-1690",
+     "card": "TMC-1690",
      "title": "Mercenary Pikeman",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A pikeman for hire braces a long pike",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.",
-     "file": "tidemark-production/art/TMI-1692-mercenary-pikeman.png"
+     "file": "tidemark-production/art/TMI-1690-mercenary-pikeman.png"
     },
     {
-     "cell": 5,
-     "illustration": "TMI-1693",
-     "card": "TMC-1693",
+     "cell": 3,
+     "illustration": "TMI-1691",
+     "card": "TMC-1691",
      "title": "Ox Cart Driver",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A driver on an ox cart on a muddy road",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.",
-     "file": "tidemark-production/art/TMI-1693-ox-cart-driver.png"
+     "file": "tidemark-production/art/TMI-1691-ox-cart-driver.png"
     },
     {
-     "cell": 6,
-     "illustration": "TMI-1694",
-     "card": "TMC-1694",
+     "cell": 4,
+     "illustration": "TMI-1692",
+     "card": "TMC-1692",
      "title": "Rag-Tag Militia",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A militia of farmers armed with pitchforks",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: plain daylight.",
-     "file": "tidemark-production/art/TMI-1694-rag-tag-militia.png"
+     "file": "tidemark-production/art/TMI-1692-rag-tag-militia.png"
     },
     {
-     "cell": 7,
-     "illustration": "TMI-1695",
-     "card": "TMC-1695",
+     "cell": 5,
+     "illustration": "TMI-1693",
+     "card": "TMC-1693",
      "title": "Roadside Tinker",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A tinker mends a kettle by a roadside fire",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.",
-     "file": "tidemark-production/art/TMI-1695-roadside-tinker.png"
+     "file": "tidemark-production/art/TMI-1693-roadside-tinker.png"
     },
     {
-     "cell": 8,
-     "illustration": "TMI-1696",
-     "card": "TMC-1696",
+     "cell": 6,
+     "illustration": "TMI-1694",
+     "card": "TMC-1694",
      "title": "Runaway",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A runaway sprints along a coast path with a bundle",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.",
-     "file": "tidemark-production/art/TMI-1696-runaway.png"
+     "file": "tidemark-production/art/TMI-1694-runaway.png"
     },
     {
-     "cell": 9,
-     "illustration": "TMI-1697",
-     "card": "TMC-1697",
+     "cell": 7,
+     "illustration": "TMI-1695",
+     "card": "TMC-1695",
      "title": "Scrounger",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A scrounger comes back from the ruins with a full sack",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.",
-     "file": "tidemark-production/art/TMI-1697-scrounger.png"
+     "file": "tidemark-production/art/TMI-1695-scrounger.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1696",
+     "card": "TMC-1696",
+     "title": "Sellsword Archer",
+     "faction": "Neutral",
+     "type": "Unit",
+     "subject": "A sellsword archer on a ridge draws a bow for coin",
+     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.",
+     "file": "tidemark-production/art/TMI-1696-sellsword-archer.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1697",
+     "card": "TMC-1697",
+     "title": "The Great Liberator",
+     "faction": "Neutral",
+     "type": "Unit",
+     "subject": "A woman with broken chains round her shoulders on a hill at dawn",
+     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos.",
+     "file": "tidemark-production/art/TMI-1697-the-great-liberator.png"
     }
    ],
    "unused": []
@@ -20592,100 +20592,100 @@
      "cell": 1,
      "illustration": "TMI-1698",
      "card": "TMC-1698",
-     "title": "Sellsword Archer",
-     "faction": "Neutral",
-     "type": "Unit",
-     "subject": "A sellsword archer on a ridge draws a bow for coin",
-     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.",
-     "file": "tidemark-production/art/TMI-1698-sellsword-archer.png"
-    },
-    {
-     "cell": 2,
-     "illustration": "TMI-1699",
-     "card": "TMC-1699",
-     "title": "The Great Liberator",
-     "faction": "Neutral",
-     "type": "Unit",
-     "subject": "A woman with broken chains round her shoulders on a hill at dawn",
-     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos.",
-     "file": "tidemark-production/art/TMI-1699-the-great-liberator.png"
-    },
-    {
-     "cell": 3,
-     "illustration": "TMI-1700",
-     "card": "TMC-1700",
      "title": "The Silent Mercenary",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A cloaked mercenary with no banner stands at a crossroads",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: plain daylight.",
-     "file": "tidemark-production/art/TMI-1700-the-silent-mercenary.png"
+     "file": "tidemark-production/art/TMI-1698-the-silent-mercenary.png"
     },
     {
-     "cell": 4,
-     "illustration": "TMI-1702",
-     "card": "TMC-1702",
+     "cell": 2,
+     "illustration": "TMI-1700",
+     "card": "TMC-1700",
      "title": "Veteran Sellsword",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A veteran sellsword leans on a notched sword",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.",
-     "file": "tidemark-production/art/TMI-1702-veteran-sellsword.png"
+     "file": "tidemark-production/art/TMI-1700-veteran-sellsword.png"
     },
     {
-     "cell": 5,
-     "illustration": "TMI-1703",
-     "card": "TMC-1703",
+     "cell": 3,
+     "illustration": "TMI-1701",
+     "card": "TMC-1701",
      "title": "Wandering Surgeon",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A surgeon in a long coat with a bag of tools",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: rain and low cloud.",
-     "file": "tidemark-production/art/TMI-1703-wandering-surgeon.png"
+     "file": "tidemark-production/art/TMI-1701-wandering-surgeon.png"
     },
     {
-     "cell": 6,
-     "illustration": "TMI-1704",
-     "card": "TMC-1704",
+     "cell": 4,
+     "illustration": "TMI-1702",
+     "card": "TMC-1702",
      "title": "Warlord of the Wastes",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A warlord on a ridge with a great axe over a barren plain",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: evening light on the road.",
-     "file": "tidemark-production/art/TMI-1704-warlord-of-the-wastes.png"
+     "file": "tidemark-production/art/TMI-1702-warlord-of-the-wastes.png"
     },
     {
-     "cell": 7,
-     "illustration": "TMI-1706",
-     "card": "TMC-1706",
+     "cell": 5,
+     "illustration": "TMI-1704",
+     "card": "TMC-1704",
      "title": "Wasteland Wanderer",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A lone wanderer on a wasteland track",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.",
-     "file": "tidemark-production/art/TMI-1706-wasteland-wanderer.png"
+     "file": "tidemark-production/art/TMI-1704-wasteland-wanderer.png"
     },
     {
-     "cell": 8,
-     "illustration": "TMI-1707",
-     "card": "TMC-1707",
+     "cell": 6,
+     "illustration": "TMI-1705",
+     "card": "TMC-1705",
      "title": "Ambush on the Road",
      "faction": "Neutral",
      "type": "Spell",
      "subject": "Mercenaries leap from roadside brush",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: plain daylight.",
-     "file": "tidemark-production/art/TMI-1707-ambush-on-the-road.png"
+     "file": "tidemark-production/art/TMI-1705-ambush-on-the-road.png"
     },
     {
-     "cell": 9,
-     "illustration": "TMI-1708",
-     "card": "TMC-1708",
+     "cell": 7,
+     "illustration": "TMI-1706",
+     "card": "TMC-1706",
      "title": "Break Free",
      "faction": "Neutral",
      "type": "Spell",
      "subject": "A prisoner bursts his shackles with a roar",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.",
-     "file": "tidemark-production/art/TMI-1708-break-free.png"
+     "file": "tidemark-production/art/TMI-1706-break-free.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1707",
+     "card": "TMC-1707",
+     "title": "Dust Devil",
+     "faction": "Neutral",
+     "type": "Spell",
+     "subject": "A dust devil on a plain",
+     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: rain and low cloud.",
+     "file": "tidemark-production/art/TMI-1707-dust-devil.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1708",
+     "card": "TMC-1708",
+     "title": "Free Company Muster",
+     "faction": "Neutral",
+     "type": "Spell",
+     "subject": "A company of mercenaries marches out of a forest road",
+     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable. Light: grey windy sky.",
+     "file": "tidemark-production/art/TMI-1708-free-company-muster.png"
     }
    ],
    "unused": []
@@ -20709,36 +20709,36 @@
     },
     {
      "cell": 2,
-     "illustration": "TMI-1701",
-     "card": "TMC-1701",
+     "illustration": "TMI-1699",
+     "card": "TMC-1699",
      "title": "The Wolf of the Wastes King",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A huge grey wolf at the head of a pack on a frozen moor",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: plain daylight.",
-     "file": "tidemark-production/art/TMI-1701-the-wolf-of-the-wastes-king.png"
+     "file": "tidemark-production/art/TMI-1699-the-wolf-of-the-wastes-king.png"
     },
     {
      "cell": 3,
-     "illustration": "TMI-1705",
-     "card": "TMC-1705",
+     "illustration": "TMI-1703",
+     "card": "TMC-1703",
      "title": "Wasteland Dog",
      "faction": "Neutral",
      "type": "Unit",
      "subject": "A thin dog trots along a wasteland road",
      "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.",
-     "file": "tidemark-production/art/TMI-1705-wasteland-dog.png"
+     "file": "tidemark-production/art/TMI-1703-wasteland-dog.png"
     },
     {
      "cell": 4,
      "illustration": "TMI-1709",
      "card": "TMC-1709",
-     "title": "Dust Devil",
+     "title": "Free Company Standard",
      "faction": "Neutral",
      "type": "Spell",
-     "subject": "A dust devil on a plain",
-     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: rain and low cloud.",
-     "file": "tidemark-production/art/TMI-1709-dust-devil.png"
+     "subject": "A standard of a black chain planted in a camp",
+     "direction": "Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: plain daylight.",
+     "file": "tidemark-production/art/TMI-1709-free-company-standard.png"
     },
     {
      "cell": 5,

@@ -6091,79 +6091,79 @@ File: `tidemark-production/sheets/TM-S198.png`
 6. **Free Company Knight** (TMC-1685, Neutral, Unit) `TMI-1685`  
    Subject: A mercenary knight in mismatched plate on a lean horse.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.
-7. **Free Company Muster** (TMC-1686, Neutral, Unit) `TMI-1686`  
-   Subject: A company of mercenaries marches out of a forest road.  
-   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: grey windy sky.
-8. **Free Company Recruit** (TMC-1687, Neutral, Unit) `TMI-1687`  
+7. **Free Company Recruit** (TMC-1686, Neutral, Unit) `TMI-1686`  
    Subject: A recruit signs a ledger at a mercenary table.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: plain daylight.
-9. **Free Company Standard** (TMC-1688, Neutral, Unit) `TMI-1688`  
-   Subject: A standard of a black chain planted in a camp.  
-   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: plain daylight.
+8. **Freed Captive** (TMC-1687, Neutral, Unit) `TMI-1687`  
+   Subject: A freed captive with broken shackles at her wrists blinks in the sun.  
+   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.
+9. **Gaoler's Daughter** (TMC-1688, Neutral, Unit) `TMI-1688`  
+   Subject: A gaoler's daughter with a ring of keys at a cell door.  
+   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: evening light on the road.
 
 ## TM-S199: Neutral: people (supplement)
 
 File: `tidemark-production/sheets/TM-S199.png`
 
-1. **Freed Captive** (TMC-1689, Neutral, Unit) `TMI-1689`  
-   Subject: A freed captive with broken shackles at her wrists blinks in the sun.  
-   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.
-2. **Gaoler's Daughter** (TMC-1690, Neutral, Unit) `TMI-1690`  
-   Subject: A gaoler's daughter with a ring of keys at a cell door.  
-   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: evening light on the road.
-3. **Liberator of the Chains** (TMC-1691, Neutral, Unit) `TMI-1691`  
+1. **Liberator of the Chains** (TMC-1689, Neutral, Unit) `TMI-1689`  
    Subject: A liberator on a hill with a broken chain in one hand.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: plain daylight.
-4. **Mercenary Pikeman** (TMC-1692, Neutral, Unit) `TMI-1692`  
+2. **Mercenary Pikeman** (TMC-1690, Neutral, Unit) `TMI-1690`  
    Subject: A pikeman for hire braces a long pike.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.
-5. **Ox Cart Driver** (TMC-1693, Neutral, Unit) `TMI-1693`  
+3. **Ox Cart Driver** (TMC-1691, Neutral, Unit) `TMI-1691`  
    Subject: A driver on an ox cart on a muddy road.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.
-6. **Rag-Tag Militia** (TMC-1694, Neutral, Unit) `TMI-1694`  
+4. **Rag-Tag Militia** (TMC-1692, Neutral, Unit) `TMI-1692`  
    Subject: A militia of farmers armed with pitchforks.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: plain daylight.
-7. **Roadside Tinker** (TMC-1695, Neutral, Unit) `TMI-1695`  
+5. **Roadside Tinker** (TMC-1693, Neutral, Unit) `TMI-1693`  
    Subject: A tinker mends a kettle by a roadside fire.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.
-8. **Runaway** (TMC-1696, Neutral, Unit) `TMI-1696`  
+6. **Runaway** (TMC-1694, Neutral, Unit) `TMI-1694`  
    Subject: A runaway sprints along a coast path with a bundle.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.
-9. **Scrounger** (TMC-1697, Neutral, Unit) `TMI-1697`  
+7. **Scrounger** (TMC-1695, Neutral, Unit) `TMI-1695`  
    Subject: A scrounger comes back from the ruins with a full sack.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.
+8. **Sellsword Archer** (TMC-1696, Neutral, Unit) `TMI-1696`  
+   Subject: A sellsword archer on a ridge draws a bow for coin.  
+   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.
+9. **The Great Liberator** (TMC-1697, Neutral, Unit) `TMI-1697`  
+   Subject: A woman with broken chains round her shoulders on a hill at dawn.  
+   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos.
 
 ## TM-S200: Neutral: people (supplement)
 
 File: `tidemark-production/sheets/TM-S200.png`
 
-1. **Sellsword Archer** (TMC-1698, Neutral, Unit) `TMI-1698`  
-   Subject: A sellsword archer on a ridge draws a bow for coin.  
-   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey windy sky.
-2. **The Great Liberator** (TMC-1699, Neutral, Unit) `TMI-1699`  
-   Subject: A woman with broken chains round her shoulders on a hill at dawn.  
-   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos.
-3. **The Silent Mercenary** (TMC-1700, Neutral, Unit) `TMI-1700`  
+1. **The Silent Mercenary** (TMC-1698, Neutral, Unit) `TMI-1698`  
    Subject: A cloaked mercenary with no banner stands at a crossroads.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: plain daylight.
-4. **Veteran Sellsword** (TMC-1702, Neutral, Unit) `TMI-1702`  
+2. **Veteran Sellsword** (TMC-1700, Neutral, Unit) `TMI-1700`  
    Subject: A veteran sellsword leans on a notched sword.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.
-5. **Wandering Surgeon** (TMC-1703, Neutral, Unit) `TMI-1703`  
+3. **Wandering Surgeon** (TMC-1701, Neutral, Unit) `TMI-1701`  
    Subject: A surgeon in a long coat with a bag of tools.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: rain and low cloud.
-6. **Warlord of the Wastes** (TMC-1704, Neutral, Unit) `TMI-1704`  
+4. **Warlord of the Wastes** (TMC-1702, Neutral, Unit) `TMI-1702`  
    Subject: A warlord on a ridge with a great axe over a barren plain.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: evening light on the road.
-7. **Wasteland Wanderer** (TMC-1706, Neutral, Unit) `TMI-1706`  
+5. **Wasteland Wanderer** (TMC-1704, Neutral, Unit) `TMI-1704`  
    Subject: A lone wanderer on a wasteland track.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: evening light on the road.
-8. **Ambush on the Road** (TMC-1707, Neutral, Spell) `TMI-1707`  
+6. **Ambush on the Road** (TMC-1705, Neutral, Spell) `TMI-1705`  
    Subject: Mercenaries leap from roadside brush.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: plain daylight.
-9. **Break Free** (TMC-1708, Neutral, Spell) `TMI-1708`  
+7. **Break Free** (TMC-1706, Neutral, Spell) `TMI-1706`  
    Subject: A prisoner bursts his shackles with a roar.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.
+8. **Dust Devil** (TMC-1707, Neutral, Spell) `TMI-1707`  
+   Subject: A dust devil on a plain.  
+   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: rain and low cloud.
+9. **Free Company Muster** (TMC-1708, Neutral, Spell) `TMI-1708`  
+   Subject: A company of mercenaries marches out of a forest road.  
+   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable. Light: grey windy sky.
 
 ## TM-S201: Mixed factions and subjects (supplement)
 
@@ -6172,15 +6172,15 @@ File: `tidemark-production/sheets/TM-S201.png`
 1. **Feral Hound** (TMC-1684, Neutral, Unit) `TMI-1684`  
    Subject: A feral hound lunges from an alley.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.
-2. **The Wolf of the Wastes King** (TMC-1701, Neutral, Unit) `TMI-1701`  
+2. **The Wolf of the Wastes King** (TMC-1699, Neutral, Unit) `TMI-1699`  
    Subject: A huge grey wolf at the head of a pack on a frozen moor.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: plain daylight.
-3. **Wasteland Dog** (TMC-1705, Neutral, Unit) `TMI-1705`  
+3. **Wasteland Dog** (TMC-1703, Neutral, Unit) `TMI-1703`  
    Subject: A thin dog trots along a wasteland road.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: clear crisp morning.
-4. **Dust Devil** (TMC-1709, Neutral, Spell) `TMI-1709`  
-   Subject: A dust devil on a plain.  
-   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: rain and low cloud.
+4. **Free Company Standard** (TMC-1709, Neutral, Spell) `TMI-1709`  
+   Subject: A standard of a black chain planted in a camp.  
+   Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: plain daylight.
 5. **Horde of the Wastes** (TMC-1710, Neutral, Spell) `TMI-1710`  
    Subject: A horde of raiders pours over a dune at dawn.  
    Direction: Neutral: roads, inns, moors, weather and ruins that belong to no faction. Palette earthy neutrals with the sky and sea doing the colour work. Travellers, mercenaries and ordinary animals; weather drawn as real weather. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable.
