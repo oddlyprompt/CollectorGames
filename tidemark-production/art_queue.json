@@ -20964,6 +20964,2117 @@
     8,
     9
    ]
+  },
+  {
+   "id": "TM-S204",
+   "pool": "supplement",
+   "theme": "Tideborn: people",
+   "file": "tidemark-production/sheets/TM-S204.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1721",
+     "card": "TMC-1721",
+     "title": "Brine Mage Initiate",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "An initiate with a salt-crusted staff on a reef rock",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1721-brine-mage-initiate.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1722",
+     "card": "TMC-1722",
+     "title": "Foam Knight",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A knight in a foam-white cloak on a seahorse",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1722-foam-knight.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1723",
+     "card": "TMC-1723",
+     "title": "Gale Admiral",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "An admiral in a gale at the head of a column",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1723-gale-admiral.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1724",
+     "card": "TMC-1724",
+     "title": "Gale Caller",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A mage on a rock calls a gale with an upturned palm",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1724-gale-caller.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1725",
+     "card": "TMC-1725",
+     "title": "Gale Oracle",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "An oracle on a wind-carved rock reads a storm map",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1725-gale-oracle.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1726",
+     "card": "TMC-1726",
+     "title": "Kelp Dancer in the Gale",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A dancer in a gale-whipped kelp cloak on a rock",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1726-kelp-dancer-in-the-gale.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1727",
+     "card": "TMC-1727",
+     "title": "Queen Saela of the Gale",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A queen on a column of spray with her crown of pearl",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1727-queen-saela-of-the-gale.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1728",
+     "card": "TMC-1728",
+     "title": "Spray Skimmer",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A Tideborn scout skims a wave in a stiff gale",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1728-spray-skimmer.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1729",
+     "card": "TMC-1729",
+     "title": "Squall Guard",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A guard braces against a squall at a reef gate",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1729-squall-guard.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S205",
+   "pool": "supplement",
+   "theme": "Tideborn: people",
+   "file": "tidemark-production/sheets/TM-S205.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1731",
+     "card": "TMC-1731",
+     "title": "Storm Pearl Merchant",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A Tideborn merchant bargains for a pearl at a stall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1731-storm-pearl-merchant.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1733",
+     "card": "TMC-1733",
+     "title": "Storm Priestess",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A priestess lit by lightning reads the clouds",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1733-storm-priestess.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1735",
+     "card": "TMC-1735",
+     "title": "Tempest Singer",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A singer in a gale with her hair streaming",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1735-tempest-singer.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1737",
+     "card": "TMC-1737",
+     "title": "Tide Caller Maris",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A caller stands in a surf with her arms spread",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1737-tide-caller-maris.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1738",
+     "card": "TMC-1738",
+     "title": "Tideborn Diver",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A diver plunges off a rock into a storm swell",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1738-tideborn-diver.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1739",
+     "card": "TMC-1739",
+     "title": "Tidewarden of the Gale",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A warden floats above a gale with a trident raised",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1739-tidewarden-of-the-gale.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1741",
+     "card": "TMC-1741",
+     "title": "Wave Rider",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A Tideborn rides a breaker in a storm light",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1741-wave-rider.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1742",
+     "card": "TMC-1742",
+     "title": "Whirlpool Mage",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A mage turns a whirlpool with a gesture",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1742-whirlpool-mage.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1743",
+     "card": "TMC-1743",
+     "title": "Rip Current",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "A backwash drags a boat off a beach",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1743-rip-current.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S206",
+   "pool": "supplement",
+   "theme": "Free Fleets: people",
+   "file": "tidemark-production/sheets/TM-S206.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1753",
+     "card": "TMC-1753",
+     "title": "Admiral Corvin Stormborn",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "An admiral with his coat whipping at a storm-swept rail",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1753-admiral-corvin-stormborn.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1754",
+     "card": "TMC-1754",
+     "title": "Captain Zephyra Gale",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A captain stands at a ship's prow in a hurricane, calm",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: hazy morning in harbour.",
+     "file": "tidemark-production/art/TMI-1754-captain-zephyra-gale.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1755",
+     "card": "TMC-1755",
+     "title": "Gale Captain Orrin",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A captain lit by lightning on a quarterdeck",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: bright windy daylight.",
+     "file": "tidemark-production/art/TMI-1755-gale-captain-orrin.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1756",
+     "card": "TMC-1756",
+     "title": "Gale Navigator",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A navigator reads a barometer in a cabin",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: hazy morning in harbour.",
+     "file": "tidemark-production/art/TMI-1756-gale-navigator.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1757",
+     "card": "TMC-1757",
+     "title": "Gale Rope Hand",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A hand clings to a lashed boat in a gale",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: bright windy daylight.",
+     "file": "tidemark-production/art/TMI-1757-gale-rope-hand.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1758",
+     "card": "TMC-1758",
+     "title": "Gull Rider",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A boy rides a gull-weighted kite",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey squall light.",
+     "file": "tidemark-production/art/TMI-1758-gull-rider.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1759",
+     "card": "TMC-1759",
+     "title": "Hurricane Captain",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A captain at a wheel in a hurricane",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: golden evening at sea.",
+     "file": "tidemark-production/art/TMI-1759-hurricane-captain.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1760",
+     "card": "TMC-1760",
+     "title": "Hurricane Raider",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A raider with an axe boards a ship in a gale",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: hazy morning in harbour.",
+     "file": "tidemark-production/art/TMI-1760-hurricane-raider.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1761",
+     "card": "TMC-1761",
+     "title": "Lightning Rod Sailor",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A sailor on a yard in lightning",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: golden evening at sea.",
+     "file": "tidemark-production/art/TMI-1761-lightning-rod-sailor.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S207",
+   "pool": "supplement",
+   "theme": "Free Fleets: people",
+   "file": "tidemark-production/sheets/TM-S207.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1762",
+     "card": "TMC-1762",
+     "title": "Scuttle Hand",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A sailor races across a heaving deck",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: golden evening at sea.",
+     "file": "tidemark-production/art/TMI-1762-scuttle-hand.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1763",
+     "card": "TMC-1763",
+     "title": "Storm Cook",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A cook holds a pot steady in a pitching galley",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: lantern light below decks.",
+     "file": "tidemark-production/art/TMI-1763-storm-cook.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1764",
+     "card": "TMC-1764",
+     "title": "Storm Deckhand",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A deckhand drags a sail in a squall",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey squall light.",
+     "file": "tidemark-production/art/TMI-1764-storm-deckhand.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1765",
+     "card": "TMC-1765",
+     "title": "Storm Pilot",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A pilot at a wheel steers by lightning flashes",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: bright windy daylight.",
+     "file": "tidemark-production/art/TMI-1765-storm-pilot.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1766",
+     "card": "TMC-1766",
+     "title": "Storm Quartermaster",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A quartermaster in oilskins counts cargo in a hold",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: lantern light below decks.",
+     "file": "tidemark-production/art/TMI-1766-storm-quartermaster.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1767",
+     "card": "TMC-1767",
+     "title": "Storm Sailor",
+     "faction": "Free Fleets",
+     "type": "Unit",
+     "subject": "A sailor lashes himself to the mast in a gale",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: golden evening at sea.",
+     "file": "tidemark-production/art/TMI-1767-storm-sailor.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1768",
+     "card": "TMC-1768",
+     "title": "Broadside in the Storm",
+     "faction": "Free Fleets",
+     "type": "Spell",
+     "subject": "A broadside through rain and spray",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1768-broadside-in-the-storm.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1769",
+     "card": "TMC-1769",
+     "title": "Hurricane Armada",
+     "faction": "Free Fleets",
+     "type": "Spell",
+     "subject": "A fleet appears out of the eye of a hurricane",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable. Light: bright windy daylight.",
+     "file": "tidemark-production/art/TMI-1769-hurricane-armada.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1770",
+     "card": "TMC-1770",
+     "title": "Reef the Sails",
+     "faction": "Free Fleets",
+     "type": "Spell",
+     "subject": "Sailors reef the topsails in a rising gale",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey squall light.",
+     "file": "tidemark-production/art/TMI-1770-reef-the-sails.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S208",
+   "pool": "supplement",
+   "theme": "Sea factions: places and things",
+   "file": "tidemark-production/sheets/TM-S208.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1749",
+     "card": "TMC-1749",
+     "title": "Black Squall",
+     "faction": "Tideborn",
+     "type": "Domain",
+     "subject": "A line of black squall clouds over the open sea",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1749-black-squall.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1750",
+     "card": "TMC-1750",
+     "title": "Eye of the Storm",
+     "faction": "Tideborn",
+     "type": "Domain",
+     "subject": "A calm circle of sea inside a ring of black cloud",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Elevated register: a more considered composition and light, still grounded and believable. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1750-eye-of-the-storm.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1751",
+     "card": "TMC-1751",
+     "title": "Squall Court",
+     "faction": "Tideborn",
+     "type": "Domain",
+     "subject": "A court of coral seats beneath a wild sky",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1751-squall-court.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1752",
+     "card": "TMC-1752",
+     "title": "Storm Surge Barrier",
+     "faction": "Tideborn",
+     "type": "Domain",
+     "subject": "A sea wall in a storm surge, spray over its top",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1752-storm-surge-barrier.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1747",
+     "card": "TMC-1747",
+     "title": "Salt Wind Charm",
+     "faction": "Tideborn",
+     "type": "Relic",
+     "subject": "A charm of shell and salt on a mast head",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1747-salt-wind-charm.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1748",
+     "card": "TMC-1748",
+     "title": "Wind Pearl",
+     "faction": "Tideborn",
+     "type": "Relic",
+     "subject": "A pearl glowing in a clam in a stormy shallows",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1748-wind-pearl.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1777",
+     "card": "TMC-1777",
+     "title": "Gale Harbor",
+     "faction": "Free Fleets",
+     "type": "Domain",
+     "subject": "A harbour with boats tossing at their moorings",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: golden evening at sea.",
+     "file": "tidemark-production/art/TMI-1777-gale-harbor.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1773",
+     "card": "TMC-1773",
+     "title": "Gale Raider",
+     "faction": "Free Fleets",
+     "type": "Vessel",
+     "subject": "A raider surfing a gale on a long hull",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The ship in three-quarter view on the water with the waterline and full rig visible; sea and sky set the weather and the scale. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: grey squall light.",
+     "file": "tidemark-production/art/TMI-1773-gale-raider.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1774",
+     "card": "TMC-1774",
+     "title": "Squall Runner",
+     "faction": "Free Fleets",
+     "type": "Vessel",
+     "subject": "A small sloop running before a squall",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The ship in three-quarter view on the water with the waterline and full rig visible; sea and sky set the weather and the scale. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: lantern light below decks.",
+     "file": "tidemark-production/art/TMI-1774-squall-runner.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S209",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S209.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1730",
+     "card": "TMC-1730",
+     "title": "Storm Leviathan",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A leviathan under a black sky with lightning on its hide",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Elevated register: a more considered composition and light, still grounded and believable. Light: dim blue mid-water light.",
+     "file": "tidemark-production/art/TMI-1730-storm-leviathan.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1732",
+     "card": "TMC-1732",
+     "title": "Storm Petrel",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A storm petrel flits low over a heaving sea",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1732-storm-petrel.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1734",
+     "card": "TMC-1734",
+     "title": "Storm Turtle",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A turtle heaves through a storm wave",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1734-storm-turtle.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1736",
+     "card": "TMC-1736",
+     "title": "Thunder Whale",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A whale breaches in a thunderstorm",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1736-thunder-whale.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1740",
+     "card": "TMC-1740",
+     "title": "Undertow Eel",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "An eel dives into a dark wave trailing foam",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1740-undertow-eel.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1744",
+     "card": "TMC-1744",
+     "title": "Storm Warning Flags",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "A signal of red flags flutters on a harbour mast",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1744-storm-warning-flags.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1745",
+     "card": "TMC-1745",
+     "title": "Typhoon",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "A typhoon sweeps a bay clean of ships",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1745-typhoon.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1746",
+     "card": "TMC-1746",
+     "title": "Wave Break Tide",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "A great wave breaks over a reef and lifts a fleet",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable. Light: dim blue mid-water light.",
+     "file": "tidemark-production/art/TMI-1746-wave-break-tide.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1771",
+     "card": "TMC-1771",
+     "title": "Storm-Tossed Fleet",
+     "faction": "Free Fleets",
+     "type": "Spell",
+     "subject": "A fleet of ships in a storm, lanterns swaying",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1771-storm-tossed-fleet.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S210",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S210.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1772",
+     "card": "TMC-1772",
+     "title": "Thunderbolt",
+     "faction": "Free Fleets",
+     "type": "Spell",
+     "subject": "Lightning strikes a mast",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable. Light: hazy morning in harbour.",
+     "file": "tidemark-production/art/TMI-1772-thunderbolt.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1775",
+     "card": "TMC-1775",
+     "title": "Storm Galleon",
+     "faction": "Free Fleets",
+     "type": "Vessel",
+     "subject": "A galleon labouring through a storm",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The ship in three-quarter view on the water with the waterline and full rig visible; sea and sky set the weather and the scale. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1775-storm-galleon.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1776",
+     "card": "TMC-1776",
+     "title": "The Storm Rider",
+     "faction": "Free Fleets",
+     "type": "Vessel",
+     "subject": "A galleon riding a wave crest as lightning forks",
+     "direction": "Free Fleets: working ships, busy quays, open sea, coves and harbour taverns. Palette weathered wood, canvas, sea blue, faded reds. Sailors in practical working clothes; traders and privateers, not cartoon pirates; ships drawn with believable rigging. The ship in three-quarter view on the water with the waterline and full rig visible; sea and sky set the weather and the scale. Elevated register: a more considered composition and light, still grounded and believable. Light: bright windy daylight.",
+     "file": "tidemark-production/art/TMI-1776-the-storm-rider.png"
+    }
+   ],
+   "unused": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "id": "TM-S211",
+   "pool": "supplement",
+   "theme": "Abyssal Choir: people",
+   "file": "tidemark-production/sheets/TM-S211.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1785",
+     "card": "TMC-1785",
+     "title": "Bishop of the Pale Moon",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A bishop in a silver mitre at a moon-lit altar",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1785-bishop-of-the-pale-moon.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1786",
+     "card": "TMC-1786",
+     "title": "Drowned Choirmaster Veyl",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A choirmaster conducts a drowned choir with a bone baton",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: grey dawn over black water.",
+     "file": "tidemark-production/art/TMI-1786-drowned-choirmaster-veyl.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1787",
+     "card": "TMC-1787",
+     "title": "Drowned Lamplighter",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A drowned figure lights a dockside lamp with cold hands",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1787-drowned-lamplighter.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1788",
+     "card": "TMC-1788",
+     "title": "Drowned Lantern Carrier",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A drowned figure carries a dim lantern along a pier",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1788-drowned-lantern-carrier.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1789",
+     "card": "TMC-1789",
+     "title": "Drowned Moon Singer",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A drowned singer sings by a quay at night",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1789-drowned-moon-singer.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1790",
+     "card": "TMC-1790",
+     "title": "Harbor Bell Keeper",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A pale keeper rings a bell on a drowned buoy",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: grey dawn over black water.",
+     "file": "tidemark-production/art/TMI-1790-harbor-bell-keeper.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1791",
+     "card": "TMC-1791",
+     "title": "Harbor Ghoul",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A ghoul crawls up a quay ladder at night",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1791-harbor-ghoul.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1793",
+     "card": "TMC-1793",
+     "title": "Harbor Moon Cantor",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A cantor in a black robe holds a book at an altar",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: grey dawn over black water.",
+     "file": "tidemark-production/art/TMI-1793-harbor-moon-cantor.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1794",
+     "card": "TMC-1794",
+     "title": "Harbor Moon Wraith Lord",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A tall wraith in a moonlit harbour dragging a chain",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1794-harbor-moon-wraith-lord.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S212",
+   "pool": "supplement",
+   "theme": "Abyssal Choir: people",
+   "file": "tidemark-production/sheets/TM-S212.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1795",
+     "card": "TMC-1795",
+     "title": "Lunar Priest",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A priest in a hooded robe at a moon-lit altar",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1795-lunar-priest.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1798",
+     "card": "TMC-1798",
+     "title": "Moon Siren",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A siren on a harbour rock under a full moon",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1798-moon-siren.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1799",
+     "card": "TMC-1799",
+     "title": "Moonlit Cultist",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A cultist stands in moonlit shallows with a lantern",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1799-moonlit-cultist.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1801",
+     "card": "TMC-1801",
+     "title": "Night Diver",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A diver emerges at night with a pearl in his hand",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1801-night-diver.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1802",
+     "card": "TMC-1802",
+     "title": "Pier Wraith",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A wraith leaps from a pier piling in the moonlight",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1802-pier-wraith.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1804",
+     "card": "TMC-1804",
+     "title": "Tide Watcher",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A pale watcher on a night pier stares at the moon",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1804-tide-watcher.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1805",
+     "card": "TMC-1805",
+     "title": "Tide-Dragged Captain",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A drowned captain in a barnacled coat on a drifting wreck",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: moonlight on a calm sea.",
+     "file": "tidemark-production/art/TMI-1805-tide-dragged-captain.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1806",
+     "card": "TMC-1806",
+     "title": "Whale Fall Priest",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A priest at a whale fall on a moonlit sea floor",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1806-whale-fall-priest.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1807",
+     "card": "TMC-1807",
+     "title": "Dark of the Moon",
+     "faction": "Abyssal Choir",
+     "type": "Spell",
+     "subject": "Clouds cover the moon and the harbour goes dark",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1807-dark-of-the-moon.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S213",
+   "pool": "supplement",
+   "theme": "Harbor Leagues: people",
+   "file": "tidemark-production/sheets/TM-S213.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1815",
+     "card": "TMC-1815",
+     "title": "Dock Watchman",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A watchman on a dock with a cudgel",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: lamplight at dusk.",
+     "file": "tidemark-production/art/TMI-1815-dock-watchman.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1816",
+     "card": "TMC-1816",
+     "title": "Guildmistress of the Moon",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A guildmistress on a quay in moonlight with a ledger",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos.",
+     "file": "tidemark-production/art/TMI-1816-guildmistress-of-the-moon.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1817",
+     "card": "TMC-1817",
+     "title": "Harbor Moon Marshal",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A marshal on a moonlit quay",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1817-harbor-moon-marshal.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1818",
+     "card": "TMC-1818",
+     "title": "Harbor Moon Recruit",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A young guard at a harbour gate with a lantern",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1818-harbor-moon-recruit.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1819",
+     "card": "TMC-1819",
+     "title": "Lantern Clerk",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A clerk by a lantern in a harbour office at night",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1819-lantern-clerk.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1820",
+     "card": "TMC-1820",
+     "title": "Master Lamplighter Orsa",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A lamplighter in a long coat on a ladder at night",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1820-master-lamplighter-orsa.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1821",
+     "card": "TMC-1821",
+     "title": "Moon Fair Vendor",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A vendor at a night fair with a tray of sweets",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1821-moon-fair-vendor.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1822",
+     "card": "TMC-1822",
+     "title": "Moon Harbor Mistress",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A harbour mistress in a silver coat at a table",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1822-moon-harbor-mistress.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1823",
+     "card": "TMC-1823",
+     "title": "Moon-Gate Warden",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A warden at a moon-gate in a harbour wall",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1823-moon-gate-warden.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S214",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S214.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1782",
+     "card": "TMC-1782",
+     "title": "Silver Fish",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A silver fish flashes in moonlit water",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1782-silver-fish.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1792",
+     "card": "TMC-1792",
+     "title": "Harbor Leech",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A leech-like fish in a harbour shadow",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: dim violet depth light.",
+     "file": "tidemark-production/art/TMI-1792-harbor-leech.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1796",
+     "card": "TMC-1796",
+     "title": "Moon Eel",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "An eel glides through moon-silvered water",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1796-moon-eel.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1797",
+     "card": "TMC-1797",
+     "title": "Moon Leviathan",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A leviathan rising from a moonlit harbour",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1797-moon-leviathan.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1800",
+     "card": "TMC-1800",
+     "title": "Moonlit Horror",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A horror in a moon-shadowed tide pool",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1800-moonlit-horror.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1803",
+     "card": "TMC-1803",
+     "title": "The Moon Eater",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A shape eating the moon's reflection in dark water",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos.",
+     "file": "tidemark-production/art/TMI-1803-the-moon-eater.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1824",
+     "card": "TMC-1824",
+     "title": "Moon-Watch Captain",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A captain on a harbour wall by moonlight",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1824-moon-watch-captain.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1825",
+     "card": "TMC-1825",
+     "title": "Night Ferry Hand",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A ferry hand poles a boat across a moonlit canal",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1825-night-ferry-hand.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1826",
+     "card": "TMC-1826",
+     "title": "Night Gatekeeper",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A gatekeeper with a lantern and keys at a harbour gate",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1826-night-gatekeeper.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S215",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S215.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1827",
+     "card": "TMC-1827",
+     "title": "Night Harbor Master",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A harbour master with a lantern checks a berth",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1827-night-harbor-master.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1828",
+     "card": "TMC-1828",
+     "title": "Night Porter",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A porter pushes a night cart along a quay",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1828-night-porter.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1829",
+     "card": "TMC-1829",
+     "title": "Tide Table Reader",
+     "faction": "Harbor Leagues",
+     "type": "Unit",
+     "subject": "A reader with a tide table checks a schedule",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: harbour fog.",
+     "file": "tidemark-production/art/TMI-1829-tide-table-reader.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1835",
+     "card": "TMC-1835",
+     "title": "Harbor Moon Festival",
+     "faction": "Harbor Leagues",
+     "type": "Enchantment",
+     "subject": "A festival of lanterns on a moonlit harbour",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1835-harbor-moon-festival.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1830",
+     "card": "TMC-1830",
+     "title": "Procession of Lights",
+     "faction": "Harbor Leagues",
+     "type": "Spell",
+     "subject": "A procession of lanterns on a harbour road",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1830-procession-of-lights.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1778",
+     "card": "TMC-1778",
+     "title": "Moon Court Guard",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A guard at a moon-white coral gate",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1778-moon-court-guard.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1779",
+     "card": "TMC-1779",
+     "title": "Moon Priestess of Ys",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A priestess raises a pearl to the moon",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1779-moon-priestess-of-ys.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1780",
+     "card": "TMC-1780",
+     "title": "Moon Tide Scout",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A Tideborn scout swims under a moon-bright surface",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1780-moon-tide-scout.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1781",
+     "card": "TMC-1781",
+     "title": "Moonpool Mage",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A mage kneels at a tide pool reflecting the moon",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1781-moonpool-mage.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S216",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S216.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1783",
+     "card": "TMC-1783",
+     "title": "Tide Queen's Moonlight",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "Moonlight on a coral wall and a column of guards",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1783-tide-queens-moonlight.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1808",
+     "card": "TMC-1808",
+     "title": "Eclipse of the Moon",
+     "faction": "Abyssal Choir",
+     "type": "Spell",
+     "subject": "The moon goes dark and the harbour is swept clean",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1808-eclipse-of-the-moon.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1814",
+     "card": "TMC-1814",
+     "title": "Moon Choir",
+     "faction": "Abyssal Choir",
+     "type": "Enchantment",
+     "subject": "A choir of drowned singers on a quay at night",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1814-moon-choir.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1809",
+     "card": "TMC-1809",
+     "title": "Moonlit Drown",
+     "faction": "Abyssal Choir",
+     "type": "Spell",
+     "subject": "A figure pulled under at the edge of a pier by moonlight",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1809-moonlit-drown.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1833",
+     "card": "TMC-1833",
+     "title": "Moon Lighthouse",
+     "faction": "Harbor Leagues",
+     "type": "Stronghold",
+     "subject": "A lighthouse sweeping light across a harbour at night",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. The structure seen whole from a distance, with small figures, carts or boats for scale and its surroundings visible. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1833-moon-lighthouse.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1834",
+     "card": "TMC-1834",
+     "title": "Night Market",
+     "faction": "Harbor Leagues",
+     "type": "Domain",
+     "subject": "A night market under paper lanterns",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1834-night-market.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1831",
+     "card": "TMC-1831",
+     "title": "The Harbor Moon Lantern",
+     "faction": "Harbor Leagues",
+     "type": "Relic",
+     "subject": "A giant lantern shaped like the moon on a tower",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1831-the-harbor-moon-lantern.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1832",
+     "card": "TMC-1832",
+     "title": "Moon Fleet",
+     "faction": "Harbor Leagues",
+     "type": "Vessel",
+     "subject": "A fleet of ships in silver moonlight",
+     "direction": "Harbor Leagues: merchant ports, lighthouses, guild halls, canals and quays. Palette warm sandstone, brass, harbour blue, lamplight amber. Officials, clerks and dockworkers in tan and blue; busy, lived-in civic spaces. The ship in three-quarter view on the water with the waterline and full rig visible; sea and sky set the weather and the scale. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1832-moon-fleet.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1784",
+     "card": "TMC-1784",
+     "title": "Moonrise Court",
+     "faction": "Tideborn",
+     "type": "Domain",
+     "subject": "A court of coral rising to meet the moon",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1784-moonrise-court.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S217",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S217.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1812",
+     "card": "TMC-1812",
+     "title": "Cathedral of the Moon",
+     "faction": "Abyssal Choir",
+     "type": "Stronghold",
+     "subject": "A white cathedral under a full moon with a drowned crowd",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The structure seen whole from a distance, with small figures, carts or boats for scale and its surroundings visible. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1812-cathedral-of-the-moon.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1813",
+     "card": "TMC-1813",
+     "title": "Moonlit Quay",
+     "faction": "Abyssal Choir",
+     "type": "Domain",
+     "subject": "A long empty quay under a pale moon",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1813-moonlit-quay.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1810",
+     "card": "TMC-1810",
+     "title": "Moon Pearl",
+     "faction": "Abyssal Choir",
+     "type": "Relic",
+     "subject": "A pearl glimmering like a small moon",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1810-moon-pearl.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1811",
+     "card": "TMC-1811",
+     "title": "Moon Shrine",
+     "faction": "Abyssal Choir",
+     "type": "Relic",
+     "subject": "A shrine of white stone on a harbour wall",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: near-total darkness with a single cold glow.",
+     "file": "tidemark-production/art/TMI-1811-moon-shrine.png"
+    }
+   ],
+   "unused": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "id": "TM-S218",
+   "pool": "supplement",
+   "theme": "Tideborn: people",
+   "file": "tidemark-production/sheets/TM-S218.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1836",
+     "card": "TMC-1836",
+     "title": "Coral City Mason",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A mason shapes living coral with a bone tool",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1836-coral-city-mason.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1837",
+     "card": "TMC-1837",
+     "title": "Coral Reader",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A reader at a shelf of carved shells in a deep hall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1837-coral-reader.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1838",
+     "card": "TMC-1838",
+     "title": "Deep Counsellor",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A counsellor in a coral robe studies a chart",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1838-deep-counsellor.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1839",
+     "card": "TMC-1839",
+     "title": "Deep Courier",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A courier races through an arch of coral",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1839-deep-courier.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1840",
+     "card": "TMC-1840",
+     "title": "Deep Gate Sentinel",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A warden with two spears at a deep gate",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1840-deep-gate-sentinel.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1841",
+     "card": "TMC-1841",
+     "title": "Deep Oracle",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "An oracle at a pool of black water in a cave",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1841-deep-oracle.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1844",
+     "card": "TMC-1844",
+     "title": "Deep Sovereign",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A sovereign on a throne of coral in a deep hall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: dim blue mid-water light.",
+     "file": "tidemark-production/art/TMI-1844-deep-sovereign.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1845",
+     "card": "TMC-1845",
+     "title": "Depth Mage",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A mage in a dark robe raises a hand in a deep chamber",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1845-depth-mage.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1846",
+     "card": "TMC-1846",
+     "title": "Emissary of Ys'mar",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "An emissary in a pearl cloak with a sealed scroll",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1846-emissary-of-ysmar.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S219",
+   "pool": "supplement",
+   "theme": "Tideborn: people",
+   "file": "tidemark-production/sheets/TM-S219.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1847",
+     "card": "TMC-1847",
+     "title": "Fathom Gardener",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A gardener tends a bed of luminous anemones",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1847-fathom-gardener.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1849",
+     "card": "TMC-1849",
+     "title": "Fathom Scout",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A scout swims down a coral shaft into deeper blue",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1849-fathom-scout.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1852",
+     "card": "TMC-1852",
+     "title": "Kelp Watcher",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A watcher among tall kelp with a bone spear",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1852-kelp-watcher.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1853",
+     "card": "TMC-1853",
+     "title": "King Thalassos of the Fathoms",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A king on a coral throne in a vast hall at the bottom of the sea",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: dim blue mid-water light.",
+     "file": "tidemark-production/art/TMI-1853-king-thalassos-of-the-fathoms.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1855",
+     "card": "TMC-1855",
+     "title": "Narwhal Rider",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A rider on a narwhal charges through a pillar of coral",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1855-narwhal-rider.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1856",
+     "card": "TMC-1856",
+     "title": "Tideborn Tithe Collector",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A collector with a pearl purse in a city hall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: dim blue mid-water light.",
+     "file": "tidemark-production/art/TMI-1856-tideborn-tithe-collector.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1857",
+     "card": "TMC-1857",
+     "title": "Trench Diver",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A diver with a lantern descends a trench wall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1857-trench-diver.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1858",
+     "card": "TMC-1858",
+     "title": "Ys'mar Archer",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "An archer on a coral parapet aims into the dark",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1858-ysmar-archer.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1859",
+     "card": "TMC-1859",
+     "title": "Ys'mar Captain",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A captain with a banner of kelp on a coral parapet",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1859-ysmar-captain.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S220",
+   "pool": "supplement",
+   "theme": "Abyssal Choir: people",
+   "file": "tidemark-production/sheets/TM-S220.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1872",
+     "card": "TMC-1872",
+     "title": "Abyssal Diver",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A drowned diver surfaces with a black pearl",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: moonlight on a calm sea.",
+     "file": "tidemark-production/art/TMI-1872-abyssal-diver.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1874",
+     "card": "TMC-1874",
+     "title": "Abyssal Reliquary",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A reliquary in a trench cave with bones glimmering",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: moonlight on a calm sea.",
+     "file": "tidemark-production/art/TMI-1874-abyssal-reliquary.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1875",
+     "card": "TMC-1875",
+     "title": "Archbishop of the Deep",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "An archbishop in a robe of black pearls",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Elevated register: a more considered composition and light, still grounded and believable. Light: storm light.",
+     "file": "tidemark-production/art/TMI-1875-archbishop-of-the-deep.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1876",
+     "card": "TMC-1876",
+     "title": "Choir Acolyte",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "An acolyte in a flooded shrine chants quietly",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: moonlight on a calm sea.",
+     "file": "tidemark-production/art/TMI-1876-choir-acolyte.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1877",
+     "card": "TMC-1877",
+     "title": "Choir Elder",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "An elder in a hooded robe in a flooded chapel",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: storm light.",
+     "file": "tidemark-production/art/TMI-1877-choir-elder.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1878",
+     "card": "TMC-1878",
+     "title": "Chorister of the Trench",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A chorister sings in a trench temple",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: dim violet depth light.",
+     "file": "tidemark-production/art/TMI-1878-chorister-of-the-trench.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1879",
+     "card": "TMC-1879",
+     "title": "Cold Current Wraith",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A wraith in a dark cold current",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1879-cold-current-wraith.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1881",
+     "card": "TMC-1881",
+     "title": "Dark Water Priest",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A priest in dark water points a bone staff",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply.",
+     "file": "tidemark-production/art/TMI-1881-dark-water-priest.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1882",
+     "card": "TMC-1882",
+     "title": "Deep Prophet",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A prophet with a staff of bone on a trench rim",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: storm light.",
+     "file": "tidemark-production/art/TMI-1882-deep-prophet.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S221",
+   "pool": "supplement",
+   "theme": "Sea factions: creatures",
+   "file": "tidemark-production/sheets/TM-S221.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1842",
+     "card": "TMC-1842",
+     "title": "Deep Reef Fish",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A small fish in a reef crevice with a cloud of plankton",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1842-deep-reef-fish.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1843",
+     "card": "TMC-1843",
+     "title": "Deep Sea Ray",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A great ray glides over a sandy floor",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1843-deep-sea-ray.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1848",
+     "card": "TMC-1848",
+     "title": "Fathom Leviathan",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A leviathan passing a deep reef wall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Elevated register: a more considered composition and light, still grounded and believable. Light: bright surface ripples overhead.",
+     "file": "tidemark-production/art/TMI-1848-fathom-leviathan.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1850",
+     "card": "TMC-1850",
+     "title": "Fathom Whale",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A whale passes through deep blue water",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1850-fathom-whale.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1851",
+     "card": "TMC-1851",
+     "title": "Giant Clam",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A giant clam with a pearl glimmering inside",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1851-giant-clam.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1854",
+     "card": "TMC-1854",
+     "title": "Lamp Fish Guide",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A lantern fish lights a path through dark water",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1854-lamp-fish-guide.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1873",
+     "card": "TMC-1873",
+     "title": "Abyssal Maw",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A mouth opens in a trench floor",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Elevated register: a more considered composition and light, still grounded and believable. Light: grey dawn over black water.",
+     "file": "tidemark-production/art/TMI-1873-abyssal-maw.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1880",
+     "card": "TMC-1880",
+     "title": "Dark Water Eel",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "An eel in the black water of a deep cavern",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: storm light.",
+     "file": "tidemark-production/art/TMI-1880-dark-water-eel.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1885",
+     "card": "TMC-1885",
+     "title": "Pale Lurker",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A lurker pounces from a trench shadow",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: dim violet depth light.",
+     "file": "tidemark-production/art/TMI-1885-pale-lurker.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S222",
+   "pool": "supplement",
+   "theme": "Sea factions: people",
+   "file": "tidemark-production/sheets/TM-S222.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1860",
+     "card": "TMC-1860",
+     "title": "Ys'mar Guard",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A guard in pearl armour at a city gate",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1860-ysmar-guard.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1861",
+     "card": "TMC-1861",
+     "title": "Ys'mar Guard Captain",
+     "faction": "Tideborn",
+     "type": "Unit",
+     "subject": "A captain with a banner in a coral gate",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1861-ysmar-guard-captain.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1871",
+     "card": "TMC-1871",
+     "title": "Pearl Brow Ward",
+     "faction": "Tideborn",
+     "type": "Enchantment",
+     "subject": "A pearl glows on a Tideborn warrior's brow",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1871-pearl-brow-ward.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1862",
+     "card": "TMC-1862",
+     "title": "Pressure Shock",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "A shock of pressure ripples through a chamber",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1862-pressure-shock.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1863",
+     "card": "TMC-1863",
+     "title": "Tide Counsel",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "Tideborn counsellors confer in a pearl chamber",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: sunbeams through shallow clear water.",
+     "file": "tidemark-production/art/TMI-1863-tide-counsel.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1864",
+     "card": "TMC-1864",
+     "title": "Tide of the Depths",
+     "faction": "Tideborn",
+     "type": "Spell",
+     "subject": "A wave of dark water surges through a city",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1864-tide-of-the-depths.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1883",
+     "card": "TMC-1883",
+     "title": "Drowned Watcher",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A watcher stands motionless at the mouth of a trench",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: storm light.",
+     "file": "tidemark-production/art/TMI-1883-drowned-watcher.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1884",
+     "card": "TMC-1884",
+     "title": "Fathom Cultist",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A cultist crouches in a deep crevice with a candle",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. One clear subject (or a small readable group) in a believable setting; full figure or three-quarter view in the middle of the frame, with room above the head and at both sides for cropping. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1884-fathom-cultist.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1889",
+     "card": "TMC-1889",
+     "title": "Choir Chant",
+     "faction": "Abyssal Choir",
+     "type": "Spell",
+     "subject": "A low chant from a cavern halts an advance",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: dim violet depth light.",
+     "file": "tidemark-production/art/TMI-1889-choir-chant.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S223",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S223.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1886",
+     "card": "TMC-1886",
+     "title": "Pressure Horror",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A horror with a pressure-flattened face in the dark",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly.",
+     "file": "tidemark-production/art/TMI-1886-pressure-horror.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1887",
+     "card": "TMC-1887",
+     "title": "The Dreaming Deep",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "Something enormous opens one eye in the black",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Legendary register: the most dramatic composition this game allows, but restrained: one strong light source, no excessive ornament, no glowing halos. Light: grey dawn over black water.",
+     "file": "tidemark-production/art/TMI-1887-the-dreaming-deep.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1888",
+     "card": "TMC-1888",
+     "title": "Trench Dweller",
+     "faction": "Abyssal Choir",
+     "type": "Unit",
+     "subject": "A pale dweller crawls along a trench wall",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The creature as the clear subject in its habitat with a readable silhouette and the whole body visible; for big creatures include a small scale cue (a boat, a person, a tree). Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: dim violet depth light.",
+     "file": "tidemark-production/art/TMI-1888-trench-dweller.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1890",
+     "card": "TMC-1890",
+     "title": "Crush Depth",
+     "faction": "Abyssal Choir",
+     "type": "Spell",
+     "subject": "The pressure of a deep sea crushes a diving suit",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: near-total darkness with a single cold glow.",
+     "file": "tidemark-production/art/TMI-1890-crush-depth.png"
+    },
+    {
+     "cell": 5,
+     "illustration": "TMI-1891",
+     "card": "TMC-1891",
+     "title": "Drowning Dark",
+     "faction": "Abyssal Choir",
+     "type": "Spell",
+     "subject": "The dark water of a trench rolls over a fleet",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1891-drowning-dark.png"
+    },
+    {
+     "cell": 6,
+     "illustration": "TMI-1893",
+     "card": "TMC-1893",
+     "title": "The Choir Below",
+     "faction": "Abyssal Choir",
+     "type": "Enchantment",
+     "subject": "A great choir singing in a deep cathedral of rock",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. The moment the effect happens, readable at a glance: who or what acts and what changes. Keep it physical (water, weather, people, objects); no abstract magic swirls. Elevated register: a more considered composition and light, still grounded and believable. Light: near-total darkness with a single cold glow.",
+     "file": "tidemark-production/art/TMI-1893-the-choir-below.png"
+    },
+    {
+     "cell": 7,
+     "illustration": "TMI-1868",
+     "card": "TMC-1868",
+     "title": "Ys'mar Citadel",
+     "faction": "Tideborn",
+     "type": "Stronghold",
+     "subject": "A citadel of white coral in a deep sea valley",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The structure seen whole from a distance, with small figures, carts or boats for scale and its surroundings visible. Ordinary register: natural light and grounded details; magic only where the card is magic, and then shown simply. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1868-ysmar-citadel.png"
+    },
+    {
+     "cell": 8,
+     "illustration": "TMI-1869",
+     "card": "TMC-1869",
+     "title": "Deep Gate Barrier",
+     "faction": "Tideborn",
+     "type": "Domain",
+     "subject": "A barrier of coral across a deep passage",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: soft turquoise lagoon light.",
+     "file": "tidemark-production/art/TMI-1869-deep-gate-barrier.png"
+    },
+    {
+     "cell": 9,
+     "illustration": "TMI-1870",
+     "card": "TMC-1870",
+     "title": "The Deep Library",
+     "faction": "Tideborn",
+     "type": "Domain",
+     "subject": "Shelves of carved shell in a deep hall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Elevated register: a more considered composition and light, still grounded and believable. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1870-the-deep-library.png"
+    }
+   ],
+   "unused": []
+  },
+  {
+   "id": "TM-S224",
+   "pool": "supplement",
+   "theme": "Mixed factions and subjects",
+   "file": "tidemark-production/sheets/TM-S224.png",
+   "cells": [
+    {
+     "cell": 1,
+     "illustration": "TMI-1865",
+     "card": "TMC-1865",
+     "title": "Coral Spear",
+     "faction": "Tideborn",
+     "type": "Relic",
+     "subject": "A long coral spear in a rack in a guardhouse",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic. Light: green light filtered through kelp.",
+     "file": "tidemark-production/art/TMI-1865-coral-spear.png"
+    },
+    {
+     "cell": 2,
+     "illustration": "TMI-1866",
+     "card": "TMC-1866",
+     "title": "Heart of Ys'mar",
+     "faction": "Tideborn",
+     "type": "Relic",
+     "subject": "A glowing heart-pearl on a pedestal in a hall",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Elevated register: a more considered composition and light, still grounded and believable.",
+     "file": "tidemark-production/art/TMI-1866-heart-of-ysmar.png"
+    },
+    {
+     "cell": 3,
+     "illustration": "TMI-1867",
+     "card": "TMC-1867",
+     "title": "Pearl Lamp",
+     "faction": "Tideborn",
+     "type": "Relic",
+     "subject": "A lamp of pearl lights a deep chamber",
+     "direction": "Tideborn: underwater cities of coral and pearl, kelp forests, lagoons and tidal flats. Palette teal, turquoise, pearl white, coral pink. Tideborn are sea-dwelling people with fin-like ears and subtle gill lines, in shell, kelp and woven fibre; light falls in shafts from the surface. The object as the clear subject in a real setting (on a bench, a rack, a table or in use), not floating on a plain background; it fills about half the frame. Ordinary register: natural light, muted colour, worn and practical details; no glow, halo or magical light unless the card itself is magic.",
+     "file": "tidemark-production/art/TMI-1867-pearl-lamp.png"
+    },
+    {
+     "cell": 4,
+     "illustration": "TMI-1892",
+     "card": "TMC-1892",
+     "title": "Black Trench",
+     "faction": "Abyssal Choir",
+     "type": "Domain",
+     "subject": "A black trench in a pale sea floor",
+     "direction": "Abyssal Choir: the deep ocean, trenches, sunken ruins and lonely night shores. Palette ink black, deep blue-violet, bone grey, with sparing cold bioluminescence (the one faction where glow is normal). Drowned cultists in sodden robes; creatures are deep-sea animals made vast and strange, unsettling rather than gory. A wide establishing view of the place with no central character; it should read as somewhere a battle could be fought. Ordinary register: natural light, muted colour, worn and practical details; no halo or magical light; the deep sea's natural cold bioluminescence is allowed, sparingly. Light: grey dawn over black water.",
+     "file": "tidemark-production/art/TMI-1892-black-trench.png"
+    }
+   ],
+   "unused": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
   }
  ],
  "approved_concepts": [
@@ -21634,17 +23745,48 @@
     8,
     9
    ]
+  },
+  {
+   "sheet": "TM-S210",
+   "cells": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "sheet": "TM-S217",
+   "cells": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "sheet": "TM-S224",
+   "cells": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
   }
  ],
  "summary": {
-  "sheets": 203,
+  "sheets": 224,
   "by_pool": {
    "anniversary": 18,
    "alternate": 2,
    "historical": 57,
-   "supplement": 126
+   "supplement": 147
   },
-  "cells_used": 1727,
-  "cells_unused": 100
+  "cells_used": 1900,
+  "cells_unused": 116
  }
 }

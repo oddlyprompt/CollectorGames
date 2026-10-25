@@ -5,6 +5,20 @@
   "n": "Wave card, designed 2026-10-23.",
   "q": 0
  },
+ "Abyssal Diver": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ]
+  ]
+ },
  "Abyssal Foundry": {
   "c": 5,
   "f": 8,
@@ -20,6 +34,14 @@
     "Drowned"
    ]
   ]
+ },
+ "Abyssal Maw": {
+  "c": 7,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 7,
+  "q": 3,
+  "t": 6
  },
  "Abyssal Pearl": {
   "c": 2,
@@ -44,6 +66,20 @@
     0,
     1,
     "any drowned"
+   ]
+  ]
+ },
+ "Abyssal Reliquary": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "regrow",
+    "unit"
    ]
   ]
  },
@@ -74,6 +110,21 @@
    [
     "play",
     "scry",
+    1
+   ]
+  ]
+ },
+ "Admiral Corvin Stormborn": {
+  "c": 5,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 2,
+  "t": 4,
+  "x": [
+   [
+    "hit",
+    "draw",
     1
    ]
   ]
@@ -304,6 +355,20 @@
     "play",
     "scry",
     1
+   ]
+  ]
+ },
+ "Archbishop of the Deep": {
+  "c": 6,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 3,
+  "t": 5,
+  "x": [
+   [
+    "play",
+    "reanimate",
+    "drowned"
    ]
   ]
  },
@@ -885,6 +950,20 @@
    ]
   ]
  },
+ "Bishop of the Pale Moon": {
+  "c": 6,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 3,
+  "t": 5,
+  "x": [
+   [
+    "play",
+    "reanimate",
+    "drowned"
+   ]
+  ]
+ },
  "Black Flag Sailor": {
   "c": 2,
   "n": "Wave card, designed 2026-10-23.",
@@ -918,6 +997,20 @@
     1,
     0,
     "any drowned"
+   ]
+  ]
+ },
+ "Black Squall": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    0,
+    "any surge"
    ]
   ]
  },
@@ -967,6 +1060,20 @@
     1,
     0,
     "own surge"
+   ]
+  ]
+ },
+ "Black Trench": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "static",
+    "lord",
+    0,
+    1,
+    "any drowned"
    ]
   ]
  },
@@ -1202,6 +1309,20 @@
    ]
   ]
  },
+ "Brine Mage Initiate": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ]
+  ]
+ },
  "Brine Shrine Acolyte": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -1213,6 +1334,19 @@
     "play",
     "harbor",
     2
+   ]
+  ]
+ },
+ "Broadside in the Storm": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "play",
+    "dmg",
+    3,
+    "enemy unit deep"
    ]
   ]
  },
@@ -1470,6 +1604,22 @@
    ]
   ]
  },
+ "Captain Zephyra Gale": {
+  "c": 6,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 5,
+  "q": 3,
+  "t": 5,
+  "x": [
+   [
+    "static",
+    "grant_static",
+    "surge",
+    "own vessel"
+   ]
+  ]
+ },
  "Captain of the Guard": {
   "c": 4,
   "k": "leader",
@@ -1609,6 +1759,22 @@
    ]
   ]
  },
+ "Cathedral of the Moon": {
+  "c": 5,
+  "f": 8,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "rise",
+    "tokens",
+    1,
+    1,
+    1,
+    "Drowned"
+   ]
+  ]
+ },
  "Cave Golem": {
   "c": 4,
   "k": "tough",
@@ -1742,6 +1908,20 @@
    ]
   ]
  },
+ "Choir Acolyte": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "harbor",
+    2
+   ]
+  ]
+ },
  "Choir Boy": {
   "c": 1,
   "k": "surge",
@@ -1749,6 +1929,35 @@
   "p": 1,
   "q": 0,
   "t": 1
+ },
+ "Choir Chant": {
+  "c": 1,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "play",
+    "stun",
+    "enemy unit"
+   ]
+  ]
+ },
+ "Choir Elder": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    0,
+    "own drowned"
+   ]
+  ]
  },
  "Choir of Bells": {
   "c": 3,
@@ -1775,6 +1984,13 @@
     "own drowned"
    ]
   ]
+ },
+ "Chorister of the Trench": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 1,
+  "t": 3
  },
  "Cider Press": {
   "c": 2,
@@ -1940,6 +2156,13 @@
    ]
   ]
  },
+ "Cold Current Wraith": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 3
+ },
  "Cold Tide": {
   "c": 1,
   "k": "swift",
@@ -2078,6 +2301,20 @@
   "q": 0,
   "t": 2
  },
+ "Coral City Mason": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "fortify",
+    2
+   ]
+  ]
+ },
  "Coral Hound": {
   "c": 3,
   "k": "charge",
@@ -2108,6 +2345,25 @@
    ]
   ]
  },
+ "Coral Reader": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ],
+   [
+    "play",
+    "scry",
+    1
+   ]
+  ]
+ },
  "Coral Reborn": {
   "c": 5,
   "n": "Wave card, designed 2026-10-23.",
@@ -2117,6 +2373,19 @@
     "play",
     "reanimate",
     "unit"
+   ]
+  ]
+ },
+ "Coral Spear": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "equip",
+    2,
+    0
    ]
   ]
  },
@@ -2495,6 +2764,18 @@
    ]
   ]
  },
+ "Crush Depth": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "play",
+    "destroy",
+    "enemy unit cost<=3"
+   ]
+  ]
+ },
  "Cult of the Black Tide": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -2606,6 +2887,45 @@
    ]
   ]
  },
+ "Dark Water Eel": {
+  "c": 2,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
+ "Dark Water Priest": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "weaken",
+    3,
+    3,
+    "enemy unit"
+   ]
+  ]
+ },
+ "Dark of the Moon": {
+  "c": 1,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "play",
+    "weaken",
+    3,
+    0,
+    "enemy unit"
+   ]
+  ]
+ },
  "Deadfall Trap": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -2657,6 +2977,60 @@
   "q": 0,
   "t": 1
  },
+ "Deep Counsellor": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ],
+   [
+    "play",
+    "ramp",
+    1
+   ]
+  ]
+ },
+ "Deep Courier": {
+  "c": 2,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
+ "Deep Gate Barrier": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "static",
+    "lord",
+    0,
+    2,
+    "any unit homeblock"
+   ]
+  ]
+ },
+ "Deep Gate Sentinel": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "static",
+    "twice"
+   ]
+  ]
+ },
  "Deep Gate Warden": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -2695,6 +3069,57 @@
   "q": 1,
   "t": 3
  },
+ "Deep Oracle": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "dig",
+    3,
+    ""
+   ]
+  ]
+ },
+ "Deep Prophet": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 4,
+  "x": [
+   [
+    "on:cast:enchantment",
+    "draw",
+    1
+   ]
+  ]
+ },
+ "Deep Reef Fish": {
+  "c": 1,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2
+ },
+ "Deep Sea Ray": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 1,
+  "t": 3
+ },
+ "Deep Sovereign": {
+  "c": 5,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 2,
+  "t": 4
+ },
  "Deep Tide Eel": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -2729,6 +3154,20 @@
     "play",
     "grant",
     "rampart",
+    "own unit"
+   ]
+  ]
+ },
+ "Depth Mage": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "move",
     "own unit"
    ]
   ]
@@ -2784,6 +3223,13 @@
   "p": 1,
   "q": 0,
   "t": 1
+ },
+ "Dock Watchman": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 3
  },
  "Dockmaster's Mate": {
   "c": 3,
@@ -2902,6 +3348,22 @@
    ]
   ]
  },
+ "Drowned Choirmaster Veyl": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    0,
+    "own drowned"
+   ]
+  ]
+ },
  "Drowned Chorister": {
   "c": 2,
   "n": "Wave card, designed 2026-10-23.",
@@ -2928,6 +3390,20 @@
    ]
   ]
  },
+ "Drowned Lamplighter": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 3
+ },
+ "Drowned Lantern Carrier": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 3
+ },
  "Drowned Miner": {
   "c": 2,
   "n": "Wave card, designed 2026-10-23.",
@@ -2935,12 +3411,33 @@
   "q": 0,
   "t": 2
  },
+ "Drowned Moon Singer": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 1,
+  "t": 3
+ },
  "Drowned Remnant": {
   "c": 2,
   "n": "Wave card, designed 2026-10-23.",
   "p": 2,
   "q": 0,
   "t": 2
+ },
+ "Drowned Watcher": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "scry",
+    2
+   ]
+  ]
  },
  "Drowning Choir": {
   "c": 4,
@@ -2953,6 +3450,19 @@
     1,
     1,
     "own drowned"
+   ]
+  ]
+ },
+ "Drowning Dark": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "sweep",
+    3,
+    "enemy unit deep"
    ]
   ]
  },
@@ -3026,6 +3536,18 @@
   "q": 0,
   "t": 2
  },
+ "Eclipse of the Moon": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "bounce_all",
+    "unit front"
+   ]
+  ]
+ },
  "Eel Chorus": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -3095,6 +3617,20 @@
    ]
   ]
  },
+ "Emissary of Ys'mar": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 4,
+  "x": [
+   [
+    "play",
+    "bounce",
+    "enemy unit"
+   ]
+  ]
+ },
  "Envoy of the Leagues": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -3128,6 +3664,19 @@
   "p": 2,
   "q": 2,
   "t": 4
+ },
+ "Eye of the Storm": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "cost",
+    1,
+    "spell"
+   ]
+  ]
  },
  "Fair Wind": {
   "c": 2,
@@ -3192,6 +3741,44 @@
     1
    ]
   ]
+ },
+ "Fathom Cultist": {
+  "c": 1,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1
+ },
+ "Fathom Gardener": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
+ "Fathom Leviathan": {
+  "c": 7,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 7,
+  "q": 3,
+  "t": 6
+ },
+ "Fathom Scout": {
+  "c": 2,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
+ "Fathom Whale": {
+  "c": 5,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 5
  },
  "Fen Poacher": {
   "c": 4,
@@ -3321,6 +3908,14 @@
   "q": 2,
   "t": 5,
   "y": 1
+ },
+ "Foam Knight": {
+  "c": 3,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 2
  },
  "Foam Rider": {
   "c": 2,
@@ -3613,6 +4208,99 @@
   "q": 2,
   "t": 5
  },
+ "Gale Admiral": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    0,
+    "own surge"
+   ]
+  ]
+ },
+ "Gale Caller": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "scry",
+    2
+   ]
+  ]
+ },
+ "Gale Captain Orrin": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    0,
+    "own vessel"
+   ]
+  ]
+ },
+ "Gale Harbor": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "static",
+    "lord",
+    0,
+    1,
+    "any unit"
+   ]
+  ]
+ },
+ "Gale Navigator": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "scry",
+    2
+   ]
+  ]
+ },
+ "Gale Oracle": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ],
+   [
+    "play",
+    "scry",
+    1
+   ]
+  ]
+ },
  "Gale Owl": {
   "c": 3,
   "k": "swift",
@@ -3621,7 +4309,24 @@
   "q": 1,
   "t": 3
  },
+ "Gale Raider": {
+  "c": 3,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 2,
+  "y": 1
+ },
  "Gale Rigger": {
+  "c": 3,
+  "k": "rampart",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 1,
+  "t": 4
+ },
+ "Gale Rope Hand": {
   "c": 3,
   "k": "rampart",
   "n": "Wave card, designed 2026-10-23.",
@@ -3827,6 +4532,14 @@
     1
    ]
   ]
+ },
+ "Giant Clam": {
+  "c": 4,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 4
  },
  "Gloaming Horror": {
   "c": 4,
@@ -4270,6 +4983,20 @@
    ]
   ]
  },
+ "Guildmistress of the Moon": {
+  "c": 6,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 3,
+  "t": 6,
+  "x": [
+   [
+    "rise",
+    "harbor",
+    2
+   ]
+  ]
+ },
  "Gull Boat": {
   "c": 1,
   "n": "Wave card, designed 2026-10-23.",
@@ -4284,6 +5011,13 @@
   "p": 2,
   "q": 0,
   "t": 2
+ },
+ "Gull Rider": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 3
  },
  "Gun Crew Chief": {
   "c": 3,
@@ -4417,6 +5151,20 @@
    ]
   ]
  },
+ "Harbor Bell Keeper": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "harbor",
+    2
+   ]
+  ]
+ },
  "Harbor Boom": {
   "c": 3,
   "f": 6,
@@ -4457,6 +5205,13 @@
   "k": "rampart",
   "n": "Wave card, designed 2026-10-23.",
   "p": 1,
+  "q": 0,
+  "t": 3
+ },
+ "Harbor Ghoul": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
   "q": 0,
   "t": 3
  },
@@ -4507,6 +5262,23 @@
    ]
   ]
  },
+ "Harbor Leech": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "tokens",
+    1,
+    1,
+    1,
+    "Eel"
+   ]
+  ]
+ },
  "Harbor Marshal": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -4530,6 +5302,55 @@
     "own ferry"
    ]
   ]
+ },
+ "Harbor Moon Cantor": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 4,
+  "x": [
+   [
+    "on:cast:enchantment",
+    "draw",
+    1
+   ]
+  ]
+ },
+ "Harbor Moon Festival": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "ward",
+    1
+   ]
+  ]
+ },
+ "Harbor Moon Marshal": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 4,
+  "y": 1
+ },
+ "Harbor Moon Recruit": {
+  "c": 1,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2
+ },
+ "Harbor Moon Wraith Lord": {
+  "c": 4,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3
  },
  "Harbor Pilot Boy": {
   "c": 2,
@@ -4649,6 +5470,18 @@
     "mend",
     1,
     "own unit other"
+   ]
+  ]
+ },
+ "Heart of Ys'mar": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "rise",
+    "harbor",
+    2
    ]
   ]
  },
@@ -4907,6 +5740,37 @@
   "p": 4,
   "q": 2,
   "t": 4
+ },
+ "Hurricane Armada": {
+  "c": 6,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 3,
+  "x": [
+   [
+    "play",
+    "tokens",
+    2,
+    3,
+    3,
+    "Storm Ship"
+   ]
+  ]
+ },
+ "Hurricane Captain": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 1,
+  "t": 3
+ },
+ "Hurricane Raider": {
+  "c": 4,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 2,
+  "t": 3
  },
  "Hymn Novice": {
   "c": 1,
@@ -5207,6 +6071,13 @@
    ]
   ]
  },
+ "Kelp Dancer in the Gale": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
  "Kelp Raft": {
   "c": 1,
   "n": "Wave card, designed 2026-10-23.",
@@ -5228,6 +6099,13 @@
     "any unit"
    ]
   ]
+ },
+ "Kelp Watcher": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 3
  },
  "King Aldous the Banner-Bearer": {
   "c": 7,
@@ -5261,6 +6139,21 @@
    ]
   ]
  },
+ "King Thalassos of the Fathoms": {
+  "c": 7,
+  "k": "rampart surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 6,
+  "q": 3,
+  "t": 7,
+  "x": [
+   [
+    "rise",
+    "scry",
+    2
+   ]
+  ]
+ },
  "Kraken Priest": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -5289,6 +6182,20 @@
     "play",
     "lose",
     1
+   ]
+  ]
+ },
+ "Lamp Fish Guide": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "scry",
+    2
    ]
   ]
  },
@@ -5387,6 +6294,20 @@
   "p": 2,
   "q": 0,
   "t": 3
+ },
+ "Lantern Clerk": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ]
+  ]
  },
  "Lantern Fleet Captain": {
   "c": 4,
@@ -5738,6 +6659,21 @@
    ]
   ]
  },
+ "Lightning Rod Sailor": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "dmg",
+    1,
+    "enemy unit"
+   ]
+  ]
+ },
  "Litany of Salt": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -5888,6 +6824,14 @@
   "n": "Wave card, designed 2026-10-23.",
   "q": 0
  },
+ "Lunar Priest": {
+  "c": 3,
+  "k": "rampart",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 1,
+  "t": 4
+ },
  "Maelstrom Cultist": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -5937,6 +6881,22 @@
   ]
  },
  "Master Lamplighter": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    0,
+    "own keeper"
+   ]
+  ]
+ },
+ "Master Lamplighter Orsa": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
   "p": 2,
@@ -6212,6 +7172,28 @@
    ]
   ]
  },
+ "Moon Choir": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    1,
+    "own drowned"
+   ]
+  ]
+ },
+ "Moon Court Guard": {
+  "c": 3,
+  "k": "rampart",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3
+ },
  "Moon Court Herald": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -6225,6 +7207,219 @@
     1,
     0,
     "own surge"
+   ]
+  ]
+ },
+ "Moon Eel": {
+  "c": 2,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
+ "Moon Fair Vendor": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "ramp",
+    1
+   ]
+  ]
+ },
+ "Moon Fleet": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 2,
+  "t": 5,
+  "y": 2
+ },
+ "Moon Harbor Mistress": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 4,
+  "x": [
+   [
+    "play",
+    "draw",
+    2
+   ]
+  ]
+ },
+ "Moon Leviathan": {
+  "c": 7,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 7,
+  "q": 3,
+  "t": 6
+ },
+ "Moon Lighthouse": {
+  "c": 3,
+  "f": 7,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "play",
+    "scry",
+    2
+   ]
+  ]
+ },
+ "Moon Pearl": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "play",
+    "ramp",
+    1
+   ]
+  ]
+ },
+ "Moon Priestess of Ys": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "bounce",
+    "enemy unit cost<=3"
+   ]
+  ]
+ },
+ "Moon Shrine": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "rise",
+    "scry",
+    1
+   ]
+  ]
+ },
+ "Moon Siren": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "shift",
+    "enemy unit"
+   ]
+  ]
+ },
+ "Moon Tide Scout": {
+  "c": 2,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
+ "Moon-Gate Warden": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "on:cross",
+    "dmg",
+    1,
+    "enemy unit crossing"
+   ]
+  ]
+ },
+ "Moon-Watch Captain": {
+  "c": 4,
+  "k": "leader",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3
+ },
+ "Moonlit Cultist": {
+  "c": 1,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1
+ },
+ "Moonlit Drown": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "play",
+    "destroy",
+    "enemy unit cost<=3"
+   ]
+  ]
+ },
+ "Moonlit Horror": {
+  "c": 4,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 4
+ },
+ "Moonlit Quay": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "static",
+    "strand_front"
+   ]
+  ]
+ },
+ "Moonpool Mage": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "scry",
+    2
+   ]
+  ]
+ },
+ "Moonrise Court": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "cost",
+    1,
+    "domain"
    ]
   ]
  },
@@ -6358,6 +7553,14 @@
    ]
   ]
  },
+ "Narwhal Rider": {
+  "c": 3,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 2
+ },
  "Navigator Isa": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -6407,6 +7610,76 @@
     1
    ]
   ]
+ },
+ "Night Diver": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ]
+  ]
+ },
+ "Night Ferry Hand": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "y": 1
+ },
+ "Night Gatekeeper": {
+  "c": 3,
+  "k": "rampart",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3
+ },
+ "Night Harbor Master": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ],
+   [
+    "play",
+    "ramp",
+    1
+   ]
+  ]
+ },
+ "Night Market": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "static",
+    "lord",
+    0,
+    1,
+    "any unit"
+   ]
+  ]
+ },
+ "Night Porter": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
  },
  "Night Watchman": {
   "c": 3,
@@ -6658,6 +7931,14 @@
   "q": 1,
   "t": 2
  },
+ "Pale Lurker": {
+  "c": 3,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 2
+ },
  "Parapet Guard": {
   "c": 3,
   "k": "rampart",
@@ -6720,6 +8001,19 @@
    ]
   ]
  },
+ "Pearl Brow Ward": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "aura",
+    0,
+    3
+   ]
+  ]
+ },
  "Pearl Cantor": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -6775,6 +8069,18 @@
    ]
   ]
  },
+ "Pearl Lamp": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "rise",
+    "scry",
+    1
+   ]
+  ]
+ },
  "Pearlshell Turtle": {
   "c": 4,
   "k": "tough",
@@ -6797,6 +8103,14 @@
   "p": 2,
   "q": 0,
   "t": 1
+ },
+ "Pier Wraith": {
+  "c": 3,
+  "k": "charge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 2
  },
  "Pig Iron": {
   "c": 2,
@@ -7109,6 +8423,27 @@
    ]
   ]
  },
+ "Pressure Horror": {
+  "c": 4,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 4
+ },
+ "Pressure Shock": {
+  "c": 2,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "play",
+    "noblock",
+    "enemy unit"
+   ]
+  ]
+ },
  "Prince of the Tides": {
   "c": 6,
   "n": "Wave card, designed 2026-10-23.",
@@ -7147,6 +8482,21 @@
     "grant_static",
     "surge",
     "own vessel"
+   ]
+  ]
+ },
+ "Procession of Lights": {
+  "c": 2,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "play",
+    "pump_all",
+    1,
+    1,
+    "own unit"
    ]
   ]
  },
@@ -7366,6 +8716,21 @@
   "p": 4,
   "q": 3,
   "t": 6,
+  "x": [
+   [
+    "on:returned",
+    "draw",
+    1
+   ]
+  ]
+ },
+ "Queen Saela of the Gale": {
+  "c": 5,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 4,
+  "q": 2,
+  "t": 4,
   "x": [
    [
     "on:returned",
@@ -7750,6 +9115,21 @@
    ]
   ]
  },
+ "Reef the Sails": {
+  "c": 1,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "play",
+    "pump_all",
+    0,
+    2,
+    "own unit"
+   ]
+  ]
+ },
  "Reinforce the Wall": {
   "c": 1,
   "k": "swift",
@@ -7957,6 +9337,19 @@
   "p": 1,
   "q": 0,
   "t": 1
+ },
+ "Rip Current": {
+  "c": 2,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "play",
+    "bounce",
+    "enemy unit cost<=2"
+   ]
+  ]
  },
  "Ripple": {
   "c": 2,
@@ -8346,6 +9739,20 @@
   "q": 0,
   "t": 2
  },
+ "Salt Wind Charm": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "equip",
+    1,
+    1,
+    "surge"
+   ]
+  ]
+ },
  "Salted Veteran": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -8415,6 +9822,14 @@
     1
    ]
   ]
+ },
+ "Scuttle Hand": {
+  "c": 2,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
  },
  "Sea Dragon of the Lanes": {
   "c": 7,
@@ -8958,6 +10373,14 @@
    ]
   ]
  },
+ "Silver Fish": {
+  "c": 1,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1
+ },
  "Siren of Returns": {
   "c": 5,
   "n": "Wave card, designed 2026-10-23.",
@@ -9219,6 +10642,14 @@
   "q": 1,
   "t": 3
  },
+ "Spray Skimmer": {
+  "c": 2,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2
+ },
  "Spring Fawn": {
   "c": 1,
   "n": "Wave card, designed 2026-10-23.",
@@ -9240,6 +10671,36 @@
     "own unit"
    ]
   ]
+ },
+ "Squall Court": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    0,
+    "any tideborn"
+   ]
+  ]
+ },
+ "Squall Guard": {
+  "c": 3,
+  "k": "rampart",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3
+ },
+ "Squall Runner": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 2,
+  "y": 1
  },
  "Squall Sailor": {
   "c": 3,
@@ -9482,6 +10943,35 @@
    ]
   ]
  },
+ "Storm Cook": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "harbor",
+    2
+   ]
+  ]
+ },
+ "Storm Deckhand": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 3
+ },
+ "Storm Galleon": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 5,
+  "y": 1
+ },
  "Storm Lantern": {
   "c": 3,
   "n": "Wave card, designed 2026-10-23.",
@@ -9492,6 +10982,141 @@
     "mend",
     3,
     "own unit"
+   ]
+  ]
+ },
+ "Storm Leviathan": {
+  "c": 7,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 7,
+  "q": 3,
+  "t": 6
+ },
+ "Storm Pearl Merchant": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ]
+  ]
+ },
+ "Storm Petrel": {
+  "c": 1,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1
+ },
+ "Storm Pilot": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "move",
+    "own unit"
+   ]
+  ]
+ },
+ "Storm Priestess": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "dig",
+    3,
+    ""
+   ]
+  ]
+ },
+ "Storm Quartermaster": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ],
+   [
+    "play",
+    "ramp",
+    1
+   ]
+  ]
+ },
+ "Storm Sailor": {
+  "c": 1,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 1
+ },
+ "Storm Surge Barrier": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "static",
+    "lord",
+    0,
+    2,
+    "any unit homeblock"
+   ]
+  ]
+ },
+ "Storm Turtle": {
+  "c": 4,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 4
+ },
+ "Storm Warning Flags": {
+  "c": 1,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "play",
+    "stun",
+    "enemy unit"
+   ]
+  ]
+ },
+ "Storm-Tossed Fleet": {
+  "c": 6,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "tokens",
+    3,
+    2,
+    2,
+    "Storm Ship"
    ]
   ]
  },
@@ -9652,6 +11277,20 @@
   "q": 0,
   "t": 3
  },
+ "Tempest Singer": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "move",
+    "own unit"
+   ]
+  ]
+ },
  "Tentacle Priest": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -9710,6 +11349,20 @@
   "t": 6,
   "y": 2
  },
+ "The Choir Below": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "static",
+    "lord",
+    1,
+    1,
+    "own drowned"
+   ]
+  ]
+ },
  "The Dark Cathedral": {
   "c": 5,
   "f": 8,
@@ -9723,6 +11376,19 @@
     1,
     1,
     "Drowned"
+   ]
+  ]
+ },
+ "The Deep Library": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "static",
+    "cost",
+    1,
+    "spell"
    ]
   ]
  },
@@ -9758,6 +11424,21 @@
     "play",
     "destroy",
     "enemy unit cost<=4"
+   ]
+  ]
+ },
+ "The Dreaming Deep": {
+  "c": 8,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 8,
+  "q": 3,
+  "t": 8,
+  "x": [
+   [
+    "play",
+    "destroy",
+    "enemy unit cost<=5"
    ]
   ]
  },
@@ -9865,6 +11546,18 @@
     "rise",
     "regrow",
     "unit"
+   ]
+  ]
+ },
+ "The Harbor Moon Lantern": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "rise",
+    "harbor",
+    2
    ]
   ]
  },
@@ -9995,6 +11688,21 @@
    ]
   ]
  },
+ "The Moon Eater": {
+  "c": 8,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 8,
+  "q": 3,
+  "t": 7,
+  "x": [
+   [
+    "play",
+    "destroy",
+    "enemy unit cost<=4"
+   ]
+  ]
+ },
  "The Returning Leviathan": {
   "c": 7,
   "k": "surge",
@@ -10050,6 +11758,15 @@
   "q": 3,
   "t": 8
  },
+ "The Storm Rider": {
+  "c": 6,
+  "k": "surge",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 6,
+  "q": 2,
+  "t": 6,
+  "y": 2
+ },
  "The Windward Queen": {
   "c": 6,
   "k": "surge",
@@ -10087,6 +11804,27 @@
     "equip",
     1,
     1
+   ]
+  ]
+ },
+ "Thunder Whale": {
+  "c": 5,
+  "k": "tough",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 5
+ },
+ "Thunderbolt": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "dmg",
+    5,
+    "enemy unit"
    ]
   ]
  },
@@ -10196,6 +11934,21 @@
    ]
   ]
  },
+ "Tide Caller Maris": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "static",
+    "cost",
+    1,
+    "swift spell"
+   ]
+  ]
+ },
  "Tide Chanter": {
   "c": 2,
   "n": "Wave card, designed 2026-10-23.",
@@ -10207,6 +11960,18 @@
     "play",
     "scry",
     2
+   ]
+  ]
+ },
+ "Tide Counsel": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
    ]
   ]
  },
@@ -10296,6 +12061,27 @@
   "q": 2,
   "t": 4
  },
+ "Tide Queen's Moonlight": {
+  "c": 4,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "pump_all",
+    0,
+    3,
+    "own unit"
+   ],
+   [
+    "play",
+    "grant",
+    "rampart",
+    "own unit"
+   ]
+  ]
+ },
  "Tide Shrine Keeper": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -10338,6 +12124,13 @@
    ]
   ]
  },
+ "Tide Table Reader": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 3
+ },
  "Tide Turtle": {
   "c": 4,
   "k": "tough",
@@ -10353,6 +12146,20 @@
   "x": [
    [
     "rise",
+    "scry",
+    1
+   ]
+  ]
+ },
+ "Tide Watcher": {
+  "c": 1,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 1,
+  "x": [
+   [
+    "play",
     "scry",
     1
    ]
@@ -10385,6 +12192,32 @@
    ]
   ]
  },
+ "Tide of the Depths": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "bounce_all",
+    "enemy unit front"
+   ]
+  ]
+ },
+ "Tide-Dragged Captain": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 4,
+  "x": [
+   [
+    "play",
+    "reanimate",
+    "vessel"
+   ]
+  ]
+ },
  "Tide-Warden Neril": {
   "c": 5,
   "n": "Wave card, designed 2026-10-23.",
@@ -10399,6 +12232,13 @@
    ]
   ]
  },
+ "Tideborn Diver": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 3
+ },
  "Tideborn Tithe": {
   "c": 2,
   "n": "Wave card, designed 2026-10-23.",
@@ -10407,6 +12247,20 @@
    [
     "play",
     "draw",
+    1
+   ]
+  ]
+ },
+ "Tideborn Tithe Collector": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 0,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "ramp",
     1
    ]
   ]
@@ -10430,6 +12284,21 @@
   "p": 2,
   "q": 0,
   "t": 3
+ },
+ "Tidewarden of the Gale": {
+  "c": 6,
+  "k": "surge swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 5,
+  "q": 3,
+  "t": 5,
+  "x": [
+   [
+    "play",
+    "bounce",
+    "enemy unit"
+   ]
+  ]
  },
  "Tithe Wagon": {
   "c": 2,
@@ -10609,6 +12478,27 @@
   "q": 0,
   "t": 3
  },
+ "Trench Diver": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "draw",
+    1
+   ]
+  ]
+ },
+ "Trench Dweller": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 1,
+  "t": 3
+ },
  "Trench Veteran": {
   "c": 4,
   "n": "Wave card, designed 2026-10-23.",
@@ -10635,6 +12525,26 @@
   "p": 2,
   "q": 0,
   "t": 1
+ },
+ "Typhoon": {
+  "c": 5,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "bounce_all",
+    "enemy unit front"
+   ]
+  ]
+ },
+ "Undertow Eel": {
+  "c": 3,
+  "k": "undertow",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3
  },
  "Undertow Pull": {
   "c": 2,
@@ -11027,6 +12937,27 @@
    ]
   ]
  },
+ "Wave Break Tide": {
+  "c": 4,
+  "k": "swift",
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 2,
+  "x": [
+   [
+    "play",
+    "pump_all",
+    2,
+    2,
+    "own unit"
+   ],
+   [
+    "play",
+    "grant",
+    "surge",
+    "own unit"
+   ]
+  ]
+ },
  "Wave Break Wall": {
   "c": 2,
   "n": "Wave card, designed 2026-10-23.",
@@ -11053,6 +12984,13 @@
     "enemy unit cost<=2"
    ]
   ]
+ },
+ "Wave Rider": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 0,
+  "t": 3
  },
  "Wave Singer Lysa": {
   "c": 5,
@@ -11183,6 +13121,23 @@
    ]
   ]
  },
+ "Whale Fall Priest": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 1,
+  "t": 2,
+  "x": [
+   [
+    "play",
+    "tokens",
+    1,
+    2,
+    2,
+    "Drowned"
+   ]
+  ]
+ },
  "Whale Singer": {
   "c": 4,
   "k": "tough",
@@ -11215,6 +13170,20 @@
     "equip",
     2,
     0
+   ]
+  ]
+ },
+ "Whirlpool Mage": {
+  "c": 4,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 3,
+  "x": [
+   [
+    "play",
+    "shift",
+    "enemy unit"
    ]
   ]
  },
@@ -11255,6 +13224,18 @@
     0,
     1,
     "own unit deep"
+   ]
+  ]
+ },
+ "Wind Pearl": {
+  "c": 2,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 0,
+  "x": [
+   [
+    "play",
+    "ramp",
+    1
    ]
   ]
  },
@@ -11378,5 +13359,57 @@
     "vessel"
    ]
   ]
+ },
+ "Ys'mar Archer": {
+  "c": 3,
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 1,
+  "q": 1,
+  "t": 3,
+  "x": [
+   [
+    "on:cross",
+    "dmg",
+    1,
+    "enemy unit crossing"
+   ]
+  ]
+ },
+ "Ys'mar Captain": {
+  "c": 4,
+  "k": "leader",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 3,
+  "q": 2,
+  "t": 3
+ },
+ "Ys'mar Citadel": {
+  "c": 4,
+  "f": 8,
+  "n": "Wave card, designed 2026-10-23.",
+  "q": 1,
+  "x": [
+   [
+    "rise",
+    "fortify",
+    1
+   ]
+  ]
+ },
+ "Ys'mar Guard": {
+  "c": 3,
+  "k": "rampart",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 1,
+  "t": 3
+ },
+ "Ys'mar Guard Captain": {
+  "c": 4,
+  "k": "rampart leader",
+  "n": "Wave card, designed 2026-10-23.",
+  "p": 2,
+  "q": 2,
+  "t": 4
  }
 }
