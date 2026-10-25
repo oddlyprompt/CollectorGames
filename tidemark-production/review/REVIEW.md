@@ -406,6 +406,18 @@ Every delivered picture, exactly as filed, one image per production sheet (gener
 
 ![TM-S101](TM-S101.jpg)
 
+## TM-S102: Iron Reach: places and things
+
+![TM-S102](TM-S102.jpg)
+
+## TM-S103: Abyssal Choir: people
+
+![TM-S103](TM-S103.jpg)
+
+## TM-S104: Mixed factions and subjects
+
+![TM-S104](TM-S104.jpg)
+
 ## TM-S105: Mixed factions and subjects
 
 ![TM-S105](TM-S105.jpg)

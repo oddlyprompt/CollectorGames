@@ -1316,3 +1316,63 @@ Reason: SOL delivered 369 more paintings (sheets S105-S147, Deepforge to Return 
 Changed (2+ differences), first ones:
 - /loaded/screens/market: "cf1ab4ba" -> "8a7bd864"
 - /loaded/screens/xt:sets: "4005af5b" -> "f529513c"
+
+## 2026-10-25 day0
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (2+ differences), first ones:
+- /screens/market: "ab95f3a6" -> "648a26ea"
+- /screens/xt:sets: "5f8e9fb2" -> "30294106"
+
+## 2026-10-25 release
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (1+ differences), first ones:
+- /screens/xt:sets: "f529513c" -> "a4be57dc"
+
+## 2026-10-25 year1
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (1+ differences), first ones:
+- /screens/xt:sets: "f529513c" -> "a4be57dc"
+
+## 2026-10-25 save:ban
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (1+ differences), first ones:
+- /loaded/screens/xt:sets: "f529513c" -> "a4be57dc"
+
+## 2026-10-25 save:busy
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (1+ differences), first ones:
+- /loaded/screens/xt:sets: "7584211c" -> "9ad1943c"
+
+## 2026-10-25 save:day1
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "63cc37bc" -> "cf1e8dac"
+- /loaded/screens/xt:sets: "5f8e9fb2" -> "30294106"
+
+## 2026-10-25 save:legacy-wk-busy
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "db7bddbb" -> "a3339e3f"
+- /loaded/screens/xt:sets: "c94c507a" -> "348c642e"
+
+## 2026-10-25 save:legacy-wk-day1
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "ab95f3a6" -> "648a26ea"
+- /loaded/screens/xt:sets: "5f8e9fb2" -> "30294106"
+
+## 2026-10-25 save:legacy-wk-released
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (2+ differences), first ones:
+- /loaded/screens/market: "ce52de16" -> "9af9445a"
+- /loaded/screens/xt:sets: "f529513c" -> "a4be57dc"
+
+## 2026-10-25 save:legacy-wk-year
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (1+ differences), first ones:
+- /loaded/screens/xt:sets: "f529513c" -> "a4be57dc"
+
+## 2026-10-25 save:released
+Reason: SOL delivered the last 27 paintings (Deepforge S102-S104): only Tidemark set-page and market screens differ, they now draw real art
+Changed (1+ differences), first ones:
+- /loaded/screens/xt:sets: "f529513c" -> "a4be57dc"
