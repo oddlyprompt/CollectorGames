@@ -375,52 +375,228 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Banner Captain (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Noble | 3/3 | Your Leader units get +1/+0. |
+| 6 | Banner Page (Common, Crownlands) | 1 | Unit — Human Soldier | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 10 | Bannerlord Ansel (Uncommon, Crownlands) | 5 · Land 2 | Unit — Human Noble | 3/5 | **Leader, Rampart.**  |
 | 11 | Bowmen of the Strand (Common, Crownlands) | 2 | Unit — Human Archer | 1/2 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 15 | Beacon Crew (Common, Crownlands) | 2 | Unit — Human Soldier | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 19 | Castle Armourer (Common, Crownlands) | 3 · Land 1 | Unit — Human Smith | 2/3 | Your Equipment cost 1 less to play. |
+| 23 | Castle Gate Warden (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Soldier | 2/4 | **Tough, Rampart.**  |
+| 26 | Crown Cadet (Common, Crownlands) | 2 | Unit — Human Soldier | 2/2 | **Charge.**  |
+| 30 | Crown Knight (Common, Crownlands) | 4 · Land 2 | Unit — Human Knight | 4/3 | **Charge.**  |
 | 31 | Village Militia (Common, Crownlands) | 2 | Unit — Human Soldier | 1/2 | When this enters play, create a 1/1 Levy token. |
+| 35 | Crown Quartermaster (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Official | 2/2 | When this enters play, draw a card. |
+| 39 | Harbor Watchman (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 43 | King Aldous the Banner-Bearer (Legendary, Crownlands) | 7 · Land 3 | Unit — Human Noble | 6/7 | **Leader, Rampart.** At your Rise, restore 2 strength to your Harbor. |
+| 47 | Levy Captain (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/2 | When this enters play, create a 1/1 Levy token. |
+| 50 | Old Sergeant (Common, Crownlands) | 4 · Land 1 | Unit — Human Soldier | 3/4 |  |
 | 51 | Shield Bash (Common, Crownlands) | 1 | Spell — Swift |  | An enemy unit attacking away from home gets -4/-0 this turn. |
+| 55 | Royal Standard Bearer (Rare, Crownlands) | 5 · Land 2 | Unit — Human Noble | 4/4 | **Leader.** When this enters play, your units get +1/+1 this turn. |
+| 59 | Salt Mason (Common, Crownlands) | 3 · Land 1 | Unit — Human Mason | 2/2 | When this enters play, one of your Strongholds gains 2 durability. |
+| 63 | Salt Road Sentry (Common, Crownlands) | 2 | Unit — Human Soldier | 2/3 |  |
+| 67 | Sea Wall Engineer (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Mason | 2/3 | At your Rise, one of your Strongholds gains 1 durability. |
 | 71 | Watchtower Signal (Common, Crownlands) | 2 | Spell |  | Look at the top 4 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 72 | Shield Maiden (Common, Crownlands) | 1 | Unit — Human Soldier | 0/2 | **Rampart.**  |
+| 75 | Shore Pikeman (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 79 | Standard Guard (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/2 | **Leader.**  |
+| 83 | Call to the Colors (Uncommon, Crownlands) | 4 · Land 1 | Spell |  | Create three 1/2 Levy tokens. |
+| 87 | Charge of the Crown (Rare, Crownlands) | 5 · Land 2 | Spell — Swift |  | Your units get +2/+0 this turn. Your units gain Charge this turn. |
 | 91 | Banner of the Azure Crown (Uncommon, Crownlands) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +1/+0 and Leader. |
+| 92 | Last Banner Falls (Rare, Crownlands) | 4 · Land 2 | Spell |  | Destroy an enemy unit that costs 4 or less. Draw a card. |
+| 96 | Rally the Banners (Common, Crownlands) | 2 · Land 1 | Spell — Swift |  | Your units get +1/+1 this turn. |
+| 99 | Siege Mangonel (Rare, Crownlands) | 4 · Land 2 | Relic — Tool |  | At your Rise, deal 2 damage to an enemy unit. |
+| 103 | Tithe Wagon (Common, Crownlands) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 107 | Garrison Hall (Uncommon, Crownlands) | 3 · Land 1 | Stronghold — Hall | Durability 7 | Durability 7. At your Rise, restore 1 strength to your Harbor. |
 | 111 | Oath of Service (Uncommon, Crownlands) | 1 | Enchantment — Unit |  | The enchanted unit gets +1/+1. This cannot be returned to hand. |
+| 112 | Keep of the Blue Tower (Rare, Crownlands) | 5 · Land 2 | Stronghold — Fortress | Durability 10 | Durability 10. At your Rise, one of your Strongholds gains 1 durability. |
+| 116 | Seaside Chapel (Common, Crownlands) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
+| 120 | Banner of Salt and Sea (Rare, Crownlands) | 4 · Land 2 | Enchantment — Player |  | Your units get +1/+1. |
+| 125 | Queen Ysolde of the Salt Tide (Legendary, Tideborn) | 6 · Sea 3 | Unit — Tideborn Noble | 4/6 | **Surge.** When this enters play, return an enemy unit that costs 4 or less to its owner's hand. |
 | 131 | Current Rider (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Swift.**  |
+| 132 | Salt Tide Skimmer (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
+| 138 | Tide Banner (Rare, Tideborn) | 3 · Sea 1 | Domain — Deep |  | Surge units on this front get +1/+0. |
+| 143 | Admiral Orsolya the Salt-Queen (Legendary, Free Fleets) | 6 · Sea 3 | Unit — Human Privateer | 5/5 | **Charge, Leader.** Your Vessels have Charge. |
+| 145 | Bilge Pump Crew (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 147 | Boarding Rope Hand (Common, Free Fleets) | 1 | Unit — Human Sailor | 2/1 | **Charge.**  |
+| 149 | Captain Rhys Saltbeard (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Charge.** When this deals damage to your opponent's Harbor, draw a card. |
 | 151 | Powder Runner (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 152 | Cutlass Raider (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Privateer | 3/3 |  |
+| 154 | Deck Scrubber (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/1 |  |
+| 156 | First Mate Garrick (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Sailor | 3/3 | Your Sailors get +1/+0. |
+| 158 | Gun Deck Gunner (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, deal 1 damage to an enemy unit. |
+| 160 | Harbor Pilot Boy (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/3 |  |
+| 162 | Press Gang Master (Uncommon, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 3/3 | When this enters play, gain control of an enemy unit that costs 2 or less. |
+| 164 | Raider Chief (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | **Charge.**  |
+| 166 | Raider Scout (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 168 | Rigging Crew (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, draw a card. |
+| 170 | Rope Hauler (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/3 |  |
 | 171 | Plunder (Uncommon, Free Fleets) | 2 · Sea 1 | Spell |  | Destroy an enemy Relic. Draw a card. |
+| 173 | Salt Merchant (Uncommon, Free Fleets) | 4 · Sea 1 | Unit — Human Trader | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 175 | Salt Runner (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
+| 177 | Boarding Charge (Common, Free Fleets) | 2 · Sea 1 | Spell — Swift |  | Your units get +2/+0 this turn. |
+| 179 | Free Fleet Armada (Rare, Free Fleets) | 6 · Sea 3 | Spell — Swift |  | Create two 3/3 Raider Ship tokens. |
+| 181 | Gun Port Volley (Common, Free Fleets) | 3 · Sea 1 | Spell |  | Deal 3 damage to an enemy unit in the Deep. |
+| 183 | Raid on the Harbor (Rare, Free Fleets) | 5 · Sea 2 | Spell |  | Deal 4 damage to your opponent's Harbor. |
+| 185 | Raiding Fleet (Uncommon, Free Fleets) | 5 · Sea 2 | Spell |  | Create three 2/1 Raider tokens. |
+| 187 | Gull Boat (Common, Free Fleets) | 1 | Vessel — Skiff | 1/2 | **Ferry 1.**  |
+| 189 | Raider Longship (Common, Free Fleets) | 3 · Sea 1 | Vessel — Longship | 3/2 | **Charge, Ferry 1.**  |
 | 191 | Longboat (Common, Free Fleets) | 1 | Vessel — Boat | 1/2 | **Ferry 1.**  |
+| 192 | The Salt Wolf (Rare, Free Fleets) | 5 · Sea 2 | Vessel — Longship | 5/4 | **Charge, Ferry 2.**  |
+| 194 | Trading Cog (Common, Free Fleets) | 3 · Sea 1 | Vessel — Cog | 2/4 | **Ferry 1.**  |
+| 196 | Warship Sovereign (Uncommon, Free Fleets) | 5 · Sea 2 | Vessel — Warship | 4/5 | **Ferry 1.**  |
+| 198 | Pirate Anchorage (Common, Free Fleets) | 2 | Domain — Deep |  | Vessels on this front get +1/+0. |
+| 200 | Salt Tax (Rare, Free Fleets) | 3 · Sea 1 | Enchantment — Player |  | Your opponent's spells cost 1 more to play. |
 
 ## Lanterns of the Harbor (LH, 2016)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Beacon Master Orsin (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Keeper | 3/5 | At your Rise, deal 1 damage to an enemy unit. |
+| 5 | Candle Chandler (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Worker | 2/2 | When this enters play, look at the top 2 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 7 | Harbor Pilot (Common, Harbor Leagues) | 2 | Unit — Human Sailor | 2/2 | **Ferry 1.**  |
+| 9 | Cargo Master (Common, Harbor Leagues) | 4 · Dual 1 | Unit — Human Official | 3/4 | **Ferry 1.**  |
+| 12 | Customs Clerk (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/1 | When this enters play, draw a card. |
+| 15 | Dock Foreman (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Worker | 3/3 |  |
+| 18 | Ferry Hand (Common, Harbor Leagues) | 2 | Unit — Human Sailor | 1/2 | **Ferry 1.**  |
 | 19 | Lamplighter (Common, Harbor Leagues) | 1 | Unit — Human Worker | 1/2 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 22 | Grand Harbor Master (Uncommon, Harbor Leagues) | 5 · Dual 2 | Unit — Human Official | 3/4 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 25 | Guild Notary (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Official | 2/2 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 29 | Guildmaster of Lights (Legendary, Harbor Leagues) | 6 · Dual 3 | Unit — Human Noble | 4/6 | At your Rise, restore 2 strength to your Harbor. Your Keepers get +1/+0. |
 | 32 | Stevedore (Common, Harbor Leagues) | 2 | Unit — Human Worker | 1/4 |  |
+| 33 | Harbor Gull Keeper (Common, Harbor Leagues) | 2 | Unit — Human Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 36 | Lantern Bearer (Common, Harbor Leagues) | 2 | Unit — Human Keeper | 2/3 |  |
+| 39 | Lantern Fleet Captain (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Sailor | 3/3 | When this enters play, move one of your units to the other front. |
+| 42 | Master Lamplighter (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Keeper | 2/3 | Your Keepers get +1/+0. |
 | 44 | Trade Agreement (Common, Harbor Leagues) | 2 | Spell |  | Draw two cards. Your opponent draws a card. |
+| 46 | Merchant Prince Varro (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Trader | 3/4 | When this enters play, draw two cards. |
+| 49 | Night Watchman (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 52 | Pier Porter (Common, Harbor Leagues) | 1 | Unit — Human Worker | 2/1 |  |
+| 55 | Quay Rat Catcher (Common, Harbor Leagues) | 2 | Unit — Human Worker | 2/2 |  |
 | 57 | Guild Coin (Common, Harbor Leagues) | 1 | Relic — Tool |  | When this enters play, gain 1 Influence this turn. |
+| 59 | Quayside Marshal (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Soldier | 3/3 | Your Ferry units get +1/+1. |
+| 62 | Signal Lamp Operator (Common, Harbor Leagues) | 2 | Unit — Human Keeper | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 65 | Wick Boy (Common, Harbor Leagues) | 1 | Unit — Human Keeper | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 68 | Guild Handshake (Common, Harbor Leagues) | 2 | Spell |  | Draw a card. |
 | 69 | Watchman's Bell (Uncommon, Harbor Leagues) | 2 | Relic — Tool |  | Your opponent's Swift cards cost 1 more to play. When this enters play, draw a card. |
+| 72 | Harbor Fire (Rare, Harbor Leagues) | 5 · Dual 2 | Spell |  | Deal 3 damage to each enemy unit in the Deep. |
+| 75 | Hold the Pier (Common, Harbor Leagues) | 1 | Spell — Swift |  | Your units get +0/+2 this turn. |
+| 78 | Guildhall Lantern (Uncommon, Harbor Leagues) | 3 · Dual 1 | Relic — Tool |  | At your Rise, restore 1 strength to your Harbor. |
+| 81 | Harbor Beacon (Common, Harbor Leagues) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
 | 82 | Breakwater (Common, Harbor Leagues) | 2 | Stronghold — Wall | Durability 6 | Durability 6. |
+| 86 | Lamp Oil Hauler (Common, Harbor Leagues) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 89 | Storm Lantern (Rare, Harbor Leagues) | 3 · Dual 1 | Relic — Tool |  | At your Rise, one of your units gets +0/+3 until your next turn. |
+| 92 | League Ferry Fleet (Rare, Harbor Leagues) | 5 · Dual 2 | Vessel — Ferry | 4/5 | **Ferry 2.**  |
 | 94 | Customs House (Uncommon, Harbor Leagues) | 3 · Dual 1 | Stronghold — Office | Durability 6 | Durability 6. Your opponent's spells cost 1 more to play. |
+| 96 | Lighthouse of the League (Rare, Harbor Leagues) | 5 · Dual 2 | Stronghold — Hall | Durability 9 | Durability 9. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 99 | Mooring Post (Common, Harbor Leagues) | 2 | Stronghold — Fortress | Durability 5 | Durability 5. |
+| 102 | Tollhouse (Uncommon, Harbor Leagues) | 3 · Dual 1 | Stronghold — Hall | Durability 6 | Durability 6. Your opponent's units cost 1 more to play. |
+| 105 | Canal Lock (Common, Harbor Leagues) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
 | 107 | Harbor Market (Uncommon, Harbor Leagues) | 2 | Domain — Shore |  | Dual cards cost 1 less to play. |
+| 109 | Warehouse District (Uncommon, Harbor Leagues) | 3 · Dual 1 | Domain — Shore |  | Strongholds cost 1 less to play. |
+| 112 | Harbor Lantern Festival (Rare, Harbor Leagues) | 4 · Dual 2 | Enchantment — Player |  | Your Harbor takes 1 less damage from each unblocked attacker. Your units get +0/+1. |
+| 115 | Crossroads Gambler (Uncommon, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, draw a card. When this enters play, your Harbor loses 1 strength. |
 | 119 | Bandit (Common, Neutral) | 2 | Unit — Human Mercenary | 2/1 | **Charge.**  |
+| 120 | Highland Drover (Uncommon, Neutral) | 3 | Unit — Human Worker | 2/2 | When this enters play, create two 1/1 Sheep tokens. |
+| 124 | Highwayman (Common, Neutral) | 3 | Unit — Human Mercenary | 3/3 |  |
+| 128 | Inn Brawler (Common, Neutral) | 4 | Unit — Human Mercenary | 4/3 |  |
 | 132 | The Grey Wanderer (Legendary, Neutral) | 4 | Unit — Human Wanderer | 3/4 | This card counts as both Land and Sea for Allegiance. When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 133 | Lighthouse Keeper's Daughter (Rare, Neutral) | 4 | Unit — Human Keeper | 3/3 | **Swift.** When this enters play, draw a card. |
+| 136 | Lost Traveller (Common, Neutral) | 2 | Unit — Human Wanderer | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 140 | Moor Pony (Common, Neutral) | 2 | Unit — Beast | 2/3 |  |
 | 144 | Travelling Tinker (Common, Neutral) | 2 | Unit — Human Worker | 1/2 | Your Relics cost 1 less to play. |
+| 145 | Old Mad Mariner (Rare, Neutral) | 4 | Unit — Human Wanderer | 3/3 | When this enters play, deal 3 damage to an enemy unit. |
+| 149 | Road Bandit (Common, Neutral) | 2 | Unit — Human Mercenary | 2/2 | **Charge.**  |
+| 153 | Roving Peddler (Common, Neutral) | 2 | Unit — Human Trader | 1/1 | When this enters play, draw a card. |
 | 157 | Wild Horse (Common, Neutral) | 4 | Unit — Beast | 4/2 | **Charge.**  |
+| 158 | Stray Lantern Dog (Common, Neutral) | 1 | Unit — Beast Hound | 1/2 |  |
+| 161 | The Lantern King (Legendary, Neutral) | 6 | Unit — Human Noble | 5/6 | At your Rise, draw a card. |
+| 165 | Wayfarer Queen (Rare, Neutral) | 5 | Unit — Human Noble | 3/4 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
 | 169 | Lightning Strike (Common, Neutral) | 2 | Spell |  | Deal 3 damage to an enemy unit. |
+| 170 | Wayside Priest (Common, Neutral) | 2 | Unit — Human Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 174 | Gale Warning (Common, Neutral) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 178 | Lantern in the Fog (Uncommon, Neutral) | 2 | Spell |  | Look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 181 | Thunderhead (Rare, Neutral) | 5 | Spell |  | Deal 3 damage to each unit on one front. |
 | 182 | Old Map (Common, Neutral) | 1 | Relic — Tool |  | When this enters play, search your deck for a Domain, put it into your hand, then shuffle. |
+| 186 | Mist Bell (Common, Neutral) | 1 | Relic — Tool |  | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 190 | Roadside Inn (Uncommon, Neutral) | 3 | Stronghold — Hall | Durability 6 | Durability 6. At your Rise, restore 1 strength to your Harbor. |
 | 194 | Fog Bank (Common, Neutral) | 1 | Enchantment — Front |  | Your opponent's Swift units cost 1 more to play. |
+| 195 | Crossroads Market (Rare, Neutral) | 3 | Domain — Shore |  | Spells cost 1 less to play. |
+| 199 | Windswept Moor (Common, Neutral) | 2 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
 
 ## Iron Coast (IC, 2017)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Anvil Apprentice (Common, Iron Reach) | 1 | Unit — Reachfolk Smith | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 4 | Bellows Golem (Common, Iron Reach) | 3 · Land 1 | Unit — Construct | 3/2 | **Charge.**  |
+| 7 | Blast Furnace Hand (Common, Iron Reach) | 4 · Land 1 | Unit — Reachfolk Worker | 4/3 |  |
+| 9 | Cast Iron Sentry (Common, Iron Reach) | 3 · Land 1 | Unit — Construct | 2/3 | **Rampart.**  |
 | 11 | High Forge Master Brannoch (Legendary, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Smith | 4/5 | Your Equipment cost 2 less to play. |
+| 13 | Coast Cannoneer (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 2/3 | When this enters play, deal 2 damage to an enemy unit. |
+| 16 | Coastal Smith (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Smith | 2/3 | Your Equipment cost 1 less to play. |
+| 18 | Coke Stoker (Common, Iron Reach) | 1 | Unit — Reachfolk Worker | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 21 | Foundry Overseer (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 3/3 | When this enters play, draw a card. |
+| 23 | Furnace Lord Karn (Rare, Iron Reach) | 6 · Land 2 | Unit — Reachfolk Noble | 5/5 | **Tough.**  |
+| 26 | High Forge Master Duren (Legendary, Iron Reach) | 7 · Land 3 | Unit — Reachfolk Noble | 6/6 | **Tough.** At your Rise, create a 2/2 Construct token. |
+| 28 | Iron Coast Miner (Common, Iron Reach) | 2 | Unit — Reachfolk Miner | 2/3 |  |
 | 31 | Lantern Miner (Common, Iron Reach) | 1 | Unit — Reachfolk Miner | 1/2 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 32 | Iron Hulk (Uncommon, Iron Reach) | 5 · Land 2 | Unit — Construct | 3/4 | **Tough, Rampart.**  |
+| 35 | Lighthouse Anvil (Common, Iron Reach) | 4 · Land 1 | Unit — Construct | 2/4 | **Tough.**  |
+| 37 | Master Smith Orla (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Smith | 2/3 | Your Constructs get +1/+0. |
+| 40 | Ore Barge Crew (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 42 | Pit Foreman Garr (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 3/3 | Your Reachfolk get +1/+0. |
+| 45 | Quay Gunner (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 47 | Rivet Boy (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/1 | When this enters play, draw a card. |
+| 50 | Slag Sweeper (Common, Iron Reach) | 1 | Unit — Reachfolk Worker | 2/1 |  |
 | 51 | Cave-In (Uncommon, Iron Reach) | 2 · Land 1 | Spell |  | Destroy an enemy unit with 3 or less Toughness. |
+| 54 | Steamwork Titan (Rare, Iron Reach) | 7 · Land 3 | Unit — Construct | 7/6 | **Trample.**  |
+| 56 | Blast Furnace Barrage (Rare, Iron Reach) | 4 · Land 2 | Spell |  | Deal 2 damage to each enemy unit on the Shore. |
+| 59 | Hot Slag (Common, Iron Reach) | 2 · Land 1 | Spell |  | Deal 3 damage to an enemy unit. |
+| 61 | Smoke Bank (Common, Iron Reach) | 2 · Land 1 | Spell — Swift |  | An enemy unit cannot block this turn. |
+| 64 | Anchor Chain Bind (Common, Iron Reach) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +0/+3. |
+| 66 | Pig Iron (Common, Iron Reach) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 69 | The Great Hammer (Rare, Iron Reach) | 4 · Land 2 | Relic — Equipment |  | The equipped unit gets +3/+1 and Trample. |
 | 71 | Basalt Wall (Uncommon, Iron Reach) | 2 · Land 1 | Stronghold — Wall | Durability 7 | Durability 7. |
+| 73 | Cliff Battery (Common, Iron Reach) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
+| 75 | Iron Coast Citadel (Rare, Iron Reach) | 5 · Land 2 | Stronghold — Fortress | Durability 10 | Durability 10. At your Rise, one of your Strongholds gains 1 durability. |
+| 78 | Mole Fort (Uncommon, Iron Reach) | 4 · Land 1 | Stronghold — Fortress | Durability 7 | Durability 7. At your Rise, deal 1 damage to an enemy unit. |
+| 80 | Quarry Wall (Common, Iron Reach) | 2 | Domain — Shore |  | Units on this front while blocking at home get +0/+2. |
+| 83 | Admiral Rourke Ironside (Legendary, Free Fleets) | 6 · Sea 3 | Unit — Human Privateer | 5/5 | **Leader.** Your Vessels cost 1 less to play. |
+| 87 | Chandler of the Coast (Uncommon, Free Fleets) | 4 · Sea 1 | Unit — Human Trader | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 90 | Commodore Haldane (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Charge.** When this deals damage to your opponent's Harbor, draw a card. |
 | 91 | First Mate Rourke (Rare, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/3 | Your other Sailors get +1/+0. |
+| 94 | Deck Hand Brin (Common, Free Fleets) | 1 | Unit — Human Sailor | 2/1 | **Charge.**  |
+| 98 | Dock Urchin (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/1 |  |
+| 101 | Galley Sergeant (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Privateer | 3/3 |  |
+| 105 | Gull Catcher (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 |  |
+| 108 | Gun Crew Chief (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, deal 1 damage to an enemy unit. |
 | 111 | Rigging Climber (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
+| 112 | Harbor Pirate (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 4/3 | **Charge.**  |
+| 116 | Hull Caulker (Common, Free Fleets) | 2 | Unit — Human Worker | 2/3 |  |
+| 119 | Lookout Sailor (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 123 | Mast Climber (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
+| 126 | Mate Corvin (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Sailor | 3/3 | Your Sailors get +1/+0. |
+| 129 | Navigator Isa (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Sailor | 2/3 | When this enters play, move one of your units to the other front. When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
 | 131 | Ship's Cook (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | When this enters play, another of your units gets +0/+2 until your next turn. |
+| 134 | Rope Walker (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 1/4 | **Rampart.**  |
+| 137 | Sail Maker (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Worker | 2/2 | When this enters play, draw a card. |
+| 140 | Ship's Carpenter (Uncommon, Free Fleets) | 3 · Sea 1 | Unit — Human Worker | 2/2 | Your Vessels get +0/+1. |
+| 144 | Burn the Harbor (Rare, Free Fleets) | 5 · Sea 2 | Spell |  | Deal 4 damage to your opponent's Harbor. |
+| 147 | Captain's Orders (Common, Free Fleets) | 2 · Sea 1 | Spell — Swift |  | Your units get +2/+0 this turn. |
 | 151 | Harbor Raid (Uncommon, Free Fleets) | 2 · Sea 1 | Spell |  | Deal 3 damage to your opponent's Harbor. |
+| 152 | Gunnery Practice (Common, Free Fleets) | 3 · Sea 1 | Spell |  | Deal 3 damage to an enemy unit in the Deep. |
+| 155 | Press the Attack (Rare, Free Fleets) | 5 · Sea 2 | Spell — Swift |  | Your units get +2/+2 this turn. Your units gain Charge this turn. |
+| 158 | Raider Fleet (Uncommon, Free Fleets) | 5 · Sea 2 | Spell |  | Create three 2/1 Raider tokens. |
+| 162 | Iron Coast Sloop (Common, Free Fleets) | 2 | Vessel — Sloop | 2/2 | **Ferry 1.**  |
+| 165 | Ironclad Escort (Uncommon, Free Fleets) | 5 · Sea 2 | Vessel — Warship | 4/5 | **Ferry 1.**  |
+| 169 | Ore Carrier (Common, Free Fleets) | 3 · Sea 1 | Vessel — Collier | 2/4 | **Ferry 1.**  |
 | 171 | Sea Chest (Common, Free Fleets) | 1 | Relic — Tool |  | When this enters play, draw a card. |
+| 173 | Shipyard Raider (Common, Free Fleets) | 3 · Sea 1 | Vessel — Longship | 3/2 | **Charge, Ferry 1.**  |
+| 176 | The Iron Maiden (Rare, Free Fleets) | 6 · Sea 2 | Vessel — Ironclad | 6/6 | **Ferry 2.**  |
+| 180 | Iron Coast Cove (Common, Free Fleets) | 2 | Domain — Deep |  | Vessels on this front get +1/+0. |
+| 186 | Rust Wraith (Rare, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Spirit | 3/3 | When this is destroyed, return this card to your hand. |
 | 191 | Gulper Eel (Common, Abyssal Choir) | 2 | Unit — Eel | 3/2 |  |
+| 196 | Slag Eel (Common, Abyssal Choir) | 2 | Unit — Eel | 2/2 | **Surge.**  |
 
 ## Reefward (RW, 2017)
 
@@ -506,54 +682,237 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 1 | Border Warden (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 3 | Camp Follower (Common, Crownlands) | 2 | Unit — Human Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 4 | Captain of the Guard (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Soldier | 3/3 | **Leader.**  |
+| 5 | Crown Archer (Common, Crownlands) | 2 | Unit — Human Archer | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 7 | Crown Conscript (Common, Crownlands) | 1 | Unit — Human Soldier | 1/2 |  |
+| 8 | Crown Lancer (Common, Crownlands) | 3 · Land 1 | Unit — Human Knight | 3/2 | **Charge.**  |
+| 9 | Crown Siege Master (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Official | 2/3 | Your Strongholds cost 1 less to play. |
 | 11 | Knight of the Seawall (Rare, Crownlands) | 4 · Land 1 | Unit — Human Knight | 3/3 | **Rampart.** This gets +1/+1 for each Stronghold you control. |
+| 12 | King Bron the Unbroken (Legendary, Crownlands) | 6 · Land 3 | Unit — Human Noble | 4/7 | **Rampart.** Your units get +0/+1. |
+| 13 | Lord Marshal Dorn (Rare, Crownlands) | 5 · Land 2 | Unit — Human Noble | 4/4 | **Leader.** Your units get +1/+0. |
+| 14 | Queen Maelis the Wartime Queen (Legendary, Crownlands) | 7 · Land 3 | Unit — Human Noble | 6/6 | **Leader, Charge.** At your Rise, restore 2 strength to your Harbor. |
+| 16 | Royal Guard Captain (Uncommon, Crownlands) | 5 · Land 2 | Unit — Human Noble | 3/4 | **Tough, Rampart.**  |
+| 17 | Royal Pikeman (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 3/3 |  |
+| 18 | Shieldbearer (Common, Crownlands) | 2 | Unit — Human Soldier | 1/3 | **Rampart.**  |
+| 20 | Siege Mason (Common, Crownlands) | 3 · Land 1 | Unit — Human Mason | 2/2 | When this enters play, one of your Strongholds gains 2 durability. |
+| 21 | Trench Digger (Common, Crownlands) | 2 | Unit — Human Worker | 2/3 |  |
+| 22 | Veteran of the March (Common, Crownlands) | 4 · Land 1 | Unit — Human Soldier | 4/3 |  |
+| 24 | War Chaplain (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Cleric | 1/4 | At your Rise, restore 1 strength to your Harbor. |
+| 25 | War Drummer (Common, Crownlands) | 2 | Unit — Human Soldier | 1/2 | **Leader.**  |
+| 26 | War Scribe (Common, Crownlands) | 3 · Land 1 | Unit — Human Official | 2/2 | When this enters play, draw a card. |
+| 28 | Charge of the Royal Host (Rare, Crownlands) | 5 · Land 2 | Spell — Swift |  | Your units get +2/+1 this turn. Your units gain Charge this turn. |
+| 29 | Forced March (Common, Crownlands) | 2 · Land 1 | Spell — Swift |  | Your units get +1/+1 this turn. |
+| 30 | Muster of the Banners (Rare, Crownlands) | 5 · Land 2 | Spell |  | Create three 2/2 Soldier tokens. |
 | 31 | Crownland Fields (Uncommon, Crownlands) | 1 | Domain — Shore |  | Units on this front while blocking at home get +0/+1. |
+| 33 | Steel the Line (Common, Crownlands) | 1 | Spell — Swift |  | Your units get +0/+2 this turn. |
+| 34 | Battle Standard (Common, Crownlands) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +1/+1. |
+| 35 | Royal Trebuchet (Rare, Crownlands) | 5 · Land 2 | Relic — Tool |  | At your Rise, deal 3 damage to an enemy unit. |
+| 37 | War Chest (Common, Crownlands) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 38 | Crownwar Citadel (Rare, Crownlands) | 5 · Land 2 | Stronghold — Fortress | Durability 11 | Durability 11. At your Rise, one of your Strongholds gains 1 durability. |
+| 39 | Hill Redoubt (Common, Crownlands) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
+| 41 | Order of Battle (Rare, Crownlands) | 4 · Land 2 | Enchantment — Player |  | Your units get +1/+0. Your Harbor takes 1 less damage from each unblocked attacker. |
+| 43 | Black Powder Courier (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/2 | When this enters play, deal 1 damage to an enemy unit. |
+| 46 | Cave Golem (Common, Iron Reach) | 4 · Land 1 | Unit — Construct | 2/4 | **Tough.**  |
+| 49 | Forge Marshal Gurn (Rare, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Noble | 3/4 | Your Constructs get +1/+1. |
 | 51 | Ironmonger (Uncommon, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Smith | 2/3 | Your Relics cost 1 less to play. |
+| 52 | General Hrothgar (Rare, Iron Reach) | 6 · Land 2 | Unit — Reachfolk Noble | 5/5 | **Leader, Rampart.**  |
+| 55 | Golem Forger (Uncommon, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Smith | 2/3 | When this enters play, create a 3/3 Construct token. |
+| 58 | Iron Battalion (Uncommon, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Soldier | 3/4 | **Tough, Rampart.**  |
+| 61 | Iron Hammerman (Common, Iron Reach) | 4 · Land 1 | Unit — Reachfolk Soldier | 4/3 |  |
+| 64 | Iron Pikeman (Common, Iron Reach) | 2 | Unit — Reachfolk Soldier | 2/3 |  |
+| 66 | Ore Cart Runner (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/1 | When this enters play, draw a card. |
+| 69 | Pit Captain (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 3/3 | Your Reachfolk get +1/+0. |
 | 71 | Quarry Hauler (Common, Iron Reach) | 4 · Land 1 | Unit — Reachfolk Miner | 3/5 |  |
+| 73 | Pit Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 2/3 | **Rampart.**  |
+| 76 | Pit Pony Rider (Common, Iron Reach) | 2 | Unit — Reachfolk Soldier | 2/2 | **Charge.**  |
+| 79 | Reach Conscript (Common, Iron Reach) | 1 | Unit — Reachfolk Soldier | 2/1 |  |
+| 82 | Shaft Sapper (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Miner | 2/2 | When this enters play, deal 2 damage to one of your opponent's Strongholds. |
+| 84 | Slag Bearer (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Worker | 3/3 |  |
+| 87 | The Iron Warlord (Legendary, Iron Reach) | 8 · Land 3 | Unit — Construct | 8/7 | **Tough, Trample.**  |
+| 90 | Tunnel Rat (Common, Iron Reach) | 2 | Unit — Reachfolk Miner | 2/1 | **Swift.**  |
 | 91 | Pick and Shovel (Common, Iron Reach) | 3 | Relic — Equipment |  | The equipped unit gets +1/+0. Whenever you deal damage to the opponent's Harbor, draw a card. |
+| 94 | War Smith Hegg (Uncommon, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Smith | 2/3 | Your Equipment cost 1 less to play. |
+| 97 | Hammer Blow (Common, Iron Reach) | 2 · Land 1 | Spell |  | Deal 3 damage to an enemy unit. |
+| 99 | Powder Barrage (Rare, Iron Reach) | 5 · Land 2 | Spell |  | Deal 3 damage to each enemy unit on the Shore. |
+| 102 | Tunnel Collapse (Common, Iron Reach) | 3 · Land 2 | Spell |  | Destroy an enemy unit that costs 3 or less. |
+| 105 | Siege Ram (Common, Iron Reach) | 3 · Land 1 | Relic — Tool |  | At your Rise, deal 1 damage to one of your opponent's Strongholds. |
+| 108 | Siege Engine of the Reach (Rare, Iron Reach) | 6 · Land 2 | Vessel — Siege Engine | 5/6 | **Ferry 1.**  |
 | 111 | Mountain Pass (Uncommon, Iron Reach) | 2 · Land 1 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
+| 112 | Iron Wall (Rare, Iron Reach) | 5 · Land 2 | Stronghold — Fortress | Durability 12 | Durability 12. |
+| 114 | Mine Entrance (Common, Iron Reach) | 2 | Stronghold — Fortress | Durability 5 | Durability 5. |
+| 117 | War Foundry (Uncommon, Iron Reach) | 4 · Land 1 | Stronghold — Fortress | Durability 7 | Durability 7. At your Rise, create a 1/1 Reach Recruit token. |
+| 120 | Iron Gorge (Common, Iron Reach) | 2 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
 | 131 | Wave Crest (Uncommon, Tideborn) | 4 · Sea 1 | Spell |  | Return a unit to its owner's hand. Return a unit to its owner's hand. |
 | 151 | Pressure of the Deep (Common, Abyssal Choir) | 3 · Sea 1 | Spell |  | Destroy an enemy damaged unit. |
 | 171 | Harbormaster Yves (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Official | 3/4 | Your units count as at home on both fronts. |
+| 183 | Battlefield Looter (Common, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, draw a card. |
+| 185 | Deserter (Common, Neutral) | 2 | Unit — Human Mercenary | 2/2 | **Swift.**  |
+| 188 | Field Surgeon (Uncommon, Neutral) | 3 | Unit — Human Cleric | 1/3 | When this enters play, restore 3 strength to your Harbor. |
 | 191 | Healer's Satchel (Common, Neutral) | 2 | Relic — Tool |  | At your Rise, one of your units gets +0/+2 until your next turn. |
+| 192 | Neutral Envoy (Uncommon, Neutral) | 4 | Unit — Human Noble | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 194 | Peacemaker (Rare, Neutral) | 4 | Unit — Human Noble | 2/3 | When this enters play, an enemy unit cannot attack during its controller's next turn. When this enters play, draw a card. |
+| 197 | War Orphan (Common, Neutral) | 1 | Unit — Human Wanderer | 1/1 |  |
+| 199 | Ruined Abbey (Rare, Neutral) | 3 | Domain — Shore |  | Units on this front get +0/+1. |
 
 ## Open Water (OW, 2018)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Coral Lancer (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 3/2 | **Charge.**  |
+| 6 | Current Mage (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, move an enemy unit to the other front. It becomes exhausted. |
 | 8 | Glimmerfin Archer (Common, Tideborn) | 2 | Unit — Tideborn Warrior | 1/3 | When this blocks, deal 1 damage to an enemy attacking unit. |
+| 10 | Current Reader (Common, Tideborn) | 2 | Unit — Tideborn Mage | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 14 | Deep Lane Guard (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 2/3 | **Rampart.**  |
+| 18 | Foam Rider (Common, Tideborn) | 2 | Unit — Tideborn Warrior | 2/3 |  |
+| 21 | Lane Oracle (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 22 | Pearl Diver (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Worker | 1/3 | When this enters play, draw a card. |
+| 26 | Open Sea Eel (Common, Tideborn) | 3 · Sea 1 | Unit — Eel | 3/3 |  |
+| 29 | Open Sea Titan (Rare, Tideborn) | 7 · Sea 3 | Unit — Leviathan | 6/7 | **Tough.**  |
+| 33 | Pearl Factor (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Trader | 1/3 | When this enters play, your Influence capacity grows by 1. |
 | 36 | Reefback Turtle (Uncommon, Tideborn) | 5 · Sea 2 | Unit — Turtle | 2/6 | **Tough.**  |
+| 37 | Queen Nerith of the Open Water (Legendary, Tideborn) | 6 · Sea 3 | Unit — Tideborn Noble | 4/6 | **Surge.** Whenever one of your units returns to your hand, draw a card. |
+| 41 | Reef Admiral (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Noble | 4/4 | **Surge.**  |
+| 45 | Reef Courier (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Swift.**  |
+| 48 | Sea Dragon of the Lanes (Rare, Tideborn) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
 | 51 | Ebb (Common, Tideborn) | 1 | Spell — Swift |  | An enemy unit gets -2/-0 this turn. |
+| 53 | Shell Singer (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 2/2 | When this enters play, draw a card. |
+| 56 | Tide Turtle (Common, Tideborn) | 4 · Sea 1 | Unit — Turtle | 2/4 | **Tough.**  |
+| 60 | Warden of the Lanes (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Noble | 3/3 | Your Surge units get +1/+0. |
+| 64 | Wave Singer Lysa (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Mage | 3/3 | When this enters play, return every enemy unit that costs 2 or less to its owner's hand. |
 | 65 | Flow (Common, Tideborn) | 1 | Spell — Swift |  | One of your units gets +2/+0 this turn. |
+| 68 | Wave Surfer (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
+| 72 | Current Shift (Common, Tideborn) | 1 | Spell — Swift |  | Move one of your units to the other front. |
+| 75 | Ripple (Common, Tideborn) | 2 · Sea 1 | Spell — Swift |  | Return an enemy unit that costs 2 or less to its owner's hand. |
 | 79 | Abalone Shield (Uncommon, Tideborn) | 2 | Relic — Equipment |  | The equipped unit gets +0/+2 and Undertow. |
+| 80 | Tideborn Tithe (Common, Tideborn) | 2 | Spell |  | Draw a card. |
+| 83 | Reef Talisman (Common, Tideborn) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 87 | Kelp Raft (Common, Tideborn) | 1 | Vessel — Raft | 1/2 | **Ferry 1.**  |
+| 91 | Tidal Court (Rare, Tideborn) | 3 · Sea 1 | Domain — Deep |  | Spells cost 1 less to play. |
 | 93 | Undersea Lantern (Uncommon, Tideborn) | 3 · Sea 1 | Relic — Tool |  | Your units are never Stranded. |
+| 95 | Tide Pool (Common, Tideborn) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
+| 99 | Wave Break Wall (Common, Tideborn) | 2 | Domain — Deep |  | Units on this front while blocking at home get +0/+2. |
+| 102 | Admiral Dovre of the Lanes (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Charge.** When this deals damage to your opponent's Harbor, draw a card. |
+| 105 | Anchor Boy (Common, Free Fleets) | 1 | Unit — Human Sailor | 2/1 |  |
 | 108 | Captain 'Red' Moira Flint (Rare, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 4/3 | **Charge, Leader.**  |
+| 109 | Commodore Aldrick Vane (Legendary, Free Fleets) | 7 · Sea 3 | Unit — Human Privateer | 6/6 | **Leader.** Your Vessels have Surge. |
+| 112 | Convoy Escort Captain (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | Your Vessels have Rampart. |
+| 115 | Gale Rigger (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 1/4 | **Rampart.**  |
+| 117 | Lane Marshal (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Official | 3/3 | Your Vessels get +1/+0. |
+| 120 | Lane Pirate (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Privateer | 3/2 | **Charge.**  |
 | 122 | Merchant Trader (Common, Free Fleets) | 4 · Sea 1 | Unit — Human Trader | 3/3 | When this enters play, draw a card. |
+| 124 | Lane Runner (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/1 |  |
+| 127 | Lane Smuggler (Common, Free Fleets) | 2 | Unit — Human Privateer | 2/2 | **Charge.**  |
+| 130 | Open Water Sailor (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/3 |  |
+| 133 | Quartermaster Greer (Uncommon, Free Fleets) | 4 · Sea 1 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
 | 136 | Weathered Quartermaster (Uncommon, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, your Influence capacity grows by 1. |
+| 137 | Reef Navigator (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 140 | Salted Veteran (Common, Free Fleets) | 4 · Sea 1 | Unit — Human Sailor | 4/3 |  |
+| 143 | Ship's Surgeon (Common, Free Fleets) | 2 | Unit — Human Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 146 | Squall Sailor (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 3/3 |  |
+| 149 | Trade Deckhand (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/1 | When this enters play, draw a card. |
 | 151 | Bosun's Whistle (Uncommon, Free Fleets) | 2 · Sea 1 | Relic — Tool |  | At your Rise, ready one of your units. |
+| 152 | Weathered Captain (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | **Leader.**  |
+| 155 | Windward Scout (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
+| 158 | Cannon Salute (Common, Free Fleets) | 3 · Sea 1 | Spell |  | Deal 3 damage to an enemy unit in the Deep. |
+| 161 | Press the Lanes (Rare, Free Fleets) | 5 · Sea 2 | Spell — Swift |  | Your units get +2/+2 this turn. Your units gain Charge this turn. |
+| 164 | Raid on the Convoy (Rare, Free Fleets) | 4 · Sea 2 | Spell |  | Destroy an enemy unit that costs 4 or less. Draw a card. |
 | 165 | Corsair Galley (Uncommon, Free Fleets) | 3 · Sea 1 | Vessel — Galley | 3/2 | **Charge, Ferry 1.**  |
+| 168 | Sea Lane Fleet (Uncommon, Free Fleets) | 6 · Sea 2 | Spell |  | Create three 2/2 Merchantman tokens. |
+| 171 | Tailwind (Common, Free Fleets) | 2 · Sea 1 | Spell — Swift |  | Your units get +1/+1 this turn. |
+| 174 | The Great Lane Race (Rare, Free Fleets) | 5 · Sea 2 | Spell |  | Draw two cards. Your Influence capacity grows by 1. |
+| 177 | Navigator's Chart (Common, Free Fleets) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
 | 179 | Smuggler's Sloop (Uncommon, Free Fleets) | 3 · Sea 1 | Vessel — Sloop | 2/3 | **Swift, Ferry 1.**  |
+| 181 | Cargo Brig (Common, Free Fleets) | 2 | Vessel — Brig | 2/2 | **Ferry 1.**  |
+| 184 | Fleet Admiral's Flagship (Uncommon, Free Fleets) | 5 · Sea 2 | Vessel — Flagship | 4/5 | **Ferry 1.**  |
+| 186 | Heavy Merchantman (Common, Free Fleets) | 4 · Sea 1 | Vessel — Merchantman | 3/5 | **Ferry 1.**  |
+| 189 | Lane Patrol Cutter (Common, Free Fleets) | 3 · Sea 1 | Vessel — Cutter | 3/2 | **Charge, Ferry 1.**  |
+| 192 | The Windward Queen (Rare, Free Fleets) | 6 · Sea 2 | Vessel — Galleon | 6/6 | **Surge, Ferry 2.**  |
 | 193 | Sovereign of the Lanes (Legendary, Free Fleets) | 7 · Sea 3 | Vessel — Galleon | 6/6 | **Ferry 3.** When this attacks, your other attacking units get +1/+0 this turn. |
+| 196 | Open Lane (Common, Free Fleets) | 2 | Domain — Deep |  | Vessels on this front get +1/+0. |
+| 199 | Free Lanes Compact (Rare, Free Fleets) | 4 · Sea 2 | Enchantment — Player |  | Your Vessels cost 1 less to play. Your Vessels get +0/+1. |
 
 ## Bastions of Stone (BS, 2018)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Bastion Brewer (Common, Crownlands) | 2 | Unit — Human Worker | 1/2 | When this enters play, your Influence capacity grows by 1. |
+| 5 | Bastion Commander (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Noble | 3/3 | **Leader.**  |
 | 8 | Gate Captain (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/3 | Your other units while blocking at home get +1/+0. |
+| 10 | Bastion Guard (Common, Crownlands) | 2 | Unit — Human Soldier | 2/3 |  |
+| 13 | Bastion Page (Common, Crownlands) | 1 | Unit — Human Soldier | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 16 | Beacon Hill Archer (Common, Crownlands) | 2 | Unit — Human Archer | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 19 | Castellan of the Outer Ward (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Noble | 2/4 | When this enters play, one of your Strongholds gains 2 durability. When this enters play, draw a card. |
 | 22 | Pikeman of Westfold (Common, Crownlands) | 2 | Unit — Human Soldier | 1/3 | When this blocks, an enemy Charge attacking unit gets -2/-0 this turn. |
+| 24 | Crossbow Wall Guard (Common, Crownlands) | 3 · Land 1 | Unit — Human Archer | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 27 | Garrison Pikeman (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 30 | Granite Veteran (Common, Crownlands) | 4 · Land 1 | Unit — Human Soldier | 3/4 |  |
+| 33 | Lord Warden Brannic (Rare, Crownlands) | 5 · Land 2 | Unit — Human Noble | 4/5 | **Leader, Rampart.**  |
 | 36 | Sir Aldric of the Ford (Rare, Crownlands) | 5 · Land 2 | Unit — Human Knight | 3/5 | **Rampart.** This can block two attackers. |
+| 38 | Master Mason Hale (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Mason | 2/3 | Your Strongholds cost 1 less to play. |
+| 41 | Moat Hound (Common, Crownlands) | 2 | Unit — Beast Hound | 2/2 |  |
+| 44 | Quarry Crew (Common, Crownlands) | 2 | Unit — Human Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 47 | Queen Isolde the Stonewall (Legendary, Crownlands) | 7 · Land 3 | Unit — Human Noble | 5/8 | **Rampart, Leader.** At your Rise, one of your Strongholds gains 2 durability. |
 | 51 | Stablehand (Common, Crownlands) | 2 | Unit — Human Worker | 2/2 | When this enters play, your other units gain Charge this turn. |
+| 52 | Stone Guardian (Uncommon, Crownlands) | 5 · Land 2 | Unit — Construct | 3/4 | **Tough, Rampart.**  |
+| 55 | Stone Knight (Common, Crownlands) | 4 · Land 2 | Unit — Human Knight | 4/3 | **Charge.**  |
+| 58 | Stone Mason (Common, Crownlands) | 2 | Unit — Human Mason | 1/2 | When this enters play, one of your Strongholds gains 2 durability. |
+| 61 | Wall Captain (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Soldier | 2/4 | At your Rise, one of your Strongholds gains 1 durability. |
+| 64 | Wall Engineer (Common, Crownlands) | 3 · Land 1 | Unit — Human Official | 2/2 | When this enters play, draw a card. |
 | 65 | March of the Crown (Rare, Crownlands) | 3 · Land 1 | Spell |  | Your units on the Shore gain Charge this turn. Your units on the Shore get +1/+0 this turn. |
+| 69 | Wall Sentry (Common, Crownlands) | 1 | Unit — Human Soldier | 0/2 | **Rampart.**  |
+| 72 | Wall Walk Patrol (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 3/3 |  |
+| 75 | Defenders Rally (Rare, Crownlands) | 4 · Land 2 | Spell — Swift |  | Your units get +2/+2 this turn. Your units gain Rampart this turn. |
+| 78 | Hot Sand (Common, Crownlands) | 2 · Land 1 | Spell |  | Deal 3 damage to an enemy unit. |
 | 79 | Warhorse Barding (Common, Crownlands) | 1 | Relic — Equipment |  | The equipped unit gets +0/+1 and Charge. |
+| 83 | Reinforce the Wall (Common, Crownlands) | 1 | Spell — Swift |  | Your units get +0/+3 this turn. |
+| 86 | Bastion Standard (Common, Crownlands) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +1/+2. |
+| 89 | Bastion Trebuchet (Rare, Crownlands) | 5 · Land 2 | Relic — Tool |  | At your Rise, deal 3 damage to an enemy unit. |
+| 92 | Cliff Bastion (Uncommon, Crownlands) | 4 · Land 1 | Stronghold — Fortress | Durability 8 | Durability 8. At your Rise, restore 1 strength to your Harbor. |
 | 93 | Curtain Wall (Uncommon, Crownlands) | 2 | Stronghold — Wall | Durability 7 | Durability 7. |
+| 97 | Gatehouse (Common, Crownlands) | 3 · Land 1 | Stronghold — Fortress | Durability 7 | Durability 7. When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 100 | Grand Bastion of the Crown (Rare, Crownlands) | 5 · Land 2 | Stronghold — Fortress | Durability 12 | Durability 12. At your Rise, one of your Strongholds gains 1 durability. |
+| 103 | Low Curtain Wall (Common, Crownlands) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
+| 106 | Shore Keep (Common, Crownlands) | 3 | Stronghold — Fortress | Durability 8 | Durability 8. |
 | 108 | Tithe Barn (Common, Crownlands) | 3 · Land 1 | Stronghold — Storehouse | Durability 5 | Durability 5. At your Rise, gain 1 Influence this turn. |
+| 111 | Bastion Shadow (Common, Crownlands) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
+| 114 | Bastions of Stone Doctrine (Rare, Crownlands) | 4 · Land 2 | Enchantment — Player |  | Your Strongholds cost 1 less to play. Your Strongholds take 2 less damage from each unblocked attacker. |
+| 117 | Basalt Colossus (Uncommon, Iron Reach) | 5 · Land 2 | Unit — Construct | 3/4 | **Tough.**  |
+| 120 | Basalt Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 2/3 | **Rampart.**  |
 | 122 | Copperback Mule (Common, Iron Reach) | 2 | Unit — Beast | 1/3 | Your Equipment cost 1 less to play. |
+| 123 | Fortress Smith (Uncommon, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Smith | 2/3 | Your Constructs get +1/+0. |
+| 126 | Gantry Watch (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 3/3 |  |
+| 129 | Gate Smith Ormund (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Smith | 2/4 | Your Strongholds cost 1 less to play. |
+| 131 | Granite Golem (Common, Iron Reach) | 4 · Land 1 | Unit — Construct | 4/3 |  |
+| 134 | Iron Battery Captain (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 2/3 | At your Rise, deal 1 damage to an enemy unit. |
 | 136 | Iron Golem Sentry (Uncommon, Iron Reach) | 4 · Land 1 | Unit — Construct | 3/5 | **Rampart.**  |
+| 138 | Iron Wall Sentry (Common, Iron Reach) | 2 | Unit — Construct | 2/3 |  |
+| 141 | Mountain Guard Sergeant (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 3/3 | Your Reachfolk get +1/+0. |
+| 143 | Pit Brat (Common, Iron Reach) | 1 | Unit — Reachfolk Worker | 1/1 |  |
+| 146 | Pit Crossbow (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Archer | 2/2 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 149 | Powder Master (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 2/2 | When this enters play, deal 2 damage to one of your opponent's Strongholds. |
 | 151 | Ore Prospector (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Miner | 2/2 | When this enters play, search your deck for a Relic, put it into your hand, then shuffle. |
+| 153 | Rock Thrower (Common, Iron Reach) | 2 | Unit — Reachfolk Soldier | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 155 | Siege Colossus (Rare, Iron Reach) | 7 · Land 3 | Unit — Construct | 7/6 | **Trample.**  |
+| 158 | Siege Engineer Torvald (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 3/3 | When this enters play, draw a card. |
+| 161 | Smelter Boy (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/1 | When this enters play, draw a card. |
+| 163 | Stone Cutter (Common, Iron Reach) | 2 | Unit — Reachfolk Mason | 1/2 | When this enters play, one of your Strongholds gains 2 durability. |
 | 165 | Firedamp (Common, Iron Reach) | 4 · Land 1 | Spell |  | Deal 2 damage to each unit on one front. |
+| 167 | The Stone Giant (Legendary, Iron Reach) | 8 · Land 3 | Unit — Construct | 8/8 | **Tough, Rampart.**  |
+| 170 | Warden of the Stone Gate (Rare, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Noble | 3/5 | **Rampart.** This can block two attackers. |
+| 173 | Bastion Breaker (Rare, Iron Reach) | 4 · Land 2 | Spell |  | Deal 5 damage to one of your opponent's Strongholds. |
+| 175 | Boulder Drop (Common, Iron Reach) | 3 · Land 2 | Spell |  | Deal 4 damage to an enemy unit. |
+| 178 | Earthquake Rune (Common, Iron Reach) | 4 · Land 1 | Spell |  | Deal 2 damage to each enemy unit on the Shore. |
 | 179 | Forgehold (Rare, Iron Reach) | 3 · Land 2 | Stronghold — Fortress | Durability 8 | Durability 8. At your Rise, look at the top 2 cards of your deck. Put a Relic from among them into your hand and the rest on the bottom. |
+| 182 | Pitch and Fire (Common, Iron Reach) | 1 | Spell — Swift |  | An enemy unit gets -2/-2 this turn. |
+| 185 | Ballista Tower (Rare, Iron Reach) | 4 · Land 2 | Relic — Tool |  | At your Rise, deal 2 damage to an enemy unit. |
+| 187 | Heavy Pavise (Common, Iron Reach) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +0/+3. |
+| 190 | Iron Rampart (Common, Iron Reach) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
 | 193 | Harbor Battery (Uncommon, Iron Reach) | 3 · Land 1 | Stronghold — Battery | Durability 6 | Durability 6. At your Rise, deal 1 damage to an enemy unit in the Deep. |
+| 194 | Stone Fortress of the Reach (Rare, Iron Reach) | 5 · Land 2 | Stronghold — Fortress | Durability 11 | Durability 11. At your Rise, one of your Strongholds gains 1 durability. |
+| 196 | Stone Keep of the Reach (Common, Iron Reach) | 3 · Land 1 | Stronghold — Fortress | Durability 8 | Durability 8. |
+| 199 | Cold Basalt (Common, Iron Reach) | 2 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
 
 ## Thornfall (TF, 2018)
 
@@ -639,40 +998,154 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Admiral of the Merchant Fleet (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Leader.** When this deals damage to your opponent's Harbor, draw a card. |
+| 5 | Armed Merchant (Common, Free Fleets) | 4 · Sea 1 | Unit — Human Privateer | 4/3 |  |
 | 7 | Cutlass Dancer (Common, Free Fleets) | 2 | Unit — Human Privateer | 3/1 | **Charge.**  |
+| 8 | Captain Ishbel of the Tides (Legendary, Free Fleets) | 6 · Sea 3 | Unit — Human Privateer | 5/5 | **Charge.** Your Vessels get +1/+1. |
+| 11 | Cargo Hand (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/2 |  |
+| 14 | Convoy Commander (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | Your Vessels get +0/+1. |
+| 16 | Deck Gunner (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 19 | Escort Captain (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 2/4 | **Rampart.**  |
 | 21 | Lookout (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | Your opponent's Swift cards cost 1 more to play. |
+| 23 | Longshore Hand (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 3/3 |  |
+| 25 | Merchant Marine (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Charge.**  |
+| 28 | Pirate Hunter (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | When this enters play, destroy an enemy unit that costs 2 or less. |
+| 31 | Rigging Monkey (Common, Free Fleets) | 1 | Unit — Beast | 1/1 | **Swift.**  |
 | 34 | Navigator Sheel (Rare, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | **Ferry 1.** When this enters play, look at the top 3 cards of your deck. Put a card from among them into your hand and the rest on the bottom. |
+| 35 | Rope Hand (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
+| 37 | Salvage Master (Uncommon, Free Fleets) | 5 · Sea 2 | Unit — Human Sailor | 3/3 | When this enters play, return a Vessel from your discard pile to your hand. |
+| 40 | Ship's Purser (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Official | 2/2 | When this enters play, draw a card. |
+| 43 | Cannon Volley (Common, Free Fleets) | 3 · Sea 1 | Spell |  | Deal 3 damage to an enemy unit in the Deep. |
+| 45 | Fair Wind (Common, Free Fleets) | 2 · Sea 1 | Spell — Swift |  | Your units get +1/+1 this turn. |
 | 47 | Grog Ration (Common, Free Fleets) | 3 · Sea 1 | Spell |  | Your units get +1/+1 this turn. |
+| 49 | Merchant Tide Armada (Rare, Free Fleets) | 6 · Sea 3 | Spell — Swift |  | Create two 3/3 Merchantman tokens. |
+| 52 | Plunder the Convoy (Rare, Free Fleets) | 4 · Sea 2 | Spell |  | Destroy an enemy unit that costs 4 or less. Draw a card. |
+| 54 | Tide Table (Uncommon, Free Fleets) | 3 · Sea 1 | Relic — Tool |  | At your Rise, look at the top 2 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 57 | Grain Ship (Common, Free Fleets) | 3 · Sea 1 | Vessel — Merchantman | 2/4 | **Ferry 1.**  |
+| 60 | Trade Raider (Common, Free Fleets) | 3 · Sea 1 | Vessel — Longship | 3/2 | **Charge, Ferry 1.**  |
 | 61 | Sea Shanty (Common, Free Fleets) | 2 | Enchantment — Front |  | Your Sailors get +1/+0. |
+| 63 | Trade Sloop (Common, Free Fleets) | 2 | Vessel — Sloop | 2/2 | **Ferry 1.**  |
+| 66 | Trade Lane (Common, Free Fleets) | 2 | Domain — Deep |  | Vessels on this front get +1/+0. |
+| 69 | Bonded Guard (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 73 | Caravan Master (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Trader | 3/3 | **Ferry 1.**  |
 | 74 | Crane Operator (Common, Harbor Leagues) | 2 | Unit — Human Worker | 2/3 | When this enters play, move one of your units to the other front. |
+| 78 | Counting Boy (Common, Harbor Leagues) | 1 | Unit — Human Official | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 82 | Counting House Cat (Common, Harbor Leagues) | 2 | Unit — Beast Cat | 2/2 |  |
+| 85 | Dock Foreman Hale (Common, Harbor Leagues) | 4 · Dual 1 | Unit — Human Worker | 4/3 |  |
 | 87 | Guild Clerk (Common, Harbor Leagues) | 3 | Unit — Human Official | 2/2 | When this enters play, draw a card. |
+| 90 | Dockside Auditor (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Official | 3/3 |  |
+| 94 | Fish Market Crier (Common, Harbor Leagues) | 2 | Unit — Human Worker | 2/3 |  |
+| 97 | Guild Arbitrator (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 2/4 | Your opponent's spells cost 1 more to play. |
 | 101 | League Envoy (Common, Harbor Leagues) | 4 | Unit — Human Noble | 2/4 | When this enters play, draw a card. This blocks at home on both fronts. |
+| 102 | Guild Envoy (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Noble | 2/3 | When this enters play, move one of your units to the other front. When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 106 | Guild Guard (Common, Harbor Leagues) | 2 | Unit — Human Soldier | 2/3 |  |
+| 110 | Guild Treasurer (Uncommon, Harbor Leagues) | 4 · Dual 1 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 113 | Guildmaster Verrick (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Noble | 3/5 | At your Rise, restore 1 strength to your Harbor. |
 | 114 | League Marine (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 3/3 | **Ferry 1.**  |
+| 118 | Harbor Factor (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/2 | **Ferry 1.**  |
+| 122 | Market Porter (Common, Harbor Leagues) | 1 | Unit — Human Worker | 2/1 |  |
+| 126 | Master Merchant (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Trader | 3/3 | Your Traders get +1/+0. |
 | 127 | Shipwright (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Worker | 2/3 | Your Vessels cost 1 less to play. |
+| 130 | Merchant Clerk (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/1 | When this enters play, draw a card. |
+| 134 | Prince of the Tides (Legendary, Harbor Leagues) | 6 · Dual 3 | Unit — Human Noble | 4/6 | At your Rise, gain 2 Influence this turn. |
+| 138 | Silk Merchant (Common, Harbor Leagues) | 2 | Unit — Human Trader | 1/2 | When this enters play, restore 2 strength to your Harbor. |
 | 141 | The Guildmistress of Coin (Legendary, Harbor Leagues) | 5 · Dual 2 | Unit — Human Noble | 3/4 | At your Rise, gain 2 Influence this turn. |
+| 142 | Spice Trader (Common, Harbor Leagues) | 2 | Unit — Human Trader | 1/2 | When this enters play, your Influence capacity grows by 1. |
+| 146 | The Merchant Prince (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Noble | 3/4 | When this enters play, draw two cards. |
+| 150 | Trade Broker (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Trader | 2/2 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 154 | Warehouse Fire (Uncommon, Harbor Leagues) | 2 | Spell |  | Destroy an enemy Relic. Draw a card. |
+| 155 | Hard Bargain (Common, Harbor Leagues) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 158 | Open Account (Common, Harbor Leagues) | 2 | Spell |  | Draw a card. |
+| 162 | Ledger Keeper (Common, Harbor Leagues) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 166 | Trade Convoy (Uncommon, Harbor Leagues) | 5 · Dual 2 | Vessel — Convoy | 4/5 | **Ferry 1.**  |
 | 167 | Harbor Chain (Rare, Harbor Leagues) | 3 · Dual 1 | Relic — Tool |  | Enemy Vessels cannot attack. |
+| 171 | Treasure Fleet (Rare, Harbor Leagues) | 6 · Dual 2 | Vessel — Convoy | 5/6 | **Ferry 2.**  |
+| 174 | Merchants' Exchange (Uncommon, Harbor Leagues) | 4 · Dual 1 | Stronghold — Hall | Durability 7 | Durability 7. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 178 | Warehouse (Common, Harbor Leagues) | 2 | Stronghold — Hall | Durability 6 | Durability 6. |
 | 181 | Port of Lanthorn (Rare, Harbor Leagues) | 2 · Dual 1 | Domain — Shore |  | Dual units on this front get +1/+1. |
+| 183 | Weigh House (Common, Harbor Leagues) | 3 · Dual 1 | Stronghold — Hall | Durability 7 | Durability 7. When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 186 | Grand Bazaar (Rare, Harbor Leagues) | 3 · Dual 1 | Domain — Shore |  | Spells cost 1 less to play. |
+| 190 | Merchant Quarter (Common, Harbor Leagues) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
 | 194 | Ledger of Debts (Uncommon, Harbor Leagues) | 2 | Enchantment — Player |  | Whenever your opponent draws a card outside their draw step, your Influence capacity grows by 1. |
+| 195 | Great Charter (Rare, Harbor Leagues) | 5 · Dual 2 | Enchantment — Player |  | Your Strongholds cost 1 less to play. Your units cost 1 less to play. |
+| 199 | Monopoly (Rare, Harbor Leagues) | 4 · Dual 2 | Enchantment — Player |  | Your opponent's units cost 1 more to play. |
 
 ## Broken Chains (BC, 2019)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 6 | Captain Marrow the Unchained (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Swift.** When this enters play, destroy an enemy unit that costs 3 or less. |
 | 8 | Swivel Gunner (Uncommon, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 1/3 | When this blocks, deal 2 damage to an enemy attacking unit. |
+| 17 | Beggar Seer (Common, Neutral) | 2 | Unit — Human Wanderer | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 19 | Escaped Sailor (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/1 |  |
 | 22 | Hedge Knight (Common, Neutral) | 4 | Unit — Human Knight | 2/4 | **Rampart.**  |
+| 23 | Camp Cook (Common, Neutral) | 2 | Unit — Human Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 27 | Camp Priest (Common, Neutral) | 2 | Unit — Human Cleric | 1/2 | When this enters play, your Influence capacity grows by 1. |
+| 31 | Chain Breaker (Common, Neutral) | 2 | Unit — Human Worker | 2/1 | When this enters play, destroy an enemy Relic. |
+| 32 | Freed Crew (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, draw a card. |
+| 35 | Company Captain (Uncommon, Neutral) | 4 | Unit — Human Mercenary | 3/3 | Your Mercenaries get +1/+0. |
 | 36 | Mercenary Captain (Uncommon, Neutral) | 4 | Unit — Human Mercenary | 2/3 | **Leader.**  |
+| 40 | Feral Hound (Common, Neutral) | 2 | Unit — Beast Hound | 2/2 | **Charge.**  |
+| 44 | Gun Deck Rebel (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, deal 1 damage to an enemy unit. |
+| 45 | Free Company Knight (Common, Neutral) | 3 | Unit — Human Mercenary | 3/2 | **Charge.**  |
+| 49 | Free Company Recruit (Common, Neutral) | 2 | Unit — Human Mercenary | 2/2 |  |
 | 51 | Pilgrim (Common, Neutral) | 3 | Unit — Human Wanderer | 1/2 | When this enters play, draw a card. |
+| 53 | Freed Captive (Common, Neutral) | 1 | Unit — Human Wanderer | 1/2 |  |
+| 57 | Longboat Rower (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | **Ferry 1.**  |
+| 58 | Gaoler's Daughter (Uncommon, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, an enemy unit cannot attack during its controller's next turn. |
+| 62 | Liberator of the Chains (Rare, Neutral) | 5 | Unit — Human Noble | 4/4 | **Leader.** Your units get +1/+1. |
 | 65 | Wandering Bard (Uncommon, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, ready another of your units. |
+| 66 | Mercenary Pikeman (Common, Neutral) | 3 | Unit — Human Mercenary | 2/3 | **Rampart.**  |
+| 69 | Mutineer (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Charge.**  |
+| 71 | Ox Cart Driver (Common, Neutral) | 3 | Unit — Human Worker | 3/3 |  |
+| 75 | Rag-Tag Militia (Common, Neutral) | 2 | Unit — Human Soldier | 2/3 |  |
 | 79 | Wolf of the Wastes (Common, Neutral) | 2 | Unit — Beast | 3/1 |  |
+| 80 | Roadside Tinker (Common, Neutral) | 2 | Unit — Human Trader | 2/2 |  |
+| 82 | Pirate Captain Voss (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | Your Sailors get +1/+0. |
+| 84 | Runaway (Common, Neutral) | 1 | Unit — Human Wanderer | 1/1 | **Swift.**  |
+| 88 | Scrounger (Common, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, draw a card. |
+| 92 | Sellsword Archer (Common, Neutral) | 2 | Unit — Human Mercenary | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
 | 93 | Free Company (Uncommon, Neutral) | 4 | Spell |  | Create three 1/1 Mercenary tokens. |
+| 95 | Rebel Admiral Kess (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Charge.** When this deals damage to your opponent's Harbor, draw a card. |
+| 98 | The Great Liberator (Legendary, Neutral) | 6 | Unit — Human Noble | 5/5 | **Leader.** At your Rise, return a unit from your discard pile to your hand. |
+| 101 | The Silent Mercenary (Legendary, Neutral) | 6 | Unit — Human Mercenary | 4/4 | **Swift, Charge.** When this enters play, deal 4 damage to an enemy unit. |
+| 105 | The Wolf of the Wastes King (Legendary, Neutral) | 7 | Unit — Beast Wolf | 7/6 | **Trample.** When this enters play, create two 2/2 Wolf tokens. |
+| 106 | Smuggler's Boy (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/1 | **Swift.**  |
 | 108 | Gale (Uncommon, Neutral) | 3 | Spell |  | Ready your units. Draw a card. |
+| 111 | Veteran Sellsword (Common, Neutral) | 4 | Unit — Human Mercenary | 4/3 |  |
+| 115 | Wandering Surgeon (Uncommon, Neutral) | 4 | Unit — Human Cleric | 2/3 | When this enters play, restore 3 strength to your Harbor. When this enters play, draw a card. |
+| 118 | Warlord of the Wastes (Rare, Neutral) | 6 | Unit — Human Mercenary | 6/6 | **Trample.**  |
+| 119 | Swivel Gun Crew (Uncommon, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
 | 122 | Rain of Hail (Uncommon, Neutral) | 3 | Spell |  | Deal 1 damage to each unit on the Shore. Deal 1 damage to each unit in the Deep. |
+| 124 | Wasteland Dog (Common, Neutral) | 1 | Unit — Beast Hound | 1/2 |  |
+| 128 | Wasteland Wanderer (Common, Neutral) | 3 | Unit — Human Wanderer | 3/3 |  |
+| 132 | Mutiny at Sea (Rare, Free Fleets) | 4 · Sea 2 | Spell — Swift |  | Gain control of an enemy unit that costs 3 or less. |
+| 133 | Ambush on the Road (Common, Neutral) | 3 | Spell |  | Deal 3 damage to an enemy unit. |
 | 136 | Ancient Coin (Common, Neutral) | 1 | Relic — Tool |  | When this enters play, gain 1 Influence this turn. When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 137 | Break Free (Common, Neutral) | 2 | Spell — Swift |  | One of your units gets +2/+2 this turn. |
+| 141 | Dust Devil (Common, Neutral) | 1 | Spell — Swift |  | An enemy unit gets -2/-0 this turn. |
+| 144 | The Black Flag Fleet (Rare, Free Fleets) | 6 · Sea 3 | Spell |  | Create three 2/2 Raider Ship tokens with Charge. |
+| 146 | Free Company Muster (Rare, Neutral) | 5 | Spell |  | Create three 2/2 Mercenary tokens. |
+| 150 | Free Company Standard (Uncommon, Neutral) | 4 | Spell |  | Create three 1/1 Mercenary tokens. |
 | 151 | Cartographer's Table (Uncommon, Neutral) | 2 | Relic — Tool |  | Whenever you play a Domain, draw a card. |
+| 154 | Horde of the Wastes (Rare, Neutral) | 6 | Spell |  | Create four 2/1 Raider tokens. |
+| 157 | Raider Cutter (Common, Free Fleets) | 3 · Sea 1 | Vessel — Cutter | 3/2 | **Charge, Ferry 1.**  |
+| 159 | Prison Break (Rare, Neutral) | 5 | Spell |  | Deal 5 damage to one of your opponent's Strongholds. |
+| 163 | Broken Chain (Common, Neutral) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
 | 165 | Monastery on the Rock (Rare, Neutral) | 4 | Stronghold — Monastery | Durability 7 | Durability 7. At your Rise, restore 1 strength to your Harbor. |
+| 167 | Liberty Bell (Rare, Neutral) | 4 | Relic — Tool |  | At your Rise, draw a card. |
+| 169 | Rebel Flagship (Uncommon, Free Fleets) | 5 · Sea 2 | Vessel — Galleon | 4/5 | **Ferry 1.**  |
+| 172 | Rusted Blade (Common, Neutral) | 2 | Relic — Equipment |  | The equipped unit gets +2/+0. |
+| 176 | Scavenged Shield (Common, Neutral) | 2 | Relic — Equipment |  | The equipped unit gets +0/+3. |
 | 179 | Crossroads Shrine (Uncommon, Neutral) | 2 | Domain — Shore |  | Neutral cards cost 1 less to play. |
+| 181 | Abandoned Fort (Common, Neutral) | 2 | Stronghold — Fortress | Durability 5 | Durability 5. |
+| 182 | Rebel Sloop (Common, Free Fleets) | 2 | Vessel — Sloop | 2/2 | **Ferry 1.**  |
+| 185 | Old Prison Tower (Uncommon, Neutral) | 4 | Stronghold — Fortress | Durability 7 | Durability 7. At your Rise, restore 1 strength to your Harbor. |
+| 189 | Open Road (Common, Neutral) | 2 | Domain — Shore |  | Units that attack into this front are never Stranded. |
 | 193 | Frozen Coast (Uncommon, Neutral) | 2 | Domain — Deep |  | Stranded units stay exhausted for one more turn. |
+| 194 | Wasteland Camp (Common, Neutral) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
+| 195 | Slaver Brig (Common, Free Fleets) | 3 · Sea 1 | Vessel — Brig | 2/4 | **Ferry 1.**  |
+| 199 | The Black Chain Banner (Rare, Neutral) | 4 | Enchantment — Player |  | Your Mercenaries get +1/+1. Whenever one of your Mercenaries is destroyed, draw a card. |
 
 ## Deepforge (DF, 2019)
 
@@ -838,57 +1311,230 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Brine Mage Initiate (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 2/2 | When this enters play, draw a card. |
+| 6 | Foam Knight (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 3/2 | **Charge.**  |
 | 8 | Coralsmith (Common, Tideborn) | 2 | Unit — Tideborn Smith | 1/3 | Your Relics cost 1 less to play. |
+| 11 | Gale Admiral (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Noble | 3/3 | Your Surge units get +1/+0. |
+| 15 | Gale Caller (Common, Tideborn) | 2 | Unit — Tideborn Mage | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 18 | Gale Oracle (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, draw a card. When this enters play, look at the top card of your deck. Put any of them on the bottom. |
 | 22 | Dolphin Messenger (Common, Tideborn) | 2 | Unit — Dolphin | 1/2 | When this enters play, draw a card. |
+| 23 | Kelp Dancer in the Gale (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 |  |
+| 27 | Queen Saela of the Gale (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Noble | 4/4 | **Surge.** Whenever one of your units returns to your hand, draw a card. |
+| 31 | Spray Skimmer (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
+| 34 | Squall Guard (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 2/3 | **Rampart.**  |
 | 36 | Manta Glider (Common, Tideborn) | 3 · Sea 1 | Unit — Ray | 3/2 | **Surge.**  |
+| 39 | Storm Leviathan (Rare, Tideborn) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
+| 43 | Storm Pearl Merchant (Common, Tideborn) | 2 | Unit — Tideborn Trader | 1/1 | When this enters play, draw a card. |
+| 47 | Storm Petrel (Common, Tideborn) | 1 | Unit — Beast Bird | 1/1 | **Swift.**  |
+| 50 | Storm Priestess (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 51 | Shellguard (Common, Tideborn) | 2 | Unit — Tideborn Warrior | 1/3 | **Rampart.**  |
+| 55 | Storm Turtle (Common, Tideborn) | 4 · Sea 1 | Unit — Turtle | 2/4 | **Tough.**  |
+| 59 | Tempest Singer (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 2/3 | When this enters play, move one of your units to the other front. |
+| 63 | Thunder Whale (Uncommon, Tideborn) | 5 · Sea 2 | Unit — Whale | 3/5 | **Tough.**  |
 | 65 | Tide-Priestess Saela (Legendary, Tideborn) | 5 · Sea 2 | Unit — Tideborn Cleric | 3/4 | Your units cost 1 less to play. At your Rise, return another of your units to its owner's hand. |
+| 67 | Tide Caller Maris (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | Your Swift spells cost 1 less to play. |
+| 71 | Tideborn Diver (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Scout | 3/3 |  |
+| 75 | Tidewarden of the Gale (Legendary, Tideborn) | 6 · Sea 3 | Unit — Tideborn Noble | 5/5 | **Surge, Swift.** When this enters play, return an enemy unit to its owner's hand. |
 | 79 | Tideborn Sentinel (Uncommon, Tideborn) | 4 · Sea 1 | Unit — Tideborn Warrior | 3/4 | **Rampart.**  |
+| 80 | Undertow Eel (Common, Tideborn) | 3 · Sea 1 | Unit — Eel | 2/3 | **Undertow.**  |
+| 83 | Wave Rider (Common, Tideborn) | 2 | Unit — Tideborn Warrior | 2/3 |  |
+| 87 | Whirlpool Mage (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, move an enemy unit to the other front. It becomes exhausted. |
+| 91 | Rip Current (Common, Tideborn) | 2 · Sea 1 | Spell — Swift |  | Return an enemy unit that costs 2 or less to its owner's hand. |
 | 93 | Tidewarden Ilos (Rare, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 2/3 | **Swift.** Your Swift spells cost 1 less to play. |
+| 96 | Storm Warning Flags (Common, Tideborn) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 99 | Typhoon (Rare, Tideborn) | 5 · Sea 2 | Spell |  | Return every enemy unit on one front to its owner's hand. |
+| 103 | Wave Break Tide (Rare, Tideborn) | 4 · Sea 2 | Spell — Swift |  | Your units get +2/+2 this turn. Your units gain Surge this turn. |
+| 107 | Salt Wind Charm (Common, Tideborn) | 2 · Sea 1 | Relic — Equipment |  | The equipped unit gets +1/+1 and Surge. |
 | 108 | Whirlpool (Uncommon, Tideborn) | 3 · Sea 1 | Spell |  | Return every unit that costs 2 or less to its owner's hand. |
+| 112 | Wind Pearl (Common, Tideborn) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 115 | Black Squall (Common, Tideborn) | 2 | Domain — Deep |  | Surge units on this front get +1/+0. |
+| 119 | Eye of the Storm (Rare, Tideborn) | 3 · Sea 1 | Domain — Deep |  | Spells cost 1 less to play. |
 | 122 | Sea Glass Charm (Common, Tideborn) | 1 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 124 | Squall Court (Uncommon, Tideborn) | 3 · Sea 1 | Domain — Deep |  | Tideborn on this front get +1/+0. |
+| 128 | Storm Surge Barrier (Common, Tideborn) | 2 | Domain — Shore |  | Units on this front while blocking at home get +0/+2. |
+| 131 | Admiral Corvin Stormborn (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Charge.** When this deals damage to your opponent's Harbor, draw a card. |
+| 133 | Captain Zephyra Gale (Legendary, Free Fleets) | 6 · Sea 3 | Unit — Human Privateer | 5/5 | **Charge.** Your Vessels have Surge. |
 | 136 | Broadside (Rare, Free Fleets) | 4 · Sea 2 | Spell |  | Deal 2 damage to each unit on one front. |
+| 137 | Gale Captain Orrin (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | Your Vessels get +1/+0. |
+| 140 | Gale Navigator (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 142 | Gale Rope Hand (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 1/4 | **Rampart.**  |
+| 145 | Gull Rider (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 3/3 |  |
+| 148 | Hurricane Captain (Common, Free Fleets) | 4 · Sea 1 | Unit — Human Privateer | 4/3 |  |
+| 150 | Hurricane Raider (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 4/3 | **Charge.**  |
 | 151 | Marooned (Uncommon, Free Fleets) | 5 · Sea 2 | Spell |  | Remove an enemy unit from the game. |
+| 154 | Lightning Rod Sailor (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, deal 1 damage to an enemy unit. |
+| 157 | Scuttle Hand (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
+| 159 | Storm Cook (Common, Free Fleets) | 2 | Unit — Human Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 162 | Storm Deckhand (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/3 |  |
 | 165 | Rope and Grapple (Common, Free Fleets) | 2 | Relic — Equipment |  | The equipped unit gets +1/+1 and Charge. |
+| 166 | Storm Pilot (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Sailor | 3/3 | When this enters play, move one of your units to the other front. |
+| 168 | Storm Quartermaster (Uncommon, Free Fleets) | 4 · Sea 1 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 171 | Storm Sailor (Common, Free Fleets) | 1 | Unit — Human Sailor | 2/1 |  |
+| 173 | Broadside in the Storm (Common, Free Fleets) | 3 · Sea 1 | Spell |  | Deal 3 damage to an enemy unit in the Deep. |
+| 176 | Hurricane Armada (Rare, Free Fleets) | 6 · Sea 3 | Spell — Swift |  | Create two 3/3 Storm Ship tokens. |
 | 179 | Smuggler's Cove (Uncommon, Free Fleets) | 2 · Sea 1 | Domain — Deep |  | Vessels cost 1 less to play. |
+| 180 | Reef the Sails (Common, Free Fleets) | 1 | Spell — Swift |  | Your units get +0/+2 this turn. |
+| 182 | Storm-Tossed Fleet (Uncommon, Free Fleets) | 6 · Sea 2 | Spell |  | Create three 2/2 Storm Ship tokens. |
+| 185 | Thunderbolt (Rare, Free Fleets) | 4 · Sea 2 | Spell |  | Deal 5 damage to an enemy unit. |
+| 188 | Gale Raider (Common, Free Fleets) | 3 · Sea 1 | Vessel — Longship | 3/2 | **Charge, Ferry 1.**  |
+| 190 | Squall Runner (Common, Free Fleets) | 2 | Vessel — Sloop | 2/2 | **Ferry 1.**  |
 | 193 | Letter of Marque (Rare, Free Fleets) | 3 · Sea 1 | Enchantment — Player |  | Whenever you deal damage to the opponent's Harbor, draw a card. |
+| 194 | Storm Galleon (Common, Free Fleets) | 4 · Sea 1 | Vessel — Galleon | 3/5 | **Ferry 1.**  |
+| 197 | The Storm Rider (Rare, Free Fleets) | 6 · Sea 2 | Vessel — Galleon | 6/6 | **Surge, Ferry 2.**  |
+| 199 | Gale Harbor (Common, Free Fleets) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
 
 ## Harbor Moon (HM, 2020)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Moon Court Guard (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 2/3 | **Rampart.**  |
+| 6 | Moon Priestess of Ys (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, return an enemy unit that costs 3 or less to its owner's hand. |
 | 8 | Riptide Ambush (Rare, Tideborn) | 5 · Sea 2 | Spell — Swift |  | Return every attacking unit to its owner's hand. |
+| 11 | Moon Tide Scout (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
+| 15 | Moonpool Mage (Common, Tideborn) | 2 | Unit — Tideborn Mage | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 19 | Silver Fish (Common, Tideborn) | 1 | Unit — Fish | 1/1 | **Swift.**  |
 | 22 | Coral City of Ys'mar (Rare, Tideborn) | 2 · Sea 1 | Domain — Deep |  | Whenever one of your units returns to your hand, draw a card. |
+| 24 | Tide Queen's Moonlight (Rare, Tideborn) | 4 · Sea 2 | Spell — Swift |  | Your units get +0/+3 this turn. Your units gain Rampart this turn. |
+| 28 | Moonrise Court (Rare, Tideborn) | 3 · Sea 1 | Domain — Deep |  | Domains cost 1 less to play. |
+| 32 | Bishop of the Pale Moon (Rare, Abyssal Choir) | 6 · Sea 3 | Unit — Drowned Cleric | 4/5 | When this enters play, return a Drowned from your discard pile to play. |
 | 36 | Abyssal Priest (Uncommon, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Cultist | 2/3 | Whenever you play an Enchantment, draw a card. |
+| 37 | Drowned Choirmaster Veyl (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 3/3 | Your Drowned get +1/+0. |
+| 41 | Drowned Lamplighter (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Worker | 3/3 |  |
+| 45 | Drowned Lantern Carrier (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Worker | 3/3 |  |
+| 49 | Drowned Moon Singer (Common, Abyssal Choir) | 4 · Sea 1 | Unit — Drowned Cleric | 4/3 |  |
 | 51 | Deep Choirmaster Oreth (Legendary, Abyssal Choir) | 6 · Sea 3 | Unit — Drowned Cultist | 4/5 | Your other units in the Deep get +1/+1. Whenever you play an Enchantment, deal 2 damage to an enemy unit. |
+| 54 | Harbor Bell Keeper (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 58 | Harbor Ghoul (Common, Abyssal Choir) | 2 | Unit — Drowned Spirit | 2/3 |  |
+| 62 | Harbor Leech (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Fish | 1/2 | When this enters play, create a 1/1 Eel token. |
 | 65 | Drowned Bellringer (Common, Abyssal Choir) | 2 | Unit — Drowned Cultist | 1/2 | When this enters play, deal 1 damage to an enemy unit. |
+| 67 | Harbor Moon Cantor (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 2/4 | Whenever you play an Enchantment, draw a card. |
+| 71 | Harbor Moon Wraith Lord (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Spirit | 3/3 | **Tough.**  |
+| 75 | Lunar Priest (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Cleric | 1/4 | **Rampart.**  |
 | 79 | Drowned Sailor (Common, Abyssal Choir) | 2 | Unit — Drowned Cultist | 2/1 | When this is destroyed, return this card to your hand. |
+| 80 | Moon Eel (Common, Abyssal Choir) | 2 | Unit — Eel | 2/2 | **Surge.**  |
+| 84 | Moon Leviathan (Rare, Abyssal Choir) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
+| 88 | Moon Siren (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Siren | 2/3 | When this enters play, move an enemy unit to the other front. It becomes exhausted. |
+| 92 | Moonlit Cultist (Common, Abyssal Choir) | 1 | Unit — Drowned Cultist | 1/1 |  |
 | 93 | Lantern Angler (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Anglerfish | 1/4 | **Rampart.**  |
+| 97 | Moonlit Horror (Common, Abyssal Choir) | 4 · Sea 1 | Unit — Deep Horror | 2/4 | **Tough.**  |
+| 101 | Night Diver (Common, Abyssal Choir) | 2 | Unit — Drowned Worker | 1/1 | When this enters play, draw a card. |
+| 105 | Pier Wraith (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Spirit | 3/2 | **Charge.**  |
 | 108 | Call of the Depths (Rare, Abyssal Choir) | 5 · Sea 2 | Spell |  | Return a unit from your discard pile to play. |
+| 110 | The Moon Eater (Legendary, Abyssal Choir) | 8 · Sea 3 | Unit — Deep Horror | 8/7 | **Surge.** When this enters play, destroy an enemy unit that costs 4 or less. |
+| 114 | Tide Watcher (Common, Abyssal Choir) | 1 | Unit — Drowned Worker | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 118 | Tide-Dragged Captain (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Drowned Noble | 3/4 | When this enters play, return a Vessel from your discard pile to play. |
 | 122 | Sunken Cathedral (Rare, Abyssal Choir) | 2 · Sea 1 | Domain — Deep |  | Enchantments cost 1 less to play. |
+| 123 | Whale Fall Priest (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Cleric | 1/2 | When this enters play, create a 2/2 Drowned token. |
+| 127 | Dark of the Moon (Common, Abyssal Choir) | 1 | Spell — Swift |  | An enemy unit gets -3/-0 this turn. |
+| 131 | Eclipse of the Moon (Rare, Abyssal Choir) | 5 · Sea 2 | Spell |  | Return every unit on one front to its owner's hand. |
+| 135 | Moonlit Drown (Common, Abyssal Choir) | 3 · Sea 1 | Spell |  | Destroy an enemy unit that costs 3 or less. |
 | 136 | Whale Fall (Uncommon, Abyssal Choir) | 2 · Sea 1 | Domain — Deep |  | Whenever a unit in the Deep is destroyed, units in the Deep get +1/+1 this turn. |
+| 140 | Moon Pearl (Common, Abyssal Choir) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 144 | Moon Shrine (Common, Abyssal Choir) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 148 | Cathedral of the Moon (Rare, Abyssal Choir) | 5 · Sea 2 | Stronghold — Fortress | Durability 8 | Durability 8. At your Rise, create a 1/1 Drowned token. |
 | 151 | Cult of the Low Hymn (Uncommon, Abyssal Choir) | 2 · Sea 1 | Enchantment — Player |  | Whenever a unit is destroyed, gain 1 Influence this turn. |
+| 153 | Moonlit Quay (Common, Abyssal Choir) | 2 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
+| 157 | Moon Choir (Uncommon, Abyssal Choir) | 3 · Sea 2 | Enchantment — Player |  | Your Drowned get +1/+1. |
+| 159 | Dock Watchman (Common, Harbor Leagues) | 2 | Unit — Human Soldier | 2/3 |  |
+| 161 | Guildmistress of the Moon (Legendary, Harbor Leagues) | 6 · Dual 3 | Unit — Human Noble | 4/6 | At your Rise, restore 2 strength to your Harbor. |
+| 163 | Harbor Moon Marshal (Common, Harbor Leagues) | 4 · Dual 1 | Unit — Human Soldier | 3/4 | **Ferry 1.**  |
 | 165 | Ferryman's Oar (Common, Harbor Leagues) | 1 | Relic — Equipment |  | The equipped unit gets +1/+0 and Ferry. |
+| 166 | Harbor Moon Recruit (Common, Harbor Leagues) | 1 | Unit — Human Soldier | 1/2 |  |
+| 168 | Lantern Clerk (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/1 | When this enters play, draw a card. |
+| 170 | Master Lamplighter Orsa (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Keeper | 2/3 | Your Keepers get +1/+0. |
+| 172 | Moon Fair Vendor (Common, Harbor Leagues) | 2 | Unit — Human Trader | 1/2 | When this enters play, your Influence capacity grows by 1. |
+| 173 | Moon Harbor Mistress (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Noble | 3/4 | When this enters play, draw two cards. |
+| 175 | Moon-Gate Warden (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 2/2 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 177 | Moon-Watch Captain (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Soldier | 3/3 | **Leader.**  |
 | 179 | Tollboat (Uncommon, Harbor Leagues) | 3 · Dual 1 | Vessel — Boat | 2/3 | **Ferry 1.** Whenever an opponent's unit attacks away from home, restore 1 strength to your Harbor. |
+| 180 | Night Ferry Hand (Common, Harbor Leagues) | 2 | Unit — Human Sailor | 1/2 | **Ferry 1.**  |
+| 182 | Night Gatekeeper (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 184 | Night Harbor Master (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 186 | Night Porter (Common, Harbor Leagues) | 2 | Unit — Human Worker | 2/2 |  |
+| 187 | Tide Table Reader (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Official | 3/3 |  |
+| 189 | Procession of Lights (Common, Harbor Leagues) | 2 · Dual 1 | Spell — Swift |  | Your units get +1/+1 this turn. |
+| 191 | The Harbor Moon Lantern (Rare, Harbor Leagues) | 5 · Dual 2 | Relic — Tool |  | At your Rise, restore 2 strength to your Harbor. |
 | 193 | Lantern Procession (Common, Harbor Leagues) | 2 | Enchantment — Front |  | Your units are never Stranded. |
+| 194 | Moon Fleet (Rare, Harbor Leagues) | 5 · Dual 2 | Vessel — Convoy | 4/5 | **Ferry 2.**  |
+| 196 | Moon Lighthouse (Common, Harbor Leagues) | 3 · Dual 1 | Stronghold — Hall | Durability 7 | Durability 7. When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 198 | Night Market (Common, Harbor Leagues) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
+| 200 | Harbor Moon Festival (Uncommon, Harbor Leagues) | 3 · Dual 1 | Enchantment — Player |  | Your Harbor takes 1 less damage from each unblocked attacker. |
 
 ## Fathoms Deep (FD, 2021)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Coral City Mason (Common, Tideborn) | 2 | Unit — Tideborn Worker | 1/2 | When this enters play, one of your Strongholds gains 2 durability. |
+| 6 | Coral Reader (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, draw a card. When this enters play, look at the top card of your deck. Put any of them on the bottom. |
 | 8 | Barnacle Guardian (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Guardian | 2/2 | **Tough.**  |
+| 11 | Deep Counsellor (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Noble | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 14 | Deep Courier (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Swift.**  |
+| 18 | Deep Gate Sentinel (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Guardian | 2/2 | This can block two attackers. |
+| 21 | Deep Oracle (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 24 | Glassfin Spy (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | When this enters play, the next spell your opponent plays costs 1 more. |
+| 26 | Deep Reef Fish (Common, Tideborn) | 1 | Unit — Fish | 1/2 |  |
+| 30 | Deep Sea Ray (Common, Tideborn) | 4 · Sea 1 | Unit — Fish | 4/3 |  |
+| 33 | Deep Sovereign (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Noble | 4/4 | **Surge.**  |
+| 37 | Depth Mage (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 2/3 | When this enters play, move one of your units to the other front. |
 | 39 | Moon-Tide Seer (Rare, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 1/3 | When this enters play, look at the top 3 cards of your deck. Put a card from among them into your hand and the rest on the bottom. At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 41 | Emissary of Ys'mar (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Noble | 3/4 | When this enters play, return an enemy unit to its owner's hand. |
+| 45 | Fathom Gardener (Common, Tideborn) | 2 | Unit — Tideborn Worker | 2/2 |  |
+| 49 | Fathom Leviathan (Rare, Tideborn) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
+| 52 | Fathom Scout (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
 | 54 | Narwhal Charger (Uncommon, Tideborn) | 4 · Sea 1 | Unit — Narwhal | 3/3 | **Charge, Trample.**  |
+| 57 | Fathom Whale (Uncommon, Tideborn) | 5 · Sea 2 | Unit — Whale | 3/5 | **Tough.**  |
+| 60 | Giant Clam (Common, Tideborn) | 4 · Sea 1 | Unit — Fish | 2/4 | **Tough.**  |
+| 64 | Kelp Watcher (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/3 |  |
+| 68 | King Thalassos of the Fathoms (Legendary, Tideborn) | 7 · Sea 3 | Unit — Tideborn Noble | 6/7 | **Rampart, Surge.** At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
 | 70 | Ys'mar Honor Guard (Uncommon, Tideborn) | 4 · Sea 1 | Unit — Tideborn Warrior | 3/3 | **Leader.**  |
+| 72 | Lamp Fish Guide (Common, Tideborn) | 2 | Unit — Fish | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 76 | Narwhal Rider (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 3/2 | **Charge.**  |
+| 80 | Tideborn Tithe Collector (Common, Tideborn) | 2 | Unit — Tideborn Trader | 1/2 | When this enters play, your Influence capacity grows by 1. |
+| 83 | Trench Diver (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Scout | 2/2 | When this enters play, draw a card. |
 | 85 | Deep Current (Common, Tideborn) | 2 · Sea 1 | Spell |  | Move one of your units to the other front. Move an enemy unit to the other front. It becomes exhausted. |
+| 88 | Ys'mar Archer (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Archer | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 91 | Ys'mar Captain (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Noble | 3/3 | **Leader.**  |
+| 95 | Ys'mar Guard (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 2/3 | **Rampart.**  |
+| 99 | Ys'mar Guard Captain (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Warrior | 2/4 | **Rampart, Leader.**  |
 | 101 | Silt Cloud (Common, Tideborn) | 2 | Spell — Swift |  | An enemy attacking unit gets -6/-0 this turn. |
+| 103 | Pressure Shock (Common, Tideborn) | 2 · Sea 1 | Spell — Swift |  | An enemy unit cannot block this turn. |
+| 107 | Tide Counsel (Common, Tideborn) | 2 | Spell |  | Draw a card. |
+| 110 | Tide of the Depths (Rare, Tideborn) | 5 · Sea 2 | Spell |  | Return every enemy unit on one front to its owner's hand. |
+| 114 | Coral Spear (Common, Tideborn) | 2 · Sea 1 | Relic — Equipment |  | The equipped unit gets +2/+0. |
 | 116 | Wavebreaker (Rare, Tideborn) | 3 · Sea 1 | Spell |  | Destroy an enemy Vessel. Draw a card. |
+| 119 | Heart of Ys'mar (Rare, Tideborn) | 5 · Sea 2 | Relic — Tool |  | At your Rise, restore 2 strength to your Harbor. |
+| 122 | Pearl Lamp (Common, Tideborn) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 126 | Ys'mar Citadel (Uncommon, Tideborn) | 4 · Sea 1 | Stronghold — Fortress | Durability 8 | Durability 8. At your Rise, one of your Strongholds gains 1 durability. |
+| 129 | Deep Gate Barrier (Common, Tideborn) | 2 | Domain — Deep |  | Units on this front while blocking at home get +0/+2. |
 | 131 | Tidebound Oath (Uncommon, Tideborn) | 2 · Sea 1 | Enchantment — Player |  | Whenever one of your units returns to your hand, draw a card. |
+| 134 | The Deep Library (Rare, Tideborn) | 3 · Sea 1 | Domain — Deep |  | Spells cost 1 less to play. |
+| 138 | Pearl Brow Ward (Common, Tideborn) | 2 · Sea 1 | Enchantment — Unit |  | The enchanted unit gets +0/+3. |
+| 141 | Abyssal Diver (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Worker | 2/2 | When this enters play, draw a card. |
+| 143 | Abyssal Maw (Rare, Abyssal Choir) | 7 · Sea 3 | Unit — Deep Horror | 7/6 | **Surge.**  |
+| 146 | Abyssal Reliquary (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Worker | 3/3 | When this enters play, return a unit from your discard pile to your hand. |
 | 147 | Choir Initiate (Common, Abyssal Choir) | 2 | Unit — Drowned Cultist | 1/2 | At your Rise, gain 1 Influence this turn. |
+| 150 | Archbishop of the Deep (Rare, Abyssal Choir) | 6 · Sea 3 | Unit — Drowned Cleric | 4/5 | When this enters play, return a Drowned from your discard pile to play. |
+| 152 | Choir Acolyte (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 155 | Choir Elder (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 3/3 | Your Drowned get +1/+0. |
+| 157 | Chorister of the Trench (Common, Abyssal Choir) | 4 · Sea 1 | Unit — Drowned Cleric | 4/3 |  |
+| 160 | Cold Current Wraith (Common, Abyssal Choir) | 2 | Unit — Drowned Spirit | 2/3 |  |
 | 162 | Dreaming Kraken (Rare, Abyssal Choir) | 6 · Sea 2 | Unit — Kraken | 4/7 | When this blocks, this gets +2/+0 permanently. |
+| 164 | Dark Water Eel (Common, Abyssal Choir) | 2 | Unit — Eel | 2/2 | **Surge.**  |
+| 166 | Dark Water Priest (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 3/3 | When this enters play, an enemy unit gets -3/-3 this turn. |
+| 169 | Deep Prophet (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 2/4 | Whenever you play an Enchantment, draw a card. |
+| 171 | Drowned Watcher (Common, Abyssal Choir) | 2 | Unit — Drowned Worker | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 174 | Fathom Cultist (Common, Abyssal Choir) | 1 | Unit — Drowned Cultist | 1/1 |  |
+| 176 | Pale Lurker (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Deep Horror | 3/2 | **Charge.**  |
 | 177 | Abyssal Communion (Uncommon, Abyssal Choir) | 2 · Sea 1 | Spell |  | Draw two cards. Your Harbor loses 2 strength. |
+| 180 | Pressure Horror (Common, Abyssal Choir) | 4 · Sea 1 | Unit — Deep Horror | 2/4 | **Tough.**  |
+| 183 | The Dreaming Deep (Legendary, Abyssal Choir) | 8 · Sea 3 | Unit — Deep Horror | 8/8 | **Tough.** When this enters play, destroy an enemy unit that costs 5 or less. |
+| 185 | Trench Dweller (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Deep Horror | 3/3 |  |
+| 188 | Choir Chant (Common, Abyssal Choir) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 190 | Crush Depth (Common, Abyssal Choir) | 3 · Sea 1 | Spell |  | Destroy an enemy unit that costs 3 or less. |
 | 193 | Barnacle Idol (Uncommon, Abyssal Choir) | 1 · Sea 1 | Relic — Tool |  | Whenever you play an Enchantment, gain 1 Influence this turn. |
+| 194 | Drowning Dark (Rare, Abyssal Choir) | 5 · Sea 2 | Spell |  | Deal 3 damage to each enemy unit in the Deep. |
+| 197 | Black Trench (Common, Abyssal Choir) | 2 | Domain — Deep |  | Drowned on this front get +0/+1. |
+| 199 | The Choir Below (Rare, Abyssal Choir) | 4 · Sea 2 | Enchantment — Player |  | Your Drowned get +1/+1. |
 
 ## Drowned Hymns (DH, 2021)
 
@@ -974,38 +1620,154 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Coral Vault Guard (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 2/3 | **Rampart.**  |
+| 5 | Crab Guard (Common, Tideborn) | 3 · Sea 1 | Unit — Beast Crab | 2/3 | **Tough.**  |
+| 7 | Pearl Hunter (Common, Tideborn) | 2 | Unit — Tideborn Scout | 1/1 | When this enters play, draw a card. |
 | 8 | Hammerhead Rider (Uncommon, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 3/2 | **Charge.**  |
+| 11 | Sea Floor Mage (Common, Tideborn) | 2 | Unit — Tideborn Mage | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 14 | Sunken Vault Queen (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Noble | 4/4 | **Surge.** Whenever one of your units returns to your hand, draw a card. |
+| 16 | Tide Treasurer (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Noble | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 19 | Treasure Eel (Common, Tideborn) | 2 | Unit — Eel | 2/3 |  |
+| 22 | Vault Diver (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
 | 24 | Pearl Merchant (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Worker | 1/2 | When this enters play, your Influence capacity grows by 1. |
+| 25 | Vault Leviathan (Rare, Tideborn) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
+| 28 | Vault Mage Corra (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 31 | Vault Scout (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Swift.**  |
+| 33 | Vault Singer (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 2/3 | When this enters play, move one of your units to the other front. |
+| 36 | Vault Warden of Ys (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Guardian | 2/3 | This can block two attackers. |
 | 39 | Tidal Mirror (Rare, Tideborn) | 3 · Sea 1 | Relic — Tool |  | The first Swift spell you play each turn happens twice. |
+| 40 | Wave Lock (Common, Tideborn) | 2 · Sea 1 | Spell — Swift |  | Return an enemy unit that costs 2 or less to its owner's hand. |
+| 42 | Sealord's Vault (Rare, Tideborn) | 5 · Sea 2 | Stronghold — Fortress | Durability 9 | Durability 9. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 45 | Pearl Vault (Common, Tideborn) | 2 | Domain — Deep |  | Domains cost 1 less to play. |
+| 48 | Insurance Adjuster (Uncommon, Harbor Leagues) | 3 · Dual 1 | Unit — Human Official | 2/2 | When this enters play, restore 3 strength to your Harbor. |
+| 50 | Salvage Broker (Common, Harbor Leagues) | 2 | Unit — Human Trader | 1/2 | When this enters play, your Influence capacity grows by 1. |
+| 53 | Vault Clerk (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/1 | When this enters play, draw a card. |
 | 54 | Fog Signal (Common, Harbor Leagues) | 1 | Relic — Tool |  | Your opponent's Swift cards cost 1 more to play. |
+| 56 | Wreck Salvors (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Sailor | 3/3 | **Ferry 1.**  |
+| 59 | Vault Auction (Rare, Harbor Leagues) | 4 · Dual 2 | Spell |  | Draw two cards. |
+| 61 | Salvage Barge (Common, Harbor Leagues) | 2 | Vessel — Barge | 1/3 | **Ferry 1.**  |
+| 64 | Ancient Guardian (Rare, Neutral) | 7 | Unit — Construct | 6/7 | **Tough.**  |
+| 68 | Captain Orlow of the Vaults (Rare, Neutral) | 5 | Unit — Human Wanderer | 3/3 | **Swift.** When this enters play, deal 3 damage to an enemy unit. |
 | 70 | Albatross (Common, Neutral) | 3 | Unit — Bird | 2/2 | **Swift.**  |
+| 72 | Cartographer of the Deep (Uncommon, Neutral) | 3 | Unit — Human Official | 2/2 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 76 | Dust Wraith (Common, Neutral) | 2 | Unit — Human Spirit | 2/2 | **Swift.**  |
+| 79 | Grave Robber (Common, Neutral) | 2 | Unit — Human Wanderer | 2/2 | **Charge.**  |
+| 83 | Guard of the Seventh Door (Uncommon, Neutral) | 4 | Unit — Human Soldier | 3/3 | **Tough.**  |
 | 85 | Hermit of the Sea Stack (Rare, Neutral) | 5 | Unit — Human Wanderer | 2/4 | When this enters play, draw two cards. |
+| 87 | Lamp Bearer (Common, Neutral) | 2 | Unit — Human Wanderer | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 91 | Master Relic Hunter (Uncommon, Neutral) | 4 | Unit — Human Wanderer | 2/3 | When this enters play, destroy an enemy Relic. When this enters play, draw a card. |
+| 94 | Mummified Captain (Common, Neutral) | 4 | Unit — Human Spirit | 4/3 |  |
+| 98 | Relic Collector (Rare, Neutral) | 4 | Unit — Human Noble | 3/3 | Whenever you play a Relic, draw a card. |
 | 101 | Mercenary Archers (Common, Neutral) | 3 | Unit — Human Mercenary | 2/1 | **Swift.** When this enters play, deal 1 damage to an enemy attacking unit. |
+| 102 | Relic Seeker (Common, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, destroy an enemy Relic. |
+| 106 | Rope Man (Common, Neutral) | 3 | Unit — Human Worker | 3/3 |  |
+| 109 | Spirit of the Hoard (Legendary, Neutral) | 6 | Unit — Human Spirit | 4/5 | **Swift.** At your Rise, draw a card. |
+| 113 | Sunken Golem (Uncommon, Neutral) | 5 | Unit — Construct | 3/4 | **Tough.**  |
 | 116 | Relic Hunter (Uncommon, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, destroy an enemy Relic. |
+| 117 | The Vault Keeper (Legendary, Neutral) | 7 | Unit — Construct | 6/7 | **Tough, Rampart.** At your Rise, one of your Strongholds gains 2 durability. |
+| 121 | Tomb Cat (Common, Neutral) | 2 | Unit — Beast Cat | 2/2 |  |
+| 124 | Tomb Raider (Uncommon, Neutral) | 4 | Unit — Human Wanderer | 3/3 | **Charge.** When this enters play, draw a card. |
+| 128 | Treasure Hunter (Common, Neutral) | 2 | Unit — Human Wanderer | 1/1 | When this enters play, draw a card. |
 | 131 | Star-Reader (Uncommon, Neutral) | 3 | Unit — Human Wanderer | 2/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 132 | Vault Archivist (Uncommon, Neutral) | 4 | Unit — Human Official | 2/3 | When this enters play, draw a card. |
+| 135 | Vault Guard Golem (Common, Neutral) | 3 | Unit — Construct | 2/3 | **Rampart.**  |
+| 139 | Vault Priest (Common, Neutral) | 2 | Unit — Human Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 142 | Vault Rat (Common, Neutral) | 1 | Unit — Beast Rat | 1/1 |  |
+| 146 | Vault Warden (Uncommon, Neutral) | 4 | Unit — Human Soldier | 3/3 | Your Constructs get +1/+1. |
 | 147 | Ancient Waystone (Uncommon, Neutral) | 3 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 150 | Wreck Diver (Common, Neutral) | 2 | Unit — Human Wanderer | 2/3 |  |
+| 154 | Trap Door (Common, Neutral) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 157 | Vault Collapse (Common, Neutral) | 3 | Spell |  | Destroy an enemy unit that costs 3 or less. |
+| 161 | Vault Heist (Rare, Neutral) | 5 | Spell |  | Draw two cards. Your Influence capacity grows by 1. |
 | 162 | The Eye of Storms (Legendary, Neutral) | 4 | Relic — Tool |  | When this enters play, destroy a Domain. When this enters play, destroy a Domain. When this enters play, search your deck for a Domain, put it into your hand, then shuffle. Your Domains cost 1 less to play. |
+| 165 | Crypt Bell (Common, Neutral) | 3 | Relic — Tool |  | At your Rise, deal 1 damage to an enemy unit. |
+| 169 | Gold Idol (Common, Neutral) | 2 | Relic — Equipment |  | The equipped unit gets +2/+1. |
+| 172 | Tattered Chart (Common, Neutral) | 1 | Relic — Tool |  | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 176 | Treasure Hoard (Common, Neutral) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
 | 177 | Sea Cave (Common, Neutral) | 1 | Domain — Deep |  | Units that cost 2 or less on this front get +0/+1. |
+| 180 | Sealed Chamber (Common, Neutral) | 3 | Stronghold — Fortress | Durability 8 | Durability 8. |
+| 184 | The Sunken Treasury (Rare, Neutral) | 5 | Stronghold — Fortress | Durability 10 | Durability 10. At your Rise, restore 1 strength to your Harbor. |
+| 187 | Vault Door (Common, Neutral) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
+| 191 | Vault of Kings (Uncommon, Neutral) | 4 | Stronghold — Fortress | Durability 7 | Durability 7. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
 | 193 | Shipwreck Coast (Rare, Neutral) | 2 | Domain — Deep |  | Whenever a Vessel is destroyed, gain 2 Influence this turn. |
+| 195 | Echoing Hall (Common, Neutral) | 2 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
+| 199 | Flooded Corridor (Common, Neutral) | 2 | Domain — Deep |  | Units on this front get +0/+1. |
 
 ## Leviathan Rising (LR, 2022)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Admiral of the Leviathan Fleet (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Charge.** When this deals damage to your opponent's Harbor, draw a card. |
+| 5 | Beast Hunter Captain (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | Your Vessels get +1/+0. |
 | 8 | Deck Swab (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/2 |  |
+| 10 | Captain Ahab Rourke (Legendary, Free Fleets) | 6 · Sea 3 | Unit — Human Privateer | 5/5 | **Charge.** When this enters play, destroy an enemy unit that costs 5 or less. |
+| 13 | Dock Harpooner (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 16 | Harpoon Boy (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/1 |  |
+| 19 | Harpoon Gunner (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, deal 2 damage to an enemy unit. |
 | 22 | Harpoon Crew (Uncommon, Free Fleets) | 4 · Sea 1 | Unit — Human Sailor | 2/3 | When this enters play, deal 4 damage to an enemy unit that costs 5 or more. |
+| 23 | Leviathan Slayer (Uncommon, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 3/3 | When this enters play, destroy an enemy unit that costs 5 or more. |
+| 27 | Lookout Gull (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 30 | Rope Rider (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
+| 33 | Rough Sea Sailor (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 3/3 |  |
 | 36 | Sea Dog Veteran (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | **Tough.**  |
+| 37 | Whaler Deckhand (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/3 |  |
+| 40 | Whaling Captain (Common, Free Fleets) | 4 · Sea 1 | Unit — Human Privateer | 4/3 |  |
+| 44 | Whaling Quartermaster (Uncommon, Free Fleets) | 4 · Sea 1 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 47 | All Hands (Common, Free Fleets) | 2 · Sea 1 | Spell — Swift |  | Your units get +2/+0 this turn. |
+| 50 | Harpoon Barrage (Rare, Free Fleets) | 5 · Sea 2 | Spell |  | Deal 3 damage to each enemy unit in the Deep. |
 | 51 | Shipwrecker (Uncommon, Free Fleets) | 4 · Sea 1 | Unit — Human Privateer | 3/2 | When this enters play, destroy an enemy Vessel. |
+| 54 | Harpoon Strike (Common, Free Fleets) | 3 · Sea 2 | Spell |  | Deal 4 damage to an enemy unit in the Deep. |
+| 57 | The Great Hunt (Rare, Free Fleets) | 5 · Sea 2 | Spell |  | Destroy an enemy unit that costs 5 or more. Draw a card. |
+| 61 | Whaling Armada (Rare, Free Fleets) | 6 · Sea 3 | Spell — Swift |  | Create two 3/3 Whaler tokens. |
+| 64 | Brine Barrel (Common, Free Fleets) | 2 | Relic — Tool |  | At your Rise, restore 1 strength to your Harbor. |
 | 65 | Mutiny (Rare, Free Fleets) | 4 · Sea 2 | Spell |  | Gain control of an enemy unit that costs 3 or less. |
+| 68 | Harpoon Rope (Common, Free Fleets) | 2 · Sea 1 | Relic — Equipment |  | The equipped unit gets +2/+0. |
+| 71 | Great Whaler (Uncommon, Free Fleets) | 5 · Sea 2 | Vessel — Whaler | 4/5 | **Ferry 1.**  |
+| 74 | Leviathan Hunter Ship (Common, Free Fleets) | 4 · Sea 1 | Vessel — Whaler | 3/5 | **Ferry 1.**  |
+| 78 | The Kraken Hunter (Rare, Free Fleets) | 6 · Sea 2 | Vessel — Whaler | 6/6 | **Charge, Ferry 2.**  |
 | 79 | Swallowtail (Uncommon, Free Fleets) | 4 · Sea 1 | Vessel — Clipper | 4/3 | **Charge, Ferry 1.**  |
+| 82 | Whaler Sloop (Common, Free Fleets) | 2 | Vessel — Sloop | 2/2 | **Ferry 1.**  |
+| 85 | Whaling Station (Common, Free Fleets) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
+| 88 | Archpriest of the Leviathan (Rare, Abyssal Choir) | 6 · Sea 3 | Unit — Drowned Cleric | 4/5 | When this enters play, destroy an enemy unit that costs 5 or less. |
+| 91 | Brine Crawler (Common, Abyssal Choir) | 2 | Unit — Deep Horror | 2/3 |  |
 | 93 | Drowned Harbor Watch (Common, Abyssal Choir) | 2 | Unit — Drowned Cultist | 1/3 | **Rampart.**  |
+| 96 | Brine Priest (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 99 | Deep Tentacle (Common, Abyssal Choir) | 2 | Unit — Squid | 2/2 | **Surge.**  |
+| 102 | Great Leviathan (Rare, Abyssal Choir) | 7 · Sea 3 | Unit — Leviathan | 7/7 | **Surge.**  |
+| 106 | Harbor Drowned (Common, Abyssal Choir) | 2 | Unit — Drowned Worker | 2/2 |  |
 | 108 | Eel Swarm (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Eel | 1/1 | When this enters play, create two 1/1 Eel tokens. |
+| 110 | Kraken Acolyte (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/1 | When this enters play, draw a card. |
+| 113 | Kraken Spawn Swarm (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Squid | 1/2 | When this enters play, create two 1/1 Squid tokens. |
+| 117 | Leviathan Hatchling (Common, Abyssal Choir) | 1 | Unit — Leviathan | 0/2 | **Tough.**  |
+| 120 | Leviathan Whelp (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Leviathan | 4/4 | **Surge.**  |
 | 122 | Leviathan Calf (Uncommon, Abyssal Choir) | 3 · Sea 1 | Unit — Leviathan | 2/2 | At your Rise, this gets +1/+0 permanently. |
+| 124 | Pale Whale (Common, Abyssal Choir) | 5 · Sea 2 | Unit — Whale | 5/5 |  |
+| 128 | Rising Calf (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Leviathan | 3/2 | **Charge.**  |
+| 131 | Rising Deep Cultist (Common, Abyssal Choir) | 1 | Unit — Drowned Cultist | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 134 | Rising Maw (Common, Abyssal Choir) | 4 · Sea 1 | Unit — Deep Horror | 4/3 |  |
 | 136 | Siren of the Shoals (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Siren | 2/3 | When this enters play, gain control of an enemy unit that costs 3 or less. |
+| 139 | Rising Terror (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Deep Horror | 3/4 | **Tough, Rampart.**  |
+| 142 | Rising Tide Horror (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Deep Horror | 3/3 |  |
+| 145 | Sea Ghoul (Common, Abyssal Choir) | 2 | Unit — Drowned Spirit | 2/2 | **Charge.**  |
+| 148 | Shell-Back Beast (Common, Abyssal Choir) | 4 · Sea 1 | Unit — Deep Horror | 2/4 | **Tough.**  |
 | 151 | The Hollow Voice (Legendary, Abyssal Choir) | 6 · Sea 3 | Unit — Horror | 5/6 | When this enters play, gain control of an enemy Enchantment. Your opponent's Enchantments cost 1 more to play. |
+| 153 | Siren of the Rising Deep (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Siren | 2/3 | When this enters play, gain control of an enemy unit that costs 2 or less. |
+| 156 | Skiff Wrecker (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Squid | 3/2 | **Charge.**  |
+| 159 | Tentacle Priest of the Rising (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 2/3 | Whenever you play an Enchantment, draw a card. |
+| 163 | The Waking Leviathan (Legendary, Abyssal Choir) | 8 · Sea 3 | Unit — Leviathan | 9/8 | **Surge.** When this enters play, deal 3 damage to each enemy unit on one front. |
 | 165 | Trench Warden (Rare, Abyssal Choir) | 6 · Sea 2 | Unit — Horror | 4/8 | **Rampart.**  |
+| 167 | Tide Prophet (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 2/4 | Your Leviathans get +1/+0. |
+| 170 | Wave Wraith (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Spirit | 3/3 |  |
+| 174 | Whale Fall Scavenger (Common, Abyssal Choir) | 2 | Unit — Fish | 2/3 |  |
+| 177 | Deep Call (Common, Abyssal Choir) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
 | 179 | Song of Sinking (Uncommon, Abyssal Choir) | 3 · Sea 1 | Spell |  | Destroy an enemy Vessel. |
+| 181 | Rising Tide (Rare, Abyssal Choir) | 5 · Sea 2 | Spell |  | Return every unit on one front to its owner's hand. |
+| 185 | Tidal Fury (Common, Abyssal Choir) | 4 · Sea 1 | Spell |  | Deal 3 damage to each enemy unit in the Deep. |
+| 188 | Beast Totem (Common, Abyssal Choir) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 191 | Kraken's Lair (Rare, Abyssal Choir) | 5 · Sea 2 | Stronghold — Fortress | Durability 8 | Durability 8. At your Rise, create a 1/1 Squid token. |
 | 193 | Tide of Bones (Uncommon, Abyssal Choir) | 4 · Sea 1 | Spell |  | Create three 1/2 Drowned tokens. |
+| 196 | Whale Bones (Common, Abyssal Choir) | 2 | Domain — Deep |  | Drowned on this front get +0/+1. |
+| 199 | Cult of the Rising (Rare, Abyssal Choir) | 4 · Sea 2 | Enchantment — Player |  | Your Drowned get +1/+1. Your Leviathans get +1/+1. |
 
 ## Coral Bastion (CB, 2022)
 
@@ -1091,20 +1853,79 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Ancient Greenwood (Legendary, Thornwild) | 8 · Land 3 | Unit — Grove Spirit | 8/9 | **Rampart, Trample.**  |
+| 6 | Briar Gatherer (Common, Thornwild) | 1 | Unit — Forest Folk Worker | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
 | 8 | Boar Rider Scout (Uncommon, Thornwild) | 2 · Land 1 | Unit — Forest Folk Hunter | 3/2 | **Charge.**  |
+| 11 | Elder Beastcaller (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Druid | 2/3 | When this enters play, create a 2/2 Wolf token. |
+| 15 | Elder Stag Lord (Rare, Thornwild) | 6 · Land 2 | Unit — Beast | 6/5 | **Swift, Trample.**  |
+| 19 | Forest Crow (Common, Thornwild) | 2 | Unit — Beast Bird | 2/2 | **Swift.**  |
 | 22 | Coastal Lynx (Common, Thornwild) | 3 · Land 1 | Unit — Beast | 3/2 | **Swift.**  |
+| 24 | Forest Tithe Warden (Common, Thornwild) | 2 | Unit — Forest Folk Guardian | 1/3 | **Rampart.**  |
+| 28 | Fox Cub Pack (Common, Thornwild) | 3 · Land 1 | Unit — Beast Fox | 1/2 | When this enters play, create two 1/1 Fox tokens. |
+| 32 | Glade Bear (Common, Thornwild) | 4 · Land 1 | Unit — Beast | 4/3 |  |
 | 36 | Druid of the Drowned Wood (Rare, Thornwild) | 3 · Land 1 | Unit — Forest Folk Druid | 2/2 | Whenever one of your Beasts is destroyed, draw a card. |
+| 37 | Great Stag of the Tithe (Uncommon, Thornwild) | 5 · Land 2 | Unit — Beast | 3/5 | **Tough.**  |
+| 41 | Greenwood Healer (Common, Thornwild) | 2 | Unit — Forest Folk Druid | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 45 | Hunt Boar (Common, Thornwild) | 3 · Land 1 | Unit — Beast Boar | 3/2 | **Trample.**  |
+| 49 | Huntmaster Sylva (Rare, Thornwild) | 5 · Land 2 | Unit — Forest Folk Hunter | 3/4 | When this enters play, create two 2/2 Wolf tokens. |
 | 51 | Mangrove Warden (Uncommon, Thornwild) | 4 · Land 1 | Unit — Grove Spirit | 2/4 | **Rampart.** This blocks at home on both fronts. |
+| 54 | Moon Doe (Uncommon, Thornwild) | 3 · Land 1 | Unit — Beast | 1/2 | At your Rise, this gets +1/+0 permanently. |
+| 58 | Mushroom Gatherer (Common, Thornwild) | 2 | Unit — Forest Folk Worker | 2/2 |  |
+| 62 | Pack Alpha of the Tithe (Uncommon, Thornwild) | 4 · Land 2 | Unit — Beast Wolf | 3/3 | Your Beasts get +1/+0. |
 | 65 | Mire Toad (Common, Thornwild) | 2 | Unit — Beast | 1/3 | When this blocks, the unit fighting this cannot attack during its controller's next turn. |
+| 67 | Pine Marten (Common, Thornwild) | 1 | Unit — Beast | 1/1 | **Swift.**  |
+| 71 | Root Cutter (Common, Thornwild) | 2 | Unit — Forest Folk Worker | 2/3 |  |
+| 75 | Squirrel Messenger (Common, Thornwild) | 1 | Unit — Beast | 1/1 | **Swift.**  |
 | 79 | Moss Hound (Common, Thornwild) | 2 | Unit — Beast | 2/2 | This gets +0/+1 while on its home front. |
+| 80 | The Wild Tithe Queen (Legendary, Thornwild) | 6 · Land 3 | Unit — Forest Folk Noble | 4/5 | At your Rise, your Beasts get +1/+1 this turn. |
+| 84 | Tithe Druid (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Druid | 2/3 | When this enters play, return a Beast from your discard pile to your hand. |
+| 88 | Tithe Elk (Common, Thornwild) | 5 · Land 2 | Unit — Beast | 5/5 |  |
+| 92 | Tithe Fawn (Common, Thornwild) | 1 | Unit — Beast | 1/2 |  |
 | 93 | Saltmarsh Heron (Common, Thornwild) | 1 | Unit — Beast | 1/2 | This is never Stranded. |
+| 97 | Tithe Hound (Common, Thornwild) | 2 | Unit — Beast Hound | 2/2 | **Charge.**  |
+| 101 | Tithe Ranger (Common, Thornwild) | 3 · Land 1 | Unit — Forest Folk Hunter | 3/3 |  |
+| 105 | Tithe Seer (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Druid | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 108 | Thorncrown Matriarch (Legendary, Thornwild) | 6 · Land 3 | Unit — Beast | 6/6 | Your other Beasts get +1/+1. |
+| 110 | Tithe Warden Captain (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Hunter | 3/3 | Your Hunters get +1/+0. |
+| 114 | Wild Tithe Archer (Common, Thornwild) | 3 · Land 1 | Unit — Forest Folk Archer | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 118 | Hunter's Leap (Common, Thornwild) | 1 | Spell — Swift |  | One of your units gets +3/+0 this turn. |
 | 122 | Overgrowth (Common, Thornwild) | 1 | Spell |  | Destroy an enemy Relic. |
+| 123 | Thorn Net (Common, Thornwild) | 2 · Land 1 | Spell |  | An enemy unit cannot attack during its controller's next turn. |
+| 127 | Tithe Offering (Common, Thornwild) | 2 | Spell |  | Draw a card. |
+| 131 | Wild Hunt Rite (Rare, Thornwild) | 4 · Land 2 | Spell — Swift |  | Your Beasts get +3/+0 this turn. Your Beasts gain Charge this turn. |
+| 135 | Antler Charm (Common, Thornwild) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +2/+0. |
 | 136 | Root and Tide (Uncommon, Thornwild) | 1 · Land 1 | Spell |  | Return an enemy Sea unit to its owner's hand. |
+| 140 | Forest Fire Ward (Common, Thornwild) | 2 | Relic — Tool |  | At your Rise, restore 1 strength to your Harbor. |
+| 144 | Wildwood Shrine (Uncommon, Thornwild) | 3 · Land 1 | Stronghold — Hall | Durability 6 | Durability 6. At your Rise, restore 1 strength to your Harbor. |
+| 148 | Moss Hollow (Common, Thornwild) | 2 | Domain — Shore |  | Beasts on this front get +0/+1. |
 | 151 | Fogbound Glen (Rare, Thornwild) | 2 · Land 1 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
+| 153 | Tithe Barrow (Rare, Thornwild) | 3 · Land 1 | Domain — Shore |  | Beasts on this front have Trample. |
+| 157 | Forest Court (Rare, Thornwild) | 4 · Land 2 | Enchantment — Player |  | Your Beasts get +1/+1. |
+| 159 | Barge Cat (Common, Harbor Leagues) | 1 | Unit — Beast Cat | 1/2 |  |
+| 161 | Forest Factor (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 163 | Forest Quay Clerk (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
 | 165 | Dredger (Common, Harbor Leagues) | 3 · Dual 1 | Vessel — Barge | 2/3 | **Ferry 1.** When this enters play, destroy a Domain. |
+| 166 | Forest Road Guard (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 167 | League Forester (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 3/3 | **Tough.**  |
+| 169 | League Logger (Common, Harbor Leagues) | 2 | Unit — Human Worker | 2/2 |  |
+| 171 | League Surveyor (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 173 | Lord Tithemaster (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Noble | 3/4 | When this enters play, draw two cards. |
+| 175 | River Barge Hand (Common, Harbor Leagues) | 2 | Unit — Human Sailor | 1/2 | **Ferry 1.**  |
+| 176 | Tax Assessor (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Official | 3/3 |  |
+| 178 | Timber Merchant (Common, Harbor Leagues) | 2 | Unit — Human Trader | 1/2 | When this enters play, your Influence capacity grows by 1. |
 | 179 | League Galleass (Rare, Harbor Leagues) | 5 · Dual 2 | Vessel — Galleass | 5/6 | **Rampart, Ferry 2.**  |
+| 181 | Tithe Cart Driver (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Worker | 3/3 |  |
+| 183 | Tithe Collector (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/1 | When this enters play, draw a card. |
+| 184 | Tithemaster General Corvo (Legendary, Harbor Leagues) | 6 · Dual 3 | Unit — Human Noble | 4/6 | At your Rise, gain 2 Influence this turn. |
+| 186 | League Tax (Common, Harbor Leagues) | 3 · Dual 1 | Spell |  | Draw two cards. Your Harbor loses 2 strength. |
+| 188 | Timber Armada (Rare, Harbor Leagues) | 6 · Dual 2 | Vessel — Barge | 5/6 | **Ferry 2.**  |
+| 190 | Timber Fleet (Uncommon, Harbor Leagues) | 5 · Dual 2 | Vessel — Barge | 4/5 | **Ferry 1.**  |
+| 192 | Forest Toll Gate (Common, Harbor Leagues) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
 | 193 | Grand Exchange (Rare, Harbor Leagues) | 4 · Dual 1 | Stronghold — Exchange | Durability 6 | Durability 6. When this enters play, draw a card. Whenever one of your Strongholds takes damage, draw a card. |
+| 194 | Tithe Barn Hall (Uncommon, Harbor Leagues) | 4 · Dual 1 | Stronghold — Hall | Durability 7 | Durability 7. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 196 | Grand Tithe Court (Rare, Harbor Leagues) | 3 · Dual 1 | Domain — Shore |  | Spells cost 1 less to play. |
+| 198 | Timber Yard (Common, Harbor Leagues) | 2 | Domain — Shore |  | Strongholds cost 1 less to play. |
+| 200 | Guild Forestry Charter (Rare, Harbor Leagues) | 4 · Dual 2 | Enchantment — Player |  | Your Beasts cost 1 less to play. Your Vessels cost 1 less to play. |
 
 ## Black Tide (BT, 2023)
 
@@ -1190,91 +2011,317 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 3 | Boring Machine (Uncommon, Iron Reach) | 5 · Land 2 | Unit — Construct | 4/4 | When this enters play, deal 3 damage to one of your opponent's Strongholds. |
+| 5 | Cave Wraith (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Spirit | 3/2 | **Charge.**  |
 | 8 | Brass Automaton (Common, Iron Reach) | 1 | Unit — Construct | 1/2 |  |
+| 9 | Brass Sentry (Common, Iron Reach) | 3 · Land 1 | Unit — Construct | 2/3 | **Rampart.**  |
+| 13 | Deep Lurker (Common, Abyssal Choir) | 2 | Unit — Deep Horror | 2/3 |  |
+| 14 | Deep Engineer (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Smith | 2/3 | Your Constructs get +1/+1. |
+| 19 | Deep Quartermaster (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 21 | Deep Tide Horror (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Deep Horror | 3/3 | When this enters play, create a 3/3 Horror token. |
 | 22 | Deepdelve Excavator (Uncommon, Iron Reach) | 3 · Land 1 | Unit — Construct | 2/3 | When this enters play, your Influence capacity grows by 1. |
+| 25 | Deep Trench Digger (Common, Iron Reach) | 1 | Unit — Reachfolk Miner | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 30 | Deepdelve Colossus (Rare, Iron Reach) | 7 · Land 3 | Unit — Construct | 7/6 | **Tough, Trample.**  |
+| 31 | Drowned Digger (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Worker | 2/2 | When this enters play, draw a card. |
 | 36 | Engineer-Captain Halvard (Rare, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Soldier | 4/4 | Your Constructs get +1/+1. |
+| 37 | Deepdelve Hand (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/1 | When this enters play, draw a card. |
+| 39 | Drowned Tunnel Guard (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Worker | 2/3 | **Rampart.**  |
+| 42 | Delver Foreman (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 3/3 | Your Miners get +1/+0. |
+| 46 | Echo Cultist (Common, Abyssal Choir) | 1 | Unit — Drowned Cultist | 1/1 |  |
+| 47 | Drill Operator (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Worker | 2/2 | When this enters play, deal 2 damage to one of your opponent's Strongholds. |
 | 51 | Foundry Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 2/3 | **Rampart.**  |
+| 53 | Echo Chamber Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 56 | Echo Deacon (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 2/4 | Whenever you play an Enchantment, draw a card. |
+| 58 | Echo Miner (Common, Iron Reach) | 2 | Unit — Reachfolk Miner | 2/3 |  |
+| 63 | Engineer-General Halvard (Rare, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Noble | 3/4 | Your Constructs get +1/+1. Your Constructs cost 1 less to play. |
+| 64 | Echo Eel (Common, Abyssal Choir) | 2 | Unit — Eel | 2/2 | **Surge.**  |
 | 65 | Mountainheart Construct (Legendary, Iron Reach) | 9 · Land 3 | Unit — Construct | 9/9 | **Tough, Trample.**  |
+| 69 | Granite Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Construct | 2/3 | **Tough.**  |
+| 72 | Echo Prophet (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 3/3 | Your Drowned get +1/+0. |
+| 74 | Master of the Echoing Deep (Legendary, Iron Reach) | 7 · Land 3 | Unit — Reachfolk Noble | 6/6 | **Tough.** At your Rise, create a 2/2 Construct token. |
 | 79 | Seawatch Cannoneer (Uncommon, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 2/3 | When this enters play, deal 2 damage to an enemy Sea unit. |
+| 80 | Mine Cart Runner (Common, Iron Reach) | 1 | Unit — Reachfolk Worker | 2/1 |  |
+| 82 | Echo Siren (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Siren | 2/3 | When this enters play, move an enemy unit to the other front. It becomes exhausted. |
+| 85 | Pit Prop Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 3/3 |  |
+| 89 | Leviathan of Echoes (Rare, Abyssal Choir) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
+| 90 | Powder Monkey of the Deep (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
 | 93 | Siege Breaker Colossus (Rare, Iron Reach) | 7 · Land 3 | Unit — Construct | 6/5 | When this attacks, destroy an enemy Stronghold. |
+| 97 | Smeltery Boy (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 2/2 |  |
+| 98 | Silent Horror (Common, Abyssal Choir) | 4 · Sea 1 | Unit — Deep Horror | 4/3 |  |
+| 102 | Steam Golem (Common, Iron Reach) | 3 · Land 1 | Unit — Construct | 3/2 | **Charge.**  |
+| 106 | The Deep Echo (Legendary, Abyssal Choir) | 8 · Sea 3 | Unit — Deep Horror | 8/7 | **Surge.** When this enters play, destroy an enemy unit that costs 5 or less. |
+| 107 | Trench Colossus (Common, Iron Reach) | 4 · Land 1 | Unit — Construct | 2/4 | **Tough.**  |
 | 108 | Smelter's Apprentice (Common, Iron Reach) | 1 | Unit — Reachfolk Smith | 2/1 |  |
+| 113 | Trench Gunner (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 2/3 | When this enters play, deal 2 damage to an enemy unit. |
+| 115 | Trench Bishop (Rare, Abyssal Choir) | 6 · Sea 3 | Unit — Drowned Cleric | 4/5 | When this enters play, return a Drowned from your discard pile to play. |
+| 118 | Trench Surveyor (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Official | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 122 | Thunder Powder (Uncommon, Iron Reach) | 3 · Land 1 | Spell |  | Deal 3 damage to an enemy unit. Deal 3 damage to one of your opponent's Strongholds. |
+| 123 | Trench Crawler of Echoes (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Deep Horror | 3/3 |  |
+| 124 | Veteran Delver (Common, Iron Reach) | 4 · Land 1 | Unit — Reachfolk Miner | 4/3 |  |
+| 129 | Cave Echo (Common, Iron Reach) | 2 · Land 1 | Spell — Swift |  | An enemy unit cannot block this turn. |
+| 132 | Trench Priest (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 134 | Pickaxe Gang (Common, Iron Reach) | 3 · Land 1 | Spell |  | Create two 1/1 Miner tokens. |
 | 136 | Runeforged Blade (Rare, Iron Reach) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +3/+0 and Trample. |
+| 140 | Powder Barrage of the Deep (Rare, Iron Reach) | 5 · Land 2 | Spell |  | Deal 3 damage to each enemy unit on the Shore. |
+| 141 | Trench Sentinel (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Deep Horror | 3/4 | **Tough, Rampart.**  |
+| 145 | Powder Charge (Common, Iron Reach) | 2 · Land 1 | Spell |  | Deal 3 damage to an enemy unit. |
+| 148 | Trench Siren Acolyte (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Cleric | 2/2 | When this enters play, draw a card. |
+| 150 | Delver Banner (Common, Iron Reach) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +1/+2. |
 | 151 | Ironclad Barge (Rare, Iron Reach) | 4 · Land 1 | Vessel — Barge | 3/6 | **Ferry 2.**  |
+| 157 | Lamp Oil Cart (Common, Iron Reach) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 158 | Trench Whisperer (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 162 | The Great Drill (Rare, Iron Reach) | 5 · Land 2 | Relic — Tool |  | At your Rise, deal 3 damage to one of your opponent's Strongholds. |
 | 165 | Grey Peaks Garrison (Uncommon, Iron Reach) | 4 · Land 1 | Stronghold — Fort | Durability 10 | Durability 10. |
+| 166 | Collapse the Tunnel (Common, Abyssal Choir) | 3 · Sea 1 | Spell |  | Destroy an enemy unit that costs 3 or less. |
+| 168 | Echo Forge (Uncommon, Iron Reach) | 4 · Land 1 | Stronghold — Fortress | Durability 7 | Durability 7. At your Rise, restore 1 strength to your Harbor. |
+| 173 | Trench Fortress (Rare, Iron Reach) | 5 · Land 2 | Stronghold — Fortress | Durability 11 | Durability 11. At your Rise, one of your Strongholds gains 1 durability. |
+| 174 | Echoing Silence (Common, Abyssal Choir) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 178 | Trench Shoring (Common, Iron Reach) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
 | 179 | Slag Heap (Common, Iron Reach) | 1 · Land 1 | Domain — Shore |  | Attacking units on this front get -1/+0. |
+| 183 | Dark Pearl (Common, Abyssal Choir) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 184 | Deep Gallery (Common, Iron Reach) | 2 | Domain — Deep |  | Units on this front get +0/+1. |
+| 190 | Flooded Trench (Common, Abyssal Choir) | 2 | Domain — Deep |  | Drowned on this front get +1/+0. |
 | 193 | Night Fisher's Doom (Common, Abyssal Choir) | 2 · Sea 1 | Spell |  | Destroy an enemy unit that costs 3 or less. |
+| 197 | The Echoing Choir (Rare, Abyssal Choir) | 4 · Sea 2 | Enchantment — Player |  | Your Drowned get +1/+1. |
 
 ## Stormglass (ST, 2023)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 1 | Coast Captain (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Soldier | 3/3 | **Leader.**  |
+| 3 | Coast Guard Archer (Common, Crownlands) | 2 | Unit — Human Archer | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 5 | Coast Patrol (Common, Crownlands) | 2 | Unit — Human Soldier | 2/3 |  |
 | 7 | Drowned Bells (Uncommon, Crownlands) | 2 | Spell |  | Destroy an enemy Enchantment. |
+| 8 | Lord of the Storm Coast (Rare, Crownlands) | 5 · Land 2 | Unit — Human Noble | 4/5 | **Leader, Rampart.**  |
+| 10 | Queen Isolde of the Storm Coast (Legendary, Crownlands) | 7 · Land 3 | Unit — Human Noble | 6/7 | **Rampart, Leader.** At your Rise, one of your Strongholds gains 2 durability. |
+| 12 | Seawall Inspector (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Official | 2/4 | At your Rise, one of your Strongholds gains 1 durability. |
+| 14 | Storm Knight (Common, Crownlands) | 4 · Land 2 | Unit — Human Knight | 4/3 | **Charge.**  |
+| 16 | Storm Mason (Common, Crownlands) | 3 · Land 1 | Unit — Human Mason | 2/2 | When this enters play, one of your Strongholds gains 2 durability. |
+| 18 | Storm Watch Recruit (Common, Crownlands) | 1 | Unit — Human Soldier | 0/2 | **Rampart.**  |
+| 20 | Hold Against the Storm (Rare, Crownlands) | 4 · Land 2 | Spell — Swift |  | Your units get +2/+2 this turn. Your units gain Rampart this turn. |
 | 21 | Shore Militia Muster (Common, Crownlands) | 3 · Land 1 | Spell |  | Create three 1/1 Levy tokens. |
+| 23 | Beacon Fire (Common, Crownlands) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 25 | Storm Bastion (Rare, Crownlands) | 5 · Land 2 | Stronghold — Fortress | Durability 10 | Durability 10. At your Rise, one of your Strongholds gains 1 durability. |
+| 27 | Storm Wall (Common, Crownlands) | 3 | Stronghold — Fortress | Durability 8 | Durability 8. |
+| 30 | Barometer Maker (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Smith | 2/3 | Your Relics cost 1 less to play. |
 | 34 | Harbor Mistress Calla Wren (Legendary, Harbor Leagues) | 5 · Dual 2 | Unit — Human Official | 4/4 | **Ferry 2.** Whenever you deal damage to the opponent's Harbor, draw a card. |
+| 35 | Dock Lantern Boy (Common, Harbor Leagues) | 2 | Unit — Human Keeper | 2/2 |  |
+| 40 | Glass Blower (Common, Harbor Leagues) | 2 | Unit — Human Worker | 2/3 |  |
+| 44 | Harbor Storm Captain (Common, Harbor Leagues) | 4 · Dual 1 | Unit — Human Sailor | 4/3 |  |
 | 47 | Harbor Watch Captain (Uncommon, Harbor Leagues) | 4 · Dual 1 | Unit — Human Soldier | 2/2 | Your other units get +1/+0. |
+| 50 | Master Glassmaker (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Smith | 2/3 | Your Relics cost 1 less to play. |
+| 55 | Quayside Gate Guard (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 59 | Rain Barrel Sentry (Common, Harbor Leagues) | 2 | Unit — Human Soldier | 2/3 |  |
 | 61 | Insurance Broker (Common, Harbor Leagues) | 3 | Unit — Human Official | 1/3 | Whenever another of your units is destroyed, draw a card. |
+| 65 | Storm Ferry Hand (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Sailor | 3/3 | **Ferry 1.**  |
+| 69 | Storm Marshal (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Soldier | 3/3 | Your Ferry units get +1/+1. |
 | 74 | Lanthorn Lightguard (Common, Harbor Leagues) | 2 | Unit — Human Soldier | 1/3 | **Rampart.**  |
+| 75 | Storm Signal Boy (Common, Harbor Leagues) | 1 | Unit — Human Keeper | 1/1 | **Swift.**  |
+| 79 | Storm Watch Keeper (Common, Harbor Leagues) | 2 | Unit — Human Keeper | 1/1 | When this enters play, draw a card. |
+| 84 | Stormglass Seer (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 87 | Salt Trader (Common, Harbor Leagues) | 3 | Unit — Human Worker | 1/3 | When this enters play, your Influence capacity grows by 1. |
+| 89 | Stormmaster Calla (Legendary, Harbor Leagues) | 6 · Dual 3 | Unit — Human Noble | 4/6 | At your Rise, restore 2 strength to your Harbor. |
+| 94 | Weather Clerk (Common, Harbor Leagues) | 1 | Unit — Human Official | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 99 | Weather Mistress Odalys (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Noble | 3/4 | When this enters play, draw two cards. |
 | 101 | Admiralty Court (Rare, Harbor Leagues) | 3 · Dual 1 | Spell |  | Remove an enemy Legendary unit from the game. |
+| 104 | Weather Prophet (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 109 | Rising Glass (Common, Harbor Leagues) | 1 | Spell — Swift |  | Your units get +0/+2 this turn. |
+| 113 | Storm Warning (Common, Harbor Leagues) | 2 · Dual 1 | Spell |  | Draw a card. Restore 2 strength to your Harbor. |
 | 114 | Smuggling Ring (Uncommon, Harbor Leagues) | 2 · Dual 1 | Spell |  | Search your deck for a card, put it into your hand, then shuffle. |
+| 119 | Glass Lantern (Common, Harbor Leagues) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 123 | Great Stormglass (Rare, Harbor Leagues) | 5 · Dual 2 | Relic — Tool |  | At your Rise, restore 2 strength to your Harbor. |
 | 127 | Harbor Bridge (Uncommon, Harbor Leagues) | 3 · Dual 1 | Stronghold — Bridge | Durability 6 | Durability 6. This Stronghold also screens the Deep. |
+| 129 | Harbor Rain Cape (Common, Harbor Leagues) | 2 · Dual 1 | Relic — Equipment |  | The equipped unit gets +0/+3. |
+| 133 | League Weather Fleet (Uncommon, Harbor Leagues) | 5 · Dual 2 | Vessel — Convoy | 4/5 | **Ferry 1.**  |
+| 138 | Storm Fleet (Rare, Harbor Leagues) | 6 · Dual 2 | Vessel — Convoy | 5/6 | **Ferry 2.**  |
 | 141 | Rope Walk (Uncommon, Harbor Leagues) | 1 | Domain — Shore |  | Vessels cost 1 less to play. |
+| 144 | Storm Shutters (Common, Harbor Leagues) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
+| 148 | Stormglass Tower (Uncommon, Harbor Leagues) | 4 · Dual 1 | Stronghold — Hall | Durability 7 | Durability 7. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 153 | Storm Quay (Common, Harbor Leagues) | 2 | Domain — Shore |  | Units on this front while blocking at home get +0/+2. |
 | 154 | Lightkeeper's Vigil (Uncommon, Harbor Leagues) | 2 | Enchantment — Front |  | Your units get +0/+1. |
+| 158 | Storm Season (Rare, Harbor Leagues) | 4 · Dual 2 | Enchantment — Player |  | Your Harbor takes 1 less damage from each unblocked attacker. Your Vessels get +0/+1. |
+| 161 | Gale Mercenary (Common, Neutral) | 3 | Unit — Human Mercenary | 3/3 |  |
+| 163 | Lightning Rod Boy (Common, Neutral) | 2 | Unit — Human Worker | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 165 | Lost Shepherd (Common, Neutral) | 2 | Unit — Human Worker | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
 | 167 | Earthquake (Rare, Neutral) | 3 | Spell |  | Deal 4 damage to one of your opponent's Strongholds. Deal 1 damage to each unit on the Shore. |
+| 168 | Rain Walker (Common, Neutral) | 2 | Unit — Human Wanderer | 2/3 |  |
+| 170 | Sodden Pilgrim (Common, Neutral) | 3 | Unit — Human Wanderer | 3/3 |  |
+| 172 | Storm Giant (Rare, Neutral) | 7 | Unit — Human Giant | 7/6 | **Trample.**  |
+| 174 | Storm Hound (Common, Neutral) | 2 | Unit — Beast Hound | 2/2 | **Charge.**  |
+| 176 | Storm Lord (Rare, Neutral) | 5 | Unit — Human Mage | 3/3 | **Swift.** When this enters play, deal 4 damage to an enemy unit. |
+| 178 | Storm Orphan (Common, Neutral) | 1 | Unit — Human Wanderer | 1/2 |  |
+| 180 | Storm Surgeon (Common, Neutral) | 3 | Unit — Human Cleric | 2/2 | When this enters play, restore 3 strength to your Harbor. |
 | 181 | Eclipse (Rare, Neutral) | 6 | Spell |  | Your opponent's Influence capacity does not grow at their next Rise, and their units do not ready. |
+| 183 | Stormcloak Ranger (Uncommon, Neutral) | 3 | Unit — Human Hunter | 2/2 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 185 | Stormfront Runner (Uncommon, Neutral) | 4 | Unit — Human Mage | 2/3 | When this enters play, deal 2 damage to an enemy unit. When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 187 | The Storm Itself (Legendary, Neutral) | 7 | Unit — Human Spirit | 6/6 | **Swift.** At your Rise, deal 1 damage to an enemy unit. |
+| 189 | Weathered Sailor (Uncommon, Neutral) | 4 | Unit — Human Sailor | 3/4 | **Tough.**  |
+| 191 | Wreck Looter (Common, Neutral) | 3 | Unit — Human Wanderer | 3/3 |  |
+| 193 | Hail Storm (Common, Neutral) | 4 | Spell |  | Deal 2 damage to each enemy unit on the Shore. |
 | 194 | Rogue Wave (Uncommon, Neutral) | 1 | Spell |  | Return an enemy Vessel to its owner's hand. |
+| 196 | Thunderclap (Common, Neutral) | 1 | Spell — Swift |  | An enemy unit gets -3/-0 this turn. |
+| 198 | Eye of the Storm Inn (Rare, Neutral) | 4 | Stronghold — Hall | Durability 8 | Durability 8. At your Rise, restore 1 strength to your Harbor. |
+| 200 | Wild Coast (Common, Neutral) | 2 | Domain — Shore |  | Units that attack into this front are Stranded, even at home. |
 
 ## New Reaches (NR, 2024)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Clearing Boar (Common, Thornwild) | 3 · Land 1 | Unit — Beast Boar | 3/2 | **Trample.**  |
 | 5 | Elder Grovekeeper (Rare, Thornwild) | 5 · Land 2 | Unit — Forest Folk Druid | 3/3 | When this enters play, your Influence capacity grows by 2. |
+| 6 | Elder of the New Wood (Rare, Thornwild) | 5 · Land 2 | Unit — Forest Folk Druid | 2/3 | At your Rise, create a 2/2 Wolf token. |
+| 10 | Forest Surveyor (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Druid | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 13 | Fox Litter (Common, Thornwild) | 3 · Land 1 | Unit — Beast Fox | 1/2 | When this enters play, create two 1/1 Fox tokens. |
 | 15 | Forest Midwife (Common, Thornwild) | 3 · Land 1 | Unit — Forest Folk Worker | 2/2 | When this enters play, restore 3 strength to your Harbor. |
+| 17 | Frontier Archer (Common, Thornwild) | 3 · Land 1 | Unit — Forest Folk Archer | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 20 | Frontier Bear (Common, Thornwild) | 4 · Land 1 | Unit — Beast | 4/3 |  |
 | 24 | Stormwood Elk (Uncommon, Thornwild) | 4 · Land 1 | Unit — Beast | 4/3 | **Trample.**  |
+| 25 | Frontier Fawn (Common, Thornwild) | 1 | Unit — Beast | 1/2 |  |
+| 28 | Frontier Scout (Common, Thornwild) | 2 | Unit — Forest Folk Hunter | 2/2 | **Swift.**  |
+| 31 | Great Frontier Stag (Uncommon, Thornwild) | 5 · Land 2 | Unit — Beast | 3/5 | **Tough.**  |
 | 34 | Wild Boar Sounder (Common, Thornwild) | 3 · Land 1 | Unit — Beast | 1/2 | This gets +1/+1 for each Beast you control. |
+| 35 | Greenway Druid (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Druid | 2/3 | When this enters play, create a 2/2 Wolf token. |
+| 39 | Herd Mother of the Reach (Rare, Thornwild) | 5 · Land 2 | Unit — Beast | 3/5 | When this enters play, create two 1/2 Fawn tokens. When this enters play, your Influence capacity grows by 1. |
+| 42 | Moss Elk (Common, Thornwild) | 5 · Land 2 | Unit — Beast | 5/5 |  |
 | 43 | Hunter's Moon (Uncommon, Thornwild) | 2 · Land 1 | Spell |  | Your Beasts get +2/+0 this turn. |
+| 46 | Moss Wolf (Common, Thornwild) | 3 · Land 1 | Unit — Beast Wolf | 3/3 |  |
+| 49 | New Growth Druid (Common, Thornwild) | 2 | Unit — Forest Folk Druid | 1/2 | When this enters play, your Influence capacity grows by 1. |
 | 53 | Rewilding (Uncommon, Thornwild) | 2 · Land 1 | Spell |  | Return an enemy Stronghold to its owner's hand. |
+| 54 | New Reach Seer (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Druid | 2/3 | When this enters play, draw a card. When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 57 | Pathfinder Captain (Uncommon, Thornwild) | 4 · Land 2 | Unit — Forest Folk Hunter | 3/3 | Your Hunters get +1/+0. |
+| 60 | Reach Beaver (Common, Thornwild) | 2 | Unit — Beast | 2/3 |  |
 | 62 | Swarm of Wasps (Common, Thornwild) | 2 | Spell — Swift |  | Deal 1 damage to each attacking unit. |
+| 64 | Reach Guardian Oak (Rare, Thornwild) | 6 · Land 2 | Unit — Grove Spirit | 4/7 | **Rampart.** At your Rise, this gets +1/+0 permanently. |
+| 67 | Sapling Guard (Common, Thornwild) | 2 | Unit — Forest Folk Guardian | 1/3 | **Rampart.**  |
+| 71 | Settler Wolf (Common, Thornwild) | 2 | Unit — Beast Wolf | 2/2 | **Charge.**  |
 | 72 | Antler Spear (Common, Thornwild) | 2 | Relic — Equipment |  | The equipped unit gets +2/+0 and Charge. |
+| 75 | Trailblazer (Common, Thornwild) | 1 | Unit — Forest Folk Hunter | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
+| 78 | Warden of the New Reaches (Legendary, Thornwild) | 6 · Land 3 | Unit — Forest Folk Noble | 4/5 | At your Rise, your units get +1/+1 this turn. |
 | 81 | Hollow Oak Shrine (Common, Thornwild) | 1 | Domain — Shore |  | Druids cost 1 less to play. |
+| 82 | Frontier Ambush (Common, Thornwild) | 1 | Spell — Swift |  | One of your units gets +3/+0 this turn. |
+| 86 | Overgrown Path (Common, Thornwild) | 2 · Land 1 | Spell |  | An enemy unit cannot attack during its controller's next turn. |
+| 89 | Stampede of the Reaches (Rare, Thornwild) | 4 · Land 2 | Spell — Swift |  | Your Beasts get +3/+0 this turn. Your Beasts gain Charge this turn. |
 | 91 | Seasong Grove (Uncommon, Thornwild) | 2 · Land 1 | Domain — Shore |  | Land units on this front have Rampart. |
+| 93 | Seed Bag (Common, Thornwild) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 96 | New Reach Shrine (Uncommon, Thornwild) | 3 · Land 1 | Stronghold — Hall | Durability 6 | Durability 6. At your Rise, restore 1 strength to your Harbor. |
+| 100 | Clearing Meadow (Common, Thornwild) | 2 | Domain — Shore |  | Beasts on this front get +0/+1. |
 | 101 | Bloomtide (Rare, Thornwild) | 4 · Land 2 | Enchantment — Front |  | Your units on the Shore get +1/+1. |
+| 104 | Frontier Law (Rare, Thornwild) | 4 · Land 2 | Enchantment — Player |  | Your Beasts get +1/+1. |
+| 107 | Boom Town Smith (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Smith | 2/3 | Your Equipment cost 1 less to play. |
 | 110 | Bellows Construct (Uncommon, Iron Reach) | 4 · Land 1 | Unit — Construct | 3/3 | When this enters play, your Influence capacity grows by 1. |
+| 112 | Claim Jumper (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 3/2 | **Charge.**  |
+| 115 | Dynamite Crew (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Worker | 2/2 | When this enters play, deal 1 damage to an enemy unit. |
+| 119 | Foundry Queen of the Reaches (Legendary, Iron Reach) | 7 · Land 3 | Unit — Reachfolk Noble | 6/6 | **Tough.** At your Rise, create a 2/2 Construct token. |
 | 120 | Delver Twins (Uncommon, Iron Reach) | 4 · Land 1 | Unit — Reachfolk Miner | 2/2 | When this enters play, create a 2/2 Delver Twin token. |
+| 123 | Frontier Colossus (Rare, Iron Reach) | 7 · Land 3 | Unit — Construct | 7/6 | **Trample.**  |
+| 127 | Frontier Foreman (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Soldier | 3/3 | Your Reachfolk get +1/+0. |
 | 129 | Guildmistress Orla Stane (Legendary, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Smith | 3/4 | Whenever you play a Relic, draw a card. |
+| 132 | Frontier Foundry Hand (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/1 | When this enters play, draw a card. |
+| 135 | Frontier Gate Warden (Common, Iron Reach) | 4 · Land 1 | Unit — Reachfolk Soldier | 4/3 |  |
 | 139 | Lift Operator (Common, Iron Reach) | 2 | Unit — Reachfolk Miner | 2/2 | When this enters play, move one of your units to the other front. |
+| 140 | Frontier Miner (Common, Iron Reach) | 1 | Unit — Reachfolk Miner | 2/1 |  |
+| 143 | Iron Mule Golem (Uncommon, Iron Reach) | 5 · Land 2 | Unit — Construct | 3/4 | **Tough.**  |
+| 147 | Pit Pony Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 2/3 | **Rampart.**  |
 | 148 | Quarry Ox (Common, Iron Reach) | 4 · Land 1 | Unit — Beast | 3/3 | **Tough.**  |
+| 151 | Reach Rifleman (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 155 | Road Engineer (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Official | 2/3 | When this enters play, draw a card. |
 | 158 | Warden of the Deep Gate (Rare, Iron Reach) | 4 · Land 1 | Unit — Reachfolk Soldier | 3/4 | **Rampart.** At your Rise, one of your Strongholds gains 1 durability. |
+| 159 | Road Gang Hand (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 2/3 |  |
+| 163 | Steam Plough (Common, Iron Reach) | 3 · Land 1 | Unit — Construct | 3/3 |  |
+| 166 | Surveyor's Boy (Common, Iron Reach) | 1 | Unit — Reachfolk Worker | 1/1 | When this enters play, look at the top card of your deck. Put any of them on the bottom. |
 | 167 | Avalanche (Rare, Iron Reach) | 4 · Land 2 | Spell |  | Deal 3 damage to each unit on the Shore with 3 or less Toughness. |
+| 171 | Surveyor-General Brandt (Rare, Iron Reach) | 5 · Land 2 | Unit — Reachfolk Noble | 3/4 | Your Constructs get +1/+1. |
+| 174 | Blasting Charge (Common, Iron Reach) | 2 · Land 1 | Spell |  | Deal 3 damage to an enemy unit. |
 | 177 | Reforge (Uncommon, Iron Reach) | 2 · Land 1 | Spell |  | Return a Relic from your discard pile to your hand. Draw a card. |
+| 179 | Sapper Barrage (Rare, Iron Reach) | 5 · Land 2 | Spell |  | Deal 3 damage to each enemy unit on the Shore. |
+| 183 | Black Powder Barrel (Common, Iron Reach) | 3 · Land 1 | Relic — Tool |  | At your Rise, deal 1 damage to an enemy unit. |
 | 186 | Riveted Pavise (Common, Iron Reach) | 1 | Relic — Equipment |  | The equipped unit gets +0/+3. |
+| 187 | Iron Wagon (Common, Iron Reach) | 2 | Vessel — Wagon | 1/3 | **Ferry 1.**  |
+| 191 | Frontier Fort (Common, Iron Reach) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
+| 194 | Great Canal Works (Rare, Iron Reach) | 5 · Land 2 | Stronghold — Fortress | Durability 10 | Durability 10. At your Rise, one of your Strongholds gains 1 durability. |
 | 196 | Reach Smelter (Common, Iron Reach) | 3 · Land 1 | Stronghold — Foundry | Durability 6 | Durability 6. At your Rise, gain 1 Influence this turn. |
+| 199 | Road to the Reaches (Common, Iron Reach) | 2 | Domain — Shore |  | Units that attack into this front are never Stranded. |
 
 ## Free Lanes (FL, 2024)
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 3 | Admiral of Free Lanes (Rare, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | **Charge.** When this deals damage to your opponent's Harbor, draw a card. |
 | 6 | Commodore Jessa Holt (Legendary, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 4/4 | Your Vessels are never Stranded. When this deals damage to your opponent's Harbor, ready your Vessels. |
+| 8 | Free Lane Captain (Common, Free Fleets) | 4 · Sea 1 | Unit — Human Privateer | 4/3 |  |
+| 12 | Free Lane Gunner (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
 | 16 | Ferry Captain (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Ferry 1.**  |
+| 17 | Free Lane Hand (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/3 |  |
+| 22 | Free Lane Navigator (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Sailor | 2/3 | When this enters play, move one of your units to the other front. When this enters play, look at the top card of your deck. Put any of them on the bottom. |
 | 26 | Parrot Lookout (Common, Free Fleets) | 1 | Unit — Bird | 1/1 | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 27 | Free Lane Pilot (Common, Free Fleets) | 4 · Sea 1 | Unit — Human Sailor | 4/3 |  |
+| 31 | Gull Messenger (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 |  |
+| 35 | Ketch Hand (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 3/3 |  |
 | 36 | Privateer Recruiter (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Privateer | 2/2 | When this enters play, search your deck for a Sailor, put it into your hand, then shuffle. |
+| 41 | Lane Cannoneer (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Sailor | 2/2 | When this enters play, deal 1 damage to an enemy unit. |
+| 45 | Lane Commodore (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | Your Vessels get +1/+0. |
 | 46 | Salvage Diver (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | When this enters play, return a Relic from your discard pile to your hand. |
+| 50 | Lane Deckhand (Common, Free Fleets) | 1 | Unit — Human Sailor | 2/1 |  |
+| 55 | Lane Galley Cook (Common, Free Fleets) | 2 | Unit — Human Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
 | 56 | Cannonade (Uncommon, Free Fleets) | 2 · Sea 1 | Spell |  | Deal 3 damage to an enemy unit. |
+| 60 | Lane Lookout (Common, Free Fleets) | 2 | Unit — Human Sailor | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 64 | Lane Quartermaster (Common, Free Fleets) | 3 · Sea 1 | Unit — Human Official | 2/2 | When this enters play, draw a card. |
 | 66 | Keelhaul (Uncommon, Free Fleets) | 2 · Sea 1 | Spell |  | Destroy an enemy damaged unit. |
+| 69 | Lane Scout Captain (Uncommon, Free Fleets) | 4 · Sea 2 | Unit — Human Privateer | 3/3 | **Swift.**  |
+| 74 | Lane Smuggler Boy (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Charge.**  |
 | 76 | Shore Leave (Common, Free Fleets) | 2 | Spell |  | Ready your units. |
+| 79 | Lane Urchin (Common, Free Fleets) | 1 | Unit — Human Sailor | 1/2 |  |
+| 83 | Pirate Toll Collector (Uncommon, Free Fleets) | 5 · Sea 2 | Unit — Human Privateer | 3/3 | When this enters play, gain control of an enemy unit that costs 2 or less. |
 | 86 | Fleet Signal Flags (Common, Free Fleets) | 2 | Relic — Tool |  | Your Vessels get +1/+0. |
+| 88 | Queen of the Free Lanes (Legendary, Free Fleets) | 6 · Sea 3 | Unit — Human Privateer | 5/5 | **Charge, Leader.** Your Vessels have Charge. |
+| 93 | Tide Runner (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
 | 96 | Ship in a Bottle (Rare, Free Fleets) | 4 · Sea 2 | Relic — Tool |  | When this enters play, create a token that is a copy of one of your Vessels. |
+| 98 | Blockade Breaker (Rare, Free Fleets) | 4 · Sea 2 | Spell — Swift |  | Your Vessels get +3/+0 this turn. Your Vessels gain Charge this turn. |
+| 102 | Free Lane Raiders (Uncommon, Free Fleets) | 5 · Sea 2 | Spell |  | Create three 2/1 Raider tokens. |
 | 106 | Blackwake (Rare, Free Fleets) | 6 · Sea 2 | Vessel — Galleon | 5/4 | **Ferry 2.** When this attacks, deal 2 damage to an enemy unit. |
+| 107 | Free Lanes Armada (Rare, Free Fleets) | 6 · Sea 3 | Spell — Swift |  | Create two 3/3 Lane Ship tokens. |
+| 112 | Free Passage (Common, Free Fleets) | 2 · Sea 1 | Spell — Swift |  | Your units get +1/+1 this turn. |
 | 116 | Courier Ketch (Common, Free Fleets) | 3 · Sea 1 | Vessel — Ketch | 3/2 | **Ferry 1.** When this deals damage to your opponent's Harbor, draw a card. |
+| 117 | Warning Shot (Common, Free Fleets) | 3 · Sea 1 | Spell |  | Deal 3 damage to an enemy unit in the Deep. |
+| 121 | Rope and Pulley (Common, Free Fleets) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
 | 126 | Lifeboat (Common, Free Fleets) | 2 | Vessel — Boat | 1/2 | **Swift, Ferry 1.** When this enters play, another of your units gets +0/+3 until your next turn. |
+| 127 | Free Lane Brig (Common, Free Fleets) | 3 · Sea 1 | Vessel — Brig | 2/4 | **Ferry 1.**  |
+| 131 | Free Lane Cutter (Common, Free Fleets) | 2 | Vessel — Cutter | 2/2 | **Ferry 1.**  |
+| 135 | Free Lane Raider (Common, Free Fleets) | 3 · Sea 1 | Vessel — Longship | 3/2 | **Charge, Ferry 1.**  |
 | 136 | Merry Widow (Rare, Free Fleets) | 5 · Sea 2 | Vessel — Galleon | 4/5 | **Ferry 2.** At your Rise, another of your units gets +0/+2 until your next turn. When this attacks, your other attacking units get +0/+1 this turn. |
+| 140 | Lane Flagship (Uncommon, Free Fleets) | 5 · Sea 2 | Vessel — Flagship | 4/5 | **Ferry 1.**  |
+| 145 | The Free Lane Queen (Rare, Free Fleets) | 6 · Sea 2 | Vessel — Galleon | 6/6 | **Charge, Ferry 2.**  |
 | 146 | Squall Line (Uncommon, Free Fleets) | 2 · Sea 1 | Domain — Deep |  | Vessels on this front get +1/+0. |
+| 150 | Cargo Hold (Common, Free Fleets) | 2 | Stronghold — Hall | Durability 6 | Durability 6. |
+| 154 | Free Open Lane (Common, Free Fleets) | 2 | Domain — Deep |  | Vessels on this front get +1/+0. |
 | 156 | Free Lanes Charter (Uncommon, Free Fleets) | 3 · Sea 1 | Enchantment — Player |  | Whenever one of your Vessels enters play, draw a card. |
+| 159 | Lane Charter (Rare, Free Fleets) | 4 · Sea 2 | Enchantment — Player |  | Your Vessels cost 1 less to play. Your Vessels get +0/+1. |
+| 162 | Customs Runner (Common, Harbor Leagues) | 1 | Unit — Human Official | 1/1 | **Swift.**  |
+| 164 | Harbor Tax Assessor (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Official | 3/3 |  |
+| 165 | Lane Broker (Common, Harbor Leagues) | 2 | Unit — Human Trader | 1/2 | When this enters play, your Influence capacity grows by 1. |
 | 166 | Harbor Constable (Common, Harbor Leagues) | 3 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 168 | Lane Guild Mistress (Rare, Harbor Leagues) | 5 · Dual 2 | Unit — Human Noble | 3/4 | When this enters play, draw two cards. |
+| 170 | Lane Master Orsolya (Legendary, Harbor Leagues) | 6 · Dual 3 | Unit — Human Noble | 4/6 | Your Vessels cost 1 less to play. At your Rise, restore 1 strength to your Harbor. |
+| 171 | Lane Treasurer (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 173 | Lane Warden (Common, Harbor Leagues) | 3 · Dual 1 | Unit — Human Soldier | 2/3 | **Rampart.**  |
+| 174 | Master of the Lanes (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 3/3 | Your Ferry units get +1/+1. |
 | 176 | Trade Embargo (Uncommon, Harbor Leagues) | 2 · Dual 1 | Spell |  | An enemy Vessel cannot attack during its controller's next turn. Draw a card. |
+| 177 | Pier Auditor (Common, Harbor Leagues) | 2 | Unit — Human Official | 2/2 |  |
+| 179 | Pilotage Officer (Uncommon, Harbor Leagues) | 4 · Dual 2 | Unit — Human Official | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 180 | Quay Hand (Common, Harbor Leagues) | 2 | Unit — Human Worker | 1/2 | **Ferry 1.**  |
+| 182 | Toll Clerk (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/1 | When this enters play, draw a card. |
+| 183 | Lane Embargo (Common, Harbor Leagues) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 185 | Lantern Sign Board (Common, Harbor Leagues) | 2 | Relic — Tool |  | At your Rise, restore 1 strength to your Harbor. |
 | 186 | Coin Purse (Common, Harbor Leagues) | 2 | Relic — Tool |  | At your Rise, gain 1 Influence this turn. |
+| 188 | Trade Ledger (Common, Harbor Leagues) | 2 | Relic — Tool |  | When this enters play, draw a card. |
+| 189 | Customs Fleet (Uncommon, Harbor Leagues) | 5 · Dual 2 | Vessel — Convoy | 4/5 | **Ferry 1.**  |
+| 191 | Harbor Patrol Cutter (Common, Harbor Leagues) | 2 | Vessel — Cutter | 2/2 | **Ferry 1.**  |
+| 192 | League Treasure Fleet (Rare, Harbor Leagues) | 6 · Dual 2 | Vessel — Convoy | 5/6 | **Ferry 2.**  |
+| 194 | Dock Crane (Common, Harbor Leagues) | 3 | Stronghold — Hall | Durability 8 | Durability 8. |
 | 196 | League Cutter (Common, Harbor Leagues) | 2 | Vessel — Cutter | 3/2 | **Ferry 1.**  |
+| 197 | Toll Hall (Uncommon, Harbor Leagues) | 4 · Dual 1 | Stronghold — Hall | Durability 7 | Durability 7. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 198 | Quarantine Flag (Common, Harbor Leagues) | 2 | Domain — Deep |  | Vessels cost 1 less to play. |
+| 200 | The Lane Tribunal (Rare, Harbor Leagues) | 4 · Dual 2 | Enchantment — Player |  | Your opponent's Vessels cost 1 more to play. |
 
 ## Keepers of the Light (KH, 2024)
 
@@ -1360,27 +2407,80 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Beach Hound (Common, Crownlands) | 2 | Unit — Beast Hound | 2/2 |  |
+| 4 | Coast Marine (Common, Crownlands) | 2 | Unit — Human Soldier | 2/2 | **Charge.**  |
 | 5 | Bastion Drill Sergeant (Uncommon, Crownlands) | 4 · Land 1 | Unit — Human Soldier | 2/3 | Your other units have Rampart. |
+| 7 | Crown Beach Guard (Common, Crownlands) | 2 | Unit — Human Soldier | 2/3 |  |
+| 9 | Crown Knight of the Shoal (Common, Crownlands) | 4 · Land 2 | Unit — Human Knight | 4/3 | **Charge.**  |
+| 11 | Crown Quartermaster of the Coast (Uncommon, Crownlands) | 4 · Land 1 | Unit — Human Official | 2/3 | When this enters play, draw a card. When this enters play, your Influence capacity grows by 1. |
+| 13 | Crown Standard Guard (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/2 | **Leader.**  |
 | 15 | Castellan Rowe (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Noble | 2/3 | When this enters play, each of your Strongholds gains 2 durability. |
+| 16 | Crown Tide Engineer (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Mason | 2/4 | At your Rise, one of your Strongholds gains 1 durability. |
+| 18 | Dune Mason (Common, Crownlands) | 3 · Land 1 | Unit — Human Mason | 2/2 | When this enters play, one of your Strongholds gains 2 durability. |
+| 20 | Lord of the Shoals (Rare, Crownlands) | 5 · Land 2 | Unit — Human Noble | 4/5 | **Leader, Rampart.**  |
+| 22 | Quay Cook (Common, Crownlands) | 2 | Unit — Human Worker | 1/2 | When this enters play, restore 2 strength to your Harbor. |
 | 24 | Paladin of the Tidewall (Rare, Crownlands) | 5 · Land 2 | Unit — Human Knight | 3/6 | **Rampart.** This blocks at home on both fronts. |
+| 25 | Queen Ama of the Crown and Shoal (Legendary, Crownlands) | 7 · Land 3 | Unit — Human Noble | 6/7 | **Leader, Rampart.** At your Rise, one of your Strongholds gains 2 durability. |
+| 27 | Shoal Archer (Common, Crownlands) | 3 · Land 1 | Unit — Human Archer | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 29 | Shoal Beacon Keeper (Common, Crownlands) | 2 | Unit — Human Keeper | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 31 | Shoal Captain (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Noble | 3/3 | **Leader.**  |
 | 34 | Shieldmaiden of Harrowby (Uncommon, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 2/3 | **Rampart.** At your Rise, this gets +0/+1 until your next turn. |
+| 35 | Shoal Sergeant (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Soldier | 3/3 | Your units get +1/+0. |
+| 37 | Shoal Veteran (Common, Crownlands) | 4 · Land 1 | Unit — Human Soldier | 3/4 |  |
+| 39 | Shoal Wall Crossbow (Common, Crownlands) | 2 | Unit — Human Archer | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
+| 41 | Shoal Warden (Uncommon, Crownlands) | 5 · Land 2 | Unit — Human Soldier | 3/4 | **Tough, Rampart.**  |
 | 43 | Recruitment Fair (Common, Crownlands) | 1 | Spell |  | Search your deck for a unit that costs 2 or less, put it into your hand, then shuffle. |
+| 44 | Shoal Watch Recruit (Common, Crownlands) | 1 | Unit — Human Soldier | 0/2 | **Rampart.**  |
+| 46 | Tide Gate Guard (Common, Crownlands) | 3 · Land 1 | Unit — Human Soldier | 3/3 |  |
+| 48 | Charge of the Shoal Host (Rare, Crownlands) | 5 · Land 2 | Spell — Swift |  | Your units get +2/+2 this turn. Your units gain Charge this turn. |
+| 50 | Hold the Beach (Common, Crownlands) | 1 | Spell — Swift |  | Your units get +0/+3 this turn. |
+| 52 | Sand Trap (Common, Crownlands) | 2 · Land 1 | Spell |  | An enemy unit cannot attack during its controller's next turn. |
 | 53 | Sally Forth (Uncommon, Crownlands) | 3 · Land 1 | Spell |  | Deal 2 damage to each of up to 2 enemy units on the Shore. |
+| 55 | Shoal Ledger (Common, Crownlands) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 57 | Shoal Standard (Common, Crownlands) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +1/+1. |
+| 59 | Crown Sea Fortress (Rare, Crownlands) | 5 · Land 2 | Stronghold — Fortress | Durability 11 | Durability 11. At your Rise, one of your Strongholds gains 1 durability. |
+| 61 | Shoal Fort (Common, Crownlands) | 2 | Stronghold — Fortress | Durability 6 | Durability 6. |
 | 62 | Coastal Road (Common, Crownlands) | 1 | Domain — Shore |  | Units that attack into this front are never Stranded. |
+| 64 | Crown Shoal (Common, Crownlands) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
+| 66 | Crown and Shoal Doctrine (Rare, Crownlands) | 4 · Land 2 | Enchantment — Player |  | Your Strongholds take 2 less damage from each unblocked attacker. Your Harbor takes 1 less damage from each unblocked attacker. |
+| 70 | Conch Cavalry (Common, Tideborn) | 4 · Sea 1 | Unit — Tideborn Warrior | 4/3 |  |
 | 72 | Coralborn Titan (Rare, Tideborn) | 8 · Sea 3 | Unit — Tideborn Guardian | 8/8 |  |
+| 76 | Crown Sea Guide (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Scout | 3/3 |  |
 | 81 | Kelp Weaver (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Worker | 2/2 | When this enters play, create a 1/1 Kelp token. |
+| 82 | Pearl Harbourmaster (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Noble | 2/3 | When this enters play, draw a card. When this enters play, restore 2 strength to your Harbor. |
+| 87 | Queen of the Shoals (Legendary, Tideborn) | 6 · Sea 3 | Unit — Tideborn Noble | 5/5 | **Surge.** Whenever one of your units returns to your hand, draw a card. |
 | 91 | Princess Ama of Ys'mar (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Noble | 3/3 | When this enters play, return an enemy unit to its owner's hand. When this enters play, draw a card. |
+| 93 | Ray Rider (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 3/2 | **Charge.**  |
+| 98 | Sandbank Glider (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
 | 101 | Queen Ama the Wavecrowned (Legendary, Tideborn) | 6 · Sea 3 | Unit — Tideborn Noble | 4/4 | When this enters play, return an enemy unit to its owner's hand. When this enters play, return an enemy unit to its owner's hand. When this enters play, draw a card. |
+| 104 | Shoal Admiral (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Noble | 3/3 | Your Surge units get +1/+0. |
+| 109 | Shoal Conjurer (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 2/2 | When this enters play, draw a card. |
 | 110 | Sandbar Scout (Common, Tideborn) | 4 · Sea 1 | Unit — Tideborn Scout | 3/4 | **Surge.**  |
+| 115 | Shoal Fry (Common, Tideborn) | 1 | Unit — Fish | 1/1 |  |
 | 120 | Tide Ritualist (Uncommon, Tideborn) | 3 · Sea 1 | Unit — Tideborn Mage | 1/2 | Whenever you play a Swift spell, draw a card. |
+| 121 | Shoal Guard (Common, Tideborn) | 3 · Sea 1 | Unit — Tideborn Warrior | 2/3 | **Rampart.**  |
+| 126 | Shoal Leviathan (Rare, Tideborn) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
 | 129 | Tideborn Healer (Common, Tideborn) | 2 | Unit — Tideborn Cleric | 2/2 | When this enters play, another of your units gets +0/+3 until your next turn. |
+| 132 | Shoal Mage Elder (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, move an enemy unit to the other front. It becomes exhausted. |
+| 136 | Shoal Oracle (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
 | 139 | Ink Cloud (Common, Tideborn) | 1 | Spell — Swift |  | An enemy unit cannot block this turn. |
+| 142 | Shoal Singer (Common, Tideborn) | 2 | Unit — Tideborn Mage | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 147 | Shoal Sovereign (Rare, Tideborn) | 5 · Sea 2 | Unit — Tideborn Noble | 4/4 | **Surge.** When this enters play, return an enemy unit that costs 3 or less to its owner's hand. |
 | 148 | Tidewrack (Common, Tideborn) | 2 | Spell |  | Discard a card, then draw two cards. |
+| 153 | Tide Pool Watcher (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/3 |  |
 | 158 | Coral Lance (Common, Tideborn) | 1 | Relic — Equipment |  | The equipped unit gets +2/+0. |
+| 159 | Tide Turtle of the Shoal (Common, Tideborn) | 4 · Sea 1 | Unit — Turtle | 2/4 | **Tough.**  |
+| 164 | Tideborn Trader (Common, Tideborn) | 2 | Unit — Tideborn Trader | 1/2 | When this enters play, your Influence capacity grows by 1. |
 | 167 | Lagoon of Echoes (Rare, Tideborn) | 2 · Sea 1 | Domain — Deep |  | Whenever you play a Swift spell, draw a card. |
+| 170 | Shoal Current (Common, Tideborn) | 1 | Spell — Swift |  | Move one of your units to the other front. |
+| 175 | Tide of the Shoals (Rare, Tideborn) | 5 · Sea 2 | Spell |  | Return every enemy unit on one front to its owner's hand. |
 | 177 | Moonlit Bay (Common, Tideborn) | 1 · Sea 1 | Domain — Deep |  | Swift units on this front get +1/+1. |
+| 181 | Wave Return (Common, Tideborn) | 2 · Sea 1 | Spell — Swift |  | Return an enemy unit that costs 2 or less to its owner's hand. |
 | 186 | Pull of the Moon (Uncommon, Tideborn) | 2 · Sea 1 | Enchantment — Player |  | Your Swift spells cost 1 less to play. |
+| 187 | Pearl Shard (Common, Tideborn) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 192 | Shoal Citadel (Uncommon, Tideborn) | 4 · Sea 1 | Stronghold — Fortress | Durability 8 | Durability 8. At your Rise, one of your Strongholds gains 1 durability. |
 | 196 | Spring Tide (Rare, Tideborn) | 2 · Sea 1 | Enchantment — Front |  | Your Sea attacking units on the Shore get +1/+0. Your Sea units have Surge. |
+| 198 | Shoal Lagoon (Common, Tideborn) | 2 | Domain — Deep |  | Surge units on this front get +1/+0. |
 
 ## Return of the Tide (RT, 2025)
 
@@ -1466,25 +2566,89 @@ Cost line: Influence cost, then the Allegiance requirement (for example *Land 2*
 
 | # | Card | Cost | Type | Stats | Text |
 |---|---|---|---|---|---|
+| 2 | Forge Master of the Tideline (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Smith | 2/3 | Your Constructs get +1/+1. |
 | 5 | Assayer (Common, Iron Reach) | 2 | Unit — Reachfolk Smith | 1/3 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 7 | Iron Tideline Guard (Common, Iron Reach) | 3 · Land 1 | Unit — Construct | 2/3 | **Rampart.**  |
+| 10 | Lime Kiln Hand (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 1/1 | When this enters play, draw a card. |
+| 14 | Salt Pan Worker (Common, Iron Reach) | 2 | Unit — Reachfolk Worker | 2/3 |  |
 | 15 | Night Shift (Common, Iron Reach) | 2 | Unit — Reachfolk Miner | 2/2 | When this enters play, ready another of your units. |
+| 19 | Seaside Golem (Common, Iron Reach) | 4 · Land 1 | Unit — Construct | 4/3 |  |
+| 22 | Seaside Smith (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Smith | 2/3 | Your Equipment cost 1 less to play. |
 | 24 | Masterwork Hammer (Rare, Iron Reach) | 2 · Land 1 | Relic — Equipment |  | The equipped unit gets +2/+2. |
+| 27 | Tideline Colossus (Rare, Iron Reach) | 7 · Land 3 | Unit — Construct | 7/6 | **Tough, Trample.**  |
+| 30 | Tideline Engineer (Uncommon, Iron Reach) | 4 · Land 2 | Unit — Reachfolk Official | 2/3 | When this enters play, draw a card. When this enters play, look at the top card of your deck. Put any of them on the bottom. |
 | 34 | Rockfall Trap (Uncommon, Iron Reach) | 2 · Land 1 | Relic — Tool |  | Each unit that attacks into the Shore takes 1 damage. |
+| 35 | Tideline Forge Lord (Legendary, Iron Reach) | 7 · Land 3 | Unit — Reachfolk Noble | 6/6 | **Tough.** At your Rise, create a 2/2 Construct token. |
+| 38 | Tideline Gunner (Common, Iron Reach) | 3 · Land 1 | Unit — Reachfolk Soldier | 1/3 | Whenever an opponent's unit attacks away from home, deal 1 damage to an enemy unit attacking away from home. |
+| 42 | Tideline Miner (Common, Iron Reach) | 1 | Unit — Reachfolk Miner | 2/1 |  |
 | 43 | Ironworks (Uncommon, Iron Reach) | 2 · Land 1 | Domain — Shore |  | Relics cost 1 less to play. |
+| 47 | Tideline Brazier (Common, Iron Reach) | 2 | Relic — Tool |  | When this enters play, your Influence capacity grows by 1. |
+| 50 | Tideline Sentry (Common, Crownlands) | 1 | Unit — Human Soldier | 0/2 | **Rampart.**  |
+| 51 | Tideline Cannon (Common, Iron Reach) | 3 · Land 1 | Relic — Tool |  | At your Rise, deal 1 damage to an enemy unit. |
 | 53 | Furnace Heart (Rare, Iron Reach) | 2 · Land 1 | Enchantment — Unit |  | The enchanted unit gets +2/+1 and Trample. |
+| 56 | Great Seaside Forge (Rare, Iron Reach) | 5 · Land 2 | Stronghold — Fortress | Durability 10 | Durability 10. At your Rise, one of your Strongholds gains 1 durability. |
+| 58 | Archpriest of the Tideline (Legendary, Abyssal Choir) | 6 · Sea 3 | Unit — Drowned Cleric | 4/5 | At your Rise, return a Drowned from your discard pile to your hand. |
+| 60 | Beach Wraith (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Drowned Spirit | 3/2 | **Charge.**  |
 | 62 | Drowned Pilgrim (Common, Abyssal Choir) | 2 | Unit — Drowned Cultist | 2/2 | At your Rise, move this to the other front. |
+| 63 | Tideline Oracle (Uncommon, Tideborn) | 4 · Sea 2 | Unit — Tideborn Mage | 2/3 | When this enters play, move an enemy unit to the other front. It becomes exhausted. |
+| 64 | Deep Tide Siren (Uncommon, Abyssal Choir) | 5 · Sea 2 | Unit — Siren | 2/3 | When this enters play, gain control of an enemy unit that costs 2 or less. |
+| 66 | Drowned Dockhand (Common, Abyssal Choir) | 2 | Unit — Drowned Worker | 2/3 |  |
+| 68 | Rotting Hulk Eel (Common, Abyssal Choir) | 2 | Unit — Eel | 2/2 | **Surge.**  |
+| 69 | Tide Leviathan (Rare, Abyssal Choir) | 7 · Sea 3 | Unit — Leviathan | 7/6 | **Surge.**  |
+| 71 | Tide Whisper (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
 | 72 | Hymnkeeper (Common, Abyssal Choir) | 2 | Unit — Drowned Cultist | 1/2 | Whenever you play an Enchantment, draw a card. |
+| 74 | Tideline Drowned (Common, Abyssal Choir) | 1 | Unit — Drowned Worker | 1/1 |  |
+| 76 | Tideline Horror (Common, Abyssal Choir) | 3 · Sea 1 | Unit — Deep Horror | 3/3 |  |
+| 77 | Tideline Prophet (Uncommon, Abyssal Choir) | 4 · Sea 2 | Unit — Drowned Cleric | 3/3 | Your Drowned get +1/+0. |
+| 79 | Tideline Shrine Keeper (Common, Abyssal Choir) | 2 | Unit — Drowned Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
 | 81 | Kraken's Grasp (Rare, Abyssal Choir) | 6 · Sea 2 | Spell |  | Destroy an enemy Vessel. Destroy an enemy unit that is not a Vessel. |
+| 82 | Low Tide Dirge (Common, Abyssal Choir) | 1 | Spell — Swift |  | An enemy unit gets -3/-0 this turn. |
+| 84 | Sea Drag (Common, Abyssal Choir) | 3 · Sea 1 | Spell |  | Destroy an enemy unit that costs 3 or less. |
+| 86 | Tideline Choir (Rare, Abyssal Choir) | 4 · Sea 2 | Enchantment — Player |  | Your Drowned get +1/+1. |
+| 88 | Beach Healer (Uncommon, Neutral) | 4 | Unit — Human Cleric | 2/3 | When this enters play, restore 3 strength to your Harbor. When this enters play, draw a card. |
 | 91 | Day Labourer (Common, Neutral) | 2 | Unit — Human Worker | 1/3 |  |
+| 93 | Beachcomber Elder (Common, Neutral) | 2 | Unit — Human Wanderer | 2/2 |  |
+| 96 | Driftwood Gatherer (Common, Neutral) | 1 | Unit — Human Worker | 1/2 |  |
+| 99 | Grey Wanderer's Heir (Legendary, Neutral) | 6 | Unit — Human Wanderer | 5/5 | **Swift.** When this enters play, deal 3 damage to an enemy unit. |
+| 100 | Tideline Fox (Common, Thornwild) | 2 | Unit — Beast Fox | 2/2 |  |
 | 101 | Mountain Goat (Common, Neutral) | 2 | Unit — Beast | 2/2 |  |
+| 105 | Line Fisher (Common, Neutral) | 2 | Unit — Human Worker | 1/2 | When this enters play, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 108 | Old Beachcomber Veteran (Common, Neutral) | 4 | Unit — Human Mercenary | 4/3 |  |
+| 109 | Tideline Smuggler (Common, Free Fleets) | 2 | Unit — Human Sailor | 2/2 | **Swift.**  |
 | 110 | Old Soldier (Common, Neutral) | 4 | Unit — Human Mercenary | 2/3 | **Tough.**  |
+| 113 | Salt Marsh Walker (Common, Neutral) | 2 | Unit — Human Wanderer | 2/3 |  |
+| 117 | Tideline Clerk (Common, Harbor Leagues) | 2 | Unit — Human Official | 1/1 | When this enters play, draw a card. |
+| 118 | Tideline Archer (Common, Neutral) | 2 | Unit — Human Archer | 2/1 | When this enters play, deal 1 damage to an enemy unit. |
 | 120 | Oracle of Saltgate (Rare, Neutral) | 4 | Unit — Human Wanderer | 2/3 | When this enters play, look at the top 3 cards of your deck. Put any of them on the bottom. When this enters play, draw a card. |
+| 122 | Tideline Beachcomber (Common, Neutral) | 2 | Unit — Human Wanderer | 1/1 | When this enters play, draw a card. |
+| 125 | Tideline Captain (Uncommon, Neutral) | 4 | Unit — Human Mercenary | 3/3 | **Leader.**  |
 | 129 | Wild Ponies (Common, Neutral) | 2 | Unit — Beast | 1/1 | When this enters play, create a 1/1 Pony token. |
+| 130 | Tideline Cat (Common, Neutral) | 2 | Unit — Beast Cat | 2/2 |  |
+| 133 | Tideline Giant (Rare, Neutral) | 7 | Unit — Human Giant | 6/7 | **Tough.**  |
+| 136 | Tideline Gull (Common, Neutral) | 1 | Unit — Beast Bird | 1/1 | **Swift.**  |
 | 139 | Changing Winds (Uncommon, Neutral) | 2 | Spell — Swift |  | Move an enemy unit to the other front. It becomes exhausted. |
+| 141 | Tideline Hound (Common, Neutral) | 2 | Unit — Beast Hound | 2/2 | **Charge.**  |
+| 144 | Tideline Priest (Common, Neutral) | 2 | Unit — Human Cleric | 1/2 | When this enters play, restore 2 strength to your Harbor. |
+| 147 | Tideline Raider (Common, Neutral) | 3 | Unit — Human Mercenary | 3/2 | **Charge.**  |
 | 148 | Thunderstorm (Uncommon, Neutral) | 3 | Spell |  | Deal 2 damage to each of up to 2 enemy units. |
+| 151 | Tideline Warden (Uncommon, Crownlands) | 4 · Land 2 | Unit — Human Soldier | 3/3 | **Tough, Rampart.**  |
+| 153 | Tideline Sage (Uncommon, Neutral) | 4 | Unit — Human Wanderer | 2/3 | When this enters play, look at the top 3 cards of your deck. Put one of them into your hand and the rest on the bottom. |
+| 155 | Tideline Skimmer (Common, Tideborn) | 2 | Unit — Tideborn Scout | 2/2 | **Surge.**  |
+| 157 | Tideline Shepherd (Common, Neutral) | 3 | Unit — Human Worker | 2/2 | When this enters play, create two 1/1 Sheep tokens. |
 | 158 | Sword of the Grey Wanderer (Legendary, Neutral) | 3 | Relic — Equipment |  | The equipped unit gets +2/+2 and Trample. This card counts as both Land and Sea for Allegiance. |
+| 161 | Wayward Mercenary (Common, Neutral) | 3 | Unit — Human Mercenary | 3/3 |  |
+| 165 | Wreck Salvager (Uncommon, Neutral) | 4 | Unit — Human Wanderer | 3/3 | When this enters play, return a unit from your discard pile to your hand. |
 | 167 | Wanderer's Cloak (Uncommon, Neutral) | 1 | Relic — Equipment |  | The equipped unit gets +1/+0 and Charge. |
+| 169 | Beach Brawl (Common, Neutral) | 2 | Spell |  | Deal 3 damage to an enemy unit. |
+| 172 | Rising Tide Warning (Common, Neutral) | 1 | Spell — Swift |  | An enemy unit cannot attack during its controller's next turn. |
+| 176 | Salt Spray (Common, Neutral) | 1 | Spell — Swift |  | Your units get +0/+2 this turn. |
 | 177 | Ruined Watchtower (Common, Neutral) | 1 | Stronghold — Ruin | Durability 3 | Durability 3. |
+| 180 | Tideline Tide Table (Common, Neutral) | 2 | Relic — Tool |  | At your Rise, look at the top card of your deck. Put any of them on the bottom. |
+| 183 | Beach Hut (Common, Neutral) | 2 | Stronghold — Hall | Durability 5 | Durability 5. |
 | 186 | Wayfarer's Inn (Uncommon, Neutral) | 3 | Stronghold — Inn | Durability 5 | Durability 5. When this enters play, draw a card. |
+| 188 | Driftwood Fort (Common, Neutral) | 3 | Stronghold — Fortress | Durability 7 | Durability 7. |
+| 191 | The Tideline Inn (Rare, Neutral) | 4 | Stronghold — Hall | Durability 8 | Durability 8. At your Rise, look at the top 2 cards of your deck. Put any of them on the bottom. |
+| 194 | Storm Beach (Rare, Neutral) | 3 | Domain — Shore |  | Spells cost 1 less to play. |
 | 196 | Fair Weather (Common, Neutral) | 1 | Enchantment — Front |  | Your units on the Shore get +0/+1. |
+| 199 | Tideline Flats (Common, Neutral) | 2 | Domain — Shore |  | Units on this front get +0/+1. |
 
