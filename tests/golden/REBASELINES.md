@@ -1766,3 +1766,345 @@ Changed (25+ differences), first ones:
 - /after10/wk/listings/h: "a7a204a9" -> "32f4419e"
 - /after10/wk/listings/n: 216 -> 220
 - /after10/wk/meta/arch/h: "2e2f7529" -> "ea4498f5"
+
+## 2026-10-28 day0
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /screens/market: "1e7ac523" -> "ed875144"
+- /screens/xt:design0: "e34f6b92" -> "f3219cca"
+- /screens/xt:design1: "429962cb" -> "a291a429"
+- /screens/xt:design2: "5b904cdd" -> "39cbc1a9"
+- /screens/xt:design3: "4abb98e9" -> "033815bd"
+- /screens/xt:design4: "6649f85e" -> "b301138d"
+- /screens/xt:design5: "19bfef88" -> "d3a1d6b7"
+- /screens/xt:design6: "0530f221" -> "91187952"
+- /screens/xt:sealed: "d298d874" -> "9d45f21c"
+- /xt/listings/h: "974c9cc7" -> "19cc0d42"
+- /xt/packs/1/distinct: 245 -> 308
+- /xt/packs/1/first[1]: "X|1|48|N,X|1|31|N,X|1|78|N,X|1|125|N,X|1|71|N,X|1|72|N,X|1|24|N,X|1|59|N,X|1|115|N,X|1... -> "X|1|37|N,X|1|1|N,X|1|43|N,X|1|118|N,X|1|24|N,X|1|48|N,X|1|44|N,X|1|30|N,X|1|39|N,X|1|5...
+- /xt/packs/1/h: "798cd38f" -> "5381a97a"
+- /xt/packs/1/top[0][0]: "X|1|71|N" -> "X|1|75|N"
+- /xt/packs/1/top[0][1]: 532 -> 535
+
+## 2026-10-28 release
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/dp: "9390274a" -> "6444aa74"
+- /core/feed: "151dcc62" -> "fc01683f"
+- /core/lst: 1224 -> 1205
+- /core/news/h: "eb6d420a" -> "23ac2a3a"
+- /core/newsHead[1]: "NEW DECK: THUNDROP / TEMPESTRAL" -> "NEW DECK: CORALLUME / KOIRUNE"
+- /core/newsHead[2]: "ASTRYNX / AUROROTL WINS THE WILDKIN CHAMPIONSHIP" -> "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[4]: "NEW DECK: ACORNOX / CANOPANG" -> "NEW DECK: BRAMBLEBUCK / CACTUFT"
+- /core/nextLid: 2066 -> 2046
+- /core/nextTid: 2185 -> 1953
+- /core/nextXid: 11640 -> 11416
+- /core/npcs: "5234bbd2" -> "777019f7"
+- /core/rs: 815520681 -> -930548393
+- /core/sales: "ad652272" -> "2a69f539"
+- /core/salesN: 513 -> 520
+- /screens/home: "f4465759" -> "087955dd"
+
+## 2026-10-28 year1
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/dp: "ae3644f8" -> "ca301221"
+- /core/feed: "739c70d9" -> "81153c1d"
+- /core/lst: 1141 -> 1147
+- /core/news/h: "ff620b60" -> "a7177c0c"
+- /core/news/n: 58 -> 59
+- /core/newsHead[0]: "NEW DECK: SPIRAMEL / LANTERNOX" -> "NEW TECH: ASTRYNX / KOIRUNE (GUST)"
+- /core/newsHead[1]: "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE" -> "NEW DECK: HARBOR LEAGUES / ABYSSAL CHOIR MIDRANGE (RAMP)"
+- /core/newsHead[2]: "NEW DECK: DRILLBADGER / AEGISOPOD" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/newsHead[3]: "NEW TECH: ASTRYNX / KOIRUNE (TOOLS)" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /core/newsHead[4]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "NEW DECK: TIDEBORN / HARBOR LEAGUES AGGRO (AGGRO)"
+- /core/newsHead[5]: "BRONZAROO / AEGISOPOD WINS THE REGIONAL" -> "NEW DECK: ASTRYNX / KOIRUNE"
+- /core/nextLid: 15194 -> 15016
+- /core/nextTid: 4494 -> 3907
+- /core/nextXid: 11640 -> 11416
+- /core/npcs: "d8fda347" -> "db6dc864"
+
+## 2026-10-28 series
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/dp: "9bd74c63" -> "d68a96dc"
+- /core/feed: "0ff42e1d" -> "4cb5f6db"
+- /core/lst: 1176 -> 1168
+- /core/news/h: "2c0116fa" -> "713a8929"
+- /core/news/n: 187 -> 175
+- /core/newsHead[0]: "NEW BUILD-AROUND: DOWAGER QUEEN ISOLDE AGGRO" -> "NEW DECK: THORNWILD / CROWNLANDS CONTROL (FLEET)"
+- /core/newsHead[1]: "THORNWILD RUSH WINS THE TIDEMARK CHAMPIONSHIP" -> "NEW BUILD-AROUND: IRON CROWN OF VARR AGGRO II"
+- /core/newsHead[2]: "ASTRYNX / KOIRUNE (HEAL) WINS THE WILDKIN CHAMPIONSHIP" -> "TIDEBORN / HARBOR LEAGUES AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[3]: "NEW DECK: VELUNOX / VEILMORA" -> "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[4]: "ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP) WINS THE REGIONAL" -> "AZURE HALBERD MIDRANGE WINS THE REGIONAL"
+- /core/newsHead[5]: "ASTRYNX / KOIRUNE (HEAL) WINS THE REGIONAL" -> "VEILMORA (DISRUPTION) WINS THE REGIONAL"
+- /core/nextLid: 43687 -> 43558
+- /core/nextTid: 4494 -> 3907
+- /core/nextXid: 11640 -> 11416
+- /core/npcs: "720e8c71" -> "b4103504"
+
+## 2026-10-28 flows
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/cash: 5640.31 -> 5641.880000000001
+- /core/dp: "582e045a" -> "d2aafc54"
+- /core/feed: "04beb10d" -> "790cfbfd"
+- /core/fees: 70.17 -> 70.19
+- /core/lst: 1132 -> 1083
+- /core/netWorth: 773.88 -> 771.79
+- /core/news/h: "308a98c0" -> "b8a9fa2a"
+- /core/news/n: 40 -> 32
+- /core/newsHead[0]: "LEAGUE GALLEASS IS NOW BANNED" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+- /core/newsHead[1]: "NEW DECK: DRILLBADGER / AEGISOPOD" -> "NEW DECK: SMOLDERLYNX / PYRENOX"
+- /core/newsHead[2]: "NEW DECK: AUROROTL / KOIRUNE" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /core/newsHead[3]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /core/newsHead[4]: "NEW DECK: FABLEHORN / ODDOODLE (HEAL)" -> "NEW TECH: CANOPANG / CACTUFT (HEAL)"
+- /core/newsHead[5]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/nextLid: 6724 -> 6605
+
+## 2026-10-28 shared
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 45.68 -> 29.48
+- /afterCrack/subs: "88d3fb89" -> "b9f37923"
+- /coll/listed[0]: 0.3 -> 0
+- /coll/listed[1]: 0.75 -> 0
+- /coll/total[0]: 45.35000000000001 -> 36.45
+- /coll/total[1]: 109.39999999999998 -> 90.49999999999999
+- /core/cash: 4892.32 -> 4892.759999999999
+- /core/dp: "47ac850d" -> "626a6c46"
+- /core/feed: "bdd2225a" -> "ff149e36"
+- /core/fees: 420.03 -> 420.08
+- /core/lst: 1043 -> 1029
+- /core/netWorth: 45.68 -> 29.48
+- /core/news/h: "b107114c" -> "ce423944"
+- /core/news/n: 23 -> 25
+- /core/newsHead[0]: "NEW DECK: HARBOR LEAGUES / TIDEBORN AGGRO (GO WIDE)" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+
+## 2026-10-28 save:ban
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "2f45165f" -> "e113c171"
+- /after30/core/feed: "8a48319d" -> "83891781"
+- /after30/core/lst: 1171 -> 1151
+- /after30/core/news/h: "158af691" -> "8dcf4dde"
+- /after30/core/news/n: 40 -> 41
+- /after30/core/newsHead[1]: "CROWN BASTION WINS THE REGIONAL" -> "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)"
+- /after30/core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "GLACURRENT / AUROROTL WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after30/core/newsHead[5]: "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after30/core/nextLid: 6189 -> 6181
+- /after30/core/npcs: "5a7ce398" -> "cab7be0d"
+- /after30/core/rs: -303361645 -> -644881824
+- /after30/core/sales: "f569b9d3" -> "20044799"
+- /after30/core/salesN: 574 -> 580
+
+## 2026-10-28 save:busy
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "8d3203e2" -> "0c0a0813"
+- /after30/core/feed: "26e25b08" -> "31a04a35"
+- /after30/core/lst: 1117 -> 1131
+- /after30/core/netWorth: 259.34 -> 263.88
+- /after30/core/news/h: "b1c34c75" -> "ca9eabb2"
+- /after30/core/news/n: 24 -> 25
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[1]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "CACTUFT / CANOPANG WINS THE REGIONAL" -> "NEW DECK: MOTHMUR / POMPYRE"
+- /after30/core/newsHead[4]: "GOAL: FIRST SALE" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /after30/core/newsHead[5]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "GOAL: FIRST SALE"
+- /after30/core/npcs: "d098285c" -> "2761f3d7"
+- /after30/core/nw: "7e4a83b1" -> "cd4a23f4"
+- /after30/core/rs: -89818897 -> -1752290019
+- /after30/core/sales: "85c85c86" -> "128ef692"
+
+## 2026-10-28 save:day1
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "8c1c2b1e" -> "2022ed96"
+- /after30/core/feed: "14947115" -> "dad8ac66"
+- /after30/core/lst: 1105 -> 1123
+- /after30/core/news/h: "e3fc17e1" -> "a23851ae"
+- /after30/core/newsHead[0]: "NEW DECK: PYRENOX / COALOO" -> "NEW TECH: SPIRAMEL / FABLEHORN (TURBO)"
+- /after30/core/newsHead[2]: "NEW DECK: SPIRAMEL / PUFFLUFF" -> "NEW DECK: FORTISAUR / TUMBEAR"
+- /after30/core/newsHead[3]: "NEW TECH: SPIRAMEL / FABLEHORN (TURBO)" -> "NEW DECK: SMOLDERLYNX / PYRENOX"
+- /after30/core/newsHead[4]: "BRAMBLEBUCK / CANOPANG WINS THE WILDKIN CHAMPIONSHIP" -> "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 2384 -> 2423
+- /after30/core/nextTid: 1751 -> 2627
+- /after30/core/nextXid: 5856 -> 5096
+- /after30/core/npcs: "c53a728b" -> "99027c3b"
+- /after30/core/rs: 1235327022 -> -1704466655
+- /after30/core/sales: "2d949419" -> "ae164e2b"
+- /after30/core/salesN: 323 -> 328
+
+## 2026-10-28 save:legacy-wk-busy
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "e371e356" -> "15fb9d23"
+- /after30/core/feed: "172cce7a" -> "e41f25cd"
+- /after30/core/lst: 1211 -> 1212
+- /after30/core/netWorth: 38.45 -> 38.68
+- /after30/core/news/h: "1b6692d9" -> "0cdcfc73"
+- /after30/core/news/n: 17 -> 16
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "NEW DECK: COALOO / SMOLDERLYNX"
+- /after30/core/newsHead[1]: "NEW TECH: ASTRYNX / AUROROTL (DISRUPTION)" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL" -> "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "CANOPANG / CACTUFT WINS THE REGIONAL" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[4]: "TENTH TIDE IS OUT TODAY" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after30/core/newsHead[5]: "ROTATION: THE OLD STANDARD ENDS" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/nextLid: 2142 -> 2096
+- /after30/core/nextXid: 12414 -> 12293
+- /after30/core/npcs: "0d282ca8" -> "12eb07a3"
+
+## 2026-10-28 save:legacy-wk-day1
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "bd885589" -> "a717efd5"
+- /after30/core/feed: "af899e6b" -> "63b49465"
+- /after30/core/lst: 1181 -> 1173
+- /after30/core/news/h: "c3d486d5" -> "93901bf9"
+- /after30/core/news/n: 13 -> 9
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[1]: "NEW DECK: ASTRYNX / KOIRUNE (TOOLS)" -> "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[2]: "TENTH TIDE IS OUT TODAY" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/newsHead[3]: "NEW TECH: KOIRUNE / FLAPOD (GUST)" -> "FIRST BOND IS OUT TODAY"
+- /after30/core/newsHead[4]: "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after30/core/newsHead[5]: "TENTH TIDE: MORE CARDS REVEALED" -> "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED"
+- /after30/core/nextLid: 2140 -> 2082
+- /after30/core/nextTid: 1790 -> 1810
+- /after30/core/nextXid: 12089 -> 12471
+- /after30/core/npcs: "90d8fa66" -> "fb02d51a"
+
+## 2026-10-28 save:legacy-wk-released
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "2674f659" -> "6fb1722c"
+- /after30/core/feed: "e95f7f60" -> "1ec7d261"
+- /after30/core/lst: 1169 -> 1199
+- /after30/core/news/h: "7c085f34" -> "a0fb4518"
+- /after30/core/news/n: 16 -> 15
+- /after30/core/newsHead[0]: "NEW TECH: CACTUFT / CANOPANG (TOOLS)" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after30/core/newsHead[1]: "NEW DECK: ASHHOPPER / PYRENOX" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "ABYSSAL DEPTHS WINS THE REGIONAL" -> "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL"
+- /after30/core/newsHead[3]: "VEILMORA / MOTHMUR WINS THE REGIONAL" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+- /after30/core/newsHead[4]: "NEW DECK: PYRENOX / ASHHOPPER" -> "NEW DECK: ASTRYNX / COMETRAIL"
+- /after30/core/newsHead[5]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "NEW DECK: DRILLBADGER / FERRADON"
+- /after30/core/nextLid: 2369 -> 2358
+- /after30/core/npcs: "b85fd583" -> "6c07051d"
+- /after30/core/rs: 646943294 -> -3375773
+- /after30/core/sales: "7a3b154e" -> "02b0de05"
+
+## 2026-10-28 save:legacy-wk-year
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "1e942673" -> "1e433a66"
+- /after30/core/feed: "abb4b4e4" -> "50316ce3"
+- /after30/core/lst: 1199 -> 1221
+- /after30/core/news/h: "5381776b" -> "e8d15456"
+- /after30/core/news/n: 27 -> 26
+- /after30/core/newsHead[0]: "NEW DECK: FREE FLEETS / ABYSSAL CHOIR AGGRO (FLEET)" -> "GRANITE COLOSSUS IS NOW BANNED"
+- /after30/core/newsHead[1]: "GRANITE COLOSSUS IS NOW BANNED" -> "NEW BUILD-AROUND: TIDE-PRIESTESS SAELA AGGRO"
+- /after30/core/newsHead[2]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "BAN ANNOUNCED: GRANITE COLOSSUS"
+- /after30/core/newsHead[3]: "BAN ANNOUNCED: GRANITE COLOSSUS" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "ABYSSAL DEPTHS WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/newsHead[5]: "SMOLDERLYNX / PYRENOX WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/nextLid: 4301 -> 4295
+- /after30/core/npcs: "0beb6c77" -> "1c8b94a2"
+- /after30/core/rs: -1937685006 -> -496427969
+- /after30/core/sales: "48b7a3be" -> "a213203b"
+
+## 2026-10-28 save:released
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after30/core/dp: "a98b7976" -> "78d4fd09"
+- /after30/core/feed: "0eced2c3" -> "a31acd8d"
+- /after30/core/lst: 1114 -> 1122
+- /after30/core/news/h: "2e1d7016" -> "fc03996f"
+- /after30/core/newsHead[0]: "THORNWILD RUSH WINS THE REGIONAL" -> "NEW DECK: FABLEHORN / SPIRAMEL"
+- /after30/core/newsHead[1]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "NEW TECH: KOIRUNE / FLAPOD (DISRUPTION)" -> "BRAMBLEBUCK / CANOPANG WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /after30/core/nextLid: 2901 -> 2932
+- /after30/core/npcs: "a8e95be1" -> "9aee5e39"
+- /after30/core/rs: 122576155 -> -179561139
+- /after30/core/sales: "e7ae347c" -> "7a1d30f4"
+- /after30/core/salesN: 414 -> 408
+- /after30/wk/listings/h: "7dada9fe" -> "72d748cd"
+- /after30/wk/listings/n: 182 -> 191
+
+## 2026-10-28 open:ban
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "85b1f17b" -> "eee1b876"
+- /after10/core/feed: "116d55be" -> "b8ba667e"
+- /after10/core/lst: 1079 -> 1093
+- /after10/core/news/h: "c2dfef0e" -> "3115bb29"
+- /after10/core/news/n: 39 -> 40
+- /after10/core/newsHead[0]: "CROWN BASTION WINS THE REGIONAL" -> "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)"
+- /after10/core/newsHead[1]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL"
+- /after10/core/newsHead[2]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "GLACURRENT / AUROROTL WINS THE REGIONAL"
+- /after10/core/newsHead[3]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after10/core/newsHead[4]: "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after10/core/newsHead[5]: "DUSKFALL IS OUT TODAY" -> "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP"
+- /after10/core/nextLid: 5452 -> 5472
+- /after10/core/npcs: "1c8112d3" -> "20aa1c64"
+- /after10/core/rs: 2068815059 -> -1165211585
+- /after10/core/sales: "d4330ced" -> "225a104c"
+
+## 2026-10-28 open:busy
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "07b1a085" -> "ed6eaea7"
+- /after10/core/feed: "c8776785" -> "0157d296"
+- /after10/core/lst: 1030 -> 1031
+- /after10/core/netWorth: 267.61 -> 275.22
+- /after10/core/news/h: "f063f614" -> "254da29f"
+- /after10/core/news/n: 20 -> 21
+- /after10/core/newsHead[0]: "GOAL: FIRST SALE" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /after10/core/newsHead[1]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "GOAL: FIRST SALE"
+- /after10/core/newsHead[2]: "NEW DECK: CLAMPUP / FERRADON" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after10/core/newsHead[3]: "GOAL: GEM MINT" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after10/core/newsHead[4]: "THORNWILD RUSH WINS THE REGIONAL" -> "GOAL: GEM MINT"
+- /after10/core/newsHead[5]: "KOIRUNE / FLAPOD WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after10/core/nextLid: 2079 -> 2088
+- /after10/core/npcs: "db8eab20" -> "750f48ed"
+- /after10/core/nw: "1cbda17e" -> "fef8b408"
+
+## 2026-10-28 open:legacy-wk-day1
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "0d6ec8fd" -> "ec663a23"
+- /after10/core/feed: "072d90e5" -> "ad7d7a3f"
+- /after10/core/lst: 1013 -> 1025
+- /after10/core/news/h: "a869a210" -> "c8e25f4f"
+- /after10/core/news/n: 8 -> 7
+- /after10/core/newsHead[1]: "NEW TECH: VEILMORA / MOTHMUR (TURBO)" -> "FIRST BOND IS OUT TODAY"
+- /after10/core/newsHead[2]: "FIRST BOND IS OUT TODAY" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after10/core/newsHead[3]: "ROTATION: THE OLD STANDARD ENDS" -> "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED"
+- /after10/core/newsHead[4]: "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED" -> "FIRST BOND: MORE CARDS REVEALED"
+- /after10/core/newsHead[5]: "FIRST BOND: MORE CARDS REVEALED" -> "FIRST BOND: THE FIRST WILDKIN SET IS ANNOUNCED"
+- /after10/core/nextLid: 1450 -> 1440
+- /after10/core/nextTid: 1790 -> 1810
+- /after10/core/npcs: "d7b1f7bb" -> "608149c6"
+- /after10/core/rs: 1901972047 -> 691334807
+- /after10/core/sales: "10605f46" -> "813a6d32"
+
+## 2026-10-28 open:legacy-wk-year
+Reason: Tidemark treatments (prismatic, gold stamp, serial-numbered) add variants and pack draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "c4c1241e" -> "cb285313"
+- /after10/core/feed: "07dbf85a" -> "f5a85bb7"
+- /after10/core/lst: 1155 -> 1154
+- /after10/core/news/h: "09639fd9" -> "495672be"
+- /after10/core/newsHead[0]: "ABYSSAL DEPTHS WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "SMOLDERLYNX / PYRENOX WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after10/core/nextLid: 3805 -> 3810
+- /after10/core/npcs: "f08ea316" -> "b9a09959"
+- /after10/core/rs: -1834083424 -> 256577974
+- /after10/core/sales: "2a04204f" -> "8986885b"
+- /after10/core/salesN: 386 -> 391
+- /after10/wk/listings/h: "32f4419e" -> "b981b232"
+- /after10/wk/listings/n: 220 -> 219
+- /after10/wk/meta/arch/h: "ea4498f5" -> "0d385545"
+- /after10/wk/meta/ev/h: "ffa75a53" -> "d1c5e516"

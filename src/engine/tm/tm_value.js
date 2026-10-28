@@ -1,7 +1,8 @@
 // ===================== XTG: COPIES, VALUE AND THE MARKET =====================
 const XT_MSRP={P:4.99,B:144};
 // base prices (raw, near mint) before fandom, set and play: provisional, tuned with tools/tidemark_econ.py
-const XT_RB={'common|N':0.07,'common|F':0.45,'unc|N':0.2,'unc|F':1.0,'rare|N':0.75,'rare|F':2.6,'leg|N':3.2,'leg|F':9,'alt|A':45};
+const XT_RB={'common|N':0.07,'common|F':0.45,'unc|N':0.2,'unc|F':1.0,'rare|N':0.75,'rare|F':2.6,'leg|N':3.2,'leg|F':9,'alt|A':45,
+  'common|Z':1.2,'unc|Z':2.4,'rare|Z':6.5,'leg|Z':22, 'rare|G':8,'leg|G':28, 'leg|S':120};   // treatments: prismatic about 2.5 times the foil, gold stamp about 10 times a regular Rare, serial-numbered about 35 times a regular Legendary
 const XT_TUNE={fanLeg:1.4, fanRare:0.8};   // how hard collector fandom (decided, not canon) bends prices
 const XT_PB={common:1.2,unc:2.2,rare:3.6,leg:7,alt:9};   // what a card is worth in play at full use
 const XT_GS={common:0.55,unc:0.7,rare:1,leg:1.4,alt:1.7};
@@ -25,7 +26,7 @@ function xtFairRaw(key){
     const fan=Math.pow(0.35+c.fan, xtIsPrem(c)||c.rar==='leg'? XT_TUNE.fanLeg : c.rar==='rare'? XT_TUNE.fanRare : 0); const coll=base*c.ap*fan*xtSetPrestige(d.set)*nov*oop*age*rsv;
     const st=xtLegalState(c.cid), u=Math.min(1,(G.xtg.usage[c.cid]||0)/3), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.xtg.hy[c.cid]||0;
     const eter=st==='rot'? 0.1*c.pw*c.pw : 0;   // Eternal demand, from the card's rating alone (the engine only plays the Tenth Tide format)
-    const play=XT_PB[c.rar]*(Math.pow(u,0.85)*f+eter)*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(xtIsPrem(c)?0.6:1)*(d.v==='F'?1.15:1)*(1-0.1*(xtPrintCount(c.cid)-1));
+    const play=XT_PB[c.rar]*(Math.pow(u,0.85)*f+eter)*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(xtIsPrem(c)?0.6:1)*(xtFoilish(d.v)?1.15:1)*(1-0.1*(xtPrintCount(c.cid)-1));
     v=Math.max(0.03,(coll+play)*XT_K*priceJitter(key)*(1+Math.min(0.6,G.dp[key]||0))); if (G.xtg.ecv===2) v*=xtV2Mult(d,key); }
   XTFV.set(ck,v); if (XTFV.size>5000) XTFV.clear(); return v;
 }
@@ -33,7 +34,7 @@ function xtFairRaw(key){
 // Pack (15 cards, a classic booster): 10 commons, 3 uncommons, 1 rare slot (a Legendary about 1 pack in 8; an anniversary alternate art about 1 in 60 in Tenth Tide),
 // and a 15th card that is a basic (never tracked, counted as bulk) or, about 1 pack in 4, a foil of any rarity. A box is 36 packs. A historical set is 200 cards but
 // only its named cards (the checklist's) are tracked: a slot that lands on an unnamed card is bulk, counted in the pack and worth about two cents (xtRollPack().bulk).
-const TM_ODDS={legR:0.125, alt:1/60, foil:1/4, fr:{C:0.6,U:0.28,R:0.1,L:0.02}};
+const TM_ODDS={legR:0.125, alt:1/60, foil:1/4, fr:{C:0.6,U:0.28,R:0.1,L:0.02}, prism:1/36, gold:1/150, serial:1/2500};   // prism: the 15th card is a prismatic foil (about 1 per box); gold: the rare slot is a gold-stamped Rare or Legendary; serial: it is a serial-numbered Legendary
 const XT_PACK=15, XT_BOX=36;   // cards in a pack, packs in a box
 function xtPools(set){ const m=G.xtg._pl||(G.xtg._pl={}); if (m[set]) return m[set]; const cs=xtSetCards(set); const def=xtSetDef(set); const f=r=>cs.filter(c=>c.rar===r);
   const P={c:f('common'),u:f('unc'),r:f('rare'),l:f('leg'),alt:f('alt')}; P.q={C:1,U:1,R:1,L:1};   // every slot is a real catalogued card: no bulk, no invisible filler
@@ -54,6 +55,12 @@ function xtRollPack(set, r){
   if (r()<TM_ODDS.foil){ const x=r(), F=TM_ODDS.fr; const [a,q]= x<F.C? [P.c,P.q.C] : x<F.C+F.U? [P.u,P.q.U] : x<F.C+F.U+F.R? [P.r,P.q.R] : [P.l,P.q.L]; pick(a,q,'F'); } else pick(P.c,1,'N');   // the 15th slot: a foil of any rarity, or one more common (a real card)
   for (let i=0;i<3;i++) pick(P.u,P.q.U,'N');
   const x=r(); if (P.alt.length && x<TM_ODDS.alt){ const c=P.alt[Math.floor(r()*P.alt.length)]; keys.push(xtKey(set,c.no,'A')); } else if (r()<TM_ODDS.legR) pick(P.l,P.q.L,'N'); else pick(P.r,P.q.R,'N');
+  // treatments (2026-10-28): the same cards with another finish, no new art
+  if (r()<TM_ODDS.prism){ const x2=r(), F=TM_ODDS.fr; const a= x2<F.C? P.c : x2<F.C+F.U? P.u : x2<F.C+F.U+F.R? P.r : P.l; let c; for (let i=0;i<6;i++){ c=a[Math.floor(r()*a.length)]; if (!taken.has(c.no)) break; } taken.add(c.no); keys[10]=xtKey(set,c.no,'Z'); }
+  const li=keys.length-1, ld=xtD(keys[li]);
+  if (ld.v==='N' && (ld.card.rar==='rare'||ld.card.rar==='leg')){
+    if (r()<TM_ODDS.serial){ const c=P.l[Math.floor(r()*P.l.length)]; if (c.rar==='leg') keys[li]=xtKey(set,c.no,'S'); }
+    else if (r()<TM_ODDS.gold) keys[li]=xtKey(set,ld.card.no,'G'); }
   return keys;
 }
 function xtPackEV(set){
@@ -62,7 +69,12 @@ function xtPackEV(set){
   const Vc=val(P.c,'N',P.q.C), Vu=val(P.u,'N',P.q.U), Vr=val(P.r,'N',P.q.R), Vl=val(P.l,'N',P.q.L), Va=P.alt.length? P.alt.reduce((s,x)=>s+xtFairRaw(xtKey(set,x.no,'A')),0)/P.alt.length : 0;
   const Vf=O.fr.C*val(P.c,'F',P.q.C)+O.fr.U*val(P.u,'F',P.q.U)+O.fr.R*val(P.r,'F',P.q.R)+O.fr.L*val(P.l,'F',P.q.L);
   const alt=P.alt.length? O.alt : 0; const slot=alt*Va+(1-alt)*(O.legR*Vl+(1-O.legR)*Vr);
-  return c[k]=10*Vc+3*Vu+slot+O.foil*Vf+(1-O.foil)*Vc;
+  const base=10*Vc+3*Vu+slot+O.foil*Vf+(1-O.foil)*Vc;
+  // what the treatments add: a prismatic foil instead of the 15th card, a gold stamp or a serial-numbered Legendary instead of the rare slot
+  const F=O.fr, Vz=F.C*val(P.c,'Z',1)+F.U*val(P.u,'Z',1)+F.R*val(P.r,'Z',1)+F.L*val(P.l,'Z',1), s15=O.foil*Vf+(1-O.foil)*Vc;
+  const Vg=P.r.length||P.l.length? (1-O.legR)*val(P.r,'G',1)+O.legR*val(P.l,'G',1) : 0, Vs=val(P.l,'S',1), rs=O.legR*Vl+(1-O.legR)*Vr;
+  const add=O.prism*(Vz-s15)+(1-O.alt)*(O.gold*(Vg-rs)+O.serial*(Vs-rs));
+  return c[k]=base+(add>0? add : 0);
 }
 function xtSealedFair(d){
   // a world with the ten-year market (economy v2): an old pack is worth what is in it plus a collector premium that grows with the years it has been out of print
@@ -115,7 +127,7 @@ function xtInterest(n, item){
   if (!isXtNPC(n)) return n.xt? (d.sealed?0.5:0.3) : 0.03;
   if (d.sealed) return {xsl:1.25,xfl:0.95,xtl:0.7,xpl:0.55,xtm:0.5}[n.ty]||0.2;
   const card=d.card, u=(G.xtg.usage[card.cid]||0)/4, st=xtLegalState(card.cid); let f;
-  switch(n.ty){ case 'xpl': f= st==='std'&&u>0.18? 1.1+u*0.6 : st==='std'? 0.45 : 0.18; break; case 'xtl': f=(xtIsPrem(card)||d.v==='F'||card.rar==='leg')? 1.2+0.2*card.ap+0.4*card.fan : 0.3; break; case 'xtm': f= n.setN===d.set? 1.3 : 0.25; break; case 'xfl': f=0.84; break; case 'xsl': f=0.12; break; case 'xgr': f= c.g>0? 1.3 : 0.12; break; default: f=0.5; }
+  switch(n.ty){ case 'xpl': f= st==='std'&&u>0.18? 1.1+u*0.6 : st==='std'? 0.45 : 0.18; break; case 'xtl': f=(xtIsPrem(card)||xtFoilish(d.v)||card.rar==='leg')? 1.2+0.2*card.ap+0.4*card.fan : 0.3; break; case 'xtm': f= n.setN===d.set? 1.3 : 0.25; break; case 'xfl': f=0.84; break; case 'xsl': f=0.12; break; case 'xgr': f= c.g>0? 1.3 : 0.12; break; default: f=0.5; }
   if (n.ty!=='xgr' && c.g>0) f*=0.9; return f;
 }
 // the world on day one: ten years of collectors. Copies of every named card exist in proportion to its rarity and age (older prints survive in

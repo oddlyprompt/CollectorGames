@@ -33,7 +33,7 @@ function xtEconCounts(){ const m={}; for (const id in G.xtc){ const c=G.xtc[id];
 function xtEconRef(keysOnly){   // remember how many copies there were at the start (or when a set became vintage); prices measure scarcity against it
   const T=G.xtg, m=xtEconCounts(); T.ref=T.ref||{}; T.sm=T.sm||{};
   for (let s=1;s<TM_TT;s++){ const def=xtSetDef(s); if (!def||def.rel>G.day) continue; if ((G.day-def.rel)/365<XT_E2.vintageYears) continue;
-    for (const k of xtAllKeys(s).concat([xtKey(s,0,'P'),xtKey(s,0,'B')])) if (T.ref[k]==null){ T.ref[k]=m[k]||0; T.sm[k]=m[k]||0; } }
+    for (const k of xtAllKeysT(s).concat([xtKey(s,0,'P'),xtKey(s,0,'B')])) if (T.ref[k]==null){ T.ref[k]=m[k]||0; T.sm[k]=m[k]||0; } }
 }
 function xtEconSmooth(){ const T=G.xtg; if (!T.ref) return; const m=xtEconCounts(), a=1/XT_E2.smooth; for (const k in T.ref){ const live=m[k]||0; T.sm[k]+= (live-T.sm[k])*a; } }
 // the price factor of a vintage print: a premium that grows with age and rarity (the NM premium) times how scarce it has become, bounded
@@ -61,7 +61,7 @@ function xtV2Replay(){
       const nT=Math.ceil(T1-1e-9); const Q0=Math.round(XT_E2.q0*(XT_E2.q1+(XT_E2.q2-XT_E2.q1)*(s-1)/29)); const bst=xtBoosterSet(s);
       // the same number of copies of each card as before whatever the product: a booster set opens packs, any other set enters the world as boxed sets (one of each card)
       const Q=bst? Math.max(1,Math.round(Q0*def.named/def.total)) : Math.max(1,Math.round(Q0*XT_PACK*1.5/def.total)), Qs=bst? Math.round(Q*XT_E2.sealedMul) : 0;
-      const cards=[]; const addPack=(born,cls)=>{ const keys=xtRollUnit(s,R); for (const k of keys){ const d=xtD(k); cards.push({k, born, cls: cls||pickClass(born), c:condFresh(()=>R(),0.55), g:0, rar:d.rar, foil:d.v==='F', alive:true}); } };
+      const cards=[]; const addPack=(born,cls)=>{ const keys=xtRollUnit(s,R); for (const k of keys){ const d=xtD(k); cards.push({k, born, cls: cls||pickClass(born), c:condFresh(()=>R(),0.55), g:0, rar:d.rar, foil:xtFoilish(d.v), alive:true}); } };
       const pickClass=(born)=>{ const m=XT_E2.mix(y0+Math.floor(born)); const x=R(); return x<m.collector? 'collector' : x<m.collector+m.player? 'player' : 'casual'; };
       for (let i=0;i<Q;i++) addPack(0);
       let B=Math.round(Qs*XT_E2.boxFrac/36+ (R()-0.5)), P=Math.round(Qs*(1-XT_E2.boxFrac)+ (R()-0.5)*4); B=Math.max(0,B); P=Math.max(0,P); if (!bst){ B=0; P=0; } else if (s===1){ B=Math.max(B,1); P=Math.max(P,6); }   // only booster sets have sealed product; the foundational one is always findable
@@ -122,7 +122,7 @@ function xtAgeSlice(t){
     const n=NPC(c.o); if (!n) continue; const cls=xtHolderOf(n);
     if (d.sealed){ const f=d.v==='B'; const po=(f? (n.ty==='xsl'?0.0003:0.0006) : (n.ty==='xsl'?0.0015:0.004)); if (R()<po){ xtNpcOpen(c,n,d,t); } else if (R()<(f?0.012:0.02)*mo) { delete G.xtc[id]; L.lost++; } continue; }
     if (c.g>0){ continue; }   // a slab does not wear
-    const h=XT_E2.hold[cls], rl=h.lost*XT_E2.rarLost[d.rar]*(d.v==='F'?0.8:1), rw=h.wear*XT_E2.rarWear[d.rar]; const wearMul= (cls==='player'&&xtLegalState(d.cid)==='std')? 1.5 : 1;
+    const h=XT_E2.hold[cls], rl=h.lost*XT_E2.rarLost[d.rar]*(xtFoilish(d.v)?0.8:1), rw=h.wear*XT_E2.rarWear[d.rar]; const wearMul= (cls==='player'&&xtLegalState(d.cid)==='std')? 1.5 : 1;
     if (R()<1-Math.pow(1-rl,mo)){ delete G.xtc[id]; L.lost++; xTfvClear(c.k); continue; }
     if (R()<1-Math.pow(1-rw*wearMul,mo)){ xtStepDown(c.c,R); xTfvClear(c.k); }
   }
@@ -213,7 +213,7 @@ ACT.xtrebuild=(a,el)=>{ if (!armed(el)) return; xtRebuildWithBackup().then(e=>{ 
 
 // do collectors let go of a copy? (base is the first economy's answer; v2 adds who collects what)
 function xtKeep(n,c,v,base){
-  const d=xtD(c.k); const prem=!d.sealed&&(d.card.rar==='leg'||d.card.res||d.v==='F'||d.rar==='alt');
+  const d=xtD(c.k); const prem=!d.sealed&&(d.card.rar==='leg'||d.card.res||xtFoilish(d.v)||d.rar==='alt');
   // ordinary cards (commons and uncommons) are what collectors trade and release: they do not sit in binders for good
   if (!d.sealed && d.v==='N' && (d.rar==='common'||d.rar==='unc')) return n.ty==='xtm'&&n.setN===d.set? 0.72 : n.ty==='xfl'? 0.05 : Math.min(base,0.45);
   switch(n.ty){

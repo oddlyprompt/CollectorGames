@@ -11,7 +11,12 @@ const XT_CV=1;                                            // content version in 
 const TM_TT=TM_SETS.length;                               // the anniversary set is the last one
 const XT_RAROR={common:0,unc:1,rare:2,leg:3,alt:4};
 const XT_RARN={common:'Common',unc:'Uncommon',rare:'Rare',leg:'Legendary',alt:'Anniversary alternate art'};
-const XT_VARN={N:'Regular',F:'Foil',A:'Alternate art',P:'Booster pack',B:'Booster box'};
+const XT_VARN={N:'Regular',F:'Foil',A:'Alternate art',Z:'Prismatic foil',G:'Gold stamp',S:'Serial-numbered',P:'Booster pack',B:'Booster box'};
+// treatments (2026-10-28, owner: "more chase cards without more art"): the same card with another finish, pulled from packs at its own odds. Z prismatic foil: any card;
+// G gold stamp: Rares and Legendaries; S serial-numbered: Legendaries (a copy's number, 1 to 100, comes from its id: xtSerial)
+const XT_SUF={F:' (foil)',Z:' (prismatic)',G:' (gold stamp)',S:' (serial-numbered)'};
+const xtFoilish=v=>v==='F'||v==='Z'||v==='G'||v==='S';
+const xtSerial=cp=>1+(hsh('sn'+cp.id)%100);
 const XT_KINDN={unit:'Unit',spell:'Spell',relic:'Relic',vessel:'Vessel',stronghold:'Stronghold',domain:'Domain',enchantment:'Enchantment'};
 const TM_FAC={CR:{n:'Crownlands',c:'#2f5fae',d:'#1b3a72',l:'#8fb0e6',w:0.50},TW:{n:'Thornwild',c:'#3d7a3a',d:'#234a22',l:'#9ccc8f',w:0.55},IR:{n:'Iron Reach',c:'#a2452c',d:'#62281a',l:'#e5a189',w:0.46},
   TB:{n:'Tideborn',c:'#1f8a8a',d:'#0f5050',l:'#86d3cf',w:0.52},FF:{n:'Free Fleets',c:'#c49a2e',d:'#7a5c14',l:'#f0d58a',w:0.66},AC:{n:'Abyssal Choir',c:'#6a3f9c',d:'#3d2160',l:'#bf9be6',w:0.62},
@@ -49,17 +54,19 @@ function xtBuildSet(n){
   return cards;
 }
 function xtSetCards(n){ const k=G.seed+':'+n; let c=XT_CACHE.get(k); if (c) return c; if (!xtSetDef(n)) return []; c=xtBuildSet(n); XT_CACHE.set(k,c); return c; }
-function xtVariants(c){ return c.rar==='alt'? ['A'] : ['N','F']; }
+function xtVariants(c){ return c.rar==='alt'? ['A'] : ['N','F']; }   // what completing a set means
+function xtVariantsAll(c){ if (c.rar==='alt') return ['A']; const v=['N','F','Z']; if (c.rar==='rare'||c.rar==='leg') v.push('G'); if (c.rar==='leg') v.push('S'); return v; }
 // ---------- keys and designs ----------
 const xtKey=(set,no,v)=>'X|'+set+'|'+no+'|'+v;
 function xtD(key){
   let d=XTD.get(key); if (d) return d;
   const [,s,no,v]=key.split('|'); const set=+s, num=+no; const def=xtSetDef(set); if (!def) throw new Error('no such set '+key);
   if (num===0){ d={key,set,no:0,v,sealed:true,def,card:null,title:def.name+' '+(v==='P'?'booster pack':'booster box'),rar:'sealed',cid:0}; }
-  else { const card=xtSetCards(set)[num-1]; if (!card || card.no!==num) throw new Error('no such card '+key); d={key,set,no:num,v,sealed:false,def,card,title:card.name+(v==='F'?' (foil)':''),rar:card.rar,cid:card.cid,kind:card.kind,el:card.el||null}; }
+  else { const card=xtSetCards(set)[num-1]; if (!card || card.no!==num) throw new Error('no such card '+key); d={key,set,no:num,v,sealed:false,def,card,title:card.name+(XT_SUF[v]||''),rar:card.rar,cid:card.cid,kind:card.kind,el:card.el||null}; }
   XTD.set(key,d); return d;
 }
 function xtAllKeys(set){ const out=[]; for (const c of xtSetCards(set)) for (const v of xtVariants(c)) out.push(xtKey(set,c.no,v)); return out; }
+function xtAllKeysT(set){ const out=[]; for (const c of xtSetCards(set)) for (const v of xtVariantsAll(c)) out.push(xtKey(set,c.no,v)); return out; }
 function xtPrintsOf(cid){ const out=[]; for (let s=1;s<=TM_TT;s++){ if (!xtSetDef(s) || xtSetDef(s).rel>G.day+400) continue; for (const c of xtSetCards(s)) if (c.cid===cid) out.push(c); } return out; }
 function xtReleasedSets(t){ const out=[]; for (let n=1;n<=TM_TT;n++){ const d=xtSetDef(n); if (d && d.rel<=t) out.push(n); else break; } return out; }
 // the next set the player knows about: Tenth Tide, announced on the first day

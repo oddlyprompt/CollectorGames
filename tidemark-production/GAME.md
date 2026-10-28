@@ -51,3 +51,7 @@ the lists rebuilt after a ban. Numbers: see the `META` line printed by `tools/ti
 
 ## Economy v2 (2026-10-20)
 New worlds use the ten-year market described in `design/tidemark-economy-v2.md` and CLAUDE.md (vintage condition scarcity, a census-style replay of each set's history, daily aging, finite seller-backed Saltmarket stock, estate sales and collection sales). Older saves keep the first economy and can rebuild from the Tidemark shop. Decided by Claude, not canon.
+
+
+### Treatments (2026-10-28; owner: "more chase cards without more art")
+Three extra versions of a Tidemark card, **decided, not canon**, no new art: **Prismatic foil** `Z` (any card; replaces the 15th card in about 1 pack in 36, about one per box), **Gold stamp** `G` (Rare or Legendary; the rare slot in about 1 pack in 150) and **Serial-numbered** `S` (Legendary; about 1 pack in 2,500; each copy is numbered 1 to 100 from its id, `xtSerial`, not stored). Alternate arts have none. Odds in `TM_ODDS` (`prism`, `gold`, `serial`), prices in `XT_RB` (`x|Z`, `rare|G`, `leg|G`, `leg|S`), key lists `xtVariantsAll` / `xtAllKeysT`; `xtVariants` stays the base (regular, foil) that completing a set means. `xtFoilish(v)` is true for F, Z, G, S. Look: stronger rainbow for Z, gold border and sheen for G, gold plus a SERIAL-NUMBERED band and number in the inspector for S (`tm_render.js`). Tenth Tide pack worth about $5.7 (was $5.5). Tested by `tidemarktest.py` (rates over 150,000 packs, no repeats, price order, serial range). Looks only checked in code and tests, not by eye on a phone.
