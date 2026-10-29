@@ -210,7 +210,7 @@ if (typeof module!=='undefined') module.exports={chooseMove,LEVELS};
 // The Broken Reach: Play Alpha (UI). Uses the headless resolver (BR_E) and AI (BR_AI) unchanged.  Everything here is separate from the
 // CollectorGames saves: the only storage used is localStorage key 'br_alpha_v1' (custom decks and settings).
 'use strict';
-const E=window.BR_E, AI=window.BR_AI, DATA=window.BR_DATA;
+const E=window.BR_E, AI=window.BR_AI, DATA=window.BR_DATA, BUILD='9bccc20';
 E.loadCards(DATA.cards);
 const UNITS=DATA.cards.filter(c=>c.type!=='planet'), UNIT_IDS=UNITS.map(c=>c.base_card_id);
 const PLAYABLE_PLANETS=['BR01-173','BR01-179','BR01-177'];
@@ -258,7 +258,7 @@ const root=()=>$('#br'); let scr='menu', SETUP=null;
 function show(name){ scr=name; if (name==='menu') menu(); else if (name==='setup') setup(); else if (name==='decks') decksScreen(); else if (name==='build') buildScreen(); else if (name==='match') matchScreen(); window.scrollTo(0,0); }
 function menu(){ root().innerHTML=`<div class="scr"><div class="title"><h1>The <b>Broken</b> Reach</h1><div class="tag">A tactical card battler across the collapsed Lattice</div><div class="alpha">Play Alpha · Set 01 · rules v0.2</div></div>
   <div class="menu"><button class="btn pri" data-act="play">Play a match</button><button class="btn" data-act="decks">Decks and cards</button><button class="btn" data-act="help">How to play</button><a class="btn" href="../" style="text-align:center;text-decoration:none;color:inherit">Back to Trading Card Collector</a></div>
-  <div class="note">Prototype build. All 172 unit cards and 8 planets are unlocked for testing, with placeholder illustrations. Nothing here touches your CollectorGames saves or collection; custom decks live in this browser only. Stats, abilities and the fairness rules are provisional.</div></div>`; }
+  <div class="note">Prototype build. All 172 unit cards and 8 planets are unlocked for testing, with placeholder illustrations. Nothing here touches your CollectorGames saves or collection; custom decks live in this browser only. Stats, abilities and the fairness rules are provisional.</div><div class="note" style="margin-top:8px">Build ${BUILD}. If a rule or button looks out of date, close the tab and reopen it (phones cache pages).</div></div>`; }
 function setup(){
   if (!SETUP) SETUP={}; if (!RULESETS.some(r=>r.id===ST.sel.rule)) ST.sel.rule=RULESETS[0].id; const ds=allDecks(); if (!ds.some(d=>d.id===ST.sel.deck)) ST.sel.deck=ds[0].id;
   const dopts=ds.map(d=>{ const bad=deckValid(d.cards), s=deckStats(d.cards); return `<button class="opt ${d.id===ST.sel.deck?'on':''}" data-act="seldeck" data-id="${d.id}" ${bad?'disabled':''}><b>${esc(d.name)} <em>${d.preset?'PRESET':'CUSTOM'}</em></b><span>${esc(bad||d.blurb)}</span><span class="mute">Avg Attack ${s.atk.toFixed(1)} · Guard ${s.grd.toFixed(1)} · arrows ${s.arr.toFixed(1)}</span></button>`; }).join('');
@@ -319,7 +319,7 @@ function renderMatch(){
   const pl=real.planet?E.def(real.planet):null;
   $('#mtop').innerHTML=`<button class="btn sm" data-act="mmenu">‹ Menu</button><button class="btn sm" data-act="mrestart">Restart</button><div class="pchip">${pl?planetOrb(real.planet)+'<div><b>'+esc(pl.name.split(' — ')[0])+'</b><br><span class="dim">'+esc(pl.text)+'</span></div>':'<span class="dim">Open space · no planet effect</span>'}</div><div class="sp"></div><div class="seg" title="Animation speed">${[['1','1×'],['2','2×'],['0','Instant']].map(([k,n])=>`<button class="${ST.speed===k?'on':''}" data-act="speed" data-id="${k}">${n}</button>`).join('')}</div><button class="btn sm ${ST.expo?'on':''}" data-act="expo" title="Show how many open squares touch each card">Exposure</button><button class="btn sm" data-act="help">?</button>`;
   $('#mscore').innerHTML=`<div class="score"><div class="side you"><span class="n">${sc[0]}</span><span class="lbl">You<br>${esc(M.deckName)}</span></div><span class="turn ${real.over?'':real.cur===0?'you':'foe'}">${real.over?'Final':real.cur===0?'Your turn':'Opponent'} · ${Math.min(16,real.turn+(real.over?0:1))}/16</span><div class="side foe"><span class="n">${sc[1]}</span><span class="lbl">${LEVELS.find(l=>l[0]===M.level)[1]} AI<br>${esc(M.foeName)}</span></div></div>`;
-  const rr=real.rules||{}; const rtxt=['Attack must beat Guard (ties fail)',rr.noRecip?'no pointing-back bonus':'+1 Guard if they point back',rr.maxGen===0?'no combos':rr.maxGen!=null?'combos stop after '+rr.maxGen+' level'+(rr.maxGen>1?'s':''):'unlimited chains'].filter(Boolean).join(' · ');
+  const rr=real.rules||{}; const rtxt=['Build '+BUILD,'Attack must beat Guard (ties fail)',rr.noRecip?'no pointing-back bonus':'+1 Guard if they point back',rr.maxGen===0?'no combos':rr.maxGen!=null?'combos stop after '+rr.maxGen+' level'+(rr.maxGen>1?'s':''):'unlimited chains'].filter(Boolean).join(' · ');
   $('#mscore').innerHTML+=`<div class="small dim" style="text-align:center;margin:-4px 0 2px">${esc(rtxt)}</div>`;
   $('#mscore').innerHTML+=bonus?`<div class="small dim" style="text-align:center;margin:-4px 0 6px">First-move bonus: +${bonus} to ${real.first===0?'you':'the opponent'} at the end</div>`:'';
   $('#mfoe').innerHTML=`<div class="foehand">Opponent hand ${Array.from({length:real.hands[1].length},()=>'<div class="bcard back"></div>').join('')} · deck ${real.decks[1].length}</div>`;

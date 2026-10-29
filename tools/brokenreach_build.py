@@ -13,7 +13,8 @@ def build(dist_tcg):
     wrap=lambda src,name:f"const {name}=(()=>{{const module={{exports:{{}}}};{src}\n;return module.exports;}})();window.{name}={name};\n"
     eng=rd('tools','brokenreach','engine.js'); ai=rd('tools','brokenreach','ai.js').replace("const E=(typeof require!=='undefined')?require('./engine.js'):window.BR_E;","const E=window.BR_E;")
     js="window.BR_DATA="+json.dumps(data,separators=(',',':'))+";\n"+wrap(eng,'BR_E')+wrap(ai,'BR_AI')+rd('src','br','br.js')
-    css=rd('src','br','br.css'); ver=hashlib.sha1((js+css).encode()).hexdigest()[:10]
+    css=rd('src','br','br.css'); ver=hashlib.sha1((js+css).encode()).hexdigest()[:7]
+    js=js.replace('__BR_BUILD__',ver)
     open(out+'/br.js','w',encoding='utf-8').write(js); open(out+'/br.css','w',encoding='utf-8').write(css)
     open(out+'/index.html','w',encoding='utf-8').write(f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>The Broken Reach: Play Alpha</title><meta name="theme-color" content="#0d1014">
