@@ -304,7 +304,7 @@ let M=null;
 function newSeed(){ return (Math.random()*2147483647)|0; }
 function startMatch(cfg){
   const rs=RULESETS.find(r=>r.id===cfg.rule)||RULESETS[0], foeDecks=DATA.presets.filter(d=>d.id!==cfg.deckId); const foe=foeDecks[Math.floor(Math.random()*foeDecks.length)]||DATA.presets[0];
-  const seed=newSeed(); M={cfg,seed,rng:E.mulberry32(seed^0x5bd1e995),deckName:deckById(cfg.deckId).name,foeName:foe.name,level:cfg.level,rs,busy:false,sel:null,pend:null,hover:null,insp:null,speed:ST.speed,fx:{},hl:{},pops:{},chain:0,stat:{caps:0,best:0,gens:0},log:[],over:false,done:false,waiters:[],skip:false};
+  const seed=newSeed(); M={trail:[],cfg,seed,rng:E.mulberry32(seed^0x5bd1e995),deckName:deckById(cfg.deckId).name,foeName:foe.name,level:cfg.level,rs,busy:false,sel:null,pend:null,hover:null,insp:null,speed:ST.speed,fx:{},hl:{},pops:{},chain:0,stat:{caps:0,best:0,gens:0},log:[],over:false,done:false,waiters:[],skip:false};
   M.first=cfg.first!=null?cfg.first:(Math.random()<0.5?0:1); M.planet=cfg.planet==='none'?null:cfg.planet;
   M.S=E.newMatch({deckA:deckById(cfg.deckId).cards,deckB:foe.cards,planet:M.planet,seed,first:M.first,rules:rs.rules}); M.disp=M.S; 
   show('match'); nextTurn();   // the engine deals the opening hands; the second player draws before their first turn
@@ -319,7 +319,7 @@ function renderMatch(){
   const pl=real.planet?E.def(real.planet):null;
   $('#mtop').innerHTML=`<button class="btn sm" data-act="mmenu">‹ Menu</button><button class="btn sm" data-act="mrestart">Restart</button><div class="pchip">${pl?planetOrb(real.planet)+'<div><b>'+esc(pl.name.split(' — ')[0])+'</b><br><span class="dim">'+esc(pl.text)+'</span></div>':'<span class="dim">Open space · no planet effect</span>'}</div><div class="sp"></div><div class="seg" title="Animation speed">${[['1','1×'],['2','2×'],['0','Instant']].map(([k,n])=>`<button class="${ST.speed===k?'on':''}" data-act="speed" data-id="${k}">${n}</button>`).join('')}</div><button class="btn sm ${ST.expo?'on':''}" data-act="expo" title="Show how many open squares touch each card">Exposure</button><button class="btn sm" data-act="help">?</button>`;
   $('#mscore').innerHTML=`<div class="score"><div class="side you"><span class="n">${sc[0]}</span><span class="lbl">You<br>${esc(M.deckName)}</span></div><span class="turn ${real.over?'':real.cur===0?'you':'foe'}">${real.over?'Final':real.cur===0?'Your turn':'Opponent'} · ${Math.min(16,real.turn+(real.over?0:1))}/16</span><div class="side foe"><span class="n">${sc[1]}</span><span class="lbl">${LEVELS.find(l=>l[0]===M.level)[1]} AI<br>${esc(M.foeName)}</span></div></div>`;
-  const rr=real.rules||{}; const rtxt=[rr.noRecip?'no pointing-back bonus':'',rr.maxGen===0?'no combos':rr.maxGen!=null?'combos stop after '+rr.maxGen+' level'+(rr.maxGen>1?'s':''):'unlimited chains'].filter(Boolean).join(' · ');
+  const rr=real.rules||{}; const rtxt=['Attack must beat Guard (ties fail)',rr.noRecip?'no pointing-back bonus':'+1 Guard if they point back',rr.maxGen===0?'no combos':rr.maxGen!=null?'combos stop after '+rr.maxGen+' level'+(rr.maxGen>1?'s':''):'unlimited chains'].filter(Boolean).join(' · ');
   $('#mscore').innerHTML+=`<div class="small dim" style="text-align:center;margin:-4px 0 2px">${esc(rtxt)}</div>`;
   $('#mscore').innerHTML+=bonus?`<div class="small dim" style="text-align:center;margin:-4px 0 6px">First-move bonus: +${bonus} to ${real.first===0?'you':'the opponent'} at the end</div>`:'';
   $('#mfoe').innerHTML=`<div class="foehand">Opponent hand ${Array.from({length:real.hands[1].length},()=>'<div class="bcard back"></div>').join('')} · deck ${real.decks[1].length}</div>`;
@@ -329,7 +329,7 @@ function renderMatch(){
     if (ST.expo&&u&&!M.anim){ let o=0; for (let d=0;d<8;d++){ const n=E.nbr(i,d); if (n>=0&&!S.cells[n]) o++; } inner+=`<span class="expo ${o>=3?'hi':''}">${o}</span>`; }
     if (M.pops[i]) inner+=M.pops[i]; else if (pv&&pv.tags&&pv.tags[i]) inner+=tagHtml(pv.tags[i]);
     cells+=`<button class="cell ${ok?'ok':''} ${isP?'pend':''} ${wf?'willflip '+(pv.caps[i]>1?'g2':''):''}" data-act="cell" data-i="${i}" ${u&&!M.busy?'':(ok?'':'disabled')} aria-label="${cellName(i)}">${inner}</button>`; }
-  $('#mboard').innerHTML=`<div class="board">${cells}</div>${M.chain>1?`<div class="chain">×${M.chain}<small>CAPTURES</small></div>`:''}`;
+  $('#mboard').innerHTML=`<div class="board">${cells}</div>${M.chain>1?`<div class="chain">×${M.chain}<small>CAPTURES</small></div>`:''}`; drawTrail();
   // hand
   const hand=real.hands[0]; $('#mhand').innerHTML=hand.map((cid,i)=>cardHtml(E.def(cid),{owner:0,cls:(M.sel===cid&&myTurn()?'sel ':'')+(myTurn()?'':'dis'),attrs:`data-act="hand" data-cid="${cid}" data-i="${i}"`})).join('');
   // status
@@ -342,18 +342,27 @@ function renderMatch(){
 }
 function optionButtons(moves,cur){ const lab=mv=>{ const bits=[]; if (mv.rot) bits.push('rotate '+mv.rot+'° first'); if (mv.target!=null){ const d=E.def(mv.cid); const k=d.ops.find(o=>o.k==='place_add_diag'); bits.push(k?'add '+DIRN[mv.target]+' arrow':'target '+cellName(mv.target)); } return bits.join(', ')||'no option'; };
   return `<div class="go" style="margin-top:6px">${moves.map((mv,i)=>{ const p=preview(mv); const same=cur&&cur.rot===mv.rot&&cur.target===mv.target; return `<button class="btn sm ${same?'on':''}" data-act="variant" data-k="${i}">${lab(mv)} (${p.n})</button>`; }).join('')}</div>`; }
+function drawTrail(){   // the chain path: an arrow from each attacker to the card it challenged, numbered in capture order
+  const w=$('#mboard'); if (!w||!M||!M.trail||!M.trail.length) return; const wr=w.getBoundingClientRect(); let h='';
+  const ctr=i=>{ const el=w.querySelector(`.cell[data-i="${i}"]`); if(!el) return null; const r=el.getBoundingClientRect(); return [r.left-wr.left+r.width/2,r.top-wr.top+r.height/2,r.width]; };
+  for (const t of M.trail){ const a=ctr(t.from), b=ctr(t.to); if (!a||!b) continue; const dx=b[0]-a[0], dy=b[1]-a[1], L=Math.hypot(dx,dy)||1, ux=dx/L, uy=dy/L, pad=a[2]*0.28;
+    const x1=a[0]+ux*pad, y1=a[1]+uy*pad, x2=b[0]-ux*pad, y2=b[1]-uy*pad;
+    h+=`<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${t.win?'#ffd36b':'#8a949f'}" stroke-width="${t.win?5:3}" ${t.win?'':'stroke-dasharray="4 5"'} marker-end="url(#${t.win?'mw':'ml'})" opacity="${t.win?0.95:0.6}"/>`;
+    if (t.win) h+=`<circle cx="${(x2-ux*6).toFixed(1)}" cy="${(y2-uy*6).toFixed(1)}" r="11" fill="#1a1205" stroke="#ffd36b" stroke-width="2"/><text x="${(x2-ux*6).toFixed(1)}" y="${(y2-uy*6+4.5).toFixed(1)}" text-anchor="middle" font-family="Barlow Condensed,sans-serif" font-weight="800" font-size="14" fill="#ffd36b">${t.n}</text>`; }
+  w.insertAdjacentHTML('beforeend',`<svg class="trail" width="${wr.width}" height="${wr.height}"><defs><marker id="mw" markerWidth="7" markerHeight="7" refX="3" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7z" fill="#ffd36b"/></marker><marker id="ml" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0 0L6 3L0 6z" fill="#8a949f"/></marker></defs>${h}</svg>`);
+}
 function say(t){ M.log.push(t); }
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 function wait(ms){ if (ST.speed==='0'||M.skip) return Promise.resolve(); const k=ST.speed==='2'?0.5:1, f=M.chain>6?0.7:1; return new Promise(r=>{ const t=setTimeout(()=>{ M.waiters=M.waiters.filter(w=>w!==done); r(); },ms*k*f); const done=()=>{ clearTimeout(t); r(); }; M.waiters.push(done); }); }
 function skipAnim(){ M.skip=true; const w=M.waiters; M.waiters=[]; w.forEach(f=>f()); }
 async function playEvents(S0,res,foe){
-  M.busy=true; M.anim=true; M.skip=false; M.foeTurn=foe; M.chain=0; const D=clone(S0); M.disp=D; M.hl={}; M.fx={}; M.pops={}; const fin=res.state; let n=0;
+  M.busy=true; M.anim=true; M.skip=false; M.foeTurn=foe; M.chain=0; M.trail=[]; const D=clone(S0); M.disp=D; M.hl={}; M.fx={}; M.pops={}; const fin=res.state; let n=0;
   const lbl=cell=>E.def(D.cells[cell].cid).name.split(' — ')[0];
   for (const ev of res.events){
     if (ev.t==='place'){ const u=clone(fin.cells[ev.cell]); u.owner=ev.player; u.mask=E.def(ev.cid).mask; u.tmp.extra=0; D.cells[ev.cell]=u; M.fx={place:ev.cell}; M.insp=ev.cid; say(`${ev.player===0?'You':'Opponent'} placed ${esc(E.def(ev.cid).name.split(' — ')[0])} on ${cellName(ev.cell)}.`); renderMatch(); await wait(300); M.fx={}; }
     else if (ev.t==='rotate'){ const u=D.cells[ev.cell]; u.mask=E.rotMask(u.mask,ev.deg); if (ev.why!=='planet'||true) u.tmp.extra=E.rotMask(u.tmp.extra,ev.deg); renderMatch(); await wait(200); }
     else if (ev.t==='extra'){ D.cells[ev.cell].tmp.extra|=1<<ev.dir; renderMatch(); await wait(160); }
-    else if (ev.t==='challenge'){ M.hl={att:ev.from,tgt:ev.to,blocked:ev.win?null:ev.to}; M.pops={[ev.to]:`<span class="pop ${ev.win?'win':'fail'}">${ev.atk} ${ev.win?'&gt;':'≤'} ${ev.grd}</span>`}; renderMatch(); await wait(ev.win?340:150); }
+    else if (ev.t==='challenge'){ M.trail.push({from:ev.from,to:ev.to,win:ev.win,n:ev.win?M.trail.filter(x=>x.win).length+1:0}); M.hl={att:ev.from,tgt:ev.to,blocked:ev.win?null:ev.to}; M.pops={[ev.to]:`<span class="pop ${ev.win?'win':'fail'}">${ev.atk} ${ev.win?'&gt;':'≤'} ${ev.grd}</span>`}; renderMatch(); await wait(ev.win?340:150); }
     else if (ev.t==='capture'){ D.cells[ev.cell].owner=ev.to; D.cells[ev.cell].flipped=true; n++; M.chain=n; M.fx={flip:ev.cell}; M.hl={att:ev.by,tgt:ev.cell}; say(`&nbsp;&nbsp;↳ ${esc(lbl(ev.cell))} on ${cellName(ev.cell)} flips${ev.gen>1?' (generation '+ev.gen+')':''}.`); renderMatch(); await wait(400); M.fx={}; }
   }
   M.hl={}; M.pops={}; M.fx={}; M.disp=fin; M.anim=false;
