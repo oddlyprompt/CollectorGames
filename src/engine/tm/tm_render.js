@@ -5,7 +5,7 @@
 const XTV=new Map(); let XTFU=0;
 const XTF={EL:{}, back(){ return `<svg viewBox="0 0 250 350" xmlns="http://www.w3.org/2000/svg" class="tcgsvg cardsvg" role="img" aria-label="Tidemark card back"><rect width="250" height="350" rx="12" fill="#0b0b0c"/><rect x="9" y="9" width="232" height="332" rx="8" fill="#14344a"/><g fill="none" stroke="#7fb6cf" stroke-width="1.6" opacity=".55">${[0,1,2,3,4,5,6,7,8].map(i=>`<path d="M9 ${60+i*30} q 29 -16 58 0 t 58 0 t 58 0 t 58 0"/>`).join('')}</g><circle cx="125" cy="175" r="52" fill="#0d2535" stroke="#d9b45a" stroke-width="3"/><path d="M125 135 v80 M85 175 h80 M97 147 l56 56 M153 147 l-56 56" stroke="#d9b45a" stroke-width="3" stroke-linecap="round"/><circle cx="125" cy="175" r="9" fill="#d9b45a"/><text x="125" y="48" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="22" letter-spacing="5" fill="#e8d9a8">TIDEMARK</text></svg>`; }};
 for (const k in TM_FAC) XTF.EL[TM_FAC[k].n]={c:TM_FAC[k].c,d:TM_FAC[k].d,l:TM_FAC[k].l};
-function xtFin(d){ if (d.sealed) return 'gloss'; return d.v==='F'?'refr': d.v==='A'?'super':'gloss'; }
+function xtFin(d){ if (d.sealed) return 'gloss'; return d.v==='F'||d.v==='Z'?'refr': d.v==='A'||d.v==='G'||d.v==='S'?'super':'gloss'; }
 const TM_IMG=new Map(), TM_PEND=new Set(), TM_Q=[]; let tmBusy=false, tmFontsOk=false;
 const tmImgKey=c=>c.set+'|'+c.no;
 function tmCardSpec(c){ const s=xtSetDef(c.set); return {pid:c.set+'|'+c.no, collector:s.code+' '+String(c.cn).padStart(3,'0')+'/'+s.total, setName:s.name, mark:c.set===TM_TT?'X':s.code, n:c.name, type:XT_KINDN[c.kind], sub:c.sub, f:c.f, fac:c.el, al:c.al, r:c.r, cost:c.cost, req:c.req, pt:c.pow!=null? c.pow+'/'+c.tgh : '', kwline:c.kwl, rules:c.rules}; }
@@ -21,7 +21,10 @@ async function tmPump(){ tmBusy=true; while (TM_Q.length){ const c=TM_Q.shift();
 function tmImgUrl(c){ const k=tmImgKey(c); const u=TM_IMG.get(k); if (u) return u; if (!TM_PEND.has(k)){ TM_PEND.add(k); TM_Q.push(c); if (!tmBusy) tmPump(); } return ''; }
 function xtFoilOverlay(d){
   const v=d.v; if (v==='N') return ''; const id='tf'+(XTFU++); const g=`<linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff3c8c"/><stop offset=".18" stop-color="#ffc83c"/><stop offset=".36" stop-color="#3cffa0"/><stop offset=".54" stop-color="#3caaff"/><stop offset=".72" stop-color="#aa5aff"/><stop offset=".9" stop-color="#ff3c8c"/><stop offset="1" stop-color="#ffc83c"/></linearGradient><pattern id="${id}p" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><path d="M0 4 H8" stroke="#fff" stroke-width=".7" opacity=".55"/></pattern>`;
-  const k=v==='A'? .3 : .24; return `<defs>${g}</defs><rect width="250" height="350" rx="12" fill="url(#${id})" opacity="${k}" style="mix-blend-mode:color-dodge"/><rect width="250" height="350" rx="12" fill="url(#${id}p)" opacity=".12"/>`;
+  if (v==='G'||v==='S'){ const gd=`<linearGradient id="${id}g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a5a00"/><stop offset=".25" stop-color="#ffe27a"/><stop offset=".5" stop-color="#c8901a"/><stop offset=".75" stop-color="#fff0a8"/><stop offset="1" stop-color="#8a5a00"/></linearGradient>`;
+    const band=v==='S'? `<rect x="64" y="332" width="122" height="14" rx="4" fill="#1b1405" opacity=".82"/><text x="125" y="342.5" text-anchor="middle" font-family="sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.5" fill="#ffe27a">SERIAL-NUMBERED</text>` : '';
+    return `<defs>${g}${gd}</defs><rect width="250" height="350" rx="12" fill="url(#${id})" opacity=".2" style="mix-blend-mode:color-dodge"/><rect x="2" y="2" width="246" height="346" rx="11" fill="none" stroke="url(#${id}g)" stroke-width="5"/><rect width="250" height="350" rx="12" fill="url(#${id}g)" opacity=".16" style="mix-blend-mode:overlay"/>${band}`; }
+  const k=v==='Z'? .42 : v==='A'? .3 : .24; return `<defs>${g}</defs><rect width="250" height="350" rx="12" fill="url(#${id})" opacity="${k}" style="mix-blend-mode:color-dodge"/><rect width="250" height="350" rx="12" fill="url(#${id}p)" opacity=".12"/>`;
 }
 function xtFront(key){
   let s=XTV.get(key); if (s) return s; const d=xtD(key); if (d.sealed){ s=xtPackSVG(d.set,d.v); XTV.set(key,s); return s; }
@@ -56,7 +59,7 @@ function xtPackDrawn(set, f){
       ${crimp(6,18)}${crimp(256,18)}
       ${logo(100,62,30,150)}
       <rect x="40" y="196" width="120" height="26" rx="4" fill="#0b0f1a" opacity=".72" stroke="url(#${u}f)" stroke-width="1.2"/><text x="100" y="215" text-anchor="middle" ${F} font-weight="800" font-size="17" fill="#fff" letter-spacing="1.5" textLength="${Math.min(108,name.length*10)}" lengthAdjust="spacingAndGlyphs">${esc(name)}</text>
-      <text x="100" y="240" text-anchor="middle" ${F} font-weight="700" font-size="9" fill="#fff" letter-spacing="2" textLength="120" lengthAdjust="spacingAndGlyphs">BOOSTER PACK · 12 CARDS</text>
+      <text x="100" y="240" text-anchor="middle" ${F} font-weight="700" font-size="9" fill="#fff" letter-spacing="2" textLength="120" lengthAdjust="spacingAndGlyphs">BOOSTER PACK · 15 CARDS</text>
       <g transform="translate(160 86)"><circle r="13" fill="#0b0f1a" opacity=".7" stroke="url(#${u}f)" stroke-width="1.2"/><text y="4" text-anchor="middle" ${F} font-weight="800" font-size="10" fill="#fff">${esc(def.code)}</text></g></svg>`;
   }
   // a booster box at three-quarter view: painted front, darker side, lid with the wordmark
@@ -92,7 +95,7 @@ const X_finOf=finOf; finOf=function(kind,o){ if (kind!=='x') return X_finOf(kind
 const X_pcData=pcData; pcData=function(kind,o){ if (kind!=='x'){ const r=X_pcData(kind,o); return r; }
   const d=xtD(o.k), g=o.g>0?o.g:0, r=xtEst(o.k,g,o), sales=xtSales(o.k,g);
   return { key:o.k, g, title:d.title, sub:d.sealed? d.def.name : d.def.name+' · '+String(d.card.cn).padStart(3,'0')+' · '+XT_VARN[d.v], cond: g? 'GCS '+g+' '+GRADE_NAMES[g] : d.sealed? 'Sealed' : COND_LABN[condLabel(o.c)], r, sales, other:(G.sales[o.k]||[]).filter(x=>(x[2]||0)!==g).slice(0,3), gl:x=>x>0?'GCS '+x:'Raw',
-    meta:[['Set',d.def.name],['Rarity',d.sealed?'':XT_RARN[d.card.rar]],['Print',XT_VARN[d.v]],['Legal in Standard', d.sealed?'':({std:'Yes',rot:'No, Eternal only',ban:'No, banned'})[xtLegalState(d.cid)]]] }; };
+    meta:[['Set',d.def.name],['Rarity',d.sealed?'':XT_RARN[d.card.rar]],['Print',XT_VARN[d.v]],...(d.v==='S'? [['Serial number','No. '+String(xtSerial(o)).padStart(3,'0')+' of 100']] : []),['Legal in Standard', d.sealed?'':({std:'Yes',rot:'No, Eternal only',ban:'No, banned'})[xtLegalState(d.cid)]]] }; };
 const X_va=v3Art; v3Art=function(kind,o){ return kind==='x'? (o.g>0? xtSlab(o) : polishCard(xtFace(o),{flat:1})) : X_va(kind,o); };
 const X_vb=v3Back; v3Back=function(kind,o){ if (kind!=='x') return X_vb(kind,o); return o.g>0? X_vb('c',o) : XTF.back(); };
 const X_rvRaw=rvRaw; rvRaw=function(k,o){ return k==='x'? polishCard(xtFace(o)) : X_rvRaw(k,o); };

@@ -7,6 +7,9 @@ function xtPullOdds(key){ const d=xtD(key); if (d.sealed) return ''; const P=xtP
   const sl=(arr,q)=>arr.length? q/arr.length : 0;   // chance that a given slot lands on this one card
   if (d.v==='A') p=O.alt/Math.max(1,P.alt.length);
   else if (d.v==='N'){ if (c.rar==='common') p=(8-O.foil)*sl(P.c,P.q.C); else if (c.rar==='unc') p=3*sl(P.u,P.q.U); else if (c.rar==='rare') p=(1-O.alt)*(1-O.legR)*sl(P.r,P.q.R); else if (c.rar==='leg') p=(1-O.alt)*O.legR*sl(P.l,P.q.L); }
+  else if (d.v==='Z'){ const F=O.fr; const m={common:F.C*sl(P.c,1), unc:F.U*sl(P.u,1), rare:F.R*sl(P.r,1), leg:F.L*sl(P.l,1)}; p=O.prism*(m[c.rar]||0); }
+  else if (d.v==='G'){ if (c.rar==='rare') p=(1-O.alt)*(1-O.serial)*O.gold*(1-O.legR)*sl(P.r,1); else if (c.rar==='leg') p=(1-O.alt)*(1-O.serial)*O.gold*O.legR*sl(P.l,1); }
+  else if (d.v==='S'){ if (c.rar==='leg') p=(1-O.alt)*O.serial*sl(P.l,1); }
   else if (d.v==='F'){ const F=O.fr; const m={common:F.C*sl(P.c,P.q.C), unc:F.U*sl(P.u,P.q.U), rare:F.R*sl(P.r,P.q.R), leg:F.L*sl(P.l,P.q.L)}; p=O.foil*(m[c.rar]||0); }
   return p>=0.99? 'in nearly every pack' : p>0? 'about 1 in '+Math.max(1,Math.round(1/p))+' packs' : ''; }
 function xtTabsRow(){ const t=UI.xts; const solo=true; /* in the one card-game world Tidemark has its own tab; Home and Your cards are shared screens */ const b=(k,n)=>`<button class="chip ${t===k?'on':''}" data-act="xts" data-a="${k}">${n}</button>`; return `<div class="chips" style="margin:6px 0 12px">${solo?'':b('home','Overview')}${b('shop','Shop')}${b('sets','Sets')}${b('meta','Metagame')}${solo?'':b('coll','Your cards')}</div>`; }
@@ -69,7 +72,7 @@ function xtCollGroups(){
   const f=UI.xtc, r=UI.xtr, q=UI.xtq.trim().toLowerCase(); const sealed=c=>xtD(c.k).sealed; let a=myXt();
   const cnt={all:a.length, raw:a.filter(c=>!sealed(c)&&!(c.g>0)).length, gr:a.filter(c=>c.g>0||c.g<0).length, sl:a.filter(sealed).length, ls:a.filter(c=>c.l).length};
   a=a.filter(c=> f==='raw'? !sealed(c)&&!(c.g>0) : f==='gr'? (c.g>0||c.g<0) : f==='sl'? sealed(c) : f==='ls'? c.l : true);
-  const rk=d=>{ if (d.sealed) return 'sealed'; const c=d.card; return d.v==='F'? 'foil' : xtIsPrem(c)? 'prem' : c.rar; };
+  const rk=d=>{ if (d.sealed) return 'sealed'; const c=d.card; return d.v==='Z'||d.v==='G'||d.v==='S'? 'prem' : d.v==='F'? 'foil' : xtIsPrem(c)? 'prem' : c.rar; };
   if (r!=='all') a=a.filter(c=>rk(xtD(c.k))===r);
   if (q) a=a.filter(c=>{ const d=xtD(c.k); return (d.title+' '+d.def.name+' '+d.def.code+' '+(d.card?(d.card.el||'')+' '+d.card.kind+' '+String(d.card.cn).padStart(3,'0'):'')).toLowerCase().includes(q); });
   const G2=new Map(); for (const c of a){ const k=c.k+'|'+(c.g>0?'g'+c.g:c.g<0?'atgcs':condLabel(c.c))+'|'+(c.l?'l':'')+(c.nw?'n':''); let g=G2.get(k); if (!g){ g={cs:[],k:c.k,v:0}; G2.set(k,g); } g.cs.push(c); g.v=Math.max(g.v,xtCopyValue(c)); }

@@ -1,0 +1,52 @@
+
+== random vs random: 6000 games
+first player wins 31.7%, second 48.2%, ties 20.1%
+first player's win rate if it were given a bonus of: 0 -> 31.7% (ties 20.1%)  1 -> 51.8% (ties 0.0%)  3 -> 71.2% (ties 0.0%)  5 -> 84.3% (ties 0.0%)  (a bonus of 2 = one square)
+placements 16 per game (always 16 in total, 8 per player); captures per placement mean 0.30, median 0, largest 12; deepest chain generation 7
+chain length (captures in one placement): 0:81.3%  1:12.3%  2:3.7%  3:1.4%  4:0.6%  5:0.3%  6:0.1%  7:0.1%  8:0.0%  9:0.0%  10:0.0%  11:0.0%  12:0.0%
+by planet: Karth first 35.5% margin 3.2 | Vesper first 43.7% margin 2.8 | Drael first 39.1% margin 2.8 | Gallow's Rest first 38.6% margin 3.7 | Nhelos first 41.5% margin 3.4 | The Velvet Mile first 41.2% margin 3.0 | The Grave Markets first 35.9% margin 3.8 | The Lost Aperture first 39.4% margin 3.4 | none first 42.3% margin 3.3
+captures per placement by arrow count: 2→0.23 (31228)  3→0.27 (23144)  4→0.43 (25174)  5→0.27 (16454)
+strongest cards by deck win rate (random-deck baseline 50%, noisy):
+  BR01-068 Commander Tavren Holt              5/4 arrows 4 captures/play 0.70 deck win rate 53.7%
+  BR01-080 Archivist Oruun                    5/4 arrows 4 captures/play 0.95 deck win rate 53.6%
+  BR01-064 Brakka Sorn — Debt Marshal         4/3 arrows 4 captures/play 0.51 deck win rate 53.3%
+  BR01-011 Rimline Escort                     4/3 arrows 5 captures/play 0.63 deck win rate 53.3%
+  BR01-070 Inspector Alvo Penn                4/4 arrows 4 captures/play 0.73 deck win rate 53.2%
+  BR01-167 Security Lattice Node              5/4 arrows 3 captures/play 0.70 deck win rate 53.2%
+weakest:
+  BR01-099 Dockside Ambushers                 2/2 arrows 3 captures/play 0.03 deck win rate 45.7%
+  BR01-003 Karth Dockrunner                   2/2 arrows 2 captures/play 0.01 deck win rate 46.4%
+  BR01-006 Gravelark Skiff                    1/2 arrows 5 captures/play 0.02 deck win rate 47.0%
+  BR01-121 Null-Vow Sentinels                 3/2 arrows 2 captures/play 0.12 deck win rate 47.1%
+
+== greedy vs greedy: 6000 games
+first player wins 35.2%, second 56.4%, ties 8.4%
+first player's win rate if it were given a bonus of: 0 -> 35.2% (ties 8.4%)  1 -> 43.6% (ties 0.0%)  3 -> 52.0% (ties 0.0%)  5 -> 61.4% (ties 0.0%)  (a bonus of 2 = one square)
+placements 16 per game (always 16 in total, 8 per player); captures per placement mean 2.34, median 2, largest 15; deepest chain generation 12
+chain length (captures in one placement): 0:26.2%  1:22.8%  2:14.9%  3:10.5%  4:7.8%  5:5.9%  6:4.3%  7:2.9%  8:1.9%  9:1.2%  10:0.7%  11:0.4%  12:0.2%  13:0.1%  14:0.0%  15:0.0%
+by planet: Karth first 40.7% margin 5.9 | Vesper first 40.6% margin 5.4 | Drael first 40.7% margin 5.2 | Gallow's Rest first 31.7% margin 6.1 | Nhelos first 38.6% margin 6.6 | The Velvet Mile first 40.2% margin 5.8 | The Grave Markets first 34.6% margin 8.0 | The Lost Aperture first 41.2% margin 6.6 | none first 38.0% margin 6.7
+captures per placement by arrow count: 2→2.28 (30103)  3→2.28 (23047)  4→2.59 (28255)  5→2.04 (14595)
+strongest cards by deck win rate (random-deck baseline 50%, noisy):
+  BR01-167 Security Lattice Node              5/4 arrows 3 captures/play 3.20 deck win rate 58.4%
+  BR01-080 Archivist Oruun                    5/4 arrows 4 captures/play 3.33 deck win rate 56.3%
+  BR01-044 Vigilance of Glass                 5/4 arrows 2 captures/play 3.21 deck win rate 56.3%
+  BR01-041 Black Communion                    5/3 arrows 4 captures/play 3.03 deck win rate 55.4%
+  BR01-083 Nim Rell — Khepri Cartographer     5/4 arrows 2 captures/play 3.21 deck win rate 55.2%
+  BR01-070 Inspector Alvo Penn                4/4 arrows 4 captures/play 3.05 deck win rate 55.1%
+weakest:
+  BR01-168 Unstable Gate Fragment             2/2 arrows 4 captures/play 0.46 deck win rate 44.7%
+  BR01-147 Aperture Warden                    2/2 arrows 2 captures/play 0.37 deck win rate 44.7%
+  BR01-096 Corsair Boarding Team              2/2 arrows 2 captures/play 0.44 deck win rate 44.7%
+  BR01-132 Vanno Decoy Bot                    2/2 arrows 2 captures/play 0.71 deck win rate 45.5%
+
+== greedy (A) vs random (B): 500 games
+first player wins 46.2%, second 49.0%, ties 4.8%
+first player's win rate if it were given a bonus of: 0 -> 46.2% (ties 4.8%)  1 -> 51.0% (ties 0.0%)  3 -> 56.6% (ties 0.0%)  5 -> 63.6% (ties 0.0%)  (a bonus of 2 = one square)
+by planet: Karth first 51.9% margin 5.9 | Vesper first 49.1% margin 6.9 | Drael first 45.3% margin 6.0 | Gallow's Rest first 48.2% margin 8.3 | Nhelos first 63.5% margin 6.5 | The Velvet Mile first 44.4% margin 6.1 | The Grave Markets first 48.1% margin 8.0 | The Lost Aperture first 31.5% margin 6.8 | none first 56.0% margin 6.3
+
+== tactical vs greedy: 400 games
+first player wins 39.0%, second 49.3%, ties 11.8%
+first player's win rate if it were given a bonus of: 0 -> 39.0% (ties 11.8%)  1 -> 50.7% (ties 0.0%)  3 -> 58.3% (ties 0.0%)  5 -> 68.3% (ties 0.0%)  (a bonus of 2 = one square)
+by planet: Karth first 50.0% margin 4.4 | Vesper first 42.5% margin 6.4 | Drael first 47.2% margin 4.0 | Gallow's Rest first 45.0% margin 5.8 | Nhelos first 50.0% margin 4.8 | The Velvet Mile first 40.0% margin 5.1 | The Grave Markets first 39.5% margin 7.0 | The Lost Aperture first 42.5% margin 5.4 | none first 42.1% margin 5.5
+
+no cascade exceeded 15 captures or 120 challenges; 125 s

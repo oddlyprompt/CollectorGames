@@ -6,14 +6,14 @@
 // (withRng), never the world's, so it cannot move the metagame. Decided by Claude, not canon.
 const XT_E2={
   // cards opened in a set's first year (the game world is a sample of the market), growing as the game grew; sealed product kept by hoarders
-  q0:150, q1:0.3, q2:1.7, sealedMul:1.6, boxFrac:0.8,
+  q0:150, q1:0.3, q2:1.7, sealedMul:0.45, boxFrac:0.8,
   // who holds a card: collector (sleeved, binder), player (decks, travels), casual (loose). Share of cards by release year, lost and worn per year
   hold:{ collector:{lost:0.008, wear:0.06}, player:{lost:0.06, wear:0.28}, casual:{lost:0.14, wear:0.34} },
   mix(year){ const t=Math.min(1,Math.max(0,(year-2016)/9)); return { collector:0.12+0.23*t, player:0.38+0.02*t, casual:0.50-0.25*t }; },
   rarLost:{common:1.6, unc:1.2, rare:0.8, leg:0.4}, rarWear:{common:1, unc:0.92, rare:0.8, leg:0.65},
   grade:{rare:0.02, leg:0.08},                          // yearly chance that a raw NM or LP copy is sent to be graded, by rarity
   sealedOpen:{box:0.005, pack:0.025}, sealedLost:{box:0.015, pack:0.02},   // yearly: opened, lost
-  attic:0.07, atticSealed:0.35,                         // share of surviving cards and sealed product kept off the market until an estate sale
+  attic:0.07, atticSealed:0.6,                         // share of surviving cards and sealed product kept off the market until an estate sale
   vintageYears:2,                                       // sets older than this get the census, scarcity pricing and seller-backed shops
   elast:0.35, cap:[0.5,3], smooth:45                    // price answers to (copies at the start / copies now)^elast, bounded, over a 45-day average
 };
@@ -33,7 +33,7 @@ function xtEconCounts(){ const m={}; for (const id in G.xtc){ const c=G.xtc[id];
 function xtEconRef(keysOnly){   // remember how many copies there were at the start (or when a set became vintage); prices measure scarcity against it
   const T=G.xtg, m=xtEconCounts(); T.ref=T.ref||{}; T.sm=T.sm||{};
   for (let s=1;s<TM_TT;s++){ const def=xtSetDef(s); if (!def||def.rel>G.day) continue; if ((G.day-def.rel)/365<XT_E2.vintageYears) continue;
-    for (const k of xtAllKeys(s).concat([xtKey(s,0,'P'),xtKey(s,0,'B')])) if (T.ref[k]==null){ T.ref[k]=m[k]||0; T.sm[k]=m[k]||0; } }
+    for (const k of xtAllKeysT(s).concat([xtKey(s,0,'P'),xtKey(s,0,'B')])) if (T.ref[k]==null){ T.ref[k]=m[k]||0; T.sm[k]=m[k]||0; } }
 }
 function xtEconSmooth(){ const T=G.xtg; if (!T.ref) return; const m=xtEconCounts(), a=1/XT_E2.smooth; for (const k in T.ref){ const live=m[k]||0; T.sm[k]+= (live-T.sm[k])*a; } }
 // the price factor of a vintage print: a premium that grows with age and rarity (the NM premium) times how scarce it has become, bounded
@@ -58,11 +58,13 @@ function xtV2Replay(){
     const attic=[];
     for (let s=1;s<TM_TT;s++){
       const def=xtSetDef(s); const T0=(G.day-def.rel)/365; if (T0<0) continue; const T1=Math.max(0.3,T0); const y0=xtYearOf(def.rel);
-      const nT=Math.ceil(T1-1e-9); const Q=Math.round(XT_E2.q0*(XT_E2.q1+(XT_E2.q2-XT_E2.q1)*(s-1)/29)), Qs=Math.round(Q*XT_E2.sealedMul);
-      const cards=[]; const addPack=(born,cls)=>{ const keys=xtRollPack(s,R); for (const k of keys){ const d=xtD(k); cards.push({k, born, cls: cls||pickClass(born), c:condFresh(()=>R(),0.55), g:0, rar:d.rar, foil:d.v==='F', alive:true}); } };
+      const nT=Math.ceil(T1-1e-9); const Q0=Math.round(XT_E2.q0*(XT_E2.q1+(XT_E2.q2-XT_E2.q1)*(s-1)/29)); const bst=xtBoosterSet(s);
+      // the same number of copies of each card as before whatever the product: a booster set opens packs, any other set enters the world as boxed sets (one of each card)
+      const Q=bst? Math.max(1,Math.round(Q0*def.named/def.total)) : Math.max(1,Math.round(Q0*XT_PACK*1.5/def.total)), Qs=bst? Math.round(Q*XT_E2.sealedMul) : 0;
+      const cards=[]; const addPack=(born,cls)=>{ const keys=xtRollUnit(s,R); for (const k of keys){ const d=xtD(k); cards.push({k, born, cls: cls||pickClass(born), c:condFresh(()=>R(),0.55), g:0, rar:d.rar, foil:xtFoilish(d.v), alive:true}); } };
       const pickClass=(born)=>{ const m=XT_E2.mix(y0+Math.floor(born)); const x=R(); return x<m.collector? 'collector' : x<m.collector+m.player? 'player' : 'casual'; };
       for (let i=0;i<Q;i++) addPack(0);
-      let B=Math.round(Qs*XT_E2.boxFrac/36+ (R()-0.5)), P=Math.round(Qs*(1-XT_E2.boxFrac)+ (R()-0.5)*4); B=Math.max(0,B); P=Math.max(0,P);
+      let B=Math.round(Qs*XT_E2.boxFrac/36+ (R()-0.5)), P=Math.round(Qs*(1-XT_E2.boxFrac)+ (R()-0.5)*4); B=Math.max(0,B); P=Math.max(0,P); if (!bst){ B=0; P=0; } else if (s===1){ B=Math.max(B,1); P=Math.max(P,6); }   // only booster sets have sealed product; the foundational one is always findable
       for (let j=1;j<=nT;j++){
         const e0=j-1, dt=(j<nT)? 1 : (T1-(nT-1)); if (dt<=0) continue;
         const pOpen=(y)=>1-Math.pow(1-y,dt), pLost=(y)=>1-Math.pow(1-y,dt);
@@ -82,7 +84,7 @@ function xtV2Replay(){
         const holder=toAttic? null : own(c.cls,s); const cp=mk(c.k, toAttic?-3:holder.id, c.c.slice());
         if (c.g){ cp.gt=1; cp.g=gradeOf(cp); cp.cert=10000000+Math.floor(R()*89999999); const p=G.xpop[cp.k]||(G.xpop[cp.k]=Array(11).fill(0)); p[cp.g]++; led.graded++; }
         led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
-      for (const [f,n] of [['P',P],['B',B]]) for (let i=0;i<n;i++){ const toAttic=R()<XT_E2.atticSealed; const holder=toAttic? null : pickTy(['xsl','xsl','xfl','xtl']); const cp=mk(xtKey(s,0,f), toAttic?-3:holder.id, [100,100,100,100]); led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
+      for (const [f,n] of [['P',P],['B',B]]) for (let i=0;i<n;i++){ const toAttic=R()<XT_E2.atticSealed; const holder=toAttic? null : pickTy(['xsl','xsl','xsl','xtl']); const cp=mk(xtKey(s,0,f), toAttic?-3:holder.id, [100,100,100,100]); led.made++; if (toAttic) attic.push(cp.id); else G._npcXtIds.push(cp.id); }
     }
     // every named card has at least one surviving copy somewhere: a card that was printed in number does not vanish (the last copy sits in an attic)
     const have=new Set(); for (const id in G.xtc) have.add(G.xtc[id].k);
@@ -120,7 +122,7 @@ function xtAgeSlice(t){
     const n=NPC(c.o); if (!n) continue; const cls=xtHolderOf(n);
     if (d.sealed){ const f=d.v==='B'; const po=(f? (n.ty==='xsl'?0.0003:0.0006) : (n.ty==='xsl'?0.0015:0.004)); if (R()<po){ xtNpcOpen(c,n,d,t); } else if (R()<(f?0.012:0.02)*mo) { delete G.xtc[id]; L.lost++; } continue; }
     if (c.g>0){ continue; }   // a slab does not wear
-    const h=XT_E2.hold[cls], rl=h.lost*XT_E2.rarLost[d.rar]*(d.v==='F'?0.8:1), rw=h.wear*XT_E2.rarWear[d.rar]; const wearMul= (cls==='player'&&xtLegalState(d.cid)==='std')? 1.5 : 1;
+    const h=XT_E2.hold[cls], rl=h.lost*XT_E2.rarLost[d.rar]*(xtFoilish(d.v)?0.8:1), rw=h.wear*XT_E2.rarWear[d.rar]; const wearMul= (cls==='player'&&xtLegalState(d.cid)==='std')? 1.5 : 1;
     if (R()<1-Math.pow(1-rl,mo)){ delete G.xtc[id]; L.lost++; xTfvClear(c.k); continue; }
     if (R()<1-Math.pow(1-rw*wearMul,mo)){ xtStepDown(c.c,R); xTfvClear(c.k); }
   }
@@ -132,8 +134,8 @@ function xtNpcOpen(c,n,d,t){   // a collector cracks a sealed pack or box: the c
 // ---------- estate sales, warehouse finds and collection sales: finite inventory that was already in the world ----------
 function xtEstateTick(t){
   const E=G.xtg.e2; if (!E) return;
-  if (t>=E.next){ E.next=t+25+Math.floor(R()*35); xtEstate(t,false); }
-  if (t>=E.nextP){ E.nextP=t+70+Math.floor(R()*60); xtEstate(t,true); }
+  if (t>=E.next){ E.next=t+20+Math.floor(R()*25); xtEstate(t,false); }
+  if (t>=E.nextP){ E.nextP=t+45+Math.floor(R()*45); xtEstate(t,true); }
   if (t>=E.nextL){ E.nextL=t+60+Math.floor(R()*100); xtLiquidation(t); }
 }
 const XT_SELLERS=['xtl','xtm','xfl','xsl'];
@@ -165,8 +167,8 @@ function xtKvDay(t){
   // dealers sell: each item has a small chance of going to a collector each day, at once if it is cheap
   for (let i=inv.length-1;i>=0;i--){ const c=G.xtc[inv[i]]; if (!c){ inv.splice(i,1); continue; } if (R()<0.018){ const b=pick(G.npcs.filter(isXtNPC)); c.o=b.id; (G._npcXtIds=G._npcXtIds||[]).push(c.id); inv.splice(i,1); } }
   if (dowOf(t)!==1) return;
-  const want=24+Math.floor(R()*15), cand=G._npcXtIds||[]; let got=0;
-  for (let tries=0; tries<500 && got<want && inv.length<420 && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
+  const SC=xtMarketScale(), want=Math.round((32+Math.floor(R()*17))*SC), cand=G._npcXtIds||[]; let got=0;
+  for (let tries=0; tries<500*SC && got<want && inv.length<520*SC && cand.length; tries++){ const id=cand[Math.floor(R()*cand.length)]; const c=G.xtc[id]; if (!c||c.o<=0||c.l||c.g<0) continue; const d=xtD(c.k); if (d.sealed||!xtVintage(d)) continue; const n=NPC(c.o); if (!n) continue;
     const v=xtCopyValue(c); if (v<0.05) continue; const p=(XT_KV_BUY[n.ty]||0.15)*(n.ty==='xtm'&&n.setN===d.set?0.1:1)*((d.card.res||d.rar==='leg')&&n.ty!=='xfl'?0.5:1); if (R()>p) continue;
     n.cash+=Math.round(v*0.7*100)/100; c.o=-2; c.a=[t,'held',0,'']; inv.push(id); got++; }
 }
@@ -199,7 +201,7 @@ function xtRebuildVintage(){
   xtV2Replay();
   // released sets that are not vintage still need collectors' copies: the release market gives Tenth Tide its glut again
   if (xtReleasedSets(G.day).includes(TM_TT)) xtRelease_market_rebuild();
-  for (let i=0;i<300;i++) xNpcListTc();
+  for (let i=0;i<Math.round(300*xtMarketScale());i++) xNpcListTc();
   return null;
 }
 function xtRelease_market_rebuild(){ const live=G.live; G.live=false; const c=G._xtCatch; G._xtCatch=false; try { xtReleaseMarket(TM_TT, xtSetDef(TM_TT).rel); } finally { G.live=live; G._xtCatch=c; } }
@@ -211,15 +213,15 @@ ACT.xtrebuild=(a,el)=>{ if (!armed(el)) return; xtRebuildWithBackup().then(e=>{ 
 
 // do collectors let go of a copy? (base is the first economy's answer; v2 adds who collects what)
 function xtKeep(n,c,v,base){
-  const d=xtD(c.k); const prem=!d.sealed&&(d.card.rar==='leg'||d.card.res||d.v==='F'||d.rar==='alt');
+  const d=xtD(c.k); const prem=!d.sealed&&(d.card.rar==='leg'||d.card.res||xtFoilish(d.v)||d.rar==='alt');
   // ordinary cards (commons and uncommons) are what collectors trade and release: they do not sit in binders for good
   if (!d.sealed && d.v==='N' && (d.rar==='common'||d.rar==='unc')) return n.ty==='xtm'&&n.setN===d.set? 0.72 : n.ty==='xfl'? 0.05 : Math.min(base,0.45);
   switch(n.ty){
-    case 'xtm': return d.sealed? 0.5 : n.setN===d.set? 0.95 : 0.4;
-    case 'xsl': return d.sealed? 0.96 : 0.6;
-    case 'xtl': return d.sealed? 0.6 : prem? (d.card.res? 0.985 : 0.93) : base;
-    case 'xfl': return d.sealed? 0.15 : 0.05;
-    case 'xgr': return d.sealed? 0.4 : 0.3;
-    default: return base;
+    case 'xtm': return d.sealed? 0.9 : n.setN===d.set? 0.95 : 0.4;
+    case 'xsl': return d.sealed? 0.985 : 0.6;
+    case 'xtl': return d.sealed? 0.9 : prem? (d.card.res? 0.985 : 0.93) : base;
+    case 'xfl': return d.sealed? 0.5 : 0.05;
+    case 'xgr': return d.sealed? 0.8 : 0.3;
+    default: return d.sealed? Math.max(base,0.85) : base;
   }
 }

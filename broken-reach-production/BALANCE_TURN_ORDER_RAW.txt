@@ -1,0 +1,53 @@
+Turn-order experiments, 1500 random, 1500 greedy, 240 standard-AI games per rule; random decks of 20 different units; all 8 planets and none in rotation
+(first share of decided = first player's wins / (wins+losses): 50% is fair)
+
+v0.2 baseline  {}
+  random   first  30.6% second  48.0% draw  21.4% | first share of decided  38.9% | captures/placement 0.30, placements with 4+   1.2%, largest 11 | planet spread of first-player win rate  33.6%.. 46.9%
+  greedy   first  36.5% second  54.2% draw   9.3% | first share of decided  40.2% | captures/placement 2.34, placements with 4+  25.6%, largest 15 | planet spread of first-player win rate  32.5%.. 45.0%
+  standard first  31.7% second  60.4% draw   7.9% | first share of decided  34.4% | captures/placement 1.15, placements with 4+   6.7%, largest 10 | planet spread of first-player win rate  20.8%.. 48.0%
+
+tie to first player (komi 1)  {"komi":1}
+  random   first  52.0% second  48.0% draw   0.0% | first share of decided  52.0% | captures/placement 0.30, placements with 4+   1.2%, largest 11 | planet spread of first-player win rate  43.1%.. 58.7%
+  greedy   first  45.8% second  54.2% draw   0.0% | first share of decided  45.8% | captures/placement 2.34, placements with 4+  25.6%, largest 15 | planet spread of first-player win rate  37.7%.. 50.9%
+  standard first  39.6% second  60.4% draw   0.0% | first share of decided  39.6% | captures/placement 1.15, placements with 4+   6.7%, largest 10 | planet spread of first-player win rate  29.6%.. 55.6%
+
+komi 2  {"komi":2}
+  random   first  52.0% second  31.0% draw  17.0% | first share of decided  62.7% | captures/placement 0.30, placements with 4+   1.2%, largest 11 | planet spread of first-player win rate  50.7%.. 73.7%
+  greedy   first  45.8% second  46.5% draw   7.7% | first share of decided  49.6% | captures/placement 2.34, placements with 4+  25.6%, largest 15 | planet spread of first-player win rate  40.1%.. 54.9%
+  standard first  39.6% second  42.5% draw  17.9% | first share of decided  48.2% | captures/placement 1.15, placements with 4+   6.7%, largest 10 | planet spread of first-player win rate  38.1%.. 63.6%
+
+komi 3 (1.5 squares)  {"komi":3}
+  random   first  69.0% second  31.0% draw   0.0% | first share of decided  69.0% | captures/placement 0.30, placements with 4+   1.2%, largest 11 | planet spread of first-player win rate  58.1%.. 79.0%
+  greedy   first  53.5% second  46.5% draw   0.0% | first share of decided  53.5% | captures/placement 2.34, placements with 4+  25.6%, largest 15 | planet spread of first-player win rate  43.7%.. 58.4%
+  standard first  57.5% second  42.5% draw   0.0% | first share of decided  57.5% | captures/placement 1.15, placements with 4+   6.7%, largest 10 | planet spread of first-player win rate  48.1%.. 70.4%
+
+final placement makes no challenges  {"lastPassive":true}
+  random   first  41.1% second  34.6% draw  24.3% | first share of decided  54.3% | captures/placement 0.25, placements with 4+   0.9%, largest 10 | planet spread of first-player win rate  46.4%.. 61.6%
+  greedy   first  53.3% second  38.5% draw   8.3% | first share of decided  58.1% | captures/placement 2.24, placements with 4+  24.7%, largest 14 | planet spread of first-player win rate  50.3%.. 66.3%
+  standard first  50.4% second  35.8% draw  13.8% | first share of decided  58.5% | captures/placement 1.11, placements with 4+   6.4%, largest 10 | planet spread of first-player win rate  32.0%.. 69.6%
+
+final placement Attack -1  {"lastMinus":1}
+  random   first  37.3% second  40.1% draw  22.7% | first share of decided  48.2% | captures/placement 0.27, placements with 4+   0.9%, largest 10 | planet spread of first-player win rate  40.8%.. 53.6%
+  greedy   first  49.5% second  40.6% draw   9.9% | first share of decided  54.9% | captures/placement 2.26, placements with 4+  24.8%, largest 14 | planet spread of first-player win rate  48.0%.. 61.5%
+  standard first  45.0% second  42.9% draw  12.1% | first share of decided  51.2% | captures/placement 1.13, placements with 4+   6.4%, largest 10 | planet spread of first-player win rate  32.0%.. 68.2%
+
+final placement Attack -2  {"lastMinus":2}
+  random   first  40.0% second  36.5% draw  23.5% | first share of decided  52.3% | captures/placement 0.26, placements with 4+   0.9%, largest 10 | planet spread of first-player win rate  45.7%.. 59.1%
+  greedy   first  52.5% second  39.1% draw   8.4% | first share of decided  57.4% | captures/placement 2.25, placements with 4+  24.7%, largest 14 | planet spread of first-player win rate  49.3%.. 65.8%
+  standard first  49.2% second  37.5% draw  13.3% | first share of decided  56.7% | captures/placement 1.12, placements with 4+   6.4%, largest 10 | planet spread of first-player win rate  32.0%.. 68.2%
+
+first player +1 Guard on all units  {"firstGuard":1}
+  random   first  53.4% second  20.9% draw  25.7% | first share of decided  71.9% | captures/placement 0.18, placements with 4+   0.3%, largest 8 | planet spread of first-player win rate  63.5%.. 79.1%
+  greedy   first  86.1% second   7.0% draw   6.9% | first share of decided  92.5% | captures/placement 0.94, placements with 4+   3.6%, largest 13 | planet spread of first-player win rate  89.8%.. 96.3%
+  standard first  82.1% second   7.9% draw  10.0% | first share of decided  91.2% | captures/placement 0.63, placements with 4+   0.8%, largest 6 | planet spread of first-player win rate  82.6%..100.0%
+
+first player opens with 6 cards  {"firstHand":1}
+  random   first  30.2% second  49.1% draw  20.7% | first share of decided  38.1% | captures/placement 0.30, placements with 4+   1.2%, largest 11 | planet spread of first-player win rate  31.9%.. 42.5%
+  greedy   first  39.4% second  52.0% draw   8.6% | first share of decided  43.1% | captures/placement 2.48, placements with 4+  27.3%, largest 14 | planet spread of first-player win rate  36.4%.. 49.7%
+  standard first  31.7% second  55.8% draw  12.5% | first share of decided  36.2% | captures/placement 1.30, placements with 4+   8.8%, largest 12 | planet spread of first-player win rate  17.4%.. 50.0%
+
+komi 1 + final Attack -1  {"komi":1,"lastMinus":1}
+  random   first  59.9% second  40.1% draw   0.0% | first share of decided  59.9% | captures/placement 0.27, placements with 4+   0.9%, largest 10 | planet spread of first-player win rate  53.9%.. 65.3%
+  greedy   first  59.4% second  40.6% draw   0.0% | first share of decided  59.4% | captures/placement 2.26, placements with 4+  24.8%, largest 14 | planet spread of first-player win rate  53.9%.. 64.1%
+  standard first  57.1% second  42.9% draw   0.0% | first share of decided  57.1% | captures/placement 1.13, placements with 4+   6.4%, largest 10 | planet spread of first-player win rate  37.0%.. 74.1%
+

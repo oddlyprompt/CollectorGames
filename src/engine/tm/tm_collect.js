@@ -31,7 +31,7 @@ function xtGoalStats(){
     for (const c of cs){ const have=own.nos.has(n+'|'+c.no);
       if (have){ sets.add(n); facs.add(c.f); types.add(c.kind); if (c.res) S.reserve++; if (xtIsPrem(c)) S.prem++; }
       if (tt){ if (c.pk!=='alt'){ S.base[1]++; if (have) S.base[0]++; } else { S.premAll[1]++; if (have) S.premAll[0]++; } for (const v of xtVariants(c)){ S.master[1]++; if (own.prints.has(xtKey(n,c.no,v))) S.master[0]++; } } } }
-  for (const c of mine){ const d=xtD(c.k); if (!d.sealed && d.v==='F' && d.card.rar==='leg') S.prem++; }
+  for (const c of mine){ const d=xtD(c.k); if (!d.sealed && xtFoilish(d.v) && d.card.rar==='leg') S.prem++; }
   S.fac=facs.size; S.types=types.size; S.sets=sets.size;
   for (const c of mine){ if (c.g===10) S.gem++; const d=xtD(c.k); if (d.sealed && d.v==='B' && c.a && c.a[0]!=null) S.held=Math.max(S.held, G.day-c.a[0]); }
   for (const id in G.xtc){ const c=G.xtc[id]; if (c.o!==0 && (c.h||[]).some(h=>typeof h[1]==='string' && h[1].startsWith('Sold'))) { S.sold++; break; } }

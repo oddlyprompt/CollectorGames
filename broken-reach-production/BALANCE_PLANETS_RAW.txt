@@ -1,0 +1,9 @@
+first-player share of decided games by planet (greedy vs greedy, 250 random-deck games per planet)
+  v0.2            Karth 39% | Vesper 43% | Drael 42% | Gallow's Rest 36% | Nhelos 37% | Velvet Mile 42% | Grave Markets 33% | Lost Aperture 40%
+  komi 2          Karth 47% | Vesper 54% | Drael 56% | Gallow's Rest 44% | Nhelos 44% | Velvet Mile 50% | Grave Markets 38% | Lost Aperture 46%
+  last Attack -1  Karth 50% | Vesper 50% | Drael 50% | Gallow's Rest 58% | Nhelos 53% | Velvet Mile 54% | Grave Markets 57% | Lost Aperture 52%
+
+preset deck matchups (row deck win rate vs column deck, greedy, both seats, 600 games, draws count half)
+  v0.2            dockside>openlanes 50%  dockside>bulwark 48%  openlanes>dockside 51%  openlanes>bulwark 55%  bulwark>dockside 52%  bulwark>openlanes 46%
+  komi 2          dockside>openlanes 50%  dockside>bulwark 48%  openlanes>dockside 52%  openlanes>bulwark 55%  bulwark>dockside 52%  bulwark>openlanes 46%
+  last Attack -1  dockside>openlanes 53%  dockside>bulwark 49%  openlanes>dockside 55%  openlanes>bulwark 55%  bulwark>dockside 52%  bulwark>openlanes 44%

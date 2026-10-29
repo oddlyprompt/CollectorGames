@@ -1,0 +1,4 @@
+{"status":"experimental turn-order options (not final; see TURN_ORDER_REPORT.md). 'Standard' is added by the game itself.",
+ "rulesets":[
+  {"id":"komi2","name":"Fair start A (trial)","desc":"Trial rule, recommended by simulation: the first player gets a 2-point bonus at the end, so the second player must win 10–6 or better to win outright (9–7 is a draw).","rules":{"komi":2}},
+  {"id":"last1","name":"Fair start B (trial)","desc":"Trial rule: the 16th and last placement has Attack −1 (to take away the second player's unanswerable final strike). No bonus points.","rules":{"lastMinus":1}}]}

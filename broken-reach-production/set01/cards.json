@@ -1,0 +1,6409 @@
+{
+ "franchise": "broken-reach",
+ "set": "BR01",
+ "name": "A Ship of Our Own",
+ "status": "proposed (v0.1, provisional)",
+ "combat": "0.2",
+ "booster": {
+  "cards": 10,
+  "packs_per_box": 24,
+  "composition": {
+   "common": 4,
+   "uncommon": 3,
+   "rare_plus": 1,
+   "foil_or_premium": 1,
+   "wildcard": 1
+  },
+  "rare_plus_distribution": {
+   "Rare": 0.8,
+   "Super Rare": 0.17,
+   "Legendary": 0.03
+  },
+  "premium_art_rates_per_pack": {
+   "Illustration Rare": 0.08333333333333333,
+   "Signature Rare": 0.013888888888888888,
+   "Eclipse Rare": 0.001388888888888889
+  }
+ },
+ "sourceSha256": "be95ccdc283ea59488388dec2970655336a96e167438c87f18e961d6bb93ce82",
+ "cards": [
+  {
+   "base_card_id": "BR01-001",
+   "name": "The First Promise",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "L",
+   "mask": 124,
+   "atk": 3,
+   "grd": 1,
+   "text": "On placement, gain +1 Attack if adjacent to an enemy Ship.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjEnemyShip",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile the first promise space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-002",
+   "name": "The Last Argument",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "L",
+   "mask": 135,
+   "atk": 5,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack if adjacent to a friendly Pilot.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriendPilot",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile the last argument space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-003",
+   "name": "Karth Dockrunner",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 68,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile karth dockrunner space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-004",
+   "name": "Patchwork Courier",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 68,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile patchwork courier space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-005",
+   "name": "Sidewinder Interceptor",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "R",
+   "mask": 135,
+   "atk": 5,
+   "grd": 3,
+   "text": "On placement, this unit ignores reciprocal-arrow Guard bonuses.",
+   "ops": [
+    {
+     "k": "place_ignore_recip"
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile sidewinder interceptor space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-006",
+   "name": "Gravelark Skiff",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 199,
+   "atk": 1,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile gravelark skiff space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-007",
+   "name": "Drift Circuit Racer",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 12,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile drift circuit racer space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-008",
+   "name": "Knifepoint Shuttle",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 68,
+   "atk": 4,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile knifepoint shuttle space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-009",
+   "name": "Redwake Clipper",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "R",
+   "mask": 34,
+   "atk": 3,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile redwake clipper space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-010",
+   "name": "Starlit Mule",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 7,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile starlit mule space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-011",
+   "name": "Rimline Escort",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "R",
+   "mask": 124,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile rimline escort space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-012",
+   "name": "Sablewake Gunship",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 193,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile sablewake gunship space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-013",
+   "name": "Vanno Glory",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "SR",
+   "mask": 5,
+   "atk": 4,
+   "grd": 2,
+   "text": "Gain +1 Attack when challenging a unit whose printed Guard is higher than yours.",
+   "ops": [
+    {
+     "k": "atk_vs_higher",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "vain violet-toned Vaelari syndicate upstart, extravagant crimson tailoring and gold jewelry, smug look, visibly overdecorated tech; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-014",
+   "name": "Debt Collector",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 68,
+   "atk": 4,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile debt collector space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-015",
+   "name": "Gallow's Rest Patrol",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 193,
+   "atk": 2,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile gallow's rest patrol space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-016",
+   "name": "Silas's Privilege",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "R",
+   "mask": 124,
+   "atk": 3,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile silas's privilege space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-017",
+   "name": "Black Ledger Freighter",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "R",
+   "mask": 30,
+   "atk": 5,
+   "grd": 3,
+   "text": "When captured, this unit gains +1 Attack for its activation.",
+   "ops": [
+    {
+     "k": "cap_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile black ledger freighter space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-018",
+   "name": "Tithe Runner",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 199,
+   "atk": 1,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile tithe runner space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-019",
+   "name": "Quiet Collector",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "R",
+   "mask": 85,
+   "atk": 4,
+   "grd": 3,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile quiet collector space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-020",
+   "name": "Veyne Interdictor",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 224,
+   "atk": 4,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile veyne interdictor space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-021",
+   "name": "Customs Ghost",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "R",
+   "mask": 199,
+   "atk": 2,
+   "grd": 3,
+   "text": "When captured, this unit gains +1 Attack for its activation.",
+   "ops": [
+    {
+     "k": "cap_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile customs ghost space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-022",
+   "name": "Amber Tollship",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 68,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile amber tollship space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-023",
+   "name": "Sovereign Mercy",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "L",
+   "mask": 124,
+   "atk": 4,
+   "grd": 3,
+   "text": "Adjacent friendly Crew & Military units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Crew & Military"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile sovereign mercy space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-024",
+   "name": "Bastion-Class Frigate",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 124,
+   "atk": 1,
+   "grd": 1,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile bastion-class frigate space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-025",
+   "name": "Wardlight Interceptor",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "R",
+   "mask": 135,
+   "atk": 4,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile wardlight interceptor space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-026",
+   "name": "Peregrine Patrol",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 30,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile peregrine patrol space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-027",
+   "name": "Ordinance Tender",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 85,
+   "atk": 2,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile ordinance tender space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-028",
+   "name": "Concordance Cutter",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 12,
+   "atk": 3,
+   "grd": 3,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile concordance cutter space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-029",
+   "name": "Aegis Torpedo Boat",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "R",
+   "mask": 17,
+   "atk": 5,
+   "grd": 3,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile aegis torpedo boat space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-030",
+   "name": "Greyline Transport",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "R",
+   "mask": 31,
+   "atk": 2,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile greyline transport space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-031",
+   "name": "Oathbound Destroyer",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "R",
+   "mask": 85,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile oathbound destroyer space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-032",
+   "name": "Ember Squadron",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 68,
+   "atk": 4,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile ember squadron space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-033",
+   "name": "Helix Dividend",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "R",
+   "mask": 5,
+   "atk": 3,
+   "grd": 4,
+   "text": "Adjacent friendly Ship units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Ship"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile helix dividend space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-034",
+   "name": "Gilded Monolith",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "R",
+   "mask": 30,
+   "atk": 4,
+   "grd": 4,
+   "text": "While controlled, this unit gains +1 Guard on corner spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile gilded monolith space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-035",
+   "name": "Executive Transit",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "R",
+   "mask": 7,
+   "atk": 5,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile executive transit space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-036",
+   "name": "Asset Recovery Skiff",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 224,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile asset recovery skiff space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-037",
+   "name": "Patent Warden",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 68,
+   "atk": 3,
+   "grd": 2,
+   "text": "While controlled, this unit gains +1 Guard on corner spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile patent warden space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-038",
+   "name": "Veyr Security Corvette",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 135,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile veyr security corvette space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-039",
+   "name": "The Long Receipt",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "R",
+   "mask": 224,
+   "atk": 3,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile the long receipt space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-040",
+   "name": "Treasury Ark",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 84,
+   "atk": 3,
+   "grd": 3,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile treasury ark space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-041",
+   "name": "Black Communion",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Quiet Assembly",
+   "rar": "L",
+   "mask": 240,
+   "atk": 5,
+   "grd": 3,
+   "text": "On placement, rotate one adjacent friendly unit 90°.",
+   "ops": [
+    {
+     "k": "place_rotate",
+     "who": "friend"
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile black communion space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-042",
+   "name": "Reliquary Skiff",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Quiet Assembly",
+   "rar": "R",
+   "mask": 170,
+   "atk": 3,
+   "grd": 3,
+   "text": "Adjacent friendly Ship units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Ship"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile reliquary skiff space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-043",
+   "name": "Whisper Probe",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Quiet Assembly",
+   "rar": "U",
+   "mask": 34,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile whisper probe space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-044",
+   "name": "Vigilance of Glass",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Quiet Assembly",
+   "rar": "R",
+   "mask": 17,
+   "atk": 5,
+   "grd": 4,
+   "text": "On placement, this unit ignores reciprocal-arrow Guard bonuses.",
+   "ops": [
+    {
+     "k": "place_ignore_recip"
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile vigilance of glass space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-045",
+   "name": "Pilgrim's Wake",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Quiet Assembly",
+   "rar": "U",
+   "mask": 193,
+   "atk": 2,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile pilgrim's wake space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-046",
+   "name": "Null Choir Frigate",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Quiet Assembly",
+   "rar": "SR",
+   "mask": 199,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile null choir frigate space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-047",
+   "name": "Selyth Tidewing",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Independent",
+   "rar": "SR",
+   "mask": 84,
+   "atk": 5,
+   "grd": 4,
+   "text": "When captured, rotate this unit 90° before it activates.",
+   "ops": [
+    {
+     "k": "cap_rotate"
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile selyth tidewing space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-048",
+   "name": "Khepri Vectorcraft",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 5,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile khepri vectorcraft space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-049",
+   "name": "Orren Needlewing",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 80,
+   "atk": 4,
+   "grd": 2,
+   "text": "While controlled, this unit gains +1 Guard on corner spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile orren needlewing space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-050",
+   "name": "Dravak Stonebreaker",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 135,
+   "atk": 5,
+   "grd": 2,
+   "text": "On placement, this unit ignores reciprocal-arrow Guard bonuses.",
+   "ops": [
+    {
+     "k": "place_ignore_recip"
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile dravak stonebreaker space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-051",
+   "name": "Gravwell Tug",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 240,
+   "atk": 3,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Ship / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile gravwell tug space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-052",
+   "name": "Grave Market Hauler",
+   "type": "ship",
+   "typeName": "Ship",
+   "aff": "Independent",
+   "rar": "U",
+   "mask": 68,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Ship / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive full-profile grave market hauler space vessel; silhouette clearly reads at card size, visible engines and plausible weathered plating; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-053",
+   "name": "Kaia Venn — Reckless Ace",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "SR",
+   "mask": 85,
+   "atk": 4,
+   "grd": 2,
+   "text": "On placement, add one missing diagonal arrow for this cascade.",
+   "ops": [
+    {
+     "k": "place_add_diag"
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "23-year-old human ace pilot, messy dark auburn hair, freckles, brazen grin, worn burgundy flight jacket; cockpit or daring flight sequence; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-054",
+   "name": "Tavi — Ship Savant",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "SR",
+   "mask": 240,
+   "atk": 3,
+   "grd": 3,
+   "text": "Your adjacent Ship units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Ship"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "small gentle tawny-furred Orren ship enthusiast, long expressive ears, amber eyes, utility overalls, carefully handling complex ship machinery; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-055",
+   "name": "Dorrak — Unsworn Guard",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "SR",
+   "mask": 170,
+   "atk": 4,
+   "grd": 3,
+   "text": "Adjacent friendly units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {},
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "young broad Dravak recruit with layered stony dermal plates and four eyes, modest battered guard armor, sincere imposing stance; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-056",
+   "name": "Elias Voss — Assigned Specialist",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "SR",
+   "mask": 199,
+   "atk": 4,
+   "grd": 3,
+   "text": "On placement, one adjacent enemy loses reciprocal-arrow Guard bonus this turn.",
+   "ops": [
+    {
+     "k": "place_enemy_norecip"
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "27-year-old human male systems engineer, short dark hair, reserved gaze, austere modular technical jacket, active diagnostic projection; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-057",
+   "name": "Lyssara Vale — Velvet Tongue",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "SR",
+   "mask": 12,
+   "atk": 3,
+   "grd": 4,
+   "text": "On placement, rotate one adjacent enemy unit 90° before your attacks.",
+   "ops": [
+    {
+     "k": "place_rotate",
+     "who": "enemy"
+    }
+   ],
+   "role": "Named operative / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "striking confident adult Vaelari woman, charcoal-opalescent skin, elegant cranial ridges, discreet bioluminescent markings, bold expensive tailored attire; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-058",
+   "name": "Neru Sael — Suit Pioneer",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "SR",
+   "mask": 224,
+   "atk": 4,
+   "grd": 4,
+   "text": "Ignore negative Planet modifiers on this unit.",
+   "ops": [
+    {
+     "k": "ignore_neg_planet"
+    }
+   ],
+   "role": "Named operative / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "aloof blue-green amphibious Selyth inventor in ingenious articulated transparent circulation exosuit, visible fluid valves and adaptive limbs; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-059",
+   "name": "Kaia Venn — Impossible Run",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "L",
+   "mask": 87,
+   "atk": 4,
+   "grd": 2,
+   "text": "On placement, rotate this unit 90° before resolving its arrows.",
+   "ops": [
+    {
+     "k": "place_rotate_self"
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "23-year-old human ace pilot, messy dark auburn hair, freckles, brazen grin, worn burgundy flight jacket; cockpit or daring flight sequence; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-060",
+   "name": "Tavi — First Mate",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Free Captains",
+   "rar": "SR",
+   "mask": 240,
+   "atk": 3,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "small gentle tawny-furred Orren ship enthusiast, long expressive ears, amber eyes, utility overalls, carefully handling complex ship machinery; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-061",
+   "name": "Silas Veyne — Exchange Master",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyne Exchange",
+   "rar": "L",
+   "mask": 84,
+   "atk": 4,
+   "grd": 2,
+   "text": "Adjacent Veyne Exchange units gain +1 Attack while this unit is controlled.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "atk",
+     "f": {
+      "aff": "Veyne Exchange"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "older poised human crime lord, silver hair, tailored oxblood suit, gold cybernetic details and an unreadable expression; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-062",
+   "name": "Rix Vanno — Self-Proclaimed Nemesis",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyne Exchange",
+   "rar": "SR",
+   "mask": 5,
+   "atk": 5,
+   "grd": 2,
+   "text": "On placement, one adjacent enemy loses 1 Guard for this cascade.",
+   "ops": [
+    {
+     "k": "place_enemy_guard",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "vain violet-toned Vaelari syndicate upstart, extravagant crimson tailoring and gold jewelry, smug look, visibly overdecorated tech; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-063",
+   "name": "Rix Vanno — Dockside Disaster",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyne Exchange",
+   "rar": "SR",
+   "mask": 17,
+   "atk": 3,
+   "grd": 2,
+   "text": "When captured, its new controller's next attacker has -1 Attack this cascade.",
+   "ops": [
+    {
+     "k": "cap_next_attacker_penalty",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "vain violet-toned Vaelari syndicate upstart, extravagant crimson tailoring and gold jewelry, smug look, visibly overdecorated tech; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-064",
+   "name": "Brakka Sorn — Debt Marshal",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyne Exchange",
+   "rar": "R",
+   "mask": 240,
+   "atk": 4,
+   "grd": 3,
+   "text": "While controlled, this unit gains +1 Guard on corner spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Brakka Sorn — Debt Marshal; anatomically credible adult or alien design, personality shown through one readable action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-065",
+   "name": "Juno Krell — Quiet Knife",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyne Exchange",
+   "rar": "R",
+   "mask": 12,
+   "atk": 5,
+   "grd": 3,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Juno Krell — Quiet Knife; anatomically credible adult or alien design, personality shown through one readable action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-066",
+   "name": "Vera Quill — Dock Magistrate",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyne Exchange",
+   "rar": "R",
+   "mask": 84,
+   "atk": 3,
+   "grd": 3,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Vera Quill — Dock Magistrate; anatomically credible adult or alien design, personality shown through one readable action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-067",
+   "name": "Admiral Irena Sol",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Concordance Remnant",
+   "rar": "SR",
+   "mask": 31,
+   "atk": 3,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Admiral Irena Sol; anatomically credible adult or alien design, personality shown through one readable action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-068",
+   "name": "Commander Tavren Holt",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Concordance Remnant",
+   "rar": "R",
+   "mask": 30,
+   "atk": 5,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Commander Tavren Holt; anatomically credible adult or alien design, personality shown through one readable action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-069",
+   "name": "Captain Nera Quist",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Concordance Remnant",
+   "rar": "SR",
+   "mask": 193,
+   "atk": 3,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Captain Nera Quist; anatomically credible adult or alien design, personality shown through one readable action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-070",
+   "name": "Inspector Alvo Penn",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Concordance Remnant",
+   "rar": "R",
+   "mask": 135,
+   "atk": 4,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Inspector Alvo Penn; anatomically credible adult or alien design, personality shown through one readable action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-071",
+   "name": "Lieutenant Kes Marr",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Concordance Remnant",
+   "rar": "R",
+   "mask": 240,
+   "atk": 5,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Lieutenant Kes Marr; anatomically credible adult or alien design, personality shown through one readable action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-072",
+   "name": "Seren Veyr — Contract Sovereign",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyr Consortium",
+   "rar": "L",
+   "mask": 124,
+   "atk": 2,
+   "grd": 1,
+   "text": "Your adjacent Veyr Consortium units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "aff": "Veyr Consortium"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "mature icy-blonde corporate dynast, tailored black formalwear, gold accents, ruthless expression in private boardroom; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-073",
+   "name": "Director Ossik Ren",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 84,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Director Ossik Ren; anatomically credible adult or alien design, personality shown through one readable action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-074",
+   "name": "Mara Celis — Compliance Chief",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyr Consortium",
+   "rar": "SR",
+   "mask": 30,
+   "atk": 5,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack for this cascade if adjacent to a friendly unit.",
+   "ops": [
+    {
+     "k": "place_atk",
+     "if": "adjFriend",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Mara Celis — Compliance Chief; anatomically credible adult or alien design, personality shown through one readable action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-075",
+   "name": "Eden Marr — Patent Hunter",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyr Consortium",
+   "rar": "SR",
+   "mask": 17,
+   "atk": 3,
+   "grd": 2,
+   "text": "Adjacent friendly Ship units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Ship"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Eden Marr — Patent Hunter; anatomically credible adult or alien design, personality shown through one readable action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-076",
+   "name": "Lia Dray — Salvage Broker",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Veyr Consortium",
+   "rar": "SR",
+   "mask": 12,
+   "atk": 4,
+   "grd": 3,
+   "text": "While controlled, this unit gains +1 Guard on edge spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "edge",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Lia Dray — Salvage Broker; anatomically credible adult or alien design, personality shown through one readable action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-077",
+   "name": "Prelate Seroth",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Quiet Assembly",
+   "rar": "R",
+   "mask": 34,
+   "atk": 5,
+   "grd": 3,
+   "text": "While controlled, this unit gains +1 Guard on corner spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Prelate Seroth; anatomically credible adult or alien design, personality shown through one readable action; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-078",
+   "name": "Sister Vennik — Gate Listener",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Quiet Assembly",
+   "rar": "R",
+   "mask": 135,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Sister Vennik — Gate Listener; anatomically credible adult or alien design, personality shown through one readable action; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-079",
+   "name": "Ilan Kade — Unreturned",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Quiet Assembly",
+   "rar": "L",
+   "mask": 12,
+   "atk": 4,
+   "grd": 3,
+   "text": "After this unit is captured, rotate it 90° before it activates.",
+   "ops": [
+    {
+     "k": "cap_rotate"
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Ilan Kade — Unreturned; anatomically credible adult or alien design, personality shown through one readable action; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-080",
+   "name": "Archivist Oruun",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Quiet Assembly",
+   "rar": "R",
+   "mask": 85,
+   "atk": 5,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Archivist Oruun; anatomically credible adult or alien design, personality shown through one readable action; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-081",
+   "name": "Yara Seln — Drift Champion",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 5,
+   "atk": 3,
+   "grd": 4,
+   "text": "While controlled, this unit gains +1 Guard on corner spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Yara Seln — Drift Champion; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-082",
+   "name": "Sathri of Vesper",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 80,
+   "atk": 4,
+   "grd": 4,
+   "text": "Adjacent friendly Ship units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Ship"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Sathri of Vesper; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-083",
+   "name": "Nim Rell — Khepri Cartographer",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 17,
+   "atk": 5,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Nim Rell — Khepri Cartographer; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-084",
+   "name": "Korrin Vesh — Veteran Hauler",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "SR",
+   "mask": 80,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Korrin Vesh — Veteran Hauler; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-085",
+   "name": "Bexa Nim — Dealer of Favors",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 85,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Bexa Nim — Dealer of Favors; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-086",
+   "name": "Veshra — Orren Pit Boss",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "SR",
+   "mask": 84,
+   "atk": 5,
+   "grd": 2,
+   "text": "Adjacent friendly Ship units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Ship"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Veshra — Orren Pit Boss; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-087",
+   "name": "Rellix — Station Balladeer",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 80,
+   "atk": 3,
+   "grd": 2,
+   "text": "On placement, this unit ignores reciprocal-arrow Guard bonuses.",
+   "ops": [
+    {
+     "k": "place_ignore_recip"
+    }
+   ],
+   "role": "Named operative / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Rellix — Station Balladeer; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-088",
+   "name": "Mara Deth — Salvage Judge",
+   "type": "char",
+   "typeName": "Character",
+   "aff": "Independent",
+   "rar": "R",
+   "mask": 199,
+   "atk": 3,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Named operative / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "distinctive named character Mara Deth — Salvage Judge; anatomically credible adult or alien design, personality shown through one readable action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-089",
+   "name": "Dockside Lookout",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 224,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "dockside lookout, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-090",
+   "name": "Scrapline Bruiser",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 170,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "scrapline bruiser, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-091",
+   "name": "Runaway Deckhand",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 7,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "runaway deckhand, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-092",
+   "name": "Freelance Navigator",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 224,
+   "atk": 4,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "freelance navigator, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-093",
+   "name": "Unlicensed Marine",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 240,
+   "atk": 2,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "unlicensed marine, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-094",
+   "name": "Cargo Hold Defender",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 68,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "cargo hold defender, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-095",
+   "name": "Barroom Peacekeeper",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 124,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "barroom peacekeeper, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-096",
+   "name": "Corsair Boarding Team",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 5,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "corsair boarding team, 1-3 diverse species in practical functional gear performing a specific action; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-097",
+   "name": "Exchange Collectors",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 68,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "exchange collectors, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-098",
+   "name": "Enforcer's Nephew",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 84,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "enforcer's nephew, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-099",
+   "name": "Dockside Ambushers",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 84,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "dockside ambushers, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-100",
+   "name": "Paid Witness",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 34,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "paid witness, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-101",
+   "name": "Gallow's Rest Thugs",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 5,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "gallow's rest thugs, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-102",
+   "name": "Contract Repossessors",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 84,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "contract repossessors, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-103",
+   "name": "Syndicate Boarding Party",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 34,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "syndicate boarding party, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-104",
+   "name": "Bribed Port Guards",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 240,
+   "atk": 4,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "bribed port guards, 1-3 diverse species in practical functional gear performing a specific action; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-105",
+   "name": "Remnant Shield Line",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 193,
+   "atk": 2,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "remnant shield line, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-106",
+   "name": "Transit Marines",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 7,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "transit marines, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-107",
+   "name": "Hull Breach Team",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 31,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "hull breach team, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-108",
+   "name": "Gatewatch Scouts",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 34,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "gatewatch scouts, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-109",
+   "name": "Veteran Evac Squad",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 193,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "veteran evac squad, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-110",
+   "name": "Signal Corps Pair",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 193,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "signal corps pair, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-111",
+   "name": "Remnant Skirmishers",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 199,
+   "atk": 1,
+   "grd": 1,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "remnant skirmishers, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-112",
+   "name": "Field Mediator",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 193,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "field mediator, 1-3 diverse species in practical functional gear performing a specific action; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-113",
+   "name": "Private Security Detail",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 124,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "private security detail, 1-3 diverse species in practical functional gear performing a specific action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-114",
+   "name": "Executive Bodyguard",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 30,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "executive bodyguard, 1-3 diverse species in practical functional gear performing a specific action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-115",
+   "name": "Dividend Marines",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 30,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "dividend marines, 1-3 diverse species in practical functional gear performing a specific action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-116",
+   "name": "Acquisition Officer",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 17,
+   "atk": 4,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "acquisition officer, 1-3 diverse species in practical functional gear performing a specific action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-117",
+   "name": "Corporate Boarding Team",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 240,
+   "atk": 2,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "corporate boarding team, 1-3 diverse species in practical functional gear performing a specific action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-118",
+   "name": "Hazard Claims Agent",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 224,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "hazard claims agent, 1-3 diverse species in practical functional gear performing a specific action; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-119",
+   "name": "Signal Penitents",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 124,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "signal penitents, 1-3 diverse species in practical functional gear performing a specific action; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-120",
+   "name": "Pale Acolytes",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 199,
+   "atk": 1,
+   "grd": 1,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "pale acolytes, 1-3 diverse species in practical functional gear performing a specific action; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-121",
+   "name": "Null-Vow Sentinels",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 68,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "null-vow sentinels, 1-3 diverse species in practical functional gear performing a specific action; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-122",
+   "name": "Dravak Refugee Guard",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 17,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "dravak refugee guard, 1-3 diverse species in practical functional gear performing a specific action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-123",
+   "name": "Orren Cargo Runners",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 7,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "orren cargo runners, 1-3 diverse species in practical functional gear performing a specific action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-124",
+   "name": "Khepri Linekeepers",
+   "type": "crew",
+   "typeName": "Crew & Military",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 68,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "khepri linekeepers, 1-3 diverse species in practical functional gear performing a specific action; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-125",
+   "name": "Jury-Rigged Scout Drone",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 5,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "jury-rigged scout drone, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-126",
+   "name": "Hull-Crawler",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 85,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "hull-crawler, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-127",
+   "name": "Scrap Hound",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 5,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "scrap hound, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-128",
+   "name": "Cargo Sling Automaton",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 193,
+   "atk": 4,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "cargo sling automaton, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-129",
+   "name": "Pocket Recon Unit",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 12,
+   "atk": 2,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "pocket recon unit, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-130",
+   "name": "Blackmail Recorder",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 224,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "blackmail recorder, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-131",
+   "name": "Debt Mark Drone",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 124,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "debt mark drone, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-132",
+   "name": "Vanno Decoy Bot",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 34,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "vain violet-toned Vaelari syndicate upstart, extravagant crimson tailoring and gold jewelry, smug look, visibly overdecorated tech; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-133",
+   "name": "Smuggler's Sensor Wisp",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 12,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "smuggler's sensor wisp, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-134",
+   "name": "Cargo Trap Spider",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyne Exchange",
+   "rar": "C",
+   "mask": 224,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "cargo trap spider, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-135",
+   "name": "Gatewatch Sentry",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 135,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "gatewatch sentry, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-136",
+   "name": "Defence Net Drone",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 124,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "defence net drone, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-137",
+   "name": "Medical Extraction Bot",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 85,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "medical extraction bot, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-138",
+   "name": "Gravmine Monitor",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Concordance Remnant",
+   "rar": "C",
+   "mask": 80,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "gravmine monitor, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-139",
+   "name": "Patent-Locked Drone",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 224,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "patent-locked drone, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-140",
+   "name": "Contract Enforcement Walker",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 31,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "contract enforcement walker, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-141",
+   "name": "Security Halo",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 124,
+   "atk": 1,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "security halo, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-142",
+   "name": "Veyr Audit Swarm",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Veyr Consortium",
+   "rar": "C",
+   "mask": 84,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "veyr audit swarm, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-143",
+   "name": "Lattice Echo",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 7,
+   "atk": 4,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "lattice echo, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-144",
+   "name": "Nullglass Sentinel",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 193,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "nullglass sentinel, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-145",
+   "name": "Memory Moth",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 85,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "memory moth, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-146",
+   "name": "Whispering Fragment",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 224,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "whispering fragment, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-147",
+   "name": "Aperture Warden",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 68,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "aperture warden, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-148",
+   "name": "Stormglass Ray",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 34,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "stormglass ray, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-149",
+   "name": "Karth Dune Stalker",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 240,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "karth dune stalker, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-150",
+   "name": "Vesper Reef Glider",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 5,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "vesper reef glider, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-151",
+   "name": "Nhelos Spore Strider",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 135,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "nhelos spore strider, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-152",
+   "name": "Selyth Deepwing",
+   "type": "drone",
+   "typeName": "Drone & Creature",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 5,
+   "atk": 4,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "selyth deepwing, clearly identifiable autonomous machine or alien life form with unique anatomy and strong silhouette; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-153",
+   "name": "Portable Decoy Beacon",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 7,
+   "atk": 2,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Deployable / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "portable decoy beacon as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-154",
+   "name": "Junkyard Shield Pylon",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Free Captains",
+   "rar": "C",
+   "mask": 240,
+   "atk": 3,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "junkyard shield pylon as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-155",
+   "name": "Field Repair Spider",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 193,
+   "atk": 4,
+   "grd": 4,
+   "text": "While controlled, this unit gains +1 Guard on corner spaces.",
+   "ops": [
+    {
+     "k": "stat_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Deployable / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "field repair spider as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-156",
+   "name": "Experimental Signal Buoy",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Free Captains",
+   "rar": "U",
+   "mask": 170,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "experimental signal buoy as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; weathered outlaw freighter docks, patches, amber worklights and improvised gear; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-157",
+   "name": "Ghost Toll Relay",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 68,
+   "atk": 3,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "ghost toll relay as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-158",
+   "name": "Contraband Scrambler",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 84,
+   "atk": 4,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "contraband scrambler as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-159",
+   "name": "Black Ledger Terminal",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 240,
+   "atk": 2,
+   "grd": 2,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "black ledger terminal as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-160",
+   "name": "Hidden Customs Array",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 34,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "hidden customs array as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; brutalist smuggling station, burgundy contraband signage, corrupt security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-161",
+   "name": "Point Defence Turret",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 240,
+   "atk": 4,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "point defence turret as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-162",
+   "name": "Transit Beacon",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 17,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "transit beacon as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-163",
+   "name": "Emergency Barrier Rig",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 170,
+   "atk": 3,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "emergency barrier rig as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-164",
+   "name": "Fleet Coordination Node",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 17,
+   "atk": 4,
+   "grd": 4,
+   "text": "On placement, gain +1 Attack on diagonal challenges this cascade.",
+   "ops": [
+    {
+     "k": "place_diag_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Deployable / Balanced anchor",
+   "era": "Book 1 — Origins",
+   "brief": "fleet coordination node as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; disciplined naval decks, grey military hulls, burnt-gold insignia; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-165",
+   "name": "Acquisition Scanner",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 7,
+   "atk": 2,
+   "grd": 4,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Position holder",
+   "era": "Book 1 — Origins",
+   "brief": "acquisition scanner as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-166",
+   "name": "Monopoly Field Projector",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Veyr Consortium",
+   "rar": "U",
+   "mask": 124,
+   "atk": 2,
+   "grd": 3,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "monopoly field projector as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-167",
+   "name": "Security Lattice Node",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Veyr Consortium",
+   "rar": "R",
+   "mask": 84,
+   "atk": 5,
+   "grd": 4,
+   "text": "Adjacent friendly Ship units gain +1 Guard.",
+   "ops": [
+    {
+     "k": "aura",
+     "stat": "guard",
+     "f": {
+      "type": "Ship"
+     },
+     "amt": 1
+    }
+   ],
+   "role": "Deployable / Precision attacker",
+   "era": "Book 1 — Origins",
+   "brief": "security lattice node as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; corporate arcology, black glass, sumptuous gold and clinical security; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-168",
+   "name": "Unstable Gate Fragment",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 240,
+   "atk": 2,
+   "grd": 2,
+   "text": "When captured, rotate this unit 90° before it activates.",
+   "ops": [
+    {
+     "k": "cap_rotate"
+    }
+   ],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "unstable gate fragment as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-169",
+   "name": "Choral Signal Tower",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Quiet Assembly",
+   "rar": "C",
+   "mask": 124,
+   "atk": 2,
+   "grd": 1,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "choral signal tower as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-170",
+   "name": "Null-Frequency Emitter",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Quiet Assembly",
+   "rar": "U",
+   "mask": 199,
+   "atk": 3,
+   "grd": 1,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "null-frequency emitter as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; ominous gateway architecture, austere rituals and fractured pale light; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-171",
+   "name": "Neru's Pressure Harness",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Independent",
+   "rar": "C",
+   "mask": 135,
+   "atk": 2,
+   "grd": 2,
+   "text": "Ignore negative Planet modifiers on this unit.",
+   "ops": [
+    {
+     "k": "ignore_neg_planet"
+    }
+   ],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "aloof blue-green amphibious Selyth inventor in ingenious articulated transparent circulation exosuit, visible fluid valves and adaptive limbs; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs rule test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-172",
+   "name": "Selyth Hydroframe",
+   "type": "tech",
+   "typeName": "Tech Unit",
+   "aff": "Independent",
+   "rar": "U",
+   "mask": 31,
+   "atk": 2,
+   "grd": 2,
+   "text": "",
+   "ops": [],
+   "role": "Deployable / Versatile flanker",
+   "era": "Book 1 — Origins",
+   "brief": "selyth hydroframe as deployed physical battlefield installation, readable industrial mechanisms and tactical footprint; crowded multicultural frontier port with physically diverse species; cinematic grounded sci-fi, distinct framing and action; no text/card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Stat test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-173",
+   "name": "Karth — Shipgrave Expanse",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Independent",
+   "rar": "U",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "Cards in corner spaces gain +1 Guard.",
+   "ops": [
+    {
+     "k": "pl_guard_pos",
+     "pos": "corner",
+     "amt": 1
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Red desert broken freighter city, salvage rigging, dense rusty horizon; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-174",
+   "name": "Vesper — Ion Tempest",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Independent",
+   "rar": "U",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "Diagonal challenges have -1 Attack, minimum 0.",
+   "ops": [
+    {
+     "k": "pl_diag_penalty",
+     "amt": 1
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Ocean arcologies amid violent blue-white lightning; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-175",
+   "name": "Drael — Prison Moon",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Concordance Remnant",
+   "rar": "U",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "Cards on the four central spaces gain +1 Guard.",
+   "ops": [
+    {
+     "k": "pl_guard_pos",
+     "pos": "center",
+     "amt": 1
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Frozen fortified mining colony, white auroras, concrete; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-176",
+   "name": "Gallow's Rest — Freeport",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Veyne Exchange",
+   "rar": "U",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "Cards on edge spaces gain +1 Attack when placed.",
+   "ops": [
+    {
+     "k": "pl_place_atk_edge",
+     "amt": 1
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Dense orbital freeport, crimson docks, crowded gantries; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-177",
+   "name": "Nhelos — Fractured Geometry",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Quiet Assembly",
+   "rar": "R",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "Once per match, rotate your newly placed card 90° before challenges.",
+   "ops": [
+    {
+     "k": "pl_once_rotate",
+     "deg": 90
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Lush black alien monolith forest, glowing fractures; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-178",
+   "name": "The Velvet Mile — Neutral Orbit",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Veyr Consortium",
+   "rar": "R",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "On the first placement of each player, +1 Guard to that unit.",
+   "ops": [
+    {
+     "k": "pl_first_placement_guard",
+     "amt": 1
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Luxurious ring of casino stations, gold-lit orbit; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-179",
+   "name": "The Grave Markets — Wreck Belt",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Free Captains",
+   "rar": "R",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "Units with exactly two arrows gain +1 Attack.",
+   "ops": [
+    {
+     "k": "pl_two_arrow_atk",
+     "amt": 1
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Asteroid salvage bazaar within starship husks; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  },
+  {
+   "base_card_id": "BR01-180",
+   "name": "The Lost Aperture — Uncharted",
+   "type": "planet",
+   "typeName": "Planet",
+   "aff": "Quiet Assembly",
+   "rar": "SR",
+   "mask": 0,
+   "atk": null,
+   "grd": null,
+   "text": "Once per match, rotate a newly placed unit 180° before challenges.",
+   "ops": [
+    {
+     "k": "pl_once_rotate",
+     "deg": 180
+    }
+   ],
+   "role": "Shared battlefield condition",
+   "era": "Book 1 — Origins",
+   "brief": "Cracked ancient ring gateway opening against violet-black nebula; spectacular lived-in planetary establishing illustration, no typography or card frame",
+   "status": {
+    "art": "Not started",
+    "rules": "Needs planet test",
+    "canon": "PROPOSED"
+   }
+  }
+ ],
+ "alternates": [
+  {
+   "printing_id": "BR01-IL-01",
+   "base_card_id": "BR01-053",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-02",
+   "base_card_id": "BR01-054",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-03",
+   "base_card_id": "BR01-055",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-04",
+   "base_card_id": "BR01-056",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-05",
+   "base_card_id": "BR01-057",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-06",
+   "base_card_id": "BR01-058",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-07",
+   "base_card_id": "BR01-062",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-08",
+   "base_card_id": "BR01-002",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-09",
+   "base_card_id": "BR01-013",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-10",
+   "base_card_id": "BR01-003",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-11",
+   "base_card_id": "BR01-047",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-12",
+   "base_card_id": "BR01-048",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-13",
+   "base_card_id": "BR01-023",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-14",
+   "base_card_id": "BR01-041",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-15",
+   "base_card_id": "BR01-015",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-IL-16",
+   "base_card_id": "BR01-065",
+   "treatment": "IR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-01",
+   "base_card_id": "BR01-059",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-02",
+   "base_card_id": "BR01-057",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-03",
+   "base_card_id": "BR01-061",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-04",
+   "base_card_id": "BR01-072",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-05",
+   "base_card_id": "BR01-002",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-06",
+   "base_card_id": "BR01-041",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-07",
+   "base_card_id": "BR01-079",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-SI-08",
+   "base_card_id": "BR01-058",
+   "treatment": "SR",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-EC-01",
+   "base_card_id": "BR01-059",
+   "treatment": "EC",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-EC-02",
+   "base_card_id": "BR01-002",
+   "treatment": "EC",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  },
+  {
+   "printing_id": "BR01-EC-03",
+   "base_card_id": "BR01-061",
+   "treatment": "EC",
+   "gameplay": "same as base",
+   "art_direction": "Narrative moment / alternate composition; original painting, mature cinematic tone, distinct from base art",
+   "art": "Not started"
+  }
+ ],
+ "printings": [
+  {
+   "printing_id": "BR01-001:N",
+   "base_card_id": "BR01-001",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-001:F",
+   "base_card_id": "BR01-001",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-002:N",
+   "base_card_id": "BR01-002",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-002:F",
+   "base_card_id": "BR01-002",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-003:N",
+   "base_card_id": "BR01-003",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-003:F",
+   "base_card_id": "BR01-003",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-004:N",
+   "base_card_id": "BR01-004",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-004:F",
+   "base_card_id": "BR01-004",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-005:N",
+   "base_card_id": "BR01-005",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-005:F",
+   "base_card_id": "BR01-005",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-006:N",
+   "base_card_id": "BR01-006",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-006:F",
+   "base_card_id": "BR01-006",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-007:N",
+   "base_card_id": "BR01-007",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-007:F",
+   "base_card_id": "BR01-007",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-008:N",
+   "base_card_id": "BR01-008",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-008:F",
+   "base_card_id": "BR01-008",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-009:N",
+   "base_card_id": "BR01-009",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-009:F",
+   "base_card_id": "BR01-009",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-010:N",
+   "base_card_id": "BR01-010",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-010:F",
+   "base_card_id": "BR01-010",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-011:N",
+   "base_card_id": "BR01-011",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-011:F",
+   "base_card_id": "BR01-011",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-012:N",
+   "base_card_id": "BR01-012",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-012:F",
+   "base_card_id": "BR01-012",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-013:N",
+   "base_card_id": "BR01-013",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-013:F",
+   "base_card_id": "BR01-013",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-014:N",
+   "base_card_id": "BR01-014",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-014:F",
+   "base_card_id": "BR01-014",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-015:N",
+   "base_card_id": "BR01-015",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-015:F",
+   "base_card_id": "BR01-015",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-016:N",
+   "base_card_id": "BR01-016",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-016:F",
+   "base_card_id": "BR01-016",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-017:N",
+   "base_card_id": "BR01-017",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-017:F",
+   "base_card_id": "BR01-017",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-018:N",
+   "base_card_id": "BR01-018",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-018:F",
+   "base_card_id": "BR01-018",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-019:N",
+   "base_card_id": "BR01-019",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-019:F",
+   "base_card_id": "BR01-019",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-020:N",
+   "base_card_id": "BR01-020",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-020:F",
+   "base_card_id": "BR01-020",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-021:N",
+   "base_card_id": "BR01-021",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-021:F",
+   "base_card_id": "BR01-021",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-022:N",
+   "base_card_id": "BR01-022",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-022:F",
+   "base_card_id": "BR01-022",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-023:N",
+   "base_card_id": "BR01-023",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-023:F",
+   "base_card_id": "BR01-023",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-024:N",
+   "base_card_id": "BR01-024",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-024:F",
+   "base_card_id": "BR01-024",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-025:N",
+   "base_card_id": "BR01-025",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-025:F",
+   "base_card_id": "BR01-025",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-026:N",
+   "base_card_id": "BR01-026",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-026:F",
+   "base_card_id": "BR01-026",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-027:N",
+   "base_card_id": "BR01-027",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-027:F",
+   "base_card_id": "BR01-027",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-028:N",
+   "base_card_id": "BR01-028",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-028:F",
+   "base_card_id": "BR01-028",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-029:N",
+   "base_card_id": "BR01-029",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-029:F",
+   "base_card_id": "BR01-029",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-030:N",
+   "base_card_id": "BR01-030",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-030:F",
+   "base_card_id": "BR01-030",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-031:N",
+   "base_card_id": "BR01-031",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-031:F",
+   "base_card_id": "BR01-031",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-032:N",
+   "base_card_id": "BR01-032",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-032:F",
+   "base_card_id": "BR01-032",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-033:N",
+   "base_card_id": "BR01-033",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-033:F",
+   "base_card_id": "BR01-033",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-034:N",
+   "base_card_id": "BR01-034",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-034:F",
+   "base_card_id": "BR01-034",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-035:N",
+   "base_card_id": "BR01-035",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-035:F",
+   "base_card_id": "BR01-035",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-036:N",
+   "base_card_id": "BR01-036",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-036:F",
+   "base_card_id": "BR01-036",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-037:N",
+   "base_card_id": "BR01-037",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-037:F",
+   "base_card_id": "BR01-037",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-038:N",
+   "base_card_id": "BR01-038",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-038:F",
+   "base_card_id": "BR01-038",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-039:N",
+   "base_card_id": "BR01-039",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-039:F",
+   "base_card_id": "BR01-039",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-040:N",
+   "base_card_id": "BR01-040",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-040:F",
+   "base_card_id": "BR01-040",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-041:N",
+   "base_card_id": "BR01-041",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-041:F",
+   "base_card_id": "BR01-041",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-042:N",
+   "base_card_id": "BR01-042",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-042:F",
+   "base_card_id": "BR01-042",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-043:N",
+   "base_card_id": "BR01-043",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-043:F",
+   "base_card_id": "BR01-043",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-044:N",
+   "base_card_id": "BR01-044",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-044:F",
+   "base_card_id": "BR01-044",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-045:N",
+   "base_card_id": "BR01-045",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-045:F",
+   "base_card_id": "BR01-045",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-046:N",
+   "base_card_id": "BR01-046",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-046:F",
+   "base_card_id": "BR01-046",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-047:N",
+   "base_card_id": "BR01-047",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-047:F",
+   "base_card_id": "BR01-047",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-048:N",
+   "base_card_id": "BR01-048",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-048:F",
+   "base_card_id": "BR01-048",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-049:N",
+   "base_card_id": "BR01-049",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-049:F",
+   "base_card_id": "BR01-049",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-050:N",
+   "base_card_id": "BR01-050",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-050:F",
+   "base_card_id": "BR01-050",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-051:N",
+   "base_card_id": "BR01-051",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-051:F",
+   "base_card_id": "BR01-051",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-052:N",
+   "base_card_id": "BR01-052",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-052:F",
+   "base_card_id": "BR01-052",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-053:N",
+   "base_card_id": "BR01-053",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-053:F",
+   "base_card_id": "BR01-053",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-054:N",
+   "base_card_id": "BR01-054",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-054:F",
+   "base_card_id": "BR01-054",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-055:N",
+   "base_card_id": "BR01-055",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-055:F",
+   "base_card_id": "BR01-055",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-056:N",
+   "base_card_id": "BR01-056",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-056:F",
+   "base_card_id": "BR01-056",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-057:N",
+   "base_card_id": "BR01-057",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-057:F",
+   "base_card_id": "BR01-057",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-058:N",
+   "base_card_id": "BR01-058",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-058:F",
+   "base_card_id": "BR01-058",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-059:N",
+   "base_card_id": "BR01-059",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-059:F",
+   "base_card_id": "BR01-059",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-060:N",
+   "base_card_id": "BR01-060",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-060:F",
+   "base_card_id": "BR01-060",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-061:N",
+   "base_card_id": "BR01-061",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-061:F",
+   "base_card_id": "BR01-061",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-062:N",
+   "base_card_id": "BR01-062",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-062:F",
+   "base_card_id": "BR01-062",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-063:N",
+   "base_card_id": "BR01-063",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-063:F",
+   "base_card_id": "BR01-063",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-064:N",
+   "base_card_id": "BR01-064",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-064:F",
+   "base_card_id": "BR01-064",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-065:N",
+   "base_card_id": "BR01-065",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-065:F",
+   "base_card_id": "BR01-065",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-066:N",
+   "base_card_id": "BR01-066",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-066:F",
+   "base_card_id": "BR01-066",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-067:N",
+   "base_card_id": "BR01-067",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-067:F",
+   "base_card_id": "BR01-067",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-068:N",
+   "base_card_id": "BR01-068",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-068:F",
+   "base_card_id": "BR01-068",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-069:N",
+   "base_card_id": "BR01-069",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-069:F",
+   "base_card_id": "BR01-069",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-070:N",
+   "base_card_id": "BR01-070",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-070:F",
+   "base_card_id": "BR01-070",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-071:N",
+   "base_card_id": "BR01-071",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-071:F",
+   "base_card_id": "BR01-071",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-072:N",
+   "base_card_id": "BR01-072",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-072:F",
+   "base_card_id": "BR01-072",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-073:N",
+   "base_card_id": "BR01-073",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-073:F",
+   "base_card_id": "BR01-073",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-074:N",
+   "base_card_id": "BR01-074",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-074:F",
+   "base_card_id": "BR01-074",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-075:N",
+   "base_card_id": "BR01-075",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-075:F",
+   "base_card_id": "BR01-075",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-076:N",
+   "base_card_id": "BR01-076",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-076:F",
+   "base_card_id": "BR01-076",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-077:N",
+   "base_card_id": "BR01-077",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-077:F",
+   "base_card_id": "BR01-077",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-078:N",
+   "base_card_id": "BR01-078",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-078:F",
+   "base_card_id": "BR01-078",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-079:N",
+   "base_card_id": "BR01-079",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-079:F",
+   "base_card_id": "BR01-079",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-080:N",
+   "base_card_id": "BR01-080",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-080:F",
+   "base_card_id": "BR01-080",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-081:N",
+   "base_card_id": "BR01-081",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-081:F",
+   "base_card_id": "BR01-081",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-082:N",
+   "base_card_id": "BR01-082",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-082:F",
+   "base_card_id": "BR01-082",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-083:N",
+   "base_card_id": "BR01-083",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-083:F",
+   "base_card_id": "BR01-083",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-084:N",
+   "base_card_id": "BR01-084",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-084:F",
+   "base_card_id": "BR01-084",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-085:N",
+   "base_card_id": "BR01-085",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-085:F",
+   "base_card_id": "BR01-085",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-086:N",
+   "base_card_id": "BR01-086",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-086:F",
+   "base_card_id": "BR01-086",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-087:N",
+   "base_card_id": "BR01-087",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-087:F",
+   "base_card_id": "BR01-087",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-088:N",
+   "base_card_id": "BR01-088",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-088:F",
+   "base_card_id": "BR01-088",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-089:N",
+   "base_card_id": "BR01-089",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-089:F",
+   "base_card_id": "BR01-089",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-090:N",
+   "base_card_id": "BR01-090",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-090:F",
+   "base_card_id": "BR01-090",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-091:N",
+   "base_card_id": "BR01-091",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-091:F",
+   "base_card_id": "BR01-091",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-092:N",
+   "base_card_id": "BR01-092",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-092:F",
+   "base_card_id": "BR01-092",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-093:N",
+   "base_card_id": "BR01-093",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-093:F",
+   "base_card_id": "BR01-093",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-094:N",
+   "base_card_id": "BR01-094",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-094:F",
+   "base_card_id": "BR01-094",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-095:N",
+   "base_card_id": "BR01-095",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-095:F",
+   "base_card_id": "BR01-095",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-096:N",
+   "base_card_id": "BR01-096",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-096:F",
+   "base_card_id": "BR01-096",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-097:N",
+   "base_card_id": "BR01-097",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-097:F",
+   "base_card_id": "BR01-097",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-098:N",
+   "base_card_id": "BR01-098",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-098:F",
+   "base_card_id": "BR01-098",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-099:N",
+   "base_card_id": "BR01-099",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-099:F",
+   "base_card_id": "BR01-099",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-100:N",
+   "base_card_id": "BR01-100",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-100:F",
+   "base_card_id": "BR01-100",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-101:N",
+   "base_card_id": "BR01-101",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-101:F",
+   "base_card_id": "BR01-101",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-102:N",
+   "base_card_id": "BR01-102",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-102:F",
+   "base_card_id": "BR01-102",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-103:N",
+   "base_card_id": "BR01-103",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-103:F",
+   "base_card_id": "BR01-103",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-104:N",
+   "base_card_id": "BR01-104",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-104:F",
+   "base_card_id": "BR01-104",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-105:N",
+   "base_card_id": "BR01-105",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-105:F",
+   "base_card_id": "BR01-105",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-106:N",
+   "base_card_id": "BR01-106",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-106:F",
+   "base_card_id": "BR01-106",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-107:N",
+   "base_card_id": "BR01-107",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-107:F",
+   "base_card_id": "BR01-107",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-108:N",
+   "base_card_id": "BR01-108",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-108:F",
+   "base_card_id": "BR01-108",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-109:N",
+   "base_card_id": "BR01-109",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-109:F",
+   "base_card_id": "BR01-109",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-110:N",
+   "base_card_id": "BR01-110",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-110:F",
+   "base_card_id": "BR01-110",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-111:N",
+   "base_card_id": "BR01-111",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-111:F",
+   "base_card_id": "BR01-111",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-112:N",
+   "base_card_id": "BR01-112",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-112:F",
+   "base_card_id": "BR01-112",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-113:N",
+   "base_card_id": "BR01-113",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-113:F",
+   "base_card_id": "BR01-113",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-114:N",
+   "base_card_id": "BR01-114",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-114:F",
+   "base_card_id": "BR01-114",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-115:N",
+   "base_card_id": "BR01-115",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-115:F",
+   "base_card_id": "BR01-115",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-116:N",
+   "base_card_id": "BR01-116",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-116:F",
+   "base_card_id": "BR01-116",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-117:N",
+   "base_card_id": "BR01-117",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-117:F",
+   "base_card_id": "BR01-117",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-118:N",
+   "base_card_id": "BR01-118",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-118:F",
+   "base_card_id": "BR01-118",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-119:N",
+   "base_card_id": "BR01-119",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-119:F",
+   "base_card_id": "BR01-119",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-120:N",
+   "base_card_id": "BR01-120",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-120:F",
+   "base_card_id": "BR01-120",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-121:N",
+   "base_card_id": "BR01-121",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-121:F",
+   "base_card_id": "BR01-121",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-122:N",
+   "base_card_id": "BR01-122",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-122:F",
+   "base_card_id": "BR01-122",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-123:N",
+   "base_card_id": "BR01-123",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-123:F",
+   "base_card_id": "BR01-123",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-124:N",
+   "base_card_id": "BR01-124",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-124:F",
+   "base_card_id": "BR01-124",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-125:N",
+   "base_card_id": "BR01-125",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-125:F",
+   "base_card_id": "BR01-125",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-126:N",
+   "base_card_id": "BR01-126",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-126:F",
+   "base_card_id": "BR01-126",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-127:N",
+   "base_card_id": "BR01-127",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-127:F",
+   "base_card_id": "BR01-127",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-128:N",
+   "base_card_id": "BR01-128",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-128:F",
+   "base_card_id": "BR01-128",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-129:N",
+   "base_card_id": "BR01-129",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-129:F",
+   "base_card_id": "BR01-129",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-130:N",
+   "base_card_id": "BR01-130",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-130:F",
+   "base_card_id": "BR01-130",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-131:N",
+   "base_card_id": "BR01-131",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-131:F",
+   "base_card_id": "BR01-131",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-132:N",
+   "base_card_id": "BR01-132",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-132:F",
+   "base_card_id": "BR01-132",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-133:N",
+   "base_card_id": "BR01-133",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-133:F",
+   "base_card_id": "BR01-133",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-134:N",
+   "base_card_id": "BR01-134",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-134:F",
+   "base_card_id": "BR01-134",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-135:N",
+   "base_card_id": "BR01-135",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-135:F",
+   "base_card_id": "BR01-135",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-136:N",
+   "base_card_id": "BR01-136",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-136:F",
+   "base_card_id": "BR01-136",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-137:N",
+   "base_card_id": "BR01-137",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-137:F",
+   "base_card_id": "BR01-137",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-138:N",
+   "base_card_id": "BR01-138",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-138:F",
+   "base_card_id": "BR01-138",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-139:N",
+   "base_card_id": "BR01-139",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-139:F",
+   "base_card_id": "BR01-139",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-140:N",
+   "base_card_id": "BR01-140",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-140:F",
+   "base_card_id": "BR01-140",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-141:N",
+   "base_card_id": "BR01-141",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-141:F",
+   "base_card_id": "BR01-141",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-142:N",
+   "base_card_id": "BR01-142",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-142:F",
+   "base_card_id": "BR01-142",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-143:N",
+   "base_card_id": "BR01-143",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-143:F",
+   "base_card_id": "BR01-143",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-144:N",
+   "base_card_id": "BR01-144",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-144:F",
+   "base_card_id": "BR01-144",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-145:N",
+   "base_card_id": "BR01-145",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-145:F",
+   "base_card_id": "BR01-145",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-146:N",
+   "base_card_id": "BR01-146",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-146:F",
+   "base_card_id": "BR01-146",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-147:N",
+   "base_card_id": "BR01-147",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-147:F",
+   "base_card_id": "BR01-147",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-148:N",
+   "base_card_id": "BR01-148",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-148:F",
+   "base_card_id": "BR01-148",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-149:N",
+   "base_card_id": "BR01-149",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-149:F",
+   "base_card_id": "BR01-149",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-150:N",
+   "base_card_id": "BR01-150",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-150:F",
+   "base_card_id": "BR01-150",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-151:N",
+   "base_card_id": "BR01-151",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-151:F",
+   "base_card_id": "BR01-151",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-152:N",
+   "base_card_id": "BR01-152",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-152:F",
+   "base_card_id": "BR01-152",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-153:N",
+   "base_card_id": "BR01-153",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-153:F",
+   "base_card_id": "BR01-153",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-154:N",
+   "base_card_id": "BR01-154",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-154:F",
+   "base_card_id": "BR01-154",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-155:N",
+   "base_card_id": "BR01-155",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-155:F",
+   "base_card_id": "BR01-155",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-156:N",
+   "base_card_id": "BR01-156",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-156:F",
+   "base_card_id": "BR01-156",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-157:N",
+   "base_card_id": "BR01-157",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-157:F",
+   "base_card_id": "BR01-157",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-158:N",
+   "base_card_id": "BR01-158",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-158:F",
+   "base_card_id": "BR01-158",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-159:N",
+   "base_card_id": "BR01-159",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-159:F",
+   "base_card_id": "BR01-159",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-160:N",
+   "base_card_id": "BR01-160",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-160:F",
+   "base_card_id": "BR01-160",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-161:N",
+   "base_card_id": "BR01-161",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-161:F",
+   "base_card_id": "BR01-161",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-162:N",
+   "base_card_id": "BR01-162",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-162:F",
+   "base_card_id": "BR01-162",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-163:N",
+   "base_card_id": "BR01-163",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-163:F",
+   "base_card_id": "BR01-163",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-164:N",
+   "base_card_id": "BR01-164",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-164:F",
+   "base_card_id": "BR01-164",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-165:N",
+   "base_card_id": "BR01-165",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-165:F",
+   "base_card_id": "BR01-165",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-166:N",
+   "base_card_id": "BR01-166",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-166:F",
+   "base_card_id": "BR01-166",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-167:N",
+   "base_card_id": "BR01-167",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-167:F",
+   "base_card_id": "BR01-167",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-168:N",
+   "base_card_id": "BR01-168",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-168:F",
+   "base_card_id": "BR01-168",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-169:N",
+   "base_card_id": "BR01-169",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-169:F",
+   "base_card_id": "BR01-169",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-170:N",
+   "base_card_id": "BR01-170",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-170:F",
+   "base_card_id": "BR01-170",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-171:N",
+   "base_card_id": "BR01-171",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-171:F",
+   "base_card_id": "BR01-171",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-172:N",
+   "base_card_id": "BR01-172",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-172:F",
+   "base_card_id": "BR01-172",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-173:N",
+   "base_card_id": "BR01-173",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-173:F",
+   "base_card_id": "BR01-173",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-174:N",
+   "base_card_id": "BR01-174",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-174:F",
+   "base_card_id": "BR01-174",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-175:N",
+   "base_card_id": "BR01-175",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-175:F",
+   "base_card_id": "BR01-175",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-176:N",
+   "base_card_id": "BR01-176",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-176:F",
+   "base_card_id": "BR01-176",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-177:N",
+   "base_card_id": "BR01-177",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-177:F",
+   "base_card_id": "BR01-177",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-178:N",
+   "base_card_id": "BR01-178",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-178:F",
+   "base_card_id": "BR01-178",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-179:N",
+   "base_card_id": "BR01-179",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-179:F",
+   "base_card_id": "BR01-179",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-180:N",
+   "base_card_id": "BR01-180",
+   "v": "N"
+  },
+  {
+   "printing_id": "BR01-180:F",
+   "base_card_id": "BR01-180",
+   "v": "F"
+  },
+  {
+   "printing_id": "BR01-IL-01",
+   "base_card_id": "BR01-053",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-02",
+   "base_card_id": "BR01-054",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-03",
+   "base_card_id": "BR01-055",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-04",
+   "base_card_id": "BR01-056",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-05",
+   "base_card_id": "BR01-057",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-06",
+   "base_card_id": "BR01-058",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-07",
+   "base_card_id": "BR01-062",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-08",
+   "base_card_id": "BR01-002",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-09",
+   "base_card_id": "BR01-013",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-10",
+   "base_card_id": "BR01-003",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-11",
+   "base_card_id": "BR01-047",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-12",
+   "base_card_id": "BR01-048",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-13",
+   "base_card_id": "BR01-023",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-14",
+   "base_card_id": "BR01-041",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-15",
+   "base_card_id": "BR01-015",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-IL-16",
+   "base_card_id": "BR01-065",
+   "v": "IR"
+  },
+  {
+   "printing_id": "BR01-SI-01",
+   "base_card_id": "BR01-059",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-SI-02",
+   "base_card_id": "BR01-057",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-SI-03",
+   "base_card_id": "BR01-061",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-SI-04",
+   "base_card_id": "BR01-072",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-SI-05",
+   "base_card_id": "BR01-002",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-SI-06",
+   "base_card_id": "BR01-041",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-SI-07",
+   "base_card_id": "BR01-079",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-SI-08",
+   "base_card_id": "BR01-058",
+   "v": "SR"
+  },
+  {
+   "printing_id": "BR01-EC-01",
+   "base_card_id": "BR01-059",
+   "v": "EC"
+  },
+  {
+   "printing_id": "BR01-EC-02",
+   "base_card_id": "BR01-002",
+   "v": "EC"
+  },
+  {
+   "printing_id": "BR01-EC-03",
+   "base_card_id": "BR01-061",
+   "v": "EC"
+  }
+ ]
+}

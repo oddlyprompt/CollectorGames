@@ -9,8 +9,8 @@ approves it) and what is missing. Tidemark is the second card game inside the Tr
 - **Tenth Tide** is announced on day one with its Legendaries and alternate arts shown; the rest is revealed over the following weeks; it releases on **26 June 2026**.
   Preorders (retail price, charged on the day), big-box retail (restocked Mondays), the local game store (the Lantern Room: a Thursday allocation, a weekly case of
   singles, a buylist at 55%) and Saltmarket (online singles, every printing near mint at market +15%).
-- **Ten years of history** are already in the world: 30 sets from First Tide (2016) to Tidelines (2025), 500 named cards, each in regular and foil. Their singles and
-  their sealed packs and boxes are on the marketplace, in Saltmarket and in the Lantern Room's case. An old pack opens into its named cards plus bulk.
+- **Ten years of history** are already in the world: 30 sets from First Tide (2016) to Tidelines (2025), 2,261 catalogued cards (every set 70 to 125), each in regular and foil. Their singles and
+  their sealed packs and boxes are on the marketplace, in Saltmarket and in the Lantern Room's case. Every historical set sells 15-card boosters of real cards; the other historical sets have no sealed product (singles only).
 - The marketplace, grading (GCS), listing, auctions, offers, the 3D inspector, the journal and saves are the shared ones, exactly as in Wildkin.
 - Collection goals (an alternate-art pull, every faction, one of each card type, a card from every set, the reserve list, the anniversary base set, every
   alternate art, the master set...), a wantlist with the cheapest source, set checklists with Missing and Wantlist filters, sell duplicates.
@@ -23,8 +23,8 @@ approves it) and what is missing. Tidemark is the second card game inside the Tr
 | Start date and release | The game starts 1 June 2026. Tenth Tide releases Friday 26 June 2026 (the checklist says only "spring 2026"; the brief says "a few weeks in"). |
 | Historical release dates | Third Friday of April, July and October of each set's year (the checklist gives year and season only). |
 | Prices | Pack $4.99, box (36 packs) $144; the Lantern Room $5.49 / $159.99. |
-| Pack | 12 cards: 8 common, 3 uncommon, 1 rare slot; Legendary instead of the rare 1 pack in 8; a foil replaces a common 1 pack in 6 (rarity 60/28/10/2% C/U/R/L); an alternate art replaces the rare slot 1 pack in 60 (Tenth Tide only). |
-| Bulk | A historical set is 200 or 250 cards but only its named cards exist. An unnamed slot is bulk, worth 2 cents, sold to the bulk bin when a pack is opened. |
+| Pack | 15 cards (classic booster, changed 2026-10-21): 10 common, 3 uncommon, 1 rare slot; Legendary instead of the rare 1 pack in 8; the 15th card is one more common or, 1 pack in 4, a foil (rarity 60/28/10/2% C/U/R/L); an alternate art replaces the rare slot 1 pack in 60 (Tenth Tide only). Box 36 packs. |
+| Products | No bulk and no invisible filler (2026-10-23). A booster exists only for a set with at least 40 Commons, 15 Uncommons and 10 Rares or Legendaries: Every set (Tenth Tide and all thirty historical sets). A set below the thresholds would be singles-only; other historical sets are singles-only until a content wave brings them to that size (`checklist_supp.py`). |
 | Print policy | Only Tenth Tide is printed (425 days, restocked Mondays, then out of print). Every older set is out of print at the start. |
 | Formats | Standard before Tenth Tide = sets of the last two years (5 sets on day one; play value from card ratings only). When Tenth Tide releases, Standard = its 220 cards alone (announced as a rotation); every other card is Eternal-only. The engine does not simulate Eternal; its demand comes from card rating alone. |
 | Collector fandom | Faction weights (Free Fleets .66, Abyssal Choir .62, Thornwild .55, Tideborn .52, Crownlands .50, Iron Reach .46, Harbor Leagues .42, Neutral .34), plus Legendaries, Vessels and the reserve list. |
@@ -51,3 +51,7 @@ the lists rebuilt after a ban. Numbers: see the `META` line printed by `tools/ti
 
 ## Economy v2 (2026-10-20)
 New worlds use the ten-year market described in `design/tidemark-economy-v2.md` and CLAUDE.md (vintage condition scarcity, a census-style replay of each set's history, daily aging, finite seller-backed Saltmarket stock, estate sales and collection sales). Older saves keep the first economy and can rebuild from the Tidemark shop. Decided by Claude, not canon.
+
+
+### Treatments (2026-10-28; owner: "more chase cards without more art")
+Three extra versions of a Tidemark card, **decided, not canon**, no new art: **Prismatic foil** `Z` (any card; replaces the 15th card in about 1 pack in 36, about one per box), **Gold stamp** `G` (Rare or Legendary; the rare slot in about 1 pack in 150) and **Serial-numbered** `S` (Legendary; about 1 pack in 2,500; each copy is numbered 1 to 100 from its id, `xtSerial`, not stored). Alternate arts have none. Odds in `TM_ODDS` (`prism`, `gold`, `serial`), prices in `XT_RB` (`x|Z`, `rare|G`, `leg|G`, `leg|S`), key lists `xtVariantsAll` / `xtAllKeysT`; `xtVariants` stays the base (regular, foil) that completing a set means. `xtFoilish(v)` is true for F, Z, G, S. Look: stronger rainbow for Z, gold border and sheen for G, gold plus a SERIAL-NUMBERED band and number in the inspector for S (`tm_render.js`). Tenth Tide pack worth about $5.7 (was $5.5). Tested by `tidemarktest.py` (rates over 150,000 packs, no repeats, price order, serial range). Looks only checked in code and tests, not by eye on a phone.

@@ -43,6 +43,8 @@ def build(g):
     json.dump({'name':cfg['name'],'short_name':cfg['name'].split()[0],'start_url':'./','display':'standalone','background_color':'#0c0e12','theme_color':cfg['theme'],'icons':[{'src':'icons/icon-192.png','sizes':'192x192','type':'image/png'},{'src':'icons/icon-512.png','sizes':'512x512','type':'image/png','purpose':'any maskable'}]},open(out+'/manifest.webmanifest','w'),indent=1)
     open(out+'/sw.js','w').write(f"const C='{g}-{ver}-s2';const A=['./','index.html','game.js?v={ver}','style.css?v={ver}','vendor/three.min.js','manifest.webmanifest'];\nself.addEventListener('install',e=>{{e.waitUntil(caches.open(C).then(c=>c.addAll(A)).then(()=>self.skipWaiting()));}});\nself.addEventListener('activate',e=>{{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C&&x.startsWith('{g}-')).map(x=>caches.delete(x)))).then(()=>self.clients.claim()));}});\nself.addEventListener('fetch',e=>{{if(e.request.method!=='GET'||new URL(e.request.url).origin!==location.origin)return;e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(n=>{{if(n.ok){{const c=n.clone();caches.open(C).then(x=>x.put(e.request,c));}}return n;}})));}});\n")
     sz=sum(os.path.getsize(os.path.join(dp,f)) for dp,_,fs in os.walk(out) for f in fs)
+    if g=='tcg':
+        import brokenreach_build; brokenreach_build.build(out)                                # the Broken Reach Play Alpha: a separate page inside the tcg site
     print(f'{g:7} {cfg["name"]:22} game.js {os.path.getsize(out+"/game.js")/1e6:.2f} MB, total {sz/1e6:.2f} MB')
 def publish():
     """Copy the built games into docs/ so GitHub Pages can serve them (Settings > Pages > main branch, /docs folder)."""
@@ -54,7 +56,7 @@ def publish():
         shutil.copytree(lab,os.path.join(d,'lab'))
         for sub in ('creatures','scenes'): shutil.copytree(os.path.join(ROOT,'assets',sub),os.path.join(d,'lab','assets',sub))
         shutil.copy(os.path.join(ROOT,'assets','manifest.json'),os.path.join(d,'lab','assets','manifest.json'))
-    cards=''.join(f'<a href="{g}/"><b>{GAMES[g]["name"]}</b></a>' for g in GAMES)
+    cards=''.join(f'<a href="{g}/"><b>{GAMES[g]["name"]}</b></a>' for g in GAMES)+'<a href="tcg/broken-reach/"><b>The Broken Reach: Play Alpha</b></a>'
     open(os.path.join(d,'index.html'),'w').write('<!DOCTYPE html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Collector games</title><style>body{font-family:system-ui;background:#0c0e12;color:#e9ecef;max-width:420px;margin:12vh auto;padding:0 20px}a{display:block;background:#1c2129;border:1px solid #333;border-radius:12px;padding:18px;margin:12px 0;color:#fff;text-decoration:none;font-size:20px}h1{font-size:28px}</style><h1>Collector games</h1>'+cards)
     print('published to docs/')
 if __name__=='__main__':
