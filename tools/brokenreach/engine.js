@@ -30,6 +30,9 @@ const freshTmp=()=>({atk:0,diag:0,ignoreRecip:false,noRecip:false,grdMinus:0,cap
 //   komi (points added to the first player's final count), lastPassive (the 16th placement makes no challenges),
 //   lastMinus (all Attack -n on the 16th placement), firstHand (extra cards in the first player's opening hand),
 //   firstGuard (+n Guard to every unit the first player controls), secondDraw (extra card for the second player)
+// Tetra-Master-style options (2026-10-30): noRecip (no +1 Guard for a pointing-back arrow), maxGen (a card captured at generation > maxGen
+//   flips but does not attack, so combos stop after maxGen levels; default unlimited), auto (an arrow at an enemy that does not point back
+//   captures with no stat comparison; only arrow-to-arrow contacts are Attack-vs-Guard duels)
 function newMatch({deckA,deckB,planet=null,seed=1,first=null,rules={}}){
   const rng=mulberry32(seed);
   if (first==null) first=rng()<0.5?0:1;
@@ -64,7 +67,8 @@ function guardOf(s,v,cell,att){
   if (s.rules&&s.rules.firstGuard&&v.owner===s.first) g+=s.rules.firstGuard;
   return Math.max(0,g);
 }
-function recip(s,v,fromDir,att){ return !!(effMask(v)>>opp(fromDir)&1) && !att.tmp.ignoreRecip && !v.tmp.noRecip; }
+const points=(v,fromDir)=>!!(effMask(v)>>opp(fromDir)&1);
+function recip(s,v,fromDir,att){ if (s.rules&&s.rules.noRecip) return false; return points(v,fromDir) && !att.tmp.ignoreRecip && !v.tmp.noRecip; }
 
 // legal moves: one per (distinct card in hand, empty cell, optional planet rotation, ability target)
 function targetsFor(s,player,cid,cell,rot){
@@ -133,11 +137,11 @@ function applyMove(s0,mv){
     const m=effMask(a);
     for (let d=0;d<8;d++){ if(!(m>>d&1)) continue; const n=nbr(cell,d); if(n<0) continue; const v=s.cells[n]; if(!v||v.owner===a.owner||v.flipped) continue;
       const atk=attackOf(s,a,cell,d,v), grd=guardOf(s,v,n,a)+(recip(s,v,d,a)?1:0);
-      const win=atk>grd; ev.push({t:'challenge',from:cell,to:n,dir:d,atk,grd,win,order:attempts.length}); attempts.push(win);
+      const auto=!!(s.rules&&s.rules.auto)&&!points(v,d), win=auto||atk>grd; ev.push({t:'challenge',from:cell,to:n,dir:d,atk,grd,win,auto,order:attempts.length}); attempts.push(win);
       if (s.pen[a.owner]>0) s.pen[a.owner]=0;
       if (win){ v.owner=a.owner; v.flipped=true; captures++; maxGen=Math.max(maxGen,gen+1); ev.push({t:'capture',cell:n,by:cell,gen:gen+1,to:a.owner});
         for (const o of hasOp(v.cid,'cap_next_attacker_penalty')) s.pen[a.owner]+=o.amt;
-        q.push({cell:n,gen:gen+1}); }
+        if (!(s.rules&&s.rules.maxGen!=null&&gen+1>s.rules.maxGen)) q.push({cell:n,gen:gen+1}); }
     }
     a.tmp.cap=0;
   }

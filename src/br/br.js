@@ -6,8 +6,7 @@ E.loadCards(DATA.cards);
 const UNITS=DATA.cards.filter(c=>c.type!=='planet'), UNIT_IDS=UNITS.map(c=>c.base_card_id);
 const PLAYABLE_PLANETS=['BR01-173','BR01-179','BR01-177'];
 const PLANET_COL={'BR01-173':['#b98a4a','#2c1c0e'],'BR01-179':['#7d8a99','#1a2028'],'BR01-177':['#9a5ec4','#1c1030']};
-const RULESETS=[{id:'std',name:'Standard (rules v0.2)',desc:'Exactly the handoff rules. The second player has a measured advantage.',rules:{}},
-  ...DATA.rulesets];
+const RULESETS=DATA.rulesets;
 const LEVELS=[['easy','Easy','Sometimes plays a weak or random move.'],['standard','Standard','Looks one reply ahead against sampled hands.'],['hard','Hard','Wider search, more samples. Never sees your hand.']];
 const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -19,7 +18,7 @@ const TYPE_SHORT={'Ship':'Ship','Character':'Char','Crew & Military':'Crew','Dro
 const DIRN=['N','NE','E','SE','S','SW','W','NW'], POS=[[50,0],[100,0],[100,50],[100,100],[50,100],[0,100],[0,50],[0,0]];
 const cellName=c=>'ABCD'[c&3]+((c>>2)+1);
 // ---------- storage ----------
-let ST={decks:[],sel:{deck:'dockside',planet:'BR01-173',level:'easy',rule:'komi2'},speed:'1',help:false,preview:true};
+let ST={decks:[],sel:{deck:'dockside',planet:'BR01-173',level:'easy',rule:'tetra'},speed:'1',help:false,preview:true};
 try { const j=JSON.parse(localStorage.getItem('br_alpha_v1')||'null'); if (j) ST=Object.assign(ST,j,{sel:Object.assign(ST.sel,j.sel||{})}); } catch(e){}
 function save(){ try { localStorage.setItem('br_alpha_v1',JSON.stringify(ST)); } catch(e){} }
 function allDecks(){ return DATA.presets.map(d=>({id:d.id,name:d.name,blurb:d.blurb,cards:d.cards,preset:true})).concat(ST.decks.map(d=>({id:d.id,name:d.name,blurb:'Your deck',cards:d.cards,preset:false}))); }
@@ -52,7 +51,7 @@ function menu(){ root().innerHTML=`<div class="scr"><div class="title"><h1>The <
   <div class="menu"><button class="btn pri" data-act="play">Play a match</button><button class="btn" data-act="decks">Decks and cards</button><button class="btn" data-act="help">How to play</button><a class="btn" href="../" style="text-align:center;text-decoration:none;color:inherit">Back to Trading Card Collector</a></div>
   <div class="note">Prototype build. All 172 unit cards and 8 planets are unlocked for testing, with placeholder illustrations. Nothing here touches your CollectorGames saves or collection; custom decks live in this browser only. Stats, abilities and the fairness rules are provisional.</div></div>`; }
 function setup(){
-  if (!SETUP) SETUP={}; const ds=allDecks(); if (!ds.some(d=>d.id===ST.sel.deck)) ST.sel.deck=ds[0].id;
+  if (!SETUP) SETUP={}; if (!RULESETS.some(r=>r.id===ST.sel.rule)) ST.sel.rule=RULESETS[0].id; const ds=allDecks(); if (!ds.some(d=>d.id===ST.sel.deck)) ST.sel.deck=ds[0].id;
   const dopts=ds.map(d=>{ const bad=deckValid(d.cards), s=deckStats(d.cards); return `<button class="opt ${d.id===ST.sel.deck?'on':''}" data-act="seldeck" data-id="${d.id}" ${bad?'disabled':''}><b>${esc(d.name)} <em>${d.preset?'PRESET':'CUSTOM'}</em></b><span>${esc(bad||d.blurb)}</span><span class="mute">Avg Attack ${s.atk.toFixed(1)} · Guard ${s.grd.toFixed(1)} · arrows ${s.arr.toFixed(1)}</span></button>`; }).join('');
   const popts=PLAYABLE_PLANETS.map(id=>{ const d=E.def(id); return `<button class="planet ${ST.sel.planet===id?'on':''}" data-act="selplanet" data-id="${id}">${planetOrb(id)}<div><b>${esc(d.name.split(' — ')[0])}</b><span>${esc(d.text)}</span></div></button>`; }).join('')+`<button class="planet ${ST.sel.planet==='none'?'on':''}" data-act="selplanet" data-id="none"><span class="orb" style="--c1:#444;--c2:#111"></span><div><b>Open space</b><span>No planet effect.</span></div></button>`;
   const seg=(items,cur,act)=>`<div class="seg">${items.map(([k,n])=>`<button class="${cur===k?'on':''}" data-act="${act}" data-id="${k}">${n}</button>`).join('')}</div>`;
@@ -60,7 +59,7 @@ function setup(){
    <div class="cols"><div><div class="panel"><h3>Your deck</h3>${dopts}<button class="btn sm" data-act="decks">Edit decks…</button></div></div>
    <div><div class="panel" style="margin-bottom:14px"><h3>Planet</h3><div class="planet-row">${popts}</div></div>
    <div class="panel"><h3>Opponent</h3>${seg(LEVELS.map(l=>[l[0],l[1]]),ST.sel.level,'sellevel')}<p class="small dim" style="margin:8px 0 14px">${LEVELS.find(l=>l[0]===ST.sel.level)[2]} The opponent uses one of the preset decks. No hidden stat bonuses.</p>
-   <h3>Turn-order rule</h3>${seg(RULESETS.map(r=>[r.id,r.name.split(' (')[0]]),ST.sel.rule,'selrule')}<p class="small dim" style="margin:8px 0 0">${esc(RULESETS.find(r=>r.id===ST.sel.rule).desc)}</p></div></div></div>
+   <h3>Rules</h3>${RULESETS.map(r=>`<button class="opt ${ST.sel.rule===r.id?'on':''}" data-act="selrule" data-id="${r.id}"><b>${esc(r.name)}</b><span>${esc(r.desc)}</span></button>`).join('')}</div></div></div>
    <div class="menu" style="margin-top:18px"><button class="btn pri" data-act="start">Start match</button></div></div>`; }
 function decksScreen(){
   const ds=allDecks(); root().innerHTML=`<div class="scr"><div class="topbar"><button class="btn sm" data-act="menu">‹ Menu</button><div class="sp"></div><button class="btn sm pri" data-act="newdeck">+ New deck</button></div><h2>Decks</h2><hr class="rule">
@@ -85,8 +84,8 @@ function buildScreen(){
 function inspectOverlay(id){ const o=document.createElement('div'); o.className='ov'; o.dataset.act='closeov'; o.innerHTML=`<div class="dlg" data-stop="1">${detailHtml(id)}<div class="row"><button class="btn pri" data-act="closeov">Close</button></div></div>`; document.body.appendChild(o); }
 function helpOverlay(){ const o=document.createElement('div'); o.className='ov'; o.innerHTML=`<div class="dlg help" data-stop="1"><h2>How to play</h2><ul><li>Two players share a <b>4×4 board</b>. Each deck is 20 units; you start with 5 cards in hand and draw one at the start of each of your turns. Each player places 8 cards, so the board fills on the 16th placement.</li>
  <li>Every card has up to eight <b>arrows</b> (N, NE, E, SE, S, SW, W, NW). When you place a card, each arrow that points at an adjacent <b>enemy</b> card makes a challenge.</li>
- <li>A challenge wins if your <b>Attack</b> is higher than the <b>defender's Guard</b> (+1 if they have an arrow pointing back at you). Guard only matters when you are the one being challenged. Equal is a failed challenge, so a defender with Guard 4 (5 with a pointing-back arrow) is safe from Attack 4 and below. Nothing is destroyed: a captured card simply changes owner.</li>
- <li>A captured card <b>immediately attacks with its own arrows</b>, so one placement can cause a chain reaction. A card can change owner only once per placement.</li>
+ <li>A challenge wins if your <b>Attack</b> is higher than the <b>defender's Guard</b> (+1 if they have an arrow pointing back at you, in the Classic rules only). Guard only matters when you are the one being challenged. Equal is a failed challenge, so a defender with Guard 4 is safe from Attack 4 and below. Nothing is destroyed: a captured card simply changes owner.</li>
+ <li>Depending on the rules you pick, a captured card may <b>immediately attack with its own arrows</b> (a combo). With the recommended Tetra rules combos stop after one level: the card you place attacks, each card it captures attacks once, and anything captured after that only flips. A card can change owner only once per placement.</li>
  <li>When the board is full, whoever controls more cards wins. 8–8 is a draw.</li>
  <li>A <b>planet</b> applies one effect to both players. Cards marked ◆ have an ability; tap any card to read it.</li>
  <li>Tap a card in your hand, then a glowing square. A preview shows what you would capture; tap the square again (or Confirm) to place it.</li></ul><div class="row"><button class="btn pri" data-act="closeov">Got it</button></div></div>`; document.body.appendChild(o); }
@@ -109,13 +108,16 @@ const tagHtml=t=>`<span class="pvtag ${t.win?'w':'l'}">${t.atk} ${t.win?'&gt;':'
 function renderMatch(){
   if (scr!=='match'||!M) return; const S=M.disp, real=M.S, you=0; const sc=E.score(S); const bonus=real.rules&&real.rules.komi?real.rules.komi:0; const by=myTurn()&&M.sel?legalByCell():{}; const pd=M.pend; const pv=pd&&ST.preview?preview(pd):null;
   const pl=real.planet?E.def(real.planet):null;
-  $('#mtop').innerHTML=`<button class="btn sm" data-act="mmenu">‹ Menu</button><button class="btn sm" data-act="mrestart">Restart</button><div class="pchip">${pl?planetOrb(real.planet)+'<div><b>'+esc(pl.name.split(' — ')[0])+'</b><br><span class="dim">'+esc(pl.text)+'</span></div>':'<span class="dim">Open space · no planet effect</span>'}</div><div class="sp"></div><div class="seg" title="Animation speed">${[['1','1×'],['2','2×'],['0','Instant']].map(([k,n])=>`<button class="${ST.speed===k?'on':''}" data-act="speed" data-id="${k}">${n}</button>`).join('')}</div><button class="btn sm" data-act="help">?</button>`;
+  $('#mtop').innerHTML=`<button class="btn sm" data-act="mmenu">‹ Menu</button><button class="btn sm" data-act="mrestart">Restart</button><div class="pchip">${pl?planetOrb(real.planet)+'<div><b>'+esc(pl.name.split(' — ')[0])+'</b><br><span class="dim">'+esc(pl.text)+'</span></div>':'<span class="dim">Open space · no planet effect</span>'}</div><div class="sp"></div><div class="seg" title="Animation speed">${[['1','1×'],['2','2×'],['0','Instant']].map(([k,n])=>`<button class="${ST.speed===k?'on':''}" data-act="speed" data-id="${k}">${n}</button>`).join('')}</div><button class="btn sm ${ST.expo?'on':''}" data-act="expo" title="Show how many open squares touch each card">Exposure</button><button class="btn sm" data-act="help">?</button>`;
   $('#mscore').innerHTML=`<div class="score"><div class="side you"><span class="n">${sc[0]}</span><span class="lbl">You<br>${esc(M.deckName)}</span></div><span class="turn ${real.over?'':real.cur===0?'you':'foe'}">${real.over?'Final':real.cur===0?'Your turn':'Opponent'} · ${Math.min(16,real.turn+(real.over?0:1))}/16</span><div class="side foe"><span class="n">${sc[1]}</span><span class="lbl">${LEVELS.find(l=>l[0]===M.level)[1]} AI<br>${esc(M.foeName)}</span></div></div>`;
-  $('#mscore').innerHTML+=bonus?`<div class="small dim" style="text-align:center;margin:-4px 0 6px">First-move bonus: +${bonus} to ${real.first===0?'you':'the opponent'} at the end</div>`:(real.rules&&real.rules.lastMinus?'<div class="small dim" style="text-align:center;margin:-4px 0 6px">Trial rule: the last placement has Attack −'+real.rules.lastMinus+'</div>':'');
+  const rr=real.rules||{}; const rtxt=[rr.noRecip?'no pointing-back bonus':'',rr.maxGen===0?'no combos':rr.maxGen!=null?'combos stop after '+rr.maxGen+' level'+(rr.maxGen>1?'s':''):'unlimited chains'].filter(Boolean).join(' · ');
+  $('#mscore').innerHTML+=`<div class="small dim" style="text-align:center;margin:-4px 0 2px">${esc(rtxt)}</div>`;
+  $('#mscore').innerHTML+=bonus?`<div class="small dim" style="text-align:center;margin:-4px 0 6px">First-move bonus: +${bonus} to ${real.first===0?'you':'the opponent'} at the end</div>`:'';
   $('#mfoe').innerHTML=`<div class="foehand">Opponent hand ${Array.from({length:real.hands[1].length},()=>'<div class="bcard back"></div>').join('')} · deck ${real.decks[1].length}</div>`;
   let cells=''; for (let i=0;i<16;i++){ const u=S.cells[i], ok=!!by[i]&&!u, isP=pd&&pd.cell===i, wf=pv&&pv.caps&&pv.caps[i]!=null;
     let inner=''; if (u) inner=unitHtml(S,u,i,(M.fx.place===i?'placing ':'')+(M.fx.flip===i?'flipping ':'')+(M.hl.att===i?'attacker ':'')+(M.hl.tgt===i?'target ':'')+(M.hl.blocked===i?'blocked ':''));
     else if (isP||(pv&&pv.mv&&pv.mv.cell===i)){ const mv=isP?pd:pv.mv; inner=cardHtml(E.def(mv.cid),{owner:0,cls:'ghost',mask:E.rotMask(E.def(mv.cid).mask,mv.rot||0)}); }
+    if (ST.expo&&u&&!M.anim){ let o=0; for (let d=0;d<8;d++){ const n=E.nbr(i,d); if (n>=0&&!S.cells[n]) o++; } inner+=`<span class="expo ${o>=3?'hi':''}">${o}</span>`; }
     if (M.pops[i]) inner+=M.pops[i]; else if (pv&&pv.tags&&pv.tags[i]) inner+=tagHtml(pv.tags[i]);
     cells+=`<button class="cell ${ok?'ok':''} ${isP?'pend':''} ${wf?'willflip '+(pv.caps[i]>1?'g2':''):''}" data-act="cell" data-i="${i}" ${u&&!M.busy?'':(ok?'':'disabled')} aria-label="${cellName(i)}">${inner}</button>`; }
   $('#mboard').innerHTML=`<div class="board">${cells}</div>${M.chain>1?`<div class="chain">×${M.chain}<small>CAPTURES</small></div>`:''}`;
@@ -146,7 +148,7 @@ async function playEvents(S0,res,foe){
     else if (ev.t==='capture'){ D.cells[ev.cell].owner=ev.to; D.cells[ev.cell].flipped=true; n++; M.chain=n; M.fx={flip:ev.cell}; M.hl={att:ev.by,tgt:ev.cell}; say(`&nbsp;&nbsp;↳ ${esc(lbl(ev.cell))} on ${cellName(ev.cell)} flips${ev.gen>1?' (generation '+ev.gen+')':''}.`); renderMatch(); await wait(400); M.fx={}; }
   }
   M.hl={}; M.pops={}; M.fx={}; M.disp=fin; M.anim=false;
-  if (ST.speed!=='0'||true){ const big=res.stats.captures>=7||res.stats.maxGen>=5, mid=res.stats.captures>=4||res.stats.maxGen>=3; if (mid&&ST.speed!=='0'&&!M.skip) await banner(res.stats.captures,res.stats.maxGen,big); }
+  if (ST.speed!=='0'||true){ const big=res.stats.captures>=6||res.stats.maxGen>=5, mid=res.stats.captures>=3||res.stats.maxGen>=3; if (mid&&ST.speed!=='0'&&!M.skip) await banner(res.stats.captures,res.stats.maxGen,big); }
   if (foe) {} const mine=!foe; if (mine) { M.stat.caps+=res.stats.captures; } M.stat.best=Math.max(M.stat.best,mine?res.stats.captures:0); M.stat.gens=Math.max(M.stat.gens,mine?res.stats.maxGen:0);
   if (res.stats.captures) say(`<b>${res.stats.captures} captured${res.stats.maxGen>1?' over '+res.stats.maxGen+' generations':''}.</b>`);
   M.chain=0; renderMatch();
@@ -182,6 +184,7 @@ document.addEventListener('click',e=>{
   else if (a==='speed'){ ST.speed=id; save(); renderMatch(); } else if (a==='skip') skipAnim();
   else if (a==='hand'){ const cid=b.dataset.cid; M.insp=cid; if (myTurn()){ M.sel=M.sel===cid?null:cid; M.pend=null; } renderMatch(); }
   else if (a==='hint'){ if (myTurn()){ const v=clone(M.S); v.hands[1]=v.hands[1].map(()=>'?'); v.decks[1]=v.decks[1].map(()=>'?'); v.decks[0]=v.decks[0].map(()=>'?'); const mv=AI.chooseMove(v,'standard',M.rng,UNIT_IDS); if (mv){ M.sel=mv.cid; M.pend=mv; M.insp=mv.cid; renderMatch(); toast('Hint: the Standard AI would play this. Confirm or choose differently.'); } } }
+  else if (a==='expo'){ ST.expo=!ST.expo; save(); renderMatch(); }
   else if (a==='cell'){ cellClick(+b.dataset.i); }
   else if (a==='confirm'){ if (M.pend&&myTurn()) { const mv=M.pend; doMove(mv,false).then(nextTurn); } } else if (a==='cancel'){ M.pend=null; renderMatch(); }
   else if (a==='variant'){ const ms=legalByCell()[M.pend.cell]; M.pend=ms[+b.dataset.k]; renderMatch(); }
