@@ -2108,3 +2108,314 @@ Changed (25+ differences), first ones:
 - /after10/wk/listings/n: 220 -> 219
 - /after10/wk/meta/arch/h: "ea4498f5" -> "0d385545"
 - /after10/wk/meta/ev/h: "ffa75a53" -> "d1c5e516"
+
+## 2026-10-29 day0
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (7+ differences), first ones:
+- /core/npcN: 234 -> 283
+- /core/npcs: "04aa6434" -> "d13cbabb"
+- /core/rs: -753234179 -> 1641980604
+- /screens/coll: "f3a0af08" -> "6ecf397b"
+- /screens/home: "c566eda9" -> "ea6708ab"
+- /screens/market: "ed875144" -> "c77b8946"
+- /screens/upnext: "d780d47e" -> "407a6cc7"
+
+## 2026-10-29 release
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/dp: "6444aa74" -> "ee83a03d"
+- /core/feed: "fc01683f" -> "3e23ee89"
+- /core/lst: 1205 -> 1212
+- /core/news/h: "23ac2a3a" -> "3a95616f"
+- /core/newsHead[1]: "NEW DECK: CORALLUME / KOIRUNE" -> "NEW DECK: COMETRAIL / ASTRYNX (TOOLS)"
+- /core/newsHead[2]: "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP" -> "COMETRAIL / AUROROTL WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[4]: "NEW DECK: BRAMBLEBUCK / CACTUFT" -> "NEW DECK: NIMBUSAIL / THUNDROP"
+- /core/nextLid: 2046 -> 2068
+- /core/nextTid: 1953 -> 2283
+- /core/nextXid: 11416 -> 13023
+- /core/npcN: 234 -> 283
+- /core/npcs: "777019f7" -> "1129a28b"
+- /core/rs: -930548393 -> -1618629058
+- /core/sales: "2a69f539" -> "6e7ce52b"
+- /core/salesN: 520 -> 535
+
+## 2026-10-29 year1
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/dp: "ca301221" -> "86d94185"
+- /core/feed: "81153c1d" -> "9306ae0f"
+- /core/lst: 1147 -> 1411
+- /core/news/h: "a7177c0c" -> "846ece2b"
+- /core/news/n: 59 -> 57
+- /core/newsHead[0]: "NEW TECH: ASTRYNX / KOIRUNE (GUST)" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /core/newsHead[1]: "NEW DECK: HARBOR LEAGUES / ABYSSAL CHOIR MIDRANGE (RAMP)" -> "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL"
+- /core/newsHead[3]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "VEILMORA / VELUNOX WINS THE REGIONAL"
+- /core/newsHead[4]: "NEW DECK: TIDEBORN / HARBOR LEAGUES AGGRO (AGGRO)" -> "NEW DECK: HARBOR LEAGUES / ABYSSAL CHOIR MIDRANGE (RAMP)"
+- /core/newsHead[5]: "NEW DECK: ASTRYNX / KOIRUNE" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/nextLid: 15016 -> 18493
+- /core/nextTid: 3907 -> 4224
+- /core/nextXid: 11416 -> 13023
+- /core/npcN: 234 -> 283
+- /core/npcs: "db6dc864" -> "f2f88709"
+
+## 2026-10-29 series
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/dp: "d68a96dc" -> "59912855"
+- /core/feed: "4cb5f6db" -> "53fbf045"
+- /core/lst: 1168 -> 1435
+- /core/news/h: "713a8929" -> "e77eeb9e"
+- /core/news/n: 175 -> 167
+- /core/newsHead[0]: "NEW DECK: THORNWILD / CROWNLANDS CONTROL (FLEET)" -> "TIDEBORN TEMPO WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[1]: "NEW BUILD-AROUND: IRON CROWN OF VARR AGGRO II" -> "ASTRYNX / KOIRUNE (GUST) WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[2]: "TIDEBORN / HARBOR LEAGUES AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP" -> "NEW TECH: BRONZAROO / AEGISOPOD (TOOLS)"
+- /core/newsHead[3]: "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/newsHead[4]: "AZURE HALBERD MIDRANGE WINS THE REGIONAL" -> "FORTISAUR / TUMBEAR WINS THE REGIONAL"
+- /core/newsHead[5]: "VEILMORA (DISRUPTION) WINS THE REGIONAL" -> "NEW TECH: LANTERNOX / FABLEHORN (TOOLS)"
+- /core/nextLid: 43558 -> 55492
+- /core/nextTid: 3907 -> 4224
+- /core/nextXid: 11416 -> 13023
+- /core/npcN: 234 -> 283
+
+## 2026-10-29 flows
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /core/cash: 5641.880000000001 -> 5640.510000000002
+- /core/dp: "d2aafc54" -> "72346643"
+- /core/feed: "790cfbfd" -> "fcb86785"
+- /core/fees: 70.19 -> 70.14000000000001
+- /core/lst: 1083 -> 1371
+- /core/netWorth: 771.79 -> 723.46
+- /core/news/h: "b8a9fa2a" -> "bad24239"
+- /core/news/n: 32 -> 42
+- /core/newsHead[1]: "NEW DECK: SMOLDERLYNX / PYRENOX" -> "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL"
+- /core/newsHead[2]: "TIDEBORN TEMPO WINS THE REGIONAL" -> "ASTRYNX / AUROROTL WINS THE REGIONAL"
+- /core/newsHead[3]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "NEW TECH: SPIRAMEL / FABLEHORN (HEAL)"
+- /core/newsHead[4]: "NEW TECH: CANOPANG / CACTUFT (HEAL)" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/newsHead[5]: "CROWN BASTION WINS THE REGIONAL" -> "VEILMORA / MOTHMUR WINS THE REGIONAL"
+- /core/nextLid: 6605 -> 7827
+- /core/nextTid: 2331 -> 2661
+
+## 2026-10-29 shared
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 29.48 -> 32.58
+- /afterCrack/subs: "b9f37923" -> "35504a87"
+- /coll/total[0]: 36.45 -> 34.80000000000001
+- /coll/total[1]: 90.49999999999999 -> 84.00000000000003
+- /core/cash: 4892.759999999999 -> 4892.919999999999
+- /core/dp: "626a6c46" -> "e30475df"
+- /core/feed: "ff149e36" -> "aec55d2e"
+- /core/fees: 420.08 -> 420.09999999999997
+- /core/lst: 1029 -> 1042
+- /core/netWorth: 29.48 -> 32.58
+- /core/news/h: "ce423944" -> "5d02cf6a"
+- /core/news/n: 25 -> 27
+- /core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "A SHIP OF OUR OWN: THE BROKEN REACH ARRIVES"
+- /core/newsHead[1]: "NEW DECK: AUROROTL / FLAPOD" -> "NEW DECK: FREE FLEETS / TIDEBORN AGGRO (CARD DRAW)"
+- /core/newsHead[2]: "GOAL: FIRST SALE" -> "NEW DECK: POMPYRE / VEILMORA"
+
+## 2026-10-29 save:ban
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "f3a0af08" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "56a8bc72" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "dedaf5e5" -> "7bae5223"
+
+## 2026-10-29 save:busy
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "298aaf4a" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "685c0355" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "0f7182e8" -> "20de2e2e"
+
+## 2026-10-29 save:day1
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "f3a0af08" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "c566eda9" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "b0540d04" -> "971080c6"
+
+## 2026-10-29 save:legacy-wk-busy
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "f9f86fac" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "36a1d6a9" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "4b40c06e" -> "e6ba268c"
+
+## 2026-10-29 save:legacy-wk-day1
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "f3a0af08" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "c566eda9" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "ed875144" -> "c77b8946"
+
+## 2026-10-29 save:legacy-wk-released
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "f3a0af08" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "82367067" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "86e33464" -> "7ccb1ca6"
+
+## 2026-10-29 save:legacy-wk-year
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "f3a0af08" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "a2cbc428" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "75f413b5" -> "5b11fb3f"
+
+## 2026-10-29 save:released
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (3+ differences), first ones:
+- /loaded/screens/coll: "f3a0af08" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/home: "7adddc76" -> "ERR TypeError: Cannot convert undefined or null to object"
+- /loaded/screens/market: "a5e56aad" -> "92e11797"
+
+## 2026-10-29 open:ban
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "eee1b876" -> "7d605560"
+- /after10/core/feed: "b8ba667e" -> "952b4af8"
+- /after10/core/lst: 1093 -> 1308
+- /after10/core/news/h: "3115bb29" -> "5540abc5"
+- /after10/core/news/n: 40 -> 39
+- /after10/core/newsHead[0]: "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)" -> "CROWN BASTION WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL" -> "VEILMORA / VELUNOX WINS THE REGIONAL"
+- /after10/core/newsHead[2]: "GLACURRENT / AUROROTL WINS THE REGIONAL" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after10/core/newsHead[3]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after10/core/newsHead[4]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP"
+- /after10/core/newsHead[5]: "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP" -> "DUSKFALL IS OUT TODAY"
+- /after10/core/nextLid: 5472 -> 5808
+- /after10/core/npcN: 234 -> 283
+- /after10/core/npcs: "20aa1c64" -> "1be5e478"
+- /after10/core/rs: -1165211585 -> 1088053339
+
+## 2026-10-29 open:busy
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "ed6eaea7" -> "c28a91d5"
+- /after10/core/feed: "0157d296" -> "a51f7ccc"
+- /after10/core/lst: 1031 -> 1023
+- /after10/core/netWorth: 275.22 -> 274.22
+- /after10/core/news/h: "254da29f" -> "7ce9908d"
+- /after10/core/news/n: 21 -> 22
+- /after10/core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "A SHIP OF OUR OWN: THE BROKEN REACH ARRIVES"
+- /after10/core/newsHead[1]: "GOAL: FIRST SALE" -> "NEW TECH: ASTRYNX / KOIRUNE (TOOLS)"
+- /after10/core/newsHead[2]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "GOAL: FIRST SALE"
+- /after10/core/newsHead[3]: "NEW DECK: CLAMPUP / FERRADON" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after10/core/newsHead[4]: "GOAL: GEM MINT" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after10/core/newsHead[5]: "THORNWILD RUSH WINS THE REGIONAL" -> "GOAL: GEM MINT"
+- /after10/core/nextLid: 2088 -> 2074
+- /after10/core/npcN: 234 -> 283
+- /after10/core/npcs: "750f48ed" -> "ec4c3025"
+
+## 2026-10-29 open:legacy-wk-day1
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "ec663a23" -> "66c9d958"
+- /after10/core/feed: "ad7d7a3f" -> "b214fb1e"
+- /after10/core/lst: 1025 -> 1028
+- /after10/core/news/h: "c8e25f4f" -> "1c3aeffa"
+- /after10/core/news/n: 7 -> 8
+- /after10/core/newsHead[1]: "FIRST BOND IS OUT TODAY" -> "NEW TECH: CACTUFT / CANOPANG (TURBO)"
+- /after10/core/newsHead[2]: "ROTATION: THE OLD STANDARD ENDS" -> "FIRST BOND IS OUT TODAY"
+- /after10/core/newsHead[3]: "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after10/core/newsHead[4]: "FIRST BOND: MORE CARDS REVEALED" -> "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED"
+- /after10/core/newsHead[5]: "FIRST BOND: THE FIRST WILDKIN SET IS ANNOUNCED" -> "FIRST BOND: MORE CARDS REVEALED"
+- /after10/core/nextLid: 1440 -> 1446
+- /after10/core/nextTid: 1810 -> 2536
+- /after10/core/npcN: 234 -> 283
+- /after10/core/npcs: "608149c6" -> "1157e7db"
+- /after10/core/rs: 691334807 -> -1587888760
+
+## 2026-10-29 open:legacy-wk-year
+Reason: Broken Reach added as the third card line: its collectors are created on a new game and its release adds draws, shifting the shared random stream
+Changed (25+ differences), first ones:
+- /after10/core/dp: "cb285313" -> "05fec403"
+- /after10/core/feed: "f5a85bb7" -> "b89bd945"
+- /after10/core/lst: 1154 -> 1375
+- /after10/core/news/h: "495672be" -> "7c02af97"
+- /after10/core/news/n: 23 -> 24
+- /after10/core/newsHead[0]: "CROWN BASTION WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "SPIRAMEL / FABLEHORN WINS THE REGIONAL"
+- /after10/core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II"
+- /after10/core/newsHead[3]: "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after10/core/newsHead[4]: "DUSKFALL IS OUT TODAY" -> "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP"
+- /after10/core/newsHead[5]: "CACTUFT / CANOPANG (TOOLS) WINS THE REGIONAL" -> "DUSKFALL IS OUT TODAY"
+- /after10/core/nextLid: 3810 -> 4157
+- /after10/core/npcN: 234 -> 283
+- /after10/core/npcs: "b9a09959" -> "adb1ba23"
+- /after10/core/rs: 256577974 -> 744375721
+
+## 2026-10-29 day0
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 release
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 year1
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (1+ differences), first ones:
+- /screens/market: "526a14c2" -> "e1731e48"
+
+## 2026-10-29 series
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 flows
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 shared
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:ban
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:busy
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:day1
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:legacy-wk-busy
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:legacy-wk-day1
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:legacy-wk-released
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:legacy-wk-year
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 save:released
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 open:ban
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 open:busy
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 open:legacy-wk-day1
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-29 open:legacy-wk-year
+Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
