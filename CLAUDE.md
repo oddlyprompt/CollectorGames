@@ -46,6 +46,9 @@ Owner-approved (condition scarcity, real supply consequences, finite seller-back
 - History: a First Tide box about $1,600; the most valuable single is about $235 raw (a foil Founding Legendary on the reserve list), which a GCS 10 multiplies; reserve-list cards are worth more than other Legendaries; older printings keep a collector premium that grows with age.
 - Metagame over 36 months (`tidemark_econ.py 36` prints a META line; it varies by world): 6 to 7 different leading decks, 9 to 14 decks reaching the top 5, field 13 to 22 decks, 1 to 4 bans (a deck above 18% of the field for ten weeks), longest run at #1 about 8 to 13 months. The 18% ban line is lower than Wildkin's 24% because Crown Bastion settles near 17% to 20% and would otherwise lead for years.
 
+## The Broken Reach (new franchise, started 2026-10-29; proposed, not in any game build yet)
+A space-opera card game with an 8-direction grid battler (combat rules v0.2, Set 01 "A Ship of Our Own", 180 cards, 27 alternate printings). Handoff: `broken-reach-production/source/`. Plan, open rules questions and simulation results: `broken-reach-production/PLAN.md`, `RULES_NOTES.md`, `SIM_REPORT_2026-10-29.txt`. Code is headless Node in `tools/brokenreach/`: `node import.js [--check]` (writes `set01/cards.json`, base_card_id vs printing_id, every ability text mapped by hand in `abilities.js`), `engine.js` (pure resolver), `node test.js` (golden tests), `node sim.js [games] [tactical games]`. Not touched: Wildkin, Tidemark, their economies. Nothing in it is canon; the next steps (playable demo, deckbuilder, packs, market) are in the plan.
+
 ## What this is
 Three browser games from one engine. All content is fictional.
 - **Sports Card Collector** (`sports`): a simulated baseball league, card products, packs, grading, shows, breaks.
