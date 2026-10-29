@@ -10,6 +10,8 @@ def build(dist_tcg):
     keep=('base_card_id','name','type','typeName','aff','rar','mask','atk','grd','text','ops','role','era')
     data={'cards':[{k:c[k] for k in keep} for c in cards],'presets':json.loads(rd('broken-reach-production','set01','presets.json'))['decks'],'rulesets':json.loads(rd('broken-reach-production','set01','rulesets.json'))['rulesets']}
     for d in data['presets']: d.pop('stats',None)
+    import brokenreach_collect_build as cb
+    data['art']={i:'../art/br-'+i+'.webp' for i in cb.approved_art() if i in {c['base_card_id'] for c in cards} and os.path.exists(os.path.join(dist_tcg,'art','br-'+i+'.webp'))}
     wrap=lambda src,name:f"const {name}=(()=>{{const module={{exports:{{}}}};{src}\n;return module.exports;}})();window.{name}={name};\n"
     eng=rd('tools','brokenreach','engine.js'); ai=rd('tools','brokenreach','ai.js').replace("const E=(typeof require!=='undefined')?require('./engine.js'):window.BR_E;","const E=window.BR_E;")
     js="window.BR_DATA="+json.dumps(data,separators=(',',':'))+";\n"+wrap(eng,'BR_E')+wrap(ai,'BR_AI')+rd('src','br','br.js')
