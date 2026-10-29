@@ -1,4 +1,6 @@
-{"status":"experimental turn-order options (not final; see TURN_ORDER_REPORT.md). 'Standard' is added by the game itself.",
+{"status":"experimental rule sets (not final; see TETRA_VARIANTS_REPORT.md)",
  "rulesets":[
-  {"id":"komi2","name":"Fair start A (trial)","desc":"Trial rule, recommended by simulation: the first player gets a 2-point bonus at the end, so the second player must win 10–6 or better to win outright (9–7 is a draw).","rules":{"komi":2}},
-  {"id":"last1","name":"Fair start B (trial)","desc":"Trial rule: the 16th and last placement has Attack −1 (to take away the second player's unanswerable final strike). No bonus points.","rules":{"lastMinus":1}}]}
+  {"id":"tetra","name":"Tetra rules (recommended)","desc":"Closer to Tetra Master: no bonus for a pointing-back arrow, and combos stop after one level (the card you place attacks, each card it captures attacks once, and cards captured after that only flip). The first player gets a 2-point bonus at the end.","rules":{"noRecip":true,"maxGen":1,"komi":2}},
+  {"id":"nocombo","name":"No combos","desc":"The simplest version: only the card you place attacks. Captured cards never attack. No pointing-back bonus. First-player bonus of 2.","rules":{"noRecip":true,"maxGen":0,"komi":2}},
+  {"id":"classic-fair","name":"Classic chains + fair start","desc":"The original v0.2 rules (unlimited chain reactions, +1 Guard for a pointing-back arrow) with the first-player bonus of 2.","rules":{"komi":2}},
+  {"id":"std","name":"Classic v0.2","desc":"Exactly the handoff rules. Unlimited chains. The second player has a measured advantage.","rules":{}}]}

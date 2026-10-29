@@ -89,3 +89,4 @@ button{ font:inherit; color:inherit; cursor:pointer; } h1,h2,h3,.cond{ font-fami
 .lg-dot{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; vertical-align:-1px; }
 
 .pvtag{ position:absolute; left:50%; top:46%; transform:translate(-50%,-50%); z-index:7; pointer-events:none; font-family:'Barlow Condensed'; font-weight:800; font-size:17px; padding:2px 7px; background:rgba(0,0,0,.82); border:1px solid var(--mute); white-space:nowrap; } .pvtag.w{ border-color:var(--ok); color:var(--ok); } .pvtag.l{ border-color:var(--bad); color:var(--bad); }
+.expo{ position:absolute; right:3px; top:3px; z-index:8; min-width:17px; height:17px; border-radius:50%; background:#000c; border:1px solid var(--mute); color:var(--dim); font:700 11px 'Barlow Condensed'; display:flex; align-items:center; justify-content:center; pointer-events:none; } .expo.hi{ border-color:var(--bad); color:var(--bad); }

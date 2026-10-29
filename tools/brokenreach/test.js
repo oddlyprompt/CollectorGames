@@ -104,6 +104,19 @@ function planet(txt){ E.loadCards([{base_card_id:'PL',name:'p',typeName:'Planet'
   card('l1',5,1,W); card('lv',1,1,0); let s=E.board(); s.rules={lastPassive:true}; s.turn=15; E.put(s,0,'lv',1); let r=play(s,'l1',1); ok(r.state.cells[0].owner===1,'lastPassive: the 16th placement makes no challenges');
   s=E.board(); s.rules={lastMinus:2}; s.turn=15; card('l3',3,1,W); card('lg',1,1,0); E.put(s,0,'lg',1); r=play(s,'l3',1); ok(r.state.cells[0].owner===1,'lastMinus 2: Attack 3 -2 = 1 does not beat Guard 1 on the 16th placement');
   s=E.board(); s.rules={firstGuard:1}; s.first=1; card('fa',3,1,EE); card('fg2',1,3,0); E.put(s,1,'fg2',1); r=play(s,'fa',0); ok(r.state.cells[1].owner===1,'firstGuard: the first player\'s units have +1 Guard'); }
+// Tetra-Master-style options
+{ card('ta',4,1,EE|S); card('tb',1,3,0); card('tc',1,3,W); card('td',1,1,0); card('te',1,1,EE);
+  let s=E.board(); s.rules={noRecip:true}; E.put(s,1,'tc',1); let r=play(s,'ta',0); ok(r.state.cells[1].owner===0,'noRecip: a pointing-back arrow gives no Guard bonus (4 beats 3)');
+  s=E.board(); s.rules={auto:true}; E.put(s,1,'tb',1); r=play(s,'ta',0); ok(r.state.cells[1].owner===0&&r.events.find(e=>e.t==='challenge').auto,'auto: an arrow at an enemy that does not point back captures with no comparison (Attack 4 vs Guard 3 would win anyway; Attack 1 below)');
+  card('tw',1,1,EE); s=E.board(); s.rules={auto:true}; E.put(s,1,'tb',1); r=play(s,'tw',0); ok(r.state.cells[1].owner===0,'auto: even Attack 1 captures Guard 3 when the defender does not point back');
+  s=E.board(); s.rules={auto:true}; card('tcg',1,3,W); E.put(s,1,'tcg',1); r=play(s,'tw',0); ok(r.state.cells[1].owner===1,'auto: an arrow-to-arrow contact is an Attack-vs-Guard duel');
+  // combo depth: placed card flips c1 (gen 1) which flips c2 (gen 2) which flips c3 (gen 3)
+  card('p0',5,1,EE); card('c1',1,1,EE); card('c2',1,1,EE); card('c3',1,1,0); card('cz',5,1,EE);
+  const mk=rules=>{ const b=E.board(); b.rules=rules; E.put(b,1,'c1',1); E.put(b,2,'c2',1); E.put(b,3,'c3',1); return play(b,'cz',0).state; };
+  card('c1',5,1,EE); card('c2',5,1,EE);
+  ok(E.score(mk({}))[0]===4,'unlimited chain: placed card plus 3 captures');
+  ok(E.score(mk({maxGen:1}))[0]===3,'maxGen 1: the placed card and its captures attack, but the next generation only flips (3 owned: placed, c1, c2)');
+  ok(E.score(mk({maxGen:0}))[0]===2,'maxGen 0: no combos at all (placed card and c1)'); }
 // AI: always legal, never changes the state it is given, and never reads the opponent hand
 { const AI=require('./ai.js'); const cs=require('../../broken-reach-production/set01/cards.json').cards; E.loadCards(cs); const un=cs.filter(c=>c.type!=='planet').map(c=>c.base_card_id), pl=cs.filter(c=>c.type==='planet').map(c=>c.base_card_id);
   let bad=0,mut=0,leak=0,games=0;
