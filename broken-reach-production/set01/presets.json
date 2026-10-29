@@ -1,0 +1,130 @@
+{
+ "status": "proposed test decks (not balanced, not final)",
+ "decks": [
+  {
+   "id": "dockside",
+   "name": "Dockside Starter",
+   "blurb": "Balanced: the strongest cards from every unit type. A good first deck.",
+   "cards": [
+    "BR01-005",
+    "BR01-044",
+    "BR01-047",
+    "BR01-080",
+    "BR01-083",
+    "BR01-068",
+    "BR01-122",
+    "BR01-092",
+    "BR01-106",
+    "BR01-148",
+    "BR01-137",
+    "BR01-149",
+    "BR01-167",
+    "BR01-155",
+    "BR01-163",
+    "BR01-071",
+    "BR01-086",
+    "BR01-076",
+    "BR01-069",
+    "BR01-029"
+   ],
+   "stats": {
+    "avgAtk": 4.3,
+    "avgGuard": 3.45,
+    "avgArrows": 3.05,
+    "types": {
+     "Ship": 4,
+     "Character": 7,
+     "Crew & Military": 3,
+     "Drone & Creature": 3,
+     "Tech Unit": 3
+    }
+   }
+  },
+  {
+   "id": "openlanes",
+   "name": "Open Lanes",
+   "blurb": "Aggressive: wide arrows that start long chains. Fragile when you are the one being attacked.",
+   "cards": [
+    "BR01-041",
+    "BR01-050",
+    "BR01-080",
+    "BR01-074",
+    "BR01-104",
+    "BR01-113",
+    "BR01-137",
+    "BR01-149",
+    "BR01-161",
+    "BR01-163",
+    "BR01-071",
+    "BR01-068",
+    "BR01-017",
+    "BR01-005",
+    "BR01-025",
+    "BR01-056",
+    "BR01-070",
+    "BR01-001",
+    "BR01-002",
+    "BR01-031"
+   ],
+   "stats": {
+    "avgAtk": 4.3,
+    "avgGuard": 2.9,
+    "avgArrows": 4.15,
+    "types": {
+     "Ship": 8,
+     "Character": 6,
+     "Crew & Military": 2,
+     "Drone & Creature": 2,
+     "Tech Unit": 2
+    }
+   }
+  },
+  {
+   "id": "bulwark",
+   "name": "Bulwark",
+   "blurb": "Defensive: high Guard and supporting auras. Hard to flip, slower to snowball.",
+   "cards": [
+    "BR01-044",
+    "BR01-047",
+    "BR01-080",
+    "BR01-083",
+    "BR01-092",
+    "BR01-106",
+    "BR01-142",
+    "BR01-128",
+    "BR01-167",
+    "BR01-155",
+    "BR01-068",
+    "BR01-071",
+    "BR01-069",
+    "BR01-082",
+    "BR01-034",
+    "BR01-010",
+    "BR01-032",
+    "BR01-116",
+    "BR01-008",
+    "BR01-070"
+   ],
+   "stats": {
+    "avgAtk": 4.15,
+    "avgGuard": 4,
+    "avgArrows": 2.95,
+    "types": {
+     "Ship": 6,
+     "Character": 7,
+     "Crew & Military": 3,
+     "Drone & Creature": 2,
+     "Tech Unit": 2
+    }
+   }
+  }
+ ],
+ "roundRobinGreedy": {
+  "dockside vs openlanes": "50%",
+  "dockside vs bulwark": "48%",
+  "openlanes vs dockside": "51%",
+  "openlanes vs bulwark": "55%",
+  "bulwark vs dockside": "52%",
+  "bulwark vs openlanes": "46%"
+ }
+}

@@ -8,6 +8,7 @@ Source: SOL/owner handoff v0.1 (`source/broken_reach_set01_data.json`, `source/b
 - Existing games are tournaments between decks (engine plays a whole game for the metagame). The Broken Reach is a short grid battler (16 placements), so its "metagame" will be deck-vs-deck results from this same resolver; nothing from Wildkin or Tidemark rules is reused.
 
 ## Order of work
+0. **Done 2026-10-29 (Play Alpha):** browser battler, three AI levels, deckbuilder with three preset decks, turn-order experiments (`TURN_ORDER_REPORT.md`), tests (`tools/brokenreach/test.js`, `tools/brokenreach_uitest.py`). Page: `dist/tcg/broken-reach/` (source `src/br/`, builder `tools/brokenreach_build.py`).
 1. **Done:** data import with stable ids, base card versus printing (`import.js`); resolver (`engine.js`); 42 golden tests (`test.js`); seeded harness (`sim.js`, report `SIM_REPORT_2026-10-29.txt`).
 2. Playable local match (placeholder rectangles, 24 representative cards, 3 planets, arrow icons, animated cascade order) as a separate screen from the collection. Deckbuilder with a starter deck; combat works on a copy of ownership so a flip never changes a collection.
 3. Owner decisions on the open rules (see `RULES_NOTES.md`), then balance pass on stats (Gate G2).

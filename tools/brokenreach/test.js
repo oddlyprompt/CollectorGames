@@ -91,4 +91,28 @@ function planet(txt){ E.loadCards([{base_card_id:'PL',name:'p',typeName:'Planet'
 { const cards=require('../../broken-reach-production/set01/cards.json').cards; E.loadCards(cards); const u=cards.filter(c=>c.type!=='planet').map(c=>c.base_card_id);
   const run=()=>{ let s=E.newMatch({deckA:u.slice(0,20),deckB:u.slice(30,50),planet:'BR01-175',seed:9}); const snap=JSON.stringify(s); const m=E.legalMoves(s)[0]; E.applyMove(s,m); const pure=JSON.stringify(s)===snap; while(!s.over){ const ms=E.legalMoves(s); s=E.applyMove(s,ms[(s.turn*5)%ms.length]).state; } return [JSON.stringify(s.log),pure]; };
   const a=run(),b=run(); ok(a[0]===b[0]&&a[1],'same seed and same choices give the same match and the input state is never mutated'); }
+// invalid placements and options
+{ const s=E.board(); card('inv',3,1,EE); E.put(s,1,'d1',1); const thr=f=>{ try{ f(); return false; }catch(e){ return true; } };
+  ok(thr(()=>E.applyMove(Object.assign(E.board(),{hands:[['inv'],[]]}),{cid:'zzz',cell:0,rot:0,target:null})),'a card that is not in your hand cannot be played');
+  const s2=E.board(); E.put(s2,0,'d1',1); ok(thr(()=>E.applyMove(Object.assign(s2,{hands:[['inv'],[]]}),{cid:'inv',cell:0,rot:0,target:null})),'an occupied square cannot be played on');
+  ok(thr(()=>E.applyMove(Object.assign(E.board(),{hands:[['inv'],[]]}),{cid:'inv',cell:0,rot:90,target:null})),'a rotation is rejected when the planet does not allow it');
+  ok(E.legalMoves(Object.assign(E.board(),{hands:[['inv','inv'],[]]})).length===16,'duplicate cards in hand give one move per square, 16 on an empty board');
+  const full=E.board({hands:[['inv'],[]]}); for (let i=0;i<16;i++) E.put(full,i,'d1',1); ok(E.legalMoves(full).length===0,'no legal moves on a full board'); }
+// experimental turn-order rules (all off by default)
+{ const mk=(rules)=>{ let s=E.board(); s.rules=rules; s.first=0; card('z',1,1,0); for (let i=0;i<15;i++) E.put(s,i,'z',i<7?0:1); s.turn=15; s.cur=0; s=E.applyMove(Object.assign(s,{hands:[['z'],[]]}),{cid:'z',cell:15,rot:0,target:null}).state; return s; };
+  ok(E.winner(mk({}))===-1,'no rules: 8-8 draws'); ok(E.winner(mk({komi:1}))===0,'komi 1 gives the tie to the first player'); ok(E.final(mk({komi:2}))[0]===10,'komi 2 adds two points to the first player');
+  card('l1',5,1,W); card('lv',1,1,0); let s=E.board(); s.rules={lastPassive:true}; s.turn=15; E.put(s,0,'lv',1); let r=play(s,'l1',1); ok(r.state.cells[0].owner===1,'lastPassive: the 16th placement makes no challenges');
+  s=E.board(); s.rules={lastMinus:2}; s.turn=15; card('l3',3,1,W); card('lg',1,1,0); E.put(s,0,'lg',1); r=play(s,'l3',1); ok(r.state.cells[0].owner===1,'lastMinus 2: Attack 3 -2 = 1 does not beat Guard 1 on the 16th placement');
+  s=E.board(); s.rules={firstGuard:1}; s.first=1; card('fa',3,1,EE); card('fg2',1,3,0); E.put(s,1,'fg2',1); r=play(s,'fa',0); ok(r.state.cells[1].owner===1,'firstGuard: the first player\'s units have +1 Guard'); }
+// AI: always legal, never changes the state it is given, and never reads the opponent hand
+{ const AI=require('./ai.js'); const cs=require('../../broken-reach-production/set01/cards.json').cards; E.loadCards(cs); const un=cs.filter(c=>c.type!=='planet').map(c=>c.base_card_id), pl=cs.filter(c=>c.type==='planet').map(c=>c.base_card_id);
+  let bad=0,mut=0,leak=0,games=0;
+  for (const lv of ['easy','standard','hard']) for (let g=0;g<(lv==='hard'?4:10);g++){ const r=E.mulberry32(g*17+1); let s=E.newMatch({deckA:E.shuffle(un,r).slice(0,20),deckB:E.shuffle(un,r).slice(0,20),planet:pl[g%8],seed:g}); games++;
+    while(!s.over){ const view=JSON.parse(JSON.stringify(s)); const opp=1-s.cur; view.hands[opp]=view.hands[opp].map(()=>'?'); view.decks[opp]=view.decks[opp].map(()=>'?'); const snap=JSON.stringify(view);
+      const m=AI.chooseMove(view,lv,r,un); if (JSON.stringify(view)!==snap) mut++; const legal=E.legalMoves(s).some(x=>x.cid===m.cid&&x.cell===m.cell&&x.rot===m.rot&&x.target===m.target); if(!legal) bad++;
+      s=E.applyMove(s,m).state; } if (s.decks[0].length+s.decks[1].length<0) bad++; }
+  ok(bad===0&&mut===0,'AI (easy, standard, hard) always picks a legal move and never changes its input; it plays with the opponent hand blanked out ('+games+' games)',{bad,mut});
+  // hand and deck exhaustion: 20-card decks give 5 + 7 draws, so a full match never runs out of cards to play
+  let s=E.newMatch({deckA:un.slice(0,20),deckB:un.slice(30,50),seed:3}); let minHand=99; while(!s.over){ minHand=Math.min(minHand,s.hands[s.cur].length); const ms=E.legalMoves(s); s=E.applyMove(s,ms[0]).state; }
+  ok(minHand>=1&&s.decks[0].length+s.hands[0].length===12&&s.decks[1].length+s.hands[1].length===12,'20-card decks never run out in a 16-placement match (12 unplayed cards remain at the end)',minHand); }
 console.log(`\n${pass} passed, ${fail} failed`); process.exit(fail?1:0);

@@ -23,3 +23,18 @@ All of this is provisional. Where the handoff is silent I chose the simplest rea
 - **Chains are healthy:** random play captures 0.30 per placement (81% of placements capture nothing); greedy play 2.36, median 2, largest 15, deepest chain 10 generations. 4-arrow units capture slightly more than 2, 3 or 5-arrow units; 5-arrow units are weakest per placement (their stats are lower on purpose).
 - **Planets:** first-player win rate varies from about 23% to 44% across planets with greedy play; Gallow's Rest (+1 Attack placed on an edge) and Vesper (diagonal -1) hurt the first player most. With about 650 games per planet the noise is about ±2 points, so those two are real. Margins are widest under The Grave Markets (two-arrow +1 Attack).
 - **Cards:** the strongest cards in random decks (about 56–58% deck win rate: Fleet Coordination Node, Bribed Port Guards, Archivist Oruun, Elias Voss) and weakest (about 43%: Patent Warden, Transit Marines, Orren Cargo Runners, Pale Acolytes, Security Halo) are within a normal spread for unbalanced provisional stats. Nothing is broken, nothing is declared balanced (Gate G2 is open).
+
+## Playable Alpha decisions (2026-10-29)
+13. **Deck rule:** exactly 20 unit cards, at most 2 copies of each (prototype choice; the handoff leaves copy limits open). Planets are chosen per match, not part of the deck.
+14. **Alpha card access:** all 172 units and 8 planets are unlocked for testing. Custom decks and settings are stored in this browser under one `localStorage` key (`br_alpha_v1`). The Alpha never reads or writes CollectorGames saves, so the future owned collection stays separate.
+15. **Playable planets:** Karth (corner Guard), The Grave Markets (two-arrow Attack) and Nhelos (once-per-match rotation, which exercises the option UI), plus open space (no planet). The other five planets work in the resolver and the simulations.
+16. **Opponent:** one of the preset decks other than yours, chosen at random. Three levels (see below). The first player is random; a rematch swaps who goes first.
+17. **Ability options in the UI:** where a card has a choice (rotate which neighbour, which diagonal to add, planet rotation) the preview shows one button per option with its capture count.
+18. **Turn-order rules** are optional trial rules chosen on the setup screen (Standard v0.2, Fair start A: first-player bonus of 2, Fair start B: last placement Attack -1). Default is Fair start A. See `TURN_ORDER_REPORT.md`. None is final.
+
+## AI (`tools/brokenreach/ai.js`)
+Sees only the board, the planet, its own hand and the *number* of cards in your hand. The game hands it a copy with your hand and deck blanked out, and a test checks that the AI never needs them. No stat bonuses. Unseen cards are sampled from the catalogue.
+- **Easy:** best immediate capture, but 35% of the time plays a random legal move and adds noise to its scoring.
+- **Standard:** immediate captures including whole cascades (it plays each candidate through the real resolver), then asks how the opponent's best reply would look against 3 sampled hands, for the best 6 candidates. Reciprocal arrows, planet effects and ability timing are all handled because it uses the resolver itself.
+- **Hard:** same method with 12 candidates and 14 samples.
+- **Measured (200 games per pair, both seats, random decks):** Standard beats Easy 119-69 (12 draws); Hard beats Easy 126-48; Hard against Standard is even (88-88; 72-65 with a much wider search). The limit is hidden information, not search depth: a 'keep strong cards for later' hand-management term was tried and made play worse, so it is not used. Hard is therefore only a little stronger than Standard; a real jump would need deeper search against a model of your deck, which was not attempted.

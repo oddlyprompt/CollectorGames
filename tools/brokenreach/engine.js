@@ -26,12 +26,16 @@ function shuffle(arr,rng){ const a=arr.slice(); for (let i=a.length-1;i>0;i--){ 
 const freshTmp=()=>({atk:0,diag:0,ignoreRecip:false,noRecip:false,grdMinus:0,cap:0,extra:0});
 
 // deckA, deckB: arrays of 20 base_card_ids.  first: 0|1 (null = chosen by seed).
-function newMatch({deckA,deckB,planet=null,seed=1,first=null}){
+// rules: optional experimental turn-order variants (all off by default = combat rules v0.2):
+//   komi (points added to the first player's final count), lastPassive (the 16th placement makes no challenges),
+//   lastMinus (all Attack -n on the 16th placement), firstHand (extra cards in the first player's opening hand),
+//   firstGuard (+n Guard to every unit the first player controls), secondDraw (extra card for the second player)
+function newMatch({deckA,deckB,planet=null,seed=1,first=null,rules={}}){
   const rng=mulberry32(seed);
   if (first==null) first=rng()<0.5?0:1;
   const decks=[shuffle(deckA,rng),shuffle(deckB,rng)];
-  const hands=[decks[0].splice(0,5),decks[1].splice(0,5)];
-  return {cells:Array(16).fill(null),planet,turn:0,cur:first,first,hands,decks,placed:[0,0],onceUsed:[false,false],pen:[0,0],log:[],over:false,drawn:[false,false]};
+  const hands=[decks[0].splice(0,5+(first===0?(rules.firstHand||0):(rules.secondDraw||0))),decks[1].splice(0,5+(first===1?(rules.firstHand||0):(rules.secondDraw||0)))];
+  return {rules,cells:Array(16).fill(null),planet,turn:0,cur:first,first,hands,decks,placed:[0,0],onceUsed:[false,false],pen:[0,0],log:[],over:false,drawn:[false,false]};
 }
 
 function planetOps(s){ return s.planet?def(s.planet).ops:[]; }
@@ -49,6 +53,7 @@ function attackOf(s,u,cell,dir,tgt){
   }
   for (const o of hasOp(u.cid,'atk_vs_higher')) if (def(tgt.cid).grd>d.grd) a+=o.amt;
   if (s.pen[u.owner]>0) a-=s.pen[u.owner];
+  if (s.rules&&s.rules.lastMinus&&s.turn===15) a-=s.rules.lastMinus;
   return Math.max(0,a);
 }
 function guardOf(s,v,cell,att){
@@ -56,6 +61,7 @@ function guardOf(s,v,cell,att){
   for (const o of d.ops) if (o.k==='stat_guard_pos'&&POS[o.pos](cell)) g+=o.amt;
   for (const n of neighbors(s,cell)){ const w=s.cells[n]; if(w.owner!==v.owner) continue; for (const o of hasOp(w.cid,'aura')) if(o.stat==='guard'&&matchF(o.f,v)) g+=o.amt; }
   for (const o of planetOps(s)) if (o.k==='pl_guard_pos'&&POS[o.pos](cell)) g+=o.amt;
+  if (s.rules&&s.rules.firstGuard&&v.owner===s.first) g+=s.rules.firstGuard;
   return Math.max(0,g);
 }
 function recip(s,v,fromDir,att){ return !!(effMask(v)>>opp(fromDir)&1) && !att.tmp.ignoreRecip && !v.tmp.noRecip; }
@@ -112,14 +118,14 @@ function applyMove(s0,mv){
       case 'place_diag_atk': u.tmp.diag+=o.amt; break;
       case 'place_ignore_recip': u.tmp.ignoreRecip=true; break;
       case 'place_rotate_self': u.mask=rot90(u.mask); ev.push({t:'rotate',cell:mv.cell,deg:90,why:'ability'}); break;
-      case 'place_add_diag': if(mv.target!=null&&!(effMask(u)>>mv.target&1)&&isDiag(mv.target)) u.tmp.extra|=1<<mv.target; break;
+      case 'place_add_diag': if(mv.target!=null&&!(effMask(u)>>mv.target&1)&&isDiag(mv.target)) { u.tmp.extra|=1<<mv.target; ev.push({t:'extra',cell:mv.cell,dir:mv.target}); } break;
       case 'place_rotate': if(mv.target!=null){ const t=s.cells[mv.target]; if(!t||adj.indexOf(mv.target)<0||((o.who==='friend')!==(t.owner===p))) throw new Error('bad target'); t.mask=rot90(t.mask); t.tmp.extra=rot90(t.tmp.extra); ev.push({t:'rotate',cell:mv.target,deg:90,why:'ability'}); } break;
       case 'place_enemy_norecip': if(mv.target!=null){ const t=s.cells[mv.target]; if(!t||adj.indexOf(mv.target)<0||t.owner===p) throw new Error('bad target'); t.tmp.noRecip=true; } break;
       case 'place_enemy_guard': if(mv.target!=null){ const t=s.cells[mv.target]; if(!t||adj.indexOf(mv.target)<0||t.owner===p) throw new Error('bad target'); t.tmp.grdMinus+=o.amt; } break;
     }
   }
   // cascade: FIFO queue, directions N..NW, each unit changes owner at most once
-  const q=[{cell:mv.cell,gen:0}]; let captures=0, maxGen=0; const attempts=[];
+  const q=(s.rules&&s.rules.lastPassive&&s.turn===15)?[]:[{cell:mv.cell,gen:0}]; let captures=0, maxGen=0; const attempts=[];
   while (q.length){
     const {cell,gen}=q.shift(), a=s.cells[cell];
     if (gen>0){ for (const o of hasOp(a.cid,'cap_rotate')){ a.mask=rot90(a.mask); a.tmp.extra=rot90(a.tmp.extra); ev.push({t:'rotate',cell,deg:90,why:'captured'}); }
@@ -144,10 +150,12 @@ function applyMove(s0,mv){
   return {state:s,events:ev,stats:{captures,maxGen,challenges:attempts.length}};
 }
 function score(s){ const c=[0,0]; for (const u of s.cells) if(u) c[u.owner]++; return c; }
-function winner(s){ const c=score(s); return c[0]>c[1]?0:c[1]>c[0]?1:-1; }
+// final result: the board count plus the optional komi for the first player
+function final(s){ const c=score(s); if (s.rules&&s.rules.komi) c[s.first]+=s.rules.komi; return c; }
+function winner(s){ const c=final(s); return c[0]>c[1]?0:c[1]>c[0]?1:-1; }
 
 // test helper: a blank state with units put directly on the board
-function board({planet=null,cur=0,hands=[[],[]]}={}){ return {cells:Array(16).fill(null),planet,turn:0,cur,first:cur,hands,decks:[[],[]],placed:[1,1],onceUsed:[false,false],pen:[0,0],log:[],over:false,drawn:[true,true]}; }
+function board({planet=null,cur=0,hands=[[],[]]}={}){ return {rules:{},cells:Array(16).fill(null),planet,turn:0,cur,first:cur,hands,decks:[[],[]],placed:[1,1],onceUsed:[false,false],pen:[0,0],log:[],over:false,drawn:[true,true]}; }
 function put(s,cell,cid,owner){ s.cells[cell]=mkUnit(cid,owner); return s; }
 
-module.exports={DIRS,DX,DY,opp,isDiag,rot90,rotMask,pop,nbr,loadCards,REG,def,mulberry32,shuffle,newMatch,legalMoves,applyMove,score,winner,board,put,mkUnit,attackOf,guardOf,isCorner,isEdge,isCenter};
+module.exports={final,DIRS,DX,DY,opp,isDiag,rot90,rotMask,pop,nbr,loadCards,REG,def,mulberry32,shuffle,newMatch,legalMoves,applyMove,score,winner,board,put,mkUnit,attackOf,guardOf,isCorner,isEdge,isCenter};
