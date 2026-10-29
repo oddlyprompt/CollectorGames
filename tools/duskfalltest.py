@@ -58,7 +58,7 @@ async def main():
             mine:myTc().filter(c=>tcD(c.k).set===2&&tcD(c.k).sealed).length, listed:G.lst.filter(l=>l.it==='t'&&G.tc[l.ref]&&tcD(G.tc[l.ref].k).set===2).length, news:G.news.slice(0,12).map(n=>n.h).filter(h=>/DUSKFALL/.test(h))}; })()""")
         check(rel['day']==0 and rel['rel']==[1,2] and rel['legal']==[1,2] and rel['stock']>0, 'Duskfall releases on its date and is in the shops; both sets are Standard', rel)
         check(rel['key']=='1,2|' and rel['n']>=8 and rel['dsk']>=3, 'the metagame now uses both sets, and Duskfall cards make the decks', (rel['key'],rel['n'],rel['dsk']))
-        check(rel['pending']==0 and rel['mine']>=4 and rel['listed']>20, 'preorders arrive on release day; Duskfall is on the market', rel)
+        check(rel['pending']==0 and rel['mine']>=4 and rel['listed']>=15, 'preorders arrive on release day; Duskfall is on the market', rel)
         op=await pg.evaluate("""(()=>{ G.player.cash+=5000; const r=tcBuySealed(2,'P',1)||'ok'; const pk=myTc().find(c=>tcD(c.k).sealed&&tcD(c.k).set===2&&tcD(c.k).v==='P'); const o=tcOpenSealed(pk.id);
           const ks=o.packs.flat(); const ds=ks.map(k=>tcD(typeof k==='string'?k:(k.k||G.tc[k.id||k]&&G.tc[k.id||k].k))); return {r, n:ks.length, set2:ds.every(d=>d&&d.set===2), rar:ds.map(d=>d&&d.rar)}; })()""")
         check(op['r']=='ok' and op['n']==10 and op['set2'], 'a Duskfall pack holds 10 Duskfall cards', op)

@@ -10,6 +10,7 @@ run wildkintest python3 tools/wildkintest.py
 run duskfalltest python3 tools/duskfalltest.py
 run tidemarktest python3 tools/tidemarktest.py
 run tidemark_ui_test python3 tools/tidemark_ui_test.py
+run brokenreach_collect python3 tools/brokenreachcollecttest.py
 run brokenreach_rules node tools/brokenreach/test.js
 run brokenreach_play python3 tools/brokenreach_uitest.py
 run test_art_pipeline python3 tools/test_art_pipeline.py
