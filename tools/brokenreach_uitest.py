@@ -67,6 +67,14 @@ async def main():
                 seen_banner=await pg.evaluate('window.__sawBanner'); check(seen_banner,'a cascade banner appears during a greedy human game with animations on')
                 await pg.screenshot(path='/tmp/br_desktop_afterbot.png')
                 await pg.evaluate("BR_TEST.ST.speed='0'; BR_TEST.show('menu')")
+            if name=='desktop':   # the card you select is the card that is placed (not the first card in hand)
+                await pg.evaluate("document.querySelectorAll('.ov').forEach(o=>o.remove()); BR_TEST.ST.speed='0'; BR_TEST.show('setup')"); await pg.click('[data-act=sellevel][data-id=easy]'); await pg.click('[data-act=start]'); await pg.wait_for_selector('#mboard .cell')
+                for _ in range(80):
+                    if await pg.query_selector('#mhand .bcard:not(.dis)'): break
+                    await pg.wait_for_timeout(100)
+                cards=await pg.query_selector_all('#mhand .bcard'); cid=await cards[3].get_attribute('data-cid'); await cards[3].click(); await (await pg.query_selector('.cell.ok')).click(); await pg.click('[data-act=confirm]'); await pg.wait_for_timeout(400)
+                placed=await pg.evaluate("BR_TEST.M.S.log[BR_TEST.M.S.log.length>1&&BR_TEST.M.S.log[0].p===1?1:0].cid") if False else await pg.evaluate("(()=>{const l=BR_TEST.M.S.log.filter(x=>x.p===0);return l[l.length-1].cid})()")
+                check(placed==cid,'the card you select is the card that is placed',(placed,cid))
             # deckbuilder
             await pg.evaluate("BR_TEST.show('decks')"); await pg.click('[data-act=newdeck]'); await pg.wait_for_selector('[data-act=add]')
             for i in range(24):
