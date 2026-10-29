@@ -19,7 +19,7 @@ const TYPE_SHORT={'Ship':'Ship','Character':'Char','Crew & Military':'Crew','Dro
 const DIRN=['N','NE','E','SE','S','SW','W','NW'], POS=[[50,0],[100,0],[100,50],[100,100],[50,100],[0,100],[0,50],[0,0]];
 const cellName=c=>'ABCD'[c&3]+((c>>2)+1);
 // ---------- storage ----------
-let ST={decks:[],sel:{deck:'dockside',planet:'BR01-173',level:'standard',rule:'komi2'},speed:'1',help:false,preview:true};
+let ST={decks:[],sel:{deck:'dockside',planet:'BR01-173',level:'easy',rule:'komi2'},speed:'1',help:false,preview:true};
 try { const j=JSON.parse(localStorage.getItem('br_alpha_v1')||'null'); if (j) ST=Object.assign(ST,j,{sel:Object.assign(ST.sel,j.sel||{})}); } catch(e){}
 function save(){ try { localStorage.setItem('br_alpha_v1',JSON.stringify(ST)); } catch(e){} }
 function allDecks(){ return DATA.presets.map(d=>({id:d.id,name:d.name,blurb:d.blurb,cards:d.cards,preset:true})).concat(ST.decks.map(d=>({id:d.id,name:d.name,blurb:'Your deck',cards:d.cards,preset:false}))); }
@@ -85,7 +85,7 @@ function buildScreen(){
 function inspectOverlay(id){ const o=document.createElement('div'); o.className='ov'; o.dataset.act='closeov'; o.innerHTML=`<div class="dlg" data-stop="1">${detailHtml(id)}<div class="row"><button class="btn pri" data-act="closeov">Close</button></div></div>`; document.body.appendChild(o); }
 function helpOverlay(){ const o=document.createElement('div'); o.className='ov'; o.innerHTML=`<div class="dlg help" data-stop="1"><h2>How to play</h2><ul><li>Two players share a <b>4×4 board</b>. Each deck is 20 units; you start with 5 cards in hand and draw one at the start of each of your turns. Each player places 8 cards, so the board fills on the 16th placement.</li>
  <li>Every card has up to eight <b>arrows</b> (N, NE, E, SE, S, SW, W, NW). When you place a card, each arrow that points at an adjacent <b>enemy</b> card makes a challenge.</li>
- <li>A challenge wins if your <b>Attack</b> is higher than their <b>Guard</b> (+1 if they have an arrow pointing back at you). Equal is a failed challenge. Nothing is destroyed: a captured card simply changes owner.</li>
+ <li>A challenge wins if your <b>Attack</b> is higher than the <b>defender's Guard</b> (+1 if they have an arrow pointing back at you). Guard only matters when you are the one being challenged. Equal is a failed challenge, so a defender with Guard 4 (5 with a pointing-back arrow) is safe from Attack 4 and below. Nothing is destroyed: a captured card simply changes owner.</li>
  <li>A captured card <b>immediately attacks with its own arrows</b>, so one placement can cause a chain reaction. A card can change owner only once per placement.</li>
  <li>When the board is full, whoever controls more cards wins. 8–8 is a draw.</li>
  <li>A <b>planet</b> applies one effect to both players. Cards marked ◆ have an ability; tap any card to read it.</li>
@@ -102,9 +102,10 @@ function startMatch(cfg){
   show('match'); nextTurn();   // the engine deals the opening hands; the second player draws before their first turn
 }
 function matchScreen(){ root().innerHTML=`<div class="scr" style="padding-top:10px"><div class="topbar" id="mtop"></div><div class="match"><div class="main"><div id="mscore"></div><div id="mfoe"></div><div class="boardwrap" id="mboard"></div><div class="status" id="mstatus"></div><div class="hand" id="mhand"></div></div><div class="side"><div id="mdetail"></div><div class="logbox" id="mlog"></div></div></div></div>`; renderMatch(); }
-function legalByCell(){ const by={}; for (const m of E.legalMoves(M.S)) (by[m.cell]=by[m.cell]||[]).push(m); return by; }
+function legalByCell(){ const by={}; for (const m of E.legalMoves(M.S)) if (!M.sel||m.cid===M.sel) (by[m.cell]=by[m.cell]||[]).push(m); return by; }   // only the selected card's moves
 function myTurn(){ return !M.busy && !M.S.over && M.S.cur===0; }
-function preview(mv){ const r=E.applyMove(M.S,mv), caps={}; r.events.forEach(e=>{ if(e.t==='capture') caps[e.cell]=e.gen; }); return {caps,n:Object.keys(caps).length,gens:r.stats.maxGen,score:E.final(r.state)}; }
+function preview(mv){ const r=E.applyMove(M.S,mv), caps={}, tags={}; r.events.forEach(e=>{ if(e.t==='capture') caps[e.cell]=e.gen; if(e.t==='challenge'&&e.from===mv.cell) tags[e.to]={atk:e.atk,grd:e.grd,win:e.win}; }); return {caps,tags,n:Object.keys(caps).length,gens:r.stats.maxGen,score:E.final(r.state)}; }
+const tagHtml=t=>`<span class="pvtag ${t.win?'w':'l'}">${t.atk} ${t.win?'&gt;':'≤'} ${t.grd}</span>`;
 function renderMatch(){
   if (scr!=='match'||!M) return; const S=M.disp, real=M.S, you=0; const sc=E.score(S); const bonus=real.rules&&real.rules.komi?real.rules.komi:0; const by=myTurn()&&M.sel?legalByCell():{}; const pd=M.pend; const pv=pd&&ST.preview?preview(pd):null;
   const pl=real.planet?E.def(real.planet):null;
@@ -115,15 +116,15 @@ function renderMatch(){
   let cells=''; for (let i=0;i<16;i++){ const u=S.cells[i], ok=!!by[i]&&!u, isP=pd&&pd.cell===i, wf=pv&&pv.caps&&pv.caps[i]!=null;
     let inner=''; if (u) inner=unitHtml(S,u,i,(M.fx.place===i?'placing ':'')+(M.fx.flip===i?'flipping ':'')+(M.hl.att===i?'attacker ':'')+(M.hl.tgt===i?'target ':'')+(M.hl.blocked===i?'blocked ':''));
     else if (isP||(pv&&pv.mv&&pv.mv.cell===i)){ const mv=isP?pd:pv.mv; inner=cardHtml(E.def(mv.cid),{owner:0,cls:'ghost',mask:E.rotMask(E.def(mv.cid).mask,mv.rot||0)}); }
-    if (M.pops[i]) inner+=M.pops[i];
+    if (M.pops[i]) inner+=M.pops[i]; else if (pv&&pv.tags&&pv.tags[i]) inner+=tagHtml(pv.tags[i]);
     cells+=`<button class="cell ${ok?'ok':''} ${isP?'pend':''} ${wf?'willflip '+(pv.caps[i]>1?'g2':''):''}" data-act="cell" data-i="${i}" ${u&&!M.busy?'':(ok?'':'disabled')} aria-label="${cellName(i)}">${inner}</button>`; }
   $('#mboard').innerHTML=`<div class="board">${cells}</div>${M.chain>1?`<div class="chain">×${M.chain}<small>CAPTURES</small></div>`:''}`;
   // hand
   const hand=real.hands[0]; $('#mhand').innerHTML=hand.map((cid,i)=>cardHtml(E.def(cid),{owner:0,cls:(M.sel===cid&&myTurn()?'sel ':'')+(myTurn()?'':'dis'),attrs:`data-act="hand" data-cid="${cid}" data-i="${i}"`})).join('');
   // status
   let st=''; if (M.busy&&M.anim) st=`<div class="go"><span class="thinking">${M.foeTurn?'Opponent plays':'Resolving'}</span><button class="btn sm" data-act="skip">Skip ▸▸</button></div>`; else if (M.busy) st='<span class="thinking">Opponent is thinking</span>';
-  else if (real.over) st='<div class="go"><button class="btn sm pri" data-act="rematch">Rematch</button><button class="btn sm" data-act="setup">Change deck or planet</button><button class="btn sm" data-act="menu">Menu</button></div>'; else if (real.cur===0){ if (pd){ const t=pv?`captures <b>${pv.n}</b>${pv.gens>1?' over '+pv.gens+' generations':''} · board <b>${pv.score[0]}–${pv.score[1]}</b>`:''; st=`<div class="go"><span>${esc(E.def(pd.cid).name.split(' — ')[0])} → <b>${cellName(pd.cell)}</b> ${t}</span><button class="btn sm pri" data-act="confirm">Confirm</button><button class="btn sm" data-act="cancel">Cancel</button></div>`; if (by[pd.cell]&&by[pd.cell].length>1) st+=optionButtons(by[pd.cell],pd); }
-    else if (M.sel){ const cs=Object.keys(by); st=`<span id="hoverinfo">Choose a glowing square (${cs.length} open). Tap it to preview, tap again to confirm.</span>`; } else st='Your turn: choose a card from your hand.'; }
+  else if (real.over) st='<div class="go"><button class="btn sm pri" data-act="rematch">Rematch</button><button class="btn sm" data-act="setup">Change deck or planet</button><button class="btn sm" data-act="menu">Menu</button></div>'; else if (real.cur===0){ if (pd){ const t=pv?(pv.n?`captures <b>${pv.n}</b>${pv.gens>1?' over '+pv.gens+' generations':''} · board <b>${pv.score[0]}–${pv.score[1]}</b>`:(Object.keys(pv.tags).length?'captures <b>nothing</b>: each challenge needs your Attack <b>higher than</b> their Guard (+1 if they point back)':'no enemy card in reach')):''; st=`<div class="go"><span>${esc(E.def(pd.cid).name.split(' — ')[0])} → <b>${cellName(pd.cell)}</b> ${t}</span><button class="btn sm pri" data-act="confirm">Confirm</button><button class="btn sm" data-act="cancel">Cancel</button></div>`; if (by[pd.cell]&&by[pd.cell].length>1) st+=optionButtons(by[pd.cell],pd); }
+    else if (M.sel){ const cs=Object.keys(by); st=`<span id="hoverinfo">Choose a glowing square (${cs.length} open). Tap it to preview, tap again to confirm.</span>`; } else st='<div class="go"><span>Your turn: choose a card from your hand.</span><button class="btn sm" data-act="hint">Hint</button></div>'; }
   $('#mstatus').innerHTML=st;
   const di=M.insp||(M.sel||null); $('#mdetail').innerHTML=detailHtml(di,{owner:0})+(M.cfg.planet!=='none'&&real.planet&&!di?'':'');
   const lg=$('#mlog'); if (lg) { lg.innerHTML=M.log.slice(-40).map(x=>`<div>${x}</div>`).join(''); lg.scrollTop=lg.scrollHeight; }
@@ -180,6 +181,7 @@ document.addEventListener('click',e=>{
   else if (a==='mmenu'){ if (confirm('Leave this match?')){ M=null; show('menu'); } } else if (a==='mrestart'){ if (confirm('Restart this match?')){ const c=Object.assign({},M.cfg,{first:M.first}); M.done=true; startMatch(c); } }
   else if (a==='speed'){ ST.speed=id; save(); renderMatch(); } else if (a==='skip') skipAnim();
   else if (a==='hand'){ const cid=b.dataset.cid; M.insp=cid; if (myTurn()){ M.sel=M.sel===cid?null:cid; M.pend=null; } renderMatch(); }
+  else if (a==='hint'){ if (myTurn()){ const v=clone(M.S); v.hands[1]=v.hands[1].map(()=>'?'); v.decks[1]=v.decks[1].map(()=>'?'); v.decks[0]=v.decks[0].map(()=>'?'); const mv=AI.chooseMove(v,'standard',M.rng,UNIT_IDS); if (mv){ M.sel=mv.cid; M.pend=mv; M.insp=mv.cid; renderMatch(); toast('Hint: the Standard AI would play this. Confirm or choose differently.'); } } }
   else if (a==='cell'){ cellClick(+b.dataset.i); }
   else if (a==='confirm'){ if (M.pend&&myTurn()) { const mv=M.pend; doMove(mv,false).then(nextTurn); } } else if (a==='cancel'){ M.pend=null; renderMatch(); }
   else if (a==='variant'){ const ms=legalByCell()[M.pend.cell]; M.pend=ms[+b.dataset.k]; renderMatch(); }
@@ -204,10 +206,11 @@ function cellClick(i){
   M.pend=ms[0]; if (!ST.preview||ms.length>1) {} renderMatch();
 }
 function hoverPreview(i){   // desktop only: shows what a placement would capture without rebuilding the board
-  $$('.cell.willflip').forEach(c=>c.classList.remove('willflip','g2')); const info=$('#hoverinfo'); if (!M||!M.sel||!myTurn()||M.pend||!ST.preview) return;
+  $$('.cell.willflip').forEach(c=>c.classList.remove('willflip','g2')); $$('.pvtag').forEach(t=>t.remove()); const info=$('#hoverinfo'); if (!M||!M.sel||!myTurn()||M.pend||!ST.preview) return;
   if (i==null){ if (info) info.textContent='Choose a glowing square. Tap it to preview, tap again to confirm.'; return; }
   const ms=legalByCell()[i]; if (!ms) return; const pv=preview(ms[0]); for (const c in pv.caps){ const el=$(`.cell[data-i="${c}"]`); if (el) el.classList.add('willflip',pv.caps[c]>1?'g2':'x'); }
-  if (info) info.innerHTML=`${cellName(i)}: captures <b>${pv.n}</b>${pv.gens>1?' over '+pv.gens+' generations':''} · board would be <b>${pv.score[0]}–${pv.score[1]}</b>`; }
+  for (const c in pv.tags){ const el=$(`.cell[data-i="${c}"]`); if (el) el.insertAdjacentHTML('beforeend',tagHtml(pv.tags[c])); }
+  if (info) info.innerHTML=`${cellName(i)}: captures <b>${pv.n}</b>${pv.gens>1?' over '+pv.gens+' generations':''}${pv.n?'':' (Attack must beat Guard; ties and +1 for a pointing-back arrow go to the defender)'} · board would be <b>${pv.score[0]}–${pv.score[1]}</b>`; }
 document.addEventListener('mouseover',e=>{ if (scr!=='match'||!M) return; const c=e.target.closest('.cell.ok'); const i=c?+c.dataset.i:null; if (i!==M.hover){ M.hover=i; hoverPreview(i); } });
 document.addEventListener('input',e=>{ const t=e.target; if (scr!=='build') return; if (t.id==='fq'){ DB.f.q=t.value; DB.focus='fq'; buildScreen(); } });
 document.addEventListener('change',e=>{ const t=e.target; if (scr!=='build') return; const m={ft:'t',fa:'a',fr:'r',far:'ar',fs:'s'}[t.id]; if (m){ DB.f[m]=t.value; buildScreen(); } else if (t.id==='dname') DB.name=t.value; });

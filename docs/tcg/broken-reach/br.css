@@ -87,3 +87,5 @@ button{ font:inherit; color:inherit; cursor:pointer; } h1,h2,h3,.cond{ font-fami
 .dstats{ display:flex; gap:12px; flex-wrap:wrap; font-size:13px; color:var(--dim); margin:8px 0; } .dstats b{ color:var(--ink); } .cnt{ font-family:'Barlow Condensed'; font-size:22px; } .cnt.full{ color:var(--ok); } .cnt.bad{ color:var(--amber); }
 .help li{ margin-bottom:6px; } .toast{ position:fixed; left:50%; bottom:22px; transform:translateX(-50%); background:#000d; border:1px solid var(--amber); padding:9px 16px; z-index:80; font-size:14px; }
 .lg-dot{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; vertical-align:-1px; }
+
+.pvtag{ position:absolute; left:50%; top:46%; transform:translate(-50%,-50%); z-index:7; pointer-events:none; font-family:'Barlow Condensed'; font-weight:800; font-size:17px; padding:2px 7px; background:rgba(0,0,0,.82); border:1px solid var(--mute); white-space:nowrap; } .pvtag.w{ border-color:var(--ok); color:var(--ok); } .pvtag.l{ border-color:var(--bad); color:var(--bad); }
