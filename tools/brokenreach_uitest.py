@@ -22,7 +22,7 @@ async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch(); 
         for name,vp in (('desktop',{'width':1280,'height':800}),('mobile',{'width':390,'height':780})):
-            ctx=await b.new_context(viewport=vp, has_touch=(name=='mobile'), is_mobile=(name=='mobile')); pg=await ctx.new_page(); pg.on('pageerror',lambda e:errs.append(str(e))); pg.on('console',lambda m: errs.append(m.text) if m.type=='error' and 'fonts.g' not in m.text and 'Failed to load resource' not in m.text else None)
+            ctx=await b.new_context(viewport=vp, has_touch=(name=='mobile'), is_mobile=(name=='mobile')); pg=await ctx.new_page(); pg.on('pageerror',lambda e:errs.append(str(e)+' | '+str(getattr(e,'stack',''))[:600])); pg.on('console',lambda m: errs.append(m.text) if m.type=='error' and 'fonts.g' not in m.text and 'Failed to load resource' not in m.text else None)
             await pg.goto(URL); await pg.wait_for_selector('[data-act=play]')
             await pg.screenshot(path=f'/tmp/br_{name}_menu.png')
             await pg.click('[data-act=play]'); await pg.wait_for_selector('[data-act=start]'); await pg.screenshot(path=f'/tmp/br_{name}_setup.png')

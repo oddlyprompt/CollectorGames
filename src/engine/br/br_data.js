@@ -64,6 +64,6 @@ function brRV(d){ const r=BR_RARN[d.card.rar], v=BR_VARN[d.v]; return d.card.pk=
 function brPrintsOf(cid){ return brSetCards(1).filter(c=>c.cid===cid); }
 function brCardByCid(cid){ brSetCards(1); return BR_BYCID.get(+cid)||null; }
 // art: nothing is approved yet (the handoff says no production artwork before the master character sheets); every card draws a labelled placeholder
-const BR_ART={};
+const BR_ART=BR_ART_MAP;   // id -> {u}: only owner-approved pictures (tools/brokenreach_collect_build.py)
 function brArtUrl(id){ const a=id&&BR_ART[id]; return a? a.u : null; }
 function brArtState(card){ return BR_ART[card.id]? {state:'final', missing:[]} : {state:'pending', missing:[card.id]}; }

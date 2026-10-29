@@ -32,7 +32,7 @@ function cardHtml(def,o={}){ // def: card definition; o: {owner, mask, extra, at
   const ea=o.atk!=null?o.atk:def.atk, eg=o.grd!=null?o.grd:def.grd;
   const cmp=(e,b)=>e>b?'up':e<b?'dn':'';
   return `<div class="bcard ${o.cls||''}" data-o="${o.owner==null?'n':o.owner}" style="--a1:${af[0]};--a2:${af[1]};--rc:${RARC[def.rar]}" ${o.attrs||''}>${arrowsHtml(mask,o.extra||0)}
-    <div class="art"><svg viewBox="0 0 100 100">${ICON[def.typeName]||''}</svg></div><span class="ty">${TYPE_SHORT[def.typeName]||''}</span><span class="rar"></span>
+    <div class="art ${(DATA.art||{})[def.base_card_id]?'has':''}" ${(DATA.art||{})[def.base_card_id]?`style="background-image:url('${DATA.art[def.base_card_id]}')"`:''}><svg viewBox="0 0 100 100">${ICON[def.typeName]||''}</svg></div><span class="ty">${TYPE_SHORT[def.typeName]||''}</span><span class="rar"></span>
     <div class="nm">${esc(def.name.split(' — ')[0])}</div><div class="st"><span class="a ${cmp(ea,def.atk)}"><small>A</small>${ea}</span>${ab?'<span class="ab">◆</span>':''}<span class="g ${cmp(eg,def.grd)}"><small>G</small>${eg}</span></div></div>`;
 }
 function unitHtml(S,u,cell,cls,attrs){ const d=E.def(u.cid); return cardHtml(d,{owner:u.owner,mask:u.mask,extra:u.tmp.extra,atk:E.attackOf(S,u,cell,0,{cid:u.cid}),grd:E.guardOf(S,u,cell,null),cls,attrs}); }
