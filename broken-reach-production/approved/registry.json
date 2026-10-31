@@ -2,7 +2,7 @@
  "version": 1,
  "assets": {
   "BR01-002": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "1fb081526098b9edfa11ce0a047b01641fa321f1f8133ee7469101edfead534d",
    "size": [
@@ -12,10 +12,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-005": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "cc411bdf537dc4912840051c4c4d8e9b136234c93e394ec152bce2b0790420dc",
    "size": [
@@ -26,10 +28,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-009": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "499aab834cd84488bc7e8ee725ce9b6485d7fcd6cfea6994b3c2d69dc1733671",
    "size": [
@@ -40,10 +44,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-011": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "3c677275966b2e6f812acadc91ca3c00510e27fda419bc80550c81318d25fb7b",
    "size": [
@@ -54,10 +60,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-013": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "3b255174237a2961c89ba2aab3e5644bb1596cbe2e02fe04f77219443ca0c5e1",
    "size": [
@@ -67,10 +75,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-016": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "63b6223bc823ccdf75bcf9dbe6f78dbbe0af53637574dea7eaf844cb43541da7",
    "size": [
@@ -81,10 +91,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-017": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "b268bf5e0f4c23aab82a2aa9d80feb93a5d39421842e9c89fff6c0e7e44c2e72",
    "size": [
@@ -95,10 +107,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-019": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "f4948cd3985ca55c4a127bed891ced5ec50f46aed698e9ca8586f3273eefd06b",
    "size": [
@@ -109,10 +123,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-021": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0da03d5c327e7dedaff05b0cf247911bf067aa3078cc03fc8b3b172550342e7e",
    "size": [
@@ -123,10 +139,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-023": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "b84092827774acea422e0e271f029fe1d03f9bab8b6aad2b9f1630b06f8f37e9",
    "size": [
@@ -136,10 +154,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-025": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "11d262fe8a5d3727686e35df374e10d161701ab0a9ada96f699ed79074d70a69",
    "size": [
@@ -150,10 +170,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-029": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d9317455e8905644278bfb28db1b7654e64e227da26e3af0dfe0b2213bb8b275",
    "size": [
@@ -164,10 +186,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-030": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "2a3169eb68ba5db9dbd089882041054dc807ef20a7fcff2bc8d69e2830b34530",
    "size": [
@@ -178,10 +202,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-031": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "67763cccb8acb3e1c6ab7f6be3de9f63a3deeb04bb2061b05bbd293f627a7486",
    "size": [
@@ -192,10 +218,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-033": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "b2f55587d8ef308c180d7767a3496050222a78df3af1ca6d8ea84afbeea878ad",
    "size": [
@@ -206,10 +234,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-034": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "17014f7dadea01b3783418058841c5eb289397a5c3f52fafce36cf3cd3293ede",
    "size": [
@@ -220,10 +250,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-035": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0d91942db32cc0593383c7bcdeb8489d37c275c8e17eb24599eb5ea8b4e8c0bb",
    "size": [
@@ -234,10 +266,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-039": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "3400e43f5e1685be5a1796eade2d344ad039104b12d014eba818b6502a4c01d1",
    "size": [
@@ -248,10 +282,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-041": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "cd52c1c63b985b597e7690adac2256c32d2b26720d41d21dec073654c05d6896",
    "size": [
@@ -261,10 +297,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-042": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "70a7d9f767d90f03e5a2fbcb581cbcdae1927bf994d41211d651718e4d05f1e9",
    "size": [
@@ -275,10 +313,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S005",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-044": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "4bee72664139add2e1d859268d3e302884c5a29155b76e2362472679da896a02",
    "size": [
@@ -289,10 +329,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-046": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "2dfd33e25e9645d625c4cff2c41826e605bf08a26b38ecf18cff5128ebe0bca4",
    "size": [
@@ -302,10 +344,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-047": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "65145d41a3d751f9bb18263777be65e4e07edc26b50b3d63c7df917150597d1b",
    "size": [
@@ -315,10 +359,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-048": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "4e8e2f9ddf949db60d5848a784618fecdd1126079661b9acc2a8dd794bb7529a",
    "size": [
@@ -329,10 +375,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-049": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "57db76585819385a48f3dbe823b085f6fcf3bdfd45f1790bc9f8ae57009a4a40",
    "size": [
@@ -343,10 +391,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-050": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "934b5a76052da560f337d5c481e733a20d6b97c36a614b63bba7ed0e42c60dd1",
    "size": [
@@ -357,10 +407,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-051": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c2656a15a0579df7dbbb770ecfeced55f4c2b22671661739d4d5091ed6076cb3",
    "size": [
@@ -371,10 +423,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-064": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d15618fd1983aab2ed5bea8e36bf09a0dae9e1b0fcdf68873680f4fec5b1a2bc",
    "size": [
@@ -385,10 +439,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-065": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "acbb36feca3e227e17cc1913324e82985ecc60edfded64f82b7ff5a0ba4c89c5",
    "size": [
@@ -399,10 +455,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-066": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0ba46fa9cb341c762f22a4b57a1caab17ba7c836b5db2e1356363fcd00fe1966",
    "size": [
@@ -413,10 +471,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-068": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "30fd08f248d752df76c9e95eb5dc133202a11ecbf4733328a52d7e28ca091567",
    "size": [
@@ -427,10 +487,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S006",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-069": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "644d96dcecda256bc873ee2d314d4babed00e08c59d163533747fa0885e44318",
    "size": [
@@ -440,10 +502,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-072": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "788605b8a5b120bcd803774873cf37127a55771c78ec4dbd04ce6e07d1e678fc",
    "size": [
@@ -453,10 +517,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-074": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0940740ec95c9e961b123f2afc2237e4d226e04ea29855d1db8fd6cd3b7a2cf3",
    "size": [
@@ -466,10 +532,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-076": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "98efb27d511b52838c07a42e61a1834034a8221b94d37cba7d41caf56f5b5aa5",
    "size": [
@@ -480,10 +548,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-079": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "276a6ba7e250091cccec8bab1d8f7239ba3e485051ae3a050ac471dd6481ab9b",
    "size": [
@@ -493,10 +563,12 @@
    "batch": "B02",
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
-   "sol_review": "Review — pending owner approval"
+   "sol_review": "Review — pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-084": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "25ca65e4e22f48347c171c1d94c0f45bfd265d1df90550885246c56e83bc6395",
    "size": [
@@ -507,10 +579,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-086": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "bbe4037aefcdeff5e799ee6c956651f8b945e6eb4d224df78dd9b7eded4f152a",
    "size": [
@@ -521,10 +595,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-173": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "70a60c7fc6ccf6d4fd115060af3b8700c2262b4454f0b092a558877c2bbf45f9",
    "size": [
@@ -535,10 +611,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-174": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "26ba1cf9843fa01b0df04f7891bc0e42bb00e337ba21b47da3a658b6592b01db",
    "size": [
@@ -549,10 +627,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-175": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "26bc238d623fc36179eaa59f10c6a1e27447635a164d0baa3e7d7721c9270b9a",
    "size": [
@@ -563,10 +643,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-176": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "feedede5f61f9d0ee0ad03137bc661781ad86a88aea2a9811985fced5bd34b93",
    "size": [
@@ -577,10 +659,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-177": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "bcba69a89021f63aa7b535198437bbb7f4a08334256cabeb9a8dcaf0be8190de",
    "size": [
@@ -591,10 +675,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-178": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c4a02cfc75930bf8e20dd49bee177fb5a3e8050ab66d73ce0fb89b84fc866607",
    "size": [
@@ -605,10 +691,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S003",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-179": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "2e0f0d48920e1416b7e0a12122739a092ed9ee988f19b4c7ffc042ed6d4b0da8",
    "size": [
@@ -619,10 +707,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-180": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "95dd64a5eee2a5af6293e2dbb9766e2045c543243744760ad4b1642f6c31352e",
    "size": [
@@ -633,10 +723,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-QUEUE-S004",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-dorrak": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "ff50f7ef6e69fed3d294f1abdda8c86ac45aebd863742b813c3bba3e02dc36fa",
    "size": [
@@ -646,10 +738,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-dravak": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "04e71c626027c1d6905d0fa847deff37a7266af583aba9ed9335f55e9a2978a9",
    "size": [
@@ -659,10 +753,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-elias-voss": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "1c79573a5874819d94d48a3c1e540ae10a8df9e9433024898f2a4329e9c2457c",
    "size": [
@@ -672,10 +768,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-kaia-venn": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "669c2d1fa4a30d07ee4e42f23b319abc12e622bb7f43c2d85edeea8e2a6ee5ca",
    "size": [
@@ -685,10 +783,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-khepri": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "5b128f12a15a2a05ea789e77941f8b4e399ca539b1d33c01826ee5e415265966",
    "size": [
@@ -698,10 +798,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-lyssara-vale": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "cb33a507b1fd1f016f055b91233d08e42b1846bd047e8761dd84333a36736efd",
    "size": [
@@ -711,10 +813,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-neru-sael": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "ed00be181b45c69eed7405ec3dd420b848f1c4e13e4790c0cff464e1bb06f6f4",
    "size": [
@@ -724,10 +828,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-orren": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "275542c3d8f1be4f670f98826204134e01fff451f927f57f29bb73afa20dbcf0",
    "size": [
@@ -737,10 +843,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-rix-vanno": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "7021903a179169027480cfda90059d29f8830d43e00f1a43d182b03e54cb1dd1",
    "size": [
@@ -750,10 +858,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-selyth": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "398b2bf4810147595d923cf41f0d31721374e39b50a0b4d8044085f47d6c0153",
    "size": [
@@ -763,10 +873,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-silas-veyne": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "32d76309104ab4bba83d7fddb6696a79c037b1731d095bd029c1af47449aae96",
    "size": [
@@ -776,10 +888,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-tavi": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "de14f4771e534cec726d0641cbbc15a7bc0c1f6a8e07d28c1aadc6ed133f8ca6",
    "size": [
@@ -789,10 +903,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-thessari": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "da3a6037a75e04d6ab04dbac443fd756600e0e967040ac06554519d2f396f15d",
    "size": [
@@ -802,10 +918,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "MASTER-vaelari": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c999b607f79f5f6ab1e7ca04178d9e50cc505dce7995cb833dacc1934140213b",
    "size": [
@@ -815,10 +933,12 @@
    "batch": "M00",
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
-   "sol_review": "Review — awaiting owner approval"
+   "sol_review": "Review — awaiting owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-003": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "dc955d2dd9f1661bd3ae0e2d790f7f0a6a169ce847b03d589db61536ad37f3e9",
    "size": [
@@ -829,10 +949,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-004": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "df0a34c69e8132e89b908f0a234470e31bfe22b4b89672595c56496699151b31",
    "size": [
@@ -843,10 +965,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-006": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "680c097f7cfa76dbe65248917bc66f79f94d2879ba1e5bb27026e18a36bb80c8",
    "size": [
@@ -857,10 +981,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-007": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d5ea32b127699251e1db0d2ea479abdbcff24c15e98e3922626eddcb49ca8cc3",
    "size": [
@@ -871,10 +997,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-008": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "a29b44beb0ad5d903e54015be1024feb96c3037be1b63245960fd6c02faf0503",
    "size": [
@@ -885,10 +1013,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-010": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "5e510484d1f34cdcec61cdab461823d5ed093538e2bfd883548714358a02c4f8",
    "size": [
@@ -899,10 +1029,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-012": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "934fd475bb39a18d59a4954d2a211fb51d8d66f5161b14df78959f6b5c07c79d",
    "size": [
@@ -913,10 +1045,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-014": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "08fb1a9c61307beaaaf003b716b47d42691ea4af38769d567c161f97fa7b0eec",
    "size": [
@@ -927,10 +1061,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-015": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "101ecc978dd913a61daf402016d98d59f2f046da1fccce2ea74f6b35888919c0",
    "size": [
@@ -941,10 +1077,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-018": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "308176903f363d827d30c1a60ba41c12acde71ffdae09f40cdca8c1908ea10ab",
    "size": [
@@ -955,10 +1093,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-020": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c3d4513d97fc3506c5d52256edacd538d80c61310672b31492774bb7c97ac14b",
    "size": [
@@ -969,10 +1109,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-022": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "71182c54272c63380762af284149c68284e17b1d314b793051215765ad92303a",
    "size": [
@@ -983,10 +1125,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-024": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "4157b6640231767a5368280992c4d85758b94ec784ee496dda6cf741843d237b",
    "size": [
@@ -997,10 +1141,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-026": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "dc60d0d2b29597dc618e1e2e58de6e420fa692348b0c9d8ff7b6f66f50b0054a",
    "size": [
@@ -1011,10 +1157,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-027": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "fbdda8ba85ccc95a5a0b2ad0f1addc77de8f8988832616c13a9d72065e051b43",
    "size": [
@@ -1025,10 +1173,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S009",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-028": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "33b4e57f2d7a785a539fab2668a9398f525a01bead0ff2435dc025ca5bf756bd",
    "size": [
@@ -1039,10 +1189,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-032": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "7918c88a4c4e2ce494780f9426d4ea4b0a0985fd2f9e51410abbb3b587390ca3",
    "size": [
@@ -1053,10 +1205,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-036": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "08622dc34433e0a32f4f7600a2195eb4921e39802a9f0142d7da58cbd364fe0b",
    "size": [
@@ -1067,10 +1221,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-037": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "16068a7a57c782db915e5339566a9ea88f941450c9365fcd740edaba3bf9b2cf",
    "size": [
@@ -1081,10 +1237,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-038": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "7b659049cbd1b67e737b362c32cee0917dff9346d58baf740dc781b40d4e697a",
    "size": [
@@ -1095,10 +1253,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-040": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "b4522299bfc4487745a6ba78da0b090f3b0cd8898b4b136bb8aafa7dfdb6fa06",
    "size": [
@@ -1109,10 +1269,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-043": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "70cad046a39535f65b31b32bd5ac6edf99e8143d2fa5d9aa825ff99a2c6d0036",
    "size": [
@@ -1123,10 +1285,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-045": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "dac3e096ff2a2af3310896441e52d826d70c0971352e7a30d89b034e9fa981f8",
    "size": [
@@ -1137,10 +1301,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-052": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d4e96917cc99e1427d9528dc51f089d1dca7a4f14b31da9c19e49e1f700e1cb3",
    "size": [
@@ -1151,10 +1317,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-QUEUE-S010",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-070": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "ace17b1f427669c53f216125946e66ca7d2656ef5f1d522a33d436bdf6435b79",
    "size": [
@@ -1165,10 +1333,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-071": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c0bfa47fc05a86bc53df6bcd1eae64c5dd8c3de9580dbc1d4ae6ba381e3e1e31",
    "size": [
@@ -1179,10 +1349,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-073": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c94dbaf7c299570e4192a936d7c6ba753c53772b3a12de1654c2c989590af040",
    "size": [
@@ -1193,10 +1365,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-077": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "77675048028d4e24a6d52a940c99acd314eb023bfd89361c81d81e0f307bc6cf",
    "size": [
@@ -1207,10 +1381,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-078": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0a71f12eea9fddb45eb68c1959937829da2c4fbaa393a6762920aeecbfbfcfe2",
    "size": [
@@ -1221,10 +1397,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-080": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "8e8f1d980f559f6531e78fac13b52858e592d21caa00eec98fa8c9f9c0711232",
    "size": [
@@ -1235,10 +1413,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-081": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "54814612a4af935c8de2294d14ea5cee098b3bce5dbfc86db2aa7dea754543eb",
    "size": [
@@ -1249,10 +1429,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-082": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "41beeae06b8ab5d29579f09ff40f374cd3543ab08d280eb6870ee773312aa7d0",
    "size": [
@@ -1263,10 +1445,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-083": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "63fd13e68c2868356c6e55c5867884be8186e7ca7180ac210a147a81eec36f35",
    "size": [
@@ -1277,10 +1461,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-085": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "1661af387f92b36e2793a1cc8dc6762a6acdfee841cd63b0edf55d176a388d2c",
    "size": [
@@ -1291,10 +1477,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S007",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-087": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "9ebc83a53e08bad0d09dec9a5f07ea005013280f3374183f8a7733295bb1ef7d",
    "size": [
@@ -1305,10 +1493,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-088": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d2c2967e091d09bdd14416941109f6dbdfd2d6173e6e1d459bd69ad320fd3048",
    "size": [
@@ -1319,10 +1509,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-089": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "dc7bb2815f601e27898a58f84aeeac0d711ad95c0c6f333a6b863f99fba2fed0",
    "size": [
@@ -1333,10 +1525,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-090": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "97fc2a8945855df4f164f4a1eeeabcbb5e05665da72417dead66f7fd2e689761",
    "size": [
@@ -1347,10 +1541,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-091": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "f7c4d4df76436b1ac6e4560eee9647572d45f8a7cb99b097c601af3b1a30adb2",
    "size": [
@@ -1361,10 +1557,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-092": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "3ab86a85bf8bd9811e6628a7826a60991648cfb62f5af1037416b24559a0527d",
    "size": [
@@ -1375,10 +1573,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-093": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c242cd5cf24574cb86ff422aaf3f8ff71178d533d80f550e2647e9c11075cd0c",
    "size": [
@@ -1389,10 +1589,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-094": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "a0a223bf9a01b01fd7f132fb25d7e9079d3f320060613e5fc6b22d1373be37bd",
    "size": [
@@ -1403,10 +1605,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-095": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d5b1780d04e4967652cd03c71cdc5b0d8088b1743726dfeee7f77fc7afb33a36",
    "size": [
@@ -1417,10 +1621,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-096": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "ac262e4f7c5065b84e09353697f2121afa97cd92440addf6b7e431cb6511abd6",
    "size": [
@@ -1431,10 +1637,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-097": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "62dcf83111dda2d7782d1ebbf3872116ae0c37495dcabe5e72e5b58890733dda",
    "size": [
@@ -1445,10 +1653,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-098": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "fc38bb6f406fb4514669031a376f2e054686163f66fdde6ced5ed588d5d06658",
    "size": [
@@ -1459,10 +1669,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-099": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6e2a3bcdd831dc29f6b9600b5dda7c632b488eb74743c758e2b10aec6a3b3578",
    "size": [
@@ -1473,10 +1685,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-100": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "1503a45a0fad297eb1ebdeaa42251e0cfd55552757fb35c79e8d1b23792277de",
    "size": [
@@ -1487,10 +1701,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-101": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0cdbd44f4557728fd99142792546c3c7f1540b2ffd0e9bb1b9db2167ba16fddb",
    "size": [
@@ -1501,10 +1717,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-102": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "ac491ec38d615041fcfc852cce928711cb551a9b32013245eb590f3cf64bdfb5",
    "size": [
@@ -1515,10 +1733,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-103": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "e83efba1d04a3e9c278b1a8b9041fb595fafa2285169bfcafd26613ed86789f6",
    "size": [
@@ -1529,10 +1749,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-104": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "1f790a65ef5ae78bfeb1b99536d6e2968ce0d7f3251657815096c6c97b90f831",
    "size": [
@@ -1543,10 +1765,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S014",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-105": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "e4e7fa85816b3ee80a4bceb58ae2cbb67a6773404eb45d0a9e6fd5f22e97c7f5",
    "size": [
@@ -1557,10 +1781,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S015",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-106": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "776004d0a0e89f984470a00898bc6be6ed8c29e4b8d574709d1c8be192e3324f",
    "size": [
@@ -1571,10 +1797,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-109": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "7cba3cd061377d44a2c805dfd84af56739b5fb73ea7a53c7869bc0e5c78bc023",
    "size": [
@@ -1585,10 +1813,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-111": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "55519f23b4b1aae6db1d7c15f4181e80cf25a42bc20087d370aee04ab01945c8",
    "size": [
@@ -1599,10 +1829,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-116": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "3c35091ea4e5323090592183014a5c00488a6022b5e5f23264fabb6a60cc631a",
    "size": [
@@ -1613,10 +1845,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-121": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "4041cec355fe2f15801ba263477ae159d6710d2831ef5c5ef3ffdf8701f4cd5b",
    "size": [
@@ -1627,10 +1861,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-122": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "87232c4401c32e1d22c103a180f2e3dbfd5898b5db340b560008e6e741502f83",
    "size": [
@@ -1641,10 +1877,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-123": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "58245e72c67cf04f4389588413abb3de6b7f5996c51814da254c2270767799c5",
    "size": [
@@ -1655,10 +1893,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-124": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "7122a87daed2d28dfef7480ef4ecf64037c514bf5889fedd11aa3476903d1b0f",
    "size": [
@@ -1669,10 +1909,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-125": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "8ed9d43d6392bb99c6740fcc43e4527340639815f41bda31a011683fa21e3b83",
    "size": [
@@ -1683,10 +1925,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-126": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "8828be468231f64532f15debe6f89d3230dd37c946319a65f998ed311f5af4a1",
    "size": [
@@ -1697,10 +1941,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-127": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "bbf74e24dfbf9e63c55fdc055321cb1d06b4f4edff4317a05ea87e853dea6f0a",
    "size": [
@@ -1711,10 +1957,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-128": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "a5bfea6a992741d30d3710263c86cda24a7b332c6e2e38514e2a52ef7b931f53",
    "size": [
@@ -1725,10 +1973,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-129": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "5f999691f77a1f68308c0470bd1c399571d53ab285a2b1129d5f1fd5b3452c21",
    "size": [
@@ -1739,10 +1989,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-130": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "a73a9826fc35ffccb23f3ea690319d423e116826323f2940ba4f5a7b43d81bce",
    "size": [
@@ -1753,10 +2005,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-131": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "457df14204240cd8f79ffa3e84494f415a5e9ef53e6988f7624e10a16e030ab5",
    "size": [
@@ -1767,10 +2021,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-132": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "73e290f5c51634df8da377d8b64ae67cc49ab8aff99ca713a3b4331799b33797",
    "size": [
@@ -1781,10 +2037,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-133": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "be35228e30efb6c51509e920eb3103f370dab97ec9af59992641ea7e15854e64",
    "size": [
@@ -1795,10 +2053,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-134": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0a70cccb748a51241b8bad8365a64a7a7565561e483fd51deeaabbfea23c1528",
    "size": [
@@ -1809,10 +2069,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-135": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "43b7af8cd37fbc9fc29486f93f339681ae9c47882177ac856715bda56a0d7c7d",
    "size": [
@@ -1823,10 +2085,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S017",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-136": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6b82740b206877d230e7df4be38efcf323ba12e72dcf530a63d4cc6cb20eaeda",
    "size": [
@@ -1837,10 +2101,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-137": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6e173496be04af2d7ea3916c5c8504dfbd25d73934f76d72d44264d54d8c7149",
    "size": [
@@ -1851,10 +2117,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-138": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "a02b0ebb93379fd47fda2a12565b1d4aff633574cf640bda06a84d4db0d79335",
    "size": [
@@ -1865,10 +2133,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-139": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "7d30f596af1960989bbbc3cecb0a1856d5c7bc65448c4ef5e5e6c5eeb70a5d19",
    "size": [
@@ -1879,10 +2149,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-140": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "f0420d869c3915f63f89fffef34b75c63a979dd223733eee93a22897bf6ac070",
    "size": [
@@ -1893,10 +2165,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-141": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "9696c5adc306cc9ead50cb77fb7aabc351d8599b645e0458c4c735d655b6f62a",
    "size": [
@@ -1907,10 +2181,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-142": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "5336be0188577352cb3e324f0627b935b50fb76cc03c105b062f3262a64ccde8",
    "size": [
@@ -1921,10 +2197,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-143": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "bab1029a45ed4857194247e69fdaec5de56e15c34e6c138feb58528612514475",
    "size": [
@@ -1935,10 +2213,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S018",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-145": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c3bc414cde370b4d1f9004a3b087effad4f73a1ce1dbd21b43f40d0452d54bd2",
    "size": [
@@ -1949,10 +2229,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-146": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "e19b85587aae5fe9aecf68463df0ba0a6d3f215fbf65d96334bffb24d11c0376",
    "size": [
@@ -1963,10 +2245,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-147": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "25b6e3c59069ccf48e068a295451634e23760d829ff5562ecbfec0ad5a5ed90b",
    "size": [
@@ -1977,10 +2261,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-148": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "41944e53bb9709f43f64ad01510179f2717c8f34abbdcd4c725518032a2a74c8",
    "size": [
@@ -1991,10 +2277,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-149": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "149574d7b5bfc5c40724b49bad8dca04e8d94862b4d704875e4bad95a60fe2b9",
    "size": [
@@ -2005,10 +2293,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-150": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "9d80c0045eab57a5a5fa484b8b4ac5a9d0a0de8ef601beb81477bc5d9e058309",
    "size": [
@@ -2019,10 +2309,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-151": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "bb54fd200c2aa47d690fc938457c86c9f37f89e6c29a484c452d0145424bf3c4",
    "size": [
@@ -2033,10 +2325,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-152": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "3dbb172724becec9213ec9edd98a04afeee1954448870ed074ca5ec5ff046a8a",
    "size": [
@@ -2047,10 +2341,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-153": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "0e5a761f2fb43edf01e195ecdaaca830254212106e2e601957b3e80220e5f519",
    "size": [
@@ -2061,10 +2357,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-154": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "cf1d9e6f159afc9ac87d010c003528566d3bea791a2b6b28984b19e29b2abee4",
    "size": [
@@ -2075,10 +2373,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S019",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-155": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "627b0901de4ccff7f9b761a1c5b9d2776e62dcc3071d9553b7d7c33d08074db3",
    "size": [
@@ -2089,10 +2389,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-156": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "49dbc505c92ff8ecc0cedd8d929f632fa34d6d5a2d7ce59217295aaa4fafebf3",
    "size": [
@@ -2103,10 +2405,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-157": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "e7c031aa543238189dfb8af2aedfe4936facea05f2d27762cef7aa984b8bbadb",
    "size": [
@@ -2117,10 +2421,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S011",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-158": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "647a78d11d5a8725b2a57aaa3c6e940ff95c59ef75d26809654412e6db35c2a6",
    "size": [
@@ -2131,10 +2437,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-159": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6455a5843e96f22d270966cdae4b711c80d768d579f73bdba60c000a7a48ccc9",
    "size": [
@@ -2145,10 +2453,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-160": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "cc3fab2220f72bb366a89847d550eb83a2a100e6a6c59da02975c3b528587c24",
    "size": [
@@ -2159,10 +2469,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-161": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "38fee1bfcb4f62fca1bb9ba74cca0a3d951a0233e2ca2205ab4363859884e356",
    "size": [
@@ -2173,10 +2485,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-162": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "9182e46efc5a4fcd4b98148f2ec1c9e44380d422ba385997ea0af46c53aeea12",
    "size": [
@@ -2187,10 +2501,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-163": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "709962134e003281db8f2673823ee9b45035852cc86434d67c6e2d5a8d368c9e",
    "size": [
@@ -2201,10 +2517,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-164": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "fb706daa0323be81e7324459167884106d92cbcfd8a03c5c1493c14e8328ec57",
    "size": [
@@ -2215,10 +2533,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-165": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "b08978d4d246e37832df3279ee29649e6749df7322e55fe407ccf3f6ae0bccba",
    "size": [
@@ -2229,10 +2549,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-166": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c72f1c2d73ef8c73891e84e52715e0856bfd5d126adf6a0405e55b97794ec931",
    "size": [
@@ -2243,10 +2565,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S012",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-167": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c59ded0af845b10c07c05be3dfb990a0dad25a8c3f078fd7133948cc03d07168",
    "size": [
@@ -2257,10 +2581,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-QUEUE-S008",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-168": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "915e9001976c4265e0fb80952acf0c67612a0090c9cf4554aa1db9865d89a766",
    "size": [
@@ -2271,10 +2597,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S020",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-169": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "052b47193bf342a61a812972f626ee2b2e32335dd242926583780154df2544a5",
    "size": [
@@ -2285,10 +2613,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S020",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-170": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6539c8d7dbd576a57e74061e27196d4732622031581fed4c5c469995b3fa6ce0",
    "size": [
@@ -2299,10 +2629,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-171": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "607ec926a913f243b60b8919fdda0e2a7d125ff8f85823c2a7a1263664f7a91a",
    "size": [
@@ -2313,10 +2645,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-QUEUE-S020",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-172": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "fabf43f79071ff5abe617c5270abe0e3067b17c1caa451287512c7b71db72b64",
    "size": [
@@ -2327,10 +2661,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-QUEUE-S013",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-EC-01": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "9342b9a00ddc12f763138f4397f77e0bf96cf48a49a31ce6bda8c1100830b115",
    "size": [
@@ -2341,10 +2677,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-PREMIUM-P001",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-EC-02": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d569cba5a226d01fa2b75638d0796a6a7ecd96e7a6243b8ce8310eaf0a5f868f",
    "size": [
@@ -2355,10 +2693,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-PREMIUM-P001",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-EC-03": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "fc064342b302131574475d5de77f8ab1cbcbc4dd993fda5a9353da7240b9ed8a",
    "size": [
@@ -2369,10 +2709,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-PREMIUM-P001",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-01": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "af9bbd371512be9d630d64a0f7cfeb00c983903ffef18b07dfda65c24710c90c",
    "size": [
@@ -2383,10 +2725,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P002",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-02": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "88be83bcf0c2891b0e45ceb4e447232477b2932789ccec7636f649e1d33b1ff4",
    "size": [
@@ -2397,10 +2741,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-PREMIUM-P003",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-03": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "006f8e62578bec413aed7d2a723567c3c3ef7b9d4402960cc1999c7e6d995314",
    "size": [
@@ -2411,10 +2757,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-PREMIUM-P003",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-04": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "b1ce1403da3785ba23fd3ded9e16ee117c973cfacc3d8484157e12d73ddfb3cb",
    "size": [
@@ -2425,10 +2773,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P003",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-05": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "cfcd511c292805b0c66c325238b6cbff73b32f5e639531fdece0b529bf58bc2a",
    "size": [
@@ -2439,10 +2789,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P003",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-06": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "68ad686f209b9229706b8a850bbc72f90ad844401e695367cac97293cc3141d4",
    "size": [
@@ -2453,10 +2805,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-PREMIUM-P003",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-07": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "96968bc38b8a3ead99aa4f7ee65418e663a71b620dcc8f4fa84bfd0ffffdc1bb",
    "size": [
@@ -2467,10 +2821,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P003",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-08": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "ca932f19323bb76fbba9d4f8ca3237c755afe41f836964ff148e2cdfaded034d",
    "size": [
@@ -2481,10 +2837,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-PREMIUM-P004",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-09": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "5817e990abf2e62ca5ede9e88a879ba375accb3331122724864130c416002ff7",
    "size": [
@@ -2495,10 +2853,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-PREMIUM-P004",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-10": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "1c6ca25cd6370d831fc116f1fa96cc1cfcedd93f42663a26596c1bf52b0544ab",
    "size": [
@@ -2509,10 +2869,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-PREMIUM-P004",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-11": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d979b1850c475f6bdebc589e2076cf10563a47f745c3e4ac6c0cf53e0c909649",
    "size": [
@@ -2523,10 +2885,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-PREMIUM-P004",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-12": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "d051e1b834ec180de4dc0d340c66a859eb75612e85314bbc951d484748041f52",
    "size": [
@@ -2537,10 +2901,12 @@
    "delivered": "2026-10-31",
    "artist": "Toren Kest",
    "sheet": "BR-PREMIUM-P004",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-13": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "873745cfae1dcdca7110fe9c425603f0563d1544ad240de0886fcbf0344ba7e8",
    "size": [
@@ -2551,10 +2917,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-PREMIUM-P004",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-14": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "47877cf603edf7b9cd12e05a97f000b2a70db2704976cff2e4a37dc311e0d337",
    "size": [
@@ -2565,10 +2933,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-PREMIUM-P005",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-15": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6eeb50e70e95ff19f27294ca82e8eee272cfbc85e0b3e48746cb2251a2d04604",
    "size": [
@@ -2579,10 +2949,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P005",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-IL-16": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "fc0a66150680371e1f50ed220135ed9933683668174ac64f4791291622890fa9",
    "size": [
@@ -2593,10 +2965,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P005",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-01": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "53d9ddfbe1778843372a6cf06c921acfb65342947d12f8575f15bb42316aa6d9",
    "size": [
@@ -2607,10 +2981,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-PREMIUM-P001",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-02": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "eaa79ad4790c2e99b13f14f6e560b3c4c45ea60f708ca91b168ff98b20fa0b02",
    "size": [
@@ -2621,10 +2997,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P001",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-03": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "400d8b4526bd3d8acd33120458d8a1299f0922ac15989b2264294abaf816677c",
    "size": [
@@ -2635,10 +3013,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P001",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-04": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "721729f482b9b567db74fc9d5566e5a8ae800b873224ec222766841a49db9a3d",
    "size": [
@@ -2649,10 +3029,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-PREMIUM-P002",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-05": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "9882261c8ce8ca34b7f80e3f23b3113be54b11905cd156f374b7258b4893e954",
    "size": [
@@ -2663,10 +3045,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-PREMIUM-P002",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-06": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "ef54a72849570480b118ae5a006c6c01fb25db5bfb7eee2f8912512ae9018f11",
    "size": [
@@ -2677,10 +3061,12 @@
    "delivered": "2026-10-31",
    "artist": "Orris Halden",
    "sheet": "BR-PREMIUM-P002",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-07": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "93840acc45b9f29059de591f28fb75bd142767897ae5ec4e96fdf45f13d9de16",
    "size": [
@@ -2691,10 +3077,12 @@
    "delivered": "2026-10-31",
    "artist": "Ilyra Sorn",
    "sheet": "BR-PREMIUM-P002",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-SI-08": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "a8422be99676b5a57ab8541a998997fb3d245001a89e9960c6519cb84e667d5f",
    "size": [
@@ -2705,10 +3093,12 @@
    "delivered": "2026-10-31",
    "artist": "Mara Veylan",
    "sheet": "BR-PREMIUM-P002",
-   "sol_review": "Visual QA completed; pending owner approval and later likeness review"
+   "sol_review": "Visual QA completed; pending owner approval and later likeness review",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-118": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "2299d41fb33f1b5a0f661d21d887dbdf866d78f90af08ef517602df9ed603aab",
    "size": [
@@ -2719,10 +3109,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-119": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "2b366e09a50ea1df33fefc59a534eb7a614bd4d61b040502b2beaa66155794ea",
    "size": [
@@ -2733,10 +3125,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-120": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "dac9b9e5750a59df875154268b186248c87384fd7623076b201878433ba25f68",
    "size": [
@@ -2747,10 +3141,12 @@
    "delivered": "2026-10-31",
    "artist": "Sera Noctis",
    "sheet": "BR-QUEUE-S016",
-   "sol_review": "Visual QA completed; pending owner approval"
+   "sol_review": "Visual QA completed; pending owner approval",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-107": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "c5477a399f6862eeef849f1590d1fab2bbbcd62c83706e9dad8e2f01d826774d",
    "size": [
@@ -2759,10 +3155,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-108": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6067715494174df1b9e4c976e631c8bd88fbdba818ad74c1eb80019eb5bbd94f",
    "size": [
@@ -2771,10 +3169,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-110": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "69d935f2b7839490d0abc9788aba6833ebcbd15f32bbbab9d1f6e5899e37222a",
    "size": [
@@ -2783,10 +3183,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-112": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "2ada760e3183400951c18c6a5b4fd1f3719f4c3860e66b1a0a9f68620d03f3b7",
    "size": [
@@ -2795,10 +3197,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-113": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "3d95fcd421ee6606a3424e5152ed259d1880bab0e97e9a39723dbcdf93b11812",
    "size": [
@@ -2807,10 +3211,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-114": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "6ef578d200bb5720c1c08df5a0f3f05988f7e329391bcc9a061b7bbc7f1095e3",
    "size": [
@@ -2819,10 +3225,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-115": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "fa516f4da07f0b7c44627416411d3186420c5f4e2b896a47dcfa4ec325bd528d",
    "size": [
@@ -2831,10 +3239,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-117": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "34148eda543380f0b9000a767dc90dee855df8e5d0af5caf2a12bac5b09cf9c3",
    "size": [
@@ -2843,10 +3253,12 @@
    ],
    "batch": "B12",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   },
   "BR01-144": {
-   "status": "delivered-awaiting-owner-review",
+   "status": "approved",
    "v": 1,
    "sha256": "eddc655a8fa5a79e475e52f026ad4523ebfcc6db3df08201cc8cb51e2b6f3f3a",
    "size": [
@@ -2855,7 +3267,9 @@
    ],
    "batch": "B14",
    "delivered": "2026-10-31",
-   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)"
+   "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
+   "approved": "2026-10-31",
+   "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
   }
  }
 }
