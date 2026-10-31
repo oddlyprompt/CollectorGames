@@ -3148,3 +3148,76 @@ Changed (0+ differences), first ones:
 ## 2026-10-31 open:legacy-wk-year
 Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
 Changed (0+ differences), first ones:
+
+## 2026-10-31 day0
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 release
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 year1
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (1+ differences), first ones:
+- /screens/market: "baf78a69" -> "7c4c4a2f"
+
+## 2026-10-31 series
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 flows
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 shared
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:ban
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:busy
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:day1
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-busy
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-day1
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-released
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-year
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:released
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:ban
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:busy
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-day1
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-year
+Reason: Broken Reach faces: per-rarity frame metals, edge effects, picture effects and a rainbow foil treatment
+Changed (0+ differences), first ones:
