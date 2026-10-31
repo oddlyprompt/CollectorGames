@@ -2565,3 +2565,76 @@ Changed (0+ differences), first ones:
 ## 2026-10-31 open:legacy-wk-year
 Reason: Broken Reach art approved: card faces and market rows now include the approved pictures
 Changed (0+ differences), first ones:
+
+## 2026-10-31 day0
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 release
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 year1
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (1+ differences), first ones:
+- /screens/market: "f303a8bf" -> "e7e4d5d1"
+
+## 2026-10-31 series
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 flows
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 shared
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:ban
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:busy
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:day1
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-busy
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-day1
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-released
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-year
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:released
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:ban
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:busy
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-day1
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-year
+Reason: Broken Reach: all 207 card pictures approved, market rows and faces include them
+Changed (0+ differences), first ones:
