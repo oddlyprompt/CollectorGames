@@ -168,7 +168,8 @@ async function nextTurn(){
   if (!M||M.done) return; renderMatch();
   if (M.S.over) return finish();
   if (M.S.cur===1){ M.busy=true; M.foeTurn=true; renderMatch(); const my=M; await sleep(ST.speed==='0'?60:480+Math.random()*400); if (M!==my) return;
-    const mv=await new Promise(r=>setTimeout(()=>r(AI.chooseMove(clone(aiView(M.S)),M.level,M.rng,UNIT_IDS)),15)); if (M!==my) return; await doMove(mv,true); if (M!==my) return; return nextTurn(); }
+    const view=clone(aiView(M.S)), lv=M.level, rng=M.rng;                                   // the state is copied now: a rematch during the pause must not hand the AI the new match
+    const mv=await new Promise(r=>setTimeout(()=>r(view.cur===1?AI.chooseMove(view,lv,rng,UNIT_IDS):null),15)); if (M!==my||!mv) return; await doMove(mv,true); if (M!==my) return; return nextTurn(); }
   M.busy=false; renderMatch();
 }
 // the AI is handed a copy of the game; the opponent's (human's) hand is blanked to ids it cannot read: it only gets the hand SIZE

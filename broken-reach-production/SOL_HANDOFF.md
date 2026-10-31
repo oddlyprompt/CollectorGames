@@ -12,8 +12,8 @@ You are producing illustration only. Read `ART_BIBLE.md` first, then work from `
 
 ## Pictures
 - One picture per id, named exactly as `file`: `BR01-001_base.png`, `BR01-IL-01.png`, `MASTER-kaia-venn.png`. A revision is `BR01-001_base-v02.png`.
-- Landscape 4:3, at least 1600x1200 (masters: any landscape, at least 1600 wide). No text, borders, rarity icons or arrows. Main action inside the central 70%.
+- Base cards square (1:1), premium arts portrait (about 3:4), master sheets landscape; shortest side at least 400 px (the owner waived 1600 px). No text, borders, rarity icons or arrows. Main action inside the central 70%.
 - Every picture a distinct composition, subject, action and setting. Face consistency for the six crew, Rix and Silas, using the approved masters.
 
 ## Delivery
-A zip (or folder) holding the pictures and a `production-status.csv` with the columns `id,file,sha256,notes`. The game's intake (`python3 tools/brokenreach/art_intake.py DELIVERY_DIR`) rejects anything that is not 4:3, too small, unnamed, unlisted or whose sha256 does not match, files the rest as **delivered, awaiting owner review** and makes a labelled contact sheet per batch. Only pictures the owner approves reach the game.
+A zip (or folder) holding the pictures and a manifest (`production-status.csv` or `review-manifest.csv/json`) with at least `id,file,sha256`. The game's intake (`python3 tools/brokenreach/art_intake.py DELIVERY_DIR`) rejects anything that is the wrong shape, under 400 px, truncated, unnamed, unlisted or whose sha256 does not match; raw sheets, contact previews and continuity-lock copies are ignored, files the rest as **delivered, awaiting owner review** and makes a labelled contact sheet per batch. Only pictures the owner approves reach the game.

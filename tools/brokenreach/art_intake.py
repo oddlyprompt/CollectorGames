@@ -6,9 +6,12 @@
   python3 tools/brokenreach/art_intake.py --status
 
 DELIVERY_DIR holds extracted delivery files in any folder layout: pictures named by id (BR01-001_base.png, BR01-IL-01.png, MASTER-kaia-venn.png; a revision adds
--v02) and optionally a production-status.csv (columns id,file,sha256) that is checked picture by picture. Nothing is trusted blindly:
+-v02) and optionally manifests (production-status.csv, review-manifest.csv or .json; id or variant_id or base_card_id, file or art_file, sha256, artist_name, sheet, review_status)
+that are checked picture by picture. Raw sheets, labelled contact sheets and continuity-lock reference copies are ignored (a lock whose sha256 differs from the filed picture is an error);
+<id>_prompt.txt files are kept as provenance in approved/prompts/. Nothing is trusted blindly:
   - every picture must be one the art queue asked for (unknown names are rejected, so is a name that maps to no id),
-  - the picture must be landscape 4:3 (within 2%) and at least 1600x1200 (masters: any landscape, at least 1600 wide),
+  - shape follows the owner's direction (2026-10-31): base cards SQUARE (1:1 within 2%), premium arts PORTRAIT (width/height 0.6 to 0.85), master design sheets landscape; the
+    old 1600 px minimum is waived by the owner: the shortest side must be at least 400 px, and the picture must decode completely (a truncated file is rejected),
   - with a status csv, the sha256 must match,
   - nothing already filed is replaced without --replace (a -vNN revision counts as a replacement and keeps the older file in approved/previous/).
 Each picture is stored as a WebP (quality 95) in approved/art/ (masters in approved/masters/), recorded in approved/registry.json as delivered-awaiting-owner-review,
@@ -67,31 +70,68 @@ def main():
     if not a.delivery: ap.error('DELIVERY_DIR, --approve or --status is needed')
     BP,q,Q,R,rp=load(a.root)
     claimed={}
-    for sf in glob.glob(os.path.join(a.delivery,'**','production-status.csv'),recursive=True):
-        for r in csv.DictReader(open(sf,encoding='utf-8')): claimed[(r.get('id') or '').strip().upper().replace('MASTER-','MASTER-')]=r
+    def claim(r):
+        i=(r.get('id') or r.get('variant_id') or r.get('base_card_id') or '').strip()
+        if not i: return
+        i=i.upper() if not i.lower().startswith('master') else 'MASTER-'+i[7:].lower()
+        claimed[i]=dict(claimed.get(i,{}),**{k:v for k,v in {'sha256':r.get('sha256'),'artist':r.get('artist_name'),'sheet':r.get('sheet'),'review':r.get('review_status')}.items() if v})
+    for sf in glob.glob(os.path.join(a.delivery,'**','*.csv'),recursive=True):
+        try:
+            for r in csv.DictReader(open(sf,encoding='utf-8')): claim(r)
+        except Exception: pass
+    for sf in glob.glob(os.path.join(a.delivery,'**','review-manifest.json'),recursive=True):
+        try:
+            for r in json.load(open(sf,encoding='utf-8')): claim(r if isinstance(r,dict) else {})
+        except Exception: pass
+    prompts={}
+    for pf in glob.glob(os.path.join(a.delivery,'**','*_prompt.txt'),recursive=True):
+        i,_=parse(os.path.basename(pf).replace('_prompt.txt','_base.png') if os.path.basename(pf).startswith('BR01-') else os.path.basename(pf).replace('_prompt.txt','.png'))
+        if i: prompts[i]=pf
     files=[f for f in glob.glob(os.path.join(a.delivery,'**','*'),recursive=True) if os.path.isfile(f) and f.lower().endswith(('.png','.webp','.jpg','.jpeg'))]
-    take={}; errs=[]; skip=[]; filed=0
+    take={}; errs=[]; skip=[]; filed=0; support=0; locks=[]
+    SUPPORT=re.compile(r'(raw|labelled|contact|preview)',re.I)
     for f in sorted(files):
+        if SUPPORT.search(os.path.basename(f)) and not NAME.match(os.path.basename(f)): support+=1; continue
         i,v=parse(f)
         if i is None or i not in Q: errs.append(f'{os.path.basename(f)}: not a picture the queue asked for'); continue
-        if i in take and take[i][1]>=v: continue
+        if 'continuity-lock' in f.replace('\\','/'): locks.append((i,f)); continue
+        if i in take:
+            if sha(take[i][0])==sha(f): continue                       # the same picture delivered twice
+            if take[i][1]>=v and take[i][1]!=v: continue
+            if take[i][1]==v: errs.append(f'{i}: two different pictures with the same name and version'); continue
         take[i]=(f,v)
+    for i,f in locks:                                                  # a continuity-lock copy must be the filed picture
+        cur=R['assets'].get(i); mine=sha(take[i][0]) if i in take else (cur or {}).get('sha256')
+        if mine and sha(f)!=mine: errs.append(f'{i}: continuity-lock copy differs from the delivered picture')
     for i,(f,v) in sorted(take.items()):
-        it=Q[i]; im=Image.open(f); w,h=im.size; wait=4/3
-        if h>w or (it['kind']!='master' and abs(w/h/wait-1)>0.02): errs.append(f'{i}: {w}x{h} is not landscape'+('' if it['kind']=='master' else ' 4:3')); continue
-        if (it['kind']=='master' and w<1600) or (it['kind']!='master' and (w<1600 or h<1200)): errs.append(f'{i}: {w}x{h} is below the minimum (1600x1200)' if it['kind']!='master' else f'{i}: {w}px wide is below 1600'); continue
+        it=Q[i]
+        try: im=Image.open(f); im.load()
+        except Exception as e: errs.append(f'{i}: the picture is damaged or truncated ({str(e)[:60]})'); continue
+        w,h=im.size
+        if it['kind']=='master':
+            if h>w: errs.append(f'{i}: a master design sheet must be landscape ({w}x{h})'); continue
+        elif it['kind']=='base':
+            if abs(w/h-1)>0.02: errs.append(f'{i}: base art must be square ({w}x{h})'); continue
+        elif not (0.6<=w/h<=0.85): errs.append(f'{i}: premium art must be portrait, width/height 0.6 to 0.85 ({w}x{h})'); continue
+        if min(w,h)<400: errs.append(f'{i}: {w}x{h} is below the minimum (400 px on the shortest side)'); continue
         c=claimed.get(i)
         if claimed and c and c.get('sha256') and c['sha256'].lower()!=sha(f): errs.append(f'{i}: sha256 does not match the status file'); continue
-        if claimed and not c: errs.append(f'{i}: not listed in production-status.csv'); continue
+        if claimed and not c: errs.append(f'{i}: not listed in the delivery manifests'); continue
         cur=R['assets'].get(i)
         if cur and not a.replace: skip.append(f'{i}: already filed (use --replace for a new version)'); continue
         out=os.path.join(BP,'approved','masters' if it['kind']=='master' else 'art'); os.makedirs(out,exist_ok=True); dst=os.path.join(out,i+'.webp')
         if cur and os.path.exists(dst):
             pv=os.path.join(BP,'approved','previous'); os.makedirs(pv,exist_ok=True); shutil.copy(dst,os.path.join(pv,f"{i}-v{cur.get('v',1):02d}.webp"))
         im.convert('RGB').save(dst,'WEBP',quality=95); R['assets'][i]={'status':'delivered-awaiting-owner-review','v':v,'sha256':sha(f),'size':[w,h],'batch':it['batch'],'delivered':datetime.date.today().isoformat()}; filed+=1
+        if c:
+            for k in ('artist','sheet'):
+                if c.get(k): R['assets'][i][k]=c[k]
+            if c.get('review'): R['assets'][i]['sol_review']=c['review']
+        if i in prompts:
+            pd=os.path.join(BP,'approved','prompts'); os.makedirs(pd,exist_ok=True); shutil.copy(prompts[i],os.path.join(pd,i+'.txt'))
     save(R,rp); done=sorted({R['assets'][i]['batch'] for i in take if i in R['assets']})
     for b in done: contact(a.root,b,q,R)
-    print(f'filed {filed} pictures; {len(errs)} rejected; {len(skip)} already filed')
+    print(f'filed {filed} pictures; {len(errs)} rejected; {len(skip)} already filed; {support} support files (sheets, contact previews) ignored; {len(locks)} continuity-lock copies checked')
     for e in errs+skip: print('  '+e)
     sys.exit(1 if errs else 0)
 if __name__=='__main__': main()

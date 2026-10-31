@@ -4,11 +4,8 @@
  "status": "proposed (handoff v0.1); nothing approved",
  "spec": {
   "format": "PNG (WebP or JPEG accepted)",
-  "aspect": "landscape 4:3",
-  "min_size": [
-   1600,
-   1200
-  ],
+  "aspect": "base cards SQUARE (1:1); premium arts PORTRAIT (about 3:4); master design sheets landscape",
+  "min_size": "shortest side at least 400 px (the owner waived the 1600 px minimum, 2026-10-31); larger is better",
   "text": "none: no text, borders, rarity icons or arrows in the picture",
   "safe_area": "the main action stays inside the central 70% (cards crop the edges)",
   "naming": "BR01-001_base.png, BR01-IL-01.png, revisions -v02 (never overwrite)"
