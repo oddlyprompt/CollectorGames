@@ -3270,6 +3270,188 @@
    "source_note": "cropped by us from SOL's raw sheet using SOL's crop box (the delivery zip was truncated)",
    "approved": "2026-10-31",
    "approved_note": "approved by the owner, 2026-10-31 ('All art is approved'); likeness review deferred at the owner's request"
+  },
+  "BR01-001": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "991dbbd21401763cfdeeeb34043465f7cb4ec1735ed0c23a95e6ec368c9a142d",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-053": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "1327ea1d8b0ac5e9860c66abb4479281df268291a0221544ecb96c525ade72d7",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-054": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "7803ed503f607f0a1bbee0e78f6f631d2f74834e78a3431569b2d9e441618ffb",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-055": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "3f00df051df2a328c6b33805c4dfa61027da8bc2acaf37e1804c4c0db294e987",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-056": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "1843d8099961269f58e518685e9a4c2cc29eaa4d1babb139c524137b144f25df",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-057": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "870b1fcabf88190b631b69e5930c142fde07ceda4c3ffcb9b430bd8e09ff02e1",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-058": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "8370ded4b63d7344faf6537e762246498a014c0d25225e894e06cc924d71d883",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-059": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "9c411eb44c56454de3abe50e284c88171078ae0347660bd3f37222fdda827211",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-060": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "d1062fdfb358b23a93c5eaa8a99c7ad92a3317595d3850e46891ba102e94152a",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-061": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "d7787ed84be54102575d363e2ae885a115bf48da20ecf4efb49ce845248f67ce",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-062": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "ba51a039feb83b6b70aa2a6c74d4790a098e31602c382022e56e62506940d9cb",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-063": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "f581df6e8b6754f70b9caf3affe6c3ab93b9b62593758bdbd8ea8652372be356",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B01",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-067": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "105ce5bbbdc210549f8b06f1bb7d2b06d2df0d466d9e0be42679b193bc2405d8",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
+  },
+  "BR01-075": {
+   "status": "approved",
+   "v": 1,
+   "sha256": "1af87e047f8b6e44ad652220e71bacf60c840d179c7f56332cd204d50a571f82",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "approved": "2026-10-31",
+   "approved_note": "recovery delivery of the missing 14 base pictures; owner: all art is approved (2026-10-31)"
   }
  }
 }
