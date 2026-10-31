@@ -2857,3 +2857,75 @@ Changed (0+ differences), first ones:
 ## 2026-10-31 open:legacy-wk-year
 Reason: Broken Reach card face rebuilt as stacked panels (name bar, art window, type bar, text box, stat plates, footer)
 Changed (0+ differences), first ones:
+
+## 2026-10-31 day0
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 release
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 year1
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 series
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 flows
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 shared
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:ban
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:busy
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:day1
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-busy
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-day1
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-released
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-year
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:released
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:ban
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:busy
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-day1
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-year
+Reason: Broken Reach premium faces: picture in its own window below the name bar, arrows on discs
+Changed (0+ differences), first ones:
