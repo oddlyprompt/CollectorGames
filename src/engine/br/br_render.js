@@ -52,7 +52,7 @@ function brCardSVG(c, d){
   const planet=c.planet, alt=c.pk==='alt'; const art=BR_ART[c.id]; const name=c.name.split(' — ')[0], sub=c.name.includes(' — ')? c.name.split(' — ')[1] : '';
   const T=brTreat(c,d,u), rc=T.rc, rar0=c.rar;
   const W={x:24,y:47,w:202,h:168}; const cx=W.x+W.w/2, cy=W.y+W.h/2;
-  const artBox=art? `<image href="${art.u}" x="${W.x}" y="${W.y}" width="${W.w}" height="${W.h}" preserveAspectRatio="${alt?'xMidYMin slice':'xMidYMid slice'}" clip-path="url(#${u}c)"/>` :
+  const artBox=art? `<image href="${art.u}" x="${W.x}" y="${W.y}" width="${W.w}" height="${W.h}" preserveAspectRatio="xMidYMin slice" clip-path="url(#${u}c)"/>` :
     `<g clip-path="url(#${u}c)"><rect x="${W.x}" y="${W.y}" width="${W.w}" height="${W.h}" fill="url(#${u}g)"/>${planet?`<circle cx="${cx}" cy="${cy}" r="52" fill="url(#${u}o)"/><ellipse cx="${cx}" cy="${cy}" rx="92" ry="21" transform="rotate(-22 ${cx} ${cy})" fill="none" stroke="${K.cul}" stroke-opacity=".55" stroke-width="2.5"/>`:`<g transform="translate(${cx-50} ${cy-60})" fill="none" stroke="${K.cream}" stroke-opacity=".3" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">${BR_ICON[c.type]||''}</g>`}<text x="${cx}" y="${W.y+W.h-10}" text-anchor="middle" ${F} font-weight="600" font-size="9" letter-spacing="3" fill="${K.cream}" fill-opacity=".4">ART PENDING</text></g>`;
   const stars=BR_STARS.map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r.toFixed(2)}" fill="${K.cream}" opacity=".28"/>`).join('');
   // panels
