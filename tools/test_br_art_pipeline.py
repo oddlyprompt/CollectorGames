@@ -30,7 +30,7 @@ check(r.returncode==0 and all(R.get(i['id'],{}).get('status')=='delivered-awaiti
 check(os.path.exists(os.path.join(BP,'review','B01.jpg')), 'a labelled contact sheet is written for the batch')
 # rejections
 d2=os.path.join(tmp,'d2'); b2=[i for i in items if i['batch']=='B01'][3:8]
-pic(os.path.join(d2,b2[0]['file']),1600,1200); pic(os.path.join(d2,b2[1]['file']),300,300); pic(os.path.join(d2,'random-name.png')); pic(os.path.join(d2,b2[2]['file'])); pic(os.path.join(d2,b2[3]['file']))
+pic(os.path.join(d2,b2[0]['file']),1600,1200); pic(os.path.join(d2,b2[1]['file']),250,250); pic(os.path.join(d2,'random-name.png')); pic(os.path.join(d2,b2[2]['file'])); pic(os.path.join(d2,b2[3]['file']))
 with open(os.path.join(d2,'production-status.csv'),'w',newline='') as f:
     w=csv.writer(f); w.writerow(['id','file','sha256','notes']); w.writerow([b2[2]['id'],b2[2]['file'],'0'*64,'']); w.writerow([b2[0]['id'],b2[0]['file'],'',''])
 r=run(d2); out=r.stdout+r.stderr

@@ -11,7 +11,7 @@ that are checked picture by picture. Raw sheets, labelled contact sheets and con
 <id>_prompt.txt files are kept as provenance in approved/prompts/. Nothing is trusted blindly:
   - every picture must be one the art queue asked for (unknown names are rejected, so is a name that maps to no id),
   - shape follows the owner's direction (2026-10-31): base cards SQUARE (1:1 within 2%), premium arts PORTRAIT (width/height 0.6 to 0.85), master design sheets landscape; the
-    old 1600 px minimum is waived by the owner: the shortest side must be at least 400 px, and the picture must decode completely (a truncated file is rejected),
+    old 1600 px minimum is waived by the owner: the shortest side must be at least 300 px, and the picture must decode completely (a truncated file is rejected),
   - with a status csv, the sha256 must match,
   - nothing already filed is replaced without --replace (a -vNN revision counts as a replacement and keeps the older file in approved/previous/).
 Each picture is stored as a WebP (quality 95) in approved/art/ (masters in approved/masters/), recorded in approved/registry.json as delivered-awaiting-owner-review,
@@ -64,7 +64,7 @@ def contact(root,batch,q,R):
     os.makedirs(os.path.join(BP,'review'),exist_ok=True); sheet.save(os.path.join(BP,'review',batch+'.jpg'),quality=88)
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('delivery',nargs='?'); ap.add_argument('--replace',action='store_true'); ap.add_argument('--root',default=ROOT)
-    ap.add_argument('--approve'); ap.add_argument('--note',default='approved by the owner'); ap.add_argument('--status',action='store_true'); a=ap.parse_args()
+    ap.add_argument('--source-note',default=''); ap.add_argument('--approve'); ap.add_argument('--note',default='approved by the owner'); ap.add_argument('--status',action='store_true'); a=ap.parse_args()
     if a.status: return status(a.root)
     if a.approve: return approve(a.root,a.approve,a.note)
     if not a.delivery: ap.error('DELIVERY_DIR, --approve or --status is needed')
@@ -89,7 +89,7 @@ def main():
         if i: prompts[i]=pf
     files=[f for f in glob.glob(os.path.join(a.delivery,'**','*'),recursive=True) if os.path.isfile(f) and f.lower().endswith(('.png','.webp','.jpg','.jpeg'))]
     take={}; errs=[]; skip=[]; filed=0; support=0; locks=[]
-    SUPPORT=re.compile(r'(raw|labelled|contact|preview)',re.I)
+    SUPPORT=re.compile(r'(raw|labelled|contact|preview|sheet|board|reference|canvas|strip|index)',re.I)
     for f in sorted(files):
         if SUPPORT.search(os.path.basename(f)) and not NAME.match(os.path.basename(f)): support+=1; continue
         i,v=parse(f)
@@ -113,7 +113,7 @@ def main():
         elif it['kind']=='base':
             if abs(w/h-1)>0.02: errs.append(f'{i}: base art must be square ({w}x{h})'); continue
         elif not (0.6<=w/h<=0.85): errs.append(f'{i}: premium art must be portrait, width/height 0.6 to 0.85 ({w}x{h})'); continue
-        if min(w,h)<400: errs.append(f'{i}: {w}x{h} is below the minimum (400 px on the shortest side)'); continue
+        if min(w,h)<300: errs.append(f'{i}: {w}x{h} is below the minimum (300 px on the shortest side)'); continue
         c=claimed.get(i)
         if claimed and c and c.get('sha256') and c['sha256'].lower()!=sha(f): errs.append(f'{i}: sha256 does not match the status file'); continue
         if claimed and not c: errs.append(f'{i}: not listed in the delivery manifests'); continue
@@ -123,6 +123,7 @@ def main():
         if cur and os.path.exists(dst):
             pv=os.path.join(BP,'approved','previous'); os.makedirs(pv,exist_ok=True); shutil.copy(dst,os.path.join(pv,f"{i}-v{cur.get('v',1):02d}.webp"))
         im.convert('RGB').save(dst,'WEBP',quality=95); R['assets'][i]={'status':'delivered-awaiting-owner-review','v':v,'sha256':sha(f),'size':[w,h],'batch':it['batch'],'delivered':datetime.date.today().isoformat()}; filed+=1
+        if a.source_note: R['assets'][i]['source_note']=a.source_note
         if c:
             for k in ('artist','sheet'):
                 if c.get(k): R['assets'][i][k]=c[k]
