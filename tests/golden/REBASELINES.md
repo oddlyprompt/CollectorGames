@@ -3075,3 +3075,76 @@ Changed (0+ differences), first ones:
 ## 2026-10-31 open:legacy-wk-year
 Reason: Broken Reach face: a real frame band around the card holds the arrow triangles (Tetra Master style)
 Changed (0+ differences), first ones:
+
+## 2026-10-31 day0
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 release
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 year1
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (1+ differences), first ones:
+- /screens/market: "e6bb3159" -> "baf78a69"
+
+## 2026-10-31 series
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 flows
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 shared
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:ban
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:busy
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:day1
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-busy
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-day1
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-released
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-year
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:released
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:ban
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:busy
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-day1
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-year
+Reason: Broken Reach face: notched frame edge (chamfered corners, pedestal notches) seats the arrow triangles
+Changed (0+ differences), first ones:
