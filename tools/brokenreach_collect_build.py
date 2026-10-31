@@ -21,6 +21,16 @@ def build(out=None):
             src=os.path.join(ROOT,'broken-reach-production','approved','art',i+'.webp')
             if not os.path.exists(src): continue
             im=Image.open(src).convert('RGB'); im.thumbnail((800,600)); im.save(os.path.join(ad,'br-'+i+'.webp'),'WEBP',quality=80); art[i]={'u':'art/br-'+i+'.webp'}
-    js='const BR_SETS='+json.dumps(sets,separators=(',',':'))+';\nconst BR_CARDS='+json.dumps(cards,separators=(',',':'),ensure_ascii=False)+';\nconst BR_ALTS='+json.dumps(alts,separators=(',',':'))+';\nconst BR_ART_MAP='+json.dumps(art,separators=(',',':'))+';\n'
+    pkg={}
+    PK=os.path.join(ROOT,'broken-reach-production','approved','packaging')
+    if out and os.path.isdir(PK):                       # the owner's approved card back, booster pack and booster box (2026-10-31), trimmed and given rounded corners
+        from PIL import Image, ImageDraw
+        def rounded(im,r):
+            m=Image.new('L',im.size,0); ImageDraw.Draw(m).rounded_rectangle((0,0,im.size[0]-1,im.size[1]-1),radius=r,fill=255); im=im.convert('RGBA'); im.putalpha(m); return im
+        for key,fn,box,rad,size in (('back','BR_CARD_BACK_APPROVED_v2.png',(50,75,975,1462),34,(500,750)),('pack','BR_SEALED_PACK_SET01_v3.png',(92,8,938,1528),10,(560,1010)),('box','BR_SEALED_BOX_SET01_v3.png',(28,60,1505,968),10,(900,560))):
+            src=os.path.join(PK,fn)
+            if not os.path.exists(src): continue
+            im=rounded(Image.open(src).convert('RGB').crop(box),rad); im.thumbnail(size); im.save(os.path.join(out,'art','br-'+key+'.webp'),'WEBP',quality=88); pkg[key]={'u':'art/br-'+key+'.webp','w':im.size[0],'h':im.size[1]}
+    js='const BR_SETS='+json.dumps(sets,separators=(',',':'))+';\nconst BR_CARDS='+json.dumps(cards,separators=(',',':'),ensure_ascii=False)+';\nconst BR_ALTS='+json.dumps(alts,separators=(',',':'))+';\nconst BR_ART_MAP='+json.dumps(art,separators=(',',':'))+';\nconst BR_PKG='+json.dumps(pkg,separators=(',',':'))+';\n'
     return js,len(cards),len(alts),len(art)
 if __name__=='__main__': print(build()[1:])
