@@ -12,7 +12,7 @@ You are producing illustration only. Read `ART_BIBLE.md` first, then work from `
 
 ## Pictures
 - One picture per id, named exactly as `file`: `BR01-001_base.png`, `BR01-IL-01.png`, `MASTER-kaia-venn.png`. A revision is `BR01-001_base-v02.png`.
-- Base cards square (1:1), premium arts portrait (about 3:4), master sheets landscape; shortest side at least 400 px (the owner waived 1600 px). No text, borders, rarity icons or arrows. Main action inside the central 70%.
+- Base cards square (1:1), premium arts portrait (about 3:4), master sheets landscape; shortest side at least 300 px (the owner waived 1600 px). No text, borders, rarity icons or arrows. Main action inside the central 70%.
 - Every picture a distinct composition, subject, action and setting. Face consistency for the six crew, Rix and Silas, using the approved masters.
 
 ## Delivery
