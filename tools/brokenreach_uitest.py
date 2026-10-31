@@ -10,12 +10,15 @@ def check(ok,msg,x=''):
 async def play_match(pg, maxsteps=60):
     for _ in range(maxsteps*6):
         if await pg.query_selector('#result'): return True
-        if await pg.query_selector('#mhand .bcard:not(.dis)'):
-            sel=await pg.query_selector('#mhand .bcard:not(.dis)'); await sel.click()
-            cell=await pg.query_selector('.cell.ok')
-            if cell:
-                await cell.click(); await pg.wait_for_selector('.cell.pend',timeout=2000)
-                btn=await pg.query_selector('[data-act=confirm]'); await btn.click()
+        try:
+            if await pg.query_selector('#mhand .bcard:not(.dis)'):
+                sel=await pg.query_selector('#mhand .bcard:not(.dis)'); await sel.click(timeout=2000)
+                cell=await pg.query_selector('.cell.ok')
+                if cell:
+                    await cell.click(timeout=2000); await pg.wait_for_selector('.cell.pend',timeout=2000)
+                    btn=await pg.query_selector('[data-act=confirm]'); await btn.click(timeout=2000)
+        except Exception:
+            pass                                    # the board changed under the bot (the opponent's move or the result screen): look again
         await pg.wait_for_timeout(120)
     return False
 async def main():
@@ -50,7 +53,7 @@ async def main():
                     await pg.wait_for_timeout(250)
                 await pg.screenshot(path='/tmp/br_desktop_match_mid.png')
                 # preview: select a card, hover a cell
-                await (await pg.query_selector('#mhand .bcard:not(.dis)')).click(); c=await pg.query_selector('.cell.ok'); await c.hover(); await pg.wait_for_timeout(200); await pg.screenshot(path='/tmp/br_desktop_preview.png')
+                await pg.click('#mhand .bcard:not(.dis)'); await pg.hover('.cell.ok'); await pg.wait_for_timeout(200); await pg.screenshot(path='/tmp/br_desktop_preview.png')
                 await pg.evaluate("BR_TEST.show('menu')")
             if name=='desktop':   # greedy human bot with animations ON: capture screenshots of a cascade banner
                 await pg.evaluate("BR_TEST.show('setup')"); await pg.click('[data-act=sellevel][data-id=standard]'); await pg.evaluate("window.__sawBanner=false; new MutationObserver(()=>{ if(document.querySelector('.banner')) window.__sawBanner=true; }).observe(document.body,{subtree:true,childList:true})"); await pg.click('[data-act=start]'); await pg.wait_for_selector('#mboard .cell'); shot=False; seen_banner=False
@@ -72,7 +75,7 @@ async def main():
                 for _ in range(80):
                     if await pg.query_selector('#mhand .bcard:not(.dis)'): break
                     await pg.wait_for_timeout(100)
-                cards=await pg.query_selector_all('#mhand .bcard'); cid=await cards[3].get_attribute('data-cid'); await cards[3].click(); await (await pg.query_selector('.cell.ok')).click(); await pg.click('[data-act=confirm]'); await pg.wait_for_timeout(400)
+                cards=await pg.query_selector_all('#mhand .bcard'); cid=await cards[3].get_attribute('data-cid'); await pg.click(f'#mhand .bcard[data-cid="{cid}"]'); await pg.click('.cell.ok'); await pg.click('[data-act=confirm]'); await pg.wait_for_timeout(400)
                 placed=await pg.evaluate("BR_TEST.M.S.log[BR_TEST.M.S.log.length>1&&BR_TEST.M.S.log[0].p===1?1:0].cid") if False else await pg.evaluate("(()=>{const l=BR_TEST.M.S.log.filter(x=>x.p===0);return l[l.length-1].cid})()")
                 check(placed==cid,'the card you select is the card that is placed',(placed,cid))
             # deckbuilder

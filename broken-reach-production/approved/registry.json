@@ -1,1 +1,821 @@
-{"version":1,"assets":{}}
+{
+ "version": 1,
+ "assets": {
+  "BR01-002": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "1fb081526098b9edfa11ce0a047b01641fa321f1f8133ee7469101edfead534d",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Orris Halden",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-005": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "cc411bdf537dc4912840051c4c4d8e9b136234c93e394ec152bce2b0790420dc",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-009": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "499aab834cd84488bc7e8ee725ce9b6485d7fcd6cfea6994b3c2d69dc1733671",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-011": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "3c677275966b2e6f812acadc91ca3c00510e27fda419bc80550c81318d25fb7b",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-013": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "3b255174237a2961c89ba2aab3e5644bb1596cbe2e02fe04f77219443ca0c5e1",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-016": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "63b6223bc823ccdf75bcf9dbe6f78dbbe0af53637574dea7eaf844cb43541da7",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-017": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "b268bf5e0f4c23aab82a2aa9d80feb93a5d39421842e9c89fff6c0e7e44c2e72",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-019": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "f4948cd3985ca55c4a127bed891ced5ec50f46aed698e9ca8586f3273eefd06b",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-021": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "0da03d5c327e7dedaff05b0cf247911bf067aa3078cc03fc8b3b172550342e7e",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-023": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "b84092827774acea422e0e271f029fe1d03f9bab8b6aad2b9f1630b06f8f37e9",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Orris Halden",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-025": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "11d262fe8a5d3727686e35df374e10d161701ab0a9ada96f699ed79074d70a69",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-029": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "d9317455e8905644278bfb28db1b7654e64e227da26e3af0dfe0b2213bb8b275",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-030": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "2a3169eb68ba5db9dbd089882041054dc807ef20a7fcff2bc8d69e2830b34530",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-031": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "67763cccb8acb3e1c6ab7f6be3de9f63a3deeb04bb2061b05bbd293f627a7486",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-033": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "b2f55587d8ef308c180d7767a3496050222a78df3af1ca6d8ea84afbeea878ad",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-034": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "17014f7dadea01b3783418058841c5eb289397a5c3f52fafce36cf3cd3293ede",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B04",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-035": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "0d91942db32cc0593383c7bcdeb8489d37c275c8e17eb24599eb5ea8b4e8c0bb",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-039": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "3400e43f5e1685be5a1796eade2d344ad039104b12d014eba818b6502a4c01d1",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-041": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "cd52c1c63b985b597e7690adac2256c32d2b26720d41d21dec073654c05d6896",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Orris Halden",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-042": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "70a7d9f767d90f03e5a2fbcb581cbcdae1927bf994d41211d651718e4d05f1e9",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S005",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-044": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "4bee72664139add2e1d859268d3e302884c5a29155b76e2362472679da896a02",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-046": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "2dfd33e25e9645d625c4cff2c41826e605bf08a26b38ecf18cff5128ebe0bca4",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-047": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "65145d41a3d751f9bb18263777be65e4e07edc26b50b3d63c7df917150597d1b",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-048": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "4e8e2f9ddf949db60d5848a784618fecdd1126079661b9acc2a8dd794bb7529a",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-049": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "57db76585819385a48f3dbe823b085f6fcf3bdfd45f1790bc9f8ae57009a4a40",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-050": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "934b5a76052da560f337d5c481e733a20d6b97c36a614b63bba7ed0e42c60dd1",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-051": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "c2656a15a0579df7dbbb770ecfeced55f4c2b22671661739d4d5091ed6076cb3",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-064": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "d15618fd1983aab2ed5bea8e36bf09a0dae9e1b0fcdf68873680f4fec5b1a2bc",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-065": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "acbb36feca3e227e17cc1913324e82985ecc60edfded64f82b7ff5a0ba4c89c5",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-066": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "0ba46fa9cb341c762f22a4b57a1caab17ba7c836b5db2e1356363fcd00fe1966",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-068": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "30fd08f248d752df76c9e95eb5dc133202a11ecbf4733328a52d7e28ca091567",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B05",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S006",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-069": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "644d96dcecda256bc873ee2d314d4babed00e08c59d163533747fa0885e44318",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-072": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "788605b8a5b120bcd803774873cf37127a55771c78ec4dbd04ce6e07d1e678fc",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Orris Halden",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-074": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "0940740ec95c9e961b123f2afc2237e4d226e04ea29855d1db8fd6cd3b7a2cf3",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-076": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "98efb27d511b52838c07a42e61a1834034a8221b94d37cba7d41caf56f5b5aa5",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-079": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "276a6ba7e250091cccec8bab1d8f7239ba3e485051ae3a050ac471dd6481ab9b",
+   "size": [
+    1254,
+    1254
+   ],
+   "batch": "B02",
+   "delivered": "2026-10-31",
+   "artist": "Orris Halden",
+   "sol_review": "Review — pending owner approval"
+  },
+  "BR01-084": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "25ca65e4e22f48347c171c1d94c0f45bfd265d1df90550885246c56e83bc6395",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-086": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "bbe4037aefcdeff5e799ee6c956651f8b945e6eb4d224df78dd9b7eded4f152a",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-173": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "70a60c7fc6ccf6d4fd115060af3b8700c2262b4454f0b092a558877c2bbf45f9",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-174": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "26ba1cf9843fa01b0df04f7891bc0e42bb00e337ba21b47da3a658b6592b01db",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-175": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "26bc238d623fc36179eaa59f10c6a1e27447635a164d0baa3e7d7721c9270b9a",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-176": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "feedede5f61f9d0ee0ad03137bc661781ad86a88aea2a9811985fced5bd34b93",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-177": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "bcba69a89021f63aa7b535198437bbb7f4a08334256cabeb9a8dcaf0be8190de",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-178": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "c4a02cfc75930bf8e20dd49bee177fb5a3e8050ab66d73ce0fb89b84fc866607",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sheet": "BR-QUEUE-S003",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-179": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "2e0f0d48920e1416b7e0a12122739a092ed9ee988f19b4c7ffc042ed6d4b0da8",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "BR01-180": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "95dd64a5eee2a5af6293e2dbb9766e2045c543243744760ad4b1642f6c31352e",
+   "size": [
+    418,
+    418
+   ],
+   "batch": "B03",
+   "delivered": "2026-10-31",
+   "artist": "Orris Halden",
+   "sheet": "BR-QUEUE-S004",
+   "sol_review": "Visual QA completed; pending owner approval"
+  },
+  "MASTER-dorrak": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "ff50f7ef6e69fed3d294f1abdda8c86ac45aebd863742b813c3bba3e02dc36fa",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-dravak": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "04e71c626027c1d6905d0fa847deff37a7266af583aba9ed9335f55e9a2978a9",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-elias-voss": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "1c79573a5874819d94d48a3c1e540ae10a8df9e9433024898f2a4329e9c2457c",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-kaia-venn": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "669c2d1fa4a30d07ee4e42f23b319abc12e622bb7f43c2d85edeea8e2a6ee5ca",
+   "size": [
+    1536,
+    1024
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-khepri": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "5b128f12a15a2a05ea789e77941f8b4e399ca539b1d33c01826ee5e415265966",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Toren Kest",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-lyssara-vale": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "cb33a507b1fd1f016f055b91233d08e42b1846bd047e8761dd84333a36736efd",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-neru-sael": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "ed00be181b45c69eed7405ec3dd420b848f1c4e13e4790c0cff464e1bb06f6f4",
+   "size": [
+    1536,
+    1024
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-orren": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "275542c3d8f1be4f670f98826204134e01fff451f927f57f29bb73afa20dbcf0",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-rix-vanno": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "7021903a179169027480cfda90059d29f8830d43e00f1a43d182b03e54cb1dd1",
+   "size": [
+    1536,
+    1024
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-selyth": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "398b2bf4810147595d923cf41f0d31721374e39b50a0b4d8044085f47d6c0153",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Ilyra Sorn",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-silas-veyne": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "32d76309104ab4bba83d7fddb6696a79c037b1731d095bd029c1af47449aae96",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-tavi": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "de14f4771e534cec726d0641cbbc15a7bc0c1f6a8e07d28c1aadc6ed133f8ca6",
+   "size": [
+    1536,
+    1024
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Mara Veylan",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-thessari": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "da3a6037a75e04d6ab04dbac443fd756600e0e967040ac06554519d2f396f15d",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Orris Halden",
+   "sol_review": "Review — awaiting owner approval"
+  },
+  "MASTER-vaelari": {
+   "status": "delivered-awaiting-owner-review",
+   "v": 1,
+   "sha256": "c999b607f79f5f6ab1e7ca04178d9e50cc505dce7995cb833dacc1934140213b",
+   "size": [
+    1586,
+    992
+   ],
+   "batch": "M00",
+   "delivered": "2026-10-31",
+   "artist": "Sera Noctis",
+   "sol_review": "Review — awaiting owner approval"
+  }
+ }
+}

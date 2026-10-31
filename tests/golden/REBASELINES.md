@@ -2419,3 +2419,76 @@ Changed (0+ differences), first ones:
 ## 2026-10-29 open:legacy-wk-year
 Reason: Broken Reach card face type line fits long labels (market rows contain Broken Reach card SVGs)
 Changed (0+ differences), first ones:
+
+## 2026-10-31 day0
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 release
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 year1
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (1+ differences), first ones:
+- /screens/market: "e1731e48" -> "42d0ff25"
+
+## 2026-10-31 series
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 flows
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 shared
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:ban
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:busy
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:day1
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-busy
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-day1
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-released
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:legacy-wk-year
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 save:released
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:ban
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:busy
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-day1
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:
+
+## 2026-10-31 open:legacy-wk-year
+Reason: Broken Reach card face redrawn for square base art and portrait premium art (market rows contain Broken Reach card SVGs)
+Changed (0+ differences), first ones:

@@ -9,8 +9,8 @@ Avoid: repetitive front-facing weapon poses, identical camera compositions, gene
 ## No text on the picture
 No text, borders, rarity icons or directional arrows in any picture. The game draws the frame, the arrows, the stats and the ability.
 
-## Format
-Landscape 4:3, at least 1600x1200 (PNG preferred). The card's art window is a little wider than tall (about 1.32:1), the battler crops the same picture into a window about 1.5:1, so **keep the main action inside the central 70%** and do not put essential detail near an edge. A ship needs a unique, identifiable silhouette that reads at thumbnail size.
+## Format (owner's direction, 2026-10-31)
+**Base cards: square (1:1). Premium arts: portrait (about 3:4). Master design sheets: landscape.** PNG preferred; the shortest side at least 400 px (the owner waived the earlier 1600 px minimum; larger is better). The base card shows the square picture in a square window, a premium card shows its portrait picture nearly full-card, so **keep the main action inside the central 70%** and do not put essential detail near an edge. A ship needs a unique, identifiable silhouette that reads at thumbnail size.
 
 ## Species (canon anatomy from the handoff)
 - **Orren**: small, agile, tawny fur, expressive ears.
