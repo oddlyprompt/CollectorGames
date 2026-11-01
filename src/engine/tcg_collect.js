@@ -9,6 +9,24 @@ const tcWant=()=>G.tcg.want||(G.tcg.want=[]);
 function tcOwnedCopies(){ const by=new Map(); for (const c of myTc()){ const d=tcD(c.k); if (d.sealed) continue; const g=by.get(c.k); if (g) g.push(c); else by.set(c.k,[c]); } return by; }
 // which card numbers you own at least one print of, and which prints
 function tcOwnState(){ const prints=new Set(), nos=new Set(); for (const c of myTc()){ const d=tcD(c.k); if (d.sealed) continue; prints.add(c.k); nos.add(d.set+'|'+d.no); } return {prints, nos}; }
+
+// ---------- what a pack opening did for the collection (shown first in the summary; the money comes second) ----------
+// cfg: D (key -> printing), mine (your copies), own (ownership state), cards (a set's cards), want (wantlist keys), notable (printing -> true for foils and premiums), goals (titles completed during the opening)
+function openProgressHTML(all, cfg){
+  if (!all.length) return ''; const inRes={}; for (const c of all) inRes[c.k]=(inRes[c.k]||0)+1; const have={}; for (const c of cfg.mine()){ if (cfg.D(c.k).sealed) continue; have[c.k]=(have[c.k]||0)+1; }
+  const fresh=Object.keys(inRes).filter(k=>have[k]===inRes[k]), want=new Set(cfg.want), found=Object.keys(inRes).filter(k=>want.has(k));
+  const notable=all.filter(c=>cfg.notable(cfg.D(c.k))), set=cfg.D(all[0].k).set, tot=cfg.cards(set).length, own=cfg.own().nos; let got=0; for (const x of own) if (x.startsWith(set+'|')) got++;
+  const chip=(t,cls)=>`<span class="tag ${cls||''}" style="margin:0 6px 6px 0">${t}</span>`; const nm=k=>esc(cfg.D(k).title);
+  const rows=[]; rows.push(`<div class="small" style="margin-bottom:6px"><b>${fresh.length}</b> new to your collection${fresh.length?'':' (all copies of cards you already had)'} · set progress <b>${got} of ${tot}</b> cards</div>`);
+  if (found.length) rows.push(`<div class="small up" style="margin-bottom:6px">Wanted ${found.length===1?'card':'cards'} found: <b>${found.slice(0,4).map(nm).join(', ')}${found.length>4?' and '+(found.length-4)+' more':''}</b></div>`);
+  if (cfg.goals&&cfg.goals.length) rows.push(`<div class="small up" style="margin-bottom:6px">Goal${cfg.goals.length>1?'s':''} completed: <b>${cfg.goals.map(esc).join(', ')}</b></div>`);
+  if (notable.length) rows.push(`<div class="small" style="margin-bottom:6px">Notable: ${notable.slice(0,5).map(c=>`<b>${nm(c.k)}</b>`).join(', ')}${notable.length>5?' and '+(notable.length-5)+' more':''}</div>`);
+  return `<div class="panel" style="padding:12px 14px"><h3>For your collection</h3>${rows.join('')}</div>`; }
+function tcOpenProgress(res, all){ return openProgressHTML(all,{D:tcD, mine:myTc, own:tcOwnState, cards:tcSetCards, want:tcWant(), notable:d=>tcIsPrem(d.card)||d.v==='H'||d.v==='R', goals:res.goals}); }
+
+// ---------- what an estimate is made of (card pages): the model's value, recent sales, and why the range is as wide as it is ----------
+function valueBasisHTML(r){ if (!r || r.fv==null) return ''; const why= r.n===0? 'No recent sales of this print and grade, so the range comes from the model alone and is wide.' : r.thin? 'Only '+r.n+' recent sale'+(r.n===1?'':'s')+', so they count for little and an unusual price is pulled back toward the model.' : r.n+' recent sales back this range.';
+  return `<dd class="small muted" style="margin:2px 0 0;grid-column:1/-1">Model fair value <b>${money(r.fv,true)}</b> · recent sales of this print and grade: ${r.n? r.n+', median '+money(r.med,true) : 'none in 120 days'}. ${why} Sellers' asking prices are shown separately in the Market.</dd>`; }
 // ---------- goals ----------
 // each: id, title, what it asks, and progress [have, need] measured on the current collection
 const TC_GOALS=[

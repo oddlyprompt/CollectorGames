@@ -85,3 +85,5 @@ function xtNewsMine(n){ if (!G.xtg) return ''; const bits=[];
 // goals are checked once a day and after anything that changes the collection
 (function(){ const d=xtDay; xtDay=function(t){ d(t); try { if (G.xtg && !G._xtCatch) xtGoalCheck(); } catch(e){ console.error(e); } }; })();
 (function(){ const r=render; render=function(){ const out=r.apply(this,arguments); try { if (G && G.xtg && G.player && !UI.busy) xtGoalCheck(); } catch(e){ console.error(e); } return out; }; })();
+
+function xtOpenProgress(res, all){ return openProgressHTML(all,{D:xtD, mine:myXt, own:xtOwnState, cards:xtSetCards, want:xtWant(), notable:d=>xtIsPrem(d.card)||d.v==='F', goals:res.goals}); }

@@ -253,7 +253,7 @@ function listingSheet(lid){
   } else if (l.ty==='bin'){
     act = `<div class="panel"><h3>Buy now</h3><div class="est">${money(l.pr,true)}</div>
       <div class="formrow"><button class="btn pri" data-act="buy" data-a="${l.id}" data-confirm="Pay ${money(l.pr,true)}" ${G.player.cash<l.pr?'disabled':''}>Buy now</button><button class="btn" data-act="watch" data-a="${l.id}">${watch?'Watching':'Watch'}</button></div>
-      ${l.off?`<div class="formrow"><input class="inp money-in" type="number" min="0.5" step="0.5" id="offeramt" placeholder="Your offer" aria-label="Offer amount"><button class="btn" data-act="offer" data-a="${l.id}">Make offer</button></div>`:'<div class="small muted" style="margin-top:6px">This seller isn\'t taking offers.</div>'}
+      ${l.off?`<div class="formrow"><input class="inp money-in" type="number" min="0.01" max="${(l.pr-0.01).toFixed(2)}" step="0.01" id="offeramt" placeholder="Below ${money(l.pr,true)}" aria-label="Offer amount, below the asking price"></div><div class="small muted" style="margin-top:4px">Offers must be under the asking price of ${money(l.pr,true)}. A fair-looking offer is more likely to be accepted.</div><div class="formrow" style="margin-top:6px"><span></span><button class="btn" data-act="offer" data-a="${l.id}">Make offer</button></div>`:'<div class="small muted" style="margin-top:6px">This seller isn\'t taking offers.</div>'}
       ${l.counter?`<div class="formrow"><span class="small">The seller countered at <b>${money(l.counter,true)}</b>.</span><button class="btn sm pri" data-act="acccounter" data-a="${l.id}" data-confirm="Pay ${money(l.counter,true)}">Accept counter</button></div>`:''}
       <div id="offermsg"></div></div>`;
   } else {

@@ -29,7 +29,10 @@ function startReveal(){
 function rvClose(){ const st=UI.rvl; if (st && st.timer) clearTimeout(st.timer); UI.rvl=null; const el=$('#rvl'); if (el) el.remove(); document.body.classList.remove('noscroll'); refresh(); queueSave(); }
 // a short celebration for the rare big moments (a big pull, a Gem Mint 10): confetti and a banner, gone in under 3 seconds,
 // never blocking a tap. Reduced-motion users get the banner only.
-function celebrate(title, sub){
+// a goal completed by a pack opening waits for the summary, so the pulls stay a surprise: UI.celQ holds it, flushCelebrations() shows it
+function celebrate(title, sub){ if (title==='Goal complete' && (UI.tco||UI.xto||UI.bro)){ (UI.celQ||(UI.celQ=[])).push([title,sub]); return; } return celebrate0(title, sub); }
+function flushCelebrations(){ const q=UI.celQ||[]; UI.celQ=[]; if (q.length) celebrate0(q[q.length-1][0], q.length>1? q.length+' goals: '+q.map(x=>x[1]).join(', ') : q[0][1]); }
+function celebrate0(title, sub){
   const old=document.getElementById('cele'); if (old) old.remove(); const el=document.createElement('div'); el.id='cele'; el.className='cele'; el.setAttribute('aria-live','polite');
   const calm=window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches; const cols=['#ffd166','#ef476f','#06d6a0','#4cc9f0','#f8f9fa','#c77dff'];
   let bits=''; if (!calm) for (let i=0;i<70;i++){ const x=Math.random()*100, d=Math.random()*0.6, t=1.6+Math.random()*1.1, r=Math.round(Math.random()*720-360), w=5+Math.random()*6;

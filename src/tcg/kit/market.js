@@ -20,10 +20,14 @@ function cardMarket(L){
   M.fair=function(key, g){ const raw=L.fairRaw(key); if (!(g>0)) return raw; const d=L.D(key); if (d.sealed) return raw; const pop=L.pop()[key]; const scarce= L.gradeScarce? L.gradeScarce(key,g,pop,d) : pop&&g===10&&pop[10]<4&&(L.raror[d.rar]>=2)? 1.12 : 1; return Math.max(raw*cardGradeMult(L.scale,d.rar,g)*scarce, g>=10?4: g>=9?2.2: g>=8?1.2:0.7); };
   M.copyValue=function(cp){ if (cp.g>0) return M.fair(cp.k, cp.g); const raw=L.fairRaw(cp.k); const d=L.D(cp.k); return d.sealed? raw : raw*L.econ.condition.price(cp.c, d.card, d); };
   M.sales=function(key,g){ return (G.sales[key]||[]).filter(s=>(s[2]||0)===(g||0)); };
+  // The estimate blends the model's fair value with the recent sales of the same print and grade. A thin market is not trusted: each sale counts for little until there are several,
+  // and a sale far from fair value (a fat-fingered offer, a bidding war between two collectors) is pulled back toward it, so one odd sale cannot move a card's price on its own.
+  // Returned: lo/hi (the shown range), n (sales used), fv (the model's fair value), med (median of the recent sales, as recorded), cl (median after damping), thin (fewer than 4 sales).
   M.est=function(key, g, cp){
     const fv= cp? M.copyValue(cp) : M.fair(key,g||0); const same=M.sales(key, cp?(cp.g>0?cp.g:0):(g||0)).filter(s=>s[0]>G.day-120); const n=same.length;
-    const center= n? 0.45*fv+0.55*median(same.slice(0,6).map(s=>s[1])) : fv; const w=0.1+0.42/Math.sqrt(n+1);
-    const lo=nicePrice(Math.max(0.05,center*(1-w*0.75))), hi=nicePrice(Math.max(0.1,center*(1+w))); return {lo, hi:Math.max(hi,lo), n};
+    const last=same.slice(0,6).map(s=>s[1]); const med= n? median(last) : null; const damp=x=> n<8? Math.min(fv*2.2, Math.max(fv/2.2, x)) : Math.min(fv*4, Math.max(fv/4, x)); const cl= n? median(last.map(damp)) : null;
+    const sw= n? Math.min(0.55, 0.7*n/(n+3)) : 0; const center= n? (1-sw)*fv+sw*cl : fv; const w=0.1+0.42/Math.sqrt(n+1);
+    const lo=nicePrice(Math.max(0.05,center*(1-w*0.75))), hi=nicePrice(Math.max(0.1,center*(1+w))); return {lo, hi:Math.max(hi,lo), n, fv, med, cl, thin:n<4};
   };
   M.heat=function(cp){ const d=L.D(cp.k); if (d.sealed) return 0.9+0.8*Math.exp(-(G.day-d.def.rel)/45); const u=(L.world().usage[d.cid]||0)/4, hy=L.world().hy[d.cid]||0; return 0.4+1.2*u+hy+(L.raror[d.rar]>=3?0.5:0)+0.7*Math.exp(-(G.day-d.def.rel)/21); };
   // ---------- grading ----------

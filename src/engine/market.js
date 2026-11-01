@@ -383,7 +383,8 @@ function playerBid(lid, amt){
 }
 function playerOffer(lid, amt){
   const l=L(lid); if (!l || l.ty!=='bin' || l.sel===0) return {err:'Offers aren\'t possible here.'};
-  if (G.player.cash<amt) return {err:'You don\'t have '+money(amt)+'.'};
+  if (amt>=l.pr) return {err:'Your offer of '+money(amt,true)+' is at or above the asking price of '+money(l.pr,true)+'. Offers are for paying less: use Buy now to pay the asking price.'};   // an offer settles at the offered amount, so offering more than the ask would only overpay
+  if (G.player.cash<amt) return {err:'You don\'t have '+money(amt,true)+'.'};
   if (l.tried && l.tried>=2) return {err:'The seller has stopped responding to offers on this listing.'};
   l.tried=(l.tried||0)+1;
   const n=NPC(l.sel); const item=itemOf(l);

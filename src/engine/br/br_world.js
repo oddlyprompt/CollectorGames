@@ -1,7 +1,7 @@
 // ===================== BROKEN REACH: THE WORLD =====================
 // There is no metagame to simulate yet: the battler is a prototype and nobody plays organised events. The world is the set's life: the announcement and previews, preorders,
 // release day, the retail lifecycle (printed for 14 months, restocked every Monday, then out of print), and how much collectors care (hype around the crew and rivals).
-function brInit(){ G.brc=G.brc||{}; G.bpop=G.bpop||{}; G.nextBid=G.nextBid||1; G.brg={v:1, cv:BR_CV, usage:{}, hy:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, want:[], goals:{}}; brUsage(); }
+function brInit(){ G.brc=G.brc||{}; G.bpop=G.bpop||{}; G.nextBid=G.nextBid||1; G.brg={v:1, opt:{nohint:true}, cv:BR_CV, usage:{}, hy:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, want:[], goals:{}}; brUsage(); }
 function brUsage(){ const U=G.brg.usage; for (const c of brSetCards(1)) if (!brAlt(c) && !c.planet && U[c.cid]==null) U[c.cid]=+(c.pw*2.2).toFixed(2); }
 function brNews(h, b, ref){ if (!G.live || !G.brg) return; const n={t:G.day,h,b,p:null,k:'brg'}; if (ref){ if (ref.set!=null) n.ts=ref.set; if (ref.cid!=null) n.brid=ref.cid; } G.news.unshift(n); if (G.news.length>320) G.news.length=320; }
 // ---------- previews: the set is shown in stages before you can buy it ----------

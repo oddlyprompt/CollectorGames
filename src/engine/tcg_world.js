@@ -2,7 +2,7 @@
 // The player never plays matches. The rules engine (tcg_rules.js) plays them: it builds the decks the cards allow, plays
 // them against each other, and the results decide what the simulated players bring, who wins events, what gets banned,
 // and through usage and hype, what cards are worth.
-function tcInit(){ G.tc=G.tc||{}; G.tpop=G.tpop||{}; G.nextTid=G.nextTid||1; G.tcg={v:1, cv:TC_CV, mv:WK_CANON.set.mv, rv:WKR.RV, usage:{}, t8:{}, hy:{}, ban:{}, arch:[], ev:[], dom:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, lastBan:0, mx:null}; }
+function tcInit(){ G.tc=G.tc||{}; G.tpop=G.tpop||{}; G.nextTid=G.nextTid||1; G.tcg={v:1, opt:{nohint:true}, cv:TC_CV, mv:WK_CANON.set.mv, rv:WKR.RV, usage:{}, t8:{}, hy:{}, ban:{}, arch:[], ev:[], dom:{}, shop:{}, pre:[], ann:{}, rev:{}, rel:{}, last:G.day, lastBan:0, mx:null}; }
 function tcNews(h, b, ref){ if (!G.live || !G.tcg) return; const n={t:G.day,h,b,p:null,k:'tcg'}; if (ref){ if (ref.set!=null) n.ts=ref.set; if (ref.cid!=null) n.tcid=ref.cid; } G.news.unshift(n); if (G.news.length>320) G.news.length=320; }
 function tcCardByCid(cid){ tcSetCards(Math.floor(cid/1000)); return TC_BYCID.get(+cid)||null; }
 function tcLegalSets(t){ return tcReleasedSets(t).slice(-3); }
