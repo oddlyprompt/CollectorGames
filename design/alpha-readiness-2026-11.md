@@ -47,14 +47,14 @@ Test-side faults found and fixed while verifying (not game bugs): `purchase_rout
 Not run in this pass: `tidemark_econ2_test`, `wildkin_econ`, `tidemark_econ` (economy measurements; the valuation change affects only displayed estimates and collection totals, not prices or trades), the timed 45-minute booster-free retention session, any physical iPhone or Safari test, any itch.io iframe test.
 
 ## 3. HTML5 packaging (measured with `tools/itch_package.py`)
-`dist/tcg` (the only build that would be uploaded): **1,811 files, 108.3 MB**; largest file 3.47 MB (`game.js`), then `vendor/three.min.js` 0.67 MB and 0.5 MB paintings.
+`dist/tcg` (the only build that would be uploaded): **1,811 files, 108.4 MB**; largest file 3.49 MB (`game.js`), then `vendor/three.min.js` 0.67 MB and 0.5 MB paintings.
 | Group | Files | MB |
 |---|---|---|
 | Tidemark illustrations (`art/TMI-*`) | 1,254 | 53.4 |
 | Wildkin cards, products, objects | 276 | 37.7 |
 | Broken Reach (`art/br-*`) | 210 | 9.8 |
 | Wildkin scenes | 60 | 3.1 |
-| Code, styles, vendor, icons, battler page | 11 | 4.3 |
+| Code, styles, vendor, icons, battler page | 11 | 4.4 |
 Limits used (as quoted in the audit, **not re-checked against itch's documentation**: the build sandbox cannot reach itch.io): 1,000 files, 500 MB, 200 MB per file. Result: size and largest file are far inside; **the file count is 811 over**. No file in `dist/tcg` is unreferenced (every art file name appears in `game.js`) and there are no duplicate large files, so nothing can be removed to fix it.
 Progressive loading is already true: the launcher and Home request 3 art files (0.2 MB); the Market and Collection about 13 (0.6 MB). The service worker pre-caches only five files.
 Least disruptive fix if the file limit applies: pack the 1,254 Tidemark paintings (the only group big enough to matter) into per-set image sheets of about 20 paintings with a small index, and draw each card from its sheet region. 1,254 files become about 65 and the total about 620. That touches `tmLoad`/`render.js` and the art build, so it is **not done here** (the brief says not to rewrite asset loading for an assumed limit). Decision needed from the owner: does the target host enforce the file limit (an itch upload would show it immediately).
