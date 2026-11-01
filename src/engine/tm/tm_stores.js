@@ -31,7 +31,7 @@ function xtKvStock(t){ if (xtV2()) return xtV2KvStock(t);
     if (q) K.s[k]=q; } return K.s; }
 const xRi2=(r,a,b)=>a+Math.floor(r()*(b-a+1));
 // ---------- buying and selling (src/tcg/kit/stores.js) ----------
-const XT_STORE=cardStores({ lgsName:'The Lantern Room', kvName:'Saltmarket', world:()=>G.xtg, copies:()=>G.xtc, newestSet:xtNewestSet, key:xtKey, lgs:xtLgs, kv:xtKv, kvStock:xtKvStock, kvPriceReal:k=>xtKvPriceReal(k), kvBuyReal:k=>xtKvBuyReal(k),
+const XT_STORE=cardStores({ lgsName:'The Lantern Room', kvName:'Saltmarket', world:()=>G.xtg, copies:()=>G.xtc, newestSet:xtNewestSet, key:xtKey, lgs:xtLgs, kv:xtKv, kvStock:xtKvStock, kvTake:k=>{ const K=xtKv(); if (K.syn && K.syn[k]>0) K.syn[k]--; else if (K.s && K.s[k]>0) K.s[k]--; }, kvPriceReal:k=>xtKvPriceReal(k), kvBuyReal:k=>xtKvBuyReal(k),
   listPrice:XLGS_PRICE, markup:XLGS_MARKUP, buy:XLGS_BUY, kvMarkup:XKV_MARKUP, kvMin:XKV_MIN, D:xtD, fairRaw:xtFairRaw, makeCopy:(...a)=>xtMakeCopy(...a), copyValue:cp=>xtCopyValue(cp), econ:XT_ECON });
 const xtLgsPrice=XT_STORE.lgsPrice, xtLgsBuySingle=XT_STORE.lgsBuySingle, xtLgsBuySealed=XT_STORE.lgsBuySealed, xtLgsOffer=XT_STORE.lgsOffer, xtLgsSellTo=XT_STORE.lgsSellTo, xtKvPrice=XT_STORE.kvPrice, xtKvBuy=XT_STORE.kvBuy;
 // ---------- daily and weekly ticks ----------

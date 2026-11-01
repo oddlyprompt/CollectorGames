@@ -46,8 +46,8 @@ function xtGoalsPanel(){ const S=xtGoalCheck(true)||xtGoalStats(); const done=G.
   return `<div class="panel"><h3>Collection goals</h3><p class="small muted" style="margin:0 0 6px">Optional milestones. ${n} of ${XT_GOALS.length} done.</p><div class="rows">${open.map(row).join('')}</div>${fin.length?`<p class="small" style="margin:8px 0 0">Done: ${fin.map(g=>`<b>${esc(g.t)}</b> <span class="muted">(${fmtDate(done[g.id],true)})</span>`).join(', ')}</p>`:''}</div>`; }
 // ---------- wantlist ----------
 // where a print can be had right now: the cheapest of Saltmarket (near mint), The Lantern Room's case and marketplace listings
-function xtWhere(k){ const out=[]; const s=xtKvStock(G.day); if (s[k]>0) out.push({w:'Saltmarket', p:xtKvPrice(k), act:'kvbuy', a:k, note:'near mint'});
-  const L=xtLgs(); for (const x of L.cs) if (x.k===k) out.push({w:'The Lantern Room', p:xtLgsPrice(x), act:'lgssingle', a:x.id, note:COND_LABN[condLabel(x.c)]});
+function xtWhere(k){ const out=[]; const s=xtKvStock(G.day); if (s[k]>0) out.push({w:'Saltmarket', p:xtKvPrice(k), act:'xkvbuy', a:k, note:'near mint'});
+  const L=xtLgs(); for (const x of L.cs) if (x.k===k) out.push({w:'The Lantern Room', p:xtLgsPrice(x), act:'xlgssingle', a:x.id, note:COND_LABN[condLabel(x.c)]});
   for (const l of G.lst) if (l.it==='x' && l.sel!==0 && l.ty==='bin' && G.xtc[l.ref] && G.xtc[l.ref].k===k) out.push({w:'Marketplace', p:l.pr, act:'buy', a:l.id, note:G.xtc[l.ref].g>0?'GCS '+G.xtc[l.ref].g:COND_LABN[condLabel(G.xtc[l.ref].c)]});
   return out.sort((a,b)=>a.p-b.p); }
 function xtWantPanel(){ const W=xtWant(); if (!W.length) return ''; const own=xtOwnState();

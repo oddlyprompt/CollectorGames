@@ -20,6 +20,6 @@ function cardStores(S){
     G.player.cash+=p; G.player.sold=(G.player.sold||0)+p; S.world().bl=(S.world().bl||0)+1; delete S.copies()[id]; return null; };
   M.kvPrice=function(k){ if (S.kvPriceReal){ const q=S.kvPriceReal(k); if (q!=null) return q; } return Math.max(S.kvMin, Math.ceil(S.fairRaw(k)*S.kvMarkup*100)/100); };
   M.kvBuy=function(k){ if (S.kvBuyReal){ const e=S.kvBuyReal(k); if (e!==undefined) return e; } const s=S.kvStock(G.day); if (!s[k]) return 'Out of stock.'; const p=M.kvPrice(k); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
-    G.player.cash-=p; G.player.bought+=p; s[k]--; const cp=S.makeCopy(k,0,[G.day,'bought',p,S.kvName],'shop'); cp.c=cp.c.map(v=>Math.max(v,90)); cp.nw=1; cp.h=[[G.day,'Bought near mint from '+S.kvName,p,'']]; cp.pv={d:G.day,v:Math.round(S.copyValue(cp)*100)/100,n:''}; return null; };
+    G.player.cash-=p; G.player.bought+=p; if (S.kvTake) S.kvTake(k); else s[k]--; const cp=S.makeCopy(k,0,[G.day,'bought',p,S.kvName],'shop'); cp.c=cp.c.map(v=>Math.max(v,90)); cp.nw=1; cp.h=[[G.day,'Bought near mint from '+S.kvName,p,'']]; cp.pv={d:G.day,v:Math.round(S.copyValue(cp)*100)/100,n:''}; return null; };
   return M;
 }
