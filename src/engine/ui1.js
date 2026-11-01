@@ -80,9 +80,10 @@ function showToast(msg, good){
   if (UI.booting) return;
   if (UI.log){ UI.log.push([G.day,msg,good]); return; }
   const box=$('#toasts'); if (!box) return;
-  const t=document.createElement('div'); t.className='toast'+(good?' good':''); t.textContent=msg; box.appendChild(t);
+  const last=box.lastElementChild; if (last && last.dataset.m===msg){ const n=(+last.dataset.n||1)+1; last.dataset.n=n; last.textContent=msg; const c=document.createElement('i'); c.textContent='×'+n; last.appendChild(c); clearTimeout(last._t); last._t=setTimeout(()=>last.remove(),3800); return; }   // the same message again: count it instead of stacking
+  const t=document.createElement('div'); t.className='toast'+(good?' good':''); t.dataset.m=msg; t.textContent=msg; box.appendChild(t);
   while (box.children.length>3) box.firstChild.remove();
-  setTimeout(()=>t.remove(), 3800);
+  t._t=setTimeout(()=>t.remove(), 3800);
 }
 toast = showToast;
 
