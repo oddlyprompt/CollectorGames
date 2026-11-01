@@ -28,7 +28,7 @@ async def main():
         for f,c in FR.items():
             n=c['name']
             # a print the online store has in stock
-            k=await pg.evaluate(f"(()=>{{ const s={c['stock']}; return {c['keys']}.find(k=>s[k]>0&&!{c['dk']}(k).sealed) || null; }})()")
+            k=await pg.evaluate(f"(()=>{{ const s={c['stock']}; const cheapest=k=>{{ const w={c['where']}(k)[0]; return w&&w.act==='{c['kv']}'; }}; return {c['keys']}.find(k=>s[k]>0&&!{c['dk']}(k).sealed&&cheapest(k)) || null; }})()")   # a print whose cheapest source is the online shop, so the Home button is that shop's
             check(k is not None, f'{n}: the online singles store has something in stock', k)
             if not k: continue
             # 1. the route table names this franchise's own handlers, and every handler exists

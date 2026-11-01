@@ -3391,3 +3391,250 @@ Changed (0+ differences), first ones:
 ## 2026-11-01 open:legacy-wk-year
 Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
 Changed (0+ differences), first ones:
+
+## 2026-11-01 day0
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (21+ differences), first ones:
+- /screens/coll: "6ecf397b" -> "e2ba9921"
+- /screens/home: "788f23e6" -> "5a27795d"
+- /screens/wk:design0: "e054e71a" -> "80a84526"
+- /screens/wk:design1: "d0a56abb" -> "b27a1ae3"
+- /screens/wk:design2: "cfe41c14" -> "d016785d"
+- /screens/wk:design3: "3bdf7bc1" -> "874e0632"
+- /screens/wk:design4: "ab1db38f" -> "dd1e9640"
+- /screens/wk:design5: "2215a5b7" -> "a783db48"
+- /screens/wk:design6: "12768cfe" -> "006f4a35"
+- /screens/wk:home: "729aa0cc" -> "9d4c0772"
+- /screens/xt: "59b89103" -> "d5bd6ed5"
+- /screens/xt:design0: "f3219cca" -> "f8e9de71"
+- /screens/xt:design1: "a291a429" -> "f6e75f82"
+- /screens/xt:design2: "39cbc1a9" -> "f9d1e2a1"
+- /screens/xt:design3: "033815bd" -> "fe470ac9"
+
+## 2026-11-01 release
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (25+ differences), first ones:
+- /screens/coll: "6ecf397b" -> "e2ba9921"
+- /screens/home: "cff68283" -> "35445dbe"
+- /screens/market: "fb58a3e3" -> "16393cf1"
+- /screens/shop: "7b23a090" -> "dd387f55"
+- /screens/wk:design0: "d1bd8d78" -> "3426fabe"
+- /screens/wk:design1: "f9dfa835" -> "e344727b"
+- /screens/wk:design2: "0141aa76" -> "b29b7065"
+- /screens/wk:design3: "5b120def" -> "a8170a8a"
+- /screens/wk:design4: "43fb0dbe" -> "f016ae92"
+- /screens/wk:design5: "f6a711f6" -> "7d3ee94a"
+- /screens/wk:design6: "4665a176" -> "291a3d74"
+- /screens/wk:home: "7e7dd113" -> "a9dc0bfd"
+- /screens/wk:kv: "952bde06" -> "4bd3b103"
+- /screens/wk:lgs: "44d07df3" -> "71a00b9d"
+- /screens/wk:meta: "fc27a98f" -> "00f84061"
+
+## 2026-11-01 year1
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (25+ differences), first ones:
+- /screens/coll: "6ecf397b" -> "e2ba9921"
+- /screens/home: "d5a04c8a" -> "a248f926"
+- /screens/market: "35adb19b" -> "1730d017"
+- /screens/shop: "fcd3b9bf" -> "5fb63e1a"
+- /screens/wk:design0: "2b2ba352" -> "90475eda"
+- /screens/wk:design1: "59b369c6" -> "38a2f062"
+- /screens/wk:design2: "122fa32e" -> "48d98409"
+- /screens/wk:design3: "9747af86" -> "17829c7d"
+- /screens/wk:design4: "428c4863" -> "aa2d5207"
+- /screens/wk:design5: "5daacdf7" -> "2828cfd7"
+- /screens/wk:design6: "c9dd448e" -> "3465bec8"
+- /screens/wk:home: "2edb6b4e" -> "c8c1e79c"
+- /screens/wk:kv: "833d9441" -> "33bcde74"
+- /screens/wk:lgs: "8a4f1363" -> "10c387d4"
+- /screens/wk:meta: "5f2a7545" -> "1f101036"
+
+## 2026-11-01 series
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (0+ differences), first ones:
+
+## 2026-11-01 flows
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (8+ differences), first ones:
+- /wk/est/cl: missing in baseline, now null
+- /wk/est/fv: missing in baseline, now 0.1669329140162179
+- /wk/est/med: missing in baseline, now null
+- /wk/est/thin: missing in baseline, now true
+- /xt/est/cl: missing in baseline, now 0.87
+- /xt/est/fv: missing in baseline, now 0.8861725610406044
+- /xt/est/med: missing in baseline, now 0.87
+- /xt/est/thin: missing in baseline, now true
+
+## 2026-11-01 shared
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (2+ differences), first ones:
+- /coll/total[0]: 34.80000000000001 -> 34.85000000000001
+- /coll/total[1]: 84.00000000000003 -> 84.15000000000003
+
+## 2026-11-01 save:ban
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (24+ differences), first ones:
+- /loaded/screens/market: "7bae5223" -> "94a161e9"
+- /loaded/screens/shop: "10a40af2" -> "1965770a"
+- /loaded/screens/wk:design0: "149637a9" -> "e1dc7b2b"
+- /loaded/screens/wk:design1: "2b5db4ad" -> "d4b543f9"
+- /loaded/screens/wk:design2: "a18e834a" -> "907a32e5"
+- /loaded/screens/wk:design3: "66cea675" -> "2670931a"
+- /loaded/screens/wk:design4: "a981b3a0" -> "825f8033"
+- /loaded/screens/wk:design5: "9b80764c" -> "04152a93"
+- /loaded/screens/wk:design6: "c16b3941" -> "fb43a150"
+- /loaded/screens/wk:home: "dd1ce338" -> "f11e1c34"
+- /loaded/screens/wk:kv: "483f736c" -> "a746c924"
+- /loaded/screens/wk:lgs: "210e4955" -> "82bc5dc9"
+- /loaded/screens/wk:meta: "fc06c5cd" -> "b0404f8e"
+- /loaded/screens/xt: "ce65e059" -> "0bc077ac"
+- /loaded/screens/xt:design0: "5fccc700" -> "b32b362d"
+
+## 2026-11-01 save:busy
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (25+ differences), first ones:
+- /loaded/screens/market: "20de2e2e" -> "3c253bd6"
+- /loaded/screens/shop: "045b7cf7" -> "cdc4fbde"
+- /loaded/screens/wk:coll: "5da71d1f" -> "a554c523"
+- /loaded/screens/wk:copy0: "730387a2" -> "b1c1c5f0"
+- /loaded/screens/wk:copy1: "62fcf388" -> "0a961d9f"
+- /loaded/screens/wk:copy2: "8532f04f" -> "017f147f"
+- /loaded/screens/wk:design0: "d3655ada" -> "3accd45a"
+- /loaded/screens/wk:design1: "b5a62fd7" -> "ffe46af7"
+- /loaded/screens/wk:design2: "0f404a74" -> "52dbb0a3"
+- /loaded/screens/wk:design3: "e5b92b41" -> "c2c592a4"
+- /loaded/screens/wk:design4: "2e3f7949" -> "074b4ac5"
+- /loaded/screens/wk:design5: "9c63e20a" -> "2992efb8"
+- /loaded/screens/wk:design6: "b8f86b03" -> "bb248cb1"
+- /loaded/screens/wk:home: "8f06480a" -> "f26b8da2"
+- /loaded/screens/wk:kv: "5862eae9" -> "83ebac00"
+
+## 2026-11-01 save:day1
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (19+ differences), first ones:
+- /loaded/screens/wk:design0: "e054e71a" -> "80a84526"
+- /loaded/screens/wk:design1: "d0a56abb" -> "b27a1ae3"
+- /loaded/screens/wk:design2: "cfe41c14" -> "d016785d"
+- /loaded/screens/wk:design3: "3bdf7bc1" -> "874e0632"
+- /loaded/screens/wk:design4: "ab1db38f" -> "dd1e9640"
+- /loaded/screens/wk:design5: "2215a5b7" -> "a783db48"
+- /loaded/screens/wk:design6: "12768cfe" -> "006f4a35"
+- /loaded/screens/wk:home: "729aa0cc" -> "9d4c0772"
+- /loaded/screens/xt: "59b89103" -> "d5bd6ed5"
+- /loaded/screens/xt:design0: "f3219cca" -> "f8e9de71"
+- /loaded/screens/xt:design1: "a291a429" -> "f6e75f82"
+- /loaded/screens/xt:design2: "39cbc1a9" -> "f9d1e2a1"
+- /loaded/screens/xt:design3: "033815bd" -> "fe470ac9"
+- /loaded/screens/xt:design4: "b301138d" -> "079c385b"
+- /loaded/screens/xt:design5: "d3a1d6b7" -> "e0239303"
+
+## 2026-11-01 save:legacy-wk-busy
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (25+ differences), first ones:
+- /loaded/screens/market: "e6ba268c" -> "bb9cc5aa"
+- /loaded/screens/shop: "b579d0cb" -> "fc1122b6"
+- /loaded/screens/wk:copy0: "7fd6bf2c" -> "2ce36fb4"
+- /loaded/screens/wk:copy1: "63a67744" -> "d4039572"
+- /loaded/screens/wk:copy2: "90736418" -> "8bdefcff"
+- /loaded/screens/wk:design0: "93dd3828" -> "4fae77f6"
+- /loaded/screens/wk:design1: "99b38c59" -> "57d47b5b"
+- /loaded/screens/wk:design2: "2389099a" -> "e17d8ffb"
+- /loaded/screens/wk:design3: "b89372b3" -> "29f471a4"
+- /loaded/screens/wk:design4: "4119ef3b" -> "0844f1bb"
+- /loaded/screens/wk:design5: "1f6df53e" -> "82472c80"
+- /loaded/screens/wk:design6: "0a59740a" -> "4856bafd"
+- /loaded/screens/wk:home: "989ae501" -> "a1012a3e"
+- /loaded/screens/wk:kv: "74098445" -> "066d3f78"
+- /loaded/screens/wk:meta: "afe75b66" -> "e10afa92"
+
+## 2026-11-01 save:legacy-wk-day1
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (19+ differences), first ones:
+- /loaded/screens/wk:design0: "e054e71a" -> "80a84526"
+- /loaded/screens/wk:design1: "d0a56abb" -> "b27a1ae3"
+- /loaded/screens/wk:design2: "cfe41c14" -> "d016785d"
+- /loaded/screens/wk:design3: "3bdf7bc1" -> "874e0632"
+- /loaded/screens/wk:design4: "ab1db38f" -> "dd1e9640"
+- /loaded/screens/wk:design5: "2215a5b7" -> "a783db48"
+- /loaded/screens/wk:design6: "12768cfe" -> "006f4a35"
+- /loaded/screens/wk:home: "729aa0cc" -> "9d4c0772"
+- /loaded/screens/xt: "59b89103" -> "d5bd6ed5"
+- /loaded/screens/xt:design0: "f3219cca" -> "f8e9de71"
+- /loaded/screens/xt:design1: "a291a429" -> "f6e75f82"
+- /loaded/screens/xt:design2: "39cbc1a9" -> "f9d1e2a1"
+- /loaded/screens/xt:design3: "033815bd" -> "fe470ac9"
+- /loaded/screens/xt:design4: "b301138d" -> "079c385b"
+- /loaded/screens/xt:design5: "d3a1d6b7" -> "e0239303"
+
+## 2026-11-01 save:legacy-wk-released
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (22+ differences), first ones:
+- /loaded/screens/market: "7ccb1ca6" -> "d14f41da"
+- /loaded/screens/shop: "c7597194" -> "d0c75ead"
+- /loaded/screens/wk:design0: "1bc4e4f2" -> "e99b0076"
+- /loaded/screens/wk:design1: "870caef3" -> "5273de2f"
+- /loaded/screens/wk:design2: "f29c1474" -> "a16c88ab"
+- /loaded/screens/wk:design3: "605545c9" -> "711b7d6c"
+- /loaded/screens/wk:design4: "f560b96a" -> "69080d6b"
+- /loaded/screens/wk:design5: "22353a23" -> "0ed80891"
+- /loaded/screens/wk:design6: "04200e4c" -> "ebefc59a"
+- /loaded/screens/wk:home: "14fb826d" -> "97b7c73e"
+- /loaded/screens/wk:kv: "61b6f5e2" -> "453ace2b"
+- /loaded/screens/wk:meta: "29375557" -> "c6a45488"
+- /loaded/screens/xt: "724c7646" -> "3c0d2303"
+- /loaded/screens/xt:design0: "fb7184d4" -> "bc081cc1"
+- /loaded/screens/xt:design1: "ab6df103" -> "9246d30e"
+
+## 2026-11-01 save:legacy-wk-year
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (23+ differences), first ones:
+- /loaded/screens/market: "5b11fb3f" -> "25fef97a"
+- /loaded/screens/shop: "5471e831" -> "0f826a7d"
+- /loaded/screens/wk:design0: "431eb867" -> "b1ae6f8d"
+- /loaded/screens/wk:design1: "4f0e553b" -> "cf9f7a0f"
+- /loaded/screens/wk:design2: "f7405db4" -> "5e0d3c93"
+- /loaded/screens/wk:design3: "a9732518" -> "64bc91d5"
+- /loaded/screens/wk:design4: "53fb12ff" -> "feeab1dd"
+- /loaded/screens/wk:design5: "426c32fe" -> "de85d361"
+- /loaded/screens/wk:design6: "6cc31629" -> "3fb9c09e"
+- /loaded/screens/wk:home: "af7a438e" -> "730538b4"
+- /loaded/screens/wk:kv: "bd639997" -> "715e21db"
+- /loaded/screens/wk:lgs: "1d7ed202" -> "bf0eecc0"
+- /loaded/screens/wk:meta: "9a49f304" -> "1d496a1c"
+- /loaded/screens/xt: "a2cfd206" -> "d5abf1df"
+- /loaded/screens/xt:design0: "4d8a99df" -> "9d48b64c"
+
+## 2026-11-01 save:released
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (24+ differences), first ones:
+- /loaded/screens/market: "92e11797" -> "9240c05b"
+- /loaded/screens/shop: "0bbd88b6" -> "c4f5dd6c"
+- /loaded/screens/wk:design0: "eb303c62" -> "6a95f464"
+- /loaded/screens/wk:design1: "8ce7d84f" -> "ffde5c69"
+- /loaded/screens/wk:design2: "385afab2" -> "fa68dde7"
+- /loaded/screens/wk:design3: "d0487743" -> "0a91b394"
+- /loaded/screens/wk:design4: "e3e90cbb" -> "0ab926f8"
+- /loaded/screens/wk:design5: "5b5abbdb" -> "da7363ad"
+- /loaded/screens/wk:design6: "6a533013" -> "738e1941"
+- /loaded/screens/wk:home: "9749e032" -> "e8fcaa69"
+- /loaded/screens/wk:kv: "3e9a7478" -> "a46d002a"
+- /loaded/screens/wk:lgs: "dc84f4d4" -> "8347846f"
+- /loaded/screens/wk:meta: "87cb2e9a" -> "17e9895a"
+- /loaded/screens/xt: "ed3a019b" -> "1d84d321"
+- /loaded/screens/xt:design0: "8b6567c1" -> "9a346de1"
+
+## 2026-11-01 open:ban
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (0+ differences), first ones:
+
+## 2026-11-01 open:busy
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (0+ differences), first ones:
+
+## 2026-11-01 open:legacy-wk-day1
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (0+ differences), first ones:
+
+## 2026-11-01 open:legacy-wk-year
+Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
+Changed (0+ differences), first ones:

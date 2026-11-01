@@ -31,17 +31,17 @@ async def main():
         await pg.evaluate("G.player.cash=6000")
         days=0; snaps=[]; imported=False
         for step in range(36):
-            await pg.evaluate("""(()=>{ const n=(G.day%7); G.player.cash=Math.max(G.player.cash,1500);
+            await pg.evaluate(f"window.__step={step}"); await pg.evaluate("""(()=>{ const n=(G.day%7); G.player.cash=Math.max(G.player.cash,1500);
               try { const sets=tcReleasedSets(G.day), s=sets[sets.length-1]; if (s && tcStock(s,'P')>=2){ tcBuySealed(s,'P',2); const ids=myTc().filter(c=>tcD(c.k).sealed&&!c.l).map(c=>c.id); if (ids.length) tcOpenMany(ids); } } catch(e){ window.__soakErr=(window.__soakErr||'')+'tc '+e.message; }
               try { if (xtStock(31,'P')>=2 && xtReleasedSets(G.day).includes(31)){ xtBuySealed(31,'P',2); const ids=myXt().filter(c=>xtD(c.k).sealed&&!c.l).map(c=>c.id); if (ids.length) xtOpenMany(ids); } } catch(e){ window.__soakErr=(window.__soakErr||'')+'xt '+e.message; }
               try { if (brReleasedSets(G.day).length && brStock(1,'P')>=2){ brBuySealed(1,'P',2); const ids=myBr().filter(c=>brD(c.k).sealed&&!c.l).map(c=>c.id); if (ids.length) brOpenMany(ids); } } catch(e){ window.__soakErr=(window.__soakErr||'')+'br '+e.message; }
               // list a card as an auction and another with offers; submit one for grading
-              try { const mine=[['t',myTc()],['x',myXt()],['b',myBr()]]; for (const [it,arr] of mine){ const c=arr.find(c=>!c.l&&c.g===0&&!({t:tcD,x:xtD,b:brD}[it])(c.k).sealed); if (c){ const v=Math.max(1,Math.round(({t:tcCopyValue,x:xtCopyValue,b:brCopyValue}[it])(c)*100)/100); playerList(it,c.id,(G.day%2? 'auc':'bin'),v,7,true); } } } catch(e){ window.__soakErr=(window.__soakErr||'')+'list '+e.message; }
+              try { const mine=[['t',myTc()],['x',myXt()],['b',myBr()]]; for (const [it,arr] of mine){ const V={t:tcCopyValue,x:xtCopyValue,b:brCopyValue}[it], D={t:tcD,x:xtD,b:brD}[it]; const c=arr.filter(c=>!c.l&&c.g===0&&!D(c.k).sealed).sort((p,q)=>V(q)-V(p))[0]; if (c){ const v=Math.max(0.25,Math.round(V(c)*100)/100); playerList(it,c.id,(window.__step%2? 'auc':'bin'),(window.__step%2? Math.round(v*0.7*100)/100 : v),7,true); } } } catch(e){ window.__soakErr=(window.__soakErr||'')+'list '+e.message; }
               try { const c=myBr().find(c=>!c.l&&c.g===0&&!brD(c.k).sealed); if (c) brSubmitGrade(c.id,'std'); const c2=myXt().find(c=>!c.l&&c.g===0&&!xtD(c.k).sealed); if (c2) xtSubmitGrade(c2.id,'eco'); } catch(e){ window.__soakErr=(window.__soakErr||'')+'grade '+e.message; }
               // answer any offer on a listing of ours
               try { for (const l of G.lst.filter(l=>l.sel===0&&l.offers&&l.offers.length)){ const o=l.offers[0]; answerOffer(l.id,o.id, o.amt>=l.pr*0.7); } } catch(e){ window.__soakErr=(window.__soakErr||'')+'offer '+e.message; }
             })()""")
-            await pg.evaluate("ACT.adv('14')"); await pg.wait_for_timeout(120)
+            await pg.evaluate("(()=>{ for (let i=0;i<14;i++){ advanceDay(); if (i%3===2){ try { for (const l of G.lst.filter(l=>l.sel===0&&l.offers&&l.offers.length)){ const o=l.offers[0]; answerOffer(l.id,o.id, o.amt>=l.pr*0.7); } } catch(e){} } } })()"); await pg.wait_for_timeout(120)   # the game's skip stops early for offers and outbids, so keep going to the target
             # grading returns are opened (the Home 'Open' action) so the queue does not grow forever
             await pg.evaluate("(()=>{ try { while ((G.player.rv||[]).length) { const r=G.player.rv.shift(); } } catch(e){} })()")
             if step%6==5:
@@ -56,10 +56,11 @@ async def main():
                 st2=await pg.evaluate(STATE); check(not st2['bad'] and st2['tc']+st2['xt']+st2['br']>0, 'the game reloads after the first year with its cards', st2)
         gr=await pg.evaluate("""(()=>{ const out={}; for (const [n,get,sub,D] of [['tc',myTc,tcSubmitGrade,tcD],['xt',myXt,xtSubmitGrade,xtD],['br',myBr,brSubmitGrade,brD]]){ const c=get().find(c=>!c.l&&c.g===0&&!D(c.k).sealed); if (!c){ out[n]='no card'; continue; } const cash0=G.player.cash; const e=sub(c.id,'exp'); out[n]={err:e, fee:Math.round((cash0-G.player.cash)*100)/100, id:c.id, g:c.g}; } return out; })()""")
         await pg.evaluate("G.player.rv=[]; ACT.adv('4')"); await pg.wait_for_timeout(300)
-        back=await pg.evaluate("""(()=>{ const o={}; for (const n of ['tc','xt','br']){ const T={tc:G.tc,xt:G.xtc,br:G.brc}[n]; const x=(window.__gr||{})[n]; o[n]=null; } return (G.player.rv||[]).map(r=>({k:r.k,g:r.g})); })()""")
+        back=await pg.evaluate("""(()=>(G.player.rv||[]).map(r=>({k:r.k,id:r.id,g:r.g})))()""")
         for n in ['tc','xt','br']:
             if isinstance(gr[n],dict): check(gr[n]['err'] is None and abs(gr[n]['fee']-80)<0.01 and gr[n]['g']==-1, f'{n}: an Express grading submission takes the $80 fee and locks the card', gr[n])
-        check(len(back)==sum(1 for n in gr if isinstance(gr[n],dict)) and all(1<=r['g']<=10 for r in back), 'every submitted card comes back after the turnaround with a grade from 1 to 10', back)
+        sub={('t' if n=='tc' else 'x' if n=='xt' else 'b'):gr[n]['id'] for n in gr if isinstance(gr[n],dict)}
+        check(all(any(r['k']==k and r['id']==i and 1<=r['g']<=10 for r in back) for k,i in sub.items()), 'every submitted card comes back after the turnaround with a grade from 1 to 10', (sub,back))
         err=await pg.evaluate("window.__soakErr||''"); check(not err, 'no exception inside any soak action', err)
         sold=await pg.evaluate("({sold:Math.round(G.player.sold*100)/100, fees:Math.round(G.player.fees*100)/100, offers:G.player.newOffers||0, aucSold:G.player.aucSold||0})")
         check(sold['sold']>0, 'listings sold over the run (auctions, buy-it-now and accepted offers settled for the seller)', sold)

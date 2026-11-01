@@ -27,10 +27,24 @@ Rounding: offers, previews and settlements all use cents (`money(x,true)`, `Math
 ### Outdated copy fixed
 Settings (baseball start-over and About text; now accurate for three games, plus pack-hint switches and "show the first steps"), `PACK.about`, Tidemark intro (release state is read from the date), "Designed for Version 1, not canon" (Tidemark card page) and "Proposed, not tested or canon" (Broken Reach card page) replaced by plain labels, the Broken Reach intro ("a proposal, not canon"), the battler's "Approved artwork is pending" (shown only when the card has no art), the Tidemark opening summary's unnamed-bulk lines (the catalogue has no bulk), the metagame pages' "Most played cards" (lists only cards in current decks; it listed older cards at 0%), fresh-pack condition ("Pack fresh, centering flawed (lightly played by grade)" for factory flaws on an unplayed pull). Duplicate rarity labels: **not reproduced.** A scan of Home, the three shops, the Market, Collection (cards, sets, grading), card pages and card-design pages in all three games, with cards opened in each, found no label repeated across a separator (`·`, `,`, `-`, `/`); no change made. If you can send a screenshot of the original, I will look for it.
 
-## 2. Verification (see the handoff in the task thread for the exact results)
-New suites (all in `tools/run_all_tests.sh`): `purchase_routes_test.py`, `opening_test.py`, `market_safety_test.py`, `home_test.py`, `browse_test.py`, `br_layout_test.py` (387 face variants: no dropped ability text, nothing outside the box), `phone_layout_test.py` (320/360/390 px viewport emulation), `soak_test.py` (low-budget start, about 420 days in all three games, listings, auctions, offers, grading, backup into a separate slot, reload).
-All browser tests are headless Chromium with phone viewports. **Nothing has been run on a physical iPhone or in Safari, and nothing in an itch.io iframe.**
-Not run: a timed 45-minute booster-free retention test.
+## 2. Verification (headless Chromium, phone viewports; run 2026-11-01)
+Run with `sh tools/run_all_tests.sh --golden` against a fresh `python3 tools/build.py`, then individual reruns where a suite failed.
+
+| Suite | Result |
+|---|---|
+| `check_globals.py` | pass, no duplicate globals (sports 997, comics 997, tcg 1,801) |
+| `shelltest` sports / comics / tcg | `ERRS []` for all three |
+| `playtest sports` | `ERRS []` |
+| `wildkintest`, `duskfalltest`, `tidemarktest`, `tidemark_ui_test` | all pass |
+| `brokenreachcollecttest`, `brokenreach_uitest`, `node tools/brokenreach/test.js` | all pass |
+| `test_art_pipeline`, `test_br_art_pipeline` | pass |
+| `purchase_routes_test` (new) | **pass, 5 of 5 consecutive runs** after fixing the test's choice of print (see below) |
+| `opening_test`, `market_safety_test`, `home_test`, `browse_test`, `br_layout_test`, `phone_layout_test` (all new) | pass |
+| `soak_test` (new) | pass: low-budget start, 420 days, all three franchises, sales and NPC offers settled, Express grading submitted and returned with grades, backup exported and imported into a separate slot (same day and card count), reload after one year |
+| `golden.py check` | failed before re-capture (screen text, new estimate fields, one collection total 34.80 to 34.85); re-captured with a logged reason; **passes after**. No cash, ownership or economy value moved. |
+
+Test-side faults found and fixed while verifying (not game bugs): `purchase_routes_test` assumed the online shop was always the cheapest source (Home shows the cheapest source, which may be the marketplace); `soak_test` listed 10-cent commons at a $1 floor (nothing should sell), always chose the same listing type, and called the asynchronous `ACT.adv` without waiting.
+Not run in this pass: `tidemark_econ2_test`, `wildkin_econ`, `tidemark_econ` (economy measurements; the valuation change affects only displayed estimates and collection totals, not prices or trades), the timed 45-minute booster-free retention session, any physical iPhone or Safari test, any itch.io iframe test.
 
 ## 3. HTML5 packaging (measured with `tools/itch_package.py`)
 `dist/tcg` (the only build that would be uploaded): **1,811 files, 108.3 MB**; largest file 3.47 MB (`game.js`), then `vendor/three.min.js` 0.67 MB and 0.5 MB paintings.
