@@ -7,11 +7,13 @@ async function showLauncher(msg){
   const el=launchEl(); let slots=[]; let err=''; try { slots=await slotList(PACK.id); } catch(e){ err=String(e&&e.message||e); }
   const last=slots[0];
   el.innerHTML=`<div class="lwrap"><div class="lhead"><div class="llogo" style="background:${PACK.accent}"></div><h1>${esc(PACK.title)}</h1><p>${esc(PACK.tagline)}</p></div>
+    ${PACK.id==='tcg'?'<div class="lgames"><div class="lgame" style="background-image:url(art/scene.verdant.01.jpg);--c:134,207,116"><b>Wildkin</b><small>Creatures</small></div><div class="lgame" style="background-image:url(art/TMI-0040.webp);--c:71,192,180"><b>Tidemark</b><small>Land and sea</small></div><div class="lgame" style="background-image:url(art/br-BR01-001.webp);--c:208,143,82"><b>Broken Reach</b><small>Space opera</small></div></div>':''}
     ${err?`<div class="lmsg err">${esc(err)}</div>`:''}${msg?`<div class="lmsg">${esc(msg)}</div>`:''}
-    ${PACK.id==='tcg'?'<a class="lbtn" href="broken-reach/" style="text-decoration:none;margin-bottom:12px;border-color:#e2a43a;color:#e2a43a">The Broken Reach: Play Alpha<small style="color:#aab2bc">A new tactical card battler. Playable now, separate from your collection.</small></a>':''}
+    ${''}
     ${last?`<button class="lbtn big" data-lact="open" data-id="${last.id}">Continue<small>${esc(last.name)} · ${last.meta&&last.meta.day!=null?fmtDate(last.meta.day,true):''}</small></button>`:''}
     <div class="lrow"><button class="lbtn ${last?'':'big'}" data-lact="new">${last?'New game':'Start a new game'}</button><label class="lbtn" style="cursor:pointer">Import a save<input type="file" id="limport" accept=".ccsave,.txt,.json" hidden></label></div>
     ${slots.length?`<h2 class="lh2">Your games</h2><div class="lslots">${slots.map(slotCard).join('')}</div>`:'<p class="lnote">No saved games yet. Each game you start gets its own slot, so you can run several at once.</p>'}
+    ${PACK.id==='tcg'?'<a class="lsub" href="broken-reach/">Early prototype: <b>The Broken Reach battler</b> (separate from your collection)</a>':''}
     <p class="lfoot">Games are saved in this browser, automatically. Use Backup to keep a copy or move to another device.</p></div>`;
 }
 function showNewGame(){

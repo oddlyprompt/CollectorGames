@@ -3294,3 +3294,100 @@ Changed (0+ differences), first ones:
 ## 2026-10-31 open:legacy-wk-year
 Reason: Broken Reach picture window anchors the crop to the top so heads are not cut off
 Changed (0+ differences), first ones:
+
+## 2026-11-01 day0
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (3+ differences), first ones:
+- /screens/home: "ea6708ab" -> "788f23e6"
+- /screens/shop: "a366dcff" -> "7bd0b03f"
+- /screens/xt: "00018927" -> "59b89103"
+
+## 2026-11-01 release
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (3+ differences), first ones:
+- /screens/home: "b7c9e442" -> "cff68283"
+- /screens/shop: "f0d0c4d0" -> "7b23a090"
+- /screens/xt: "99c25da7" -> "ff263403"
+
+## 2026-11-01 year1
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (3+ differences), first ones:
+- /screens/home: "4bbae9e1" -> "d5a04c8a"
+- /screens/shop: "8e06a7ff" -> "fcd3b9bf"
+- /screens/xt: "9089f19f" -> "81ccc4f3"
+
+## 2026-11-01 series
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (0+ differences), first ones:
+
+## 2026-11-01 flows
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (0+ differences), first ones:
+
+## 2026-11-01 shared
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (0+ differences), first ones:
+
+## 2026-11-01 save:ban
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "7ce99532" -> "10a40af2"
+- /loaded/screens/xt: "6f2a36a5" -> "ce65e059"
+
+## 2026-11-01 save:busy
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "eb8e58b7" -> "045b7cf7"
+- /loaded/screens/xt: "85852691" -> "b466899d"
+
+## 2026-11-01 save:day1
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "a366dcff" -> "7bd0b03f"
+- /loaded/screens/xt: "00018927" -> "59b89103"
+
+## 2026-11-01 save:legacy-wk-busy
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "dd06e70b" -> "b579d0cb"
+- /loaded/screens/xt: "70323397" -> "21a624ab"
+
+## 2026-11-01 save:legacy-wk-day1
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "a366dcff" -> "7bd0b03f"
+- /loaded/screens/xt: "00018927" -> "59b89103"
+
+## 2026-11-01 save:legacy-wk-released
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "04ba8754" -> "c7597194"
+- /loaded/screens/xt: "e96bf8c2" -> "724c7646"
+
+## 2026-11-01 save:legacy-wk-year
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "6d1299f1" -> "5471e831"
+- /loaded/screens/xt: "4b52b712" -> "a2cfd206"
+
+## 2026-11-01 save:released
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (2+ differences), first ones:
+- /loaded/screens/shop: "389e2676" -> "0bbd88b6"
+- /loaded/screens/xt: "293673df" -> "ed3a019b"
+
+## 2026-11-01 open:ban
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (0+ differences), first ones:
+
+## 2026-11-01 open:busy
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (0+ differences), first ones:
+
+## 2026-11-01 open:legacy-wk-day1
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (0+ differences), first ones:
+
+## 2026-11-01 open:legacy-wk-year
+Reason: Collector look and feel pass: hero banners and Home game tiles change the screen HTML (no game state changed)
+Changed (0+ differences), first ones:

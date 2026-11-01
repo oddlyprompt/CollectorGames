@@ -366,7 +366,7 @@ body.noscroll{ overflow:hidden; }
 .insp.is3d .insp-obj{ pointer-events:none; }
 
 /* Wildkin TCG */
-.tcg .dot{ display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+#view .dot,.tcg .dot{ position:static; min-width:0; padding:0; display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; vertical-align:middle; }
 .tco{ position:fixed; inset:0; z-index:230; display:flex; flex-direction:column; background:radial-gradient(90% 60% at 50% 30%,#262b33 0%,#0b0d10 70%); color:#e9ecef; overflow-y:auto; }
 .tco-top{ display:flex; align-items:center; gap:10px; padding:calc(10px + env(safe-area-inset-top,0px)) 14px 6px; } .tco-top span{ flex:1; font-weight:700; letter-spacing:.04em; font-size:13px; color:#9aa3ad; text-transform:uppercase; }
 .tco .btn{ background:rgba(255,255,255,.08); color:#fff; border-color:rgba(255,255,255,.18); } .tco .btn.pri{ background:var(--accent,#c0392b); border-color:transparent; }
