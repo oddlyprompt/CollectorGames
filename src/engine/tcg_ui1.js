@@ -54,7 +54,7 @@ function tcSetsV(){
 }
 function tcMetaV(){
   const T=G.tcg; const legal=tcLegalSets(G.day); const bans=Object.keys(T.ban).map(c=>({c:tcCardByCid(+c),b:T.ban[c]})).filter(x=>x.c).sort((a,b)=>b.b.d-a.b.d);
-  const used=Object.keys(T.usage).map(cid=>({c:tcCardByCid(+cid),u:T.usage[cid]})).filter(x=>x.c).sort((a,b)=>b.u-a.u).slice(0,12);
+  const used=Object.keys(T.usage).map(cid=>({c:tcCardByCid(+cid),u:tcDeckShare(+cid)})).filter(x=>x.c&&x.u>0).sort((a,b)=>b.u-a.u).slice(0,12);   // current share of decks only: a card nobody plays is not listed at 0%
   const nx=tcAnnounced(G.day); let rot=''; if (nx){ const def=tcSetDef(nx), after=tcReleasedSets(def.rel).slice(-3); const out=legal.filter(s=>!after.includes(s)); if (out.length) rot=`<p class="small" style="margin:6px 0 0">${esc(out.map(s=>tcSetDef(s).name).join(' and '))} rotates out on ${fmtDate(def.rel,true)}.</p>`; }
   return `<div class="cols"><div class="stack"><div class="panel"><h3>Standard decks</h3><p class="small muted" style="margin:0 0 8px">Share of decks in recent events. Strong decks rise, popular decks get answered.</p><div class="rows">${T.arch.map(tcArchRow).join('')}</div></div>
     <div class="panel"><h3>Recent events</h3><div class="rows">${T.ev.slice(0,10).map(tcEvRow).join('')}</div></div></div>

@@ -60,15 +60,15 @@ function tcKvV(){
   const sets=tcReleasedSets(G.day); if (!sets.length) return `<div class="panel"><div class="empty">Kinvault opens its catalogue when the first set is released.</div></div>`;
   const s=tcKvStock(G.day); const f=UI.kvf; const chip=(k,t)=>`<button class="chip ${f===k?'on':''}" data-act="kvf" data-a="${k}">${t}</button>`;
   const keys=sets.flatMap(tcAllKeys).filter(k=>{ const d=tcD(k), o=TC_RAROR[d.card.rar]; return f==='hits'? o>=3 : f==='rare'? o===2 : f==='unc'? o===1 : f==='common'? o<=0 && d.card.kind!=='essence' : f==='stock'? s[k]>0 : true; }).sort((a,b)=>tcKvPrice(b)-tcKvPrice(a));
-  const per=20, pages=Math.max(1,Math.ceil(keys.length/per)), pg=Math.min(UI.kvp,pages-1);
+  const KB=kvBrowse(keys,tcD,s,'kvq','kvs','kvp','kvpage'); const per=20, pages=Math.max(1,Math.ceil(KB.keys.length/per)), pg=Math.min(UI.kvp,pages-1);
   const row=k=>{ const d=tcD(k), q=s[k]||0, p=tcKvPrice(k); return `<div class="row" style="cursor:default"><button class="mini" style="background:none;border:0;padding:0;width:40px" data-act="tdesign" data-a="${esc(k)}">${miniTKey(k)}</button><div class="rt"><b>${esc(d.title)}</b><span>${tcRV(d)} · near mint</span><span class="${q?'muted':'down'}">${q? q+' in stock' : 'out of stock'}</span></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><b>${money(p,true)}</b><button class="btn sm" data-act="kvbuy" data-a="${esc(k)}" ${!q||G.player.cash<p?'disabled':''}>Buy</button></div></div>`; };
   return `<div class="cols"><div class="stack"><div class="panel"><h3>Kinvault</h3><p class="small muted" style="margin:0 0 8px">An online singles shop with every printed card, always near mint, at about ${Math.round((KV_MARKUP-1)*100)}% over market (shipping included). Stock is refreshed every Monday (next: ${fmtDate(cardNextDow(1),true)}); the biggest chase cards are often out.</p>
     <div class="chips">${chip('hits','Premium')}${chip('rare','Rares')}${chip('unc','Uncommons')}${chip('common','Commons')}${chip('stock','In stock')}${chip('all','Everything')}</div>
-    <div class="rows">${keys.slice(pg*per,pg*per+per).map(row).join('')||'<div class="empty">Nothing here.</div>'}</div>${pages>1?`<div class="chips">${Array.from({length:pages},(_,i)=>`<button class="chip ${i===pg?'on':''}" data-act="kvpage" data-a="${i}">${i+1}</button>`).join('')}</div>`:''}</div></div>
+    ${KB.tools}<div class="rows">${KB.keys.slice(pg*per,pg*per+per).map(row).join('')||KB.empty}</div>${KB.pager(pg,pages)}</div></div>
     <div class="stack">${tcSealedPanel()}</div></div>`; }
 ACT.lgsall=()=>{ UI.lgsAll=1; render(true); };
-ACT.kvf=a=>{ UI.kvf=a; UI.kvp=0; render(true); }; ACT.kvpage=a=>{ UI.kvp=+a; render(true); };
-const tcStoreDone=(e,ok)=>{ if (e){ showToast(e); return; } showToast(ok, true); render(true); queueSave(); };
+ACT.kvf=a=>{ UI.kvf=a; UI.kvp=0; render(true); }; ACT.kvpage=a=>{ UI.kvp=+a; render(true); }; ACT.kvs=a=>{ UI.kvs=!!(+a); UI.kvp=0; render(true); }; ACT.kvq=kvSearchAct('kvq','kvp');
+const tcStoreDone=(e,ok)=>{ if (e){ showToast(e); return; } UI.cg='wk'; showToast(ok, true); render(true); queueSave(); };
 ACT.lgsbuy=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const [f,q]=a.split('|'); tcStoreDone(tcLgsBuySealed(f,+q), 'Bought. It is in Your sealed product.'); };
 ACT.lgssingle=a=>tcStoreDone(tcLgsBuySingle(+a), 'Bought. It is in Your cards, marked New.');
 ACT.lgssell=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; tcStoreDone(tcLgsSellTo(+a), 'Sold to The Tidepool.'); };

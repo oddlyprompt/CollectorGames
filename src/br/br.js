@@ -40,7 +40,7 @@ function arrowDiagram(mask){ const g=[[7,0,1],[6,-1,2],[5,4,3]]; return `<div st
 function detailHtml(id,opts={}){ if (!id) return '<div class="detail empty">Tap a card to see its arrows, stats and ability.</div>'; const d=E.def(id), p=d.type==='planet';
   return `<div class="detail"><h3>${esc(d.name)}</h3><div class="meta">${esc(d.typeName)} · ${esc(d.aff)} · <span style="color:${RARC[d.rar]}">${RARN[d.rar]}</span> · ${esc(d.id||d.base_card_id)}</div>
    <div class="big">${p?`<span class="orb" style="--c1:${(PLANET_COL[id]||['#888','#222'])[0]};--c2:${(PLANET_COL[id]||['#888','#222'])[1]};width:84px;height:84px"></span>`:cardHtml(d,{owner:opts.owner,cls:'insp'})}<div class="kv">${p?'':`<div>Attack <b>${d.atk}</b> · Guard <b>${d.grd}</b></div>${arrowDiagram(d.mask)}`}</div></div>
-   ${d.text?`<div class="txt">${esc(d.text)}</div>`:'<div class="txt dim">No ability.</div>'}<div class="kv">${esc(d.role||'')} · ${esc(d.era||'')}</div><div class="legend">Placeholder illustration. Approved artwork is pending, stats and abilities are provisional.</div></div>`; }
+   ${d.text?`<div class="txt">${esc(d.text)}</div>`:'<div class="txt dim">No ability.</div>'}<div class="kv">${esc(d.role||'')} · ${esc(d.era||'')}</div><div class="legend">${DATA.art&&DATA.art[d.base_card_id]?'Stats and abilities are alpha and may change.':'Placeholder illustration: final artwork is not in this build yet. Stats and abilities are alpha and may change.'}</div></div>`; }
 function toast(m){ const t=document.createElement('div'); t.className='toast'; t.textContent=m; document.body.appendChild(t); setTimeout(()=>t.remove(),2200); }
 function planetOrb(id,small){ const c=PLANET_COL[id]||['#888','#222']; return `<span class="orb" style="--c1:${c[0]};--c2:${c[1]}"></span>`; }
 

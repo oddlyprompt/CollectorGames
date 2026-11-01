@@ -30,7 +30,7 @@ def build(g):
         import tidemark_build; tpre,na,nc,npr=tidemark_build.build(out); pre+='\n'+tpre+'\n'+rd(os.path.join(ROOT,'tools','tidemark','v1','render.js'))+'\n'; print(f'        Tidemark: {nc} cards, {npr} printings, {na} approved art files copied to {g}/art/')
     if cfg.get('br'):                                                              # the third card game, Broken Reach: catalogue from broken-reach-production/ (see tools/brokenreach_collect_build.py)
         import brokenreach_collect_build; bpre,nb,na,nart=brokenreach_collect_build.build(out); pre+='\n'+bpre; print(f'        Broken Reach: {nb} cards and {na} premium prints, {nart} approved art files')
-    if cfg['tcg']: files.append(os.path.join(SRC,'shell','tcg_theme.js'))                # the shared dark theme glue: hero banners, Home tiles, folding notes
+    if cfg['tcg']: files+= [os.path.join(SRC,'shell','tcg_theme.js'), os.path.join(SRC,'shell','tcg_home.js')]                # the shared dark theme glue (hero banners, folding notes) and the Home decisions/first steps
     js=pre+'\n'.join(rd(f) for f in files)+'\nshellBoot();\n'; open(out+'/game.js','w',encoding='utf-8').write(js)
     css=rd(os.path.join(SRC,'engine','style.css'))+'\n'+rd(os.path.join(SRC,'shell','shell.css'))+('\n'+rd(os.path.join(SRC,'shell','tcg_theme.css')) if cfg['tcg'] else ''); open(out+'/style.css','w',encoding='utf-8').write(css)
     shutil.copy(os.path.join(ROOT,'vendor','three.min.js'),out+'/vendor/three.min.js')

@@ -134,7 +134,7 @@ async def main():
         await pg.evaluate("closeSheet(true); ACT.xtset(31)"); await pg.wait_for_timeout(1500); sheet=await pg.evaluate("document.body.innerText")
         check('Tenth Tide' in sheet and '220 cards' in sheet and '150 new, 70 reprints' in sheet, 'the set page shows Tenth Tide with 220 cards')
         k=await pg.evaluate("xtKey(31,1,'N')"); await pg.evaluate(f"closeSheet(true); ACT.xtdesign('{k}')"); await pg.wait_for_timeout(2500); ds=await pg.evaluate("document.body.innerText")
-        check('Leader, Rampart' in ds and 'Influence' in ds and 'Designed for Version 1' in ds and 'Captain of the Causeway' in ds, 'the card page shows its rules and says they are designed, not canon')
+        check('Leader, Rampart' in ds and 'Influence' in ds and 'simulated matches' in ds and 'Captain of the Causeway' in ds, 'the card page shows its rules and says how its rules are used')
         img=await pg.evaluate("""(async()=>{ const c=xtSetCards(31)[0]; await new Promise(r=>setTimeout(r,1500)); const u=tmImgUrl(c); return {ok:u.startsWith('data:image'), kb:Math.round(u.length/1024), front:xtFront(xtKey(31,1,'N')).includes('data:image')}; })()""")
         check(img['ok'] and img['front'], 'a card face is drawn by the Tidemark frame renderer with its approved art', img)
         rr=await pg.evaluate("""(async()=>{ try { const o=XT(myXt().find(c=>!xtD(c.k).sealed).id); const svg=faceSVG('x',o,false); const r=await v3Raster(svg,300); return [typeof r, r&&r.width||0]; } catch(e){ return 'ERR '+e; } })()""")

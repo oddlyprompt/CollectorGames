@@ -61,15 +61,15 @@ function brKvV(){
   const sets=brReleasedSets(G.day); if (!sets.length) return `<div class="panel"><div class="empty">Waypoint Singles opens its catalogue when the first set is released.</div></div>`;
   const s=brKvStock(G.day); const f=UI.bkvf; const chip=(k,t)=>`<button class="chip ${f===k?'on':''}" data-act="bkvf" data-a="${k}">${t}</button>`;
   const keys=sets.flatMap(brAllKeys).filter(k=>{ const d=brD(k), o=BR_RAROR[d.card.rar]; return f==='hits'? o>=3 : f==='rare'? o===2 : f==='unc'? o===1 : f==='common'? o<=0 : f==='stock'? s[k]>0 : true; }).sort((a,b)=>brKvPrice(b)-brKvPrice(a));
-  const per=20, pages=Math.max(1,Math.ceil(keys.length/per)), pg=Math.min(UI.bkvp,pages-1);
+  const KB=kvBrowse(keys,brD,s,'bkvq','bkvs','bkvp','bkvpage'); const per=20, pages=Math.max(1,Math.ceil(KB.keys.length/per)), pg=Math.min(UI.bkvp,pages-1);
   const row=k=>{ const d=brD(k), q=s[k]||0, p=brKvPrice(k); return `<div class="row" style="cursor:default"><button class="mini" style="background:none;border:0;padding:0;width:40px" data-act="brdesign" data-a="${esc(k)}">${bMiniTKey(k)}</button><div class="rt"><b>${esc(d.title)}</b><span>${brRV(d)} · ${brKvCondText(k)}</span><span class="${q?'muted':'down'}">${q? q+' in stock' : 'out of stock'}</span></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><b>${money(p,true)}</b><button class="btn sm" data-act="bkvbuy" data-a="${esc(k)}" ${!q||G.player.cash<p?'disabled':''}>Buy</button></div></div>`; };
   return `<div class="cols"><div class="stack"><div class="panel"><h3>Waypoint Singles</h3><p class="small muted" style="margin:0 0 8px">${'An online singles shop with every printed card, always near mint, at about '+Math.round((BKV_MARKUP-1)*100)+'% over market (shipping included). Stock is refreshed every Monday (next: '+fmtDate(cardNextDow(1),true)+'); the biggest chase cards are often out.'}</p>
     <div class="chips">${chip('hits','Super Rare and up')}${chip('rare','Rares')}${chip('unc','Uncommons')}${chip('common','Commons')}${chip('stock','In stock')}${chip('all','Everything')}</div>
-    <div class="rows">${keys.slice(pg*per,pg*per+per).map(row).join('')||'<div class="empty">Nothing here.</div>'}</div>${pages>1?`<div class="chips">${Array.from({length:pages},(_,i)=>`<button class="chip ${i===pg?'on':''}" data-act="bkvpage" data-a="${i}">${i+1}</button>`).join('')}</div>`:''}</div></div>
+    ${KB.tools}<div class="rows">${KB.keys.slice(pg*per,pg*per+per).map(row).join('')||KB.empty}</div>${KB.pager(pg,pages)}</div></div>
     <div class="stack">${brSealedPanel()}</div></div>`; }
 ACT.blgsall=()=>{ UI.blgsAll=1; render(true); };
-ACT.bkvf=a=>{ UI.bkvf=a; UI.bkvp=0; render(true); }; ACT.bkvpage=a=>{ UI.bkvp=+a; render(true); };
-const brStoreDone=(e,ok)=>{ if (e){ showToast(e); return; } showToast(ok, true); render(true); queueSave(); };
+ACT.bkvf=a=>{ UI.bkvf=a; UI.bkvp=0; render(true); }; ACT.bkvpage=a=>{ UI.bkvp=+a; render(true); }; ACT.bkvs=a=>{ UI.bkvs=!!(+a); UI.bkvp=0; render(true); }; ACT.bkvq=kvSearchAct('bkvq','bkvp');
+const brStoreDone=(e,ok)=>{ if (e){ showToast(e); return; } UI.cg='br'; showToast(ok, true); render(true); queueSave(); };
 ACT.blgsbuy=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const [f,q]=a.split('|'); brStoreDone(brLgsBuySealed(f,+q), 'Bought. It is in Your sealed product.'); };
 ACT.blgssingle=a=>brStoreDone(brLgsBuySingle(+a), 'Bought. It is in Your cards, marked New.');
 ACT.blgssell=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; brStoreDone(brLgsSellTo(+a), 'Sold to The Cargo Cage.'); };

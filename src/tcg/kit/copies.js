@@ -11,6 +11,8 @@ function condFresh(r, q){
 function condWorn(r, age, rough){ const c=condFresh(r,0.2); const w=Math.min(1,0.15+age*0.22)*(rough||1); for (let i=0;i<4;i++) if (r()<0.35+w*0.4) c[i]=Math.max(30, Math.round(c[i]-r()*(10+45*w))); return c; }
 function condLabel(c){ const mn=Math.min(...c); return mn>=86?'NM': mn>=72?'LP': mn>=55?'MP': mn>=38?'HP':'DMG'; }
 const COND_LABN={NM:'Near mint',LP:'Lightly played',MP:'Moderately played',HP:'Heavily played',DMG:'Damaged'};
+// What to call a copy's condition. A card straight from a pack has never been played, so a factory flaw (off-centre, a print line, a rough edge) that scores as "lightly played" is described as pack fresh with that flaw, not as wear.
+function condTitle(cp){ const lab=condLabel(cp.c), name=COND_LABN[lab]; if (lab==='NM' || !(cp.a && cp.a[1]==='pulled') || Math.min(...cp.c)<70) return name; const areas=['corners','edges','surface','centering']; let w=0; for (let i=1;i<4;i++) if (cp.c[i]<cp.c[w]) w=i; return 'Pack fresh, '+areas[w]+' flawed ('+name.toLowerCase()+' by grade)'; }
 function condLines(cp){
   const c=cp.c, L=[]; const f=(v,a,b,cc,dd,ee)=> v>=96? a : v>=90? b : v>=80? cc : v>=65? dd : ee;
   L.push(['Centering', f(c[0],'Well centered.','Slightly off-center.','Noticeably off-center.','Badly off-center.','Cut very crooked.')]);

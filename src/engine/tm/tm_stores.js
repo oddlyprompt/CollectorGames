@@ -70,15 +70,15 @@ function xtKvV(){
   const sets=xtReleasedSets(G.day); if (!sets.length) return `<div class="panel"><div class="empty">Saltmarket opens its catalogue when the first set is released.</div></div>`;
   const s=xtKvStock(G.day); const f=UI.xkvf; const chip=(k,t)=>`<button class="chip ${f===k?'on':''}" data-act="xkvf" data-a="${k}">${t}</button>`;
   const keys=sets.flatMap(xtAllKeys).filter(k=>{ const d=xtD(k), o=XT_RAROR[d.card.rar]; return f==='hits'? o>=3 : f==='rare'? o===2 : f==='unc'? o===1 : f==='common'? o<=0 : f==='stock'? s[k]>0 : true; }).sort((a,b)=>xtKvPrice(b)-xtKvPrice(a));
-  const per=20, pages=Math.max(1,Math.ceil(keys.length/per)), pg=Math.min(UI.xkvp,pages-1);
+  const KB=kvBrowse(keys,xtD,s,'xkvq','xkvs','xkvp','xkvpage'); const per=20, pages=Math.max(1,Math.ceil(KB.keys.length/per)), pg=Math.min(UI.xkvp,pages-1);
   const row=k=>{ const d=xtD(k), q=s[k]||0, p=xtKvPrice(k); return `<div class="row" style="cursor:default"><button class="mini" style="background:none;border:0;padding:0;width:40px" data-act="xtdesign" data-a="${esc(k)}">${xMiniTKey(k)}</button><div class="rt"><b>${esc(d.title)}</b><span>${xtRV(d)} · ${xtKvCondText(k)}</span><span class="${q?'muted':'down'}">${q? q+' in stock' : 'out of stock'}</span></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><b>${money(p,true)}</b><button class="btn sm" data-act="xkvbuy" data-a="${esc(k)}" ${!q||G.player.cash<p?'disabled':''}>Buy</button></div></div>`; };
   return `<div class="cols"><div class="stack"><div class="panel"><h3>Saltmarket</h3><p class="small muted" style="margin:0 0 8px">${xtV2()? 'An online singles shop. Recent sets are always stocked near mint; older cards are only what its dealers have bought from collectors, in the condition they came, at about '+Math.round((XKV_MARKUP-1)*100)+'% over market. When a card is gone it is gone until someone sells another (next dealer buying day: '+fmtDate(cardNextDow(1),true)+').' : 'An online singles shop with every printed card, always near mint, at about '+Math.round((XKV_MARKUP-1)*100)+'% over market (shipping included). Stock is refreshed every Monday (next: '+fmtDate(cardNextDow(1),true)+'); the biggest chase cards are often out.'}</p>
     <div class="chips">${chip('hits','Legendary and alt art')}${chip('rare','Rares')}${chip('unc','Uncommons')}${chip('common','Commons')}${chip('stock','In stock')}${chip('all','Everything')}</div>
-    <div class="rows">${keys.slice(pg*per,pg*per+per).map(row).join('')||'<div class="empty">Nothing here.</div>'}</div>${pages>1?`<div class="chips">${Array.from({length:pages},(_,i)=>`<button class="chip ${i===pg?'on':''}" data-act="xkvpage" data-a="${i}">${i+1}</button>`).join('')}</div>`:''}</div></div>
+    ${KB.tools}<div class="rows">${KB.keys.slice(pg*per,pg*per+per).map(row).join('')||KB.empty}</div>${KB.pager(pg,pages)}</div></div>
     <div class="stack">${xtSealedPanel()}</div></div>`; }
 ACT.xlgsall=()=>{ UI.xlgsAll=1; render(true); };
-ACT.xkvf=a=>{ UI.xkvf=a; UI.xkvp=0; render(true); }; ACT.xkvpage=a=>{ UI.xkvp=+a; render(true); };
-const xtStoreDone=(e,ok)=>{ if (e){ showToast(e); return; } showToast(ok, true); render(true); queueSave(); };
+ACT.xkvf=a=>{ UI.xkvf=a; UI.xkvp=0; render(true); }; ACT.xkvpage=a=>{ UI.xkvp=+a; render(true); }; ACT.xkvs=a=>{ UI.xkvs=!!(+a); UI.xkvp=0; render(true); }; ACT.xkvq=kvSearchAct('xkvq','xkvp');
+const xtStoreDone=(e,ok)=>{ if (e){ showToast(e); return; } UI.cg='xt'; showToast(ok, true); render(true); queueSave(); };
 ACT.xlgsbuy=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; const [f,q]=a.split('|'); xtStoreDone(xtLgsBuySealed(f,+q), 'Bought. It is in Your sealed product.'); };
 ACT.xlgssingle=a=>xtStoreDone(xtLgsBuySingle(+a), 'Bought. It is in Your cards, marked New.');
 ACT.xlgssell=(a,el)=>{ if (el && el.dataset && el.dataset.confirm && !armed(el)) return; xtStoreDone(xtLgsSellTo(+a), 'Sold to The Lantern Room.'); };

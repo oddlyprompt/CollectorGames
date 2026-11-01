@@ -88,3 +88,15 @@
 
 /* pack opening: packs centred and larger */
 .tcg-grid{ grid-template-columns:repeat(auto-fit,minmax(78px,112px)); justify-content:center; gap:14px 12px; }
+
+/* Home: compact tiles, first steps, focus */
+.games{ gap:8px; margin:0 0 10px; } .gtile{ aspect-ratio:5/3; border-radius:12px; } .gtile b{ font-size:15px; } .gtile small{ font-size:10.5px; line-height:1.15; }
+.kpis{ grid-template-columns:repeat(4,1fr); gap:7px; } .kpi{ padding:7px 9px; } .kpi small{ font-size:9.5px; letter-spacing:.06em; } .kpi b{ font-size:18px; }
+.intro{ border-color:rgba(var(--gtint),.5); } .intro .steps{ display:flex; gap:4px; margin-top:4px; } .intro .steps i{ flex:1; height:4px; border-radius:2px; background:var(--line); } .intro .steps i.done{ background:var(--up); } .intro .steps i.cur{ background:var(--accent); box-shadow:0 0 8px rgba(var(--gtint),.6); }
+.panel .bar{ height:6px; border-radius:3px; background:var(--line); overflow:hidden; } .panel .bar i{ display:block; height:100%; border-radius:3px; }
+.hp{ margin-bottom:10px; } .gtile{ aspect-ratio:1/1; } .gtile small{ font-size:10px; }
+.hp .row .rt span{ white-space:normal; }
+
+/* decision-critical secondary text (condition, set, printing, stock): larger and brighter than the generic muted style */
+:root:not([data-theme="light"]){ --muted:#a3b2c3; }
+.row .rt span{ font-size:13.5px; color:#aebccb; } .row .rt span.muted{ color:#9fb0c2; } .small.muted,.muted.small{ font-size:13.5px; } .kv dt{ color:#a9b8c8; } .kv dd{ font-size:14.5px; }

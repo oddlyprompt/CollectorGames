@@ -13,6 +13,14 @@ run tidemark_ui_test python3 tools/tidemark_ui_test.py
 run brokenreach_collect python3 tools/brokenreachcollecttest.py
 run brokenreach_rules node tools/brokenreach/test.js
 run brokenreach_play python3 tools/brokenreach_uitest.py
+run purchase_routes python3 tools/purchase_routes_test.py
+run opening python3 tools/opening_test.py
+run market_safety python3 tools/market_safety_test.py
+run home python3 tools/home_test.py
+run browse python3 tools/browse_test.py
+run br_layout python3 tools/br_layout_test.py
+run phone_layout python3 tools/phone_layout_test.py
+run soak python3 tools/soak_test.py
 run test_art_pipeline python3 tools/test_art_pipeline.py
 run test_br_art_pipeline python3 tools/test_br_art_pipeline.py
 [ "$1" = "--golden" ] || [ "$2" = "--golden" ] && run golden python3 tools/golden/golden.py check
