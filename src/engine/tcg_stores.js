@@ -31,7 +31,8 @@ const ri2=(r,a,b)=>a+Math.floor(r()*(b-a+1));
 // ---------- buying and selling (src/tcg/kit/stores.js) ----------
 const WK_STORE=cardStores({ lgsName:'The Tidepool', kvName:'Kinvault', world:()=>G.tcg, copies:()=>G.tc, newestSet:tcNewestSet, key:tcKey, lgs:tcLgs, kv:tcKv, kvStock:tcKvStock,
   listPrice:LGS_PRICE, markup:LGS_MARKUP, buy:LGS_BUY, kvMarkup:KV_MARKUP, kvMin:KV_MIN, D:tcD, fairRaw:tcFairRaw, makeCopy:(...a)=>tcMakeCopy(...a), copyValue:cp=>tcCopyValue(cp), econ:WK_ECON });
-const tcLgsPrice=WK_STORE.lgsPrice, tcLgsBuySingle=WK_STORE.lgsBuySingle, tcLgsBuySealed=WK_STORE.lgsBuySealed, tcLgsOffer=WK_STORE.lgsOffer, tcLgsSellTo=WK_STORE.lgsSellTo, tcKvPrice=WK_STORE.kvPrice, tcKvBuy=WK_STORE.kvBuy;
+let tcLgsBuySealed=WK_STORE.lgsBuySealed; // replaced by shared physical retailers in the TCG build
+const tcLgsPrice=WK_STORE.lgsPrice, tcLgsBuySingle=WK_STORE.lgsBuySingle, tcLgsOffer=WK_STORE.lgsOffer, tcLgsSellTo=WK_STORE.lgsSellTo, tcKvPrice=WK_STORE.kvPrice, tcKvBuy=WK_STORE.kvBuy;
 // ---------- daily and weekly ticks ----------
 (function(){ const d=tcDay; tcDay=function(t){ d(t); const T=G.tcg; if (!T || !tcReleasedSets(t).length) return; try { if (dowOf(t)===4 || !T.lgs) tcLgsWeek(t); else tcLgsDay(t); } catch(e){ console.error(e); } }; })();
 // ---------- views ----------

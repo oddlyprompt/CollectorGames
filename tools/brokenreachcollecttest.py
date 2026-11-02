@@ -67,8 +67,8 @@ async def main():
         await pg.evaluate("(()=>{ for (let i=0;i<30;i++) advanceDay(); })()")
         g=await pg.evaluate(f"(()=>{{ const c=BRC({s['gid']}); return {{g:c.g, rv:(G.player.rv||[]).filter(x=>x.k==='b').length, pop:Object.keys(G.bpop).length, sub:(G.player.bsubs||[]).length}}; }})()")
         check(g['g']>=1 and g['rv']>=1 and g['pop']>=1 and g['sub']==0, 'grading comes back with a grade, a reveal and a population entry', g)
-        sh=await pg.evaluate("""(()=>{ const L=brLgs(); const k=brAllKeys(1)[10]; const s=brKvStock(G.day); const kk=Object.keys(s)[0]; const c0=G.player.cash; const e=brKvBuy(kk); const e2=L.cs.length? brLgsBuySingle(L.cs[0].id) : 'none'; const sells=myBr().filter(c=>c.g===0&&!c.l&&!brD(c.k).sealed&&brLgsOffer(c)>=0.5).length; return {e,e2,cs:L.cs.length,kvN:Object.keys(s).length,sells,spent:c0-G.player.cash}; })()""")
-        check(sh['e'] is None and sh['e2'] is None and sh['cs']>=20 and sh['kvN']>150 and sh['spent']>0, 'the online singles shop and the local store sell singles', sh)
+        sh=await pg.evaluate("""(()=>{ const shops=Object.values(RETAIL.ensure().locations); const L=shops.find(s=>s.singles.some(r=>r.g==='br')); const ref=L&&L.singles.find(r=>r.g==='br'); const s=brKvStock(G.day); const kk=Object.keys(s).find(k=>s[k]>0); const c0=G.player.cash; const e=brKvBuy(kk); const e2=ref?RETAIL.singleBuy(L.id,'br',ref.id):'none'; return {e,e2,cs:shops.reduce((n,s)=>n+s.singles.filter(r=>r.g==='br').length,0),kvN:Object.keys(s).length,spent:c0-G.player.cash}; })()""")
+        check(sh['e'] is None and sh['e2'] is None and sh['cs']>0 and sh['kvN']>150 and sh['spent']>0, 'the online catalogue and shared local shops sell Broken Reach singles', sh)
         # ---------------- the market runs ----------------
         await pg.evaluate("(()=>{ for (let i=0;i<60;i++) advanceDay(); })()")
         m=await pg.evaluate("""(()=>{ const ls=G.lst.filter(l=>l.it==='b'); const sold=Object.keys(G.sales).filter(k=>k[0]==='B').length; return {n:ls.length, sold, copies:Object.keys(G.brc).length, ids:(G._npcBrIds||[]).length}; })()""")

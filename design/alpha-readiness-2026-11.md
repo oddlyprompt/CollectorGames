@@ -59,10 +59,10 @@ Limits used (as quoted in the audit, **not re-checked against itch's documentati
 Progressive loading is already true: the launcher and Home request 3 art files (0.2 MB); the Market and Collection about 13 (0.6 MB). The service worker pre-caches only five files.
 Least disruptive fix if the file limit applies: pack the 1,254 Tidemark paintings (the only group big enough to matter) into per-set image sheets of about 20 paintings with a small index, and draw each card from its sheet region. 1,254 files become about 65 and the total about 620. That touches `tmLoad`/`render.js` and the art build, so it is **not done here** (the brief says not to rewrite asset loading for an assumed limit). Decision needed from the owner: does the target host enforce the file limit (an itch upload would show it immediately).
 
-## 4. Recorded as unresolved (not completed, replaced or removed from launch scope)
-- **Rift Parade**: not implemented; its data and rules have not been supplied to this repository (see `design/tcg-population-economy.md` phase 5).
-- **The Hunt for cards**: not implemented (Wildkin has no Hunt, follows or chases).
-These were on the earlier alpha checklist and remain open.
+## 4. Alpha scope clarified by the owner (2026-11-02)
+- **Three products are present:** Wildkin, Tidemark and Broken Reach. Broken Reach replaces Rift Parade for alpha; Rift Parade is not an alpha blocker.
+- **Stores first:** shared physical locations, differentiated inventory and demand-sensitive stocking are the current release priority. See `design/shared-retail-world.md`.
+- **The Hunt for cards:** the procedural hunt, community progression and card shows need their own assessment. They are deferred from this store pass, not claimed complete.
 
 ## 5. Known remaining defects and unverified areas
 - No physical-device or Safari testing; no itch iframe testing; the condensed font does not load in the sandbox browser, so tab labels were seen only in a fallback font.

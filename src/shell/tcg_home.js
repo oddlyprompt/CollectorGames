@@ -30,7 +30,7 @@
   // ---------- first steps ----------
   const startDay=()=>G.player.start||0;
   function introSteps(){ const u=U(), sh=shelfNow(), own=ownsAnything();
-    return [ {k:'time', done:G.day>startDay()+0 || u.seen.time, t:'Time moves when you say so', d:'Press Next day to advance one day, or Skip to jump to the next thing that matters. Your allowance of $50 arrives every Friday, so money comes in as days pass.', b:null},
+    return [ {k:'time', done:G.day>startDay()+0 || u.seen.time, t:'Time moves when you say so', d:'Press Next day to advance one day, or Skip to jump to the next thing that matters. '+(G.player.pay>0?'Your allowance of '+money(G.player.pay,true)+' arrives every Friday.':'This start has no weekly allowance; selling cards funds your next purchase.'), b:null},
              {k:'get', done:own, t:'Get something to hold', d: sh? 'The '+sh.f.name+' shelf has stock today. A pack is the classic start; singles in the Market are the careful one.' : (()=>{ const u2=upcoming(); return 'No new pack is on a shelf yet'+(u2? ': '+u2.d.name+' ('+u2.f.name+') arrives '+fmtDate(u2.d.rel,true)+'. You can preview it and preorder as soon as it is announced.' : '.')+' The Market already has cards and sealed product for sale, so you can buy something today.'; })(), b: sh? [['tab:'+sh.f.tab,'Shop '+sh.f.name],['tab:market','Browse the Market']] : [['tab:market','Browse the Market']] },
              {k:'look', done:u.seen.look, t:'Look at what you got', d:'Open Collection and tap a card or pack. The card page shows its price history, where to buy more, and a 3D inspector.', b:[['tab:coll','Open Collection']] },
              {k:'goal', done:!!u.goal, t:'Choose what you are collecting', d:'Pick one; you can change it any time.', b:null, goal:true},

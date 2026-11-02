@@ -2,6 +2,17 @@
 
 Player-facing changes first, development notes in the linked documents. Dates are real dates.
 
+## 2026-11-02: shared physical stores (not published)
+
+- Five local card shops and seven big-box locations now serve all three games. Their stock, cash, singles, prices, ordering days and last-visit records persist separately.
+- Big-box ordering follows launch interest and recent sales, then pulls back and discounts slow stock. Local shops order cautiously and retain older products.
+- Local cases range from sealed-only through budget bins to a premium graded specialist. Singles move between real owners; buying and selling preserve the copy, condition, grade and certificate. Shop cash and case capacity constrain purchases.
+- Added a searchable Stores directory and inventories, franchise filters and actual-location card-page purchase routes. Online catalogues and franchise pack-opening panels remain available.
+- Fixed phone navigation wrapping after adding Stores, Collection pagers overflowing narrow screens, and onboarding's incorrect fixed $50 allowance.
+- Clarified alpha scope: Broken Reach replaces Rift Parade. The Hunt/community/card-show redesign is a separate pass.
+
+Design, limits and test commands: `design/shared-retail-world.md`.
+
 ## 2026-11-01: alpha-readiness pass (branch `claude/eloquent-carson-27ik8y`, not published)
 
 Full account, measurements and open items: `design/alpha-readiness-2026-11.md`.
