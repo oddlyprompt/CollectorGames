@@ -32,7 +32,8 @@ const bRi2=(r,a,b)=>a+Math.floor(r()*(b-a+1));
 // ---------- buying and selling (src/tcg/kit/stores.js) ----------
 const BR_STORE=cardStores({ lgsName:'The Cargo Cage', kvName:'Waypoint Singles', world:()=>G.brg, copies:()=>G.brc, newestSet:brNewestSet, key:brKey, lgs:brLgs, kv:brKv, kvStock:brKvStock,
   listPrice:BLGS_PRICE, markup:BLGS_MARKUP, buy:BLGS_BUY, kvMarkup:BKV_MARKUP, kvMin:BKV_MIN, D:brD, fairRaw:brFairRaw, makeCopy:(...a)=>brMakeCopy(...a), copyValue:cp=>brCopyValue(cp), econ:BR_ECON });
-const brLgsPrice=BR_STORE.lgsPrice, brLgsBuySingle=BR_STORE.lgsBuySingle, brLgsBuySealed=BR_STORE.lgsBuySealed, brLgsOffer=BR_STORE.lgsOffer, brLgsSellTo=BR_STORE.lgsSellTo, brKvPrice=BR_STORE.kvPrice, brKvBuy=BR_STORE.kvBuy;
+let brLgsBuySealed=BR_STORE.lgsBuySealed; // replaced by shared physical retailers in the TCG build
+const brLgsPrice=BR_STORE.lgsPrice, brLgsBuySingle=BR_STORE.lgsBuySingle, brLgsOffer=BR_STORE.lgsOffer, brLgsSellTo=BR_STORE.lgsSellTo, brKvPrice=BR_STORE.kvPrice, brKvBuy=BR_STORE.kvBuy;
 // ---------- daily and weekly ticks ----------
 (function(){ const d=brDay; brDay=function(t){ d(t); const T=G.brg; if (!T || !brReleasedSets(t).length) return; try { if (dowOf(t)===4 || !T.lgs || t===brSetDef(1).rel) brLgsWeek(t); else brLgsDay(t); } catch(e){ console.error(e); } }; })();
 // ---------- views ----------

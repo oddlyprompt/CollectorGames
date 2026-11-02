@@ -19,11 +19,12 @@ async def main():
         check('nothing here yet' in t and 'browse the market' in t, 'an empty collection offers the Market and the shops', t[:240])
         await pg.evaluate("(()=>{ while (G.day<brSetDef(1).rel+10) advanceDay(); G.player.cash=5000; })()")
         for n,tab,store,_,pageAct,buyAct,sf,qf in SH:
-            await pg.evaluate(f"UI.tab='{tab}'; UI.{store}='kv'; UI.{sf}=undefined; UI.{qf}=''; render(true)"); await pg.wait_for_timeout(250)
+            game={'Wildkin':'wk','Tidemark':'xt','Broken Reach':'br'}[n]
+            await pg.evaluate(f"ACT.ronline('{game}'); UI.{sf}=undefined; UI.{qf}=''; render(true)"); await pg.wait_for_timeout(250)
             rows=await pg.evaluate("Array.from(document.querySelectorAll('#view .row')).filter(r=>r.querySelector('[data-act$=\"kvbuy\"]')).map(r=>({txt:r.innerText.toLowerCase(), dis:r.querySelector('[data-act$=\"kvbuy\"]').disabled}))")
             check(len(rows)>0 and all('out of stock' not in r['txt'] for r in rows), f'{n}: the singles shop shows in-stock cards first and by default', rows[:2])
             nb=await pg.evaluate(f"document.querySelectorAll('[data-act=\"{pageAct}\"]').length"); check(nb<=4, f'{n}: the pager has at most four controls, not a numbered strip', nb)
-            check('page 1 of' in (await pg.evaluate("document.getElementById('view').innerText")).lower(), f'{n}: the pager says where you are')
+            check(nb==0 or 'page 1 of' in (await pg.evaluate("document.getElementById('view').innerText")).lower(), f'{n}: a multi-page catalogue says where you are')
             # search narrows, a missing name offers the out-of-stock view
             first=await pg.evaluate("(()=>{ const r=Array.from(document.querySelectorAll('#view .row')).find(r=>r.querySelector('[data-act$=\"kvbuy\"]')); return r? r.querySelector('b').textContent : ''; })()")
             word=max(first.replace(',',' ').split(' '), key=len).lower()

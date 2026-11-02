@@ -63,14 +63,14 @@ async def main():
                     check(got and b0>b1, f'{n}: card-page Buy buys that exact print', (got,b0,b1))
                 await pg.evaluate("closeSheet(true)")
             # 4. the local game store's single case
-            row=await pg.evaluate(f"(()=>{{ const L={c['lgs']}; const x=L.cs.find(x=>true); return x? {{id:x.id,k:x.k,p:{c['lgsprice']}(x)}} : null; }})()")
+            row=await pg.evaluate(f"(()=>{{ for(const L of Object.values(RETAIL.ensure().locations)){{ const ref=L.singles.find(r=>r.g==='{f}'); if(!ref)continue; const x={c['copies']}[ref.id];return {{id:x.id,k:x.k,p:RETAIL.singlePrice(L.id,'{f}',x),a:L.id+'~{f}~'+x.id,store:L.id}}; }} return null; }})()")
             if row:
-                wl=await pg.evaluate(f"{c['where']}('{row['k']}')"); lg=[w for w in wl if w['a']==row['id'] and w['act']==c['lgsact']]
-                check(bool(lg) and c['lgsact'] in known, f'{n}: the local-store shortcut routes to {c["lgsact"]}', wl)
-                c0=await pg.evaluate("G.player.cash"); await pg.evaluate(f"ACT.{c['lgsact']}({row['id']})"); await pg.wait_for_timeout(200)
+                wl=await pg.evaluate(f"{c['where']}('{row['k']}')"); lg=[w for w in wl if w['a']==row['a'] and w['act']=='rsingle']
+                check(bool(lg) and 'rsingle' in known, f'{n}: the local-store shortcut identifies the stocked location and copy', wl)
+                c0=await pg.evaluate("G.player.cash"); await pg.evaluate(f"ACT.rsingle('{row['a']}')"); await pg.wait_for_timeout(200)
                 c1=await pg.evaluate("G.player.cash"); owned=await pg.evaluate(f"{c['mine']}.some(x=>x.k==='{row['k']}')")
                 check(abs((c0-c1)-row['p'])<0.006 and owned, f'{n}: local-store single costs its price and is owned', (c0,c1,row,owned))
-                gone=await pg.evaluate(f"!{c['lgs']}.cs.some(x=>x.id==={row['id']})"); check(gone, f'{n}: the bought single leaves the case')
+                gone=await pg.evaluate(f"!G.retail.locations['{row['store']}'].singles.some(x=>x.g==='{f}'&&x.id==={row['id']})"); check(gone, f'{n}: the bought single leaves the case')
             else:
                 print(f'NOTE {n}: the local store has no singles in its case today (route checked by name only)')
         # 5. unavailable items are reported accurately

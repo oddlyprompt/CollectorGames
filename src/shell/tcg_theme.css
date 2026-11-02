@@ -100,3 +100,24 @@
 /* decision-critical secondary text (condition, set, printing, stock): larger and brighter than the generic muted style */
 :root:not([data-theme="light"]){ --muted:#a3b2c3; }
 .row .rt span{ font-size:13.5px; color:#aebccb; } .row .rt span.muted{ color:#9fb0c2; } .small.muted,.muted.small{ font-size:13.5px; } .kv dt{ color:#a9b8c8; } .kv dd{ font-size:14.5px; }
+
+/* Physical shops: identity first, then a compact, readable inventory. */
+.nav-in{grid-template-columns:repeat(7,minmax(0,1fr))}
+.pager{flex-wrap:wrap;row-gap:6px}
+@media(max-width:420px){.nav button{font-size:8.5px}}
+.retail-intro,.retail-store-head{padding:24px;margin:14px 0 20px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(125deg,#202d37,#131b24)}
+.retail-intro{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.retail-intro h2,.retail-store-head h2{font-size:30px;margin:8px 0}
+.retail-eyebrow,.retail-card-top{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--store-ink,#b6c7d2)}
+.retail-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.retail-card{display:flex;flex-direction:column;padding:20px;border:1px solid var(--line);border-top:3px solid var(--store-ink);border-radius:12px;background:var(--panel,#161e28)}
+.retail-card-top{display:flex;justify-content:space-between;gap:12px;font-size:10px}
+.retail-card h3{font-size:24px;margin:14px 0 5px}.retail-tag{color:var(--store-ink);font-size:13px}
+.retail-card p,.retail-store-head p,.retail-intro p{line-height:1.6;color:var(--muted)}
+.retail-card-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:12px}.retail-card-foot small{max-width:65%;color:var(--muted);line-height:1.5}
+.retail-store-head{border-left:4px solid var(--store-ink)}.retail-store-head>.btn{margin-bottom:18px}.retail-store-facts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.retail-store-facts span{padding:7px 10px;border:1px solid var(--line);border-radius:7px;font-size:12px}
+.retail-inventory input[type=search]{width:100%;margin:12px 0}.retail-result-count{margin-bottom:12px}.retail-product{gap:14px}.retail-product .rt{min-width:0}.retail-product .rt b{white-space:normal}.retail-product .mini{flex-shrink:0}.retail-product button.mini{padding:0;border:0;background:none}.retail-product button.mini>.mini{margin:0}.retail-actions{display:flex;flex-direction:column;gap:8px}.retail-online{margin-top:24px}
+.retail-inventory input[type=search]{min-height:44px;padding:10px 12px}
+.retail-store-head details{margin-top:16px}.retail-store-head summary{cursor:pointer;font-size:13px;color:var(--muted)}
+@media(max-width:620px){.retail-inventory .btn,.retail-card .btn,.retail-intro .btn,.retail-store-head>.btn{min-height:44px}}
+@media(max-width:620px){.retail-directory{grid-template-columns:1fr}.retail-intro{align-items:flex-start;flex-direction:column;padding:18px}.retail-store-head{padding:18px}.retail-product{flex-wrap:wrap;gap:10px}.retail-product .rt{flex:1;min-width:140px}.retail-actions{flex-direction:row;margin-left:auto}.retail-card{padding:18px}.retail-card-top{letter-spacing:.6px}.retail-inventory .chips{flex-wrap:wrap}}

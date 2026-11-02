@@ -18,6 +18,8 @@ run opening python3 tools/opening_test.py
 run market_safety python3 tools/market_safety_test.py
 run home python3 tools/home_test.py
 run browse python3 tools/browse_test.py
+run retail_state node tools/retail_test.cjs
+run retail_ui python3 tools/retail_ui_test.py
 run br_layout python3 tools/br_layout_test.py
 run phone_layout python3 tools/phone_layout_test.py
 run soak python3 tools/soak_test.py
