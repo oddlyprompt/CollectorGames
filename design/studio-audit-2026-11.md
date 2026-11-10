@@ -107,3 +107,21 @@ Found sound by the code reviewer: save and load mid-lead and mid-show; the colle
 - Against: no human has played the new systems; nothing has run on a real phone, in Safari or inside an itch page; day-advance can stall for seconds on some Mondays; the launch-week edge is large; the hunt's long-term depth is unproven (the design reviewer called hour 5 "thin" before the last round of changes, and that was not re-reviewed); the economy scripts (`wildkin_econ.py`, `tidemark_econ.py`, `tidemark_econ2_test.py`) were not re-run, and several numbers in `CLAUDE.md` about pack and box values while in print are now out of date (a stocked pack is worth about list, not $5.20 to $5.90).
 
 ## 8. Verification
+Run on the final build of this branch (headless Chromium at phone size, and Node), 2026-11-10 and 11.
+
+| Suite | Result |
+|---|---|
+| Baseline before any change (alpha branch plus pull request 39) | all pass except `home_test` (3 failures: finding A9) |
+| `check_globals.py` | pass, no duplicate globals (tcg 1,806) |
+| `shelltest` sports, comics, tcg; `playtest sports` | `ERRS []` |
+| `wildkintest`, `duskfalltest`, `tidemarktest`, `tidemark_ui_test` | pass |
+| `brokenreachcollecttest`, `brokenreach/test.js`, `brokenreach_uitest` | pass |
+| `purchase_routes`, `opening`, `market_safety`, `home`, `browse`, `br_layout`, `phone_layout`, `soak` (420 days) | pass |
+| `retail_test.cjs`, `retail_ui_test.py` | pass (two assertions in `retail_test.cjs` changed: one asserted defect A2, one assumed card values never move) |
+| `hunt_test.cjs` (new), `hunt_ui_test.py` (new) | pass |
+| `test_art_pipeline`, `test_br_art_pipeline` | pass |
+| `golden.py` | re-captured with a logged reason (every scenario changes: the stores change the world's random sequence), then `check` passes. **The differences were not inspected one by one.** |
+
+Order of events to be clear about: the full suite ran on the build with the reviewers' fixes; `hunt_ui_test` then failed three checks on wording and the haggle rule that had been changed on purpose, the test was updated and passes; nothing in the game changed after that run.
+
+Not run: `wildkin_econ.py`, `tidemark_econ.py`, `tidemark_econ2_test.py`, `wildkin_sim.js` (card rules untouched); the reviewers' own strategies after the final tightening; an allowance-budget robot after the standing change; any physical phone, Safari, itch page or human session. The robot results are one seed (11) unless stated.

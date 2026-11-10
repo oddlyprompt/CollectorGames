@@ -3638,3 +3638,345 @@ Changed (0+ differences), first ones:
 ## 2026-11-01 open:legacy-wk-year
 Reason: Alpha-readiness pass: Home/first steps/Needs you/focus, shop search and pager, card-page value basis, damped estimates (est now returns fv/med/cl/thin; one collection total moved by 15 cents), copy and Settings cleanup. No cash, ownership or economy state changed
 Changed (0+ differences), first ones:
+
+## 2026-11-10 day0
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (44+ differences), first ones:
+- /core/npcs: "d13cbabb" -> "d5bdb111"
+- /screens/home: "5a27795d" -> "96c911bb"
+- /screens/shop: "7bd0b03f" -> "31a93a40"
+- /screens/wk:kv: "2814b0f1" -> "d0b3c636"
+- /screens/wk:lgs: "d5ebdfe4" -> "d0b3c636"
+- /screens/wk:retail: "199367ba" -> "d0b3c636"
+- /screens/xt: "d5bd6ed5" -> "7b587a23"
+- /screens/xt:kv: "212a2a3d" -> "140d794b"
+- /screens/xt:lgs: "a3cd543e" -> "140d794b"
+- /screens/xt:retail: "a93d8b3b" -> "140d794b"
+- /wk/prices/g10[665]: 4783.677644097398 -> 7.290000000000001
+- /wk/prices/g10[666]: 160157.5275243809 -> 243.00000000000003
+- /wk/prices/g9[665]: 4783.677644097398 -> 7.290000000000001
+- /wk/prices/g9[666]: 160157.5275243809 -> 243.00000000000003
+- /wk/prices/hash: "80aa7f57" -> "97571235"
+
+## 2026-11-10 release
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /core/dp: "ee83a03d" -> "a21ad6bf"
+- /core/feed: "3e23ee89" -> "60100e03"
+- /core/lst: 1212 -> 1161
+- /core/news/h: "3a95616f" -> "57dad068"
+- /core/newsHead[1]: "NEW DECK: COMETRAIL / ASTRYNX (TOOLS)" -> "NEW DECK: BRAMBLEBUCK / CACTUFT"
+- /core/newsHead[2]: "COMETRAIL / AUROROTL WINS THE WILDKIN CHAMPIONSHIP" -> "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[4]: "NEW DECK: NIMBUSAIL / THUNDROP" -> "NEW TECH: ASTRYNX / KOIRUNE (TOOLS)"
+- /core/nextLid: 2068 -> 2183
+- /core/nextTid: 2283 -> 2200
+- /core/nextXid: 13023 -> 12316
+- /core/npcs: "1129a28b" -> "31c0af26"
+- /core/rs: -1618629058 -> 2043329210
+- /core/sales: "6e7ce52b" -> "68ef78f1"
+- /core/salesN: 535 -> 659
+- /screens/home: "35445dbe" -> "7ac8de69"
+
+## 2026-11-10 year1
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /core/dp: "86d94185" -> "7d327f8b"
+- /core/feed: "9306ae0f" -> "57cbb7ba"
+- /core/lst: 1411 -> 1369
+- /core/news/h: "846ece2b" -> "199dbb88"
+- /core/news/n: 57 -> 52
+- /core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "NEW DECK: HARBOR LEAGUES / ABYSSAL CHOIR MIDRANGE (RAMP)"
+- /core/newsHead[1]: "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/newsHead[2]: "CROWN BASTION WINS THE REGIONAL" -> "VEILMORA WINS THE REGIONAL"
+- /core/newsHead[3]: "VEILMORA / VELUNOX WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /core/newsHead[4]: "NEW DECK: HARBOR LEAGUES / ABYSSAL CHOIR MIDRANGE (RAMP)" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /core/newsHead[5]: "CROWN BASTION WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /core/nextLid: 18493 -> 20350
+- /core/nextTid: 4224 -> 4073
+- /core/nextXid: 13023 -> 12316
+- /core/npcs: "f2f88709" -> "d7142616"
+
+## 2026-11-10 series
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /core/dp: "59912855" -> "6236a2da"
+- /core/feed: "53fbf045" -> "25272bcb"
+- /core/lst: 1435 -> 1397
+- /core/news/h: "e77eeb9e" -> "5244157c"
+- /core/news/n: 167 -> 162
+- /core/newsHead[0]: "TIDEBORN TEMPO WINS THE TIDEMARK CHAMPIONSHIP" -> "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[1]: "ASTRYNX / KOIRUNE (GUST) WINS THE WILDKIN CHAMPIONSHIP" -> "MONOLOX / CRAGGLE (TURBO) WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[2]: "NEW TECH: BRONZAROO / AEGISOPOD (TOOLS)" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+- /core/newsHead[3]: "CROWN BASTION WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /core/newsHead[4]: "FORTISAUR / TUMBEAR WINS THE REGIONAL" -> "VEILMORA WINS THE REGIONAL"
+- /core/newsHead[5]: "NEW TECH: LANTERNOX / FABLEHORN (TOOLS)" -> "NEW TECH: ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO)"
+- /core/nextLid: 55492 -> 61189
+- /core/nextTid: 4224 -> 4073
+- /core/nextXid: 13023 -> 12316
+- /core/npcs: "8b1b0d9d" -> "c2482228"
+
+## 2026-11-10 flows
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /core/bought: 344.51 -> 347.71000000000004
+- /core/cash: 5640.510000000002 -> 5635.030000000001
+- /core/dp: "72346643" -> "9b7279c0"
+- /core/feed: "fcb86785" -> "24d6b468"
+- /core/fees: 70.14000000000001 -> 70.11000000000001
+- /core/lst: 1371 -> 1332
+- /core/netWorth: 723.46 -> 1007.6
+- /core/news/h: "bad24239" -> "0f95f044"
+- /core/news/n: 42 -> 43
+- /core/newsHead[0]: "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+- /core/newsHead[1]: "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL" -> "NEW DECK: DRILLBADGER / AEGISOPOD"
+- /core/newsHead[2]: "ASTRYNX / AUROROTL WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /core/newsHead[3]: "NEW TECH: SPIRAMEL / FABLEHORN (HEAL)" -> "VEILMORA / MOTHMUR WINS THE REGIONAL"
+- /core/newsHead[4]: "CROWN BASTION WINS THE REGIONAL" -> "NEW DECK: SHELLOOP / FLAPOD (HEAL)"
+- /core/newsHead[5]: "VEILMORA / MOTHMUR WINS THE REGIONAL" -> "NEW BUILD-AROUND: LEAGUE CHARTER CONTROL II"
+
+## 2026-11-10 shared
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 32.58 -> 58.82
+- /afterCrack/subs: "35504a87" -> "a28d5555"
+- /coll/listed[0]: 0 -> 0.1
+- /coll/listed[1]: 0 -> 0.3
+- /coll/total[0]: 34.85000000000001 -> 65.39999999999996
+- /coll/total[1]: 84.15000000000003 -> 162.94999999999993
+- /core/cash: 4892.919999999999 -> 4892.53
+- /core/dp: "e30475df" -> "206180b9"
+- /core/feed: "aec55d2e" -> "fc9d4db8"
+- /core/fees: 420.09999999999997 -> 420.05
+- /core/lst: 1042 -> 1044
+- /core/netWorth: 32.58 -> 58.82
+- /core/news/h: "5d02cf6a" -> "e36a827e"
+- /core/news/n: 27 -> 26
+- /core/newsHead[0]: "A SHIP OF OUR OWN: THE BROKEN REACH ARRIVES" -> "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)"
+
+## 2026-11-10 save:ban
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after30/core/dp: "e113c171" -> "fea5af88"
+- /after30/core/feed: "83891781" -> "eaf86544"
+- /after30/core/lst: 1151 -> 1146
+- /after30/core/news/h: "8dcf4dde" -> "93d7718d"
+- /after30/core/newsHead[0]: "LEAGUE GALLEASS IS NOW BANNED" -> "NEW DECK: THORNWILD / CROWNLANDS CONTROL (FLEET)"
+- /after30/core/newsHead[1]: "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)" -> "LEAGUE GALLEASS IS NOW BANNED"
+- /after30/core/newsHead[2]: "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "GLACURRENT / AUROROTL WINS THE REGIONAL" -> "VEILMORA / VELUNOX WINS THE REGIONAL"
+- /after30/core/nextLid: 6181 -> 6295
+- /after30/core/npcs: "cab7be0d" -> "1b6124bb"
+- /after30/core/rs: -644881824 -> 565099362
+- /after30/core/sales: "20044799" -> "452fe113"
+- /after30/core/salesN: 580 -> 597
+- /after30/wk/listings/h: "0b39ce76" -> "cef1a28a"
+- /after30/wk/listings/n: 208 -> 211
+
+## 2026-11-10 save:busy
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after30/core/dp: "0c0a0813" -> "58e813c9"
+- /after30/core/feed: "31a04a35" -> "3ce31716"
+- /after30/core/lst: 1131 -> 1097
+- /after30/core/netWorth: 263.88 -> 220.54
+- /after30/core/news/h: "ca9eabb2" -> "1ab6a4d8"
+- /after30/core/newsHead[0]: "CROWN BASTION WINS THE REGIONAL" -> "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)"
+- /after30/core/newsHead[1]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "NEW DECK: MOTHMUR / POMPYRE" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after30/core/newsHead[4]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "NEW DECK: DRILLBADGER / FERRADON"
+- /after30/core/nextLid: 2835 -> 2952
+- /after30/core/npcs: "2761f3d7" -> "ab7af7f7"
+- /after30/core/nw: "cd4a23f4" -> "0e105eea"
+- /after30/core/rs: -1752290019 -> -1753860779
+- /after30/core/sales: "128ef692" -> "707dc1e0"
+
+## 2026-11-10 save:day1
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after30/core/dp: "2022ed96" -> "e4713ecf"
+- /after30/core/feed: "dad8ac66" -> "6c0b7563"
+- /after30/core/lst: 1123 -> 1120
+- /after30/core/news/h: "a23851ae" -> "13582e2a"
+- /after30/core/newsHead[0]: "NEW TECH: SPIRAMEL / FABLEHORN (TURBO)" -> "NEW DECK: COALOO / SMOLDERLYNX"
+- /after30/core/newsHead[2]: "NEW DECK: FORTISAUR / TUMBEAR" -> "NEW DECK: AUROROTL / FLAPOD"
+- /after30/core/newsHead[3]: "NEW DECK: SMOLDERLYNX / PYRENOX" -> "NEW DECK: DRILLBADGER / CLAMPUP (DISRUPTION)"
+- /after30/core/newsHead[4]: "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP" -> "CACTUFT / CANOPANG WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 2423 -> 2440
+- /after30/core/nextXid: 5096 -> 5425
+- /after30/core/npcs: "99027c3b" -> "8b8f6279"
+- /after30/core/rs: -1704466655 -> 462216395
+- /after30/core/sales: "ae164e2b" -> "d603f933"
+- /after30/core/salesN: 328 -> 335
+- /after30/wk/listings/h: "0f61fe4c" -> "243d017a"
+
+## 2026-11-10 save:legacy-wk-busy
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (27+ differences), first ones:
+- /after30/core/dp: "15fb9d23" -> "d6a63a11"
+- /after30/core/feed: "e41f25cd" -> "75719f90"
+- /after30/core/lst: 1212 -> 1180
+- /after30/core/netWorth: 38.68 -> 38.2
+- /after30/core/news/h: "0cdcfc73" -> "dd0d545e"
+- /after30/core/news/n: 16 -> 19
+- /after30/core/newsHead[0]: "NEW DECK: COALOO / SMOLDERLYNX" -> "NEW DECK: FABLEHORN / ODDOODLE"
+- /after30/core/newsHead[1]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[2]: "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL" -> "NEW DECK: CORALLUME / AUROROTL"
+- /after30/core/newsHead[3]: "TENTH TIDE IS OUT TODAY" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "ROTATION: THE OLD STANDARD ENDS" -> "CANOPANG / CACTUFT WINS THE REGIONAL"
+- /after30/core/newsHead[5]: "TENTH TIDE: MORE CARDS REVEALED" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/nextLid: 2096 -> 2229
+- /after30/core/nextXid: 12293 -> 12623
+- /after30/core/npcs: "12eb07a3" -> "98518d5f"
+
+## 2026-11-10 save:legacy-wk-day1
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after30/core/dp: "a717efd5" -> "1093a46d"
+- /after30/core/feed: "63b49465" -> "2b266eba"
+- /after30/core/lst: 1173 -> 1129
+- /after30/core/news/h: "93901bf9" -> "575759d2"
+- /after30/core/news/n: 9 -> 13
+- /after30/core/newsHead[0]: "TENTH TIDE IS OUT TODAY" -> "NEW BUILD-AROUND: SQUIRREL SCOUT CONTROL"
+- /after30/core/newsHead[1]: "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP" -> "NEW DECK: VEILMORA / WINKROW"
+- /after30/core/newsHead[2]: "TENTH TIDE: MORE CARDS REVEALED" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[3]: "FIRST BOND IS OUT TODAY" -> "NEW DECK: AUROROTL / COMETRAIL"
+- /after30/core/newsHead[4]: "ROTATION: THE OLD STANDARD ENDS" -> "NEW TECH: VEILMORA / MOTHMUR (TURBO)"
+- /after30/core/newsHead[5]: "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED" -> "CANOPANG / CACTUFT WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 2082 -> 2259
+- /after30/core/nextXid: 12471 -> 12420
+- /after30/core/npcs: "fb02d51a" -> "19945a61"
+- /after30/core/rs: 719962176 -> -1242558176
+
+## 2026-11-10 save:legacy-wk-released
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after30/core/dp: "6fb1722c" -> "3f85f28c"
+- /after30/core/feed: "1ec7d261" -> "a0990225"
+- /after30/core/lst: 1199 -> 1155
+- /after30/core/news/h: "a0fb4518" -> "35bf2b81"
+- /after30/core/news/n: 15 -> 14
+- /after30/core/newsHead[0]: "THORNWILD RUSH WINS THE REGIONAL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /after30/core/newsHead[1]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL" -> "CACTUFT / CANOPANG WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "NEW DECK: ASTRYNX / COMETRAIL" -> "NEW DECK: DRILLBADGER / FERRADON"
+- /after30/core/newsHead[5]: "NEW DECK: DRILLBADGER / FERRADON" -> "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL"
+- /after30/core/nextLid: 2358 -> 2456
+- /after30/core/npcs: "6c07051d" -> "818f638b"
+- /after30/core/rs: -3375773 -> -1158304170
+- /after30/core/sales: "02b0de05" -> "25c791d2"
+- /after30/core/salesN: 464 -> 578
+
+## 2026-11-10 save:legacy-wk-year
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after30/core/dp: "1e433a66" -> "76bc4f3f"
+- /after30/core/feed: "50316ce3" -> "69b6d30e"
+- /after30/core/lst: 1221 -> 1162
+- /after30/core/news/h: "e8d15456" -> "2bbf769e"
+- /after30/core/news/n: 26 -> 27
+- /after30/core/newsHead[0]: "GRANITE COLOSSUS IS NOW BANNED" -> "NEW TECH: ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO)"
+- /after30/core/newsHead[1]: "NEW BUILD-AROUND: TIDE-PRIESTESS SAELA AGGRO" -> "GRANITE COLOSSUS IS NOW BANNED"
+- /after30/core/newsHead[2]: "BAN ANNOUNCED: GRANITE COLOSSUS" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[3]: "CROWN BASTION WINS THE REGIONAL" -> "BAN ANNOUNCED: GRANITE COLOSSUS"
+- /after30/core/newsHead[4]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after30/core/newsHead[5]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "FURNACEBACK / PYRENOX WINS THE REGIONAL"
+- /after30/core/nextLid: 4295 -> 4419
+- /after30/core/npcs: "1c8b94a2" -> "381e2435"
+- /after30/core/rs: -496427969 -> 197778138
+- /after30/core/sales: "a213203b" -> "dd9cabaf"
+
+## 2026-11-10 save:released
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after30/core/dp: "78d4fd09" -> "71d923ee"
+- /after30/core/feed: "a31acd8d" -> "7386f2c7"
+- /after30/core/lst: 1122 -> 1099
+- /after30/core/news/h: "fc03996f" -> "4ecc7984"
+- /after30/core/news/n: 19 -> 21
+- /after30/core/newsHead[0]: "NEW DECK: FABLEHORN / SPIRAMEL" -> "NEW DECK: THORNWILD / IRON REACH CONTROL (FLEET)"
+- /after30/core/newsHead[1]: "CROWN BASTION WINS THE REGIONAL" -> "ABYSSAL DEPTHS WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "BRAMBLEBUCK / CANOPANG WINS THE REGIONAL" -> "KITECOON / TEMPESTRAL WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "NEW TECH: VEILMORA / MOTHMUR (HEAL)"
+- /after30/core/newsHead[4]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "NEW TECH: CACTUFT / BRAMBLEBUCK (HEAL)"
+- /after30/core/newsHead[5]: "CROWN BASTION WINS THE REGIONAL" -> "NEW TECH: SPIRAMEL / FABLEHORN (TURBO)"
+- /after30/core/nextLid: 2932 -> 3045
+- /after30/core/npcs: "9aee5e39" -> "d36c5245"
+- /after30/core/rs: -179561139 -> -1788739509
+- /after30/core/sales: "7a1d30f4" -> "c70af5a0"
+
+## 2026-11-10 open:ban
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after10/core/dp: "7d605560" -> "0e29eab2"
+- /after10/core/feed: "952b4af8" -> "27ce0965"
+- /after10/core/lst: 1308 -> 1316
+- /after10/core/news/h: "5540abc5" -> "7eccd433"
+- /after10/core/newsHead[0]: "CROWN BASTION WINS THE REGIONAL" -> "IRON WILDS WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "VEILMORA / VELUNOX WINS THE REGIONAL" -> "CORRODEON / FERRADON WINS THE REGIONAL"
+- /after10/core/nextLid: 5808 -> 5791
+- /after10/core/nextTid: 4126 -> 4153
+- /after10/core/nextXid: 4695 -> 4723
+- /after10/core/npcs: "1be5e478" -> "3ef3c0a2"
+- /after10/core/rs: 1088053339 -> -461687989
+- /after10/core/sales: "3861871b" -> "0536f92c"
+- /after10/core/salesN: 602 -> 601
+- /after10/wk/listings/h: "53661c15" -> "f4018b5c"
+- /after10/wk/listings/n: 246 -> 240
+
+## 2026-11-10 open:busy
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after10/core/dp: "c28a91d5" -> "971f24ee"
+- /after10/core/feed: "a51f7ccc" -> "96ab9edf"
+- /after10/core/lst: 1023 -> 1031
+- /after10/core/netWorth: 274.22 -> 210.49
+- /after10/core/news/h: "7ce9908d" -> "dcfbe791"
+- /after10/core/news/n: 22 -> 21
+- /after10/core/newsHead[1]: "NEW TECH: ASTRYNX / KOIRUNE (TOOLS)" -> "GOAL: FIRST SALE"
+- /after10/core/newsHead[2]: "GOAL: FIRST SALE" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after10/core/newsHead[3]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after10/core/newsHead[4]: "NEW DECK: CLAMPUP / FERRADON" -> "GOAL: GEM MINT"
+- /after10/core/newsHead[5]: "GOAL: GEM MINT" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after10/core/nextTid: 1840 -> 1859
+- /after10/core/nextXid: 5423 -> 5434
+- /after10/core/npcs: "ec4c3025" -> "5b071c98"
+- /after10/core/nw: "623b58d3" -> "408f77e2"
+
+## 2026-11-10 open:legacy-wk-day1
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after10/core/dp: "66c9d958" -> "daae3f9e"
+- /after10/core/feed: "b214fb1e" -> "821c9d6f"
+- /after10/core/lst: 1028 -> 1010
+- /after10/core/news/h: "1c3aeffa" -> "0c356c1d"
+- /after10/core/newsHead[1]: "NEW TECH: CACTUFT / CANOPANG (TURBO)" -> "NEW DECK: NIMBUSAIL / THUNDROP"
+- /after10/core/nextLid: 1446 -> 1485
+- /after10/core/nextTid: 2536 -> 2444
+- /after10/core/npcs: "1157e7db" -> "0a2a6447"
+- /after10/core/rs: -1587888760 -> 2053428672
+- /after10/core/sales: "a88f35b9" -> "c9fd5da3"
+- /after10/core/salesN: 317 -> 353
+- /after10/wk/listings/h: "fe358578" -> "7b2770f0"
+- /after10/wk/listings/n: 110 -> 114
+- /after10/wk/meta/arch/h: "b5c83dcd" -> "a872d913"
+- /after10/wk/meta/mx: "89ef6d55" -> "f139acfb"
+
+## 2026-11-10 open:legacy-wk-year
+Reason: Shared retail world (pull request 39), stores version 2 and the Hunt: store stock, prices and the world's random sequence change in every scenario
+Changed (25+ differences), first ones:
+- /after10/core/dp: "05fec403" -> "3b6fa4c2"
+- /after10/core/feed: "b89bd945" -> "94bc3ccb"
+- /after10/core/lst: 1375 -> 1371
+- /after10/core/news/h: "7c02af97" -> "9ed52af6"
+- /after10/core/news/n: 24 -> 23
+- /after10/core/newsHead[1]: "SPIRAMEL / FABLEHORN WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after10/core/newsHead[2]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after10/core/newsHead[3]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP"
+- /after10/core/newsHead[4]: "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP" -> "DUSKFALL IS OUT TODAY"
+- /after10/core/newsHead[5]: "DUSKFALL IS OUT TODAY" -> "CACTUFT / CANOPANG (TOOLS) WINS THE REGIONAL"
+- /after10/core/nextLid: 4157 -> 4144
+- /after10/core/nextTid: 4468 -> 4493
+- /after10/core/nextXid: 8404 -> 8431
+- /after10/core/npcs: "adb1ba23" -> "899995e5"
+- /after10/core/rs: 744375721 -> 1387118488
