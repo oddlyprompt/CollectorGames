@@ -9,10 +9,12 @@
   if (!packHas('tcg')) return;
   const U=()=>{ const P=G.player; return P.ui||(P.ui={introDone:false, goal:null, focus:null, pins:[], seen:{}}); };
   // one adapter per franchise, so the Home code below is written once
+  // packs of a set that is still in print, on any shelf in town (old sealed stock in a collector's shop is not "the shelf")
+  const inPrintPacks=(g,n)=>RETAIL.shelf(g).filter(r=>r.n===n&&r.f==='P').reduce((q,r)=>q+r.q,0);
   const FRS={
-    tc:{id:'tc', tab:'shop', name:'Wildkin', c:'134,207,116', img:'art/scene.verdant.01.jpg', has:()=>!!G.tcg, rel:t=>tcReleasedSets(t), next:t=>tcNextSet(t), def:n=>tcSetDef(n), stock:(n)=>tcStock(n,'P'), want:()=>tcWant(), where:k=>tcWhere(k), D:k=>tcD(k), mine:()=>myTc(), own:()=>tcOwnState(), cards:n=>tcSetCards(n), sum:()=>myTcSummary(), design:'tdesign', cg:'wk', prefix:'T'},
-    xt:{id:'xt', tab:'xt', name:'Tidemark', c:'71,192,180', img:'art/TMI-0040.webp', has:()=>!!G.xtg, rel:t=>xtReleasedSets(t), next:t=>xtNextSet(t), def:n=>xtSetDef(n), stock:(n)=>xtStock(n,'P'), want:()=>xtWant(), where:k=>xtWhere(k), D:k=>xtD(k), mine:()=>myXt(), own:()=>xtOwnState(), cards:n=>xtSetCards(n), sum:()=>myXtSummary(), design:'xtdesign', cg:'xt', prefix:'X'},
-    br:{id:'br', tab:'br', name:'Broken Reach', c:'208,143,82', img:'art/br-BR01-001.webp', has:()=>!!G.brg, rel:t=>brReleasedSets(t), next:t=>brNextSet(t), def:n=>brSetDef(n), stock:(n)=>brStock(n,'P'), want:()=>brWant(), where:k=>brWhere(k), D:k=>brD(k), mine:()=>myBr(), own:()=>brOwnState(), cards:n=>brSetCards(n), sum:()=>myBrSummary(), design:'brdesign', cg:'br', prefix:'B'} };
+    tc:{id:'tc', tab:'shop', name:'Wildkin', c:'134,207,116', img:'art/scene.verdant.01.jpg', has:()=>!!G.tcg, rel:t=>tcReleasedSets(t), next:t=>tcNextSet(t), def:n=>tcSetDef(n), stock:(n)=>inPrintPacks('wk',n), want:()=>tcWant(), where:k=>tcWhere(k), D:k=>tcD(k), mine:()=>myTc(), own:()=>tcOwnState(), cards:n=>tcSetCards(n), sum:()=>myTcSummary(), design:'tdesign', cg:'wk', prefix:'T'},
+    xt:{id:'xt', tab:'xt', name:'Tidemark', c:'71,192,180', img:'art/TMI-0040.webp', has:()=>!!G.xtg, rel:t=>xtReleasedSets(t), next:t=>xtNextSet(t), def:n=>xtSetDef(n), stock:(n)=>inPrintPacks('xt',n), want:()=>xtWant(), where:k=>xtWhere(k), D:k=>xtD(k), mine:()=>myXt(), own:()=>xtOwnState(), cards:n=>xtSetCards(n), sum:()=>myXtSummary(), design:'xtdesign', cg:'xt', prefix:'X'},
+    br:{id:'br', tab:'br', name:'Broken Reach', c:'208,143,82', img:'art/br-BR01-001.webp', has:()=>!!G.brg, rel:t=>brReleasedSets(t), next:t=>brNextSet(t), def:n=>brSetDef(n), stock:(n)=>inPrintPacks('br',n), want:()=>brWant(), where:k=>brWhere(k), D:k=>brD(k), mine:()=>myBr(), own:()=>brOwnState(), cards:n=>brSetCards(n), sum:()=>myBrSummary(), design:'brdesign', cg:'br', prefix:'B'} };
   const LIST=['tc','xt','br'].map(k=>FRS[k]);   // filtered per call by frs(): the game does not exist yet when this file loads
   const frs=()=>LIST.filter(f=>{ try { return f.has(); } catch(e){ return false; } });
   const byPrefix=k=>LIST.find(f=>f.prefix===String(k)[0]);

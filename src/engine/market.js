@@ -146,7 +146,7 @@ function marketTick(){
       if (amt>=l.pr*0.55 && n.cash>=amt) { l.offers.push({id:G.nextLid++, who:n.id, amt, exp:t+2, val}); G.player.newOffers=(G.player.newOffers||0)+1; }
     }
     // stale NPC listings drop price or expire
-    if (l.sel>0){ const age=t-l.st; if (age>0 && age%8===0) l.pr = Math.max(0.99, Math.round(l.pr*0.92*100)/100); if (t>=l.en) removeListing(l); }
+    if (l.sel>0){ const age=t-l.st; if (age>0 && age%8===0 && l.pr>0.99) l.pr = Math.max(0.99, Math.round(l.pr*0.92*100)/100); /* a cut never raises a price (it used to lift every cheap card to 0.99) */ if (t>=l.en) removeListing(l); }
   }
   for (const l of G.lst) if (l.offers.length) l.offers = l.offers.filter(o=>o.exp>=t);
   // 4. NPC listing creation

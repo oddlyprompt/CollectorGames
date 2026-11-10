@@ -46,7 +46,9 @@ const check=(ok,msg)=>{assert.ok(ok,msg);console.log('PASS '+msg);};
   for(const g of ['wk','xt','br'])check(run(`UI.retailOnline='${g}';VIEWS.stores().length>300`),g+': online singles catalogue still renders');
   run("UI.retailOnline=null;globalThis.testStart=G.day;globalThis.testOrders=Object.values(G.retail.locations['super-centre'].stock).reduce((n,x)=>n+x.orders,0);for(let i=0;i<420;i++)advanceDay();");
   check(run("Object.values(G.retail.locations).every(s=>Number.isFinite(s.cash)&&s.cash>=0&&Object.values(s.stock).every(x=>Number.isSafeInteger(x.q)&&x.q>=x.refs.length&&x.q>=0))"),'420-day full simulation keeps stock and budgets valid');
-  check(run("RETAIL.profiles.filter(p=>p.kind==='big').every(p=>Object.values(G.retail.locations[p.id].stock).every(x=>G.day-RETAIL.adapters[x.g].def(x.n).rel<100||x.clearance))"),'big-box locations withdraw old low-demand products from replenishment');
+  // Version 2: demand, not age, decides. Quiet branches drop an old line; the busiest keep at least one game going through its print run.
+  check(run("['family-outlet','value-east'].every(id=>Object.values(G.retail.locations[id].stock).every(x=>G.day-RETAIL.adapters[x.g].def(x.n).rel<130||x.clearance))"),'quiet big-box branches withdraw old low-demand products from replenishment');
+  check(run("['super-centre','mega-mall'].some(id=>Object.values(G.retail.locations[id].stock).some(x=>G.day-RETAIL.adapters[x.g].def(x.n).rel>130&&!x.clearance))"),'a busy big-box branch still carries an older in-print product');
   check(run("Object.values(G.retail.locations.lantern.stock).some(x=>x.q>0&&G.day-RETAIL.adapters[x.g].def(x.n).rel>100&&!x.clearance)"),'collector LCS retains long-tail sealed stock');
   check(run("Object.values(G.retail.locations).every(s=>s.singles.every(r=>{const c=RETAIL.adapters[r.g].table()[r.id];return c&&c.o===-2&&c.rs===s.id}))"),'long simulation retains valid single ownership');
   check(run("Object.values(G.retail.locations).every(s=>s.singles.every(r=>!G[RETAIL.adapters[r.g].ids].includes(r.id)))"),'shop singles are excluded from NPC listing and grading pools');

@@ -83,9 +83,9 @@ function xtSealedFair(d){
   const def=d.def, n=d.set; const days=G.day-def.rel, age=days/365; const ev=xtPackEV(n); const pr=xtSetPrestige(n); let pack;
   if (n===TM_TT && age<=1) pack=Math.max(XT_MSRP.P*0.8, Math.min(XT_MSRP.P*2.2, ev*1.02))*(1+0.18*Math.exp(-days/21)*(pr-0.6)); else pack=Math.max(XT_MSRP.P*0.9, ev);
   const s=(G.xtg&&G.xtg.shop[n])||{}; const shelf=d.v==='P'? (s.pack||0) : (s.box||0); const so=d.v==='P'? (s.sop==null?1:s.sop) : (s.so==null?1:s.so);
-  if (xtInPrint(n,G.day) || (n===TM_TT && shelf>0)){ if (days>30) pack=Math.min(pack, XT_MSRP.P*(1.15+0.6*so)); }   // on retail shelves: anchored to retail (higher while it keeps selling out)
+  if (xtInPrint(n,G.day) || (n===TM_TT && shelf>0)){ pack=Math.min(pack, XT_MSRP.P*(1.15+0.6*so)); }   // on retail shelves: anchored to retail (higher while it keeps selling out)
   else pack=Math.max(XT_MSRP.P*1.15, ev)*(1+0.3*pr*Math.max(0,(G.day-xtPrintEnd(n))/365));   // out of print and off the shelves: scarcity grows
-  return d.v==='P'? pack : pack*36*(age<=1?0.93:1.02);
+  const box=pack*36*(age<=1?0.93:1.02); return d.v==='P'? pack : (xtInPrint(n,G.day)||(n===TM_TT&&shelf>0))? Math.min(box, XT_MSRP.B*(1.15+0.6*so)) : box;   // a box on a shelf is anchored to the box's own list price
 }
 function xtStock(set,f){ const s=G.xtg.shop[set]; return s? (f==='P'?s.pack:s.box) : 0; }
 function xtBuySealed(set, f, q){
