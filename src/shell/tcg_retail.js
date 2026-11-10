@@ -23,17 +23,17 @@ const RETAIL=(function(){
       text:'League regulars, sensible prices and cards people actually play. New releases share a shelf with last season’s favourites.',
       habit:'Mara follows the tournament tables and prices playable cards from current sets almost to the cent, every Thursday. Older sets and fancy printings she prices to move, and rarely looks at again.',
       singles:'play',traffic:0.85,coverage:24,markup:1.07,single:1.22,floor:0.5,buy:0.60,capital:8500,caseCap:65,day:4,ink:'#76b988',
-      eye:{fresh:[1,0.07],old:[0.74,0.30],fancy:[0.86,0.22]},review:7,reviews:'fresh',hot:'regulars'},
+      eye:{fresh:[1,0.07],old:[0.66,0.36],fancy:[0.80,0.28]},review:7,reviews:'fresh',hot:'regulars'},
     {id:'lantern',name:'The Lantern Room',kind:'local',tag:'The collector’s shelves',owner:'Ellis',area:'Old Town',
       text:'Older boxes behind the counter, binders worth taking your time over, and an owner who keeps stock long after the launch crowds leave.',
       habit:'Ellis knows the old sets cold. The case is re-priced about once a month, so a card that moved since then is still at last month’s price, for better or worse.',
       singles:'mixed',traffic:0.55,coverage:40,markup:1.12,single:1.25,floor:0.75,buy:0.56,capital:14500,caseCap:90,day:2,ink:'#d1ae69',
-      eye:{fresh:[0.98,0.28],old:[1,0.07],fancy:[1.02,0.10]},review:35,reviews:'all',hot:'market'},
+      eye:{fresh:[0.94,0.34],old:[1,0.07],fancy:[1.02,0.10]},review:35,reviews:'all',hot:'market'},
     {id:'cargo',name:'The Cargo Cage',kind:'local',tag:'Dollar-bin digging',owner:'Jules',area:'Station Arcade',
       text:'Rows of affordable singles, everyday sealed product and the occasional excellent card tucked into the case.',
-      habit:'Jules prices the bins by rarity, not by card: commons a quarter, uncommons fifty cents, rares a dollar, anything shiny double. Only what Jules recognises goes in the case, and Jules recognises about half of what should.',
+      habit:'Jules prices the bins by rarity, not by card: commons a quarter, uncommons fifty cents, rares a dollar, anything shiny double. Only what Jules recognises goes in the case, and Jules misses more than half of what should.',
       singles:'budget',traffic:0.70,coverage:30,markup:1.03,single:1.12,floor:0.25,buy:0.42,capital:6500,caseCap:150,day:6,ink:'#b78dcb',
-      eye:{fresh:[1,0.25],old:[1,0.25],fancy:[1,0.25]},review:28,reviews:'case',bins:[0.25,0.5,1,3,5],know:0.5,hot:'market'},
+      eye:{fresh:[1,0.25],old:[1,0.25],fancy:[1,0.25]},review:28,reviews:'case',bins:[0.25,0.5,1,3,5],know:0.4,hot:'market'},
     {id:'corner',name:'Corner Pocket Games',kind:'local',tag:'Packs and play nights',owner:'Dev',area:'Maple Square',
       text:'A small sealed-product shop. Orders are cautious, old boxes linger, and there is no singles counter or cash buylist.',
       habit:'Dev orders small and never marks anything up or down. What is on the shelf stays at list price until it is gone, even after it has gone out of print.',
@@ -57,7 +57,7 @@ const RETAIL=(function(){
     xt:{id:'xt',kind:'x',name:'Tidemark',world:()=>G.xtg,table:()=>G.xtc,sets:t=>xtReleasedSets(t),def:xtSetDef,key:xtKey,D:xtD,inPrint:xtInPrint,msrp:XT_MSRP,ev:n=>xtPackEV(n),raror:XT_RAROR,make:(...a)=>xtMakeCopy(...a),value:xtCopyValue,fair:xtFairRaw,mini:xMiniT,design:'xtdesign',cg:'xt',pop:()=>G.xpop,clear:k=>xTfvClear(k),npc:()=>G.npcs.filter(isXtNPC),ids:'_npcXtIds'},
     br:{id:'br',kind:'b',name:'Broken Reach',world:()=>G.brg,table:()=>G.brc,sets:t=>brReleasedSets(t),def:brSetDef,key:brKey,D:brD,inPrint:brInPrint,msrp:BR_MSRP,ev:n=>brPackEV(n),raror:BR_RAROR,make:(...a)=>brMakeCopy(...a),value:brCopyValue,fair:brFairRaw,mini:bMiniT,design:'brdesign',cg:'br',pop:()=>G.bpop,clear:k=>brFvClear(k),npc:()=>G.npcs.filter(isBrNPC),ids:'_npcBrIds'}
   };
-  const TIERS=[[0,'New face'],[15,'Familiar face'],[45,'Regular'],[110,'Friend of the shop']];
+  const TIERS=[[0,'New face'],[8,'Familiar face'],[40,'Regular'],[110,'Friend of the shop']];
   const round=x=>Math.round(x*100)/100;
   const clampN=(x,a,b)=>Math.max(a,Math.min(b,x));
   const ready=()=>G&&G.tcg&&G.xtg&&G.brg;
@@ -70,6 +70,7 @@ const RETAIL=(function(){
 
   // ---------- standing: how well an independent shop knows the player ----------
   function standing(s){ const rep=(s&&s.rep)||0; let tier=0; for (let i=0;i<TIERS.length;i++) if (rep>=TIERS[i][0]) tier=i; return {rep,tier,name:TIERS[tier][1],next:TIERS[tier+1]?TIERS[tier+1][0]:null,from:TIERS[tier][0]}; }
+  // sealed product counts for little ('sealed': a point per $25, two a day): a shop gets to know the people who trade cards with it.
   // points: the first visit of a week 1; a point per $8 spent (5 a day at most); a point per $8 sold to the shop (3 a day); events give what they say
   function credit(s,kind,amount){
     const p=profile(s.id); if (!p||p.kind!=='local') return 0;
@@ -77,6 +78,7 @@ const RETAIL=(function(){
     let add=0;
     if (kind==='visit'){ if (s.repWeek!==weekNo(G.day)){ s.repWeek=weekNo(G.day); add=1; } }   // showing your face counts once a week
     else if (kind==='spend'){ add=Math.max(0,Math.min(5-d.spend,amount/8)); d.spend+=add; }
+    else if (kind==='sealed'){ add=Math.max(0,Math.min(2-(d.sealed||0),amount/25)); d.sealed=(d.sealed||0)+add; }
     else if (kind==='sell'){ add=Math.max(0,Math.min(3-d.sell,amount/8)); d.sell+=add; }
     else if (kind==='event') add=amount;
     if (!add){ s.seen=G.day; return 0; }
@@ -212,7 +214,7 @@ const RETAIL=(function(){
       if (!copies.length) continue;
       const quota=Math.max(0,Math.ceil(p.caseCap/3)-s.singles.filter(ref=>ref.g===a.id).length);
       let got=0; const want=Math.min(perGame,quota),bands=(INTAKE[p.singles]||[]).map(b=>({lo:b[0],hi:b[1],left:Math.ceil(want*b[2])}));
-      for (let i=0;i<(initial?3000:1200);i++){
+      for (let i=0;i<(p.singles==='none'?(initial?600:200):initial?3000:1200);i++){
         const c=copies[Math.floor(r()*copies.length)]; if (!c||c.o<=0||c.l) continue;
         const v=a.value(c),band=bands.find(b=>v>=b.lo&&v<b.hi&&b.left>0);
         if (need>0&&got<want&&band&&accepts(p,a.id,c)&&takeFromCollector(s,a.id,c,t)){ need--; got++; band.left--; }
@@ -289,13 +291,24 @@ const RETAIL=(function(){
     G.retail={v:VERSION,last:G.day,locations:{},log:[]};
     for (const p of profiles) G.retail.locations[p.id]={id:p.id,cash:p.capital,stock:{},singles:[],spent:0,revenue:0,visit:null,rep:0,lim:{}};
     migrateStock(sources,G.day);
-    for (const p of profiles){ const s=G.retail.locations[p.id]; for (const a of Object.values(adapters)) for (const n of a.sets(G.day).filter(n=>a.inPrint(n,G.day))) for (const f of ['P','B']) order(s,sku(s,a.id,n,f,G.day),G.day,true); acquire(s,G.day,true); }
+    for (const p of profiles){ const s=G.retail.locations[p.id]; for (const a of Object.values(adapters)) for (const n of a.sets(G.day).filter(n=>a.inPrint(n,G.day))) for (const f of ['P','B']) order(s,sku(s,a.id,n,f,G.day),G.day,true); acquire(s,G.day,true);
+      const r=random(p.id+':season',G.day); s.singles=s.singles.filter(ref=>{ const c=getCopy(ref.g,ref.id),v=adapters[ref.g].value(c); ref.n=G.day-10; if (v>=2&&ref.p<=v*0.75&&r()<0.8){ giveNpc(ref.g,c,r); return false; } return true; }); }
     sync(); return G.retail;
+  }
+  // Drop references to copies that are gone (the Tidemark vintage rebuild replaces every copy the player does not own;
+  // a damaged save could do the same). Sealed counts follow their references, so nothing is sold that does not exist.
+  function repair(){
+    const w=G.retail; if (!w) return 0; let n=0;
+    for (const p of profiles){ const s=w.locations[p.id]; if (!s) continue;
+      const before=s.singles.length; s.singles=s.singles.filter(ref=>{ const c=getCopy(ref.g,ref.id); return c&&c.o===-2&&c.rs===p.id; }); n+=before-s.singles.length;
+      for (const [k,x] of Object.entries(s.stock)){ const live=x.refs.filter(id=>{ const c=getCopy(x.g,id); return c&&c.o===-2&&c.rs===p.id; }); const lost=x.refs.length-live.length; if (lost){ x.refs=live; x.q=Math.max(live.length,x.q-lost); n+=lost; } if (!x.q&&!adapters[x.g].inPrint(x.n,G.day)) delete s.stock[k]; }
+    }
+    if (n) sync(); return n;
   }
   function giveNpc(g,c,r,price=0){
     const a=adapters[g],pool=a.npc().filter(n=>n.cash>=price); if (!pool.length) return false;
     const n=pool[Math.floor(r()*pool.length)]; n.cash=round(n.cash-price); c.o=n.id; delete c.rs;
-    const ids=G[a.ids]=G[a.ids]||[]; if (!ids.includes(c.id)) ids.push(c.id); return true;
+    const ids=G[a.ids]=G[a.ids]||[]; if (!ids.includes(c.id)) ids.splice(Math.floor(r()*(ids.length+1)),0,c.id); return true;
   }
   function day(t){
     const w=ensure(); if (!w||w.last>=t) return;
@@ -325,7 +338,8 @@ const RETAIL=(function(){
         // Other customers: a card tagged under its value goes quickly, an overpriced one sits.
         const base=(p.singles==='premium'?0.006:0.02)*p.traffic;
         s.singles=s.singles.filter(ref=>{ const c=getCopy(ref.g,ref.id); if (!c||c.o!==-2||c.rs!==p.id) return false;
-          const v=adapters[ref.g].value(c),tag=ref.p||v; const pull=clampN(Math.pow(v/Math.max(0.05,tag),2),0.3,8);
+          if (d-(ref.n||0)<3) return true;   // just put out
+          const v=adapters[ref.g].value(c),tag=ref.p||v; const pull=clampN(Math.pow(v/Math.max(0.05,tag),1.5),0.3,6);
           if (r()<base*pull){ if (!giveNpc(ref.g,c,r,tag)) return true; s.cash=round(s.cash+tag); s.revenue=round(s.revenue+tag); return false; }
           return true; });
         if (dowOf(d)===p.day){
@@ -352,7 +366,7 @@ const RETAIL=(function(){
       c.h=(c.h||[]).concat([[G.day,'Bought at '+profile(id).name,price,'']]); c.pv={d:G.day,v:round(a.value(c)),n:''};
     }
     if (lim!=null){ s.lim=s.lim||{}; s.lim[key]=[weekNo(G.day),boughtThisWeek(s,key)+q]; }
-    x.q-=q; x.sold+=q; x.playerSales=(x.playerSales||0)+q; x.lastSale=G.day; UI.cg=a.cg; credit(s,'spend',total); sync(); return null;
+    x.q-=q; x.sold+=q; x.playerSales=(x.playerSales||0)+q; x.lastSale=G.day; UI.cg=a.cg; credit(s,'sealed',total); sync(); return null;
   }
   function singleBuy(id,g,cid){
     const w=ensure(),s=w&&w.locations[id],a=adapters[g],c=a&&a.table()[cid];
@@ -486,7 +500,16 @@ const RETAIL=(function(){
   }
   const oldNew=newGame; newGame=async function(){ const r=await oldNew.apply(this,arguments); ensure(); return r; };
   const oldAdvance=advanceDay; advanceDay=function(){ ensure(); oldAdvance.apply(this,arguments); day(G.day); };
-  const oldMigrate=migrate; migrate=function(){ oldMigrate.apply(this,arguments); if (ready()) ensure(); };
+  const oldMigrate=migrate; migrate=function(){ oldMigrate.apply(this,arguments); if (ready()){ ensure(); repair(); } };
+  if (typeof xtRebuildVintage==='function'){ const oldRebuild=xtRebuildVintage; xtRebuildVintage=function(){ const r=oldRebuild.apply(this,arguments); if (G.retail){ repair(); if (typeof CIRCUIT!=='undefined'&&CIRCUIT) CIRCUIT.repair(); } return r; }; }
+  // Selling from a card page or "sell duplicates" goes to the shared shops: whichever pays most for that card today.
+  function sellBest(g,cid){ const c=getCopy(g,cid); if (!c) return ['That copy is not available to sell.']; let best=null,bp=0;
+    for (const p of profiles){ if (p.kind!=='local'||!p.caseCap) continue; const s=G.retail.locations[p.id],o=offer(p.id,g,c); if (o>bp&&o<=s.cash&&s.singles.length<p.caseCap){ bp=o; best=p; } }
+    if (!best||bp<0.05) return ['No shop in town wants that card today.']; const e=sell(best.id,g,cid); return [e,best.name,bp]; }
+  for (const [g,act,dupeAct,dupes] of [['wk','lgssell','tdupesell',()=>tcDupes()],['xt','xlgssell','xtdupesell',()=>xtDupes()],['br','blgssell','brdupesell',()=>brDupes()]]){
+    ACT[act]=(a,el)=>{ if (el&&el.dataset&&el.dataset.confirm&&!armed(el)) return; const [e,name]=sellBest(g,+a); done(e,e?null:'Sold to '+name+'.'); };
+    ACT[dupeAct]=(a,el)=>{ if (el&&!armed(el)) return; let n=0,cash=0; for (const x of dupes()){ const [e,,p]=sellBest(g,x.c.id); if (!e){ n++; cash+=p; } } closeSheet(); showToast(n? `Sold ${n} spare card${n>1?'s':''} to the shops that pay most for them, for ${money(cash,true)}.` : 'No shop wants those today.',!!n); render(true); queueSave(); };
+  }
   // A save can gain a franchise later. Its new copy table must not inherit stale references.
   function addLine(g){
     const a=adapters[g]; if (!G.retail) return;
@@ -512,5 +535,5 @@ const RETAIL=(function(){
   tcBuySealed=(n,f,q)=>legacyBuy('wk',n,f,q,false); xtBuySealed=(n,f,q)=>legacyBuy('xt',n,f,q,false); brBuySealed=(n,f,q)=>legacyBuy('br',n,f,q,false);
   tcLgsBuySealed=(f,q)=>legacyBuy('wk',tcNewestSet(G.day),f,q,true); xtLgsBuySealed=(f,q)=>legacyBuy('xt',TM_TT,f,q,true); brLgsBuySealed=(f,q)=>legacyBuy('br',1,f,q,true);
   return {VERSION,TIERS,profiles,adapters,ensure,day,where,profile,summary,visit,nextDelivery,sealedPrice,singlePrice,sealedBuy,singleBuy,offer,sell,order,demand,accepts,view,
-    standing,credit,limitOf,boughtThisWeek,appraise,recognised,tagFor,shelf,giveNpc,getCopy,random,unit,round,review,acquire,pulse,heatOf,knows,knownHTML};
+    standing,credit,repair,sellBest,limitOf,boughtThisWeek,appraise,recognised,tagFor,shelf,giveNpc,getCopy,random,unit,round,review,acquire,pulse,heatOf,knows,knownHTML};
 })();

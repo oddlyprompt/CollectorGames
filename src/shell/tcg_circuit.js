@@ -25,12 +25,12 @@ const CIRCUIT=(function(){
   // dealers at a card show. draw(a,d,c,v,t) chooses stock; mark and sig are the dealer's markup and how far off their eye can be;
   // floor is the lowest share of the tag they will take; flat is a single price for everything on the table
   const TABLES=[
-    {id:'vintage',name:'Old Paper',who:'Tomas',blurb:'The early years, priced by someone who was there.',n:22,mark:1.15,sig:0.06,floor:0.90,draw:(a,d,c,v,t)=>c.g===0&&t-d.def.rel>1460&&v>=2},
+    {id:'vintage',name:'Old Paper',who:'Tomas',blurb:'The early years, priced by someone who was there.',n:30,mark:1.12,sig:0.10,floor:0.88,draw:(a,d,c,v,t)=>c.g===0&&t-d.def.rel>1460&&v>=1},
     {id:'slabs',name:'Graded & Gone',who:'Priya',blurb:'Slabs only, every one with its certificate.',n:14,mark:1.12,sig:0.05,floor:0.92,draw:(a,d,c,v)=>c.g>0&&v>=8},
     {id:'shiny',name:'Shiny Side Up',who:'Cal',blurb:'Foils, alternate arts and special printings from every game.',n:22,mark:1.10,sig:0.20,floor:0.85,draw:(a,d,c,v)=>c.g===0&&(d.v!=='N'||tier(a,d)>=3)&&v>=1},
     {id:'bulk',name:'Three for a Dollar',who:'Nan',blurb:'Long boxes. Everything in them is the same price, whatever it is.',n:60,flat:0.35,draw:(a,d,c,v)=>c.g===0&&v>=0.05&&v<=25},
     {id:'player',name:'Top Table Singles',who:'Imre',blurb:'Cards people play from the current sets, a little under shop prices.',n:24,mark:1.04,sig:0.06,floor:0.93,draw:(a,d,c,v,t)=>c.g===0&&t-d.def.rel<730&&tier(a,d)>=1&&v>=0.75},
-    {id:'visitor',name:'The Out-of-Towner',who:'a dealer nobody knows',blurb:'Prices from another city, or another year.',n:28,mark:1.0,sig:0.38,floor:0.80,draw:(a,d,c,v)=>c.g===0&&v>=1}
+    {id:'visitor',name:'The Out-of-Towner',who:'a dealer nobody knows',blurb:'Prices from another city, or another year.',n:45,mark:1.0,sig:0.45,floor:0.80,draw:(a,d,c,v)=>c.g===0&&v>=1}
   ];
   const GOALS=[
     ['familiar','Become a familiar face at a shop',h=>locals().some(s=>RETAIL.standing(s).tier>=1)],
@@ -52,6 +52,11 @@ const CIRCUIT=(function(){
   }
   // Repair: a copy held for a lead or a show table that no longer exists goes back to a collector (run when the hunt
   // state is created and whenever a save is loaded, so a damaged or hand-edited save cannot strand cards).
+  // leads and show tables whose cards are gone (a vintage market rebuild) are withdrawn; what is left goes back to collectors
+  function repair(){ const h=G.retail&&G.retail.hunt; if (!h) return; const r=RETAIL.random('hunt:repair',G.day);
+    h.leads=h.leads.filter(L=>{ if (liveRefs(L).length>=Math.max(1,L.refs.length*0.9)) return true; release(L.refs,'lead:'+L.id,r); return false; });
+    if (h.show) for (const T of h.show.tables) T.refs=T.refs.filter(ref=>held(ref.g,ref.id,'show:'+T.id));
+    if (UI.huntLead && !h.leads.some(L=>L.id===UI.huntLead)) UI.huntLead=null; }
   function sweep(h){
     const live=new Set(h.leads.map(L=>'lead:'+L.id)); if (h.show) for (const T of h.show.tables) live.add('show:'+T.id);
     const r=RETAIL.random('hunt:sweep',G.day); let n=0;
@@ -71,10 +76,12 @@ const CIRCUIT=(function(){
     for (let i=0;i<n*60&&got.length<n;i++){
       const c=pool[Math.floor(r()*pool.length)]; if (!c||c.o<=0||c.l||c.g<0||c._d) continue;
       const d=a.D(c.k); if (d.sealed) continue;
-      if (!test(a,d,c,a.value(c),t)) continue;
+      let ok=false; try { ok=test(a,d,c,a.value(c),t); } catch(e){ ok=false; }
+      if (!ok) continue;
       c._d=1; got.push(c);
     }
-    if (got.length){ const ids=new Set(got.map(c=>c.id)); if (G[a.ids]) G[a.ids]=G[a.ids].filter(id=>!ids.has(id)); for (const c of got){ delete c._d; c.o=-2; c.rs=tag; } }
+    for (const c of got) delete c._d;
+    if (got.length){ const ids=new Set(got.map(c=>c.id)); if (G[a.ids]) G[a.ids]=G[a.ids].filter(id=>!ids.has(id)); for (const c of got){ c.o=-2; c.rs=tag; } }
     return got;
   }
   const held=(g,id,tag)=>{ const c=RETAIL.getCopy(g,id); return c&&c.o===-2&&c.rs===tag? c : null; };
@@ -104,7 +111,7 @@ const CIRCUIT=(function(){
     const bands=[[0.05,1,0.45],[1,5,0.33],[5,25,0.17],[25,400,0.05]]; let got=[];
     for (const b of bands) got=got.concat(draw(a.id,Math.max(1,Math.round(n*b[2])),(aa,d,c,v)=>c.g===0&&v>=b[0]&&v<b[1],r,tag,true));
     if (got.length<25){ release(got.map(c=>({g:a.id,id:c.id})),tag,r); return; }
-    const worth=got.reduce((s,c)=>s+a.value(c),0), ask=Math.max(10,Math.round(worth*(0.60+0.35*r())));   // the seller's rough idea: from a real bargain to nearly full value
+    const worth=got.reduce((s,c)=>s+a.value(c),0), ask=Math.max(10,Math.round(worth*(0.60+0.70*r())));   // the seller's rough idea: from a real bargain to well over the odds
     const names=['a retired league organiser','a couple moving abroad','someone who inherited a cupboard of cards','a collector switching games','a former shop employee'];
     h.leads.push({id,ty:'coll',g:a.id,title:'A collection for sale',story:'From '+names[Math.floor(r()*names.length)]+'. They have looked a few cards up and want it gone in one go.',where:STREETS[Math.floor(r()*STREETS.length)],day:t,last:t+5,refs:got.map(c=>({g:a.id,id:c.id})),ask,floor:round(0.85+0.1*r())});
   }
@@ -166,10 +173,12 @@ const CIRCUIT=(function(){
     if (L.went!==G.day){ if (outingsLeft()<1) return 'You have been out twice already today. Tomorrow.'; useOutings(1); L.went=G.day; }
     return null;
   }
-  function dig(id){ const L=leadOf(id); if (!L||L.ty!=='yard'||L.went!==G.day) return 'Go there first.'; if (L.shown>=L.top.length) return 'You have seen all of it.'; if (outingsLeft()<1) return 'Looking through the whole box would take the rest of the day, and you have used it.'; useOutings(1); L.shown=Math.min(L.top.length,L.shown+10); return null; }
-  function haggle(id){ const L=leadOf(id); if (!L||L.went!==G.day) return 'Go there first.'; if (L.tried) return 'They have named their price.'; L.tried=1; const cut=L.ty==='yard'?0.75:0.9; if (cut>=L.floor){ L.ask=Math.max(1,Math.round(L.ask*cut)); L.deal=1; return null; } return 'no'; }
+  function dig(id){ const L=leadOf(id); if (!L||L.ty!=='yard'||L.went!==G.day) return 'Go there first.'; if (L.shown>=L.top.length) return 'You have seen all of it.'; if (outingsLeft()<1) return 'Looking through the whole box would take the rest of the day, and you have used it.'; useOutings(1); L.shown=L.top.length; return null; }
+  function haggle(id){ const L=leadOf(id); if (!L||L.went!==G.day) return 'Go there first.'; if (L.tried) return 'They have named their price.'; L.tried=1; const cut=L.ty==='yard'?0.75:0.9; if (cut>=L.floor){ L.ask=Math.max(1,Math.round(L.ask*cut)); L.deal=1; return null; } L.ask=Math.round(L.ask*1.1); return 'no'; }   // a refused offer costs you: the price goes up a tenth
   function buyLot(id){
-    const L=leadOf(id); if (!L||L.went!==G.day) return 'Go there first.'; if (G.player.cash<L.ask) return 'You need '+money(L.ask,true)+'.';
+    const L=leadOf(id); if (!L||L.went!==G.day) return 'Go there first.';
+    if (liveRefs(L).length<Math.max(1,L.refs.length*0.9)){ repair(); return 'The seller has changed their mind. It is no longer for sale.'; }
+    if (G.player.cash<L.ask) return 'You need '+money(L.ask,true)+'.';
     const h=H(), refs=liveRefs(L), worth=round(leadWorth(L)), from=L.ty==='yard'?'a yard sale on '+L.where:'a private collection';
     G.player.cash=round(G.player.cash-L.ask); G.player.bought=round(G.player.bought+L.ask);
     const each=round(L.ask/Math.max(1,refs.length)); for (const ref of refs) give(ref.g,RETAIL.getCopy(ref.g,ref.id),each,from);
@@ -187,15 +196,15 @@ const CIRCUIT=(function(){
   function enterShow(){ const h=H(), S=h.show; if (!S||S.day!==G.day) return 'There is no show today.'; if (S.in) return null; if (outingsLeft()<OUTINGS) return 'A show takes the whole day, and you have already been out.'; if (G.player.cash<SHOW_FEE) return 'Entry is '+money(SHOW_FEE,true)+'.';
     G.player.cash=round(G.player.cash-SHOW_FEE); useOutings(OUTINGS); S.in=true; h.stats.show++;
     // two shop owners have come along; a word at their table counts
-    const r=RETAIL.random('hunt:showfolk',G.day), ls=locals().slice().sort(()=>r()-0.5).slice(0,2); S.folk=ls.map(s=>s.id); for (const s of ls) RETAIL.credit(s,'event',2);
+    const r=RETAIL.random('hunt:showfolk',G.day), all=locals().slice(), ls=[]; while (ls.length<2&&all.length) ls.push(all.splice(Math.floor(r()*all.length),1)[0]); S.folk=ls.map(s=>s.id); for (const s of ls) RETAIL.credit(s,'event',2);
     checkGoals(); return null; }
   const tableOf=id=>{ const S=H().show; return S&&S.tables.find(T=>T.id===id); };
   function showBuy(tid,g,cid,offer){
     const S=H().show, T=tableOf(tid), def=TABLES.find(x=>x.id===tid); if (!S||!S.in||S.day!==G.day||!T) return 'The show is over.';
     const ref=T.refs.find(x=>x.g===g&&x.id===+cid), c=ref&&held(g,ref.id,'show:'+tid); if (!c) return 'Somebody else got there first.';
     let price=ref.p;
-    if (offer){ if (def.flat) return 'Everything on this table is one price.'; if (T.firm[ref.id]) return 'That price is firm.';
-      const fl=def.floor-0.04+0.08*unit('fl'+S.day+tid+ref.id); if (0.9<fl){ T.firm[ref.id]=1; return 'no'; } price=round(ref.p*0.9); ref.p=price; T.firm[ref.id]=1; }
+    if (offer){ if (def.flat) return 'Everything on this table is one price.'; if (T.firm[ref.g+ref.id]) return 'That price is firm.';
+      const fl=def.floor-0.04+0.08*unit('fl'+S.day+tid+ref.g+ref.id); if (0.9<fl){ T.firm[ref.g+ref.id]=1; return 'no'; } price=round(ref.p*0.9); ref.p=price; T.firm[ref.g+ref.id]=1; }
     if (G.player.cash<price) return 'You need '+money(price,true)+'.';
     const worth=round(A[g].value(c)); G.player.cash=round(G.player.cash-price); G.player.bought=round(G.player.bought+price);
     give(g,c,price,'the card show ('+def.name+')'); T.refs=T.refs.filter(x=>x!==ref); UI.cg=A[g].cg; noteFind(g,c,price,worth,'the card show',!!def.flat); return null;
@@ -220,10 +229,10 @@ const CIRCUIT=(function(){
     const a=A[L.g], refs=liveRefs(L), n=refs.length;
     let cards;
     if (L.ty==='yard'){ const seen=L.top.slice(0,L.shown).map(id=>held(L.g,id,'lead:'+L.id)).filter(Boolean);
-      cards=`<h3>What you can see</h3><p class="small muted">${seen.length} of about ${n} cards. You know the going rate of cards you own a copy of; tap any other to look it up. The seller has no idea what is here: the price is for the whole lot.</p><div class="rows">${seen.map(c=>cardRow(L.g,c)).join('')}</div>${L.shown<L.top.length?`<div class="formrow">${btn('hdig',L.id,'Go through more of the box (uses an outing)',outingsLeft()<1)}</div>`:''}`;
+      cards=`<h3>What you can see</h3><p class="small muted">${seen.length} of about ${n} cards. You know the going rate of cards you own a copy of; tap any other to look it up. The seller has no idea what is here: the price is for the whole lot.</p><div class="rows">${seen.map(c=>cardRow(L.g,c)).join('')}</div>${L.shown<L.top.length?`<div class="formrow">${btn('hdig',L.id,'Go through the whole box (uses an outing)',outingsLeft()<1)}</div>`:''}`;
     } else { const top=refs.map(ref=>RETAIL.getCopy(ref.g,ref.id)).sort((p,q)=>a.value(q)-a.value(p)); const by={}; for (const c of top){ const r=a.D(c.k).rar; by[r]=(by[r]||0)+1; }
       cards=`<h3>The seller’s highlights</h3><p class="small muted">${n} cards in all: ${Object.entries(by).map(([k,v])=>v+' '+k).join(', ')}. These are the ones the seller pulled out to show you.</p><div class="rows">${top.slice(0,8).map(c=>cardRow(L.g,c)).join('')}</div>`; }
-    const hag=L.tried? `<span class="small muted">${L.deal?'They took your offer.':'They would not go lower.'}</span>` : btn('hhag',L.id,L.ty==='yard'?'Offer '+money(Math.round(L.ask*0.75),true):'Offer '+money(Math.round(L.ask*0.9),true));
+    const hag=L.tried? `<span class="small muted">${L.deal?'They took your offer.':'They would not go lower, and put the price up.'}</span>` : btn('hhag',L.id,L.ty==='yard'?'Offer '+money(Math.round(L.ask*0.75),true):'Offer '+money(Math.round(L.ask*0.9),true));
     return `<div class="retail-store-head">${btn('hback','','Out &amp; about')}<div class="retail-eyebrow">${L.ty==='yard'?'YARD SALE':'PRIVATE COLLECTION'} · ${esc(L.where)}</div><h2>${esc(L.title)}</h2><p>${esc(L.story)}</p><div class="retail-store-facts"><span>asking ${money(L.ask,true)} for everything</span><span>you have ${money(G.player.cash,true)}</span></div><div class="formrow">${btn('hbuy',L.id,'Buy the lot for '+money(L.ask,true),G.player.cash<L.ask,'pri')}${hag}</div></div><div class="panel retail-inventory">${cards}</div>`;
   }
   function showView(S){
@@ -231,7 +240,7 @@ const CIRCUIT=(function(){
     const cur=tableOf(UI.huntTable)||S.tables[0], def=TABLES.find(x=>x.id===cur.id);
     const refs=cur.refs.map(ref=>({ref,c:held(ref.g,ref.id,'show:'+cur.id)})).filter(x=>x.c).sort((p,q)=>q.ref.p-p.ref.p);
     const pages=Math.max(1,Math.ceil(refs.length/20)), pg=Math.min(UI.huntPage||0,pages-1);
-    const rows=refs.slice(pg*20,pg*20+20).map(({ref,c})=>cardRow(ref.g,c,`<div class="retail-actions"><strong>${money(ref.p,true)}</strong>${btn('hsb',cur.id+'~'+ref.g+'~'+ref.id,'Buy',G.player.cash<ref.p)}${def.flat||cur.firm[ref.id]?'':`<button class="btn sm" data-act="hso" data-a="${cur.id+'~'+ref.g+'~'+ref.id}" data-confirm="Buy if they say yes" ${G.player.cash<ref.p*0.9?'disabled':''}>Offer ${money(round(ref.p*0.9),true)}</button>`}</div>`)).join('');
+    const rows=refs.slice(pg*20,pg*20+20).map(({ref,c})=>cardRow(ref.g,c,`<div class="retail-actions"><strong>${money(ref.p,true)}</strong>${btn('hsb',cur.id+'~'+ref.g+'~'+ref.id,'Buy',G.player.cash<ref.p)}${def.flat||cur.firm[ref.g+ref.id]?'':`<button class="btn sm" data-act="hso" data-a="${cur.id+'~'+ref.g+'~'+ref.id}" data-confirm="Buy if they say yes" ${G.player.cash<ref.p*0.9?'disabled':''}>Offer ${money(round(ref.p*0.9),true)}</button>`}</div>`)).join('');
     const folk=(S.folk||[]).map(id=>RETAIL.profile(id)).filter(Boolean);
     return `<div class="retail-store-head"><div class="retail-eyebrow">CARD SHOW · ${fmtDate(S.day)}</div><h2>The Grand Mall card show</h2>${folk.length?`<p class="small muted">${folk.map(p=>esc(p.owner)+' from '+esc(p.name)).join(' and ')} ${folk.length>1?'are':'is'} here too. You stopped to talk.</p>`:''}</div><div class="chips">${S.tables.map(T=>{ const d=TABLES.find(x=>x.id===T.id); return `<button class="chip ${T===cur?'on':''}" data-act="htable" data-a="${T.id}">${esc(d.name)}</button>`; }).join('')}</div><div class="panel retail-inventory"><h3>${esc(def.name)}</h3><p class="small muted">${esc(def.who[0].toUpperCase()+def.who.slice(1))}: ${esc(def.blurb)} ${def.flat?'':'One lower offer per card; a refusal makes that price firm.'}</p><div class="rows">${rows||'<div class="empty">This table is cleaned out.</div>'}</div>${pages>1?`<div class="formrow">${btn('hpage',Math.max(0,pg-1),'Previous',pg===0)}<span class="small">Page ${pg+1} of ${pages}</span>${btn('hpage',pg+1,'Next',pg===pages-1)}</div>`:''}</div>`;
   }
@@ -265,7 +274,7 @@ const CIRCUIT=(function(){
   ACT.hgo=id=>{ const e=go(id); if (e){ showToast(e); return; } UI.huntLead=+id; UI.huntShow=false; render(true); queueSave(); window.scrollTo(0,0); };
   ACT.hback=()=>{ UI.huntLead=null; UI.huntShow=false; render(true); };
   ACT.hdig=id=>{ done(dig(id)); };
-  ACT.hhag=id=>{ const e=haggle(id); if (e==='no') showToast('“No. The price is the price.”'); else if (!e) showToast('“Fine. Take it.”',true); done(e); };
+  ACT.hhag=id=>{ const e=haggle(id); if (e==='no') showToast('“No. And for that, it is a bit more now.”'); else if (!e) showToast('“Fine. Take it.”',true); done(e); };
   ACT.hbuy=id=>{ const r=buyLot(id); if (typeof r==='string'){ showToast(r); return; } UI.huntLead=null; done(null,r.n+' cards are yours. Your estimate of the lot: '+money(r.worth,true)+'. Find them in Collection.'); };
   ACT.hshowgo=()=>{ UI.tab='stores'; UI.retailTab='out'; UI.retailLocation=null; UI.retailOnline=null; UI.huntLead=null; UI.huntShow=true; render(); window.scrollTo(0,0); };
   ACT.hshow=()=>{ const e=enterShow(); if (e){ showToast(e); return; } UI.huntShow=true; done(null,'You are in.'); };
@@ -275,6 +284,6 @@ const CIRCUIT=(function(){
   ACT.hso=(a,el)=>{ if (el&&!armed(el)) return; const [t,g,c]=a.split('~'); const e=showBuy(t,g,+c,true); if (e==='no') showToast('“Can’t do it for that.” The price is firm now.'); done(e,e?null:'Offer taken. Find it in Collection.'); };
   // the day: after the stores have had theirs
   const prevAdvance=advanceDay; advanceDay=function(){ prevAdvance.apply(this,arguments); tick(G.day); };
-  const prevMigrate=migrate; migrate=function(){ prevMigrate.apply(this,arguments); const h=G&&G.retail&&G.retail.hunt; if (h) sweep(h); };
-  return {H,tick,sweep,tabs,view,needs,badge,noteFind,go,dig,haggle,buyLot,enterShow,showBuy,leadOf,liveRefs,leadWorth,canGo,outingsLeft,showDay,checkGoals,GOALS,TABLES,YARD,OUTINGS};
+  const prevMigrate=migrate; migrate=function(){ prevMigrate.apply(this,arguments); const h=G&&G.retail&&G.retail.hunt; if (h){ repair(); sweep(h); } };
+  return {H,tick,sweep,repair,tabs,view,needs,badge,noteFind,go,dig,haggle,buyLot,enterShow,showBuy,leadOf,liveRefs,leadWorth,canGo,outingsLeft,showDay,checkGoals,GOALS,TABLES,YARD,OUTINGS};
 })();

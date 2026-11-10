@@ -58,7 +58,7 @@ var AG=(function(){
       for (const T of h.show.tables) for (const ref of T.refs.slice()){
         const c=RETAIL.getCopy(ref.g,ref.id); if (!c) continue;
         const v=RETAIL.adapters[ref.g].value(c); if (v<2 || ref.p>G.player.cash*0.3) continue;
-        const offer=ref.p>v*0.75 && ref.p*0.9<=v*0.75 && !T.firm[ref.id];
+        const offer=ref.p>v*0.75 && ref.p*0.9<=v*0.75 && !T.firm[ref.g+ref.id];
         if (ref.p<=v*0.75 || offer){ if (!CIRCUIT.showBuy(T.id,ref.g,ref.id,offer)){ act(); S.flips++; S.flipCost+=ref.p; c._sell=1; } }
       }
     }

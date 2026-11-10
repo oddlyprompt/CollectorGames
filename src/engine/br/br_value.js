@@ -61,9 +61,9 @@ function brSealedFair(d){
   const def=d.def, n=d.set; const days=G.day-def.rel, age=days/365; const ev=brPackEV(n); const pr=brSetPrestige(n); let pack;
   if (age<=1) pack=Math.max(BR_MSRP.P*0.8, Math.min(BR_MSRP.P*2.2, ev*1.02))*(1+0.18*Math.exp(-days/21)*(pr-0.6)); else pack=Math.max(BR_MSRP.P*0.9, ev);
   const s=(G.brg&&G.brg.shop[n])||{}; const shelf=d.v==='P'? (s.pack||0) : (s.box||0); const so=d.v==='P'? (s.sop==null?1:s.sop) : (s.so==null?1:s.so);
-  if (brInPrint(n,G.day) || shelf>0){ pack=Math.min(pack, BR_MSRP.P*(1.15+0.6*so)); }   // on retail shelves: anchored to retail (higher while it keeps selling out)
+  if (brInPrint(n,G.day) || shelf>0){ pack=Math.min(pack, BR_MSRP.P*(1.02+0.6*so)); }   // on retail shelves: anchored to retail (higher while it keeps selling out)
   else pack=Math.max(BR_MSRP.P*1.15, ev)*(1+0.3*pr*Math.max(0,(G.day-brPrintEnd(n))/365));           // out of print and off the shelves: scarcity grows
-  const box=pack*BR_BOX*(age<=1?0.93:1.02); return d.v==='P'? pack : (brInPrint(n,G.day)||shelf>0)? Math.min(box, BR_MSRP.B*(1.15+0.6*so)) : box;   // a box on a shelf is anchored to the box's own list price
+  const box=pack*BR_BOX*(age<=1?0.93:1.02); return d.v==='P'? pack : (brInPrint(n,G.day)||shelf>0)? Math.min(box, BR_MSRP.B*(1.02+0.6*so)) : box;   // a box on a shelf is anchored to the box's own list price
 }
 function brStock(set,f){ const s=G.brg.shop[set]; return s? (f==='P'?s.pack:s.box) : 0; }
 function brBuySealed(set, f, q){
