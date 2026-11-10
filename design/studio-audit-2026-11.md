@@ -37,4 +37,73 @@ One sentence: **make the physical world worth walking around in.** The cards, se
 - **5 hours:** know which owner misprices what, which day each shop puts out new arrivals, be a regular somewhere, have been to a card show.
 - **50 hours:** friends of several shops, first call on collections, a route through the week, a collection built from finds as well as packs.
 
-Sections 3 and 4 are filled in as the work lands (what was built, the same robots re-run, and what the reviewers said).
+## 3. What was built
+
+1. **Robot players** (`tools/agents/`): the built game in Node, ten strategies, one line of results each. This is the test harness for the economy.
+2. **Stores version 2** (`src/shell/tcg_retail.js`): price tags written by owners with strengths and blind spots, routine re-pricing, other customers who buy bargains, standing with independent shops, weekly per-customer limits on product that is selling above its shelf price, a sold-out index measured from real shelves that the sealed price models read, big-box ordering that follows what a pack is worth, independents that charge the going rate when a release runs hot.
+3. **Out and about, the Hunt** (`src/shell/tcg_circuit.js`): yard sales, private collections, a card show every fourth Saturday, tips from owners who know you, a finds log, ten goals, two outings a day. Every card on offer is a real copy a collector owned the day before and goes back to a collector if nobody buys it.
+4. **Fixes:** sealed price anchors (three games), the marketplace price-cut bug, Home's in-print check, selling spares through the shared shops, repairs for references to vanished copies.
+5. **Tests:** `tools/hunt_test.cjs` (53 checks), `tools/hunt_ui_test.py` (real clicks at phone size), the older `retail_test.cjs` adjusted where it asserted the defect A2.
+
+Deterministic: leads, shows, tags and tips come from the world seed and the week or day; the same seed gives the same town (tested). Inspectable: `G.retail` holds everything (`locations[id].singles[].p` is a tag, `.rep` standing, `hunt.leads`, `hunt.stats`); `CIRCUIT.H()`, `RETAIL.standing(s)`, `RETAIL.appraise(p,g,c)` can be called from the browser console.
+Saves: a save from before the shared stores gets them on load; a version 1 store world is upgraded in place (tags added, standing zero, nothing the player owns touched; tested); the Hunt state is created empty.
+
+## 4. Before and after (seed 11, 540 days, $2,000, no allowance)
+
+| Robot | What it does | Before | After |
+|---|---|---|---|
+| idle | nothing | 0% | 0% |
+| ripper | 10 packs a week, keeps everything | +17% (on paper) | 0% (on paper) |
+| ripseller | lists pulls worth $2+, buylists the rest | -17% | -13% |
+| dumper | sells every pull to buylists | -37% | -59% |
+| sniper | marketplace listings at 70% of value or less | +26% | +8% |
+| **clearance** | **buys sealed off shelves, relists online** | **+1,695%** (27 actions a day) | **+119%** (1.8 actions a day) |
+| investor | six boxes of each release, holds | +56% (on paper) | +71% (on paper) |
+| grader | near-mint $25+ cards, grades, sells | +21% (3 cards) | -2% (1 card) |
+| picker | independent shops daily, tags at 70% or less | did not exist (no bargains) | +12%, 63 finds |
+| hunter | shops, yard sales, collections, shows | did not exist | +38%, 45 lots, 83 finds |
+
+Reading it. The money machine is gone: what the `clearance` robot still earns comes from the weeks around a launch, when a product really is selling out, under per-customer limits (a second reviewer strategy that buys every limit at all twelve stores measured about +177% over 200 days on other seeds before the last tightening; see section 5). That is the largest remaining edge and it is deliberate that launch weeks matter, but it is still the best active strategy by a wide margin and should be watched. Opening packs is no longer a paper profit (a pack on a stocked shelf is worth its price). Holding sealed product past the end of its print run is the patient route (+71% on paper after 18 months; First Bond leaves print in month 14). The sniper earns less because cheap marketplace listings no longer drift up to $0.99 and back. The hunt pays a diligent, knowledgeable player about +38% in 18 months with one or two decisions a day.
+Other measurements after: big-box branches carrying an old in-print game at day 300: 2 to 4 of 7 (was 0); singles tagged at 75% of value or less across town on a given day: a handful (was 0 by construction); yard sale lots worth 0.4x to 3.5x the ask, median about 1x; collections 0.75x to 1.7x the ask.
+
+## 5. Independent reviews
+
+Three reviewers with no part in the work (separate sessions, read-only): design and economy, code and saves, screens. Their findings and what was done:
+
+| Reviewer finding | Action |
+|---|---|
+| Sealed flipping still pays (+122% to +209% in 200 days on seeds 7 and 23): a stocked $150 box was "worth" $172 | **Fixed:** in-print anchor is list x (1.02 + 0.6 x sold-out), so a stocked shelf is worth list. Re-measured on seed 11: +119% over 540 days. Not re-run on the reviewer's seeds or with the reviewer's own strategy. |
+| Standing is a spend meter that a box-flipper maxes first; an allowance player never reaches Regular | **Changed:** sealed counts a point per $25 (two a day), cards traded count most, first tier at 8 points. Not re-measured with an allowance player. |
+| Shop bargains barely exist after day one | **Changed:** wider blind spots, three days before other customers find a new arrival, opening stock pre-picked so day one is not a windfall. Picker: 63 finds in 540 days. Still modest. |
+| Collections are never a bad buy | **Changed:** ask is 60 to 130% of worth. |
+| Haggling is a free click | **Changed:** a refused offer raises the price a tenth; at a show it makes the price firm. |
+| Looking through more of a box showed ten random cards | **Changed:** it shows the whole box. |
+| Card shows are a slightly dear shop | **Partly:** larger out-of-town table with a wilder eye, larger vintage table. End-of-day markdowns and show-only stock not built. |
+| Two outings a day rarely bind; money piles up on an allowance | **Open.** |
+| Tidemark vintage rebuild deletes store-held and lead-held copies; the lead still sold for full price | **Fixed** (`repair`, withdrawn lots) with regression checks. |
+| "Sell duplicates" bypassed the shops and paid more than any shop would | **Fixed** (`sellBest`). |
+| Offer state keyed by copy id only (three games share ids); a sort using the random stream; wasted work for the sealed-only shop; returned copies graded more often | **Fixed.** |
+| Card-show "Offer" bought instantly; a yard sale silently locked you out of the show; disabled buttons without reasons; standing unexplained; 29 px chips; 10 px labels; a 4,000 px directory | **Fixed** (confirm step, warning, reasons, explanation, 40 px targets, 12 px labels, shelf contents instead of the repeated paragraph on chain cards). Checked by the browser test, not re-reviewed. |
+| No value hint next to a seller's price: a tap per card | **Design decision:** you see your own estimate for cards you own a copy of; anything else is a tap. Knowledge grows with the collection. |
+| Day-advance cost: stores 44 ms and hunt 23 ms a day on average, show Saturdays 400 to 676 ms; Mondays average 3.5 s from older code (one of 38 s) | New code is cheap. **The Monday spikes are older code and were not investigated.** |
+
+Found sound by the code reviewer: save and load mid-lead and mid-show; the collector id caches never contain a held copy; 360 days of the Tidemark ten-year economy with no copy in two places; no negative cash over 780 days.
+
+## 6. Roadmap, in priority order
+
+1. **Human play.** Nothing here has been played by a person. A timed session on a real phone decides more than any further simulation.
+2. **Launch weeks.** Still the best active money (+119%). Options: a shared weekly limit per chain, NPC buyers who will not pay over the cheapest stocked shelf, or accept it as the game's "launch day" loop. Re-run the reviewer's scalper on several seeds.
+3. **Monday day-advance spikes** (seconds, once 38 s in the reviewer's run): profile the weekly ticks in the older code.
+4. **The hunt at hour 50.** More kinds of lead (a shop closing down, a storage unit, a trade night), dealers who buy at shows, end-of-day show markdowns, follow-ups from sellers, and something that makes two outings a real constraint.
+5. **Standing that does more:** a held card, first look at new arrivals a day early, a pull list for release day.
+6. **Marketplace depth:** NPC demand that knows what shops charge; fewer near-worthless listings (not re-measured after the $0.99 fix).
+7. **Architecture:** the three card-game forks and the one-script build are unchanged. New systems were written once against line adapters; the same should be done to the forks before a fourth game.
+8. Packaging for an HTML5 host (file count), from the earlier pass, still open.
+
+## 7. Public-alpha readiness
+
+**Not ready for a public alpha; ready for a small closed test.**
+- For: every automated suite passes (section 8); the economy has no known unlimited exploit; saves upgrade; there is now something to do each day besides open packs.
+- Against: no human has played the new systems; nothing has run on a real phone, in Safari or inside an itch page; day-advance can stall for seconds on some Mondays; the launch-week edge is large; the hunt's long-term depth is unproven (the design reviewer called hour 5 "thin" before the last round of changes, and that was not re-reviewed); the economy scripts (`wildkin_econ.py`, `tidemark_econ.py`, `tidemark_econ2_test.py`) were not re-run, and several numbers in `CLAUDE.md` about pack and box values while in print are now out of date (a stocked pack is worth about list, not $5.20 to $5.90).
+
+## 8. Verification

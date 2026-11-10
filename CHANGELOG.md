@@ -13,6 +13,27 @@ Player-facing changes first, development notes in the linked documents. Dates ar
 
 Design, limits and test commands: `design/shared-retail-world.md`.
 
+## 2026-11-10: studio overhaul (branch `claude/studio-overhaul`, not merged, not published)
+
+Audit, measurements and assessment: `design/studio-audit-2026-11.md`. Includes the shared stores of pull request 39.
+
+**Fixed**
+- **Buying off the shelf to resell online was unlimited free money.** Sealed product on a stocked shelf is now worth about its shelf price; a product that really is selling out is limited per customer per week.
+- **Big-box branches dropped every game about 100 days after launch.** Busy branches now keep a game that still sells; quiet ones mark it down and drop it.
+- **Marked-down boxes that were still worth more than list.** A chain only marks down what has stopped selling.
+- **Cheap marketplace listings crept up to $0.99.** A price cut never raises a price.
+- Home no longer says "Packs on the shelf" for a game with nothing in print.
+
+**Added**
+- **Shops with a point of view.** Each owner prices singles in their own way and re-prices on their own routine, so the same card costs different amounts around town and bargains exist. Other customers find them too.
+- **Standing.** Trade at an independent shop and you become a familiar face, a regular, a friend of the shop: you learn how the owner prices, get better prices for your cards and more of a hot release.
+- **Out & about** (Stores tab): weekend yard sales, private collections, a card show every fourth Saturday, tips from owners who know you, a finds log and ten goals. Two outings a day.
+- Each game's tab shows where that game is on a shelf today. Selling spare cards goes to whichever shop pays most.
+
+**Tools**
+- Robot players (`tools/agents/`) that play the built game for months and report what each strategy earns.
+- `tools/hunt_test.cjs`, `tools/hunt_ui_test.py`.
+
 ## 2026-11-01: alpha-readiness pass (branch `claude/eloquent-carson-27ik8y`, not published)
 
 Full account, measurements and open items: `design/alpha-readiness-2026-11.md`.
