@@ -37,7 +37,7 @@ const CIRCUIT=(function(){
     ['regular','Become a regular somewhere',h=>locals().some(s=>RETAIL.standing(s).tier>=2)],
     ['friend','Become a friend of a shop',h=>locals().some(s=>RETAIL.standing(s).tier>=3)],
     ['rounds','Visit every shop and big-box branch',h=>Object.values(G.retail.locations).every(s=>s.visit)],
-    ['yard','Buy a box at a yard sale',h=>h.stats.yard>=1],
+    ['yard','Buy a lot at a yard sale',h=>h.stats.yard>=1],
     ['coll','Buy a whole collection',h=>h.stats.coll>=1],
     ['show','Go to a card show',h=>h.stats.show>=1],
     ['bins','Pull a $5 card out of a dollar bin',h=>h.stats.bin>=1],
@@ -208,17 +208,19 @@ const CIRCUIT=(function(){
   const when=d=>d===G.day?'today':d===G.day+1?'tomorrow':DAYN[dowOf(d)]+' '+fmtDate(d);
   function badge(){ const h=H(); if (!h) return 0; return h.leads.filter(canGo).length+(h.show&&h.show.day===G.day?1:0); }
   function tabs(){ const on=UI.retailTab==='out', n=badge(); return `<div class="chips retail-tabs"><button class="chip ${on?'':'on'}" data-act="rtab" data-a="shops">Shops</button><button class="chip ${on?'on':''}" data-act="rtab" data-a="out">Out &amp; about${n?' <b class="retail-count">'+n+'</b>':''}</button></div>`; }
-  const cardRow=(g,c,right)=>{ const a=A[g],d=a.D(c.k); return `<div class="row retail-product"><button class="mini" data-act="${a.design}" data-a="${esc(c.k)}">${a.mini(c)}</button><div class="rt"><b>${esc(d.title)}</b><span>${a.name} · ${c.g>0?'GCS '+c.g:COND_LABN[condLabel(c.c)]} · ${esc(d.def.name)}</span></div>${right||''}</div>`; };
+  const cardRow=(g,c,right)=>{ const a=A[g],d=a.D(c.k); return `<div class="row retail-product"><button class="mini" data-act="${a.design}" data-a="${esc(c.k)}">${a.mini(c)}</button><div class="rt"><b>${esc(d.title)}</b><span>${a.name} · ${c.g>0?'GCS '+c.g:COND_LABN[condLabel(c.c)]} · ${esc(d.def.name)}</span>${RETAIL.knownHTML(g,c)}</div>${right||''}</div>`; };
   function leadCard(L){
     const live=liveRefs(L).length, open=canGo(L), a=A[L.g];
     const facts=L.ty==='yard'? `About ${Math.round(live/5)*5||live} cards, mostly ${a.name}${L.set!=null?' ('+esc(a.def(L.set).name)+')':''}` : `${live} ${a.name} cards`;
-    return `<article class="retail-card hunt-card ${open?'':'later'}"><div class="retail-card-top"><span>${L.ty==='yard'?'YARD SALE':'PRIVATE COLLECTION'}</span><span>${esc(L.where)}</span></div><h3>${esc(L.title)}</h3><p>${esc(L.story)}</p><div class="retail-card-foot"><small>${facts} · asking <b>${money(L.ask,true)}</b> · ${L.ty==='yard'?when(L.day):'until '+when(L.last)}</small>${btn('hgo',L.id,L.went===G.day?'Back to it':'Go',!open||(L.went!==G.day&&outingsLeft()<1))}</div></article>`;
+    const h=H(), showToday=h.show&&h.show.day===G.day&&!h.show.in;
+    const why=!open? (L.ty==='yard'?'On '+when(L.day)+'.':'') : (L.went!==G.day&&outingsLeft()<1)? 'No outings left today.' : (L.went!==G.day&&showToday)? 'The card show is today and takes the whole day: going here means missing it.' : '';
+    return `<article class="retail-card hunt-card ${open?'':'later'}"><div class="retail-card-top"><span>${L.ty==='yard'?'YARD SALE':'PRIVATE COLLECTION'}</span><span>${esc(L.where)}</span></div><h3>${esc(L.title)}</h3><p>${esc(L.story)}</p><div class="retail-card-foot"><small>${facts} · asking <b>${money(L.ask,true)}</b> · ${L.ty==='yard'?when(L.day):'until '+when(L.last)}</small>${btn('hgo',L.id,L.went===G.day?'Back to it':'Go',!open||(L.went!==G.day&&outingsLeft()<1))}</div>${why?'<div class="small hunt-why">'+why+'</div>':''}</article>`;
   }
   function leadView(L){
     const a=A[L.g], refs=liveRefs(L), n=refs.length;
     let cards;
     if (L.ty==='yard'){ const seen=L.top.slice(0,L.shown).map(id=>held(L.g,id,'lead:'+L.id)).filter(Boolean);
-      cards=`<h3>What you can see</h3><p class="small muted">${seen.length} of about ${n} cards. Tap a card to see what you know about it. The seller has no idea; the price is for the whole box.</p><div class="rows">${seen.map(c=>cardRow(L.g,c)).join('')}</div>${L.shown<L.top.length?`<div class="formrow">${btn('hdig',L.id,'Go through more of the box (uses an outing)',outingsLeft()<1)}</div>`:''}`;
+      cards=`<h3>What you can see</h3><p class="small muted">${seen.length} of about ${n} cards. You know the going rate of cards you own a copy of; tap any other to look it up. The seller has no idea what is here: the price is for the whole lot.</p><div class="rows">${seen.map(c=>cardRow(L.g,c)).join('')}</div>${L.shown<L.top.length?`<div class="formrow">${btn('hdig',L.id,'Go through more of the box (uses an outing)',outingsLeft()<1)}</div>`:''}`;
     } else { const top=refs.map(ref=>RETAIL.getCopy(ref.g,ref.id)).sort((p,q)=>a.value(q)-a.value(p)); const by={}; for (const c of top){ const r=a.D(c.k).rar; by[r]=(by[r]||0)+1; }
       cards=`<h3>The seller’s highlights</h3><p class="small muted">${n} cards in all: ${Object.entries(by).map(([k,v])=>v+' '+k).join(', ')}. These are the ones the seller pulled out to show you.</p><div class="rows">${top.slice(0,8).map(c=>cardRow(L.g,c)).join('')}</div>`; }
     const hag=L.tried? `<span class="small muted">${L.deal?'They took your offer.':'They would not go lower.'}</span>` : btn('hhag',L.id,L.ty==='yard'?'Offer '+money(Math.round(L.ask*0.75),true):'Offer '+money(Math.round(L.ask*0.9),true));
@@ -229,7 +231,7 @@ const CIRCUIT=(function(){
     const cur=tableOf(UI.huntTable)||S.tables[0], def=TABLES.find(x=>x.id===cur.id);
     const refs=cur.refs.map(ref=>({ref,c:held(ref.g,ref.id,'show:'+cur.id)})).filter(x=>x.c).sort((p,q)=>q.ref.p-p.ref.p);
     const pages=Math.max(1,Math.ceil(refs.length/20)), pg=Math.min(UI.huntPage||0,pages-1);
-    const rows=refs.slice(pg*20,pg*20+20).map(({ref,c})=>cardRow(ref.g,c,`<div class="retail-actions"><strong>${money(ref.p,true)}</strong>${btn('hsb',cur.id+'~'+ref.g+'~'+ref.id,'Buy',G.player.cash<ref.p)}${def.flat||cur.firm[ref.id]?'':btn('hso',cur.id+'~'+ref.g+'~'+ref.id,'Offer '+money(round(ref.p*0.9),true),G.player.cash<ref.p*0.9)}</div>`)).join('');
+    const rows=refs.slice(pg*20,pg*20+20).map(({ref,c})=>cardRow(ref.g,c,`<div class="retail-actions"><strong>${money(ref.p,true)}</strong>${btn('hsb',cur.id+'~'+ref.g+'~'+ref.id,'Buy',G.player.cash<ref.p)}${def.flat||cur.firm[ref.id]?'':`<button class="btn sm" data-act="hso" data-a="${cur.id+'~'+ref.g+'~'+ref.id}" data-confirm="Buy if they say yes" ${G.player.cash<ref.p*0.9?'disabled':''}>Offer ${money(round(ref.p*0.9),true)}</button>`}</div>`)).join('');
     const folk=(S.folk||[]).map(id=>RETAIL.profile(id)).filter(Boolean);
     return `<div class="retail-store-head"><div class="retail-eyebrow">CARD SHOW · ${fmtDate(S.day)}</div><h2>The Grand Mall card show</h2>${folk.length?`<p class="small muted">${folk.map(p=>esc(p.owner)+' from '+esc(p.name)).join(' and ')} ${folk.length>1?'are':'is'} here too. You stopped to talk.</p>`:''}</div><div class="chips">${S.tables.map(T=>{ const d=TABLES.find(x=>x.id===T.id); return `<button class="chip ${T===cur?'on':''}" data-act="htable" data-a="${T.id}">${esc(d.name)}</button>`; }).join('')}</div><div class="panel retail-inventory"><h3>${esc(def.name)}</h3><p class="small muted">${esc(def.who[0].toUpperCase()+def.who.slice(1))}: ${esc(def.blurb)} ${def.flat?'':'One lower offer per card; a refusal makes that price firm.'}</p><div class="rows">${rows||'<div class="empty">This table is cleaned out.</div>'}</div>${pages>1?`<div class="formrow">${btn('hpage',Math.max(0,pg-1),'Previous',pg===0)}<span class="small">Page ${pg+1} of ${pages}</span>${btn('hpage',pg+1,'Next',pg===pages-1)}</div>`:''}</div>`;
   }
@@ -254,8 +256,8 @@ const CIRCUIT=(function(){
   }
   // rows for Home's "Needs you"
   function needs(){ const h=H(), out=[]; if (!h) return out;
-    if (h.show && h.show.day===G.day && !h.show.in) out.push(['Card show today','Six dealers at the Grand Mall. It takes the whole day.','hshowgo','','Look']);
-    for (const L of h.leads.filter(canGo)) if (L.went!==G.day) out.push([L.title+(L.ty==='yard'?' (yard sale today)':''),L.where+' · asking '+money(L.ask,true)+(L.ty==='coll'?' · until '+when(L.last):''),'hopen',L.id,'See']);
+    if (h.show && h.show.day===G.day && !h.show.in && outingsLeft()>=OUTINGS) out.push(['Card show today','Six dealers at the Grand Mall. It takes the whole day, so go before anything else.','hshowgo','','See']);
+    for (const L of h.leads.filter(canGo)) if (L.went!==G.day && outingsLeft()>0) out.push([L.title+(L.ty==='yard'?' (yard sale today)':''),L.where+' · asking '+money(L.ask,true)+(L.ty==='coll'?' · until '+when(L.last):''),'hopen',L.id,'See']);
     return out.slice(0,4); }
   const done=(e,ok)=>{ if (e&&e!=='no'){ showToast(e); return false; } if (ok) showToast(ok,true); refreshSheet(); render(true); queueSave(); return true; };
   ACT.rtab=k=>{ UI.retailTab=k==='out'?'out':'shops'; UI.huntLead=null; UI.huntShow=false; UI.retailLocation=null; UI.retailOnline=null; render(true); };
@@ -270,7 +272,7 @@ const CIRCUIT=(function(){
   ACT.htable=id=>{ UI.huntTable=id; UI.huntPage=0; render(true); };
   ACT.hpage=k=>{ UI.huntPage=Math.max(0,Number(k)||0); render(true); };
   ACT.hsb=a=>{ const [t,g,c]=a.split('~'); done(showBuy(t,g,+c,false),'Bought at the show. Find it in Collection.'); };
-  ACT.hso=a=>{ const [t,g,c]=a.split('~'); const e=showBuy(t,g,+c,true); if (e==='no') showToast('“Can’t do it for that.” The price is firm now.'); done(e,e?null:'Offer taken. Find it in Collection.'); };
+  ACT.hso=(a,el)=>{ if (el&&!armed(el)) return; const [t,g,c]=a.split('~'); const e=showBuy(t,g,+c,true); if (e==='no') showToast('“Can’t do it for that.” The price is firm now.'); done(e,e?null:'Offer taken. Find it in Collection.'); };
   // the day: after the stores have had theirs
   const prevAdvance=advanceDay; advanceDay=function(){ prevAdvance.apply(this,arguments); tick(G.day); };
   const prevMigrate=migrate; migrate=function(){ prevMigrate.apply(this,arguments); const h=G&&G.retail&&G.retail.hunt; if (h) sweep(h); };
