@@ -128,3 +128,8 @@
 .retail-habit{border-left:3px solid var(--store-ink,#d1ae69);padding-left:10px}
 .retail-strip .row{align-items:center}.retail-store-head{padding:18px}.retail-store-head h2{font-size:26px;margin:6px 0}.retail-store-head>.btn{margin-bottom:12px}
 [data-theme=light] .retail-bar{background:rgba(0,0,0,.12)}
+/* out and about (the Hunt) */
+.retail-tabs{margin:4px 0 14px}.retail-count{display:inline-block;min-width:18px;padding:0 5px;border-radius:9px;background:#e8b86a;color:#10202b;font-size:11px;line-height:18px;text-align:center}
+.hunt-today{margin:0 0 14px;padding:10px 14px;border:1px solid var(--line);border-radius:10px}.hunt-card{--store-ink:#e8b86a}.hunt-card.later{opacity:.75}
+.hunt-goals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 14px;font-size:13px}.hunt-goal{color:var(--muted)}.hunt-goal span{display:inline-block;width:18px}.hunt-goal.done{color:inherit}.hunt-goal.done span{color:#8fd0a0}
+@media(max-width:620px){.hunt-goals{grid-template-columns:1fr}.retail-actions{display:flex;flex-direction:column;gap:6px;align-items:flex-end}}

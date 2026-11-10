@@ -25,8 +25,50 @@ var AG=(function(){
   }
   function openAll(){ for (const L of lines()){ const ids=L.mine().filter(c=>isSealed(L,c)&&!c.l&&!c._hold).map(c=>c.id); if (ids.length){ const r=openMany[L.kind](ids); if (r){ S.pulled+=r.packs.length; act(); } } } }
   // ---- strategies ----
+  // walk every independent shop and buy singles tagged at 70% of value or less (value $2+)
+  function pickShops(){
+    if (!AD()) return;
+    for (const p of RETAIL.profiles){
+      if (p.kind!=='local') continue;
+      const st=G.retail.locations[p.id]; RETAIL.visit(p.id);
+      for (const ref of st.singles.slice()){
+        const c=RETAIL.getCopy(ref.g,ref.id); if (!c) continue;
+        const v=RETAIL.adapters[ref.g].value(c), pr=RETAIL.singlePrice(p.id,ref.g,c);
+        if (v<2 || pr>v*0.7 || pr>G.player.cash*0.3) continue;
+        if (!RETAIL.singleBuy(p.id,ref.g,c.id)){ act(); S.flips++; S.flipCost+=pr; c._sell=1; }
+      }
+    }
+  }
+  function markPulls(){ for (const LL of lines()) for (const c of LL.mine()) if (!c.l && !isSealed(LL,c) && c.g>=0 && LL.value(c)>=2) c._sell=1; }
+  // yard sales, collections and card shows, the way a careful and knowledgeable player would do them
+  function huntDay(){
+    const h=CIRCUIT.H();
+    for (const L of h.leads.slice()){
+      if (!CIRCUIT.canGo(L) || CIRCUIT.go(L.id)) continue;
+      act(); const a=RETAIL.adapters[L.g]; let est;
+      if (L.ty==='yard'){ const top=L.top.slice(0,L.shown).map(id=>RETAIL.getCopy(L.g,id)).filter(Boolean); est=top.reduce((x,c)=>x+a.value(c),0)/Math.max(1,top.length)*CIRCUIT.liveRefs(L).length; }
+      else { const top=CIRCUIT.liveRefs(L).map(r=>a.value(RETAIL.getCopy(r.g,r.id))).sort((x,y)=>y-x).slice(0,8); est=top.reduce((x,v)=>x+v,0)*1.25; }
+      if (est<L.ask*1.3) continue;
+      CIRCUIT.haggle(L.id); if (G.player.cash<L.ask) continue;
+      const r=CIRCUIT.buyLot(L.id);
+      if (r && r.n){ act(); S.lots=(S.lots||0)+1; S.flipCost+=L.ask; S.lotPaid=(S.lotPaid||0)+L.ask; S.lotWorth=(S.lotWorth||0)+r.worth; markPulls(); }
+    }
+    if (h.show && h.show.day===G.day && !CIRCUIT.enterShow()){
+      act(); S.shows=(S.shows||0)+1;
+      for (const T of h.show.tables) for (const ref of T.refs.slice()){
+        const c=RETAIL.getCopy(ref.g,ref.id); if (!c) continue;
+        const v=RETAIL.adapters[ref.g].value(c); if (v<2 || ref.p>G.player.cash*0.3) continue;
+        const offer=ref.p>v*0.75 && ref.p*0.9<=v*0.75 && !T.firm[ref.id];
+        if (ref.p<=v*0.75 || offer){ if (!CIRCUIT.showBuy(T.id,ref.g,ref.id,offer)){ act(); S.flips++; S.flipCost+=ref.p; c._sell=1; } }
+      }
+    }
+  }
   const STRATS={
     idle(){},
+    // shop picker: the independent shops every day, bargains listed online at full value
+    picker(){ pickShops(); relistStale(1.0); answerOffers(0.85); },
+    // the full hunt: shops, yard sales, collections and card shows
+    hunter(){ pickShops(); huntDay(); relistStale(1.0); answerOffers(0.85); },
     // buys ten packs a week from the cheapest shelf, opens them, keeps everything
     ripper(){ if (dowOf(G.day)===6){ buyPacks(10); openAll(); } },
     // the same, but lists every pull worth $2 or more at its value and sells the rest to shop buylists once a month
@@ -59,6 +101,6 @@ var AG=(function(){
   };
   function start(name,cash){ S.name=name; G.player.cash=cash; G.player.pay=0; S.start=cash; S.day0=G.day; S.acts=0; S.series=[]; }
   function step(){ try { STRATS[S.name](); } catch(e){ S.err=(S.err||0)+1; S.lastErr=String(e&&e.stack||e).slice(0,400); } advanceDay(); if ((G.day-S.day0)%30===0) S.series.push([G.day-S.day0, Math.round(G.player.cash), Math.round(netWorthNow())]); }
-  function report(){ const hold=netWorthNow(); const P=G.player; return {agent:S.name, days:G.day-S.day0, start:S.start, cash:Math.round(P.cash*100)/100, holdings:Math.round(hold), total:Math.round(P.cash+hold), bought:Math.round(P.bought), sold:Math.round(P.sold), fees:Math.round(P.fees), acts:S.acts, packsCost:Math.round(S.spentPacks), packsOpened:S.pulled, flips:S.flips, flipCost:Math.round(S.flipCost), bids:S.bids||0, graded:S.graded||0, buylist:Math.round(S.buylist||0), listedNow:G.lst.filter(l=>l.sel===0).length, log:S.log, err:S.err||0, lastErr:S.lastErr||'', series:S.series}; }
+  function report(){ const hold=netWorthNow(); const P=G.player; return {agent:S.name, days:G.day-S.day0, start:S.start, cash:Math.round(P.cash*100)/100, holdings:Math.round(hold), total:Math.round(P.cash+hold), bought:Math.round(P.bought), sold:Math.round(P.sold), fees:Math.round(P.fees), acts:S.acts, packsCost:Math.round(S.spentPacks), packsOpened:S.pulled, flips:S.flips, flipCost:Math.round(S.flipCost), bids:S.bids||0, graded:S.graded||0, buylist:Math.round(S.buylist||0), listedNow:G.lst.filter(l=>l.sel===0).length, log:S.log, lots:S.lots||0, lotPaid:Math.round(S.lotPaid||0), lotWorth:Math.round(S.lotWorth||0), shows:S.shows||0, hunt:(typeof CIRCUIT!=='undefined'&&CIRCUIT&&CIRCUIT.H())? CIRCUIT.H().stats : null, standing:(typeof RETAIL!=='undefined'&&RETAIL&&G.retail)? RETAIL.profiles.filter(p=>p.kind==='local').map(p=>Math.round(G.retail.locations[p.id].rep||0)) : null, err:S.err||0, lastErr:S.lastErr||'', series:S.series}; }
   return {start,step,report,shelves,STRATS,S};
 })();

@@ -57,7 +57,7 @@ const RETAIL=(function(){
     xt:{id:'xt',kind:'x',name:'Tidemark',world:()=>G.xtg,table:()=>G.xtc,sets:t=>xtReleasedSets(t),def:xtSetDef,key:xtKey,D:xtD,inPrint:xtInPrint,msrp:XT_MSRP,ev:n=>xtPackEV(n),raror:XT_RAROR,make:(...a)=>xtMakeCopy(...a),value:xtCopyValue,fair:xtFairRaw,mini:xMiniT,design:'xtdesign',cg:'xt',pop:()=>G.xpop,clear:k=>xTfvClear(k),npc:()=>G.npcs.filter(isXtNPC),ids:'_npcXtIds'},
     br:{id:'br',kind:'b',name:'Broken Reach',world:()=>G.brg,table:()=>G.brc,sets:t=>brReleasedSets(t),def:brSetDef,key:brKey,D:brD,inPrint:brInPrint,msrp:BR_MSRP,ev:n=>brPackEV(n),raror:BR_RAROR,make:(...a)=>brMakeCopy(...a),value:brCopyValue,fair:brFairRaw,mini:bMiniT,design:'brdesign',cg:'br',pop:()=>G.bpop,clear:k=>brFvClear(k),npc:()=>G.npcs.filter(isBrNPC),ids:'_npcBrIds'}
   };
-  const TIERS=[[0,'New face'],[12,'Familiar face'],[35,'Regular'],[80,'Friend of the shop']];
+  const TIERS=[[0,'New face'],[15,'Familiar face'],[45,'Regular'],[110,'Friend of the shop']];
   const round=x=>Math.round(x*100)/100;
   const clampN=(x,a,b)=>Math.max(a,Math.min(b,x));
   const ready=()=>G&&G.tcg&&G.xtg&&G.brg;
@@ -70,17 +70,17 @@ const RETAIL=(function(){
 
   // ---------- standing: how well an independent shop knows the player ----------
   function standing(s){ const rep=(s&&s.rep)||0; let tier=0; for (let i=0;i<TIERS.length;i++) if (rep>=TIERS[i][0]) tier=i; return {rep,tier,name:TIERS[tier][1],next:TIERS[tier+1]?TIERS[tier+1][0]:null,from:TIERS[tier][0]}; }
-  // points: the first visit of a day 1; a point per $8 spent (5 a day at most); a point per $8 sold to the shop (3 a day); events give what they say
+  // points: the first visit of a week 1; a point per $8 spent (5 a day at most); a point per $8 sold to the shop (3 a day); events give what they say
   function credit(s,kind,amount){
     const p=profile(s.id); if (!p||p.kind!=='local') return 0;
     const d=s.repDay&&s.repDay.d===G.day? s.repDay : (s.repDay={d:G.day,visit:0,spend:0,sell:0});
     let add=0;
-    if (kind==='visit'){ if (!d.visit){ d.visit=1; add=1; } }
+    if (kind==='visit'){ if (s.repWeek!==weekNo(G.day)){ s.repWeek=weekNo(G.day); add=1; } }   // showing your face counts once a week
     else if (kind==='spend'){ add=Math.max(0,Math.min(5-d.spend,amount/8)); d.spend+=add; }
     else if (kind==='sell'){ add=Math.max(0,Math.min(3-d.sell,amount/8)); d.sell+=add; }
     else if (kind==='event') add=amount;
     if (!add){ s.seen=G.day; return 0; }
-    const before=standing(s).tier; s.rep=Math.min(140,round((s.rep||0)+add)); s.seen=G.day; const after=standing(s);
+    const before=standing(s).tier; s.rep=Math.min(180,round((s.rep||0)+add)); s.seen=G.day; const after=standing(s);
     if (after.tier>before){ (G.retail.log=G.retail.log||[]).unshift([G.day,'standing',s.id,after.tier]); if (G.retail.log.length>40) G.retail.log.length=40; showToast(p.owner+' at '+p.name+' knows you now: '+after.name.toLowerCase()+'.',true); }
     return add;
   }
@@ -358,11 +358,11 @@ const RETAIL=(function(){
     const w=ensure(),s=w&&w.locations[id],a=adapters[g],c=a&&a.table()[cid];
     if (!s||!c||c.o!==-2||c.rs!==id||!refOf(s,g,cid)) return 'That copy has already sold.';
     const p=singlePrice(id,g,c); if (G.player.cash<p) return 'You need '+money(p,true)+'.';
-    const worth=round(a.value(c));
+    const worth=round(a.value(c)),inBin=!!refOf(s,g,cid).b;
     G.player.cash=round(G.player.cash-p); G.player.bought=round(G.player.bought+p); s.cash=round(s.cash+p); s.revenue=round(s.revenue+p);
     c.o=0; delete c.rs; c.nw=1; c.a=[G.day,'bought',p,profile(id).name]; c.h=(c.h||[]).concat([[G.day,'Bought at '+profile(id).name,p,'']]); c.pv={d:G.day,v:worth,n:''};
     s.singles=s.singles.filter(x=>!(x.g===g&&x.id===+cid)); UI.cg=a.cg; credit(s,'spend',p);
-    if (typeof CIRCUIT!=='undefined'&&CIRCUIT) CIRCUIT.noteFind(g,c,p,worth,profile(id).name);
+    if (typeof CIRCUIT!=='undefined'&&CIRCUIT) CIRCUIT.noteFind(g,c,p,worth,profile(id).name,inBin);
     return null;
   }
   function sell(id,g,cid){
