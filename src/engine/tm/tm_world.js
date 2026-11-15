@@ -212,6 +212,51 @@ function xtPrintNews(t){ const n=TM_TT, e=xtPrintEnd(n), def=xtSetDef(n); if (de
   if (t===e-30) xtNews(`FINAL PRINT RUN FOR ${def.name.toUpperCase()}`, `Tidemark Games says ${def.name} retail restocks end on ${fmtDate(e,true)}. Whatever is on shelves after that is all there will be.`, {set:n});
   if (t===e) xtNews(`${def.name.toUpperCase()} IS OUT OF PRINT`, `Stores received their last ${def.name} shipment. Sealed product now only gets scarcer.`, {set:n}); }
 function xtPackRetailPressure(n){ return 0.7+0.9*Math.max(0, Math.min(1.6, xtSetPrestige(n)-0.7)); }
+// ---------- playing ahead ----------
+// The slow days were the ones where the engine plays hundreds of games at once: the field rebuilt on the day a ban takes effect
+// (announced fourteen days earlier) and the committee's test of a dominant deck (on a Monday, after ten weeks on top).
+// Both can be seen coming. xtForecast lists the matchups those days will ask for, with the exact decks and seeds; xtWarmTick plays
+// them a game at a time while the player is looking at the screen. On the day, TMR.matchup finds them already played. A forecast
+// that turns out wrong (the field changed in between) costs nothing but the idle time: the day plays what is missing, as before.
+function xtFieldTasks(d){   // what xtField(d) will play, without changing anything
+  const T=G.xtg, X=T.mx, out=[]; if (!X || X.rv!==TMR.RV) return out;
+  const bn=Object.keys(T.ban).filter(cid=>T.ban[cid].d<=d).map(cid=>TMR.byCid.get(+cid).n).sort(); const names=new Set(bn); if ('TT|'+bn.join(',')===X.key) return out;
+  const top=X.top.slice(), drop=[], fresh=[];
+  for (let i=0;i<top.length;i++){ const p=top[i]; if (!p.c.some(([cid])=>names.has(TMR.byCid.get(cid).n))) continue;
+    const lead=p.lead!=null && names.has(TMR.byCid.get(p.lead).n)? null : p.lead; const nd=TMR.brew({id:p.id,mix:p.mix,plan:p.plan,tech:p.tech,lead,seed:p.seed}, bn);
+    if (!nd){ drop.push(i); continue; } top[i]=TMR.pack(nd,{}); fresh.push(i); }
+  const decks=top.map(p=>TMR.unpack(p));
+  for (const i of fresh) for (let j=0;j<top.length;j++){ if (j===i || (fresh.includes(j) && j<i) || drop.includes(j)) continue; out.push([decks[i],decks[j],6,hsh('ban'+i+':'+j+':'+d)]); }
+  return out;
+}
+function xtBanTestTasks(t){   // what xtBanCheck(t) will play if the leading deck is still on top that Monday
+  const T=G.xtg, A=T.arch, out=[]; if (!A.length || !T.mx) return out; const top=A.slice().sort((a,b)=>b.sh-a.sh)[0];
+  if (!top || (T.dom[top.id]||0)<XTP.domWeeks-1 || top.sh<=XTP.dom*0.9 || t-(T.lastBan||0)<=120) return out;
+  const staple=cid=>A.filter(b=>b!==top && b.cnt[cid]).reduce((s,b)=>s+b.sh,0)>0.3;
+  const cand=Object.keys(top.cnt).map(Number).filter(cid=>{ const c=xtCardByCid(cid); return c && !T.ban[cid] && !staple(cid); })
+    .sort((x,y)=>(y===top.lead?100:0)+TMR.rate(TMR.byCid.get(y))*0.3+top.cnt[y]-(x===top.lead?100:0)-TMR.rate(TMR.byCid.get(x))*0.3-top.cnt[x]).slice(0,4);
+  const p=T.mx.top[top.ix], cur=p&&TMR.unpack(p); if (!cur) return out; const opp=A.filter(b=>b!==top).slice().sort((a,b)=>b.sh-a.sh).slice(0,6);
+  const bn0=Object.keys(T.ban).filter(cid=>T.ban[cid].d<=t).map(cid=>TMR.byCid.get(+cid).n).sort();
+  for (const cid of cand){ const c=TMR.byCid.get(cid); const nd=TMR.brew({id:p.id,mix:p.mix,plan:p.plan,tech:p.tech,lead:p.lead===cid? null : p.lead,seed:p.seed}, bn0.concat([c.n])); if (!nd) continue;
+    for (const b of opp){ const od=TMR.unpack(T.mx.top[b.ix]); if (!od) continue; const seed=hsh('ban'+t+cid+b.id); out.push([cur,od,6,seed],[nd,od,6,seed]); } }
+  return out;
+}
+function xtForecast(t){
+  const T=G.xtg; if (!T || !T.arch || !T.arch.length) return []; let out=[];
+  const days=Object.values(T.ban).map(b=>b.d).filter(d=>d>t).sort((a,b)=>a-b); if (days.length) out=out.concat(xtFieldTasks(days[0]));
+  let mon=t+1; while (dowOf(mon)!==1) mon++; out=out.concat(xtBanTestTasks(mon));
+  // Not forecast: the weekly test of new lists (xtBrewWeek). Which lists are tried is decided by the world's dice on the day; playing the
+  // likeliest ahead was measured (2026-11-15) at 27,000 speculative games over two years for a Monday p95 of 1.9 s instead of 3.6 s. Not worth the battery.
+  return out;
+}
+const XT_WARM={day:-1, q:[]};
+function xtWarmTick(ms){   // play ahead for up to ms milliseconds; true while there is more to do
+  if (typeof G==='undefined' || !G || !G.xtg || G.live===false) return false;
+  if (XT_WARM.day!==G.day){ XT_WARM.day=G.day; try { XT_WARM.q=xtForecast(G.day); } catch(e){ XT_WARM.q=[]; } }
+  const s=performance.now(), q=XT_WARM.q; while (q.length && performance.now()-s<ms){ const x=q[0]; if (TMR.warm(x[0],x[1],x[2],x[3])) q.shift(); }
+  return q.length>0;
+}
+if (typeof setInterval==='function' && typeof document!=='undefined' && typeof window!=='undefined' && !window.__xtNoWarm) setInterval(()=>{ try { if (!document.hidden) xtWarmTick(10); } catch(e){} }, 80);
 function xtApplyBans(t){ for (const cid in G.xtg.ban){ if (G.xtg.ban[cid].d===t){ xtRebuildMeta(t); const c=xtCardByCid(+cid); if (c) xtNews(c.name.toUpperCase()+' IS NOW BANNED', `${c.name} is no longer legal in Standard. ${G.xtg.ban[cid].why} players are retooling.`, {cid:+cid}); } } }
 function xtDay(t){
   const T=G.xtg; if (!T) return; const nx=xtNextSet(t-1); if (nx && xtSetDef(nx).rel===t) xtRelease(nx,t);

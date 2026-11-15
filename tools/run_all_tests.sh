@@ -21,6 +21,7 @@ run browse python3 tools/browse_test.py
 run retail_state node tools/retail_test.cjs
 run retail_ui python3 tools/retail_ui_test.py
 run hunt_state node tools/hunt_test.cjs
+run tidemark_cache node tools/perf/memo_check.cjs 300
 run hunt_ui python3 tools/hunt_ui_test.py
 run br_layout python3 tools/br_layout_test.py
 run phone_layout python3 tools/phone_layout_test.py

@@ -63,8 +63,41 @@ var AG=(function(){
       }
     }
   }
+  // ---- the allowance collector's helpers ----
+  const WK=()=>RETAIL.adapters.wk;
+  function focusSet(){ const a=WK(), rel=a.sets(G.day); return rel.length? rel[rel.length-1] : null; }   // collects the newest Wildkin set
+  function ownedNos(set){ const a=WK(), have=new Set(); for (const c of myTc()){ const d=a.D(c.k); if (!d.sealed && d.set===set) have.add(d.no); } return have; }
+  function completion(set){ if (set==null) return 0; return ownedNos(set).size/tcSetCards(set).length; }
+  // keep the best copy of each card, sell the others to whichever shop pays most
+  function sellSpares(){
+    for (const L of lines()){ const g=({t:'wk',x:'xt',b:'br'})[L.kind], a=RETAIL.adapters[g], seen=new Map();
+      const mine=L.mine().filter(c=>!c.l&&c.g===0&&!a.D(c.k).sealed).sort((p,q)=>L.value(q)-L.value(p));
+      for (const c of mine){ const id=a.D(c.k).cid||c.k; if (!seen.has(id)){ seen.set(id,1); continue; } const [e,,p]=RETAIL.sellBest(g,c.id); if (!e){ act(); S.buylist=(S.buylist||0)+p; } } }
+  }
   const STRATS={
     idle(){},
+    // The reviewer's launch-week scalper (design review, seeds 7 and 23): whenever a product in print is worth at least 1.18x its shelf price,
+    // buy as many as each of the twelve stores will sell this week, list at 95% of value, take offers of 90%.
+    scalper(){ for (const s of shelves()){ if (!s.inPrint || s.fair<s.price*1.18) continue; let n=0; while (s.x.q>0 && G.player.cash>=s.price && n<12){ if (RETAIL.sealedBuy(s.loc,s.k,1)) break; n++; act(); S.flips++; S.flipCost+=s.price; } }
+      for (const L of lines()) for (const c of L.mine()) if (isSealed(L,c)&&!c.l&&!c._sell) c._sell=1;
+      relistStale(0.95); answerOffers(0.9); },
+    // A realistic player on the default start ($75, $50 every Friday), who never resells sealed product and never lists online.
+    // Collects the newest Wildkin set: packs from the local shop on Saturday, missing cards from shop cases when they are cheap,
+    // a round of the independent shops once a week, yard sales and the card show when affordable, spare cards sold to shops monthly.
+    allowance(){ const dow=dowOf(G.day), set=focusSet(), cash=()=>G.player.cash;
+      if (dow===6){
+        if (typeof CIRCUIT!=='undefined'&&CIRCUIT){ const h=CIRCUIT.H();
+          if (h.show && h.show.day===G.day && cash()>=25 && !CIRCUIT.enterShow()){ act(); S.shows=(S.shows||0)+1; const have=set!=null? ownedNos(set) : new Set(); let bought=0;
+            for (const T of h.show.tables) for (const ref of T.refs.slice()){ if (bought>=4) break; const c=RETAIL.getCopy(ref.g,ref.id); if (!c||ref.g!=='wk') continue; const d=WK().D(c.k); if (d.set!==set||have.has(d.no)||ref.p>Math.min(4,cash()*0.2)) continue; if (!CIRCUIT.showBuy(T.id,ref.g,ref.id,false)){ act(); bought++; have.add(d.no); S.singlesSpent=(S.singlesSpent||0)+ref.p; } } }
+          for (const L of h.leads.slice()){ if (!CIRCUIT.canGo(L) || L.ask>cash()*0.25 || CIRCUIT.outingsLeft()<1 || CIRCUIT.go(L.id)) continue; act(); const a=RETAIL.adapters[L.g];
+            const top=L.top? L.top.slice(0,L.shown).map(id=>RETAIL.getCopy(L.g,id)).filter(Boolean) : []; if (!top.length) continue; const est=top.reduce((x,c)=>x+a.value(c),0)/top.length*CIRCUIT.liveRefs(L).length;
+            if (est>=L.ask){ const r=CIRCUIT.buyLot(L.id); if (r&&r.n){ act(); S.lots=(S.lots||0)+1; S.lotPaid=(S.lotPaid||0)+L.ask; S.lotWorth=(S.lotWorth||0)+r.worth; } } } }
+        if (set!=null){ const packs=Math.min(6,Math.floor((cash()-10)/5)); if (packs>0){ buyPacks(packs,s=>s.g==='wk'&&s.x.n===set&&s.kind==='local') || buyPacks(packs,s=>s.g==='wk'&&s.x.n===set); openAll(); } } }
+      if (dow===3){ const have=set!=null? ownedNos(set) : new Set();   // the weekly round of the shops
+        for (const p of RETAIL.profiles){ if (p.kind!=='local') continue; RETAIL.visit(p.id); const st=G.retail.locations[p.id];
+          for (const ref of st.singles.slice()){ if (ref.g!=='wk') continue; const c=RETAIL.getCopy(ref.g,ref.id); if (!c) continue; const d=WK().D(c.k); if (d.set!==set||have.has(d.no)) continue; const pr=RETAIL.singlePrice(p.id,'wk',c); if (pr>3||pr>cash()-10) continue; if (!RETAIL.singleBuy(p.id,'wk',c.id)){ act(); have.add(d.no); S.singlesSpent=(S.singlesSpent||0)+pr; } } } }
+      if (G.day%28===0) sellSpares();
+      if ((G.day-S.day0)%30===0) (S.prog=S.prog||[]).push([G.day-S.day0, Math.round(completion(set)*100), set]); },
     // shop picker: the independent shops every day, bargains listed online at full value
     picker(){ pickShops(); relistStale(1.0); answerOffers(0.85); },
     // the full hunt: shops, yard sales, collections and card shows
@@ -99,8 +132,13 @@ var AG=(function(){
     // sells everything it is dealt (scenario binder/box) and whatever it pulls to shop buylists at once: the "fast cash" floor
     dumper(){ if (dowOf(G.day)===6){ buyPacks(10); openAll(); if (AD()) for (const L of lines()){ const g=({t:'wk',x:'xt',b:'br'})[L.kind]; for (const c of L.mine()){ if (c.l||isSealed(L,c)||c.g!==0) continue; let best=null,bp=0; for (const p of RETAIL.profiles){ const o=RETAIL.offer(p.id,g,c); if (o>bp){ bp=o; best=p.id; } } if (best && bp>=0.05 && !RETAIL.sell(best,g,c.id)){ act(); S.buylist=(S.buylist||0)+bp; } } } } }
   };
-  function start(name,cash){ S.name=name; G.player.cash=cash; G.player.pay=0; S.start=cash; S.day0=G.day; S.acts=0; S.series=[]; }
+  // What everything owned would fetch if sold today the quick way: a single at the best shop offer for it (nothing if no shop wants it),
+  // sealed product listed at 90% of value less the 10% fee. Always below the paper value (netWorthNow), which prices cards at full value.
+  function liquidation(){ let v=0; for (const L of lines()){ const g=({t:'wk',x:'xt',b:'br'})[L.kind], a=RETAIL.adapters[g];
+      for (const c of L.mine()){ if (c.g<0) continue; if (a.D(c.k).sealed){ v+=L.value(c)*0.9*0.9; continue; } let best=0; for (const p of RETAIL.profiles){ const o=RETAIL.offer(p.id,g,c); if (o>best) best=o; } v+=best; } }
+    return Math.round(v*100)/100; }
+  function start(name,cash){ S.name=name; if (name==='allowance'){ S.start=G.player.cash; S.pay=G.player.pay; S.day0=G.day; S.acts=0; S.series=[]; return; } G.player.cash=cash; G.player.pay=0; S.start=cash; S.day0=G.day; S.acts=0; S.series=[]; }
   function step(){ try { STRATS[S.name](); } catch(e){ S.err=(S.err||0)+1; S.lastErr=String(e&&e.stack||e).slice(0,400); } advanceDay(); if ((G.day-S.day0)%30===0) S.series.push([G.day-S.day0, Math.round(G.player.cash), Math.round(netWorthNow())]); }
-  function report(){ const hold=netWorthNow(); const P=G.player; return {agent:S.name, days:G.day-S.day0, start:S.start, cash:Math.round(P.cash*100)/100, holdings:Math.round(hold), total:Math.round(P.cash+hold), bought:Math.round(P.bought), sold:Math.round(P.sold), fees:Math.round(P.fees), acts:S.acts, packsCost:Math.round(S.spentPacks), packsOpened:S.pulled, flips:S.flips, flipCost:Math.round(S.flipCost), bids:S.bids||0, graded:S.graded||0, buylist:Math.round(S.buylist||0), listedNow:G.lst.filter(l=>l.sel===0).length, log:S.log, lots:S.lots||0, lotPaid:Math.round(S.lotPaid||0), lotWorth:Math.round(S.lotWorth||0), shows:S.shows||0, hunt:(typeof CIRCUIT!=='undefined'&&CIRCUIT&&CIRCUIT.H())? CIRCUIT.H().stats : null, standing:(typeof RETAIL!=='undefined'&&RETAIL&&G.retail)? RETAIL.profiles.filter(p=>p.kind==='local').map(p=>Math.round(G.retail.locations[p.id].rep||0)) : null, err:S.err||0, lastErr:S.lastErr||'', series:S.series}; }
+  function report(){ const hold=netWorthNow(); const P=G.player; return {agent:S.name, days:G.day-S.day0, start:S.start, cash:Math.round(P.cash*100)/100, holdings:Math.round(hold), total:Math.round(P.cash+hold), bought:Math.round(P.bought), sold:Math.round(P.sold), fees:Math.round(P.fees), acts:S.acts, packsCost:Math.round(S.spentPacks), packsOpened:S.pulled, flips:S.flips, flipCost:Math.round(S.flipCost), bids:S.bids||0, graded:S.graded||0, buylist:Math.round(S.buylist||0), listedNow:G.lst.filter(l=>l.sel===0).length, liq:liquidation(), income:Math.round((S.pay||0)*Math.floor((G.day-S.day0)/7)), prog:S.prog||null, singlesSpent:Math.round(S.singlesSpent||0), focus:(typeof RETAIL!=='undefined'&&RETAIL&&S.name==='allowance')? [focusSet(),Math.round(completion(focusSet())*100),Math.round(completion(1)*100)] : null, goals:(typeof CIRCUIT!=='undefined'&&CIRCUIT&&CIRCUIT.H())? Object.keys(CIRCUIT.H().goals).length : 0, tiers:(typeof RETAIL!=='undefined'&&RETAIL&&G.retail)? RETAIL.profiles.filter(p=>p.kind==='local').map(p=>RETAIL.standing(G.retail.locations[p.id]).tier) : null, log:S.log, lots:S.lots||0, lotPaid:Math.round(S.lotPaid||0), lotWorth:Math.round(S.lotWorth||0), shows:S.shows||0, hunt:(typeof CIRCUIT!=='undefined'&&CIRCUIT&&CIRCUIT.H())? CIRCUIT.H().stats : null, standing:(typeof RETAIL!=='undefined'&&RETAIL&&G.retail)? RETAIL.profiles.filter(p=>p.kind==='local').map(p=>Math.round(G.retail.locations[p.id].rep||0)) : null, err:S.err||0, lastErr:S.lastErr||'', series:S.series}; }
   return {start,step,report,shelves,STRATS,S};
 })();

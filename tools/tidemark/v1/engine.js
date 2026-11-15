@@ -464,4 +464,18 @@ function play(deckA, deckB, seed, cfg){ cfg=cfg||{}; const off=new Set(cfg.off||
     bump(S); cur=1-cur; }
   if (!S.over){ S.win=S.p[0].harbor>S.p[1].harbor?0:S.p[1].harbor>S.p[0].harbor?1:-1; S.why='time'; }
   return {w:S.win, first, turns:Math.ceil(S.turn/2), why:S.why, log:S.log, harbor:[S.p[0].harbor,S.p[1].harbor]}; }
+// ---- attack planning cache ---- // PERF-ONLY
+// planAttack tries many attack plans against one unchanging board and asked for the same unit's power, toughness and keywords // PERF-ONLY
+// thousands of times (87% of a game's time). While it runs nothing on the board changes, so each answer is kept for the length of // PERF-ONLY
+// that one call. Results are identical: tools/tidemark/v1/memo_check.js plays games with and without it, and with every cached // PERF-ONLY
+// answer recomputed and compared. Lines marked PERF-ONLY are left out of the library fingerprint (library.js) for that reason. // PERF-ONLY
+let MEMO=0, EPOCH=0; // PERF-ONLY (MEMO: the number of the planAttack call in progress, 0 outside one; answers are kept on the unit, stamped with it)
+{ const p0=powOf, t0=tghOf, k0=hasKw, a0=planAttack, G_=typeof globalThis!=='undefined'? globalThis : {}; // PERF-ONLY
+  const chk=(a,b,n)=>{ if (a!==b) throw new Error('attack planning cache: '+n+' changed during planning ('+a+' then '+b+')'); return a; }; // PERF-ONLY
+  powOf=function(S,Q,u){ if (!MEMO) return p0(S,Q,u); if (u._pe===MEMO){ if (G_.__TM_MEMO_CHECK) chk(u._pv,p0(S,Q,u),'power'); return u._pv; } const v=p0(S,Q,u); u._pe=MEMO; u._pv=v; return v; }; // PERF-ONLY
+  tghOf=function(S,Q,u,bh){ if (!MEMO) return t0(S,Q,u,bh); if (bh){ if (u._t1e===MEMO){ if (G_.__TM_MEMO_CHECK) chk(u._t1v,t0(S,Q,u,bh),'toughness'); return u._t1v; } const v=t0(S,Q,u,bh); u._t1e=MEMO; u._t1v=v; return v; } // PERF-ONLY
+    if (u._t0e===MEMO){ if (G_.__TM_MEMO_CHECK) chk(u._t0v,t0(S,Q,u,bh),'toughness'); return u._t0v; } const v=t0(S,Q,u,bh); u._t0e=MEMO; u._t0v=v; return v; }; // PERF-ONLY
+  hasKw=function(S,Q,u,k){ if (!MEMO) return k0(S,Q,u,k); if (u._ke!==MEMO){ u._ke=MEMO; u._kc={}; } const c=u._kc; let v=c[k]; if (v===undefined){ v=k0(S,Q,u,k); c[k]=v; } else if (G_.__TM_MEMO_CHECK) chk(v,k0(S,Q,u,k),'keyword '+k); return v; }; // PERF-ONLY
+  planAttack=function(S,P,O,atkers){ if (MEMO || G_.__TM_MEMO_OFF) return a0(S,P,O,atkers); MEMO=++EPOCH; try { return a0(S,P,O,atkers); } finally { MEMO=0; } }; // PERF-ONLY
+} // PERF-ONLY
 module.exports={play, R0, costOf, matchC};

@@ -17,8 +17,16 @@ const TMR=(function(){
   // play one game: 0 if deck a wins, 1 if b, -1 a draw (turn cap, equal Harbor)
   function play(a, b, seed, cfg){ return E.play(a, b, seed>>>0, cfg); }
   // share of n games a wins against b (draws count half); seat and seed vary with the game
-  function matchup(a, b, n, base){ let w=0; for (let k=0;k<n;k++){ const seed=Math.imul((base||1)*131+k+1, 2654435761)>>>0; const r=k%2? play(b,a,seed) : play(a,b,seed); const win= k%2? (r.w===1?1:r.w===0?0:0.5) : (r.w===0?1:r.w===1?0:0.5); w+=win; } return w/n; }
+  // The same two lists, number of games and seed always give the same share, so finished (and half-finished) matchups are remembered.
+  // Nothing about the result changes; a matchup asked for twice, or played ahead of time by warm(), is not played again. Not saved.
+  const MC=new Map(), MC_MAX=6000; const stats={played:0, hits:0, warmed:0};
+  const deckKey=d=>d._k||(d._k=d.map(c=>cidOf(c.id)).join(','));   // the list in order: the order of a list matters to the shuffle
+  function mcGet(a, b, n, base){ const key=deckKey(a)+'|'+deckKey(b)+'|'+n+'|'+(base||1); let st=MC.get(key); if (!st){ if (MC.size>=MC_MAX){ let i=0; for (const k of MC.keys()){ MC.delete(k); if (++i>=MC_MAX/4) break; } } st={w:0,k:0}; MC.set(key,st); } return st; }
+  function game(a, b, base, k){ const seed=Math.imul((base||1)*131+k+1, 2654435761)>>>0; const r=k%2? play(b,a,seed) : play(a,b,seed); stats.played++; return k%2? (r.w===1?1:r.w===0?0:0.5) : (r.w===0?1:r.w===1?0:0.5); }
+  function matchup(a, b, n, base){ const st=mcGet(a,b,n,base); if (st.k>=n) stats.hits++; while (st.k<n){ st.w+=game(a,b,base,st.k); st.k++; } return st.w/n; }
+  // play one more game of a matchup that will be wanted later; true once it is complete
+  function warm(a, b, n, base){ const st=mcGet(a,b,n,base); if (st.k<n){ st.w+=game(a,b,base,st.k); st.k++; stats.warmed++; } return st.k>=n; }
   // a deck from a spec {mix, plan, tech (key), lead (cid), seed}, without the banned cards (card names)
   function brew(spec, banNames){ const lead=spec.lead!=null? byCid.get(spec.lead) : null; const d=D.brew({id:spec.id||'brew', mix:spec.mix, plan:spec.plan||'midrange', tech:spec.tech? techOf(spec.tech) : null, lead, seed:spec.seed||1, ban:banNames||[]}); return d.length===50? d : null; }
-  return {E, D, CARDS, byId, byCid, cidOf, pack, unpack, lib, techOf, play, matchup, brew, sigOf, rate:D.rate, roles:D.roles, synergy:D.synergy, TECH:D.TECH, RV:1+(TM_LIB.fp? parseInt(TM_LIB.fp.slice(0,6),16) : 0)};
+  return {E, D, CARDS, byId, byCid, cidOf, pack, unpack, lib, techOf, play, matchup, warm, stats, brew, sigOf, rate:D.rate, roles:D.roles, synergy:D.synergy, TECH:D.TECH, RV:1+(TM_LIB.fp? parseInt(TM_LIB.fp.slice(0,6),16) : 0)};
 })();

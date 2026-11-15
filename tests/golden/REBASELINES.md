@@ -3980,3 +3980,4 @@ Changed (25+ differences), first ones:
 - /after10/core/nextXid: 8404 -> 8431
 - /after10/core/npcs: "adb1ba23" -> "899995e5"
 - /after10/core/rs: 744375721 -> 1387118488
+- 2026-11-15: **environment change, not a game change.** The Phase 2 machine has a newer Chromium (Playwright 1.63, chromium-1243) whose floating-point maths differs in the last digit of some prices, so the unmodified `claude/studio-overhaul` build (f47b818) failed 17 scenarios here. Baselines were re-captured from that unmodified build in this environment, and the Phase 2 performance build was then checked against them: all pass. See `design/first-play/performance.md`.
