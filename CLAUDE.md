@@ -90,6 +90,9 @@ Records: `design/first-play/` (`READINESS.md` first: results, exceptions, remain
 - **One-click builds for the owner** (2026-11-16): `.github/workflows/release-candidate.yml` builds `tcg`, runs `release.py`, checks the package with `tools/release_verify.py` (no browser) and `release_test.py` (browser), and uploads the release folder as an artifact whose ZIP is itch.io-ready (index.html at its root). It runs on push to `claude/first-play` (not for `.md`-only changes), on Re-run, and on Run workflow once the file is on the default branch; the version comes from the input or `tools/release_version.txt`. It publishes nothing. Owner's instructions: `design/first-play/GET_THE_GAME.md`.
 - **Test environment.** Playwright for Python must match the installed Chromium (`pip install "playwright==1.63.0"` on the 2026-11 machines; never `playwright install`). A newer Chromium changes the last digit of some prices: if the golden suite fails on an untouched build, re-capture from that untouched build and check the new build against it (`tests/golden/REBASELINES.md`).
 
+## Names (owner's decision, 2026-11-16)
+Series **Shortprint**; the card-game title (the `tcg` build) **Shortprint: The Pull**; the engine **Provenance**. Not yet applied in the game or the release files, which still say "Trading Card Collector". Details and what is still to check: `design/naming.md`. Do not use "Pullbox" (taken).
+
 ## What this is
 Three browser games from one engine. All content is fictional.
 - **Sports Card Collector** (`sports`): a simulated baseball league, card products, packs, grading, shows, breaks.
