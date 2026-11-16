@@ -9,7 +9,20 @@ function xtFin(d){ if (d.sealed) return 'gloss'; return d.v==='F'||d.v==='Z'?'re
 const TM_IMG=new Map(), TM_PEND=new Set(), TM_Q=[]; let tmBusy=false, tmFontsOk=false;
 const tmImgKey=c=>c.set+'|'+c.no;
 function tmCardSpec(c){ const s=xtSetDef(c.set); return {pid:c.set+'|'+c.no, collector:s.code+' '+String(c.cn).padStart(3,'0')+'/'+s.total, setName:s.name, mark:c.set===TM_TT?'X':s.code, n:c.name, type:XT_KINDN[c.kind], sub:c.sub, f:c.f, fac:c.el, al:c.al, r:c.r, cost:c.cost, req:c.req, pt:c.pow!=null? c.pow+'/'+c.tgh : '', kwline:c.kwl, rules:c.rules}; }
-function tmLoad(u){ return new Promise(res=>{ const im=new Image(); im.onload=()=>res(im); im.onerror=()=>res(null); im.src=u; }); }
+// ---- packed paintings (hosted package only) ----
+// A host such as itch.io allows 1,000 files; Tidemark alone has 1,254 paintings. tools/release.py puts them into a few "pak" files
+// (the paintings' bytes one after another) and sets window.TM_PAKS={idx:{'TMI-0001':[pak number, offset, length]}}. In an ordinary
+// build TM_PAKS does not exist and every painting is its own file, exactly as before. A pak is fetched once, the first time one of
+// its paintings is wanted.
+const TM_PAK_BUF={}, TM_PAK_URL={}, TM_PAK_DATA={};
+function tmPakOf(u){ const P=typeof window!=='undefined'&&window.TM_PAKS; if (!P||!u) return null; const m=/art\/(TMI-\d+)\.webp/.exec(u); const e=m&&P.idx[m[1]]; return e? {id:m[1], pak:e[0], off:e[1], len:e[2]} : null; }
+function tmPakBytes(p){ return (TM_PAK_BUF[p.pak]||(TM_PAK_BUF[p.pak]=fetch('art/tm-'+p.pak+'.pak').then(r=>{ if (!r.ok) throw new Error('pak '+p.pak); return r.arrayBuffer(); }))).then(buf=>new Uint8Array(buf,p.off,p.len)); }
+async function tmArtUrl(u){ const p=tmPakOf(u); if (!p) return u; if (!TM_PAK_URL[p.id]) TM_PAK_URL[p.id]=URL.createObjectURL(new Blob([await tmPakBytes(p)],{type:'image/webp'})); return TM_PAK_URL[p.id]; }
+// for places that need an address at once (a pack wrapper's picture inside an SVG): a blank now, the picture when the pak has arrived
+function tmArtNow(u){ const p=tmPakOf(u); if (!p) return u; if (TM_PAK_DATA[p.id]) return TM_PAK_DATA[p.id]; if (TM_PAK_DATA[p.id]===undefined){ TM_PAK_DATA[p.id]=null;
+    tmPakBytes(p).then(b=>{ let t=''; for (let i=0;i<b.length;i+=0x8000) t+=String.fromCharCode.apply(null,b.subarray(i,i+0x8000)); TM_PAK_DATA[p.id]='data:image/webp;base64,'+btoa(t); try { render(true); } catch(e){} }).catch(()=>{}); }
+  return 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='; }
+function tmLoad(u){ return tmArtUrl(u).then(v=>new Promise(res=>{ const im=new Image(); im.onload=()=>res(im); im.onerror=()=>res(null); im.src=v; })).catch(()=>null); }
 async function tmDraw(c){
   if (!tmFontsOk){ tmFontsOk=true; try { await Promise.race([document.fonts.load("700 24px Cinzel"), new Promise(r=>setTimeout(r,1500))]); } catch(e){} }
   const art=TM_ART[c.ill]; const img=art? await tmLoad(art.u) : null; const W=380, cv=document.createElement('canvas'); cv.width=W; cv.height=Math.round(W*88/63);
@@ -44,7 +57,7 @@ function xtPackDrawn(set, f){
   const u='k'+set+f; const art=xtPackArt(f,set); const name=def.name.toUpperCase();
   const foil=`<linearGradient id="${u}f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff7d6"/><stop offset=".25" stop-color="#e2b84a"/><stop offset=".5" stop-color="#fff2c2"/><stop offset=".75" stop-color="#c9952f"/><stop offset="1" stop-color="#ffeab0"/></linearGradient>`;
   const holo=`<linearGradient id="${u}h" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff7ad9" stop-opacity=".0"/><stop offset=".35" stop-color="#7af3ff" stop-opacity=".22"/><stop offset=".5" stop-color="#fff" stop-opacity=".42"/><stop offset=".65" stop-color="#ffe17a" stop-opacity=".22"/><stop offset="1" stop-color="#b47aff" stop-opacity="0"/></linearGradient>`;
-  const img=(x,y,w,h)=> art? `<image href="${art.u}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c1}"/>`;
+  const img=(x,y,w,h)=> art? `<image href="${tmArtNow(art.u)}" x="${x}" y="${y}" width="${w}" height="${h}" preserveAspectRatio="xMidYMid slice"/>` : `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c1}"/>`;
   const logo=(x,y,sz,w)=>`<text x="${x}" y="${y}" text-anchor="middle" ${F} font-weight="800" font-size="${sz}" letter-spacing="${(sz*0.18).toFixed(1)}" fill="url(#${u}f)" stroke="#2a1606" stroke-width="${(sz*0.07).toFixed(2)}" paint-order="stroke" textLength="${w}" lengthAdjust="spacingAndGlyphs">TIDEMARK</text>`;
   if (f==='P'){
     // a pillow pack: crimped seals top and bottom, slight bulge, painted front, foil wordmark, holo sheen

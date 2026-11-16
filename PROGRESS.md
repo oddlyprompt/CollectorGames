@@ -10,3 +10,4 @@ Resume here if the session is interrupted. Setup on a fresh machine: `pip instal
 
 ## Log
 - Task 1 done and committed: see design/first-play/performance.md. Economy matrix (task 2) started with tools/agents/validate.cjs.
+- Economy matrix restarted (resumable): node tools/agents/validate.cjs --jobs 3 --resume design/first-play/economy-runs.jsonl ; results print at the end. Packaging: tm_render.js has pak support (uncommitted until tools/release.py is written and tested).

@@ -10,14 +10,17 @@ const agents=arg('agents','idle,ripper,ripseller,dumper,sniper,clearance,investo
 const extra=arg('extra','scalper:7,scalper:23').split(',').filter(Boolean).map(x=>x.split(':')), out=arg('out',null), jobsN=+arg('jobs',4);
 const jobs=[]; for (const a of agents) for (const s of seeds) jobs.push([a,s]); for (const [a,s] of extra) jobs.push([a,+s]);
 const res=[]; const t0=Date.now();
-const runOne=([a,s])=>new Promise(ok=>cp.execFile(process.execPath,[path.join(__dirname,'play.cjs'),'--one',a,'--days',days,'--seed',s,'--cash',cash],{maxBuffer:1<<27},(e,so,se)=>{ let r; try { r=e? {agent:a,crash:String(se||e).slice(0,400)} : JSON.parse(so); } catch(x){ r={agent:a,crash:'bad output '+String(so).slice(0,200)}; } r.seed=s; ok(r); }));
+// every finished run is appended to a log, so an interrupted validation carries on where it stopped (--resume file.jsonl)
+const logFile=arg('resume',null); if (logFile && fs.existsSync(logFile)) for (const line of fs.readFileSync(logFile,'utf8').split('\n')){ if (!line.trim()) continue; try { const r=JSON.parse(line); if (r.days===days && !r.crash) res.push(r); } catch(e){} }
+for (let i=jobs.length-1;i>=0;i--) if (res.some(r=>r.agent===jobs[i][0]&&r.seed===jobs[i][1])) jobs.splice(i,1);
+const runOne=([a,s])=>new Promise(ok=>cp.execFile(process.execPath,[path.join(__dirname,'play.cjs'),'--one',a,'--days',days,'--seed',s,'--cash',cash],{maxBuffer:1<<27},(e,so,se)=>{ let r; try { r=e? {agent:a,crash:String(se||e).slice(0,400)} : JSON.parse(so); } catch(x){ r={agent:a,crash:'bad output '+String(so).slice(0,200)}; } r.seed=s; if (logFile){ const c=Object.assign({},r); delete c.series; fs.appendFileSync(logFile,JSON.stringify(c)+'\n'); } ok(r); }));
 (async()=>{
   const q=jobs.slice(); const worker=async()=>{ while (q.length){ const j=q.shift(); const r=await runOne(j); res.push(r); process.stderr.write(`${res.length}/${jobs.length} ${j[0]} seed ${j[1]} (${Math.round((Date.now()-t0)/1000)} s)\n`); } };
   await Promise.all(Array.from({length:jobsN},worker));
   const put=r=>r.agent==='allowance'? r.start+(r.income||0) : r.start;
   const real=r=>(r.cash+r.liq-put(r))/put(r), paper=r=>(r.cash+r.holdings-put(r))/put(r);
   const pct=x=>(x>=0?'+':'')+Math.round(x*100)+'%', med=a=>{ const s=a.slice().sort((x,y)=>x-y); return s[Math.floor(s.length/2)]; };
-  const names=[...new Set(jobs.map(j=>j[0]))];
+  const names=[...new Set(res.map(r=>r.agent))];
   console.log(`${days} days; seeds ${seeds.join(', ')}; return = (cash + quick-sale value - money put in) / money put in; paper uses full card values`);
   console.log('agent      runs  return median   min    max   | paper median  min    max  | acts/day | errors');
   for (const n of names){ const R=res.filter(r=>r.agent===n&&!r.crash), C=res.filter(r=>r.agent===n&&r.crash); if (!R.length){ console.log(n.padEnd(10),'CRASH',C[0]&&C[0].crash); continue; }
