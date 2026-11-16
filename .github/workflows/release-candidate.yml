@@ -1,0 +1,85 @@
+# Builds the Trading Card Collector release candidate and offers it as a download (an itch.io-ready ZIP).
+# Nothing is published: no GitHub release, no change to main, docs/ or GitHub Pages.
+#
+# How to get a new build (see design/first-play/GET_THE_GAME.md):
+#   - push to the branch claude/first-play: it builds by itself;
+#   - or open any finished run of this workflow and press "Re-run all jobs";
+#   - or, once this file is also on the default branch, Actions > "Release candidate" > "Run workflow" (you can type a version).
+# The version comes from the "version" box, else from tools/release_version.txt.
+name: Release candidate
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version name, for example 0.9.0-alpha-rc2 (leave empty to use tools/release_version.txt)'
+        required: false
+        default: ''
+  push:
+    branches: [claude/first-play]
+    paths-ignore: ['**.md']   # a change to instructions alone does not need a new build
+permissions:
+  contents: read
+concurrency:
+  group: release-candidate-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '22' }
+      - name: Install build and test tools
+        run: |
+          pip install pillow playwright
+          python -m playwright install --with-deps chromium
+      - name: Choose the version
+        id: v
+        run: |
+          V="${{ github.event.inputs.version }}"
+          [ -z "$V" ] && V="$(tr -d ' \r\n' < tools/release_version.txt)"
+          echo "$V" | grep -Eq '^[0-9A-Za-z][0-9A-Za-z.-]*$' || { echo "Bad version name: $V"; exit 1; }
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          echo "Version: $V"
+      - name: Build the game
+        run: python3 tools/build.py tcg
+      - name: Make the release candidate
+        run: python3 tools/release.py --version "${{ steps.v.outputs.version }}"
+      - name: Check the package (files, pictures, version, limits, zip)
+        run: |
+          N="trading-card-collector-${{ steps.v.outputs.version }}"
+          python3 tools/release_verify.py "release/$N" "release/$N.zip"
+      - name: Play-test the package in a browser
+        run: |
+          N="trading-card-collector-${{ steps.v.outputs.version }}"
+          (cd "release/$N" && python3 -m http.server 8780 > /dev/null 2>&1 &)
+          for i in $(seq 1 30); do curl -sf http://localhost:8780/index.html > /dev/null && break; sleep 1; done
+          python3 tools/release_test.py 8780
+      - name: Offer the game for download
+        uses: actions/upload-artifact@v4
+        with:
+          # The download is a ZIP whose top level is the game (index.html at the root): upload it to itch.io as it is.
+          name: trading-card-collector-${{ steps.v.outputs.version }}-itch
+          path: release/trading-card-collector-${{ steps.v.outputs.version }}/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Summary
+        if: success()
+        run: |
+          N="trading-card-collector-${{ steps.v.outputs.version }}"
+          {
+            echo "## Your game is ready: $N"
+            echo ""
+            echo "Scroll down to **Artifacts** on this page and tap **${N}-itch** to download it."
+            echo "That ZIP is ready to upload to itch.io as it is (do not unzip it)."
+            echo ""
+            echo "Instructions: design/first-play/GET_THE_GAME.md on branch ${GITHUB_REF_NAME}."
+            echo ""
+            echo '```'
+            cat "release/$N/RELEASE.json"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

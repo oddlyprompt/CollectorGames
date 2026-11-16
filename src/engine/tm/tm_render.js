@@ -15,7 +15,7 @@ function tmCardSpec(c){ const s=xtSetDef(c.set); return {pid:c.set+'|'+c.no, col
 // build TM_PAKS does not exist and every painting is its own file, exactly as before. A pak is fetched once, the first time one of
 // its paintings is wanted.
 const TM_PAK_BUF={}, TM_PAK_URL={}, TM_PAK_DATA={};
-function tmPakOf(u){ const P=typeof window!=='undefined'&&window.TM_PAKS; if (!P||!u) return null; const m=/art\/(TMI-\d+)\.webp/.exec(u); const e=m&&P.idx[m[1]]; return e? {id:m[1], pak:e[0], off:e[1], len:e[2]} : null; }
+function tmPakOf(u){ const P=typeof window!=='undefined'&&window.TM_PAKS; if (!P||!u) return null; const m=/art\/(TMI-[A-Za-z0-9]+)\.webp/.exec(u);   /* TMI-0001 and the alternate arts TMI-A01 */ const e=m&&P.idx[m[1]]; return e? {id:m[1], pak:e[0], off:e[1], len:e[2]} : null; }
 function tmPakBytes(p){ return (TM_PAK_BUF[p.pak]||(TM_PAK_BUF[p.pak]=fetch('art/tm-'+p.pak+'.pak').then(r=>{ if (!r.ok) throw new Error('pak '+p.pak); return r.arrayBuffer(); }))).then(buf=>new Uint8Array(buf,p.off,p.len)); }
 async function tmArtUrl(u){ const p=tmPakOf(u); if (!p) return u; if (!TM_PAK_URL[p.id]) TM_PAK_URL[p.id]=URL.createObjectURL(new Blob([await tmPakBytes(p)],{type:'image/webp'})); return TM_PAK_URL[p.id]; }
 // for places that need an address at once (a pack wrapper's picture inside an SVG): a blank now, the picture when the pak has arrived

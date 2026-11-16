@@ -34,6 +34,8 @@ async def main():
         check(same==len(ids) and len(ids)>=10, f'{len(ids)} sampled paintings read from the paks are identical to the files in dist/', same)
         r=await pg.evaluate("""(async()=>{ const c=xtSetCards(31).find(c=>TM_ART[c.ill]&&TM_PAKS.idx[c.ill]); const im=await tmLoad(TM_ART[c.ill].u); return im? [im.naturalWidth, im.naturalHeight, im.src.slice(0,5)] : null; })()""")
         check(r and r[0]>100 and r[2]=='blob:', 'a Tidemark painting loads as a picture from its pak', r)
+        r2=await pg.evaluate("""(async()=>{ const ids=Object.keys(TM_PAKS.idx).filter(i=>/^TMI-A/.test(i)); let ok=0; for (const id of ids){ const im=await tmLoad(TM_ART[id].u); if (im&&im.naturalWidth>100&&im.src.startsWith('blob:')) ok++; } return [ok, ids.length]; })()""")
+        check(r2[1]>=10 and r2[0]==r2[1], 'every alternate-art painting (TMI-A..) loads from its pak', r2)
         # a card face drawn with it, in the game's own screens
         await pg.evaluate("(()=>{ while (G.day<xtSetDef(31).rel+2) advanceDay(); G.player.cash=500; })()")
         await pg.evaluate("(()=>{ RETAIL.ensure(); const k=xtKey(31,0,'P'); const p=RETAIL.profiles.find(p=>{ const x=G.retail.locations[p.id].stock[k]; return x&&x.q>=3; }); RETAIL.sealedBuy(p.id,k,2); const ids=myXt().filter(c=>xtD(c.k).sealed).map(c=>c.id).slice(0,1); xtOpenMany(ids); UI.tab='coll'; UI.cg='xt'; render(true); })()")
