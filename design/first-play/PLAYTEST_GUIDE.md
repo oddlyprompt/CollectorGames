@@ -13,7 +13,7 @@ You collect trading cards in a small town. There are three card games (Wildkin, 
 
 ### Before you start
 - Use a phone if you can (that is what it is made for). A computer works too.
-- Open the link you were given. Choose **New game** and keep the first choice of start (Classic).
+- Open the link you were given. Choose **New game** and keep the first choice of start ("A fresh start").
 - Sound is not part of this build. Nothing is missing if it is silent.
 
 ### How time works
@@ -71,5 +71,5 @@ Those moments are worth more to us than any score.
 ### After the session
 - Ask the player to fill in `FEEDBACK_FORM.md` (on paper or in a copy of the file) before you discuss anything.
 - Then ask the two open questions at the end of the form aloud and write down the answers.
-- From Settings, use **Export backup** and keep the file with your notes: it lets us open the exact world the player was in.
+- Go back to the opening screen (reload the page), find the player's save in the list and use **Backup**. Keep the downloaded `.ccsave` file with your notes: it lets us open the exact world the player was in.
 - Record facts and quotes. Do not summarise what you think they felt.
