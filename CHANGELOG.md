@@ -13,6 +13,19 @@ Player-facing changes first, development notes in the linked documents. Dates ar
 
 Design, limits and test commands: `design/shared-retail-world.md`.
 
+## 2026-11-16: first-play stabilisation (branch `claude/first-play`, not merged, not published)
+
+Records in `design/first-play/`; start with `READINESS.md`.
+
+**Fixed**
+- **Long freezes at the start of some game weeks.** The worst day went from 34 seconds to under 5 when the game has had a moment of idle time beforehand. Nothing about any world changed.
+- **Too many files for an HTML5 host.** The release candidate packs Tidemark's paintings and has 591 files instead of 1,811.
+
+**Added**
+- A versioned release candidate (0.9.0-alpha-rc1) with its own test, and a deployment procedure.
+- A first-play guide for player and session leader, and a feedback form.
+- Economy validation across five worlds, including a player on the default allowance.
+
 ## 2026-11-10: studio overhaul (branch `claude/studio-overhaul`, not merged, not published)
 
 Audit, measurements and assessment: `design/studio-audit-2026-11.md`. Includes the shared stores of pull request 39.
