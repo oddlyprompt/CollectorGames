@@ -46,48 +46,51 @@ Not observed with a person; judged from code and the screen reviews.
 | C3 | **Some game weeks stall.** Up to about 4.6 s on a desktop on some Mondays after a Tidemark ban (worst measured), roughly three times that on a phone (estimate; never measured on a phone). A casual player tapping Next day will feel it. | `performance.md` |
 | C4 | **"Needs you" can push market chores** (offers on listings, auctions) onto a player who only listed one card. It is opt-in by listing, so this is mild. | `tcg_home.js` |
 
-## 4. Where interested and advanced players lack explanations
+## 4. Owner's clarification (2026-11-16): deduce, don't explain
 
-| # | Finding | Evidence |
-|---|---|---|
-| A1 | **No "why did this move?"** A card page shows a range and recent sales, but not which inputs changed (deck use up, tournament win, ban, novelty fading, out of print, sales pressure). The simulation knows; the player cannot see it. | `valueBasisHTML` shows sale count only |
-| A2 | **Three different numbers are not kept apart.** The estimate (model plus sales), actual sales (shown as a short list and sparkline) and what you could sell it for **now** (best shop offer, or quick sale) are not shown side by side. Net worth uses full estimates, which overstate quick-sale value by roughly 30% to 40% for an ordinary collection (allowance robot: $2,000 to $2,560 on paper, $1,220 to $1,650 if sold quickly). | `netWorthNow` (`journal.js:3`); `economy.md` |
-| A3 | **History is thin.** Only the last 24 sales of a print are kept, and the model value itself has no history, so "this card doubled since the championship" cannot be shown. | `kit/market.js:61` (sales capped at 24) |
-| A4 | **Supply signals are mostly invisible.** The grading population is shown; copies listed now, copies in shops and (for Tidemark vintage) copies left are not, or not in one place. | card pages |
-| A5 | **No hobby digest.** The news lists events one by one; there is no weekly "what happened in the hobby" view tying movers to causes and decks. | news feed |
+> "The player just needs to be able to deduce how the mechanics work, not be explained. An advanced collector should know: the meta changed, it's a rare card, supply is low now, I can price high, but I expect more sellers to list and drive the price down."
 
-## 5. Proposed plan (bounded, in order; each step separately approved, tested and committed)
+So the game must not narrate causes (no "why this price" breakdowns). What it needs is (a) mechanisms that **behave the way a real hobby behaves**, so a knowledgeable player's expectations come true, and (b) the **raw evidence** a collector would look at, in plain view: what is listed and at what asks, what actually sold, what decks are winning, what got banned or reprinted, what is still on shelves.
 
-The order puts honesty and explanation first (no change to how prices behave), then a phone measurement, then the economic changes that need the owner's approval because they move prices.
+Measured against that, the gaps change:
 
-### Step 1. Tell the truth about prices (no change to prices or play)
-- **Price breakdown on card pages** ("Why this price", folded by default): today's value split into the model's actual inputs (collector demand, deck use, tournament buzz, legality, out of print, novelty, recent sales pressure) and what changed since 30 days ago. Uses the real factors from `tcFairRaw` and its siblings; to compare with the past, keep a small weekly snapshot of the factors for cards the player owns, wants, has pinned, or that moved most (bounded size, saved).
-- **Three numbers, labelled the same way everywhere:** *Estimate*, *Recent sales* (count, median, last), *Sell now* (best shop offer today, or "no shop wants it"). Add a *quick-sale value* next to net worth in the journal.
-- **Remove the canned release line;** say what the shelves actually did (or nothing).
-- Tests: the breakdown must add up to the price shown; snapshots survive save and load; golden suite unchanged except screen text.
-- Size: small to medium. **Changes no price and no outcome.**
+| # | What a collector would expect | What the game does now | Evidence |
+|---|---|---|---|
+| D1 | High prices bring sellers out; listings pile up; the price comes back down. | **Does not happen.** Collectors pick cards to list at random with a fixed chance of keeping them; the price on the market has no effect on whether they sell. | `M.npcList`, `kit/market.js:39-41` |
+| D2 | Many listings and few buyers push prices down. | **Does not happen.** Sales raise "pressure"; unsold listings and price cuts lower nothing. | `recordSale`, `kit/market.js:61` (E3) |
+| D3 | A short supply raises prices; a reprint or a flood lowers them. | **Only for Tidemark's old sets.** Wildkin and Broken Reach scarcity is a timer. | E2 |
+| D4 | The price a card sells at is set by buyers and sellers. | **Mostly the model's number,** nudged by sales. | E1 |
+| D5 | A collector can see the evidence: how many are listed, at what asks, recent sales, deck share, who won. | **Partly.** Recent sales (last 24), grading population, deck shares and tournaments are visible; the number listed and the spread of asks for one card, and shelf stock across town, are not in one place on the card. | card pages |
 
-### Step 2. Measure on a real phone (no code)
-- One session on an iPhone (the owner's first play) with the release candidate, noting any stall longer than about 3 seconds and the date. Decides whether Step 4's performance item is needed.
+The explanation items in the first draft (a "why this price" breakdown, a hobby report that names causes) are **withdrawn**. Showing the three numbers apart (estimate, actual sales, what a shop pays today) stays, because they are evidence, not explanation.
 
-### Step 3. Progressive disclosure, same game (no change to prices)
-- **Casual default:** card tiles and the collection can hide dollar values (a per-save switch, off by default for new games or offered in first steps; to be decided with the owner). Prices stay one tap away.
-- **Interested layer:** a weekly *Hobby report* (one screen, from the simulation only): biggest movers with their cause from Step 1, most-played decks and what changed, bans and releases, what sold for most. Linked from Home, never forced.
-- **Advanced layer:** on card pages, folded *Market details*: estimate history (from the Step 1 snapshots), all recorded sales, copies listed now, copies in shops, grading population, and for Tidemark vintage, copies left.
-- Size: medium.
+## 5. Revised plan (bounded, in order; each step separately approved, tested and committed)
 
-### Step 4. Make supply and demand real (changes prices: needs explicit approval)
-- **Supply into price for Wildkin and Broken Reach**, in the same bounded way Tidemark's vintage market already does: copies listed and in shops against copies held, with a bounded multiplier; out-of-print scarcity from surviving sealed and NM copies instead of a timer.
-- **Symmetric demand pressure:** listings that do not sell, price cuts and large dumps lower pressure as sales raise it.
-- **Box never below its packs** after print end.
-- Re-run: robot validation on five seeds (the launch-flipping figure included), economy scripts, golden suite with a logged re-baseline, ownership invariants. Report how strategies' returns changed; do not tune them to be equal.
-- Size: medium to large. **Moves prices and outcomes; existing saves would see their prices change on load (cards and ownership untouched).**
+### Step 1. A market that responds (changes prices: needs approval)
+The core of the principle. All three games share this market code (`src/tcg/kit/market.js`), so one change serves all three.
+- **Sellers respond to price.** A collector compares the going price (recent sales and asks) with what the card is worth to them; the higher the market runs above that, the more likely they list, and the more they ask. A spike draws copies out.
+- **Listings and failed sales push down, sales push up.** The price pressure term becomes two-sided: unsold listings, price cuts and many asks against few buyers lower it; sales at or above ask raise it.
+- **Supply counts for Wildkin and Broken Reach,** bounded, the way Tidemark's vintage market already counts: copies held and listed against the number in existence; after print, sealed and near-mint copies left instead of a timer.
+- **A box is never worth less than its packs.**
+- Test: robot validation on five seeds (launch flipping included), economy scripts, golden suite with a logged re-baseline, ownership invariants, plus a new check that a spike draws listings and fades (a card's price after a tournament win rises, listings of it rise, and the price comes back toward its new level within weeks). Report how each strategy's returns change; do not tune them to be equal.
+- Existing saves keep every card and every copy; their prices change on load.
+- Size: medium to large.
 
-### Step 5 (only if Step 2 shows it is needed). Remove the Monday stall
-- Give the weekly deck-brewing tests seeds that do not depend on the day, so they can be played ahead during the week like ban days already are. **Changes which decks appear (a different but equally valid metagame), so it needs approval.**
+### Step 2. Put the evidence where a collector looks (no change to prices)
+- On a card page, plainly and without commentary: copies listed now and the range of asks; recent sales (all kept for a year, not only the last 24, compactly); copies on shelves around town for sealed product; grading population; this card's share in the top decks.
+- The three numbers kept apart: estimate, last sales, what a shop pays today; the journal's net worth gains a "if sold today" figure beside it.
+- Remove the canned release-day line (the news should only report what happened).
+- Size: small to medium.
+
+### Step 3. Casual comfort (no change to prices)
+- An option to hide prices on card tiles and in the collection for players who only collect (prices one tap away).
+- Size: small.
+
+### Step 4 (only if your iPhone session shows stalls). Remove the Monday stall
+- Seeds for the weekly deck-brewing tests that do not depend on the day, so they can be played ahead. Changes which decks appear; needs approval.
 
 ### Not proposed
-Separate casual or expert modes; nerfing profitable strategies; new franchises, shops or mechanics; a dashboard.
+Explanations of causes; separate modes; nerfing strategies; new content; a dashboard.
 
 ## 6. Decision needed
-Approve Step 1 (honest price explanations and the three labelled numbers, no change to prices) to start. Steps 3 to 5 each come back for approval with their measured effect.
+Approve Step 1, the responsive market. It is the change that makes "supply is low, I can price high, more sellers will list" true. Step 2 is safe to do first if you would rather see the evidence before the prices move.
