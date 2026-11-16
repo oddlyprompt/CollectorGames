@@ -27,7 +27,7 @@ Tool: `node tools/agents/validate.cjs --resume design/first-play/economy-runs.js
 
 **The collector on an allowance gets a collection, not a profit.** Over 18 months the allowance player put in $3,925 ($75 and 77 Fridays), opened 456 packs, went to 19 card shows and 24 to 38 yard sales, and ended with:
 - 88% to 93% of the newest Wildkin set and 83% to 87% of First Bond;
-- regular at four or five of the five independent shops, friend of one (on four of five seeds);
+- regular at all five independent shops and friend of one of them (two on seed 7), on every seed;
 - 7 or 8 of the 10 hunting goals;
 - $1,435 to $2,079 still in cash, a collection worth $2,000 to $2,560 on paper and $1,220 to $1,650 if dumped.
 This robot is frugal by rule (at most six packs a week, singles under $3), so the unspent cash says more about the robot than about the game; but it does confirm the reviewer's remark that money is not tight on the default allowance after the first weeks.
@@ -36,7 +36,7 @@ This robot is frugal by rule (at most six packs a week, singles under $3), so th
 
 **Patience pays on paper.** Boxes held from launch are worth 27% to 71% more after 18 months (First Bond leaves print in month 14), but only +3% to +38% if sold quickly.
 
-**Standing advances with trade, not with time alone.** Strategies that never trade singles with a shop stay strangers. The picker (weekly rounds and small purchases) is a regular everywhere and a friend of one shop on two seeds after 18 months; the allowance player likewise. Reaching "regular" took the allowance player well under a year at its usual shop. Nobody reached friend at more than one shop.
+**Standing advances with trade, not with time alone.** Strategies that never trade singles with a shop stay strangers. The picker (weekly rounds and small purchases) is a regular everywhere and a friend of one shop on two seeds after 18 months. The allowance player is a regular everywhere and a friend of one shop on four seeds and of two on the fifth. How many weeks each tier took was not recorded.
 
 ## Exploits
 
