@@ -6,6 +6,13 @@ No Python, no Terminal, no installing anything. You need: your GitHub login, a f
 
 ## Step 1. Download the game (2 minutes)
 
+**Quickest:** the first build is already done. Open this link (signed in to GitHub) and the ZIP downloads:
+**https://github.com/oddlyprompt/CollectorGames/actions/runs/43926520707/artifacts/14257495385**
+(Its build page, with the green tick and a summary: https://github.com/oddlyprompt/CollectorGames/actions/runs/43926520707)
+
+For a newer build later, use the steps below.
+
+
 1. Open this page (sign in to GitHub if asked):
    **https://github.com/oddlyprompt/CollectorGames/actions/workflows/release-candidate.yml**
 2. Tap the top row with a **green tick** (the newest finished build). If it shows a yellow dot, it is still building: wait about 15 minutes and refresh.
