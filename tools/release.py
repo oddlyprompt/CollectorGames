@@ -39,7 +39,7 @@ def main():
     ip=os.path.join(out,'index.html'); html=open(ip,encoding='utf-8').read(); import re
     old=re.search(r'game\.js\?v=([0-9a-f]+)',html).group(1)
     html=html.replace('game.js?v='+old,'game.js?v='+h).replace('<title>Trading Card Collector</title>','<title>Trading Card Collector (%s)</title>'%ver); open(ip,'w',encoding='utf-8').write(html)
-    sp=os.path.join(out,'sw.js'); sw=open(sp,encoding='utf-8').read(); sw=sw.replace('game.js?v='+old,'game.js?v='+h); sw=re.sub(r"const C='tcg-[^']*'","const C='tcg-%s-%s'"%(ver,h),sw,1); open(sp,'w',encoding='utf-8').write(sw)
+    sp=os.path.join(out,'sw.js'); sw=open(sp,encoding='utf-8').read(); sw=sw.replace('game.js?v='+old,'game.js?v='+h); sw=re.sub(r"const C='tcg-[^']*'","const C='tcg-%s-%s'"%(ver,h),sw,count=1); open(sp,'w',encoding='utf-8').write(sw)
     try: commit=subprocess.run(['git','rev-parse','--short','HEAD'],cwd=ROOT,capture_output=True,text=True).stdout.strip()
     except Exception: commit=''
     files=[]
