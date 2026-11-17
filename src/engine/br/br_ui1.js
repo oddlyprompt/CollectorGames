@@ -4,7 +4,7 @@ function brPullOdds(key){ const d=brD(key); if (d.sealed) return ''; const P=brP
   if (d.v==='A'){ const k=c.rar==='ir'?O.ir:c.rar==='sig'?O.sig:O.ecl; p=k*sl(P[c.rar]); }
   else if (d.v==='N'){ const k={common:'C',unc:'U',rare:'R',sr:'SR',leg:'L'}[c.rar]; if (k==='C') p=4*sl(P.C)+O.wild.C*sl(P.C); else if (k==='U') p=3*sl(P.U)+O.wild.U*sl(P.U); else p=(O.rare[k]||0)*sl(P[k])+O.wild[k]*sl(P[k]); }
   else if (d.v==='F'){ const k={common:'C',unc:'U',rare:'R',sr:'SR',leg:'L'}[c.rar]; p=(1-O.ir-O.sig-O.ecl)*O.foil[k]*sl(P[k]); }
-  return p>=0.99? 'in nearly every pack' : p>0? 'about 1 in '+Math.max(1,Math.round(1/p))+' packs' : ''; }
+  return p>=0.99? 'in nearly every pack' : p>0? 'about 1 in '+Math.max(1,Math.round(1/p)).toLocaleString('en-US')+' packs' : ''; }
 function brTabsRow(){ const t=UI.brs; const b=(k,n)=>`<button class="chip ${t===k?'on':''}" data-act="brs" data-a="${k}">${n}</button>`; return `<div class="chips" style="margin:6px 0 12px">${b('shop','Shop')}${b('sets','Set')}${b('play','Play')}</div>`; }
 ACT.brs=a=>{ UI.brs=a; UI.brpg=0; render(true); window.scrollTo(0,0); };
 function brView(){ const v={shop:brShopV,sets:brSetsV,play:brPlayV}[UI.brs]||brShopV; return `<div class="tcg">${tip('brokenreach1','The Broken Reach is a space-opera card game: ships, crews, creatures and tech battle on a 4x4 grid, and every card has arrows pointing at its neighbours. It launches with one set, A Ship of Our Own: 180 base cards, foils and 27 premium alternate arts. The playable alpha is under Play; this is an alpha, so prices, odds and card rules may still change.')}${brTabsRow()}${v()}</div>`; }

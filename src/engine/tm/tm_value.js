@@ -14,10 +14,30 @@ const XT=id=>G.xtc[id]; const myXt=()=>Object.values(G.xtc).filter(c=>c.o===0);
 // how much collectors care about a set: the founding sets most, the modern ones least, the anniversary set a lot while it is new
 function xtSetPrestige(n){ const d=xtSetDef(n); return n===TM_TT? 1.3 : ({Founding:1.55,Expansion:1.25,'The Deep':1.05,Modern:0.9})[d.era]||1; }
 function xtPrintCount(cid){ const rel=xtReleasedSets(G.day); return Math.max(1,(TM_PRINTS[cid]||[]).filter(s=>rel.includes(s)).length); }
+// Special printings (prismatic Z, gold stamp G, serial-numbered S) are priced from how scarce they are against the regular printing
+// of the same card, from the real pack odds (TM_ODDS, xtRollPack). x = how many regular copies are pulled for every copy of this
+// printing. Up to about 30 to 1, a rarer printing costs more along the same curve the calibrated foils follow (x^0.37: a foil
+// Legendary, 25 to 1, is about 3 times the regular). Rarer than that, the copies are fewer than the collectors who chase them, so
+// the price rises with scarcity itself (a fixed chase budget shared by fewer copies). Regular, foil and alternate-art prices are
+// unchanged (XT_RB).
+function xtScarcityX(rar, v){
+  const O=TM_ODDS, alt=O.alt, F=O.fr, keepN=(1-O.serial)*(1-O.gold);
+  const n={common:10+(1-O.foil), unc:3, rare:(1-alt)*(1-O.legR)*keepN, leg:(1-alt)*O.legR*keepN}[rar];
+  const f={common:F.C, unc:F.U, rare:F.R, leg:F.L}[rar];
+  const r= v==='Z'? O.prism*f : v==='G'? (1-alt)*(rar==='leg'?O.legR:1-O.legR)*(1-O.serial)*O.gold : v==='S'? (1-alt)*O.serial : 0;
+  return n&&r? n/r : 0;
+}
+function xtScarcityMult(x){ return x<=30? Math.pow(x,0.37) : Math.pow(30,0.37)*x/30; }
+const XT_PB_CACHE={};
+function xtPrintBase(rar, v){
+  if (v!=='Z'&&v!=='G'&&v!=='S') return XT_RB[rar+'|'+v]||0.1;
+  const k=rar+'|'+v; if (XT_PB_CACHE[k]!=null) return XT_PB_CACHE[k];
+  const x=xtScarcityX(rar,v); return XT_PB_CACHE[k]= x? (XT_RB[rar+'|N']||0.1)*xtScarcityMult(x) : (XT_RB[k]||0.1);
+}
 function xtFairRaw(key){
   const ck=key+'@'+G.day; let v=XTFV.get(ck); if (v!=null) return v;
   const d=xtD(key); if (d.sealed){ v=xtSealedFair(d); if (G.xtg.ecv===2) v*=xtV2Mult(d,key); } else {
-    const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=XT_RB[c.rar+'|'+d.v]||0.1;
+    const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=xtPrintBase(c.rar,d.v);
     // the anniversary set is hyped while new and, once out of print, rises; older sets keep a collector premium that grows with the years
     // (originals more than reprints) and the reserve list (cards never reprinted) most of all
     const tt=d.set===TM_TT; const yrs=Math.max(0,(G.day-d.def.rel)/365);
