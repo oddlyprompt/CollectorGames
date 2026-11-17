@@ -162,7 +162,7 @@ async def main():
         await pg.evaluate("ACT.tset('1')"); await pg.wait_for_timeout(400); sheet=await pg.evaluate("document.body.innerText")
         check('First Bond' in sheet and '180 cards' in sheet, 'set page shows First Bond with 180 cards')
         key=await pg.evaluate("tcKey(1,173,'X')"); await pg.evaluate(f"closeSheet(true); ACT.tdesign('{key}')"); await pg.wait_for_timeout(400)
-        ds=await pg.evaluate("document.body.innerText"); check('Provisional' not in ds and 'HP' in ds and 'Art' in ds and 'Spine Spray' in ds and 'Sunny Bloom' in ds, 'card page shows the card rules (HP, ability, attacks) and art status')
+        ds=await pg.evaluate("document.body.innerText"); check('Provisional' not in ds and 'HP' in ds and 'Spine Spray' in ds and 'Sunny Bloom' in ds and 'Estimate, raw near mint' in ds and 'Sales' in ds, 'card page shows the card rules (HP, ability, attacks) and its price as an estimate beside its sales (no production notes)')
         face=await pg.evaluate("tcFront(tcKey(1,1,'N'))"); check('Blossom Charge' in face and 'Sunny Bloom' in face and 'rovisional' not in face, 'card face prints the ability and attacks')
         await pg.evaluate("closeSheet(true)")
         # 3D viewer rasterises linked art (inlined first)

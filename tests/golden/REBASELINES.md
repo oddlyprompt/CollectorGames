@@ -3981,3 +3981,345 @@ Changed (25+ differences), first ones:
 - /after10/core/npcs: "adb1ba23" -> "899995e5"
 - /after10/core/rs: 744375721 -> 1387118488
 - 2026-11-15: **environment change, not a game change.** The Phase 2 machine has a newer Chromium (Playwright 1.63, chromium-1243) whose floating-point maths differs in the last digit of some prices, so the unmodified `claude/studio-overhaul` build (f47b818) failed 17 scenarios here. Baselines were re-captured from that unmodified build in this environment, and the Phase 2 performance build was then checked against them: all pass. See `design/first-play/performance.md`.
+
+## 2026-11-17 day0
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /core/npcs: "d5bdb111" -> "b88a6223"
+- /screens/market: "c77b8946" -> "3f04d586"
+- /screens/wk:design0: "80a84526" -> "234ebbe9"
+- /screens/wk:design1: "b27a1ae3" -> "0859c442"
+- /screens/wk:design2: "d016785d" -> "fe6247d6"
+- /screens/wk:design3: "874e0632" -> "e3dfa6a3"
+- /screens/wk:design4: "dd1e9640" -> "2cfe9ee3"
+- /screens/wk:design5: "a783db48" -> "32614be6"
+- /screens/wk:design6: "006f4a35" -> "2295fe4c"
+- /screens/xt:design0: "f8e9de71" -> "998d8c68"
+- /screens/xt:design1: "f6e75f82" -> "80f48c85"
+- /screens/xt:design2: "f9d1e2a1" -> "9babab6a"
+- /screens/xt:design3: "fe470ac9" -> "dd8e10ee"
+- /screens/xt:design4: "079c385b" -> "7603319d"
+- /screens/xt:design5: "e0239303" -> "7e4ce827"
+
+## 2026-11-17 release
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /core/dp: "a21ad6bf" -> "b8388285"
+- /core/feed: "60100e03" -> "b6f53d2b"
+- /core/lst: 1161 -> 1179
+- /core/news/h: "57dad068" -> "2096d917"
+- /core/newsHead[1]: "NEW DECK: BRAMBLEBUCK / CACTUFT" -> "NEW TECH: KITECOON / TEMPESTRAL (TURBO)"
+- /core/newsHead[2]: "SPIRAMEL / FABLEHORN WINS THE WILDKIN CHAMPIONSHIP" -> "NEW DECK: SMOLDERLYNX / PYRENOX"
+- /core/newsHead[3]: "TENTH TIDE: MORE CARDS REVEALED" -> "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[4]: "NEW TECH: ASTRYNX / KOIRUNE (TOOLS)" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /core/nextLid: 2183 -> 2214
+- /core/nextTid: 2200 -> 2410
+- /core/nextXid: 12316 -> 12795
+- /core/npcs: "31c0af26" -> "f532f6e8"
+- /core/rs: 2043329210 -> -335887642
+- /core/sales: "68ef78f1" -> "e24c1e9e"
+- /core/salesN: 659 -> 653
+
+## 2026-11-17 year1
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /core/dp: "7d327f8b" -> "cdaabc93"
+- /core/feed: "57cbb7ba" -> "e62f22b1"
+- /core/lst: 1369 -> 1383
+- /core/news/h: "199dbb88" -> "a3e0d6b9"
+- /core/news/n: 52 -> 64
+- /core/newsHead[0]: "NEW DECK: HARBOR LEAGUES / ABYSSAL CHOIR MIDRANGE (RAMP)" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II"
+- /core/newsHead[1]: "CROWN BASTION WINS THE REGIONAL" -> "THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE) WINS THE REGIONAL"
+- /core/newsHead[2]: "VEILMORA WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /core/newsHead[3]: "THORNWILD RUSH WINS THE REGIONAL" -> "NEW BUILD-AROUND: PORT OF LANTHORN MIDRANGE II"
+- /core/newsHead[4]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "IRON GOLEM SENTRY IS NOW BANNED"
+- /core/newsHead[5]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "NEW DECK: TIDEBORN / HARBOR LEAGUES AGGRO (AGGRO)"
+- /core/nextLid: 20350 -> 20200
+- /core/nextTid: 4073 -> 4251
+- /core/nextXid: 12316 -> 12795
+- /core/npcs: "d7142616" -> "81cb7c00"
+
+## 2026-11-17 series
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /core/dp: "6236a2da" -> "0eac414a"
+- /core/feed: "25272bcb" -> "515cd885"
+- /core/lst: 1397 -> 1404
+- /core/news/h: "5244157c" -> "7ad94b37"
+- /core/news/n: 162 -> 193
+- /core/newsHead[0]: "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP" -> "NEW BUILD-AROUND: STONEMASON AGGRO (REMOVAL)"
+- /core/newsHead[1]: "MONOLOX / CRAGGLE (TURBO) WINS THE WILDKIN CHAMPIONSHIP" -> "NEW BUILD-AROUND: DOWAGER QUEEN ISOLDE AGGRO"
+- /core/newsHead[2]: "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE" -> "NEW BUILD-AROUND: IRON CROWN OF VARR AGGRO"
+- /core/newsHead[3]: "THORNWILD RUSH WINS THE REGIONAL" -> "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[4]: "VEILMORA WINS THE REGIONAL" -> "VEILMORA (TOOLS) WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[5]: "NEW TECH: ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO)" -> "NEW TECH: LANTERNOX / FABLEHORN (GUST)"
+- /core/nextLid: 61189 -> 61412
+- /core/nextTid: 4073 -> 4251
+- /core/nextXid: 12316 -> 12795
+- /core/npcs: "c2482228" -> "be220eb2"
+
+## 2026-11-17 flows
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /core/cash: 5635.030000000001 -> 5633.950000000001
+- /core/dp: "9b7279c0" -> "457a1207"
+- /core/feed: "24d6b468" -> "32da358f"
+- /core/fees: 70.11000000000001 -> 70.05
+- /core/lst: 1332 -> 1342
+- /core/netWorth: 1007.6 -> 748.56
+- /core/news/h: "0f95f044" -> "983f8a21"
+- /core/newsHead[0]: "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE" -> "NEW BUILD-AROUND: NERITH UNDYING AGGRO"
+- /core/newsHead[1]: "NEW DECK: DRILLBADGER / AEGISOPOD" -> "NEW TECH: CANOPANG / ACORNOX (GUST)"
+- /core/newsHead[2]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/newsHead[4]: "NEW DECK: SHELLOOP / FLAPOD (HEAL)" -> "NEW DECK: KITECOON / NIMBUSAIL (TOOLS)"
+- /core/newsHead[5]: "NEW BUILD-AROUND: LEAGUE CHARTER CONTROL II" -> "NEW DECK: THORNWILD / IRON REACH CONTROL (FLEET)"
+- /core/nextLid: 8288 -> 8348
+- /core/nextTid: 2578 -> 2788
+- /core/nextXid: 12377 -> 11797
+
+## 2026-11-17 shared
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 58.82 -> 27.74
+- /afterCrack/subs: "a28d5555" -> "2f8c69d6"
+- /coll/listed[0]: 0.1 -> 0.2
+- /coll/total[0]: 65.39999999999996 -> 31.90000000000004
+- /coll/total[1]: 162.94999999999993 -> 76.05000000000004
+- /core/cash: 4892.53 -> 4892.57
+- /core/dp: "206180b9" -> "a706f6ae"
+- /core/feed: "fc9d4db8" -> "966c922d"
+- /core/fees: 420.05 -> 420.06
+- /core/lst: 1044 -> 1075
+- /core/netWorth: 58.82 -> 27.74
+- /core/news/h: "e36a827e" -> "aff3f044"
+- /core/news/n: 26 -> 19
+- /core/newsHead[0]: "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)" -> "A SHIP OF OUR OWN: THE BROKEN REACH ARRIVES"
+- /core/newsHead[1]: "A SHIP OF OUR OWN: THE BROKEN REACH ARRIVES" -> "NEW TECH: SPIRAMEL / FABLEHORN (TOOLS)"
+
+## 2026-11-17 save:ban
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "fea5af88" -> "8ab49941"
+- /after30/core/feed: "eaf86544" -> "8619efd3"
+- /after30/core/lst: 1146 -> 1152
+- /after30/core/news/h: "93d7718d" -> "7c849610"
+- /after30/core/news/n: 41 -> 40
+- /after30/core/newsHead[0]: "NEW DECK: THORNWILD / CROWNLANDS CONTROL (FLEET)" -> "LEAGUE GALLEASS IS NOW BANNED"
+- /after30/core/newsHead[1]: "LEAGUE GALLEASS IS NOW BANNED" -> "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "CROWN BASTION WINS THE REGIONAL" -> "VEILMORA / VELUNOX WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "VEILMORA / VELUNOX WINS THE REGIONAL" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after30/core/newsHead[4]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after30/core/newsHead[5]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 6295 -> 6269
+- /after30/core/npcs: "1b6124bb" -> "caf1f30c"
+- /after30/core/rs: 565099362 -> -1268882542
+- /after30/core/sales: "452fe113" -> "ee83d875"
+
+## 2026-11-17 save:busy
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "58e813c9" -> "9a79506e"
+- /after30/core/feed: "3ce31716" -> "e01d83b9"
+- /after30/core/lst: 1097 -> 1105
+- /after30/core/netWorth: 220.54 -> 246.26
+- /after30/core/news/h: "1ab6a4d8" -> "489a020b"
+- /after30/core/newsHead[0]: "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)" -> "NEW TECH: ASTRYNX / AUROROTL (HEAL)"
+- /after30/core/newsHead[1]: "THORNWILD RUSH WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[4]: "NEW DECK: DRILLBADGER / FERRADON" -> "NEW TECH: VEILMORA / MOTHMUR (TURBO)"
+- /after30/core/nextLid: 2952 -> 2976
+- /after30/core/npcs: "ab7af7f7" -> "7e7e4b65"
+- /after30/core/nw: "0e105eea" -> "7662536d"
+- /after30/core/rs: -1753860779 -> 833177595
+- /after30/core/sales: "707dc1e0" -> "a846ee33"
+- /after30/core/salesN: 435 -> 440
+
+## 2026-11-17 save:day1
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "e4713ecf" -> "75977080"
+- /after30/core/feed: "6c0b7563" -> "d19417ef"
+- /after30/core/lst: 1120 -> 1086
+- /after30/core/news/h: "13582e2a" -> "751ae07c"
+- /after30/core/news/n: 13 -> 11
+- /after30/core/newsHead[0]: "NEW DECK: COALOO / SMOLDERLYNX" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after30/core/newsHead[2]: "NEW DECK: AUROROTL / FLAPOD" -> "NEW DECK: BRAMBLEBUCK / CACTUFT"
+- /after30/core/newsHead[3]: "NEW DECK: DRILLBADGER / CLAMPUP (DISRUPTION)" -> "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[4]: "CACTUFT / CANOPANG WINS THE WILDKIN CHAMPIONSHIP" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/newsHead[5]: "TENTH TIDE: MORE CARDS REVEALED" -> "FIRST BOND IS OUT TODAY"
+- /after30/core/nextLid: 2440 -> 2461
+- /after30/core/nextTid: 2627 -> 2372
+- /after30/core/nextXid: 5425 -> 6207
+- /after30/core/npcs: "8b8f6279" -> "f126ab26"
+- /after30/core/rs: 462216395 -> 1984327266
+
+## 2026-11-17 save:legacy-wk-busy
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (27+ differences), first ones:
+- /after30/core/dp: "d6a63a11" -> "7c1e755b"
+- /after30/core/feed: "75719f90" -> "3415e843"
+- /after30/core/lst: 1180 -> 1183
+- /after30/core/netWorth: 38.2 -> 38.3
+- /after30/core/news/h: "dd0d545e" -> "054b9f60"
+- /after30/core/news/n: 19 -> 17
+- /after30/core/newsHead[0]: "NEW DECK: FABLEHORN / ODDOODLE" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[1]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW DECK: PYRENOX / ASHHOPPER"
+- /after30/core/newsHead[2]: "NEW DECK: CORALLUME / AUROROTL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "CANOPANG / CACTUFT WINS THE REGIONAL" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[5]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after30/core/nextLid: 2229 -> 2236
+- /after30/core/nextXid: 12623 -> 11737
+- /after30/core/npcs: "98518d5f" -> "664145f3"
+
+## 2026-11-17 save:legacy-wk-day1
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "1093a46d" -> "cc50d1f3"
+- /after30/core/feed: "2b266eba" -> "7cf8261e"
+- /after30/core/lst: 1129 -> 1158
+- /after30/core/news/h: "575759d2" -> "1dc2f8e3"
+- /after30/core/news/n: 13 -> 10
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: SQUIRREL SCOUT CONTROL" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[1]: "NEW DECK: VEILMORA / WINKROW" -> "NEW TECH: ASTRYNX / KOIRUNE (HEAL)"
+- /after30/core/newsHead[2]: "TENTH TIDE IS OUT TODAY" -> "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[3]: "NEW DECK: AUROROTL / COMETRAIL" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/newsHead[4]: "NEW TECH: VEILMORA / MOTHMUR (TURBO)" -> "FIRST BOND IS OUT TODAY"
+- /after30/core/newsHead[5]: "CANOPANG / CACTUFT WINS THE WILDKIN CHAMPIONSHIP" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after30/core/nextLid: 2259 -> 2322
+- /after30/core/nextTid: 1810 -> 2197
+- /after30/core/nextXid: 12420 -> 12017
+- /after30/core/npcs: "19945a61" -> "55cb88de"
+
+## 2026-11-17 save:legacy-wk-released
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "3f85f28c" -> "d7a5beac"
+- /after30/core/feed: "a0990225" -> "a071b28e"
+- /after30/core/lst: 1155 -> 1167
+- /after30/core/news/h: "35bf2b81" -> "feeedf16"
+- /after30/core/news/n: 14 -> 15
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /after30/core/newsHead[1]: "CROWN BASTION WINS THE REGIONAL" -> "THORNWILD RUSH WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "CACTUFT / CANOPANG WINS THE REGIONAL" -> "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /after30/core/newsHead[4]: "NEW DECK: DRILLBADGER / FERRADON" -> "NEW TECH: CACTUFT / CANOPANG (HEAL)"
+- /after30/core/newsHead[5]: "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL" -> "NEW DECK: DRILLBADGER / FERRADON"
+- /after30/core/nextLid: 2456 -> 2495
+- /after30/core/npcs: "818f638b" -> "c9343488"
+- /after30/core/rs: -1158304170 -> -939506176
+- /after30/core/sales: "25c791d2" -> "42966d89"
+
+## 2026-11-17 save:legacy-wk-year
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "76bc4f3f" -> "f30b8ae7"
+- /after30/core/feed: "69b6d30e" -> "3dd3e3e2"
+- /after30/core/lst: 1162 -> 1188
+- /after30/core/news/h: "2bbf769e" -> "c00ad3c4"
+- /after30/core/news/n: 27 -> 25
+- /after30/core/newsHead[0]: "NEW TECH: ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO)" -> "IRON GOLEM SENTRY IS NOW BANNED"
+- /after30/core/newsHead[1]: "GRANITE COLOSSUS IS NOW BANNED" -> "BAN ANNOUNCED: IRON GOLEM SENTRY"
+- /after30/core/newsHead[2]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "BAN ANNOUNCED: GRANITE COLOSSUS" -> "POMPYRE / VEILMORA WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "THORNWILD RUSH WINS THE REGIONAL" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after30/core/newsHead[5]: "FURNACEBACK / PYRENOX WINS THE REGIONAL" -> "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 4419 -> 4441
+- /after30/core/npcs: "381e2435" -> "113a4df7"
+- /after30/core/rs: 197778138 -> 1180539699
+- /after30/core/sales: "dd9cabaf" -> "e036feb7"
+
+## 2026-11-17 save:released
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "71d923ee" -> "96706493"
+- /after30/core/feed: "7386f2c7" -> "151aca28"
+- /after30/core/lst: 1099 -> 1094
+- /after30/core/news/h: "4ecc7984" -> "cd88ebe4"
+- /after30/core/news/n: 21 -> 19
+- /after30/core/newsHead[0]: "NEW DECK: THORNWILD / IRON REACH CONTROL (FLEET)" -> "NEW DECK: DRILLBADGER / FERRADON"
+- /after30/core/newsHead[1]: "ABYSSAL DEPTHS WINS THE REGIONAL" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "KITECOON / TEMPESTRAL WINS THE REGIONAL" -> "CACTUFT / BRAMBLEBUCK WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW TECH: VEILMORA / MOTHMUR (HEAL)" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/newsHead[4]: "NEW TECH: CACTUFT / BRAMBLEBUCK (HEAL)" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after30/core/newsHead[5]: "NEW TECH: SPIRAMEL / FABLEHORN (TURBO)" -> "CROWN BASTION WINS THE REGIONAL"
+- /after30/core/nextLid: 3045 -> 2979
+- /after30/core/npcs: "d36c5245" -> "2700b909"
+- /after30/core/rs: -1788739509 -> 1355286241
+- /after30/core/sales: "c70af5a0" -> "5fde04eb"
+
+## 2026-11-17 open:ban
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "0e29eab2" -> "d7336e21"
+- /after10/core/feed: "27ce0965" -> "3c630a57"
+- /after10/core/lst: 1316 -> 1301
+- /after10/core/news/h: "7eccd433" -> "9430354d"
+- /after10/core/newsHead[0]: "IRON WILDS WINS THE REGIONAL" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "CORRODEON / FERRADON WINS THE REGIONAL" -> "VEILMORA WINS THE REGIONAL"
+- /after10/core/nextLid: 5791 -> 5790
+- /after10/core/npcs: "3ef3c0a2" -> "3432a3c2"
+- /after10/core/rs: -461687989 -> 1167147136
+- /after10/core/sales: "0536f92c" -> "990a7ef0"
+- /after10/core/salesN: 601 -> 604
+- /after10/wk/listings/h: "f4018b5c" -> "96bc1196"
+- /after10/wk/listings/n: 240 -> 236
+- /after10/wk/meta/arch/h: "c32d6ad1" -> "6f3c2c32"
+- /after10/wk/meta/ev/h: "562a075c" -> "cfe89952"
+
+## 2026-11-17 open:busy
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "971f24ee" -> "29a1c8af"
+- /after10/core/feed: "96ab9edf" -> "41e0b365"
+- /after10/core/lst: 1031 -> 1022
+- /after10/core/netWorth: 210.49 -> 211.19
+- /after10/core/news/h: "dcfbe791" -> "4020d96e"
+- /after10/core/news/n: 21 -> 22
+- /after10/core/newsHead[1]: "GOAL: FIRST SALE" -> "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL"
+- /after10/core/newsHead[2]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "GOAL: FIRST SALE"
+- /after10/core/newsHead[3]: "NEW DECK: CLAMPUP / FERRADON" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after10/core/newsHead[4]: "GOAL: GEM MINT" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after10/core/newsHead[5]: "THORNWILD RUSH WINS THE REGIONAL" -> "GOAL: GEM MINT"
+- /after10/core/nextLid: 2074 -> 2070
+- /after10/core/npcs: "5b071c98" -> "7ec2c014"
+- /after10/core/rs: -1924696659 -> 425975030
+- /after10/core/sales: "cc9f50e0" -> "1c944674"
+
+## 2026-11-17 open:legacy-wk-day1
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "daae3f9e" -> "6e9d4c1e"
+- /after10/core/feed: "821c9d6f" -> "2cc9f2b7"
+- /after10/core/lst: 1010 -> 1006
+- /after10/core/news/h: "0c356c1d" -> "c8e25f4f"
+- /after10/core/news/n: 8 -> 7
+- /after10/core/newsHead[1]: "NEW DECK: NIMBUSAIL / THUNDROP" -> "FIRST BOND IS OUT TODAY"
+- /after10/core/newsHead[2]: "FIRST BOND IS OUT TODAY" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after10/core/newsHead[3]: "ROTATION: THE OLD STANDARD ENDS" -> "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED"
+- /after10/core/newsHead[4]: "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED" -> "FIRST BOND: MORE CARDS REVEALED"
+- /after10/core/newsHead[5]: "FIRST BOND: MORE CARDS REVEALED" -> "FIRST BOND: THE FIRST WILDKIN SET IS ANNOUNCED"
+- /after10/core/nextLid: 1485 -> 1449
+- /after10/core/nextTid: 2444 -> 2046
+- /after10/core/npcs: "0a2a6447" -> "18bd3cb4"
+- /after10/core/rs: 2053428672 -> -968133545
+- /after10/core/sales: "c9fd5da3" -> "45e98837"
+
+## 2026-11-17 open:legacy-wk-year
+Reason: Tidemark special printings priced from their real scarcity, honest price rows and no production notes on card pages (owner: fix the prismatic Legendary card page). Prices of prismatic, gold-stamp and serial-numbered Tidemark cards change; collectors value them differently, so the world's shared random sequence diverges from day 0 (different NPC purchases, news and decks). Pack contents value measured unchanged (Tenth Tide 6.36-6.40 before and after).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "3b6fa4c2" -> "96f3a134"
+- /after10/core/feed: "94bc3ccb" -> "f330e328"
+- /after10/core/lst: 1371 -> 1388
+- /after10/core/news/h: "9ed52af6" -> "a4d9195e"
+- /after10/core/newsHead[0]: "THORNWILD RUSH WINS THE REGIONAL" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "POMPYRE / VEILMORA WINS THE REGIONAL"
+- /after10/core/nextLid: 4144 -> 4154
+- /after10/core/npcs: "899995e5" -> "6f881b58"
+- /after10/core/rs: 1387118488 -> -90190637
+- /after10/core/sales: "c190ccac" -> "23aee528"
+- /after10/core/salesN: 472 -> 475
+- /after10/wk/listings/h: "5355efc2" -> "e4cbaa32"
+- /after10/wk/listings/n: 223 -> 224
+- /after10/wk/meta/arch/h: "ac699514" -> "4d6b7461"
+- /after10/wk/meta/ev/h: "5cf7c3f9" -> "61d65d77"
