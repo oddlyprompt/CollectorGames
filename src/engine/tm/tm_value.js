@@ -34,6 +34,21 @@ function xtPrintBase(rar, v){
   const k=rar+'|'+v; if (XT_PB_CACHE[k]!=null) return XT_PB_CACHE[k];
   const x=xtScarcityX(rar,v); return XT_PB_CACHE[k]= x? (XT_RB[rar+'|N']||0.1)*xtScarcityMult(x) : (XT_RB[k]||0.1);
 }
+// Chase demand: at the rarest printings (a Legendary's prismatic, gold-stamp and serial-numbered versions, and the alternate arts),
+// collectors pile onto the most popular cards, so price spreads out by popularity (the card's fandom weight, ranked within its set).
+// The favourite Legendary's rarest printings are worth several boxes; an unloved one's much less. r: 0 for the set's least popular
+// card of that kind, 1 for the most popular. The alternate arts (1 pack in 60, a real part of what a pack is worth) are spread around
+// their own average, so the favourites gain what the others lose and a pack is worth about the same; the Legendary printings are so
+// rare that their spread barely touches a pack's value.
+const XT_CHASE={leg:[0.6,3.6,3], alt:[0.8,1.6,2]};   // multiplier = a + b * r^p
+const XT_CHASE_R={};
+function xtChaseMult(d){
+  const kind= d.v==='A'? 'alt' : (d.card.rar==='leg' && (d.v==='Z'||d.v==='G'||d.v==='S'))? 'leg' : null; if (!kind) return 1;
+  const k=d.set+'|'+kind; let R=XT_CHASE_R[k];
+  if (!R){ const fs=xtSetCards(d.set).filter(c=>kind==='alt'? xtAlt(c) : c.rar==='leg' && !xtAlt(c)).map(c=>c.fan); R=XT_CHASE_R[k]={lo:Math.min(...fs), hi:Math.max(...fs)}; const C0=XT_CHASE[kind], m=f=>C0[0]+C0[1]*Math.pow(R.hi>R.lo? (f-R.lo)/(R.hi-R.lo) : 0.5, C0[2]); R.norm= kind==='alt'? fs.reduce((a,f)=>a+m(f),0)/fs.length : 1; }
+  const r= R.hi>R.lo? Math.max(0,Math.min(1,(d.card.fan-R.lo)/(R.hi-R.lo))) : 0.5, C=XT_CHASE[kind];
+  return (C[0]+C[1]*Math.pow(r,C[2]))/R.norm;
+}
 function xtFairRaw(key){
   const ck=key+'@'+G.day; let v=XTFV.get(ck); if (v!=null) return v;
   const d=xtD(key); if (d.sealed){ v=xtSealedFair(d); if (G.xtg.ecv===2) v*=xtV2Mult(d,key); } else {
@@ -43,7 +58,7 @@ function xtFairRaw(key){
     const tt=d.set===TM_TT; const yrs=Math.max(0,(G.day-d.def.rel)/365);
     const nov=tt? Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)) : 1, oop=tt? Math.min(2.2, 1+0.28*Math.max(0,(G.day-xtPrintEnd(d.set))/365)) : 1;
     const age=1+(c.pk==='o'?0.22:0.07)*Math.min(10,yrs), rsv=c.res? 1+3*Math.min(1,yrs/4) : 1;
-    const fan=Math.pow(0.35+c.fan, xtIsPrem(c)||c.rar==='leg'? XT_TUNE.fanLeg : c.rar==='rare'? XT_TUNE.fanRare : 0); const coll=base*c.ap*fan*xtSetPrestige(d.set)*nov*oop*age*rsv;
+    const fan=Math.pow(0.35+c.fan, xtIsPrem(c)||c.rar==='leg'? XT_TUNE.fanLeg : c.rar==='rare'? XT_TUNE.fanRare : 0); const coll=base*c.ap*fan*xtSetPrestige(d.set)*nov*oop*age*rsv*xtChaseMult(d);
     const st=xtLegalState(c.cid), u=Math.min(1,(G.xtg.usage[c.cid]||0)/3), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.xtg.hy[c.cid]||0;
     const eter=st==='rot'? 0.1*c.pw*c.pw : 0;   // Eternal demand, from the card's rating alone (the engine only plays the Tenth Tide format)
     const play=XT_PB[c.rar]*(Math.pow(u,0.85)*f+eter)*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(xtIsPrem(c)?0.6:1)*(xtFoilish(d.v)?1.15:1)*(1-0.1*(xtPrintCount(c.cid)-1));

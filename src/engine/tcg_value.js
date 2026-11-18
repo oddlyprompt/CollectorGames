@@ -11,12 +11,23 @@ const TC=id=>G.tc[id]; const myTc=()=>Object.values(G.tc).filter(c=>c.o===0);
 // ---------- value ----------
 function tcSetPrestige(n){ const d=tcSetDef(n); return d.reprint?0.8 : n===1?1.35 : n===2?1.25 : 1.0; }
 function tcPrintCount(cid){ const c=G.tcg._pc||(G.tcg._pc={day:-1,m:{}}); if (c.day!==G.day){ c.day=G.day; c.m={}; } if (c.m[cid]) return c.m[cid]; let n=0; for (const s of tcReleasedSets(G.day)) if (tcSetCards(s).some(x=>x.cid===cid&&!tcAlt(x))) n++; return c.m[cid]=Math.max(1,n); }
+// Chase demand: at the top rarity (special illustration and clasped rares) collectors pile onto the set's favourite, so its price pulls
+// away from the rest. The tier is spread around its own average, so the favourite gains what the others give up (a few percent each)
+// and a pack is worth about the same. r: 0 for the least popular card of that tier in its set, 1 for the most popular.
+const TC_CHASE=[1,0.5,4];   // multiplier = a + b * r^p
+const TC_CHASE_R={};
+function tcChaseMult(d){
+  const c=d.card; if (!c || (c.rar!=='sir' && c.rar!=='csr')) return 1;
+  let R=TC_CHASE_R[d.set]; if (!R){ const fs=tcSetCards(d.set).filter(x=>x.rar==='sir'||x.rar==='csr').map(x=>x.fan); R=TC_CHASE_R[d.set]={lo:Math.min(...fs), hi:Math.max(...fs)}; const m=f=>TC_CHASE[0]+TC_CHASE[1]*Math.pow(R.hi>R.lo? (f-R.lo)/(R.hi-R.lo) : 0.5, TC_CHASE[2]); R.norm=fs.reduce((a,f)=>a+m(f),0)/fs.length; }
+  const r= R.hi>R.lo? Math.max(0,Math.min(1,(c.fan-R.lo)/(R.hi-R.lo))) : 0.5;
+  return (TC_CHASE[0]+TC_CHASE[1]*Math.pow(r,TC_CHASE[2]))/R.norm;
+}
 function tcFairRaw(key){
   const ck=key+'@'+G.day; let v=TCFV.get(ck); if (v!=null) return v;
   const d=tcD(key); if (d.sealed){ v=tcSealedFair(d); } else {
     const c=d.card, wk=Math.max(0,(G.day-d.def.rel)/7); const base=TC_RB[c.rar+'|'+d.v]||0.1;
     const nov=Math.max(0.6, 1+0.55*Math.exp(-wk/3)-0.3*Math.exp(-wk/9)), oop=Math.min(2.2, 1+0.28*Math.max(0,(G.day-tcPrintEnd(d.set))/365));   // the out-of-print premium starts when printing stops
-    const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop;
+    const fan=Math.pow(0.35+c.fan, tcIsPrem(c)? TC_TUNE.fanPrem : c.rar==='rare'? TC_TUNE.fanRare : 0); const coll=base*c.ap*fan*tcSetPrestige(d.set)*nov*oop*tcChaseMult(d);
     const st=tcLegalState(c.cid), u=Math.min(1,(G.tcg.usage[c.cid]||0)/4), f=st==='std'?1: st==='rot'?0.3:0.06, hy=G.tcg.hy[c.cid]||0;
     const play=TC_PB[c.rar]*Math.pow(u,0.85)*f*(1+hy)*Math.exp(1.4*(c.pw-0.5))*(tcIsPrem(c)?0.6:1)*(1-0.12*(tcPrintCount(c.cid)-1));
     v=Math.max(0.03,(coll+play)*TC_K*priceJitter(key)*(1+Math.min(0.6,G.dp[key]||0))); }
