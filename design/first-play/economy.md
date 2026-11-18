@@ -63,3 +63,18 @@ No other strategy found a loop or a runaway: no negative cash, no shop driven ba
 - The allowance robot collects Wildkin only. Tidemark and Broken Reach were exercised by the other strategies (all buy from every game's shelves) but no robot *collects* them.
 - The quick-sale value ignores that a shop's cash and case space are finite, so it is slightly generous for large collections.
 - Marketplace auctions, preorders and grading turnarounds were not strategies of their own.
+
+## Re-run after the chase-price change (2026-11-18)
+
+Change: at the rarest tiers, price spreads by the card's popularity (Tidemark: a Legendary's prismatic, gold-stamp and serial-numbered printings, and the alternate arts; Wildkin: the special-illustration and clasped tier). A set's favourite card is now worth about 4 to 5.6 boxes. Six strategies, seeds 11, 7 and 23, 540 days; raw runs in `economy-runs-chase.jsonl`. Return in cash plus quick-sale value (paper value in brackets), before → after:
+
+| Strategy | Seed 11 | Seed 7 | Seed 23 |
+|---|---|---|---|
+| ripper | -39% → -30% | -45% → -45% | -28% → -53% |
+| ripseller | -34% → **+8%** | -8% → -50% | -4% → -50% |
+| investor | +38% → +43% | +3% → +5% | +18% → +23% |
+| allowance | -32% → -34% | -22% → -23% | -24% → **+2%** |
+| clearance | +118% → +140% | +111% → +105% | +112% → +116% |
+| hunter | +25% → +55% | +28% → +34% | +36% → +33% |
+
+What changed: opening packs is now more of a lottery. The same spending gives a wider spread of outcomes: one pull of a favourite card turns a loss into a gain (ripseller on seed 11, the allowance collector on seed 23), and most runs without one do a little worse, because more of a pack's value sits in a few rare cards. Patient and knowledgeable strategies moved little or rose slightly. Launch flipping is unchanged (it trades sealed product, not singles). No errors in any run.
