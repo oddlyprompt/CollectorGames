@@ -4342,3 +4342,326 @@ Changed (25+ differences), first ones:
 - /wk/prices/g10[327]: 1327.7160284160623 -> 1246.8840888097154
 - /wk/prices/g10[328]: 866.2182011698918 -> 810.9498183119408
 - /wk/prices/g10[329]: 840.1954270500001 -> 786.4236371625049
+
+## 2026-11-18 release
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /core/dp: "b8388285" -> "bb440758"
+- /core/feed: "b6f53d2b" -> "57329c7f"
+- /core/lst: 1179 -> 1188
+- /core/news/h: "2096d917" -> "8838342d"
+- /core/news/n: 11 -> 9
+- /core/newsHead[1]: "NEW TECH: KITECOON / TEMPESTRAL (TURBO)" -> "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[2]: "NEW DECK: SMOLDERLYNX / PYRENOX" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /core/newsHead[3]: "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP" -> "FIRST BOND IS OUT TODAY"
+- /core/newsHead[4]: "TENTH TIDE: MORE CARDS REVEALED" -> "ROTATION: THE OLD STANDARD ENDS"
+- /core/newsHead[5]: "FIRST BOND IS OUT TODAY" -> "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED"
+- /core/nextLid: 2214 -> 2179
+- /core/nextTid: 2410 -> 2228
+- /core/nextXid: 12795 -> 11300
+- /core/npcs: "f532f6e8" -> "f3126668"
+- /core/rs: -335887642 -> -988484050
+
+## 2026-11-18 year1
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /core/dp: "cdaabc93" -> "16a62c61"
+- /core/feed: "e62f22b1" -> "452ed130"
+- /core/lst: 1383 -> 1374
+- /core/news/h: "a3e0d6b9" -> "38dae727"
+- /core/news/n: 64 -> 60
+- /core/newsHead[0]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO II" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /core/newsHead[1]: "THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE) WINS THE REGIONAL" -> "FORTISAUR / TUMBEAR WINS THE REGIONAL"
+- /core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW BUILD-AROUND: NERITH UNDYING MIDRANGE"
+- /core/newsHead[3]: "NEW BUILD-AROUND: PORT OF LANTHORN MIDRANGE II" -> "IRON GOLEM SENTRY IS NOW BANNED"
+- /core/newsHead[4]: "IRON GOLEM SENTRY IS NOW BANNED" -> "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)"
+- /core/newsHead[5]: "NEW DECK: TIDEBORN / HARBOR LEAGUES AGGRO (AGGRO)" -> "BAN ANNOUNCED: IRON GOLEM SENTRY"
+- /core/nextLid: 20200 -> 20153
+- /core/nextTid: 4251 -> 4121
+- /core/nextXid: 12795 -> 11300
+- /core/npcs: "81cb7c00" -> "c053680b"
+
+## 2026-11-18 series
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /core/dp: "0eac414a" -> "f007d191"
+- /core/feed: "515cd885" -> "af5d03a9"
+- /core/lst: 1404 -> 1410
+- /core/news/h: "7ad94b37" -> "48d0e3e1"
+- /core/news/n: 193 -> 181
+- /core/newsHead[0]: "NEW BUILD-AROUND: STONEMASON AGGRO (REMOVAL)" -> "NEW DECK: GEARJAW / FERRADON"
+- /core/newsHead[1]: "NEW BUILD-AROUND: DOWAGER QUEEN ISOLDE AGGRO" -> "NEW BUILD-AROUND: SQUIRREL SCOUT CONTROL"
+- /core/newsHead[2]: "NEW BUILD-AROUND: IRON CROWN OF VARR AGGRO" -> "THORNWILD RUSH WINS THE TIDEMARK CHAMPIONSHIP"
+- /core/newsHead[3]: "HYMN OF THE TENTH TIDE AGGRO (AGGRO) WINS THE TIDEMARK CHAMPIONSHIP" -> "FORTISAUR / TUMBEAR (TURBO) WINS THE WILDKIN CHAMPIONSHIP"
+- /core/newsHead[4]: "VEILMORA (TOOLS) WINS THE WILDKIN CHAMPIONSHIP" -> "NEW TECH: ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II"
+- /core/newsHead[5]: "NEW TECH: LANTERNOX / FABLEHORN (GUST)" -> "NEW TECH: FORTISAUR / CRAGGLE (GUST)"
+- /core/nextLid: 61412 -> 61626
+- /core/nextTid: 4251 -> 4121
+- /core/nextXid: 12795 -> 11300
+- /core/npcs: "be220eb2" -> "2cb295da"
+
+## 2026-11-18 flows
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /core/bought: 347.71000000000004 -> 347.93
+- /core/cash: 5633.950000000001 -> 5635.600000000001
+- /core/dp: "457a1207" -> "eebf9b55"
+- /core/feed: "32da358f" -> "bcaac06c"
+- /core/fees: 70.05 -> 70.22999999999999
+- /core/lst: 1342 -> 1326
+- /core/netWorth: 748.56 -> 674.46
+- /core/news/h: "983f8a21" -> "85a438f0"
+- /core/news/n: 43 -> 42
+- /core/newsHead[0]: "NEW BUILD-AROUND: NERITH UNDYING AGGRO" -> "LEAGUE GALLEASS IS NOW BANNED"
+- /core/newsHead[1]: "NEW TECH: CANOPANG / ACORNOX (GUST)" -> "NEW BUILD-AROUND: CALL OF THE HERD CONTROL"
+- /core/newsHead[2]: "CROWN BASTION WINS THE REGIONAL" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /core/newsHead[3]: "VEILMORA / MOTHMUR WINS THE REGIONAL" -> "CROWN BASTION WINS THE REGIONAL"
+- /core/newsHead[4]: "NEW DECK: KITECOON / NIMBUSAIL (TOOLS)" -> "MONOLOX / CRAGGLE WINS THE REGIONAL"
+- /core/newsHead[5]: "NEW DECK: THORNWILD / IRON REACH CONTROL (FLEET)" -> "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)"
+
+## 2026-11-18 shared
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /afterCrack/netWorth: 27.74 -> 46.67
+- /afterCrack/subs: "2f8c69d6" -> "36af7fad"
+- /coll/listed[0]: 0.2 -> 0
+- /coll/listed[1]: 0.3 -> 0
+- /coll/total[0]: 31.90000000000004 -> 42.199999999999974
+- /coll/total[1]: 76.05000000000004 -> 100.89999999999995
+- /core/cash: 4892.57 -> 4892.93
+- /core/dp: "a706f6ae" -> "f4c7441f"
+- /core/feed: "966c922d" -> "7ba7326c"
+- /core/fees: 420.06 -> 420.09999999999997
+- /core/lst: 1075 -> 1066
+- /core/netWorth: 27.74 -> 46.67
+- /core/news/h: "aff3f044" -> "2255999c"
+- /core/news/n: 19 -> 22
+- /core/newsHead[0]: "A SHIP OF OUR OWN: THE BROKEN REACH ARRIVES" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+
+## 2026-11-18 save:ban
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "8ab49941" -> "3e267465"
+- /after30/core/feed: "8619efd3" -> "af248947"
+- /after30/core/lst: 1152 -> 1136
+- /after30/core/news/h: "7c849610" -> "44f5b1bc"
+- /after30/core/news/n: 40 -> 41
+- /after30/core/newsHead[0]: "LEAGUE GALLEASS IS NOW BANNED" -> "NEW DECK: FREE FLEETS / TIDEBORN CONTROL (TEMPO)"
+- /after30/core/newsHead[1]: "ABYSSAL CHOIR / TIDEBORN CONTROL (AGGRO) II WINS THE REGIONAL" -> "LEAGUE GALLEASS IS NOW BANNED"
+- /after30/core/newsHead[2]: "VEILMORA / VELUNOX WINS THE REGIONAL" -> "BLACK SAILS WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "BAN ANNOUNCED: LEAGUE GALLEASS" -> "SMOLDERLYNX / PYRENOX WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP" -> "BAN ANNOUNCED: LEAGUE GALLEASS"
+- /after30/core/newsHead[5]: "POMPYRE / VEILMORA WINS THE WILDKIN CHAMPIONSHIP" -> "CROWN BASTION WINS THE TIDEMARK CHAMPIONSHIP"
+- /after30/core/nextLid: 6269 -> 6268
+- /after30/core/npcs: "caf1f30c" -> "2e01cbb9"
+- /after30/core/rs: -1268882542 -> -370374987
+- /after30/core/sales: "ee83d875" -> "bb60094d"
+
+## 2026-11-18 save:busy
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "9a79506e" -> "636e0147"
+- /after30/core/feed: "e01d83b9" -> "5b94ec7f"
+- /after30/core/lst: 1105 -> 1095
+- /after30/core/netWorth: 246.26 -> 226.18
+- /after30/core/news/h: "489a020b" -> "ac65c444"
+- /after30/core/news/n: 25 -> 24
+- /after30/core/newsHead[0]: "NEW TECH: ASTRYNX / AUROROTL (HEAL)" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[1]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "TEMPESTRAL / KITECOON WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW BUILD-AROUND: AZURE HALBERD MIDRANGE"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW DECK: THORNWILD / HARBOR LEAGUES AGGRO (GO WIDE)"
+- /after30/core/newsHead[4]: "NEW TECH: VEILMORA / MOTHMUR (TURBO)" -> "GOAL: FIRST SALE"
+- /after30/core/newsHead[5]: "GOAL: FIRST SALE" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after30/core/nextLid: 2976 -> 2928
+- /after30/core/npcs: "7e7e4b65" -> "885f44ff"
+- /after30/core/nw: "7662536d" -> "ea7dcc02"
+
+## 2026-11-18 save:day1
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "75977080" -> "2b74499b"
+- /after30/core/feed: "d19417ef" -> "3ff8eeed"
+- /after30/core/lst: 1086 -> 1101
+- /after30/core/news/h: "751ae07c" -> "997c6836"
+- /after30/core/newsHead[0]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "NEW DECK: AUROROTL / FLAPOD"
+- /after30/core/newsHead[2]: "NEW DECK: BRAMBLEBUCK / CACTUFT" -> "NEW TECH: SPIRAMEL / FABLEHORN (TURBO)"
+- /after30/core/newsHead[3]: "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP" -> "VEILMORA / MOTHMUR WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/nextLid: 2461 -> 2455
+- /after30/core/nextTid: 2372 -> 2523
+- /after30/core/nextXid: 6207 -> 5976
+- /after30/core/npcs: "f126ab26" -> "eb9d9b04"
+- /after30/core/rs: 1984327266 -> 1379465999
+- /after30/core/sales: "f11f14b2" -> "570eef93"
+- /after30/core/salesN: 361 -> 358
+- /after30/wk/listings/h: "781df8ec" -> "8de34da4"
+
+## 2026-11-18 save:legacy-wk-busy
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "7c1e755b" -> "aaf9be9e"
+- /after30/core/feed: "3415e843" -> "8e9996fb"
+- /after30/core/lst: 1183 -> 1179
+- /after30/core/netWorth: 38.3 -> 39.52
+- /after30/core/news/h: "054b9f60" -> "fdd42da5"
+- /after30/core/news/n: 17 -> 16
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW TECH: CACTUFT / CANOPANG (HEAL)"
+- /after30/core/newsHead[1]: "NEW DECK: PYRENOX / ASHHOPPER" -> "IRON WILDS WINS THE REGIONAL"
+- /after30/core/newsHead[2]: "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL" -> "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "CANOPANG / CACTUFT (TOOLS) WINS THE REGIONAL" -> "TENTH TIDE IS OUT TODAY"
+- /after30/core/newsHead[4]: "TENTH TIDE IS OUT TODAY" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after30/core/newsHead[5]: "ROTATION: THE OLD STANDARD ENDS" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/nextXid: 11737 -> 12693
+- /after30/core/npcs: "664145f3" -> "ceb05d07"
+- /after30/core/nw: "1231edcb" -> "170a612a"
+
+## 2026-11-18 save:legacy-wk-day1
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "cc50d1f3" -> "b8df7891"
+- /after30/core/feed: "7cf8261e" -> "77c36eab"
+- /after30/core/lst: 1158 -> 1171
+- /after30/core/news/h: "1dc2f8e3" -> "a2f364dd"
+- /after30/core/news/n: 10 -> 12
+- /after30/core/newsHead[1]: "NEW TECH: ASTRYNX / KOIRUNE (HEAL)" -> "NEW DECK: KITECOON / NIMBUSAIL"
+- /after30/core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE WILDKIN CHAMPIONSHIP" -> "NEW DECK: SMOLDERLYNX / PYRENOX"
+- /after30/core/newsHead[3]: "TENTH TIDE: MORE CARDS REVEALED" -> "KOIRUNE / FLAPOD WINS THE WILDKIN CHAMPIONSHIP"
+- /after30/core/newsHead[4]: "FIRST BOND IS OUT TODAY" -> "TENTH TIDE: MORE CARDS REVEALED"
+- /after30/core/newsHead[5]: "ROTATION: THE OLD STANDARD ENDS" -> "NEW DECK: POMPYRE / VEILMORA"
+- /after30/core/nextLid: 2322 -> 2338
+- /after30/core/nextTid: 2197 -> 2287
+- /after30/core/nextXid: 12017 -> 12615
+- /after30/core/npcs: "55cb88de" -> "11cfed62"
+- /after30/core/rs: 566278737 -> 648633956
+
+## 2026-11-18 save:legacy-wk-released
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "d7a5beac" -> "3d16032e"
+- /after30/core/feed: "a071b28e" -> "5044a080"
+- /after30/core/lst: 1167 -> 1148
+- /after30/core/news/h: "feeedf16" -> "adec58f5"
+- /after30/core/newsHead[0]: "NEW BUILD-AROUND: CALL OF THE HERD CONTROL" -> "NEW DECK: THORNWILD / IRON REACH CONTROL (FLEET)"
+- /after30/core/newsHead[1]: "THORNWILD RUSH WINS THE REGIONAL" -> "CHOIR-DEPTH LEVIATHAN AGGRO WINS THE REGIONAL"
+- /after30/core/newsHead[3]: "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)" -> "NEW DECK: CROWNLANDS / HARBOR LEAGUES MIDRANGE (TEMPO)"
+- /after30/core/newsHead[4]: "NEW TECH: CACTUFT / CANOPANG (HEAL)" -> "NEW DECK: ACORNOX / CACTUFT"
+- /after30/core/nextLid: 2495 -> 2499
+- /after30/core/npcs: "c9343488" -> "90c73802"
+- /after30/core/rs: -939506176 -> 1765094174
+- /after30/core/sales: "42966d89" -> "3191f55a"
+- /after30/core/salesN: 565 -> 593
+- /after30/wk/listings/h: "446d9f7f" -> "7b03a566"
+- /after30/wk/listings/n: 190 -> 179
+
+## 2026-11-18 save:legacy-wk-year
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "f30b8ae7" -> "00a33b9f"
+- /after30/core/feed: "3dd3e3e2" -> "263b64f2"
+- /after30/core/lst: 1188 -> 1166
+- /after30/core/news/h: "c00ad3c4" -> "c1552a38"
+- /after30/core/news/n: 25 -> 27
+- /after30/core/newsHead[0]: "IRON GOLEM SENTRY IS NOW BANNED" -> "NEW DECK: FREE FLEETS / ABYSSAL CHOIR AGGRO (FLEET)"
+- /after30/core/newsHead[1]: "BAN ANNOUNCED: IRON GOLEM SENTRY" -> "IRON GOLEM SENTRY IS NOW BANNED"
+- /after30/core/newsHead[2]: "BLACK TIDE LEVIATHAN CONTROL WINS THE REGIONAL" -> "NEW BUILD-AROUND: SPIKED GAUNTLETS CONTROL"
+- /after30/core/newsHead[3]: "POMPYRE / VEILMORA WINS THE REGIONAL" -> "BAN ANNOUNCED: IRON GOLEM SENTRY"
+- /after30/core/newsHead[4]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "TIDEBORN TEMPO WINS THE REGIONAL"
+- /after30/core/newsHead[5]: "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP" -> "VEILMORA / VELUNOX WINS THE REGIONAL"
+- /after30/core/nextLid: 4441 -> 4449
+- /after30/core/npcs: "113a4df7" -> "ddb24fcd"
+- /after30/core/rs: 1180539699 -> 761427108
+- /after30/core/sales: "e036feb7" -> "3c8c6e3b"
+
+## 2026-11-18 save:released
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after30/core/dp: "96706493" -> "c72e3e23"
+- /after30/core/feed: "151aca28" -> "28c7a36a"
+- /after30/core/lst: 1094 -> 1093
+- /after30/core/news/h: "cd88ebe4" -> "a1d54d16"
+- /after30/core/news/n: 19 -> 22
+- /after30/core/newsHead[0]: "NEW DECK: DRILLBADGER / FERRADON" -> "NEW TECH: CACTUFT / CANOPANG (TOOLS)"
+- /after30/core/newsHead[2]: "CACTUFT / BRAMBLEBUCK WINS THE REGIONAL" -> "CACTUFT / CANOPANG WINS THE REGIONAL"
+- /after30/core/newsHead[4]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "NEW DECK: FREE FLEETS / HARBOR LEAGUES AGGRO (BIG THREATS)"
+- /after30/core/newsHead[5]: "CROWN BASTION WINS THE REGIONAL" -> "NEW DECK: PYRENOX / ASHHOPPER"
+- /after30/core/nextLid: 2979 -> 3072
+- /after30/core/npcs: "2700b909" -> "40a474aa"
+- /after30/core/rs: 1355286241 -> -1699653321
+- /after30/core/sales: "5fde04eb" -> "cfdfdd4f"
+- /after30/core/salesN: 424 -> 440
+- /after30/wk/listings/h: "516b1e56" -> "15ae27d1"
+
+## 2026-11-18 open:ban
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "d7336e21" -> "9163a013"
+- /after10/core/feed: "3c630a57" -> "b678149f"
+- /after10/core/lst: 1301 -> 1315
+- /after10/core/news/h: "9430354d" -> "c52da305"
+- /after10/core/newsHead[0]: "TIDEBORN TEMPO WINS THE REGIONAL" -> "IRON WILDS WINS THE REGIONAL"
+- /after10/core/newsHead[1]: "VEILMORA WINS THE REGIONAL" -> "BRONZAROO / AEGISOPOD WINS THE REGIONAL"
+- /after10/core/nextLid: 5790 -> 5796
+- /after10/core/npcs: "3432a3c2" -> "d4e2751b"
+- /after10/core/rs: 1167147136 -> 260148575
+- /after10/core/sales: "990a7ef0" -> "fc79ac8b"
+- /after10/core/salesN: 604 -> 599
+- /after10/wk/listings/h: "96bc1196" -> "01ab18b3"
+- /after10/wk/listings/n: 236 -> 240
+- /after10/wk/meta/arch/h: "6f3c2c32" -> "beb9db2b"
+- /after10/wk/meta/ev/h: "cfe89952" -> "609134eb"
+
+## 2026-11-18 open:busy
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "29a1c8af" -> "2c43dcf8"
+- /after10/core/feed: "41e0b365" -> "c338ff83"
+- /after10/core/lst: 1022 -> 1026
+- /after10/core/netWorth: 211.19 -> 210.65
+- /after10/core/news/h: "4020d96e" -> "74210c07"
+- /after10/core/news/n: 22 -> 23
+- /after10/core/newsHead[1]: "NEW BUILD-AROUND: BLACK TIDE LEVIATHAN CONTROL" -> "NEW BUILD-AROUND: HYMN OF THE TENTH TIDE AGGRO (AGGRO)"
+- /after10/core/newsHead[2]: "GOAL: FIRST SALE" -> "NEW DECK: CORALLUME / AUROROTL"
+- /after10/core/newsHead[3]: "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)" -> "GOAL: FIRST SALE"
+- /after10/core/newsHead[4]: "NEW DECK: CLAMPUP / FERRADON" -> "NEW DECK: ABYSSAL CHOIR / HARBOR LEAGUES MIDRANGE (RAMP)"
+- /after10/core/newsHead[5]: "GOAL: GEM MINT" -> "NEW DECK: CLAMPUP / FERRADON"
+- /after10/core/nextLid: 2070 -> 2080
+- /after10/core/npcs: "7ec2c014" -> "e33eaa3b"
+- /after10/core/rs: 425975030 -> 263541933
+- /after10/core/sales: "1c944674" -> "f532d275"
+
+## 2026-11-18 open:legacy-wk-day1
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "6e9d4c1e" -> "9b954893"
+- /after10/core/feed: "2cc9f2b7" -> "82069ce5"
+- /after10/core/lst: 1006 -> 1013
+- /after10/core/news/h: "c8e25f4f" -> "2a8ad5f2"
+- /after10/core/news/n: 7 -> 8
+- /after10/core/newsHead[1]: "FIRST BOND IS OUT TODAY" -> "NEW TECH: CACTUFT / CANOPANG (TOOLS)"
+- /after10/core/newsHead[2]: "ROTATION: THE OLD STANDARD ENDS" -> "FIRST BOND IS OUT TODAY"
+- /after10/core/newsHead[3]: "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED" -> "ROTATION: THE OLD STANDARD ENDS"
+- /after10/core/newsHead[4]: "FIRST BOND: MORE CARDS REVEALED" -> "TENTH TIDE: THE TENTH-ANNIVERSARY SET IS ANNOUNCED"
+- /after10/core/newsHead[5]: "FIRST BOND: THE FIRST WILDKIN SET IS ANNOUNCED" -> "FIRST BOND: MORE CARDS REVEALED"
+- /after10/core/nextLid: 1449 -> 1458
+- /after10/core/nextTid: 2046 -> 2075
+- /after10/core/npcs: "18bd3cb4" -> "6b0546a7"
+- /after10/core/rs: -968133545 -> 2070738711
+- /after10/core/sales: "45e98837" -> "506dcff2"
+
+## 2026-11-18 open:legacy-wk-year
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /after10/core/dp: "96f3a134" -> "7f786765"
+- /after10/core/feed: "f330e328" -> "243b3b65"
+- /after10/core/lst: 1388 -> 1371
+- /after10/core/news/h: "a4d9195e" -> "e3e19c9f"
+- /after10/core/news/n: 23 -> 24
+- /after10/core/newsHead[1]: "POMPYRE / VEILMORA WINS THE REGIONAL" -> "VEILMORA / VELUNOX WINS THE REGIONAL"
+- /after10/core/newsHead[2]: "ASTRYNX / KOIRUNE WINS THE REGIONAL" -> "NEW BUILD-AROUND: TIDE-PRIESTESS SAELA AGGRO"
+- /after10/core/newsHead[3]: "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP" -> "ASTRYNX / KOIRUNE WINS THE REGIONAL"
+- /after10/core/newsHead[4]: "DUSKFALL IS OUT TODAY" -> "CACTUFT / BRAMBLEBUCK WINS THE WILDKIN CHAMPIONSHIP"
+- /after10/core/newsHead[5]: "CACTUFT / CANOPANG (TOOLS) WINS THE REGIONAL" -> "DUSKFALL IS OUT TODAY"
+- /after10/core/nextLid: 4154 -> 4145
+- /after10/core/npcs: "6f881b58" -> "83a2366f"
+- /after10/core/rs: -90190637 -> -241716637
+- /after10/core/sales: "23aee528" -> "b76f3c32"
+- /after10/core/salesN: 475 -> 478
