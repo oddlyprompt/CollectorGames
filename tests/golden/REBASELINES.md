@@ -4323,3 +4323,22 @@ Changed (25+ differences), first ones:
 - /after10/wk/listings/n: 223 -> 224
 - /after10/wk/meta/arch/h: "ac699514" -> "4d6b7461"
 - /after10/wk/meta/ev/h: "5cf7c3f9" -> "61d65d77"
+
+## 2026-11-18 day0
+Reason: Chase demand at the top rarity tiers (owner: a set's top hit should be worth several boxes). Tidemark's rarest Legendary printings and alternate arts and Wildkin's special-illustration/clasped tier now spread by popularity; prices of those cards change and the world's shared random sequence diverges from day 0. Pack contents value measured +3% (Tidemark) and +5% (Wildkin).
+Changed (25+ differences), first ones:
+- /core/npcs: "b88a6223" -> "5cb49643"
+- /screens/market: "3f04d586" -> "6bd4b826"
+- /screens/wk:design4: "2cfe9ee3" -> "e763413d"
+- /screens/wk:design5: "32614be6" -> "63111214"
+- /screens/wk:design6: "2295fe4c" -> "28b2482e"
+- /screens/xt:sealed: "e064db19" -> "60f7bef4"
+- /wk/prices/ev[0]: 5.833262804811284 -> 6.1652885479549875
+- /wk/prices/ev[1]: 4.941601156365807 -> 5.220613215241786
+- /wk/prices/g10[323]: 2738.1233070945045 -> 3844.3286302899774
+- /wk/prices/g10[324]: 1388.8856971838316 -> 1321.9265313298804
+- /wk/prices/g10[325]: 1198.4260689491302 -> 1140.649097037638
+- /wk/prices/g10[326]: 1350.768064547482 -> 1276.351797044349
+- /wk/prices/g10[327]: 1327.7160284160623 -> 1246.8840888097154
+- /wk/prices/g10[328]: 866.2182011698918 -> 810.9498183119408
+- /wk/prices/g10[329]: 840.1954270500001 -> 786.4236371625049
